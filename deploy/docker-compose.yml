@@ -2,9 +2,12 @@ version: '3.8'
 
 services:
   website:
-    # Container image from GitHub Container Registry
-    # Supports environment variable override for IMAGE_TAG (default: latest)
-    image: ghcr.io/${GITHUB_REPOSITORY}:${IMAGE_TAG:-latest}
+    # Build from Dockerfile in parent directory
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    # Or use pre-built image from GitHub Container Registry
+    # image: ghcr.io/${GITHUB_REPOSITORY}:${IMAGE_TAG:-latest}
     
     # Container name for easy reference
     container_name: seeed-website

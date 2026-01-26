@@ -1,4 +1,4 @@
-# Multi-stage build for Astro Node.js hybrid rendering
+# Multi-stage build for Astro Node.js server rendering
 # Stage 1: Build
 FROM node:22-alpine AS builder
 
@@ -17,7 +17,7 @@ RUN pnpm install --frozen-lockfile
 COPY . .
 
 # Build using Node.js adapter (generates dist/server/entry.mjs)
-RUN ADAPTER=node pnpm build:node
+RUN pnpm build
 
 # Stage 2: Runtime
 FROM node:22-alpine

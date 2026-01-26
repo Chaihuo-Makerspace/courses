@@ -55,6 +55,9 @@ pnpm check
 使用 Docker 容器化部署，确保开发与生产环境一致性：
 
 ```bash
+# 进入部署目录
+cd deploy
+
 # 配置环境变量
 cp .env.example .env
 # 编辑 .env 设置 GITHUB_REPOSITORY
@@ -63,7 +66,7 @@ cp .env.example .env
 ./deploy.sh
 ```
 
-详细的生产环境部署指南请参考 [DEPLOYMENT.md](./DEPLOYMENT.md)。
+详细的生产环境部署指南请参考 [deploy/DEPLOYMENT.md](./deploy/DEPLOYMENT.md)。
 
 ## 📖 相关文档
 
