@@ -35,61 +35,32 @@
 
 详细文档请参考 [AGENTS.md](./AGENTS.md) 或 [CLAUDE.md](../CLAUDE.md)。
 
-## 🚀 网站开发
+## 🚀 开发与部署
 
-本项目使用 Astro 构建。
+本项目使用 Astro 构建，支持部署到 Cloudflare Workers 或本地 Node.js 服务器。
 
 ```bash
 # 安装依赖
 pnpm install
 
-# 启动本地预览
+# 启动本地开发
 pnpm dev
-
-# 构建生产版本
-pnpm build
-
-# 部署 (Deploy)
-pnpm deploy
 ```
 
-> **注意**：部署依赖 Cloudflare Wrangler，首次部署需运行 `npx wrangler login` 进行授权。详细配置请查看 `wrangler.toml`。
-
-## 🌍 本地服务器部署 (Self-Hosted)
-
-如果不想使用 Cloudflare，可以通过 Node.js 在本地或私有服务器上运行。
-
-### 1. 修改适配器
-
-本项目默认配置为 Cloudflare SSR。如需本地运行，建议安装 Node.js 适配器：
+### Cloudflare 部署
 
 ```bash
-pnpm add @astrojs/node
+pnpm build        # 构建
+pnpm deploy       # 部署到 Cloudflare Workers
 ```
 
-修改 `astro.config.mjs`：
+> 首次部署需运行 `npx wrangler login` 进行授权。详细配置请查看 `wrangler.toml`。
 
-```diff
-- import cloudflare from '@astrojs/cloudflare';
-+ import node from '@astrojs/node';
-
-export default defineConfig({
-  output: 'server',
-- adapter: cloudflare(),
-+ adapter: node({
-+   mode: 'standalone',
-+ }),
-});
-```
-
-### 2. 构建与运行
+### 本地服务器部署
 
 ```bash
-# 构建
-pnpm build
-
-# 运行 (默认端口 4321)
-node .output/server/entry.mjs
+pnpm build:node                    # 使用 Node.js 适配器构建
+node dist/server/entry.mjs         # 运行 (默认端口 4321)
 ```
 
-> 也可以使用 PM2 等工具进行进程管理：`pm2 start .output/server/entry.mjs --name chaihuo-course`
+> 可使用 PM2 管理进程：`pm2 start dist/server/entry.mjs --name chaihuo-course`

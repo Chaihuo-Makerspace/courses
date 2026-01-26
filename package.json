@@ -7,12 +7,15 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:cf": "astro build",
+    "build:node": "ADAPTER=node astro build",
     "preview": "astro preview",
     "check": "astro check",
     "deploy": "wrangler deploy"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.3.0",
+    "@astrojs/node": "^9.5.2",
     "astro": "^5.0.0"
   },
   "devDependencies": {
