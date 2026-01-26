@@ -10,28 +10,14 @@
 
 ## 快速开始
 
-### 1. 准备配置文件
+### 1. 克隆仓库
 
 ```bash
-# 克隆仓库
 git clone https://github.com/Chaihuo-Makerspace/courses.git
-cd courses/website
-
-# 配置环境变量
-cp .env.example .env
-# 编辑 .env 文件，设置 GITHUB_REPOSITORY
-nano .env
+cd courses/website/deploy
 ```
 
-### 2. 登录 GitHub Container Registry
-
-如果仓库是私有的，需要先登录：
-
-```bash
-echo $GITHUB_TOKEN | docker login ghcr.io -u USERNAME --password-stdin
-```
-
-### 3. 部署
+### 2. 部署
 
 ```bash
 # 一键部署
@@ -39,22 +25,11 @@ echo $GITHUB_TOKEN | docker login ghcr.io -u USERNAME --password-stdin
 ```
 
 脚本会自动：
-- 拉取最新镜像
+- 构建 Docker 镜像
 - 停止旧容器
 - 启动新容器
 - 清理旧镜像
 - 显示部署状态
-
-## 环境变量
-
-在 `.env` 文件中配置：
-
-| 变量 | 说明 | 默认值 | 必需 |
-|------|------|--------|------|
-| `GITHUB_REPOSITORY` | GitHub 仓库路径（格式：owner/repo） | - | 是 |
-| `PORT` | 主机端口 | 3000 | 否 |
-| `IMAGE_TAG` | Docker 镜像标签 | latest | 否 |
-| `NODE_ENV` | Node.js 运行环境 | production | 否 |
 
 ## 常用命令
 
@@ -80,15 +55,27 @@ docker-compose restart
 如果不使用 `deploy.sh` 脚本：
 
 ```bash
-# 拉取最新镜像
-docker-compose pull
-
-# 启动服务
-docker-compose up -d
+# 构建并启动服务
+docker-compose up -d --build
 
 # 查看状态
 docker-compose ps
 ```
+
+## 配置说明
+
+### 端口配置
+
+默认端口为 3000。如需修改，编辑 `docker-compose.yml`：
+
+```yaml
+ports:
+  - "8080:3000"  # 将主机端口改为 8080
+```
+
+### 环境配置
+
+应用运行在生产模式（`NODE_ENV=production`），已在 `docker-compose.yml` 中配置。
 
 ## 故障排查
 
@@ -101,14 +88,7 @@ docker-compose logs
 
 ### 端口冲突
 
-修改 `.env` 文件中的 `PORT` 变量。
-
-### 镜像拉取失败
-
-确认已登录 GitHub Container Registry：
-```bash
-docker login ghcr.io
-```
+修改 `docker-compose.yml` 中的端口映射。
 
 ### 健康检查失败
 

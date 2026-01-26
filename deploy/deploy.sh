@@ -76,13 +76,6 @@ if [ ! -f "$SCRIPT_DIR/docker-compose.yml" ]; then
 fi
 log_success "检查配置文件"
 
-# Check if .env file exists (optional but recommended)
-if [ ! -f "$SCRIPT_DIR/.env" ]; then
-    log_warn ".env 文件不存在，将使用默认配置（IMAGE_TAG=latest）"
-else
-    log_success ".env 文件已存在"
-fi
-
 # ============================================================================
 # 2. 拉取最新镜像
 # ============================================================================

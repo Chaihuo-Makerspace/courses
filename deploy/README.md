@@ -8,17 +8,12 @@
 |------|------|
 | `docker-compose.yml` | Docker Compose 配置文件 |
 | `deploy.sh` | 自动部署脚本 |
-| `.env.example` | 环境变量配置模板 |
 | `DEPLOYMENT.md` | 详细部署文档 |
 
 ## 快速开始
 
 ```bash
-# 1. 配置环境变量
-cp .env.example .env
-# 编辑 .env 文件，设置 GITHUB_REPOSITORY
-
-# 2. 一键部署
+# 一键部署
 ./deploy.sh
 ```
 

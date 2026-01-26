@@ -58,10 +58,6 @@ pnpm check
 # 进入部署目录
 cd deploy
 
-# 配置环境变量
-cp .env.example .env
-# 编辑 .env 设置 GITHUB_REPOSITORY
-
 # 一键部署
 ./deploy.sh
 ```
