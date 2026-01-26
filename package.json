@@ -9,7 +9,8 @@
     "build": "astro build && cp .assetsignore dist/.assetsignore",
     "build:cf": "astro build && cp .assetsignore dist/.assetsignore",
     "build:node": "ADAPTER=node astro build",
-    "preview": "astro preview",
+    "start": "HOST=0.0.0.0 PORT=3000 node dist/server/entry.mjs",
+    "preview": "astro preview --port 3000",
     "check": "astro check",
     "deploy": "wrangler deploy"
   },
