@@ -1,4 +1,4 @@
-# 柴火创客学院 AIoT 培训课程体系 (Course Curriculum)
+# 柴火创客学院 AIoT 培训课程体系
 
 > **开放技术赋能 · 解决真问题 · 有用易学**
 >
@@ -33,68 +33,39 @@
 - **更新日志**：维护 `src/data/changelog.ts`（发布课程迭代记录）
 - **工具入口**：管理 `src/data/tools.ts`（课程配套工具链）
 
-详细文档请参考 [AGENTS.md](./AGENTS.md) 或 [CLAUDE.md](../CLAUDE.md)。
+详细文档请参考 [AGENTS.md](./AGENTS.md)。
 
 ## 🚀 开发与部署
 
-本项目使用 Astro 构建，支持部署到 Cloudflare Workers 或本地 Node.js 服务器。
+### 本地开发
 
 ```bash
 # 安装依赖
 pnpm install
 
-# 启动本地开发
+# 启动开发服务器
 pnpm dev
+
+# 类型检查
+pnpm check
 ```
 
-### Cloudflare 部署
-
-```bash
-pnpm build        # 构建
-pnpm deploy       # 部署到 Cloudflare Workers
-```
-
-> 首次部署需运行 `npx wrangler login` 进行授权。详细配置请查看 `wrangler.toml`。
-
-### 本地服务器部署
-
-#### Node.js 服务器
-
-```bash
-pnpm build:node                    # 使用 Node.js 适配器构建
-node dist/server/entry.mjs         # 运行 (默认端口 3000)
-```
-
-> 可使用 PM2 管理进程：`pm2 start dist/server/entry.mjs --name chaihuo-course`
-
-#### Docker 部署
+### Docker 部署
 
 使用 Docker 容器化部署，确保开发与生产环境一致性：
 
 ```bash
-# 构建 Docker 镜像
-docker build -t chaihuo-course .
-
-# 运行容器（默认端口 3000）
-docker run -d -p 3000:3000 --name chaihuo-course chaihuo-course
-
-# 访问应用
-# http://localhost:3000
-```
-
-> 容器运行时自动设置 `HOST=0.0.0.0 PORT=3000`，支持来自任何网络接口的连接。
-
-#### 生产环境自动部署（推荐）
-
-使用 Docker Compose 和自动部署脚本，实现一键部署和更新：
-
-```bash
 # 配置环境变量
 cp .env.example .env
-# 编辑 .env 设置 GITHUB_REPOSITORY（用于自动拉取最新代码）
+# 编辑 .env 设置 GITHUB_REPOSITORY
 
 # 一键部署
 ./deploy.sh
 ```
 
-详细的生产环境部署指南（包括服务器配置、自动更新、故障排查等）请参考 [DEPLOYMENT.md](./DEPLOYMENT.md)。
+详细的生产环境部署指南请参考 [DEPLOYMENT.md](./DEPLOYMENT.md)。
+
+## 📖 相关文档
+
+- [AGENTS.md](./AGENTS.md) - AI 协作指南与项目架构
+- [DEPLOYMENT.md](./DEPLOYMENT.md) - Docker 部署指南

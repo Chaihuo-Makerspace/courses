@@ -1,7 +1,0 @@
-name = "chaihuo-courses"
-main = "dist/_worker.js/index.js"
-compatibility_date = "2026-01-26"
-
-[assets]
-directory = "dist"
-binding = "ASSETS"
