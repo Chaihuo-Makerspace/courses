@@ -83,3 +83,18 @@ docker run -d -p 3000:3000 --name chaihuo-course chaihuo-course
 ```
 
 > 容器运行时自动设置 `HOST=0.0.0.0 PORT=3000`，支持来自任何网络接口的连接。
+
+#### 生产环境自动部署（推荐）
+
+使用 Docker Compose 和自动部署脚本，实现一键部署和更新：
+
+```bash
+# 配置环境变量
+cp .env.example .env
+# 编辑 .env 设置 GITHUB_REPOSITORY（用于自动拉取最新代码）
+
+# 一键部署
+./deploy.sh
+```
+
+详细的生产环境部署指南（包括服务器配置、自动更新、故障排查等）请参考 [DEPLOYMENT.md](./DEPLOYMENT.md)。
