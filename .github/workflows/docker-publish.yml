@@ -67,3 +67,59 @@ jobs:
           TAGS: ${{ steps.meta.outputs.tags }}
           DIGEST: ${{ steps.build-and-push.outputs.digest }}
         run: echo "${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
+
+      - name: Trigger Jenkins Webhook
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        continue-on-error: true  # Don't fail the workflow if webhook fails
+        env:
+          WEBHOOK_URL: ${{ secrets.DEPLOY_WEBHOOK_URL }}
+          IMAGE_TAGS: ${{ steps.meta.outputs.tags }}
+          COMMIT_SHA: ${{ github.sha }}
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+        run: |
+          if [ -z "$WEBHOOK_URL" ]; then
+            echo "⚠️  DEPLOY_WEBHOOK_URL not configured. Skipping deployment trigger."
+            echo "ℹ️  To enable auto-deployment, add DEPLOY_WEBHOOK_URL to repository secrets."
+            exit 0
+          fi
+          
+          echo "🔔 Triggering Jenkins deployment webhook..."
+          echo "📦 Image tags: $IMAGE_TAGS"
+          echo "📝 Commit: ${COMMIT_SHA:0:7}"
+          
+          # Prepare JSON payload with build information
+          PAYLOAD=$(cat <<EOF
+          {
+            "image_tags": "$IMAGE_TAGS",
+            "commit_sha": "$COMMIT_SHA",
+            "commit_message": "$COMMIT_MSG",
+            "repository": "${{ github.repository }}",
+            "ref": "${{ github.ref }}",
+            "actor": "${{ github.actor }}",
+            "workflow": "${{ github.workflow }}",
+            "run_id": "${{ github.run_id }}"
+          }
+          EOF
+          )
+          
+          # Trigger webhook with retry and timeout
+          HTTP_CODE=$(curl -X POST \
+            --max-time 30 \
+            --retry 3 \
+            --retry-delay 5 \
+            --retry-all-errors \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD" \
+            -w "%{http_code}" \
+            -o /dev/null \
+            -s \
+            "$WEBHOOK_URL")
+          
+          if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 300 ]; then
+            echo "✅ Jenkins webhook triggered successfully (HTTP $HTTP_CODE)"
+            echo "🚀 Deployment should start shortly on the server"
+          else
+            echo "❌ Jenkins webhook failed with HTTP $HTTP_CODE"
+            echo "⚠️  Please check Jenkins server and webhook configuration"
+            exit 1
+          fi
