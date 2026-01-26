@@ -1,0 +1,4 @@
+# Cloudflare Pages Assets Ignore
+# Exclude worker code from being uploaded as static assets
+_worker.js
+_routes.json
