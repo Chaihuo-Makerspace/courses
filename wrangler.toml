@@ -1,7 +1,7 @@
 name = "chaihuo-courses"
-main = ".output/server/index.mjs"
+main = "dist/_worker.js/index.js"
 compatibility_date = "2026-01-26"
 
 [assets]
-directory = ".output/static"
+directory = "dist"
 binding = "ASSETS"
