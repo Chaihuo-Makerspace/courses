@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url'
 const useNodeAdapter = process.env.ADAPTER === 'node'
 
 export default defineConfig({
-  output: 'server',
+  output: 'static',
   adapter: useNodeAdapter
     ? node({ mode: 'standalone' })
     : cloudflare(),
