@@ -1,0 +1,57 @@
+# Build output
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.production
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Cloudflare
+.wrangler/
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+*.md
+!README.md
+
+# Sisyphus (planning/notes - not needed in container)
+.sisyphus/
+
+# Development/CI files
+.github/
+.eslintrc
+.prettierrc
+Dockerfile
+.dockerignore
+.editorconfig
+
+# Test files (if present)
+*.test.ts
+*.spec.ts
+__tests__/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~

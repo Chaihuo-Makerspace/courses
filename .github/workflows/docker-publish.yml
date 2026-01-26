@@ -1,0 +1,125 @@
+name: Docker Build and Publish
+
+on:
+  push:
+    branches: [ "main" ]
+    tags: [ 'v*.*.*' ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install cosign
+        if: github.event_name != 'pull_request'
+        uses: sigstore/cosign-installer@v3.5.0
+        with:
+          cosign-release: 'v2.2.4'
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log into registry ${{ env.REGISTRY }}
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract Docker metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=ref,event=branch
+            type=semver,pattern={{version}}
+
+      - name: Build and push Docker image
+        id: build-and-push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Sign the published Docker image
+        if: github.event_name != 'pull_request'
+        env:
+          TAGS: ${{ steps.meta.outputs.tags }}
+          DIGEST: ${{ steps.build-and-push.outputs.digest }}
+        run: echo "${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
+
+      - name: Trigger Jenkins Webhook
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        continue-on-error: true  # Don't fail the workflow if webhook fails
+        env:
+          WEBHOOK_URL: ${{ secrets.DEPLOY_WEBHOOK_URL }}
+          IMAGE_TAGS: ${{ steps.meta.outputs.tags }}
+          COMMIT_SHA: ${{ github.sha }}
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+        run: |
+          if [ -z "$WEBHOOK_URL" ]; then
+            echo "⚠️  DEPLOY_WEBHOOK_URL not configured. Skipping deployment trigger."
+            echo "ℹ️  To enable auto-deployment, add DEPLOY_WEBHOOK_URL to repository secrets."
+            exit 0
+          fi
+          
+          echo "🔔 Triggering Jenkins deployment webhook..."
+          echo "📦 Image tags: $IMAGE_TAGS"
+          echo "📝 Commit: ${COMMIT_SHA:0:7}"
+          
+          # Prepare JSON payload with build information
+          PAYLOAD=$(cat <<EOF
+          {
+            "image_tags": "$IMAGE_TAGS",
+            "commit_sha": "$COMMIT_SHA",
+            "commit_message": "$COMMIT_MSG",
+            "repository": "${{ github.repository }}",
+            "ref": "${{ github.ref }}",
+            "actor": "${{ github.actor }}",
+            "workflow": "${{ github.workflow }}",
+            "run_id": "${{ github.run_id }}"
+          }
+          EOF
+          )
+          
+          # Trigger webhook with retry and timeout
+          HTTP_CODE=$(curl -X POST \
+            --max-time 30 \
+            --retry 3 \
+            --retry-delay 5 \
+            --retry-all-errors \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD" \
+            -w "%{http_code}" \
+            -o /dev/null \
+            -s \
+            "$WEBHOOK_URL")
+          
+          if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 300 ]; then
+            echo "✅ Jenkins webhook triggered successfully (HTTP $HTTP_CODE)"
+            echo "🚀 Deployment should start shortly on the server"
+          else
+            echo "❌ Jenkins webhook failed with HTTP $HTTP_CODE"
+            echo "⚠️  Please check Jenkins server and webhook configuration"
+            exit 1
+          fi

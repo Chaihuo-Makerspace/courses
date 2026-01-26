@@ -58,9 +58,43 @@ pnpm deploy       # 部署到 Cloudflare Workers
 
 ### 本地服务器部署
 
+#### Node.js 服务器
+
 ```bash
 pnpm build:node                    # 使用 Node.js 适配器构建
-node dist/server/entry.mjs         # 运行 (默认端口 4321)
+node dist/server/entry.mjs         # 运行 (默认端口 3000)
 ```
 
 > 可使用 PM2 管理进程：`pm2 start dist/server/entry.mjs --name chaihuo-course`
+
+#### Docker 部署
+
+使用 Docker 容器化部署，确保开发与生产环境一致性：
+
+```bash
+# 构建 Docker 镜像
+docker build -t chaihuo-course .
+
+# 运行容器（默认端口 3000）
+docker run -d -p 3000:3000 --name chaihuo-course chaihuo-course
+
+# 访问应用
+# http://localhost:3000
+```
+
+> 容器运行时自动设置 `HOST=0.0.0.0 PORT=3000`，支持来自任何网络接口的连接。
+
+#### 生产环境自动部署（推荐）
+
+使用 Docker Compose 和自动部署脚本，实现一键部署和更新：
+
+```bash
+# 配置环境变量
+cp .env.example .env
+# 编辑 .env 设置 GITHUB_REPOSITORY（用于自动拉取最新代码）
+
+# 一键部署
+./deploy.sh
+```
+
+详细的生产环境部署指南（包括服务器配置、自动更新、故障排查等）请参考 [DEPLOYMENT.md](./DEPLOYMENT.md)。
