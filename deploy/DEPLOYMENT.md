@@ -19,11 +19,11 @@ cd courses/website/deploy
 
 ### 端口
 
-默认端口 `3000`。修改 `docker-compose.yml`：
+默认端口 `3001`。修改 `docker-compose.yml`：
 
 ```yaml
 ports:
-  - "8080:3000"
+  - "8080:3001"
 ```
 
 ### 环境

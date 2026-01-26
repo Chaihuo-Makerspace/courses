@@ -41,14 +41,14 @@ RUN pnpm install --frozen-lockfile --prod
 # Switch to non-root user
 USER nodejs
 
-# Expose port 3000 for incoming connections
-EXPOSE 3000
+# Expose port 3001 for incoming connections
+EXPOSE 3001
 
-# Health check (attempts to connect to localhost:3000 every 30s)
+# Health check (attempts to connect to localhost:3001 every 30s)
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:3000/', (r) => {if (r.statusCode !== 200) throw new Error(r.statusCode)})"
+  CMD node -e "require('http').get('http://localhost:3001/', (r) => {if (r.statusCode !== 200) throw new Error(r.statusCode)})"
 
 # Start the application
 # HOST=0.0.0.0 makes the server accessible from outside the container
-# PORT=3000 matches the exposed port
+# PORT=3001 matches the exposed port
 CMD ["pnpm", "start"]
