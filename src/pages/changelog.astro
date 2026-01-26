@@ -1,0 +1,44 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import { changelog } from "~/data";
+import PageHeader from "~/components/PageHeader.astro";
+
+const sorted = [...changelog].sort((a, b) => b.date.localeCompare(a.date));
+---
+
+<BaseLayout
+  title="更新日志 · 柴火创客学院"
+  description="课程与工具的更新记录（CHANGELOG）。"
+>
+  <PageHeader
+    title="更新日志"
+    subtitle="每次课程/课件/工具更新都有记录：可追溯、可复盘、可持续迭代。"
+  />
+
+  <div class="container">
+    <section class="section">
+      <div class="grid">
+        {
+          sorted.map((c) => (
+            <div class="card" style="grid-column: span 12;">
+              <div class="card-inner">
+                <div class="kicker">
+                  {c.date}
+                  {c.scope === "module" && c.moduleId
+                    ? ` · ${c.moduleId.toUpperCase()}`
+                    : ""}
+                  {c.scope === "tool" && c.toolId ? ` · ${c.toolId}` : ""}
+                </div>
+                <h3>{c.title}</h3>
+                <p>{c.summary}</p>
+                <div style="margin-top: 10px; color: var(--muted);">
+                  {c.changes.join(" · ")}
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</BaseLayout>

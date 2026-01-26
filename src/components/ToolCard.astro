@@ -1,0 +1,25 @@
+---
+import StatusPill from './StatusPill.astro'
+import type { Tool } from '~/data/schema'
+
+type Props = {
+  tool: Tool
+}
+
+const { tool } = Astro.props
+---
+
+<a class="card" href={`/tools/${tool.id}`}>
+  <div class="card-inner">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap: 10px;">
+      <h3>{tool.name}</h3>
+      <StatusPill status={tool.status} />
+    </div>
+    <p>{tool.description}</p>
+    <div class="tags">
+      {tool.stack.slice(0, 4).map((t) => (
+        <span class="tag">{t}</span>
+      ))}
+    </div>
+  </div>
+</a>

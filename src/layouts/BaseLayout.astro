@@ -1,0 +1,208 @@
+---
+import "~/styles/global.css";
+
+type Props = {
+  title: string;
+  description?: string;
+};
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <link rel="icon" type="image/png" href="/logo-vertical.png" />
+    {description ? <meta name="description" content={description} /> : null}
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <div class="topbar-inner">
+          <a class="brand" href="/">
+            <img
+              src="/logo-horizontal.png"
+              alt="Chaihuo Makerspace"
+              class="brand-logo"
+            />
+          </a>
+          <nav class="nav" aria-label="Primary">
+            {
+               [
+                 { href: "/", label: "首页" },
+                 { href: "/modules", label: "课程模块" },
+                 { href: "/runs", label: "授课记录" },
+                 { href: "/changelog", label: "更新" },
+               ].map((link) => (
+                 <a
+                   href={link.href}
+                   class:list={[
+                     "nav-link",
+                     { active: link.href === "/" ? Astro.url.pathname === "/" : Astro.url.pathname.startsWith(link.href) },
+                   ]}
+                 >
+                   {link.label}
+                 </a>
+               ))
+            }
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-left">
+            <div class="footer-branding">
+              <img
+                src="/logo-horizontal.png"
+                alt="Chaihuo Makerspace"
+                class="footer-logo"
+              />
+              <div>
+                <div class="footer-title">柴火创客学院课程体系</div>
+                <p class="footer-desc">开放技术赋能 · 解决真问题 · 有用易学</p>
+              </div>
+            </div>
+            <div class="footer-address">
+              <h4 class="footer-heading">联系地址</h4>
+              <div class="address-list">
+                <p class="address-item">
+                  <strong>深圳 Shenzhen (HQ)</strong>
+                  深圳市南山区万科云城设计社区 B622
+                  <span class="en-addr">
+                    B622, Vanke Cloud City Design Commune, Nanshan
+                  </span>
+                </p>
+                <p class="address-item">
+                  <strong>成都 Chengdu</strong>
+                  四川省成都市青羊区狮马路 92 号
+                  <span class="en-addr">No. 92, Shima Road, Qingyang District</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-right">
+            <div class="footer-social">
+              <h4 class="footer-heading">关注我们</h4>
+              <div class="social-links">
+                <a
+                  href="https://www.chaihuo.org"
+                  target="_blank"
+                  title="Website"
+                  class="social-link"
+                >
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><circle cx="12" cy="12" r="10"></circle><line
+                      x1="2"
+                      y1="12"
+                      x2="22"
+                      y2="12"></line><path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                    ></path></svg
+                  >
+                  Website
+                </a>
+                <a
+                  href="https://x.com/chaihuomaker"
+                  target="_blank"
+                  title="X (Twitter)"
+                  class="social-link"
+                >
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="none"
+                    ><path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                    ></path></svg
+                  >
+                  Twitter (X)
+                </a>
+                <a
+                  href="https://www.instagram.com/chaihuomakerspace/"
+                  target="_blank"
+                  title="Instagram"
+                  class="social-link"
+                >
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><rect x="2" y="2" width="20" height="20" rx="5" ry="5"
+                    ></rect><path
+                      d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                    ></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"
+                    ></line></svg
+                  >
+                  Instagram
+                </a>
+                <a
+                  href="https://www.facebook.com/Chaihuo-Maker-Space-100069393802514/"
+                  target="_blank"
+                  title="Facebook"
+                  class="social-link"
+                >
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path
+                      d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                    ></path></svg
+                  >
+                  Facebook
+                </a>
+              </div>
+            </div>
+            <div class="footer-meta">
+              <div class="footer-meta-label">商务合作</div>
+              <a class="footer-meta-link" href="mailto:business@chaihuo.org">
+                business@chaihuo.org
+              </a>
+              <div class="footer-meta-note">www.chaihuo.org</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="copyright">
+            &copy; {new Date().getFullYear()} Chaihuo Maker Space. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .brand-logo {
+    height: 44px;
+    width: auto;
+    display: block;
+  }
+</style>

@@ -1,0 +1,47 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import { runs } from "~/data";
+import PageHeader from "~/components/PageHeader.astro";
+
+const sorted = [...runs].sort((a, b) =>
+  (b.dateRange.start ?? "").localeCompare(a.dateRange.start ?? ""),
+);
+---
+
+<BaseLayout
+  title="授课记录 · 柴火创客学院"
+  description="每期开课记录：公司培训与社区授课。"
+>
+  <PageHeader
+    title="授课记录"
+    subtitle="用真实授课记录证明课程持续打磨：时间、类型（公司/社区）与覆盖模块。"
+  />
+
+  <div class="container">
+    <section class="section">
+      <div class="grid">
+        {
+          sorted.map((r) => (
+            <div class="card" style="grid-column: span 12;">
+              <div class="card-inner">
+                <div class="kicker">
+                  {r.dateRange.start}
+                  {r.type === "company" ? " · 企业" : " · 社区"}
+                </div>
+                <h3>{r.orgName ?? r.location ?? r.id}</h3>
+                <p>{r.summary}</p>
+                <div class="tags">
+                  {r.modules.map((m) => (
+                    <a class="tag" href={`/modules/${m}`}>
+                      {m.toUpperCase()}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</BaseLayout>

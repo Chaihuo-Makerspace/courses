@@ -1,0 +1,612 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import { modules } from "~/data";
+
+const courseDirections = [
+  {
+    id: "01",
+    title: "用 AI 造物",
+    subtitle: "Make with AI",
+    icon: "💡",
+    bg: "var(--chaihuo-red)",
+    color: "white",
+    desc: "从创意到原型的快速实现",
+  },
+  {
+    id: "02",
+    title: "造 AI 的物",
+    subtitle: "Make for AI",
+    icon: "📦",
+    bg: "var(--chaihuo-orange)",
+    color: "white",
+    desc: "构建智能硬件与物理载体",
+  },
+  {
+    id: "03",
+    title: "解决方案",
+    subtitle: "Solutions",
+    icon: "🧩",
+    bg: "var(--chaihuo-yellow)",
+    color: "var(--chaihuo-text)",
+    desc: "系统集成与场景落地",
+  },
+];
+
+const highlights = [
+  {
+    icon: "🔓",
+    title: "开源生态",
+    desc: "基于 Home Assistant、ESPHome 等成熟开源项目",
+  },
+  { icon: "🏭", title: "国产硬件", desc: "全系列开源硬件，供应链自主可控" },
+  { icon: "🔒", title: "私有部署", desc: "数据本地存储，满足合规审计要求" },
+  { icon: "♻️", title: "利旧改造", desc: "兼容存量设备，保护既有投资" },
+];
+---
+
+<BaseLayout
+  title="柴火创客学院课程体系 | Chaihuo Maker Academy Curriculum"
+  description="开放技术赋能 · 解决真问题 · 有用易学"
+>
+  <!-- Full Width Header Banner -->
+  <div class="header-banner">
+    <div class="container header-content">
+      <div class="header-left">
+        <h1>
+          柴火创客学院课程体系
+          <span class="en-title">Chaihuo Maker Academy Curriculum</span>
+        </h1>
+        <div class="tagline">
+          <span class="tag-highlight">开放技术赋能</span>
+          <span class="divider">/</span>
+          <span class="tag-highlight">解决真问题</span>
+          <span class="divider">/</span>
+          <span class="tag-highlight">有用易学</span>
+        </div>
+      </div>
+      <div class="header-logo">
+        <img src="/logo-horizontal.png" alt="Chaihuo Makers" class="logo-img" />
+      </div>
+    </div>
+  </div>
+
+  <div class="container main-content">
+    <!-- Section 1: Three Course Directions -->
+    <section class="section">
+      <div class="section-title">
+        <h2>
+          <span class="slash">/</span> 三大课程方向 <span class="en-section"
+            >Three Course Directions</span
+          >
+        </h2>
+      </div>
+      <div class="directions-grid">
+        {
+          courseDirections.map((item) => (
+            <div
+              class="direction-card"
+              style={`background: ${item.bg}; color: ${item.color}`}
+            >
+              <div class="card-id">{item.id}</div>
+              <div class="card-icon">{item.icon}</div>
+              <div class="card-text">
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Section 2: Core Course Matrix -->
+    <section class="section">
+      <div class="section-title">
+        <h2>
+          <span class="slash">/</span> 核心课程矩阵 <span class="en-section"
+            >Core Course Matrix</span
+          >
+        </h2>
+        <div class="contact-info">
+          <a href="mailto:business@chaihuo.org" class="contact-btn"
+            >联系我们 ▶ business@chaihuo.org</a
+          >
+        </div>
+      </div>
+
+      <div class="matrix-grid">
+        {
+          modules.map((m, index) => (
+            <a href={`/modules/${m.id}`} class="matrix-card">
+              <div class="matrix-header">
+                <span class="matrix-id">0{index + 1}</span>
+                <span class="matrix-title">{m.title}</span>
+              </div>
+              <div class="matrix-en">{m.titleEn || "Course Module"}</div>
+              <div class="matrix-content">
+                <div class="matrix-desc">
+                  <strong>{m.description}</strong>
+                  <ul class="matrix-tags">
+                    {/* Fallback tags if not in data */}
+                    <li>实战案例</li>
+                    <li>代码交付</li>
+                    <li>硬件配套</li>
+                  </ul>
+                </div>
+                <div class="matrix-icon">
+                  {/* Visual placeholder for isometric icons */}
+                  <div class="icon-placeholder" />
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Section 3: Partners & Process -->
+    <section class="section bottom-section">
+      <div class="section-title">
+        <h2>
+          <span class="slash">/</span> 生态合作体系 <span class="en-section"
+            >Ecological Cooperation</span
+          >
+        </h2>
+      </div>
+      <div class="info-row">
+        <div class="info-label">
+          合作对象 <span class="en-label">Target Partners</span>
+        </div>
+        <div class="info-items">
+          <div class="info-pill icon-pill">
+            👥 系统集成商 <span class="en-small">System Integrators</span>
+          </div>
+          <div class="info-pill icon-pill">
+            🎓 高校 <span class="en-small">Universities</span>
+          </div>
+          <div class="info-pill icon-pill">
+            🏢 企业 <span class="en-small">Enterprises</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-label">
+          合作流程 <span class="en-label">Partnership Process</span>
+        </div>
+        <div class="process-steps">
+          <div class="step">
+            需求评估 <span class="en-step">Needs Assessment</span>
+          </div>
+          <div class="arrow">→</div>
+          <div class="step">
+            培训定制 <span class="en-step">Custom Training</span>
+          </div>
+          <div class="arrow">→</div>
+          <div class="step">
+            商务流程 <span class="en-step">Business Process</span>
+          </div>
+          <div class="arrow">→</div>
+          <div class="step active">
+            启动合作 <span class="en-step">Launch Partnership</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  :root {
+    --header-bg: #f3d230; /* Match standard yellow */
+  }
+
+  /* Reset & Base */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .main-content {
+    background: #fff;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  /* Header Banner */
+  .header-banner {
+    background: linear-gradient(135deg, #f7ce46 0%, #f3d230 100%);
+    padding: 24px 0;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(243, 210, 48, 0.2);
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-left h1 {
+    font-size: 28px; /* Slightly smaller */
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .en-title {
+    font-weight: 400;
+    font-size: 16px;
+    opacity: 0.85;
+    font-family: var(--font-sans);
+  }
+
+  .tagline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+    font-size: 15px;
+    color: #a04e00;
+  }
+
+  .tag-highlight {
+    font-weight: 700;
+  }
+
+  .divider {
+    color: rgba(160, 78, 0, 0.3);
+    font-weight: 400;
+  }
+
+  .header-logo {
+    /* Placeholder for logo */
+    width: auto;
+    height: 64px; /* Slightly smaller logo area */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-left: 20px;
+  }
+
+  .logo-img {
+    height: 100%;
+    width: auto;
+    display: block;
+  }
+
+  /* Section Titles */
+  .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+  }
+
+  .section-title h2 {
+    font-size: 20px;
+    color: #d14900; /* Reddish title color */
+    margin: 0;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+  }
+
+  .slash {
+    font-weight: 900;
+    margin-right: 8px;
+    color: var(--chaihuo-red);
+  }
+
+  .en-section {
+    font-size: 14px;
+    color: #999;
+    font-weight: 400;
+    margin-left: 10px;
+  }
+
+  .contact-btn {
+    background: var(--chaihuo-red);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* Direction Cards */
+  .directions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .direction-card {
+    padding: 24px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    height: 140px;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .direction-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .card-id {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 48px;
+    font-weight: 900;
+    opacity: 0.25;
+    line-height: 1;
+    font-family: var(--font-mono);
+    letter-spacing: -2px;
+  }
+
+  .card-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+    align-self: center;
+  }
+
+  .card-text {
+    text-align: center;
+    z-index: 1;
+  }
+
+  .card-text h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .card-text p {
+    margin: 5px 0 0;
+    font-size: 13px;
+    opacity: 0.9;
+  }
+
+  /* Matrix Grid */
+  .matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .matrix-card {
+    background: #fffdf5; /* Very subtle yellow tint */
+    border: 1px solid #f0e6c8;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .matrix-card:hover {
+    border-color: var(--chaihuo-yellow);
+    background: #fff;
+    box-shadow: 0 6px 16px rgba(243, 210, 48, 0.12);
+    transform: translateY(-2px);
+  }
+
+  .matrix-header {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 4px;
+  }
+
+  .matrix-id {
+    font-size: 24px;
+    font-weight: 800;
+    color: #c4a663;
+    margin-right: 8px;
+    font-style: italic;
+    opacity: 0.8;
+  }
+
+  .matrix-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c2c2c;
+  }
+
+  .matrix-en {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 18px;
+    border-bottom: 1px dashed #e0d0b0;
+    padding-bottom: 12px;
+    font-family: var(--font-sans);
+  }
+
+  .matrix-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .matrix-desc strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #444;
+  }
+
+  .matrix-tags {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 11px;
+    color: #777;
+    line-height: 1.4;
+  }
+
+  .matrix-tags li {
+    margin-bottom: 2px;
+  }
+
+  .icon-placeholder {
+    width: 60px;
+    height: 60px;
+    background: #eee; /* Placeholder for isometric artwork */
+    border-radius: 8px;
+    background-image: linear-gradient(
+      135deg,
+      #fdfbf7 25%,
+      #f4f0e6 25%,
+      #f4f0e6 50%,
+      #fdfbf7 50%,
+      #fdfbf7 75%,
+      #f4f0e6 75%,
+      #f4f0e6 100%
+    );
+    background-size: 20px 20px;
+  }
+
+  /* Bottom Section */
+  .bottom-section {
+    /* Merged with standard section style for consistency */
+    padding-top: 10px;
+  }
+
+  .info-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .info-label {
+    font-weight: 700;
+    font-size: 16px;
+    color: #333;
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .en-label {
+    font-size: 11px;
+    color: #888;
+    font-weight: 400;
+  }
+
+  .info-items {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+  }
+
+  .info-pill {
+    background: white;
+    border: 1px solid #eec448;
+    color: #d17d00;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 110px;
+  }
+
+  .en-small {
+    font-weight: 400;
+    font-size: 10px;
+    color: #999;
+  }
+
+  .process-steps {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    overflow-x: auto;
+  }
+
+  .step {
+    background: #fdf2d0;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #8a6d3b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  .en-step {
+    font-size: 9px;
+    font-weight: 400;
+    opacity: 0.8;
+  }
+
+  .step.active {
+    background: var(--chaihuo-red);
+    color: white;
+  }
+
+  .arrow {
+    color: #ccc;
+    font-weight: bold;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .directions-grid,
+    .matrix-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .header-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    .header-logo {
+      margin-top: 15px;
+    }
+    .directions-grid,
+    .matrix-grid {
+      grid-template-columns: 1fr;
+    }
+    .info-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .info-items,
+    .process-steps {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+</style>

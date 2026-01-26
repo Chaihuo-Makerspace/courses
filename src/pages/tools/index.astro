@@ -1,0 +1,30 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import ToolCard from "~/components/ToolCard.astro";
+import { tools } from "~/data";
+import PageHeader from "~/components/PageHeader.astro";
+---
+
+<BaseLayout
+  title="上课工具 · 柴火创客学院"
+  description="课程配套工具：用于课堂实操与演示。"
+>
+  <PageHeader
+    title="上课工具"
+    subtitle="工具不是 demo：它们是课程交付的一部分，服务于课堂实操与可复制的交付。"
+  />
+
+  <div class="container">
+    <section class="section">
+      <div class="grid">
+        {
+          tools.map((t) => (
+            <div style="grid-column: span 6;">
+              <ToolCard tool={t} />
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</BaseLayout>

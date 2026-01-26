@@ -1,0 +1,7 @@
+name = "chaihuo-course"
+main = ".output/server/index.mjs"
+compatibility_date = "2026-01-26"
+
+[assets]
+directory = ".output/static"
+binding = "ASSETS"

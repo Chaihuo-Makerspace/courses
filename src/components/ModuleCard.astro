@@ -1,0 +1,190 @@
+---
+import StatusPill from './StatusPill.astro'
+import type { Module } from '~/data/schema'
+
+type Props = {
+  module: Module
+  index?: number
+}
+
+const { module, index = 0 } = Astro.props
+
+const accentColors = [
+  '#d19a00', // Darker Yellow (readable on white, good for buttons)
+  'var(--accent)', // Red is fine
+  '#d19a00', // Darker Yellow
+  'var(--accent)', 
+  'var(--text)',
+]
+
+const accentColor = accentColors[index % accentColors.length]
+
+// Status-based button colors
+const statusColors: Record<string, string> = {
+  active: '#00a370', // Brand Green (Chaihuo friendly)
+  wip: '#d19a00',    // Dark Yellow/Orange
+  beta: '#d19a00',   // Dark Yellow/Orange
+  planned: '#888888', // Muted Grey
+}
+
+const buttonColor = statusColors[module.status] || statusColors.planned
+---
+
+<a class="module-card" href={`/modules/${module.id}`} style={`--accent: ${accentColor}; --btn-color: ${buttonColor}`}>
+  <div class="module-card-glow" aria-hidden="true"></div>
+  <div class="module-card-inner">
+    <div class="module-card-header">
+      <div class="module-id">{module.id.toUpperCase()}</div>
+      <StatusPill status={module.status} />
+    </div>
+    <h3 class="module-title">{module.title}</h3>
+    <p class="module-tagline">{module.tagline}</p>
+    <div class="module-scenarios">
+      {module.scenarios.slice(0, 3).map((s) => (
+        <span class="scenario-tag">{s}</span>
+      ))}
+    </div>
+    <div class="module-stack">
+      {module.stack.slice(0, 4).map((t) => (
+        <span class="stack-tag">{t}</span>
+      ))}
+    </div>
+    <div class="module-card-footer">
+      <span class="view-link">查看详情 →</span>
+    </div>
+  </div>
+</a>
+
+<style>
+  .module-card {
+    position: relative;
+    display: block;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, #ffffff, var(--bg-subtle));
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .module-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    text-decoration: none;
+  }
+
+  .module-card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .module-card:hover .module-card-glow {
+    opacity: 1;
+  }
+
+  .module-card-inner {
+    padding: 20px;
+  }
+
+  .module-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .module-id {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    padding: 4px 8px;
+    background: color-mix(in srgb, var(--accent) 15%, transparent);
+    border-radius: 4px;
+  }
+
+  .module-title {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+
+  .module-tagline {
+    margin: 0 0 16px;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  .module-scenarios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .scenario-tag {
+    font-size: 11px;
+    padding: 4px 8px;
+    background: var(--bg-subtle);
+    border-radius: 4px;
+    color: var(--faint);
+  }
+
+  .module-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+
+  .stack-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    background: var(--bg-subtle);
+  }
+
+  .module-card-footer {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: flex-end; /* Align button to right */
+  }
+
+  .view-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--btn-color); /* Use status-based color */
+    padding: 6px 16px;
+    border-radius: 999px;
+    opacity: 1; /* Always fully visible */
+    transition: all 0.2s ease;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Ensure text readability on light colors */
+  }
+
+  /* Adjust text color for yellow accent if possible, or use text-shadow/darker variant */
+  /* Fallback logic: if background is yellow, we need dark text. 
+     Since CSS variables are dynamic, simpler to just enforce a style that works 
+     or use a consistent color for the button across all cards if dynamic fails.
+  */
+
+  .module-card:hover .view-link {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+</style>

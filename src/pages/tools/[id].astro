@@ -1,0 +1,74 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro'
+import { changelog, getTool, tools } from '~/data'
+
+export function getStaticPaths() {
+  return tools.map((t) => ({ params: { id: t.id } }))
+}
+
+const id = Astro.params.id
+const tool = getTool(id)
+if (!tool) throw new Error(`Unknown tool: ${id}`)
+
+const toolUpdates = changelog
+  .filter((c) => c.scope === 'tool' && c.toolId === tool.id)
+  .sort((a, b) => b.date.localeCompare(a.date))
+---
+
+<BaseLayout title={`${tool.name} · 工具`} description={tool.description}>
+  <div class="container">
+    <section class="hero">
+      <div class="kicker">Tool</div>
+      <h1>{tool.name}</h1>
+      <p>{tool.description}</p>
+      <div class="pill-row">
+        <a class="pill" href="/tools">返回工具</a>
+        <a class="pill" href={tool.url} target="_blank">打开工具</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>适用模块</h2>
+      </div>
+      <div class="tags">
+        {tool.relatedModules.map((m) => (
+          <a class="tag" href={`/modules/${m}`}>{m.toUpperCase()}</a>
+        ))}
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>技术栈</h2>
+      </div>
+      <div class="tags">
+        {tool.stack.map((s) => (
+          <span class="tag">{s}</span>
+        ))}
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>更新记录</h2>
+        <a href="/changelog">全站更新</a>
+      </div>
+      {toolUpdates.length ? (
+        <div class="grid">
+          {toolUpdates.map((u) => (
+            <div class="card" style="grid-column: span 12;">
+              <div class="card-inner">
+                <div class="kicker">{u.date}</div>
+                <h3>{u.title}</h3>
+                <p>{u.summary}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class="card"><div class="card-inner"><p>暂无工具更新（可在 changelog.ts 里 scope=tool 添加）。</p></div></div>
+      )}
+    </section>
+  </div>
+</BaseLayout>

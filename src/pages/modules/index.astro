@@ -1,0 +1,38 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import ModuleCard from "~/components/ModuleCard.astro";
+import { modules } from "~/data";
+import PageHeader from "~/components/PageHeader.astro";
+---
+
+<BaseLayout
+  title="课程模块 · 柴火创客学院"
+  description="查看所有课程模块与课件入口。"
+>
+  <PageHeader
+    title="课程模块"
+    subtitle="每个模块都能开成一期课；课件与工具会随着打磨逐步补齐。"
+  />
+
+  <div class="container">
+    <section class="section">
+      <div class="modules-grid">
+        {modules.map((m, index) => <ModuleCard module={m} index={index} />)}
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  @media (max-width: 720px) {
+    .modules-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

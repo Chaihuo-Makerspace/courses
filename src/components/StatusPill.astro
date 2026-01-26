@@ -1,0 +1,28 @@
+---
+import type { ModuleStatus, ToolStatus } from '~/data/schema'
+
+type Props = {
+  status: ModuleStatus | ToolStatus
+}
+
+const { status } = Astro.props
+
+const map: Record<string, { label: string; tone: 'muted' | 'warn' | 'brand' }> = {
+  active: { label: '可开课', tone: 'brand' },
+  wip: { label: '打磨中', tone: 'warn' },
+  planned: { label: '规划中', tone: 'muted' },
+  beta: { label: 'Beta', tone: 'warn' },
+}
+
+const item = map[status] ?? { label: status, tone: 'muted' }
+
+const toneStyle: Record<string, string> = {
+  muted: 'rgba(255, 255, 255, 0.06)',
+  warn: 'rgba(255, 212, 59, 0.12)',
+  brand: 'rgba(99, 230, 190, 0.12)',
+}
+---
+
+<span class="pill" style={`background: ${toneStyle[item.tone]};`}>
+  <span>{item.label}</span>
+</span>
