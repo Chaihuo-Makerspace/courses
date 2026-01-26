@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  website:
+    # Container image from GitHub Container Registry
+    # Supports environment variable override for IMAGE_TAG (default: latest)
+    image: ghcr.io/${GITHUB_REPOSITORY}:${IMAGE_TAG:-latest}
+    
+    # Container name for easy reference
+    container_name: seeed-website
+    
+    # Port mapping: HOST_PORT:CONTAINER_PORT
+    # Default to 3000, but allow override via PORT env var
+    ports:
+      - "${PORT:-3000}:3000"
+    
+    # Restart policy: automatically restart unless explicitly stopped
+    restart: unless-stopped
+    
+    # Health check configuration (synchronized with Dockerfile HEALTHCHECK)
+    # Checks if the application is responding to HTTP requests on port 3000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+    
+    # Environment variables
+    environment:
+      # Node environment (optional, can be overridden via .env)
+      - NODE_ENV=production
+    
+    # Resource limits (optional, uncomment to enable)
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: '1'
+    #       memory: 512M
+    #     reservations:
+    #       cpus: '0.5'
+    #       memory: 256M
+    
+    # Logging configuration (optional)
+    # logging:
+    #   driver: "json-file"
+    #   options:
+    #     max-size: "10m"
+    #     max-file: "3"
+    
+    # Volume mounts (if needed for persistent data or configuration)
+    # volumes:
+    #   - ./data:/app/data
+
+# Named volumes (if used above)
+# volumes:
+#   data:
