@@ -56,11 +56,11 @@ fi
 log_success "Docker 已安装"
 
 # Check if docker-compose is installed
-if ! command -v docker-compose &> /dev/null; then
-    log_error "docker-compose 未安装"
+if ! docker compose version &> /dev/null; then
+    log_error "docker compose 未安装或不可用"
     exit 1
 fi
-log_success "docker-compose 已安装"
+log_success "docker compose 已安装"
 
 # Check if docker daemon is running
 if ! docker ps &> /dev/null; then
@@ -82,9 +82,9 @@ log_success "检查配置文件"
 
 cd "$SCRIPT_DIR"
 
-if docker-compose ps -q 2>/dev/null | grep -q .; then
+if docker compose ps -q 2>/dev/null | grep -q .; then
     log_info "🔄 停止并删除旧容器..."
-    docker-compose down --remove-orphans
+    docker compose down --remove-orphans
     log_success "旧容器已清理"
 else
     log_info "未发现运行中的容器，跳过清理"
@@ -96,7 +96,7 @@ fi
 
 log_info "🚀 构建并启动服务..."
 
-if ! docker-compose up -d --build; then
+if ! docker compose up -d --build; then
     log_error "部署失败"
     exit 1
 fi
@@ -128,7 +128,7 @@ log_success "旧镜像已清理"
 
 log_info "📊 显示服务状态..."
 echo ""
-docker-compose ps
+docker compose ps
 echo ""
 
 # ============================================================================
@@ -137,7 +137,7 @@ echo ""
 
 log_info "📋 最近日志（最后 50 行）..."
 echo ""
-docker-compose logs --tail=50
+docker compose logs --tail=50
 echo ""
 
 # ============================================================================
@@ -154,7 +154,7 @@ echo "服务目录: $SCRIPT_DIR"
 echo "状态: 运行中"
 echo ""
 echo "常用命令:"
-echo "  查看日志: docker-compose logs -f"
-echo "  停止服务: docker-compose down"
-echo "  查看状态: docker-compose ps"
+echo "  查看日志: docker compose logs -f"
+echo "  停止服务: docker compose down"
+echo "  查看状态: docker compose ps"
 echo ""
