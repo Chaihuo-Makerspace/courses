@@ -8,33 +8,56 @@ const stats = [
   { number: "4000+", label: "赋能人次" },
 ];
 
+const painPoints = [
+  {
+    icon: "refresh",
+    title: "技术迭代快，不知从何学起",
+    description: "AI、IoT、边缘计算...新概念层出不穷，难以判断哪些值得投入时间学习。",
+  },
+  {
+    icon: "book",
+    title: "学了理论，但无法落地",
+    description: "看了很多教程和文档，但面对实际项目时，仍然不知道如何下手。",
+  },
+  {
+    icon: "tool",
+    title: "缺乏真实项目经验",
+    description: "没有合适的硬件环境和真实场景，难以积累可迁移的实战能力。",
+  },
+];
+
+const partners = [
+  { name: "合作伙伴1", logo: null },
+  { name: "合作伙伴2", logo: null },
+  { name: "合作伙伴3", logo: null },
+  { name: "合作伙伴4", logo: null },
+  { name: "合作伙伴5", logo: null },
+  { name: "合作伙伴6", logo: null },
+];
+
 const features = [
   {
     badge: "一个核心理念",
     title: "工具赋能，专注解决真问题",
     description: `我们拒绝纸上谈兵，所有课程设计均源于柴火生态中数百个真实产业项目的凝练，旨在让您学到"解决一类问题的系统能力"。`,
-    image: "/images/feature-1.svg",
     accent: "red",
   },
   {
     badge: "三大课程方向",
-    title: "覆盖从工具使用到方案交付的完整能力链",
-    description: `我们围绕"用AI造物"、"造AI的物"与"解决方案"三大核心方向，为处于不同阶段的学习者提供系统课程，助力大家完成从硬件基础掌握到真实场景方案交付的能力跨越。`,
-    image: "/images/feature-2.svg",
+    title: "覆盖从入门到实战的完整能力链",
+    description: `围绕"用AI造物"、"造AI的物"与"场景整合"三大核心方向，为不同阶段的学习者提供系统化课程，助你完成从工具掌握到真实场景应用的能力跨越。`,
     accent: "yellow",
   },
   {
-    badge: "三层能力进阶赋能",
-    title: `实现从"使用者"到"构建者"的跃迁`,
-    description: "我们每个课程均按认知规划→开发实战→设计交付三步进阶，确保你不只听懂，更能亲手做出来、真正用得上。",
-    image: "/images/feature-3.svg",
+    badge: "三层能力进阶",
+    title: `从"会用工具"到"能解决问题"`,
+    description: `每个课程均按"认知规划→开发实战→场景交付"三步进阶，确保你不只听懂，更能亲手做出来、真正用得上。`,
     accent: "red",
   },
   {
-    badge: "五大实战场景方案复现",
-    title: "不教空洞理论，只授已验证的解法",
-    description: `我们精选智慧空间、视觉安防、离网通信等五大高频高价值场景，完整复现从真实痛点到可运行解决方案的全过程。在这里，您学到的不是组件，而是能直接带回岗位的"场景工具箱"。`,
-    image: "/images/feature-4.svg",
+    badge: "五大实战场景",
+    title: "不教空洞理论，只授已验证的技能",
+    description: `精选智慧空间、视觉安防、离网通信等五大高频高价值场景，完整复现从真实痛点到可运行原型的全过程。学到的不是组件，而是能直接带回岗位的"场景技能包"。`,
     accent: "yellow",
   },
 ];
@@ -52,17 +75,24 @@ const features = [
           </p>
 
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-            为真实世界<br />
-            <span class="text-brand-red">锻造解决方案</span>
+            让新技术<br />
+            <span class="text-brand-red">为你所用</span>
           </h1>
 
           <p class="text-xl sm:text-2xl text-gray-700 font-medium">
-            助您将AIoT技术转化为可部署的行业方案
+            掌握AIoT实战技能，解决真实场景问题
           </p>
 
           <p class="text-base sm:text-lg text-gray-500 max-w-lg">
-            破解产业升级核心难题：以更低成本、更高效率，将"智改数转"蓝图转化为可验证、可落地的真实生产力
+            从0到1掌握新技术整合能力，把学到的知识直接用到工作中。真实硬件、真实场景、真实问题——学完就能上手。
           </p>
+
+          <a
+            href="/courses"
+            class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-brand-red rounded-lg hover:bg-brand-red-hover transition-colors cursor-pointer"
+          >
+            探索课程
+          </a>
         </div>
 
         <!-- Right: Visual -->
@@ -94,6 +124,44 @@ const features = [
             </div>
           ))
         }
+      </div>
+    </div>
+  </section>
+
+  <!-- Pain Points Section -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+          你是否面临这些挑战？
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {painPoints.map((point) => (
+          <div class="bg-white p-6 rounded-2xl">
+            <div class="w-12 h-12 bg-brand-red-light rounded-xl flex items-center justify-center mb-4">
+              {point.icon === "refresh" && (
+                <svg class="w-6 h-6 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                </svg>
+              )}
+              {point.icon === "book" && (
+                <svg class="w-6 h-6 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+              )}
+              {point.icon === "tool" && (
+                <svg class="w-6 h-6 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              )}
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">{point.title}</h3>
+            <p class="text-sm text-gray-600">{point.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -152,8 +220,35 @@ const features = [
     </div>
   </section>
 
+  <!-- Social Proof Section -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+          他们选择了柴火创客学院
+        </h2>
+        <p class="text-gray-600">
+          与众多企业、高校建立深度合作
+        </p>
+      </div>
+
+      <!-- Partner Logos -->
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-6 items-center">
+        {partners.map((partner) => (
+          <div class="flex items-center justify-center h-16 bg-white rounded-lg">
+            {partner.logo ? (
+              <img src={partner.logo} alt={partner.name} class="h-8 w-auto" />
+            ) : (
+              <span class="text-sm text-gray-400">{partner.name}</span>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Section -->
-  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+  <section class="py-20 px-4 sm:px-6 lg:px-8">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
         准备好开始学习了吗？

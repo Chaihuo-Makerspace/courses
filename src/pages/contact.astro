@@ -1,55 +1,97 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+const testimonials = [
+  {
+    quote: "这里是学员心得内容占位文字，描述培训带来的收获和改变...",
+    name: "姓名",
+    role: "职位/背景",
+    accent: "yellow",
+  },
+  {
+    quote: "这里是学员心得内容占位文字，描述培训带来的收获和改变...",
+    name: "姓名",
+    role: "职位/背景",
+    accent: "red",
+  },
+  {
+    quote: "这里是学员心得内容占位文字，描述培训带来的收获和改变...",
+    name: "姓名",
+    role: "职位/背景",
+    accent: "yellow",
+  },
+  {
+    quote: "这里是学员心得内容占位文字，描述培训带来的收获和改变...",
+    name: "姓名",
+    role: "职位/背景",
+    accent: "red",
+  },
+  {
+    quote: "这里是学员心得内容占位文字，描述培训带来的收获和改变...",
+    name: "姓名",
+    role: "职位/背景",
+    accent: "yellow",
+  },
+];
+
+const faqs = [
+  {
+    question: "培训后能获得什么证书？",
+    answer: "完成课程并通过考核的学员，将获得柴火创客学院官方认证证书，并进入「柴火人才库」，优先对接生态合作企业的项目机会。",
+  },
+  {
+    question: "没有技术基础可以参加吗？",
+    answer: "可以。我们的课程体系覆盖入门到高级，标注为「入门」的课程无需编程基础，从零开始带你掌握实战技能。建议根据课程页面的难度标签选择适合自己的起点。",
+  },
+  {
+    question: "课程培训需要多长时间？",
+    answer: "单个课程通常为 1-2 天的集中培训。企业定制内训可根据需求灵活调整时长和深度。",
+  },
+  {
+    question: "培训费用是多少？",
+    answer: "费用因课程类型和合作方式而异。公开课可关注公众号查看最新课表及价格；企业内训和项目咨询请提交需求表单，我们将提供专属报价方案。",
+  },
+];
+
 const collaborationMethods = [
   {
     method: "方式一：个人/团队报名（公开课）",
     target: "希望系统提升技能的个人工程师、创客或技术团队。",
-    action: `立即关注"柴火创客空间"官方公众号，查看最新课表与报名`,
+    action: `关注"柴火创客空间"官方公众号，查看最新课表与报名`,
     actionType: "wechat",
   },
   {
     method: "方式二：企业定制化内训",
     target: "希望针对自身业务场景与痛点，为团队进行定向赋能的企业。",
-    action: `扫码提交需求，获取专属《企业内训方案建议书》`,
-    actionType: "qrcode",
+    action: `填写需求表单，获取专属《企业内训方案建议书》`,
+    actionType: "form",
+    formUrl: "#", // TODO: 替换为实际表单链接
   },
   {
     method: "方式三：项目联合攻坚与咨询",
     target: `面临复杂挑战、寻求"培训+咨询+技术支撑"全链条深度合作的企业。`,
-    action: "扫码详述项目，预约解决方案架构师进行1对1深度沟通。",
-    actionType: "qrcode",
+    action: "提交项目需求，预约解决方案架构师进行1对1深度沟通",
+    actionType: "form",
+    formUrl: "#", // TODO: 替换为实际表单链接
   },
 ];
 
-const locations = [
-  {
-    city: "深圳",
-    tag: "HQ",
-    address: "深圳市南山区万科云城设计社区 B622",
-    email: "jiayu.wang@seeed.cc",
-  },
-  {
-    city: "成都",
-    tag: null,
-    address: "成都市青羊区狮马路92号",
-    email: "xia.huang@seeed.cc",
-  },
-];
 ---
 
 <Layout title="合作咨询">
   <!-- Hero Section -->
-  <section class="relative py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gray-50">
+  <section class="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gray-50">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
+      <div class="text-center">
         <p class="text-sm sm:text-base font-medium text-brand-red tracking-wide mb-4">
           合作咨询
         </p>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-          清晰灵活的合作路径<br />
-          <span class="text-brand-red">满足不同需求</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
+          找到你的<span class="text-brand-red">最佳起点</span>
         </h1>
+        <p class="text-lg text-gray-600">
+          个人进修 · 企业内训 · 项目咨询
+        </p>
       </div>
     </div>
   </section>
@@ -84,14 +126,7 @@ const locations = [
               </div>
             </div>
 
-            <!-- QR Code placeholder -->
-            {item.actionType === "qrcode" && (
-              <div class="mt-6 flex justify-center">
-                <div class="w-24 h-24 bg-white rounded-lg flex items-center justify-center text-gray-400 text-xs">
-                  二维码
-                </div>
-              </div>
-            )}
+            <!-- Action: QR Code or Form Button -->
             {item.actionType === "wechat" && (
               <div class="mt-6 flex justify-center">
                 <div class="w-24 h-24 bg-white rounded-lg flex items-center justify-center text-gray-400 text-xs text-center">
@@ -99,70 +134,194 @@ const locations = [
                 </div>
               </div>
             )}
+            {item.actionType === "form" && (
+              <div class="mt-6">
+                <a
+                  href={item.formUrl}
+                  class:list={[
+                    "block w-full text-center px-6 py-3 rounded-lg font-medium transition-colors cursor-pointer",
+                    index === 1
+                      ? "bg-brand-red text-white hover:bg-brand-red-hover"
+                      : "bg-brand-yellow text-gray-900 hover:bg-brand-yellow-hover"
+                  ]}
+                >
+                  填写需求表单
+                </a>
+              </div>
+            )}
           </div>
         ))}
-      </div>
-
-      <!-- CTA -->
-      <div class="mt-12 text-center">
-        <p class="text-xl sm:text-2xl font-bold text-gray-900">
-          立即行动，成为<span class="text-brand-red">新质生产力</span>的构建者！
-        </p>
       </div>
     </div>
   </section>
 
-  <!-- 联系地址 -->
-  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-12">
-        联系地址
+  <!-- Testimonials Section - Marquee -->
+  <section class="py-16 bg-gray-50 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 text-center">
+        学员心得
       </h2>
+    </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {locations.map((location, index) => (
+    <!-- Marquee Container -->
+    <div class="relative">
+      <!-- Gradient Masks -->
+      <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-gray-50 to-transparent z-10"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
+
+      <!-- Scrolling Track -->
+      <div class="marquee-track flex gap-6">
+        {/* First set */}
+        {testimonials.map((item) => (
           <div class:list={[
-            "p-8 rounded-2xl",
-            index === 0 ? "bg-brand-red-light" : "bg-brand-yellow-light"
+            "testimonial-card flex-shrink-0 w-80 p-6 rounded-2xl",
+            item.accent === "yellow" ? "bg-brand-yellow-light" : "bg-brand-red-light"
           ]}>
-            <div class="space-y-4">
-              <!-- City -->
-              <div class="flex items-center gap-3">
-                <h3 class="text-2xl font-bold text-gray-900">
-                  {location.city}
-                </h3>
-                {location.tag && (
-                  <span class="text-xs px-2 py-1 bg-brand-red text-white rounded-full">
-                    {location.tag}
-                  </span>
-                )}
+            <svg class:list={[
+              "w-6 h-6 mb-3",
+              item.accent === "yellow" ? "text-brand-yellow" : "text-brand-red"
+            ]} fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4">
+              {item.quote}
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-white/60 flex items-center justify-center text-gray-400 text-xs">
+                头像
               </div>
-
-              <!-- Address -->
-              <div class="flex items-start gap-2">
-                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-                <p class="text-gray-900">{location.address}</p>
-              </div>
-
-              <!-- Email -->
-              <div class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                </svg>
-                <a href={`mailto:${location.email}`} class:list={[
-                  "font-medium hover:underline",
-                  index === 0 ? "text-brand-red" : "text-brand-yellow-dark"
+              <div>
+                <p class:list={[
+                  "text-sm font-semibold",
+                  item.accent === "yellow" ? "text-brand-yellow-dark" : "text-brand-red"
                 ]}>
-                  {location.email}
-                </a>
+                  {item.name}
+                </p>
+                <p class="text-xs text-gray-500">{item.role}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+        {/* Duplicate set for seamless loop */}
+        {testimonials.map((item) => (
+          <div class:list={[
+            "testimonial-card flex-shrink-0 w-80 p-6 rounded-2xl",
+            item.accent === "yellow" ? "bg-brand-yellow-light" : "bg-brand-red-light"
+          ]}>
+            <svg class:list={[
+              "w-6 h-6 mb-3",
+              item.accent === "yellow" ? "text-brand-yellow" : "text-brand-red"
+            ]} fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4">
+              {item.quote}
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-white/60 flex items-center justify-center text-gray-400 text-xs">
+                头像
+              </div>
+              <div>
+                <p class:list={[
+                  "text-sm font-semibold",
+                  item.accent === "yellow" ? "text-brand-yellow-dark" : "text-brand-red"
+                ]}>
+                  {item.name}
+                </p>
+                <p class="text-xs text-gray-500">{item.role}</p>
               </div>
             </div>
           </div>
         ))}
       </div>
     </div>
+  </section>
+
+  <style>
+    .marquee-track {
+      animation: marquee 30s linear infinite;
+    }
+
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+
+  <!-- FAQ Section -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-10">
+        常见问题
+      </h2>
+
+      <div class="space-y-4">
+        {faqs.map((faq, index) => (
+          <div class="hs-accordion bg-white rounded-xl" id={`faq-accordion-${index}`}>
+            <button
+              class="hs-accordion-toggle hs-accordion-active:text-brand-red py-5 px-6 inline-flex items-center justify-between gap-x-3 w-full font-semibold text-left text-gray-900 transition hover:text-brand-red cursor-pointer"
+              aria-expanded="false"
+              aria-controls={`faq-accordion-content-${index}`}
+            >
+              {faq.question}
+              <svg
+                class="hs-accordion-active:hidden block w-4 h-4 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+              <svg
+                class="hs-accordion-active:block hidden w-4 h-4 text-brand-red"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+              </svg>
+            </button>
+            <div
+              id={`faq-accordion-content-${index}`}
+              class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+              role="region"
+              aria-labelledby={`faq-accordion-${index}`}
+            >
+              <p class="pb-5 px-6 text-gray-600 leading-relaxed">
+                {faq.answer}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-4 sm:px-6 lg:px-8">
+      <!-- CTA -->
+      <div class="mt-12 text-center">
+        <p class="text-xl sm:text-2xl font-bold text-gray-900">
+          立即行动，成为<span class="text-brand-red">新质生产力</span>的构建者！
+        </p>
+      </div>
+
+      <!-- Trust Anchor: Location -->
+      <div class="mt-8 flex items-center justify-center gap-2 text-gray-500">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+        </svg>
+        <span class="text-sm">
+          深圳 · 成都 · 欢迎预约来访
+        </span>
+      </div>
   </section>
 </Layout>

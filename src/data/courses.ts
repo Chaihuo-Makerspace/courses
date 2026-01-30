@@ -8,6 +8,9 @@ export interface Course {
   scenarios: string[];
   painPoints: string[];
   techStack: string[];
+  difficulty: "入门" | "进阶" | "高级";
+  duration: string;
+  prerequisite?: string;
   content: {
     items: {
       phase: string;
@@ -33,6 +36,8 @@ export const courses: Course[] = [
     scenarios: ["智能楼宇", "工业园区", "酒店公寓", "数据中心"],
     painPoints: ["系统割裂", "能耗不透明", "传统BA系统笨重贵"],
     techStack: ["Home Assistant", "ESPHome", "Modbus"],
+    difficulty: "入门",
+    duration: "2天",
     content: {
       items: [
         { phase: "认知规划", description: "理解智能空间架构与能源管理核心概念" },
@@ -51,6 +56,9 @@ export const courses: Course[] = [
     scenarios: ["智慧办公", "高端零售", "康养社区", "展厅展馆"],
     painPoints: ["操作复杂", "体验被动", "人力响应成本高"],
     techStack: ["SenseCraft AI", "LLM", "MCP协议"],
+    difficulty: "进阶",
+    duration: "2天",
+    prerequisite: "建议先学习 01 空间智能与能源管理",
     content: {
       items: [
         { phase: "认知规划", description: "理解空间智能体与多模态交互原理" },
@@ -69,6 +77,9 @@ export const courses: Course[] = [
     scenarios: ["应急救援", "智慧农业", "野外作业"],
     painPoints: ["信号盲区", "网络脆弱", "特殊场景部署难"],
     techStack: ["Meshtastic", "LoRa", "GPS"],
+    difficulty: "进阶",
+    duration: "1.5天",
+    prerequisite: "建议先完成 01-02 基础课程",
     content: {
       items: [
         { phase: "认知规划", description: "理解 Mesh 网络与 LoRa 通信原理" },
@@ -87,6 +98,9 @@ export const courses: Course[] = [
     scenarios: ["工厂巡检", "周界安防", "智慧门店", "零售客流分析"],
     painPoints: [`传统监控"只录不防"`, "误报多", "智能化门槛高"],
     techStack: ["reCamera", "NVIDIA Jetson", "RTSP"],
+    difficulty: "高级",
+    duration: "2天",
+    prerequisite: "建议先完成 01-02 基础课程",
     content: {
       items: [
         { phase: "认知规划", description: "理解边缘视觉 AI 与安防系统架构" },
@@ -105,6 +119,9 @@ export const courses: Course[] = [
     scenarios: ["智慧农林", "环境监测", "市政设施管理"],
     painPoints: ["设备杂乱", "数据孤岛", "远程运维难"],
     techStack: ["SenseHub", "Node-RED", "Modbus"],
+    difficulty: "入门",
+    duration: "2天",
+    prerequisite: "建议先完成 01-02 基础课程",
     content: {
       items: [
         { phase: "认知规划", description: "理解物联网平台架构与数据融合" },
@@ -120,23 +137,31 @@ export const courses: Course[] = [
 export interface ClassicCourse {
   title: string;
   description: string;
+  targetAudience: string;
+  duration: string;
   accent: "red" | "yellow";
 }
 
 export const classicCourses: ClassicCourse[] = [
   {
     title: "Arduino智能硬件入门",
-    description: "从零开始掌握硬件开发基础",
+    description: "从零开始掌握硬件开发基础，了解传感器、执行器与微控制器的基本原理和使用方法。",
+    targetAudience: "零基础入门者",
+    duration: "1天",
     accent: "yellow",
   },
   {
     title: "AI当程序员，我当创客",
-    description: "用 AI 工具加速创客项目开发",
+    description: "学习使用 AI 编程助手加速项目开发，让 AI 帮你写代码、调试和优化。",
+    targetAudience: "想提效的创客",
+    duration: "0.5天",
     accent: "red",
   },
   {
     title: "如何将 AI 添加到几乎任何事物",
-    description: "为现有设备赋予 AI 能力",
+    description: "掌握为现有硬件设备添加 AI 能力的方法，包括语音识别、图像处理等实用技能。",
+    targetAudience: "有硬件基础的学习者",
+    duration: "1天",
     accent: "yellow",
   },
 ];
