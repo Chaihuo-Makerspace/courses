@@ -1,0 +1,183 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { courses, classicCourses, courseOutcomes } from "../../data/courses";
+---
+
+<Layout title="课程体系">
+  <!-- Hero Section -->
+  <section class="relative py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <!-- Left: Text -->
+        <div class="w-full lg:w-1/2 space-y-6">
+          <p class="text-sm sm:text-base font-medium text-brand-red tracking-wide">
+            课程体系
+          </p>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            三位一体赋能<br />
+            <span class="text-brand-red">确保方案落地</span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-gray-700 font-medium">
+            真实硬件环境 + 场景化问题包 + 方法论工具
+          </p>
+
+          <p class="text-base text-gray-500 max-w-lg">
+            遵循学习闭环：系统架构认知 → 核心工具实战 → 本地化部署集成，确保您能把原型真正跑在目标环境中。
+          </p>
+        </div>
+
+        <!-- Right: Visual -->
+        <div class="w-full lg:w-1/2">
+          <div class="relative aspect-[4/3] max-w-md mx-auto lg:max-w-none rounded-2xl overflow-hidden bg-gray-100">
+            <!-- Image placeholder -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-gray-400">
+              <svg class="w-16 h-16 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+              <span class="text-sm">课程体系图片占位</span>
+              <span class="text-xs mt-1">建议尺寸 800x600</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 五大实战课程 -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          五大实战课程
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          精选高频高价值场景，完整复现从真实痛点到可运行解决方案的全过程
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {courses.map((course) => (
+          <a
+            href={`/courses/${course.slug}`}
+            class:list={[
+              "group block p-6 rounded-2xl transition-all duration-200 hover:shadow-lg",
+              course.accent === "red" ? "bg-brand-red-light" : "bg-brand-yellow-light"
+            ]}
+          >
+            <div class="space-y-4">
+              <div class="flex items-baseline gap-2">
+                <span class:list={[
+                  "text-3xl font-bold",
+                  course.accent === "red" ? "text-brand-red" : "text-brand-yellow"
+                ]}>
+                  {course.number}
+                </span>
+                <h3 class="text-xl font-bold text-gray-900">
+                  {course.title}
+                </h3>
+              </div>
+
+              <p class="text-sm text-gray-500">
+                {course.titleEn}
+              </p>
+
+              <p class="text-base text-gray-700 font-medium">
+                {course.tagline}
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                {course.scenarios.slice(0, 3).map((scenario) => (
+                  <span class="text-xs px-2 py-1 bg-white/60 rounded-full text-gray-600">
+                    {scenario}
+                  </span>
+                ))}
+              </div>
+
+              <div class:list={[
+                "inline-flex items-center text-sm font-medium group-hover:gap-2 transition-all",
+                course.accent === "red" ? "text-brand-red" : "text-brand-yellow-dark"
+              ]}>
+                查看详情
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 经典课程 Bento Box -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          经典课程
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          夯实基础，自由选择进阶路径
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {classicCourses.map((course) => (
+          <div class:list={[
+            "p-6 rounded-2xl",
+            course.accent === "red" ? "bg-brand-red-light" : "bg-brand-yellow-light"
+          ]}>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">
+              {course.title}
+            </h3>
+            <p class="text-sm text-gray-600">
+              {course.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 课程收获 -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          课程收获
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          带走的不仅是知识，更是可衡量的成果
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {courseOutcomes.map((group, index) => (
+          <div class:list={[
+            "p-6 rounded-2xl",
+            index === 1 ? "bg-brand-red-light" : "bg-brand-yellow-light"
+          ]}>
+            <h3 class:list={[
+              "text-lg font-bold mb-4",
+              index === 1 ? "text-brand-red" : "text-brand-yellow-dark"
+            ]}>
+              {group.audience}
+            </h3>
+            <ul class="space-y-3">
+              {group.outcomes.map((outcome) => (
+                <li class="flex gap-2 text-sm text-gray-700">
+                  <svg class="w-5 h-5 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  {outcome}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

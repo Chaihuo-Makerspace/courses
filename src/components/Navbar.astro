@@ -20,14 +20,26 @@ function isActive(href: string): boolean {
 }
 ---
 
-<header class="sticky top-0 z-50 w-full bg-white border-b border-brand-gray-border">
+<header
+  class="sticky top-0 z-50 w-full bg-white border-b border-brand-gray-border"
+>
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
       <div class="flex-shrink-0">
         <a href="/" class="flex items-center gap-3 group">
-          <div class="w-10 h-10 bg-brand-yellow rounded-lg flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
-            <svg class="w-6 h-6 text-brand-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div
+            class="w-10 h-10 bg-brand-yellow rounded-lg flex items-center justify-center transition-transform duration-200 group-hover:scale-105"
+          >
+            <svg
+              class="w-6 h-6 text-brand-black"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
               <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
               <path d="M2 17l10 5 10-5"></path>
               <path d="M2 12l10 5 10-5"></path>
@@ -41,20 +53,22 @@ function isActive(href: string): boolean {
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex md:items-center md:gap-1">
-        {navItems.map((item) => (
-          <a
-            href={item.href}
-            class:list={[
-              "px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200",
-              isActive(item.href)
-                ? "bg-brand-yellow text-brand-black"
-                : "text-gray-600 hover:bg-gray-100 hover:text-brand-black"
-            ]}
-            aria-current={isActive(item.href) ? "page" : undefined}
-          >
-            {item.label}
-          </a>
-        ))}
+        {
+          navItems.map((item) => (
+            <a
+              href={item.href}
+              class:list={[
+                "px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200",
+                isActive(item.href)
+                  ? "bg-brand-yellow text-brand-black"
+                  : "text-gray-600 hover:bg-gray-100 hover:text-brand-black",
+              ]}
+              aria-current={isActive(item.href) ? "page" : undefined}
+            >
+              {item.label}
+            </a>
+          ))
+        }
       </div>
 
       <!-- Mobile Menu Button -->
@@ -111,26 +125,34 @@ function isActive(href: string): boolean {
       aria-labelledby="hs-navbar-chaihuo"
     >
       <div class="flex flex-col gap-2 py-4">
-        {navItems.map((item) => (
-          <a
-            href={item.href}
-            class:list={[
-              "px-4 py-3 rounded-lg text-base font-medium transition-colors duration-200",
-              isActive(item.href)
-                ? "bg-brand-yellow text-brand-black"
-                : "text-gray-600 hover:bg-gray-100 hover:text-brand-black"
-            ]}
-            aria-current={isActive(item.href) ? "page" : undefined}
-          >
-            {item.label}
-          </a>
-        ))}
+        {
+          navItems.map((item) => (
+            <a
+              href={item.href}
+              class:list={[
+                "px-4 py-3 rounded-lg text-base font-medium transition-colors duration-200",
+                isActive(item.href)
+                  ? "bg-brand-yellow text-brand-black"
+                  : "text-gray-600 hover:bg-gray-100 hover:text-brand-black",
+              ]}
+              aria-current={isActive(item.href) ? "page" : undefined}
+            >
+              {item.label}
+            </a>
+          ))
+        }
       </div>
     </div>
   </nav>
 </header>
 
 <style>
+  .text-brand-red {
+    color: #d84144;
+  }
+  .text-brand-yellow {
+    color: #f3d230;
+  }
   .bg-brand-yellow {
     background-color: #f3d230;
   }

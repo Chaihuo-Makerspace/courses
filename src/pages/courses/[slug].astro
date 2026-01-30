@@ -1,0 +1,168 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { courses } from "../../data/courses";
+
+export function getStaticPaths() {
+  return courses.map((course) => ({
+    params: { slug: course.slug },
+    props: { course },
+  }));
+}
+
+const { course } = Astro.props;
+---
+
+<Layout title={course.title}>
+  <!-- Header -->
+  <section class="relative py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div class:list={[
+      "absolute inset-0",
+      course.accent === "red" ? "bg-brand-red-light" : "bg-brand-yellow-light"
+    ]}></div>
+
+    <!-- Decorative elements -->
+    <div class:list={[
+      "absolute top-8 right-8 w-32 h-32 rounded-2xl opacity-40 hidden lg:block",
+      course.accent === "red" ? "bg-brand-red" : "bg-brand-yellow"
+    ]}></div>
+    <div class:list={[
+      "absolute bottom-8 right-24 w-20 h-20 rounded-full opacity-30 hidden lg:block",
+      course.accent === "red" ? "bg-brand-red" : "bg-brand-yellow"
+    ]}></div>
+    <div class="absolute top-1/2 right-16 w-12 h-12 bg-white rounded-lg shadow-sm opacity-60 hidden lg:block"></div>
+
+    <div class="relative max-w-4xl mx-auto">
+      <div class="space-y-6">
+        <!-- Number + Title -->
+        <div class="flex items-baseline gap-3">
+          <span class:list={[
+            "text-5xl sm:text-6xl font-bold",
+            course.accent === "red" ? "text-brand-red" : "text-brand-yellow"
+          ]}>
+            {course.number}
+          </span>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+            {course.title}
+          </h1>
+        </div>
+
+        <!-- English Title -->
+        <p class="text-lg text-gray-500">
+          {course.titleEn}
+        </p>
+
+        <!-- Tagline -->
+        <p class="text-xl sm:text-2xl text-gray-700 font-medium">
+          {course.tagline}
+        </p>
+
+        <!-- Tech Stack Badges -->
+        <div class="flex flex-wrap gap-2">
+          {course.techStack.map((tech) => (
+            <span class:list={[
+              "text-sm px-3 py-1 rounded-full font-medium",
+              course.accent === "red"
+                ? "bg-brand-red text-white"
+                : "bg-brand-yellow text-gray-900"
+            ]}>
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        <!-- Scenario Badges -->
+        <div class="flex flex-wrap gap-2">
+          {course.scenarios.map((scenario) => (
+            <span class="text-sm px-3 py-1 bg-white/60 rounded-full text-gray-600">
+              {scenario}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 核心痛点 -->
+  <section class="py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-xl font-bold text-gray-900 mb-6">直击痛点</h2>
+      <div class="flex flex-wrap gap-3">
+        {course.painPoints.map((point) => (
+          <div class="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-lg">
+            <svg class="w-5 h-5 text-brand-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+            </svg>
+            <span class="text-gray-700">{point}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 课程内容与目标 -->
+  <section class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-xl font-bold text-gray-900 mb-6">课程内容与目标</h2>
+      <div class="overflow-hidden rounded-xl border border-gray-200 bg-white">
+        <table class="w-full">
+          <tbody>
+            {course.content.items.map((item, index) => (
+              <tr class:list={[
+                index !== course.content.items.length - 1 && "border-b border-gray-200"
+              ]}>
+                <td class:list={[
+                  "px-6 py-4 font-medium whitespace-nowrap w-32",
+                  course.accent === "red" ? "text-brand-red" : "text-brand-yellow-dark"
+                ]}>
+                  {item.phase}
+                </td>
+                <td class="px-6 py-4 text-gray-700">
+                  {item.description}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关落地方案 (可选) -->
+  {course.relatedCases && course.relatedCases.length > 0 && (
+    <section class="py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-xl font-bold text-gray-900 mb-6">相关落地方案</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {course.relatedCases.map((caseItem) => (
+            <a
+              href={caseItem.link || "#"}
+              class="block p-4 bg-gray-100 rounded-xl hover:bg-gray-200 transition-colors"
+            >
+              {caseItem.image && (
+                <div class="aspect-video bg-gray-200 rounded-lg mb-3 overflow-hidden">
+                  <img src={caseItem.image} alt={caseItem.title} class="w-full h-full object-cover" />
+                </div>
+              )}
+              <p class="font-medium text-gray-900">{caseItem.title}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- 返回链接 -->
+  <section class="py-8 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <a
+        href="/courses"
+        class="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"
+      >
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        返回课程列表
+      </a>
+    </div>
+  </section>
+</Layout>

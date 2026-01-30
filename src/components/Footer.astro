@@ -1,215 +1,174 @@
 ---
 const currentYear = new Date().getFullYear();
 
-const footerLinks = {
-  courses: {
-    title: "课程体系",
-    links: [
-      { label: "Arduino入门", href: "/courses/arduino" },
-      { label: "Python编程", href: "/courses/python" },
-      { label: "人工智能", href: "/courses/ai" },
-      { label: "物联网实践", href: "/courses/iot" },
-    ],
+const locations = [
+  {
+    city: "深圳",
+    tag: "HQ",
+    address: "深圳市南山区万科云城设计社区 B622",
+    email: "jiayu.wang@seeed.cc",
   },
+  {
+    city: "成都",
+    tag: null,
+    address: "成都市青羊区狮马路92号",
+    email: "xia.huang@seeed.cc",
+  },
+];
+
+const footerLinks = {
   about: {
     title: "关于我们",
     links: [
       { label: "学院简介", href: "/about" },
-      { label: "师资团队", href: "/about/team" },
-      { label: "教学环境", href: "/about/facilities" },
-      { label: "学员作品", href: "/about/works" },
+      { label: "师资团队", href: "/about#team" },
+      { label: "合作伙伴", href: "/about#partners" },
     ],
   },
-  support: {
-    title: "服务支持",
+  social: {
+    title: "关注我们",
     links: [
-      { label: "常见问题", href: "/faq" },
-      { label: "联系我们", href: "/contact" },
-      { label: "合作咨询", href: "/partnership" },
-      { label: "加入我们", href: "/careers" },
+      { label: "抖音", href: "#" },
+      { label: "小红书", href: "#" },
+      { label: "X", href: "#" },
+      { label: "Facebook", href: "#" },
+      { label: "Instagram", href: "#" },
     ],
   },
 };
-
-const socialLinks = [
-  {
-    label: "微信公众号",
-    href: "#",
-    icon: "wechat",
-  },
-  {
-    label: "微博",
-    href: "#",
-    icon: "weibo",
-  },
-  {
-    label: "Bilibili",
-    href: "#",
-    icon: "bilibili",
-  },
-];
 ---
 
 <footer class="bg-gray-50 border-t border-gray-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Main Footer Content -->
-    <div class="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+    <div
+      class="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-12 gap-x-8 lg:gap-x-12"
+    >
       <!-- Brand Column -->
-      <div class="lg:col-span-2">
-        <a href="/" class="flex items-center gap-3 group">
-          <div class="w-12 h-12 bg-brand-yellow rounded-lg flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
-            <svg class="w-7 h-7 text-brand-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="lg:col-span-4">
+        <a href="/" class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 bg-brand-yellow rounded-lg flex items-center justify-center"
+          >
+            <svg
+              class="w-6 h-6 text-brand-black"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
               <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
               <path d="M2 17l10 5 10-5"></path>
               <path d="M2 12l10 5 10-5"></path>
             </svg>
           </div>
-          <span class="text-xl font-bold text-brand-black">柴火创客学院</span>
+          <span class="text-lg font-bold text-brand-black">柴火创客学院</span>
         </a>
-        <p class="mt-4 text-gray-600 text-sm leading-relaxed max-w-sm">
+        <p class="mt-4 text-sm text-gray-600 leading-relaxed">
           柴火创客学院致力于为青少年提供优质的创客教育，培养创新思维和动手实践能力，让每个孩子都能成为未来的创造者。
         </p>
-        
-        <!-- Contact Info -->
-        <div class="mt-6 space-y-3">
-          <div class="flex items-center gap-3 text-sm text-gray-600">
-            <svg class="w-5 h-5 text-gray-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-            <span>400-XXX-XXXX</span>
-          </div>
-          <div class="flex items-center gap-3 text-sm text-gray-600">
-            <svg class="w-5 h-5 text-gray-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-            </svg>
-            <span>contact@chaihuo.org</span>
-          </div>
-          <div class="flex items-start gap-3 text-sm text-gray-600">
-            <svg class="w-5 h-5 text-gray-400 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-            <span>深圳市南山区科技园</span>
-          </div>
+      </div>
+
+      <!-- Location Cards - Center Column -->
+      <div class="md:col-span-2 lg:col-span-5">
+        <h4 class="text-sm font-semibold text-gray-900 mb-4">联系我们</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {
+            locations.map((loc) => (
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <svg
+                    class="w-4 h-4 text-brand-red shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span class="font-medium text-gray-900">{loc.city}</span>
+                  {loc.tag && (
+                    <span class="text-xs bg-brand-yellow text-brand-black px-1.5 py-0.5 rounded font-medium">
+                      {loc.tag}
+                    </span>
+                  )}
+                </div>
+                <p class="text-sm text-gray-600 mb-2 pl-6">{loc.address}</p>
+                <p class="text-sm text-gray-600 pl-6">{loc.email}</p>
+              </div>
+            ))
+          }
         </div>
       </div>
 
-      <!-- Links Columns -->
-      <div>
-        <h4 class="text-sm font-semibold text-gray-900 uppercase tracking-wider">
-          {footerLinks.courses.title}
-        </h4>
-        <ul class="mt-4 space-y-3">
-          {footerLinks.courses.links.map((link) => (
-            <li>
-              <a
-                href={link.href}
-                class="text-sm text-gray-600 hover:text-brand-red transition-colors duration-200"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <!-- Links Column -->
+      <div class="md:col-span-2 lg:col-span-3 grid grid-cols-2 gap-8">
+        <!-- About -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900 mb-4">
+            {footerLinks.about.title}
+          </h4>
+          <ul class="space-y-2">
+            {
+              footerLinks.about.links.map((link) => (
+                <li>
+                  <a
+                    href={link.href}
+                    class="text-sm text-gray-600 hover:text-brand-black transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
 
-      <div>
-        <h4 class="text-sm font-semibold text-gray-900 uppercase tracking-wider">
-          {footerLinks.about.title}
-        </h4>
-        <ul class="mt-4 space-y-3">
-          {footerLinks.about.links.map((link) => (
-            <li>
-              <a
-                href={link.href}
-                class="text-sm text-gray-600 hover:text-brand-red transition-colors duration-200"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="text-sm font-semibold text-gray-900 uppercase tracking-wider">
-          {footerLinks.support.title}
-        </h4>
-        <ul class="mt-4 space-y-3">
-          {footerLinks.support.links.map((link) => (
-            <li>
-              <a
-                href={link.href}
-                class="text-sm text-gray-600 hover:text-brand-red transition-colors duration-200"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <!-- Social -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900 mb-4">
+            {footerLinks.social.title}
+          </h4>
+          <ul class="space-y-2">
+            {
+              footerLinks.social.links.map((link) => (
+                <li>
+                  <a
+                    href={link.href}
+                    class="text-sm text-gray-600 hover:text-brand-black transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
     </div>
 
     <!-- Bottom Bar -->
     <div class="py-6 border-t border-gray-200">
-      <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-        <!-- Copyright -->
-        <p class="text-sm text-gray-500">
-          &copy; {currentYear} 柴火创客学院. All rights reserved.
-        </p>
-
-        <!-- Social Links -->
-        <div class="flex items-center gap-4">
-          {socialLinks.map((social) => (
-            <a
-              href={social.href}
-              class="w-9 h-9 inline-flex justify-center items-center rounded-full bg-white border border-gray-200 text-gray-500 hover:bg-brand-yellow hover:text-brand-black hover:border-brand-yellow transition-all duration-200"
-              aria-label={social.label}
-            >
-              {social.icon === "wechat" && (
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.045c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.032zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
-                </svg>
-              )}
-              {social.icon === "weibo" && (
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M10.098 20.323c-3.977.391-7.414-1.406-7.672-4.02-.259-2.609 2.759-5.047 6.74-5.441 3.979-.394 7.413 1.404 7.671 4.018.259 2.6-2.759 5.049-6.739 5.443zM9.05 17.219c-.384.616-1.208.884-1.829.602-.612-.279-.793-.991-.406-1.593.379-.595 1.176-.861 1.793-.601.622.263.82.972.442 1.592zm1.27-1.627c-.141.237-.449.353-.689.253-.236-.09-.313-.361-.177-.586.138-.227.436-.346.672-.24.239.09.315.36.194.573zm.176-2.719c-1.893-.493-4.033.45-4.857 2.118-.836 1.704-.026 3.591 1.886 4.21 1.983.64 4.318-.341 5.132-2.179.8-1.793-.201-3.642-2.161-4.149zm7.563-1.224c-.346-.105-.579-.18-.405-.649.381-1.025.42-1.909-.001-2.54-.789-1.187-2.943-1.122-5.406-.032 0 0-.773.335-.576-.27.381-1.2.324-2.203-.27-2.784-1.35-1.318-4.944.047-8.03 3.049C1.1 10.567 0 12.749 0 14.622c0 3.587 4.603 5.767 9.105 5.767 5.906 0 9.838-3.431 9.838-6.158 0-1.65-1.393-2.585-2.884-3.017zm2.692-4.036c-.819-.859-2.025-1.187-3.222-.986a.778.778 0 0 0-.64.907c.065.399.439.672.838.605.637-.104 1.244.066 1.671.49.428.426.574 1.024.441 1.649a.777.777 0 0 0 .59.928c.061.013.122.019.182.019a.78.78 0 0 0 .762-.611c.237-.977-.012-2.029-.622-3.001zm2.036-2.008c-1.366-1.433-3.38-1.98-5.377-1.642a.777.777 0 1 0 .252 1.533c1.431-.242 2.88.15 3.86 1.18.979 1.028 1.329 2.47 1.034 3.89a.778.778 0 0 0 .622.909c.053.01.103.014.153.014a.78.78 0 0 0 .768-.638c.419-2.009-.091-4.048-1.312-5.246z"/>
-                </svg>
-              )}
-              {social.icon === "bilibili" && (
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.659.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373z"/>
-                </svg>
-              )}
-            </a>
-          ))}
-        </div>
-      </div>
+      <p class="text-sm text-gray-500 text-center">
+        &copy; {currentYear} 柴火创客学院. All rights reserved.
+      </p>
     </div>
   </div>
 </footer>
 
 <style>
   .bg-brand-yellow {
-    background-color: #f3d230;
+    background-color: var(--color-brand-yellow, #f3d230);
   }
   .text-brand-black {
-    color: #1a1a1a;
+    color: var(--color-brand-black, #1a1a1a);
   }
-  .border-brand-yellow {
-    border-color: #f3d230;
-  }
-  .hover\:text-brand-red:hover {
-    color: #d84144;
-  }
-  .hover\:bg-brand-yellow:hover {
-    background-color: #f3d230;
-  }
-  .hover\:text-brand-black:hover {
-    color: #1a1a1a;
-  }
-  .hover\:border-brand-yellow:hover {
-    border-color: #f3d230;
+  .text-brand-red {
+    color: var(--color-brand-red, #d84144);
   }
 </style>

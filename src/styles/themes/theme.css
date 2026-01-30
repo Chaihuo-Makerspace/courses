@@ -45,8 +45,14 @@
   .bg-brand-red {
     background-color: var(--color-brand-red);
   }
+  .bg-brand-red-light {
+    background-color: var(--color-brand-red-light);
+  }
   .bg-brand-yellow {
     background-color: var(--color-brand-yellow);
+  }
+  .bg-brand-yellow-light {
+    background-color: var(--color-brand-yellow-light);
   }
   .text-brand-red {
     color: var(--color-brand-red);
@@ -54,13 +60,16 @@
   .text-brand-yellow {
     color: var(--color-brand-yellow);
   }
+  .text-brand-yellow-dark {
+    color: #b8960a;
+  }
   .border-brand-red {
     border-color: var(--color-brand-red);
   }
   .border-brand-yellow {
     border-color: var(--color-brand-yellow);
   }
-  
+
   /* Hover utilities */
   .hover\:bg-brand-red-hover:hover {
     background-color: var(--color-brand-red-hover);

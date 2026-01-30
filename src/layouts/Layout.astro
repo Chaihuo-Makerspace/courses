@@ -38,9 +38,9 @@ const currentPath = Astro.url.pathname;
     
     <Footer />
 
-    <script is:inline src="/node_modules/preline/dist/index.js"></script>
-    
     <script>
+      import 'preline/preline';
+
       document.addEventListener('astro:page-load', () => {
         if (window.HSStaticMethods) {
           window.HSStaticMethods.autoInit();
