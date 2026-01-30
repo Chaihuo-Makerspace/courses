@@ -1,0 +1,150 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = "/" } = Astro.props;
+
+const navItems = [
+  { label: "首页", href: "/" },
+  { label: "课程体系", href: "/courses" },
+  { label: "合作咨询", href: "/contact" },
+  { label: "关于学院", href: "/about" },
+];
+
+function isActive(href: string): boolean {
+  if (href === "/") {
+    return currentPath === "/";
+  }
+  return currentPath.startsWith(href);
+}
+---
+
+<header class="sticky top-0 z-50 w-full bg-white border-b border-brand-gray-border">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="/" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 bg-brand-yellow rounded-lg flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
+            <svg class="w-6 h-6 text-brand-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <span class="text-lg font-bold text-brand-black hidden sm:block">
+            柴火创客学院
+          </span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex md:items-center md:gap-1">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              "px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200",
+              isActive(item.href)
+                ? "bg-brand-yellow text-brand-black"
+                : "text-gray-600 hover:bg-gray-100 hover:text-brand-black"
+            ]}
+            aria-current={isActive(item.href) ? "page" : undefined}
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button
+          type="button"
+          class="hs-collapse-toggle relative w-10 h-10 inline-flex justify-center items-center rounded-lg border border-gray-200 bg-white text-gray-800 hover:bg-gray-50 focus:outline-none focus:bg-gray-50"
+          id="hs-navbar-chaihuo"
+          aria-expanded="false"
+          aria-controls="hs-navbar-collapse"
+          aria-label="Toggle navigation"
+          data-hs-collapse="#hs-navbar-collapse"
+        >
+          <svg
+            class="hs-collapse-open:hidden shrink-0 w-5 h-5"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" x2="21" y1="6" y2="6"></line>
+            <line x1="3" x2="21" y1="12" y2="12"></line>
+            <line x1="3" x2="21" y1="18" y2="18"></line>
+          </svg>
+          <svg
+            class="hs-collapse-open:block hidden shrink-0 w-5 h-5"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div
+      id="hs-navbar-collapse"
+      class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow md:hidden"
+      aria-labelledby="hs-navbar-chaihuo"
+    >
+      <div class="flex flex-col gap-2 py-4">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              "px-4 py-3 rounded-lg text-base font-medium transition-colors duration-200",
+              isActive(item.href)
+                ? "bg-brand-yellow text-brand-black"
+                : "text-gray-600 hover:bg-gray-100 hover:text-brand-black"
+            ]}
+            aria-current={isActive(item.href) ? "page" : undefined}
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .bg-brand-yellow {
+    background-color: #f3d230;
+  }
+  .bg-brand-red {
+    background-color: #d84144;
+  }
+  .bg-brand-red-hover:hover,
+  .hover\:bg-brand-red-hover:hover {
+    background-color: #c13538;
+  }
+  .text-brand-black {
+    color: #1a1a1a;
+  }
+  .border-brand-gray-border {
+    border-color: #e5e5e5;
+  }
+</style>

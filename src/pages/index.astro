@@ -1,17 +1,31 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="首页">
+  <section class="py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto text-center">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+        欢迎来到
+        <span class="text-[#f3d230]">柴火创客学院</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+        培养创新思维，激发动手能力，让每个孩子都能成为未来的创造者
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/courses"
+          class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-[#d84144] rounded-lg hover:bg-[#c13538] transition-colors duration-200"
+        >
+          探索课程
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-gray-900 bg-[#f3d230] rounded-lg hover:bg-[#e5c420] transition-colors duration-200"
+        >
+          预约体验
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
