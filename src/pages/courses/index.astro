@@ -1,6 +1,23 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { courses, classicCourses, courseOutcomes } from "../../data/courses";
+
+import { getCollection } from "astro:content";
+
+import { courseOutcomes } from "../../data/courses"; // Keep outcomes static for now or move if needed
+import Card from "../../components/ui/Card.astro";
+import HeroBackground from "../../components/ui/HeroBackground.astro";
+import { Icon } from 'astro-icon/components';
+
+
+
+
+
+const practicalCourses = await getCollection("courses");
+const classicCourses = await getCollection("classic-courses");
+
+// Sort classic courses by order
+classicCourses.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
+
 ---
 
 <Layout title="课程体系">
@@ -279,51 +296,47 @@ import { courses, classicCourses, courseOutcomes } from "../../data/courses";
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {
-          courses.map((course) => (
-            <a
-              href={`/courses/${course.slug}`}
-              class:list={[
-                "group block p-6 rounded-2xl transition-all duration-200 hover:shadow-lg",
-                course.accent === "red"
-                  ? "bg-brand-red-light"
-                  : "bg-brand-yellow-light",
-              ]}
+          practicalCourses.map((entry) => (
+            <Card
+              href={`/courses/${entry.id}`}
+              accent={entry.data.accent}
+              class="p-6 h-full flex flex-col"
             >
               <div class="space-y-4">
                 <div class="flex items-baseline gap-2">
                   <span
                     class:list={[
                       "text-3xl font-bold",
-                      course.accent === "red"
+                      entry.data.accent === "red"
                         ? "text-brand-red"
                         : "text-brand-yellow",
                     ]}
                   >
-                    {course.number}
+                    {entry.data.number}
                   </span>
                   <h3 class="text-xl font-bold text-gray-900">
-                    {course.title}
+                    {entry.data.title}
                   </h3>
                 </div>
 
-                <p class="text-sm text-gray-500">{course.titleEn}</p>
+                <p class="text-sm text-gray-500">{entry.data.titleEn}</p>
 
                 <!-- 难度 & 时长标签 -->
                 <div class="flex items-center gap-2">
                   <span class="text-xs px-2 py-0.5 bg-white rounded text-gray-600">
-                    {course.difficulty}
+                    {entry.data.difficulty}
                   </span>
                   <span class="text-xs px-2 py-0.5 bg-white rounded text-gray-600">
-                    {course.duration}
+                    {entry.data.duration}
                   </span>
                 </div>
 
                 <p class="text-base text-gray-700 font-medium">
-                  {course.tagline}
+                  {entry.data.tagline}
                 </p>
 
                 <div class="flex flex-wrap gap-2">
-                  {course.scenarios.slice(0, 3).map((scenario) => (
+                  {entry.data.scenarios.slice(0, 3).map((scenario) => (
                     <span class="text-xs px-2 py-1 bg-white/60 rounded-full text-gray-600">
                       {scenario}
                     </span>
@@ -332,29 +345,17 @@ import { courses, classicCourses, courseOutcomes } from "../../data/courses";
 
                 <div
                   class:list={[
-                    "inline-flex items-center text-sm font-medium group-hover:gap-2 transition-all",
-                    course.accent === "red"
+                    "inline-flex items-center text-sm font-medium group-hover:gap-2 transition-all mt-auto pt-2",
+                    entry.data.accent === "red"
                       ? "text-brand-red"
                       : "text-brand-yellow-dark",
                   ]}
                 >
                   查看详情
-                  <svg
-                    class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
+                  <Icon name="lucide:move-right" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
-            </a>
+            </Card>
           ))
         }
       </div>
@@ -377,28 +378,24 @@ import { courses, classicCourses, courseOutcomes } from "../../data/courses";
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {
-          classicCourses.map((course) => (
-            <div
-              class:list={[
-                "p-6 rounded-2xl",
-                course.accent === "red"
-                  ? "bg-brand-red-light"
-                  : "bg-brand-yellow-light",
-              ]}
+          classicCourses.map((entry) => (
+            <Card
+              accent={entry.data.accent}
+              class="p-6 h-full"
             >
               <div class="flex items-center gap-2 mb-3">
                 <span class="text-xs px-2 py-0.5 bg-white rounded text-gray-600">
-                  {course.targetAudience}
+                  {entry.data.targetAudience}
                 </span>
                 <span class="text-xs px-2 py-0.5 bg-white rounded text-gray-600">
-                  {course.duration}
+                  {entry.data.duration}
                 </span>
               </div>
               <h3 class="text-lg font-bold text-gray-900 mb-2">
-                {course.title}
+                {entry.data.title}
               </h3>
-              <p class="text-sm text-gray-600">{course.description}</p>
-            </div>
+              <p class="text-sm text-gray-600">{entry.data.description}</p>
+            </Card>
           ))
         }
       </div>
