@@ -25,6 +25,7 @@ pnpm-debug.log*
 
 # AI
 .opencode
+.sisyphus/
 .claude
 docs/
 CLAUDE.md
