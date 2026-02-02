@@ -41,6 +41,14 @@ const currentPath = Astro.url.pathname;
     <script>
       import 'preline/preline';
 
+      declare global {
+        interface Window {
+          HSStaticMethods?: {
+            autoInit(): void;
+          };
+        }
+      }
+
       document.addEventListener('astro:page-load', () => {
         if (window.HSStaticMethods) {
           window.HSStaticMethods.autoInit();

@@ -2,6 +2,8 @@
 import Layout from "../../layouts/Layout.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const courses = await getCollection("courses");
   return courses.map((entry) => ({
@@ -14,10 +16,11 @@ interface Props {
   course: CollectionEntry<"courses">["data"] & { slug: string };
 }
 
-const { course } = Astro.props;
+const { course } = Astro.props as Props;
+const courseTitle = course.title;
 ---
 
-<Layout title={course.title}>
+<Layout title={courseTitle}>
   <!-- Header -->
   <section
     class="relative py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
