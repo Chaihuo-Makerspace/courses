@@ -51,4 +51,4 @@ cd deploy
 ## 📖 相关文档
 
 - [AGENTS.md](./AGENTS.md) - AI 协作指南与项目架构
-- [DEPLOYMENT.md](./deploy/DEPLOYMENT.md) - Docker 部署指南
+- [DEPLOYMENT.md](./deploy/DEPLOYMENT.md) - 部署指南
