@@ -1,5 +1,5 @@
 /* 
- * 柴火创客学院 Brand Theme
+ * 学院 Brand Theme
  * White 70%, Yellow 15%, Black 10%, Red 5%
  * Primary colors: #d84144 (red), #f3d230 (yellow)
  */
@@ -9,33 +9,33 @@
   --color-brand-red: #d84144;
   --color-brand-red-hover: #c13538;
   --color-brand-red-light: #fdeaea;
-  
+
   --color-brand-yellow: #f3d230;
   --color-brand-yellow-hover: #e5c420;
   --color-brand-yellow-light: #fef9e7;
-  
+
   --color-brand-black: #1a1a1a;
   --color-brand-black-light: #333333;
-  
+
   --color-brand-white: #ffffff;
   --color-brand-gray: #f5f5f5;
   --color-brand-gray-border: #e5e5e5;
-  
+
   /* Semantic Colors */
   --color-primary: var(--color-brand-yellow);
   --color-primary-hover: var(--color-brand-yellow-hover);
   --color-accent: var(--color-brand-red);
   --color-accent-hover: var(--color-brand-red-hover);
-  
+
   /* Text Colors */
   --color-text-primary: var(--color-brand-black);
   --color-text-secondary: #666666;
   --color-text-muted: #999999;
-  
+
   /* Background Colors */
   --color-bg-primary: var(--color-brand-white);
   --color-bg-secondary: var(--color-brand-gray);
-  
+
   /* Border */
   --color-border: var(--color-brand-gray-border);
 }
@@ -45,27 +45,35 @@
   .bg-brand-red {
     background-color: var(--color-brand-red);
   }
+
   .bg-brand-red-light {
     background-color: var(--color-brand-red-light);
   }
+
   .bg-brand-yellow {
     background-color: var(--color-brand-yellow);
   }
+
   .bg-brand-yellow-light {
     background-color: var(--color-brand-yellow-light);
   }
+
   .text-brand-red {
     color: var(--color-brand-red);
   }
+
   .text-brand-yellow {
     color: var(--color-brand-yellow);
   }
+
   .text-brand-yellow-dark {
     color: #b8960a;
   }
+
   .border-brand-red {
     border-color: var(--color-brand-red);
   }
+
   .border-brand-yellow {
     border-color: var(--color-brand-yellow);
   }
@@ -74,6 +82,7 @@
   .hover\:bg-brand-red-hover:hover {
     background-color: var(--color-brand-red-hover);
   }
+
   .hover\:bg-brand-yellow-hover:hover {
     background-color: var(--color-brand-yellow-hover);
   }
@@ -81,11 +90,12 @@
 
 /* Base styles */
 @layer base {
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
-  
+
   body {
     font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
     color: var(--color-text-primary);

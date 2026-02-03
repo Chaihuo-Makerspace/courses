@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 const currentYear = new Date().getFullYear();
 
 const locations = [
@@ -65,10 +65,13 @@ const footerLinks = {
               <path d="M2 12l10 5 10-5"></path>
             </svg>
           </div>
-          <span class="text-lg font-bold text-brand-black">柴火创客学院</span>
+          <span class="text-lg font-bold text-brand-black"
+            >柴火创客 OPC 学院</span
+          >
         </a>
         <p class="mt-4 text-sm text-gray-600 leading-relaxed">
-          柴火创客学院致力于为青少年提供优质的创客教育，培养创新思维和动手实践能力，让每个孩子都能成为未来的创造者。
+          柴火创客 OPC 学院提供从硬件接入、边缘计算到 AI
+          智能体的全链路技术交付能力，让每一个个体都能拥有“一个人也能上场”的全栈交付能力
         </p>
       </div>
 
@@ -80,7 +83,10 @@ const footerLinks = {
             locations.map((loc) => (
               <div>
                 <div class="flex items-center gap-2 mb-2">
-                  <Icon name="lucide:map-pin" class="w-4 h-4 text-brand-red shrink-0" />
+                  <Icon
+                    name="lucide:map-pin"
+                    class="w-4 h-4 text-brand-red shrink-0"
+                  />
 
                   <span class="font-medium text-gray-900">{loc.city}</span>
                   {loc.tag && (
@@ -146,7 +152,7 @@ const footerLinks = {
     <!-- Bottom Bar -->
     <div class="py-6 border-t border-gray-200">
       <p class="text-sm text-gray-500 text-center">
-        &copy; {currentYear} 柴火创客学院. All rights reserved.
+        &copy; {currentYear} Chaihuo Makerspace OPC Academy. All rights reserved.
       </p>
     </div>
   </div>

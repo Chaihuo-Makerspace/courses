@@ -8,10 +8,8 @@ interface Props {
   description?: string;
 }
 
-const { 
-  title, 
-  description = "柴火创客学院 - 培养未来创造者" 
-} = Astro.props;
+const { title, description = "柴火创客 OPC 学院 - 打造未来创造者" } =
+  Astro.props;
 
 const currentPath = Astro.url.pathname;
 ---
@@ -26,20 +24,23 @@ const currentPath = Astro.url.pathname;
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <title>{title} | 柴火创客学院</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title} | 柴火创客 OPC 学院</title>
   </head>
   <body class="min-h-screen flex flex-col bg-white text-gray-900 antialiased">
     <Navbar currentPath={currentPath} />
-    
+
     <main class="flex-1">
       <slot />
     </main>
-    
+
     <Footer />
 
     <script>
-      import 'preline/preline';
+      import "preline/preline";
 
       declare global {
         interface Window {
@@ -49,7 +50,7 @@ const currentPath = Astro.url.pathname;
         }
       }
 
-      document.addEventListener('astro:page-load', () => {
+      document.addEventListener("astro:page-load", () => {
         if (window.HSStaticMethods) {
           window.HSStaticMethods.autoInit();
         }

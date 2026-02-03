@@ -1,6 +1,6 @@
 {
   "name": "@chaihuo/course-site",
-  "description": "柴火创客学院官网",
+  "description": "柴火创客 OPC 学院",
   "version": "0.1.0",
   "private": true,
   "scripts": {

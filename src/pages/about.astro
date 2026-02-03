@@ -5,19 +5,22 @@ const ecosystem = [
   {
     name: "Seeed Studio",
     role: "全球开源硬件领导者",
-    description: "为全球创客和企业提供硬件产品与解决方案，产品覆盖物联网、边缘计算、AI 等领域。",
+    description:
+      "为全球创客和企业提供硬件产品与解决方案，产品覆盖物联网、边缘计算、AI 等领域。",
     link: "https://www.seeedstudio.com",
   },
   {
     name: "柴火创客空间",
     role: "中国创客运动先驱",
-    description: "2011年成立，中国最早的创客空间之一。提供物理空间、社区活动、项目孵化等服务。",
+    description:
+      "2011年成立，中国最早的创客空间之一。提供物理空间、社区活动、项目孵化等服务。",
     link: "https://www.chaihuo.org",
   },
   {
-    name: "柴火创客学院",
+    name: "柴火创客 OPC 学院",
     role: "技术赋能平台",
-    description: "将生态中的技术能力转化为可学习的课程，帮助个人和企业掌握新技术整合能力。",
+    description:
+      "将生态中的技术能力转化为可学习的课程，帮助个人和企业掌握新技术整合能力。",
     link: null,
   },
 ];
@@ -25,7 +28,8 @@ const ecosystem = [
 const values = [
   {
     title: "真硬件",
-    description: "课程使用的工具和设备，就是 Seeed Studio 的真实产品，不是教学道具。",
+    description:
+      "课程使用的工具和设备，就是 Seeed Studio 的真实产品，不是教学道具。",
   },
   {
     title: "真场景",
@@ -33,7 +37,8 @@ const values = [
   },
   {
     title: "真连接",
-    description: "学完不是结束，而是进入生态的开始——对接项目机会、加入人才库、持续成长。",
+    description:
+      "学完不是结束，而是进入生态的开始——对接项目机会、加入人才库、持续成长。",
   },
 ];
 
@@ -53,12 +58,17 @@ const stats = [
       >
         关于我们
       </span>
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+      <h1
+        class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight"
+      >
         不只是培训<br />
         是进入<span class="text-brand-red">创客生态</span>的入口
       </h1>
-      <p class="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-        柴火创客学院是柴火创客生态的技术赋能平台，背靠全球开源硬件领导者 Seeed Studio，我们教的就是我们每天在用的。
+      <p
+        class="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto"
+      >
+        柴火创客 OPC 学院是柴火创客生态的技术赋能平台，背靠全球开源硬件领导者
+        Seeed Studio，我们教的就是我们每天在用的。
       </p>
     </div>
   </section>
@@ -74,51 +84,77 @@ const stats = [
       </p>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {ecosystem.map((item, index) => (
-          <div class:list={[
-            "p-6 lg:p-8 rounded-2xl relative",
-            index === 0 ? "bg-brand-red-light" : index === 1 ? "bg-brand-yellow-light" : "bg-brand-red-light"
-          ]}>
-            {/* Connector line for desktop */}
-            {index < 2 && (
-              <div class="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gray-300 z-10"></div>
-            )}
-
-            <div class="space-y-3">
-              <p class="text-xs text-gray-500 uppercase tracking-wide">
-                {index === 0 ? "硬件产品" : index === 1 ? "社区空间" : "技术培训"}
-              </p>
-              <h3 class:list={[
-                "text-xl font-bold",
-                index === 1 ? "text-brand-yellow-dark" : "text-brand-red"
-              ]}>
-                {item.name}
-              </h3>
-              <p class:list={[
-                "text-sm font-medium",
-                index === 1 ? "text-brand-yellow-dark" : "text-brand-red"
-              ]}>
-                {item.role}
-              </p>
-              <p class="text-sm text-gray-600 leading-relaxed">
-                {item.description}
-              </p>
-              {item.link && (
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700 transition-colors cursor-pointer"
-                >
-                  了解更多
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                  </svg>
-                </a>
+        {
+          ecosystem.map((item, index) => (
+            <div
+              class:list={[
+                "p-6 lg:p-8 rounded-2xl relative",
+                index === 0
+                  ? "bg-brand-red-light"
+                  : index === 1
+                    ? "bg-brand-yellow-light"
+                    : "bg-brand-red-light",
+              ]}
+            >
+              {/* Connector line for desktop */}
+              {index < 2 && (
+                <div class="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gray-300 z-10" />
               )}
+
+              <div class="space-y-3">
+                <p class="text-xs text-gray-500 uppercase tracking-wide">
+                  {index === 0
+                    ? "硬件产品"
+                    : index === 1
+                      ? "社区空间"
+                      : "技术培训"}
+                </p>
+                <h3
+                  class:list={[
+                    "text-xl font-bold",
+                    index === 1 ? "text-brand-yellow-dark" : "text-brand-red",
+                  ]}
+                >
+                  {item.name}
+                </h3>
+                <p
+                  class:list={[
+                    "text-sm font-medium",
+                    index === 1 ? "text-brand-yellow-dark" : "text-brand-red",
+                  ]}
+                >
+                  {item.role}
+                </p>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  {item.description}
+                </p>
+                {item.link && (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700 transition-colors cursor-pointer"
+                  >
+                    了解更多
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  </a>
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </section>
@@ -134,22 +170,26 @@ const stats = [
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {values.map((item, index) => (
-          <div class="bg-white p-6 rounded-2xl">
-            <div class:list={[
-              "w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-2xl font-bold",
-              index === 1 ? "bg-brand-yellow-light text-brand-yellow-dark" : "bg-brand-red-light text-brand-red"
-            ]}>
-              {index + 1}
+        {
+          values.map((item, index) => (
+            <div class="bg-white p-6 rounded-2xl">
+              <div
+                class:list={[
+                  "w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-2xl font-bold",
+                  index === 1
+                    ? "bg-brand-yellow-light text-brand-yellow-dark"
+                    : "bg-brand-red-light text-brand-red",
+                ]}
+              >
+                {index + 1}
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                {item.description}
+              </p>
             </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-2">
-              {item.title}
-            </h3>
-            <p class="text-sm text-gray-600 leading-relaxed">
-              {item.description}
-            </p>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </section>
@@ -158,14 +198,16 @@ const stats = [
   <section class="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
     <div class="max-w-4xl mx-auto">
       <div class="grid grid-cols-3 gap-8 text-center">
-        {stats.map((stat) => (
-          <div>
-            <p class="text-2xl sm:text-3xl font-bold text-brand-red">
-              {stat.number}
-            </p>
-            <p class="text-xs sm:text-sm text-gray-600 mt-1">{stat.label}</p>
-          </div>
-        ))}
+        {
+          stats.map((stat) => (
+            <div>
+              <p class="text-2xl sm:text-3xl font-bold text-brand-red">
+                {stat.number}
+              </p>
+              <p class="text-xs sm:text-sm text-gray-600 mt-1">{stat.label}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>

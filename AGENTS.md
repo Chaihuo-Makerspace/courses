@@ -1,6 +1,6 @@
 # AGENTS.md - AI Collaboration Guide
 
-Guidelines for AI agents working on the 柴火创客学院 (Chaihuo Maker Academy) course website.
+Guidelines for AI agents working on the 柴火创客 OPC 学院 (Chaihuo OPC Academy) course website.
 
 ## Project Overview
 

@@ -1,7 +1,5 @@
 # Docker 部署指南
 
-柴火创客学院课程网站的 Docker 部署说明。
-
 ## 前置要求
 
 - Docker 20.10+ & Docker Compose 1.29+

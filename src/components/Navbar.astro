@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 
 interface Props {
   currentPath?: string;
@@ -48,7 +48,7 @@ function isActive(href: string): boolean {
             </svg>
           </div>
           <span class="text-lg font-bold text-brand-black hidden sm:block">
-            柴火创客学院
+            柴火创客 OPC 学院
           </span>
         </a>
       </div>
@@ -84,8 +84,14 @@ function isActive(href: string): boolean {
           aria-label="Toggle navigation"
           data-hs-collapse="#hs-navbar-collapse"
         >
-          <Icon name="lucide:menu" class="hs-collapse-open:hidden shrink-0 w-5 h-5" />
-          <Icon name="lucide:x" class="hs-collapse-open:block hidden shrink-0 w-5 h-5" />
+          <Icon
+            name="lucide:menu"
+            class="hs-collapse-open:hidden shrink-0 w-5 h-5"
+          />
+          <Icon
+            name="lucide:x"
+            class="hs-collapse-open:block hidden shrink-0 w-5 h-5"
+          />
 
           <span class="sr-only">Toggle navigation</span>
         </button>
