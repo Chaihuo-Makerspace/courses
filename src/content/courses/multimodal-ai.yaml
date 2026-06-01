@@ -1,0 +1,32 @@
+number: "02"
+title: "多模态 AI 交互"
+titleEn: "Multimodal AI Interaction"
+tagline: "解放双手，主动服务：打造能听懂业务、能看见需求的 AI 交互终端"
+scenarios:
+  - "展厅智能导览"
+  - "智能前台"
+  - "智慧零售"
+  - "仓库管理"
+  - "空间主动服务"
+painPoints:
+  - "系统操作依赖专业技能"
+  - "物理交互限制业务效率"
+  - "需求响应滞后，被动服务"
+techStack:
+  - "SenseCraft AI"
+  - "Watcher"
+  - "LLM"
+  - "MCP 协议"
+  - "语音交互"
+difficulty: "进阶"
+duration: "2天"
+prerequisite: "建议先学习 01 设备互联与智能管控"
+content:
+  items:
+    - phase: "L1 展示层"
+      description: "零代码体验 AI 交互与视觉训练，接入智能中枢实现基础的多模态交互"
+    - phase: "L2 顾问层"
+      description: "本地部署 AI 后端服务，配置模型参数，连接现有的工具库"
+    - phase: "L3 设计层"
+      description: "本地化部署大语言模型，并开发自定义工具，实现完全私有化的业务闭环"
+accent: "red"

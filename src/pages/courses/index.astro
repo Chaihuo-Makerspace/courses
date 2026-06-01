@@ -12,6 +12,9 @@ import { Icon } from 'astro-icon/components';
 
 
 const practicalCourses = await getCollection("courses");
+// Sort practical courses by module number (00 → 05)
+practicalCourses.sort((a, b) => a.data.number.localeCompare(b.data.number));
+
 const classicCourses = await getCollection("classic-courses");
 
 // Sort classic courses by order
@@ -117,13 +120,13 @@ classicCourses.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
             </div>
             <div class="flex-1">
               <h3 class="text-lg font-bold text-brand-red mb-1">
-                实战课程体系
+                核心课程模块
               </h3>
               <p class="text-sm text-gray-600 mb-3">
-                5门进阶课程，解决真实场景问题
+                M0 零基础入门 + M1–M5 五大方向，从入门到真实场景交付
               </p>
               <p class="text-xs text-gray-500">
-                适合：有明确项目需求的工程师、企业技术团队
+                适合：零基础学生/教师/创客、有明确项目需求的工程师与企业团队
               </p>
             </div>
           </div>
@@ -176,10 +179,10 @@ classicCourses.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
         <h2
           class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
         >
-          实战课程体系
+          核心课程模块
         </h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          5门课程形成完整学习路径，掌握从空间智能到行业应用的全栈技能
+          M0 零基础入门 + M1–M5 五大方向，形成从“会做东西”到“做什么东西”的完整学习路径
         </p>
       </div>
 
@@ -189,28 +192,10 @@ classicCourses.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
 
         <!-- Desktop: Horizontal -->
         <div class="hidden md:flex items-center justify-center gap-2">
-          <!-- 基础必修 -->
-          <div class="flex items-center gap-2">
-            <div class="px-4 py-2 bg-brand-yellow-light rounded-lg text-center">
-              <span class="text-xs text-gray-500 block">基础必修</span>
-              <span class="font-bold text-brand-yellow-dark">01 空间智能</span>
-            </div>
-            <svg
-              class="w-5 h-5 text-gray-400"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5l7 7-7 7"></path>
-            </svg>
-            <div class="px-4 py-2 bg-brand-red-light rounded-lg text-center">
-              <span class="text-xs text-gray-500 block">基础选修</span>
-              <span class="font-bold text-brand-red">02 空间交互</span>
-            </div>
+          <!-- 旗舰入门 -->
+          <div class="px-4 py-2 bg-brand-red-light rounded-lg text-center">
+            <span class="text-xs text-gray-500 block">旗舰入门</span>
+            <span class="font-bold text-brand-red">00 零基础智能硬件入门</span>
           </div>
 
           <svg
@@ -226,11 +211,19 @@ classicCourses.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
               d="M9 5l7 7-7 7"></path>
           </svg>
 
-          <!-- 进阶选修 -->
+          <!-- 方向选修 -->
           <div
             class="flex items-center gap-2 px-4 py-3 border-2 border-dashed border-gray-300 rounded-lg"
           >
-            <span class="text-xs text-gray-500 mr-2">进阶选修</span>
+            <span class="text-xs text-gray-500 mr-2">方向选修</span>
+            <span
+              class="px-3 py-1 bg-brand-yellow-light rounded text-sm font-medium text-brand-yellow-dark"
+              >01</span
+            >
+            <span
+              class="px-3 py-1 bg-brand-red-light rounded text-sm font-medium text-brand-red"
+              >02</span
+            >
             <span
               class="px-3 py-1 bg-brand-yellow-light rounded text-sm font-medium text-brand-yellow-dark"
               >03</span
@@ -249,33 +242,25 @@ classicCourses.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
         <!-- Mobile: Vertical -->
         <div class="md:hidden space-y-3">
           <div class="flex items-center gap-3">
-            <div class="w-20 text-xs text-gray-500 text-right">基础必修</div>
-            <div class="flex-1 flex items-center gap-2">
-              <span
-                class="px-3 py-1 bg-brand-yellow-light rounded text-sm font-bold text-brand-yellow-dark"
-                >01</span
-              >
-              <svg
-                class="w-4 h-4 text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"></path>
-              </svg>
+            <div class="w-20 text-xs text-gray-500 text-right">旗舰入门</div>
+            <div class="flex-1">
               <span
                 class="px-3 py-1 bg-brand-red-light rounded text-sm font-bold text-brand-red"
-                >02</span
+                >00 零基础入门</span
               >
             </div>
           </div>
           <div class="flex items-center gap-3">
-            <div class="w-20 text-xs text-gray-500 text-right">进阶选修</div>
-            <div class="flex-1 flex items-center gap-2">
+            <div class="w-20 text-xs text-gray-500 text-right">方向选修</div>
+            <div class="flex-1 flex items-center gap-2 flex-wrap">
+              <span
+                class="px-3 py-1 bg-brand-yellow-light rounded text-sm font-bold text-brand-yellow-dark"
+                >01</span
+              >
+              <span
+                class="px-3 py-1 bg-brand-red-light rounded text-sm font-bold text-brand-red"
+                >02</span
+              >
               <span
                 class="px-3 py-1 bg-brand-yellow-light rounded text-sm font-bold text-brand-yellow-dark"
                 >03</span

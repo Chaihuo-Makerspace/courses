@@ -1,0 +1,31 @@
+number: "00"
+title: "零基础智能硬件入门"
+titleEn: "Smart Hardware Fundamentals"
+tagline: "用自然语言告诉 AI 你想做什么，AI 帮你写代码——零编程基础，做出属于自己的智能硬件作品"
+scenarios:
+  - "高校通识课"
+  - "创客训练营"
+  - "K12 科普"
+  - "教师工作坊"
+  - "企业创新体验"
+painPoints:
+  - "学生不会写代码"
+  - "合格师资极少"
+  - "创意到原型断层"
+techStack:
+  - "Codecraft"
+  - "aily-blockly"
+  - "Grove / Wio Terminal / XIAO"
+  - "BMAD"
+  - "NLHD 教材"
+difficulty: "入门"
+duration: "半天起（M0-ABC 6 次课 / 17h+）"
+content:
+  items:
+    - phase: "M0-A 感知"
+      description: "用 Grove 套件在 Codecraft 完成第一个可运行原型，建立“感知→逻辑→输出”心智模型，掌握 AI 辅助编程 5 大法则"
+    - phase: "M0-B 交互"
+      description: "用 Wio Terminal 彩屏实现人机交互界面，以 BMAD 5 角色工作流（PM/UX/架构/开发/测试）完成有结构的完整项目（如智能番茄钟）"
+    - phase: "M0-C 视觉"
+      description: "用 XIAO ESP32S3 Sense 摄像头实现图像分类与边缘 AI 推理，体验 SenseCraft AI 无代码模型部署"
+accent: "red"

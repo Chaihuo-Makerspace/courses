@@ -1,0 +1,30 @@
+number: "05"
+title: "环境感知与数据采集"
+titleEn: "Environmental Sensing & Data Acquisition"
+tagline: "消灭现场盲区，打破距离成本：构建从城市到野外的全域感知网络"
+scenarios:
+  - "智慧农业"
+  - "智慧城市"
+  - "气象监测"
+  - "工业园区环境监测"
+painPoints:
+  - "现场状态黑箱"
+  - "运维半径受限"
+  - "非标接入陷阱"
+techStack:
+  - "SenseCAP"
+  - "RS485"
+  - "Modbus"
+  - "MQTT"
+  - "4G"
+difficulty: "入门"
+duration: "2天"
+content:
+  items:
+    - phase: "L1 展示层"
+      description: "绑定设备后，通过 App/Web 即刻获取完整数据报表与实时状态"
+    - phase: "L2 顾问层"
+      description: "配置云端或本地逻辑，实现跨设备协同与告警响应"
+    - phase: "L3 设计层"
+      description: "调用 API 将数据无缝集成至客户已有系统或编排平台（开发中）"
+accent: "yellow"

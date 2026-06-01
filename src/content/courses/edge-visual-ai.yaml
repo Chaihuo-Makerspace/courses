@@ -1,0 +1,30 @@
+number: "04"
+title: "边缘视觉 AI"
+titleEn: "Edge Visual AI"
+tagline: "从「事后追溯」进化为「事前阻断」，构建秒级响应的智能决策闭环"
+scenarios:
+  - "周界安防"
+  - "安全合规检测"
+  - "零售客流分析"
+  - "工业质检"
+painPoints:
+  - "只能录不能防"
+  - "无效告警风暴"
+  - "智能化门槛高"
+techStack:
+  - "reCamera"
+  - "Jetson"
+  - "Frigate"
+  - "目标检测"
+  - "视频分析"
+difficulty: "高级"
+duration: "2天"
+content:
+  items:
+    - phase: "L1 展示层"
+      description: "接入视频流，直观感受预置 AI 模型的目标检测与区域入侵能力"
+    - phase: "L2 顾问层"
+      description: "将识别事件接入本地网关，实现声光告警与设备控制自动化"
+    - phase: "L3 设计层"
+      description: "训练专属识别模型并部署，将识别数据接入报表/可视化看板形成业务闭环"
+accent: "red"

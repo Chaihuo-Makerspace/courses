@@ -1,0 +1,30 @@
+number: "01"
+title: "设备互联与智能管控"
+titleEn: "Device Integration & Intelligent Control"
+tagline: "跨品牌/跨代际设备统一管控，打破数据孤岛，构建全场景智能中枢"
+scenarios:
+  - "楼宇能源管理"
+  - "办公空间自动化"
+  - "机房环境监测"
+  - "酒店客控"
+  - "实验室管理"
+painPoints:
+  - "管理系统碎片化"
+  - "能耗流向不可见"
+  - "云端依赖风险高"
+techStack:
+  - "Home Assistant"
+  - "ESPHome"
+  - "Node-RED"
+  - "Modbus"
+difficulty: "入门"
+duration: "2天"
+content:
+  items:
+    - phase: "L1 展示层"
+      description: "部署智能中枢，接入空调/照明/安防等跨品牌设备，实现统一控制"
+    - phase: "L2 顾问层"
+      description: "搭建能源流向看板，配置“人走灯灭”等自动化节能策略"
+    - phase: "L3 设计层"
+      description: "改造传统工业设备，将其数字化并接入中枢，实现私有化部署"
+accent: "yellow"

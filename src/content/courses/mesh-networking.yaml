@@ -1,0 +1,30 @@
+number: "03"
+title: "自组网与韧性通信"
+titleEn: "Mesh Networking & Resilient Communication"
+tagline: "零依赖，全连通，构建去中心化韧性通信网络"
+scenarios:
+  - "应急救援"
+  - "户外探索与赛事保障"
+  - "地下空间通信"
+  - "野外科考"
+painPoints:
+  - "通信盲区即失控"
+  - "中心节点太脆弱"
+  - "应急部署门槛高"
+techStack:
+  - "Mission Pack"
+  - "Meshtastic"
+  - "LoRa"
+  - "GPS"
+  - "Node-RED"
+difficulty: "进阶"
+duration: "1.5天"
+content:
+  items:
+    - phase: "L1 展示层"
+      description: "掌握设备基础操作与 Mesh 中继规划，解决复杂环境下的通信盲区"
+    - phase: "L2 顾问层"
+      description: "监听 Mesh 网络异常与位置信息，结合低代码平台编排实现自动化联动"
+    - phase: "L3 设计层"
+      description: "将外部传感器或自定义设备接入 Mesh 网络，设计、构建离网传感设备"
+accent: "yellow"
