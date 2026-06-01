@@ -26,16 +26,6 @@ export interface Course {
   }[];
 }
 
-// 经典课程（无详情页）
-export interface ClassicCourse {
-  title: string;
-  description: string;
-  targetAudience: string;
-  duration: string;
-  accent: "red" | "yellow";
-}
-
-
 // 课程收获（按受众分组）
 export interface CourseOutcome {
   audience: string;

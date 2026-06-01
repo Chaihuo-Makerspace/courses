@@ -30,18 +30,6 @@ const coursesCollection = defineCollection({
     }),
 });
 
-const classicCoursesCollection = defineCollection({
-    loader: glob({ pattern: '**/*.yaml', base: './src/content/classic-courses' }),
-    schema: z.object({
-        title: z.string(),
-        description: z.string(),
-        targetAudience: z.string(),
-        duration: z.string(),
-        accent: z.enum(["red", "yellow"]),
-        order: z.number().default(0),
-    }),
-});
-
 const testimonialsCollection = defineCollection({
     loader: glob({ pattern: '**/*.yaml', base: './src/content/testimonials' }),
     schema: z.object({
@@ -64,7 +52,6 @@ const partnersCollection = defineCollection({
 
 export const collections = {
     'courses': coursesCollection,
-    'classic-courses': classicCoursesCollection,
     'testimonials': testimonialsCollection,
     'partners': partnersCollection,
 };
