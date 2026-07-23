@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768" width="1024" height="768">
+  <rect width="1024" height="768" fill="#ffffff"/>
+  <g fill="none" stroke="#2b2420" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <!-- left: camera -->
+    <rect x="130" y="330" width="140" height="100" rx="16"/>
+    <path d="M170 330 L190 305 L230 305 L250 330"/>
+    <circle cx="200" cy="380" r="28"/>
+    <circle cx="200" cy="380" r="10" fill="#2b2420" stroke="none"/>
+
+    <!-- cable: camera -> chip -->
+    <path d="M270 380 C 340 380, 360 380, 430 380" fill="none"/>
+
+    <!-- middle: chip (yellow) -->
+    <rect x="430" y="300" width="160" height="160" rx="18" fill="#f3d230" stroke="#2b2420"/>
+    <rect x="466" y="336" width="88" height="88" rx="8"/>
+    <path d="M466 356 L446 356 M466 384 L446 384 M466 412 L446 412 M554 356 L574 356 M554 384 L574 384 M554 412 L574 412 M486 336 L486 316 M510 336 L510 316 M534 336 L534 316 M486 424 L486 444 M510 424 L510 444 M534 424 L534 444"/>
+
+    <!-- cable: chip -> detection -->
+    <path d="M590 380 C 660 380, 680 380, 750 380" fill="none"/>
+
+    <!-- right: bounding box / detection -->
+    <path d="M760 300 L760 330 M760 300 L790 300"/>
+    <path d="M950 300 L950 330 M950 300 L920 300"/>
+    <path d="M760 460 L760 430 M760 460 L790 460"/>
+    <path d="M950 460 L950 430 M950 460 L920 460"/>
+    <circle cx="855" cy="380" r="18" fill="#d84144" stroke="none"/>
+  </g>
+</svg>

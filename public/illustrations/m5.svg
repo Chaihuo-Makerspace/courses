@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768" width="1024" height="768">
+  <rect width="1024" height="768" fill="#ffffff"/>
+  <g fill="none" stroke="#2b2420" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <!-- left: thermometer + droplet (env sensing) -->
+    <path d="M195 260 a24 24 0 0 1 48 0 v130 a24 24 0 1 1 -48 0 Z"/>
+    <circle cx="219" cy="400" r="30" fill="#2b2420" stroke="none"/>
+    <path d="M219 280 L219 370" stroke="#ffffff" stroke-width="10"/>
+    <path d="M320 300 C 320 340, 280 350, 280 385 a40 40 0 0 0 80 0 C 360 350, 320 340, 320 300 Z"/>
+
+    <!-- cable: sensors -> signal -->
+    <path d="M360 375 C 410 375, 420 380, 470 380" fill="none"/>
+
+    <!-- middle: transmission node (yellow) -->
+    <rect x="470" y="300" width="160" height="160" rx="22" fill="#f3d230" stroke="#2b2420"/>
+    <circle cx="550" cy="405" r="10" fill="#2b2420" stroke="none"/>
+    <path d="M525 380 a36 36 0 0 1 50 0 M508 358 a60 60 0 0 1 84 0"/>
+    <circle cx="600" cy="330" r="16" fill="#d84144" stroke="none"/>
+
+    <!-- cable: signal -> dashboard -->
+    <path d="M630 380 C 700 380, 720 380, 780 380" fill="none"/>
+
+    <!-- right: bar chart dashboard -->
+    <rect x="780" y="290" width="180" height="200" rx="18"/>
+    <path d="M815 450 L815 390 M860 450 L860 360 M905 450 L905 400 M925 450 L925 340" stroke-width="16"/>
+  </g>
+</svg>

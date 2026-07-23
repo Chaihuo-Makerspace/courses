@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768" width="1024" height="768">
+  <rect width="1024" height="768" fill="#ffffff"/>
+  <g fill="none" stroke="#2b2420" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <!-- left: mic + eye (voice + vision input) -->
+    <path d="M170 300 a34 34 0 0 1 68 0 v50 a34 34 0 0 1 -68 0 Z"/>
+    <path d="M150 340 a54 54 0 0 0 108 0"/>
+    <path d="M204 394 L204 420 M180 420 L228 420"/>
+    <path d="M270 370 C 300 330, 350 330, 380 370 C 350 410, 300 410, 270 370 Z"/>
+    <circle cx="325" cy="370" r="16"/>
+
+    <!-- cable: input -> AI node -->
+    <path d="M380 360 C 430 350, 440 380, 490 380" fill="none"/>
+
+    <!-- middle: neural-net node (yellow) -->
+    <rect x="490" y="300" width="160" height="160" rx="22" fill="#f3d230" stroke="#2b2420"/>
+    <circle cx="570" cy="380" r="10" fill="#2b2420" stroke="none"/>
+    <circle cx="535" cy="345" r="9" fill="#2b2420" stroke="none"/>
+    <circle cx="605" cy="345" r="9" fill="#2b2420" stroke="none"/>
+    <circle cx="535" cy="415" r="9" fill="#2b2420" stroke="none"/>
+    <circle cx="605" cy="415" r="9" fill="#2b2420" stroke="none"/>
+    <path d="M570 380 L535 345 M570 380 L605 345 M570 380 L535 415 M570 380 L605 415"/>
+    <circle cx="620" cy="330" r="16" fill="#d84144" stroke="none"/>
+
+    <!-- cable: AI node -> output -->
+    <path d="M650 380 C 710 380, 720 380, 780 380" fill="none"/>
+
+    <!-- right: speech bubble output -->
+    <path d="M790 300 h150 a20 20 0 0 1 20 20 v90 a20 20 0 0 1 -20 20 h-90 l-30 34 v-34 h-30 a20 20 0 0 1 -20 -20 v-90 a20 20 0 0 1 20 -20 Z"/>
+    <path d="M820 350 L940 350 M820 380 L910 380"/>
+  </g>
+</svg>

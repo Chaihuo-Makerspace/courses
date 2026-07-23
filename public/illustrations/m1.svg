@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768" width="1024" height="768">
+  <rect width="1024" height="768" fill="#ffffff"/>
+  <g fill="none" stroke="#2b2420" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <!-- left: house / space -->
+    <path d="M120 420 L120 300 L215 230 L310 300 L310 420 Z"/>
+    <path d="M170 420 L170 340 L260 340 L260 420"/>
+
+    <!-- cable: house -> hub -->
+    <path d="M310 340 C 380 340, 400 380, 470 380" fill="none"/>
+
+    <!-- middle: hub node (yellow) -->
+    <rect x="470" y="300" width="160" height="160" rx="22" fill="#f3d230" stroke="#2b2420"/>
+    <circle cx="550" cy="380" r="14" fill="#2b2420" stroke="none"/>
+    <path d="M550 380 L550 335 M550 380 L588 355 M550 380 L588 405 M550 380 L512 355 M550 380 L512 405" stroke="#2b2420"/>
+    <circle cx="600" cy="330" r="16" fill="#d84144" stroke="none"/>
+
+    <!-- cable: hub -> devices -->
+    <path d="M630 380 C 700 380, 720 380, 790 380" fill="none"/>
+
+    <!-- right: device box -->
+    <rect x="790" y="270" width="180" height="220" rx="22" stroke="#2b2420"/>
+    <!-- lightbulb -->
+    <circle cx="880" cy="325" r="26"/>
+    <path d="M868 350 L892 350 M872 362 L888 362"/>
+    <!-- plug -->
+    <rect x="855" y="392" width="50" height="34" rx="6"/>
+    <path d="M868 392 L868 378 M892 392 L892 378"/>
+    <!-- thermostat dial -->
+    <circle cx="880" cy="450" r="20"/>
+    <path d="M880 450 L880 436 M880 450 L892 458"/>
+  </g>
+</svg>

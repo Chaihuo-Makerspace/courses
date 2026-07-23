@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768" width="1024" height="768">
+  <rect width="1024" height="768" fill="#ffffff"/>
+  <g fill="none" stroke="#2b2420" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <!-- mesh connecting lines (ring + diagonals), drawn first so nodes sit on top -->
+    <path d="M512 255 L830 384"/>
+    <path d="M830 384 L512 513"/>
+    <path d="M512 513 L194 384"/>
+    <path d="M194 384 L512 255"/>
+    <path d="M512 255 L512 513"/>
+    <path d="M194 384 L830 384"/>
+
+    <!-- center junction accent -->
+    <circle cx="512" cy="384" r="16" fill="#d84144" stroke="none"/>
+
+    <!-- top node (yellow anchor) -->
+    <rect x="447" y="190" width="130" height="130" rx="20" fill="#f3d230" stroke="#2b2420"/>
+    <path d="M512 300 L512 240 M480 260 a46 46 0 0 1 64 0 M492 280 a24 24 0 0 1 40 0"/>
+
+    <!-- right node -->
+    <rect x="765" y="319" width="130" height="130" rx="20" stroke="#2b2420"/>
+    <path d="M830 429 L830 369 M798 389 a46 46 0 0 1 64 0 M810 409 a24 24 0 0 1 40 0"/>
+
+    <!-- bottom node -->
+    <rect x="447" y="448" width="130" height="130" rx="20" stroke="#2b2420"/>
+    <path d="M512 558 L512 498 M480 518 a46 46 0 0 1 64 0 M492 538 a24 24 0 0 1 40 0"/>
+
+    <!-- left node -->
+    <rect x="129" y="319" width="130" height="130" rx="20" stroke="#2b2420"/>
+    <path d="M194 429 L194 369 M162 389 a46 46 0 0 1 64 0 M174 409 a24 24 0 0 1 40 0"/>
+  </g>
+</svg>
