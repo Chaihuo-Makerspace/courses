@@ -11,12 +11,13 @@ const { module } = Astro.props as Props;
 
 <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-background">
   <div class="max-w-6xl mx-auto" data-reveal>
-    <SectionHeader eyebrow="Who is it for" title="适合这些人学" />
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+    <SectionHeader title="适合这些人学" />
+    {/* 紧凑标签流，而非等分卡片网格——跟前后的 Deliverables/RelatedTracks 网格拉开节奏 */}
+    <div class="flex flex-wrap gap-3 mt-8">
       {module.audience.map((a) => (
-        <div class="panel-light p-5 border border-neutral-3 hover:border-brand-black/30 hover:bg-brand-yellow/10 text-center text-sm font-black text-brand-black rounded-lg transition-colors duration-200">
+        <span class="inline-flex items-center rounded-full border border-neutral-3 bg-card px-4 py-2 text-sm font-bold text-brand-black hover:border-brand-black/30 hover:bg-brand-yellow-light transition-colors duration-200">
           {a}
-        </div>
+        </span>
       ))}
     </div>
   </div>

@@ -1,5 +1,4 @@
 ---
-import { getCollection } from 'astro:content';
 import HeroBanner from '../components/HeroBanner.astro';
 import HeroCourseMap from '../components/HeroCourseMap.astro';
 import Layout from '../layouts/Layout.astro';
@@ -8,7 +7,10 @@ import HomeFamiliarObjects from '../components/sections/home/HomeFamiliarObjects
 import HomeGoalPaths from '../components/sections/home/HomeGoalPaths.astro';
 import HomeMapPreview from '../components/sections/home/HomeMapPreview.astro';
 import HomeOutcomes from '../components/sections/home/HomeOutcomes.astro';
-import PartnerLogoGrid from '../components/sections/home/PartnerLogoGrid.astro';
+// PartnerLogoGrid 暂时下线：合作伙伴数据目前是"合作伙伴1"..."合作伙伴6"占位符，
+// 没有真实 logo/名单前不上这个信任信号 section（见 docs/DESIGN.md §8.6）。拿到
+// 真实名单后：填 src/content/partners/*.yaml，恢复 `getCollection('partners')`
+// 读取 + 下方 import 与 <PartnerLogoGrid> 渲染。
 import {
   homeFamiliarObjects,
   homeFinalCta,
@@ -16,9 +18,6 @@ import {
   homeOutcomes,
 } from '../data/site';
 import { tracks } from '../data/tracks';
-
-const partners = await getCollection('partners');
-partners.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
 ---
 
 <Layout title="首页">
@@ -29,7 +28,7 @@ partners.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
     description="围绕 M0–M5 六个课程模块，把零基础智能硬件入门、设备互联、多模态 AI、自组网通信、边缘视觉与环境感知整理成可引入、可授课、可共建的课程体系。"
     ctas={[
       { label: '查看课程体系', href: '/courses', variant: 'primary' },
-      { label: '了解合作方式', href: '/contact', variant: 'secondary' },
+      { label: '申请合作咨询', href: '/contact', variant: 'secondary' },
     ]}
   >
     <Fragment slot="title">
@@ -42,6 +41,5 @@ partners.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
   <HomeOutcomes outcomes={homeOutcomes} />
   <HomeGoalPaths tracks={tracks} />
   <HomeMapPreview legend={homeMapLegend} />
-  <PartnerLogoGrid partners={partners} />
   <FinalCtaSection cta={homeFinalCta} bordered headingSize="xl" />
 </Layout>

@@ -5,14 +5,17 @@ import type { Scenario } from '../data/partnerships';
 interface Props {
   scenario: Scenario;
   compact?: boolean;
+  delayMs?: number;
 }
 
-const { scenario, compact = false } = Astro.props as Props;
+const { scenario, compact = false, delayMs } = Astro.props as Props;
 ---
 
 <article
   id={`scenario-${scenario.id}`}
   class="card-hairline scroll-mt-24 flex h-full flex-col gap-4 p-5 md:p-6"
+  data-reveal
+  style={delayMs ? `--reveal-delay: ${delayMs}ms` : undefined}
 >
   <header class="flex items-start gap-3">
     <span

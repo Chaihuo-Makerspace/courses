@@ -27,7 +27,6 @@ const ladderSubtitle = isM0
 <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-neutral-1 border-t border-b border-neutral-3">
   <div class="max-w-6xl mx-auto" data-reveal>
     <SectionHeader
-      eyebrow={isM0 ? 'Hardware Platforms' : 'Learning Ladder'}
       title={ladderTitle}
       subtitle={ladderSubtitle}
     />
@@ -42,7 +41,11 @@ const ladderSubtitle = isM0
           }[lvl];
 
           return (
-            <div class:list={['border p-6 rounded-lg flex flex-col gap-5 shadow-xs', cardBgClass, cell.comingSoon && 'border-dashed opacity-65']}>
+            <div
+              class:list={['border p-6 rounded-lg flex flex-col gap-5 shadow-xs', cardBgClass, cell.comingSoon && 'border-dashed opacity-65']}
+              data-reveal
+              style={`--reveal-delay: ${i * 70}ms`}
+            >
               <div class="flex items-start justify-between gap-2">
                 <LevelBadge level={lvl} label={isM0 ? `平台 ${platformLetters[i]}` : levelMeta[lvl].label} size="md" />
                 {cell.comingSoon ? (

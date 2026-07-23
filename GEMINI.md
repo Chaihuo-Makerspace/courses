@@ -21,9 +21,10 @@ sync when editing.
 - Edit marketing copy by changing `src/data/*.ts` only — `/llms.txt` and
   Course JSON-LD auto-sync on next `pnpm build`. See
   `.claude/rules/llm-surfaces.md`.
-- Follow `docs/DESIGN.md` (authoritative design system) for the
-  黄 ≤3% / 白 ~52% / 黑 ~15% / 灰 ~25% / 红 ≤5% color ratio, the panel
-  system, and button/card usage. `.claude/rules/styling.md` only points to it.
+- Follow `docs/DESIGN.md` (authoritative design system, v4.0 "Warm Maker
+  Signal") for the design dial (VARIANCE/MOTION/DENSITY), the flame-gradient
+  color system, the panel system, and button/card usage.
+  `.claude/rules/styling.md` only points to it.
 - Register new lucide icons in `src/data/icons.ts` before referencing them.
   See `.claude/rules/astro.md`.
 - Use template literals when Chinese full-width quotes appear in `.astro`

@@ -28,9 +28,6 @@ const headingParts =
       <div class="max-w-6xl mx-auto" data-reveal>
         {/* 标题含黄色下划线强调，SectionHeader 的 title 只收字符串——此处手写并对齐其类名。 */}
         <header class="max-w-3xl text-left mb-10 md:mb-14">
-          <p class="text-xs font-mono font-semibold uppercase tracking-widest mb-3 text-brand-red">
-            For Teachers / 写给老师
-          </p>
           <h2 class="section-flag text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-brand-black">
             {headingParts ? (
               <>
@@ -44,7 +41,7 @@ const headingParts =
               notes.heading
             )}
           </h2>
-          <p class="mt-4 text-base md:text-lg leading-relaxed text-gray-600">{notes.intro}</p>
+          <p class="mt-4 text-base md:text-lg leading-relaxed text-neutral-7">{notes.intro}</p>
         </header>
 
         <ul class="grid md:grid-cols-3 gap-5">

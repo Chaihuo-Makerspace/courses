@@ -26,15 +26,18 @@ const depthCopy: Record<LevelId, { title: string; description: string }> = {
 <section id="levels" class="scroll-mt-24 py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-neutral-1 border-b border-neutral-3">
   <div class="max-w-6xl mx-auto" data-reveal>
     <SectionHeader
-      eyebrow="Course Levels"
       title="每个模块都可以按三种授课深度引入"
       subtitle="L1 展示层 / L2 顾问层 / L3 设计层对应课程深度，不是用户身份标签。可以只做单点体验，也可以做到场景联动，或继续推进到业务集成。"
     />
 
     <div class="mt-10 grid gap-5 md:grid-cols-3">
       {
-        levels.map((level) => (
-          <article class="bg-background border border-neutral-3 rounded-lg p-6 shadow-xs">
+        levels.map((level, i) => (
+          <article
+            class="bg-background border border-neutral-3 rounded-lg p-6 shadow-xs"
+            data-reveal
+            style={`--reveal-delay: ${i * 70}ms`}
+          >
             <div class="flex items-center justify-between gap-3">
               <LevelBadge level={level} label={level} size="md" />
               <span class="text-xs font-mono text-brand-black/50">
@@ -44,7 +47,7 @@ const depthCopy: Record<LevelId, { title: string; description: string }> = {
             <h3 class="mt-5 text-xl font-black text-brand-black">
               {depthCopy[level].title}
             </h3>
-            <p class="mt-3 text-sm leading-relaxed text-gray-700">
+            <p class="mt-3 text-sm leading-relaxed text-neutral-8">
               {depthCopy[level].description}
             </p>
           </article>

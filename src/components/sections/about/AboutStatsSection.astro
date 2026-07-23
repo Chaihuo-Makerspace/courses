@@ -8,21 +8,19 @@ interface Props {
 const { stats } = Astro.props as Props;
 ---
 
-<section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-background">
-  <div class="max-w-5xl mx-auto" data-reveal>
-    <div class="grid grid-cols-3 gap-6">
-      {
-        stats.map((stat) => (
-          <div class="panel-dark p-6 md:p-8 text-center noise-overlay">
-            <p class="text-3xl md:text-5xl font-black font-mono text-brand-yellow">
-              {stat.number}
-            </p>
-            <p class="text-xs md:text-sm text-white/80 font-bold tracking-wider mt-3">
-              {stat.label}
-            </p>
-          </div>
-        ))
-      }
-    </div>
+<section class="panel-dark noise-overlay py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-5xl mx-auto flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-white/15" data-reveal>
+    {
+      stats.map((stat) => (
+        <div class="flex-1 text-center py-6 sm:py-0 sm:px-8 first:pt-0 last:pb-0">
+          <p class="text-3xl md:text-5xl font-black font-mono text-brand-yellow">
+            {stat.number}
+          </p>
+          <p class="text-xs md:text-sm text-white/80 font-bold tracking-wider mt-3">
+            {stat.label}
+          </p>
+        </div>
+      ))
+    }
   </div>
 </section>

@@ -15,14 +15,14 @@ const brandColors = [
   ['brand-yellow-light', '#fef9e7'],
   ['brand-yellow-mid', '#fde68a'],
   ['brand-yellow-dark', '#b8960a'],
-  ['brand-black', '#1a1a1a'],
-  ['brand-graphite', '#262626'],
+  ['brand-black', '#2b2420'],
+  ['brand-graphite', '#3a231d'],
 ];
 const neutrals: [string, string][] = [
-  ['neutral-1', '#f7f8fa'], ['neutral-2', '#f2f3f5'], ['neutral-3', '#e5e6eb'],
-  ['neutral-4', '#c9cdd4'], ['neutral-5', '#a9aeb8'], ['neutral-6', '#86909c'],
-  ['neutral-7', '#6b7785'], ['neutral-8', '#4e5969'], ['neutral-9', '#272e3b'],
-  ['neutral-10', '#1d2129'],
+  ['neutral-1', '#f8f6f1'], ['neutral-2', '#f1eee7'], ['neutral-3', '#e5e0d5'],
+  ['neutral-4', '#d0c8b8'], ['neutral-5', '#b0a695'], ['neutral-6', '#8f8574'],
+  ['neutral-7', '#746a5c'], ['neutral-8', '#5a5145'], ['neutral-9', '#3f382f'],
+  ['neutral-10', '#2b2420'],
 ];
 const radii = ['rounded-sm', 'rounded-md', 'rounded-lg', 'rounded-xl'];
 ---
@@ -47,7 +47,8 @@ const radii = ['rounded-sm', 'rounded-md', 'rounded-lg', 'rounded-xl'];
     <!-- Colors -->
     <section data-reveal>
       <h2 class="section-flag text-2xl font-bold text-brand-black mb-2">品牌色</h2>
-      <p class="text-sm text-neutral-7 mb-6">配色比例硬指标：黄 ≤3% · 红 ≤5% · 黑 ~15% · 灰 ~25% · 白 ~52%</p>
+      <p class="text-sm text-neutral-7 mb-6">Warm Maker Signal：火焰红→黄渐变是图形主体，暖炭灰替代冷黑/石墨，无硬性面积上限——见 Dial 体系。</p>
+      <div class="h-20 rounded-card mb-6" style="background: var(--gradient-flame)" />
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
         {
           brandColors.map(([name, hex]) => (
@@ -63,7 +64,7 @@ const radii = ['rounded-sm', 'rounded-md', 'rounded-lg', 'rounded-xl'];
       </div>
 
       <h3 class="text-sm font-mono font-semibold uppercase tracking-widest text-neutral-7 mt-8 mb-3">
-        Neutral scale（Arco Gray）
+        Neutral scale（暖灰阶）
       </h3>
       <div class="flex flex-wrap gap-2">
         {
@@ -98,17 +99,17 @@ const radii = ['rounded-sm', 'rounded-md', 'rounded-lg', 'rounded-xl'];
 
     <!-- Buttons -->
     <section data-reveal>
-      <h2 class="section-flag text-2xl font-bold text-brand-black mb-6">按钮三变体</h2>
+      <h2 class="section-flag text-2xl font-bold text-brand-black mb-6">按钮两变体</h2>
       <div class="flex flex-wrap items-center gap-3">
-        <button class="focus-ring inline-flex items-center gap-2 rounded-md bg-brand-black px-5 py-2.5 text-sm font-semibold text-white hover:bg-black">
-          Primary（黑）
+        <button class="focus-ring inline-flex items-center gap-2 rounded-md bg-brand-red px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-red-hover">
+          Primary（火焰红）
         </button>
         <button class="focus-ring inline-flex items-center gap-2 rounded-md bg-background border border-neutral-3 px-5 py-2.5 text-sm font-semibold text-brand-black hover:border-brand-black/30">
           Secondary
         </button>
         <span class="panel-dark inline-flex rounded-lg p-3">
           <button class="focus-ring inline-flex items-center gap-2 rounded-md bg-brand-red px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-red-hover">
-            Primary on dark（红）
+            Primary on dark
           </button>
         </span>
       </div>

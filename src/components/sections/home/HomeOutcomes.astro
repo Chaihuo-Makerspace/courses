@@ -12,9 +12,6 @@ const { outcomes } = Astro.props as Props;
 <section class="py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-brand-graphite text-white">
   <div class="max-w-6xl mx-auto" data-reveal>
     <div class="max-w-3xl">
-      <p class="text-xs font-mono font-semibold uppercase tracking-widest text-brand-yellow mb-3">
-        Course Package
-      </p>
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
         机构引入课程时，需要看到这些实物和材料
       </h2>
@@ -23,10 +20,11 @@ const { outcomes } = Astro.props as Props;
       </p>
     </div>
 
-    <ul class="mt-10 grid md:grid-cols-2 gap-px bg-white/10 border border-white/10 rounded-lg overflow-hidden">
+    {/* 全宽横向数字带，不做等分卡片网格——跟前后两个 section 的网格节奏拉开 */}
+    <ul class="mt-10 flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-white/10 border-t border-b border-white/10">
       {outcomes.map((o) => (
-        <li class="bg-brand-graphite p-6 md:p-7 flex gap-5">
-          <div class="shrink-0 w-11 h-11 rounded-md bg-brand-yellow text-brand-black flex items-center justify-center">
+        <li class="flex-1 flex gap-4 py-6 md:py-2 md:px-6 first:pl-0 last:pr-0">
+          <div class="shrink-0 w-10 h-10 rounded-md bg-brand-yellow text-brand-black flex items-center justify-center">
             <Icon name={o.icon} class="w-5 h-5" />
           </div>
           <div>

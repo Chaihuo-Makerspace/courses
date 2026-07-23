@@ -1,4 +1,4 @@
-# 柴火创客学院 · 设计方案（Design System）
+# 柴火创客学院 · 设计方案（Design System）v4.0 — Warm Maker Signal
 
 > **这是设计系统的唯一权威文档。** Token 值与 `src/styles/themes/theme.css` 的
 > `@theme` 块逐一对齐；改 token 必须两边同步。本文不只记"用什么"，更记
@@ -11,57 +11,74 @@
 
 ## 0. 设计声音（North Star）
 
-**专业 · 清晰 · 实战 · 可信赖 · 温暖而不花哨。**
+**温暖上升 · 手作能量 · 工程踏实感 · 专业可信。**
 
-气质 = **技术编辑风**：mono 小标（eyebrow）+ 粗黑无衬线大标题 + 红色竖条
-（`.section-flag`）+ 大量留白 + hairline 分隔。冷静、可信、有工程感，但靠暖黄
-点缀保留"创客"的温度。
+对着 `public/logo-horizontal.png` / `logo-vertical.png` 核实过：logo 是红→黄渐变
+火焰从灰色齿轮升起，灰色描边 wordmark —— **没有黑色**。火焰是主角，齿轮是底座。
+v3.0 的"技术编辑风"（黑底白字 CTA、石墨黑反转面、mono eyebrow 铺天盖地）比 logo
+本身更冷、更企业化，没接住这份"暖"。v4.0 把火焰渐变升级为真正的图形主体（hero
+背景、section 分隔、hover glow），黑色不再是识别色主导。
 
-**核心叙事**（贯穿所有文案与视觉）：
+**核心叙事**（贯穿所有文案与视觉，不变）：
 
 > 我们培养人掌握新技术整合能力，不是提供解决方案。
 
 避免"我们提供 XXX 方案"的措辞与视觉暗示。
 
+### 设计 Dial
+
+替代 v3.0 的硬性配色比例指标，用三个维度定调，覆盖布局/动效/密度决策：
+
+`DESIGN_VARIANCE: 6 / MOTION_INTENSITY: 4 / VISUAL_DENSITY: 4`
+
+招生站，B2B/教育机构与教师受众，克制但不呆板——不是 Awwwards 潮流站,也不是
+政务级极简站。改设计时先问"这个决定在 6/4/4 这个刻度下说得通吗"，而不是查一张
+数字上限表。
+
 **历史教训**：本仓库曾漂移到 brutalist / 贴纸风（2px 黑边、硬阴影、装饰几何块、
-大红铺面）并被回退。下方"禁用清单"就是防止复发。
+大红铺面）并被回退，这条禁令保留（§8）。v3.0 的配色比例硬指标（黄≤3%/红≤5%/
+黑~15%/灰~25%/白~52%）在 v4.0 被判定为治理层面不合理——它挡住了火焰渐变作为
+图形主体使用，也没帮上真正的问题（eyebrow 滥用、CTA 措辞重复、假 AI 照片、hero
+超载、布局家族单一化，见 §8）。v4.0 用 Dial + 具体禁用清单替代它。
 
 ---
 
 ## 1. 颜色系统
 
-### 1.1 配色比例（硬指标）
+### 1.1 火焰渐变 —— 图形主体
 
-**黄 ≤3% · 红 ≤5% · 黑 ~15% · 灰 ~25% · 白 ~52%。**
+`--gradient-flame: linear-gradient(135deg, var(--color-brand-red), var(--color-brand-yellow))`
 
-- 饱和黄 `#f3d230` 是**点缀识别色**（logo / L1 徽章 / M0 角标 / 关键按钮），
-  **不是大面积底色**。需要"黄面"时用柔黄 `--color-brand-yellow-light`
-  (`#fef9e7`)，且仅限 ≤8rem 高的窄条 / 卡片底。
-- 红 `--color-brand-red` ≤5%，只用于 CTA、强调、destructive。**绝不**用
-  `bg-brand-red` 铺满整段。
-- 每个落地页应有一个**反转黑面**（`.panel-dark` / graphite）制造节奏对比。
+不再是"点缀角标"。用在：hero 背景层、section 之间的分隔带、关键 CTA 的 hover
+glow、M0-M5 矩阵的强调态。**没有面积上限**——但仍遵守 §8 的具体禁令（不铺满整段
+纯红、不做贴纸式硬边框）。
 
 ### 1.2 品牌识别色
 
 | 用途 | Token | Hex |
 |---|---|---|
-| CTA 红 | `--color-brand-red` | `#d84144` |
+| CTA 红 / 主 CTA | `--color-brand-red` | `#d84144` |
 | 红 hover | `--color-brand-red-hover` | `#c13538` |
 | 红 tint（仅 destructive 底） | `--color-brand-red-light` | `#fdeaea` |
-| 主黄（识别色） | `--color-brand-yellow` | `#f3d230` |
+| 主黄（识别色 / accent） | `--color-brand-yellow` | `#f3d230` |
 | 黄 hover | `--color-brand-yellow-hover` | `#e5c420` |
-| 柔黄 surface（唯一允许的黄面） | `--color-brand-yellow-light` | `#fef9e7` |
+| 柔黄 surface | `--color-brand-yellow-light` | `#fef9e7` |
 | 中黄（L2 行） | `--color-brand-yellow-mid` | `#fde68a` |
 | 黄 dark（黄底上的文字） | `--color-brand-yellow-dark` | `#b8960a` |
-| 主文本黑 | `--color-brand-black` | `#1a1a1a` |
-| 黑 light | `--color-brand-black-light` | `#333333` |
-| Graphite（反转面 / footer） | `--color-brand-graphite` | `#262626` |
+| 暖炭灰（标题文字，替代冷黑） | `--color-brand-black` | `#2b2420` |
+| 暖炭灰 light | `--color-brand-black-light` | `#3f382f` |
+| 暖 ember-dark（反转面 / footer，替代石墨） | `--color-brand-graphite` | `#3a231d` |
 | 白 | `--color-brand-white` | `#ffffff` |
 
-### 1.3 中性灰阶（10 段，Arco Gray 谱系）
+**注意**：`#2b2420` / `#3a231d` 是暖炭灰/ember-dark，**不是**"高级消费品暖米白+
+黄铜+浓缩咖啡棕"那套（banned：`#f5f1ea` 系背景、`#b08947` 系黄铜/牛血红、
+`#1a1714` 系espresso）。本站的暖色语言是**火焰红黄**，不是黄铜/赭石——调色时
+注意区分色相，别往那几个 banned hex 靠。
 
-`--color-neutral-1`→`-10`：`#f7f8fa · #f2f3f5 · #e5e6eb · #c9cdd4 · #a9aeb8 ·
-#86909c · #6b7785 · #4e5969 · #272e3b · 1d2129`
+### 1.3 中性灰阶（10 段，暖灰阶）
+
+`--color-neutral-1`→`-10`：`#f8f6f1 · #f1eee7 · #e5e0d5 · #d0c8b8 · #b0a695 ·
+#8f8574 · #746a5c · #5a5145 · #3f382f · #2b2420`
 
 - 文本：标题 `neutral-10`、重要 `-9`、正文 `-8`、次要 `-7`、caption `-6`。
 - 描边/分隔：`neutral-3`（hairline）。
@@ -69,13 +86,14 @@
 
 ### 1.4 语义 token（shadcn 风）
 
-`--color-background #fff` · `--color-foreground #1d2129` · `--color-card #fff` ·
-`--color-muted #f2f3f5` · `--color-muted-foreground #86909c` ·
-`--color-border-subtle #e5e6eb` · `--color-surface #f7f8fa` ·
+`--color-background #fbfaf6` · `--color-foreground #2b2420` · `--color-card #fbfaf6` ·
+`--color-muted #f1eee7` · `--color-muted-foreground #8f8574` ·
+`--color-border-subtle #e5e0d5` · `--color-surface #f8f6f1` ·
 `--color-destructive #d84144`。
 
-**Primary（v3.0 已切换为黑底白字 CTA）**：`--color-primary` = brand-black，
-`--color-primary-foreground` = `#fff`，`--color-accent` = brand-red。
+**Primary（v4.0 —— 火焰红回归主 CTA）**：`--color-primary` = brand-red，
+`--color-primary-foreground` = `#fff`，`--color-accent` = brand-yellow（黄做
+次级强调/highlight，红黄各司其职）。黑底白字 CTA 退休。
 
 > Tailwind v4 会为每个 `--color-*` 自动生成 `bg-* / text-* / border-*`。
 > **优先用 token 工具类，不要写裸 hex。**
@@ -85,19 +103,18 @@
 页面与卡片底统一用 `--color-background` / `--color-card` = **`#fbfaf6`**（微暖白），
 纯白偏冷、偏"未样式化"。**全站不要再用 `bg-white`**（纯白）作面色 —— 用
 `bg-background`（自动取暖白 token）。`--color-brand-white`（`#ffffff`）仅作"白墨"：
-反转黑面上的文字、半透明叠加 `bg-white/xx` 等，保持纯白。
+反转面上的文字、半透明叠加 `bg-white/xx` 等，保持纯白。
 
 ---
 
 ## 2. 圆角 · 阴影 · 动效
 
-- **圆角**（v3.0 默认 8px，禁默认 16px+）：`--radius-sm 4 · -md 6 · -lg 8 ·
-  -xl 14 · -card 8 · -chip 999`。卡片用 `-card`(8)，按钮用 `-md`(6)，胶囊用
-  `-chip`。
+- **圆角**：`--radius-sm 4 · -md 6 · -lg 8 · -xl 14 · -card 8 · -chip 999`。卡片用
+  `-card`(8)，按钮用 `-md`(6)，胶囊用 `-chip`。
 - **阴影**（3 档，全部极淡 rgba 0.05–0.10）：`--shadow-xs · -sm-soft ·
   -md-soft`。hover 只允许微变到 `-xs`，**禁硬阴影/偏移阴影**。
 - **动效**：时长 `--dur-fast 150 · -med 200 · -slow 300`，缓动
-  `--ease-standard`。统一克制；详见 §6 与 `prefers-reduced-motion` 规则。
+  `--ease-standard`。MOTION_INTENSITY 4——克制但有差异化；详见 §6。
 
 ---
 
@@ -106,8 +123,9 @@
 - `--font-sans`：Inter（西文）→ Noto Sans SC / 思源黑（中文回退）。正文、UI、
   按钮、导航全用它。
 - `--font-mono`：JetBrains Mono。用于 eyebrow 小标（`font-mono uppercase
-  tracking-widest`）和代码/数字。
-- `--font-display`：display 级大标题专用（见 §7 字体策略，迭代中）。
+  tracking-widest`，**配额受限，见 §8**）和代码/数字。
+- `--font-display`：得意黑 Smiley Sans（见 §7）。v4.0 本轮不换字体——先靠颜色/
+  图像/CTA/布局把"暖"做出来，字体留到下一轮迭代评估。
 - 中文排版：正文 `line-height 1.75`，标题 `1.3`；中文用全角标点
   （，。：、！？），英文/数字用半角；中文破折号 `——`。
   详见 `.claude/rules/i18n-text.md`。
@@ -124,7 +142,7 @@ AI 拼版面时**默认照这个来**，才不会"语法对但平庸"。
 <section class="py-20 md:py-24 px-4 sm:px-6 lg:px-8 [panel bg]">
   <div class="max-w-6xl mx-auto">
     <div class="max-w-3xl">
-      <p class="text-xs font-mono font-semibold uppercase tracking-widest text-brand-red mb-3">EYEBROW</p>
+      <!-- eyebrow 可选，配额见 §8.1 -->
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">标题</h2>
       <p class="mt-4 text-base md:text-lg text-neutral-8 leading-relaxed">引导句</p>
     </div>
@@ -135,7 +153,8 @@ AI 拼版面时**默认照这个来**，才不会"语法对但平庸"。
 
 - 容器恒为 `max-w-6xl mx-auto` + `px-4 sm:px-6 lg:px-8`；文本块限 `max-w-3xl`。
 - 段距恒为 `py-20 md:py-24`。
-- eyebrow：亮面用 `text-brand-red`，暗面用 `text-brand-yellow`。
+- eyebrow：亮面用 `text-brand-red`，暗面用 `text-brand-yellow`——但**每页有配额**
+  （§8.1），标题本身够清楚就不用加。
 - **hairline 网格**：`grid gap-px bg-neutral-3`（暗面用 `bg-white/10`）+ 子项
   自身底色 → 形成 1px 细分隔，技术感的招牌手法。
 
@@ -146,27 +165,29 @@ AI 拼版面时**默认照这个来**，才不会"语法对但平庸"。
 | Panel | 何时用 |
 |---|---|
 | 白 / `panel-light` | 默认内容段 |
-| 柔黄 `bg-brand-yellow-light` | 想"暖一下"的窄强调段（≤8rem） |
-| 反转 `panel-dark`（graphite） | 每页至少一处，制造对比与可信厚重感 |
+| 柔黄 `bg-brand-yellow-light` | 想"暖一下"的窄强调段 |
+| 反转 `panel-dark`（暖 ember-dark） | 每页至少一处，制造对比与可信厚重感 |
+| 火焰渐变 `var(--gradient-flame)` | hero 背景层 / 关键分隔带，v4.0 新增 |
 
 ### 4.3 Hero 范式 + 招牌器件
 
-- Hero 文本块左对齐、`max-w-3xl`，eyebrow → 大标题（可用 `.highlight` 给关键词
-  描黄）→ 副题 → CTA 组。
+- Hero 文本块左对齐、`max-w-3xl`，**文本元素 ≤4 个**（eyebrow/徽章、标题、副题、
+  CTA 组）——不塞事实条/场景标签/工具列表，见 §8.4。
 - **招牌可信器件 = M0–M5 课程矩阵**。它是本站最独特的资产；hero / 课程页应让它
   可见，相当于 SaaS 站的"产品截图"，一眼传达"这是真课程体系"。
   实现：`HeroCourseMap.astro` + `HeroBanner` 的 `anchor` slot（首页 hero 用，
   其他页 hero 仍单栏文本）。
 
-### 4.4 按钮（实际 v3.0 用法）
+### 4.4 按钮（v4.0）
 
-| 变体 | 亮面 | 暗面 |
-|---|---|---|
-| Primary（CTA） | `bg-brand-black text-white hover:bg-black` | `bg-brand-red text-white hover:bg-brand-red-hover` |
-| Secondary | `bg-white border border-neutral-3 text-brand-black hover:border-brand-black/30` | `border border-white/30 text-white hover:bg-white/10` |
+| 变体 | 用法 |
+|---|---|
+| Primary（CTA） | `bg-brand-red text-white hover:bg-brand-red-hover`（亮面/暗面统一，不再分黑/红两套） |
+| Secondary | `bg-background border border-neutral-3 text-brand-black hover:border-brand-black/30`（亮面）/ `border border-white/30 text-white hover:bg-white/10`（暗面） |
 
 统一 `rounded-md`(6px) · `px-5 py-2.5` · `text-sm font-semibold` ·
-`focus-ring` · 配 `lucide:arrow-right` 图标。
+`focus-ring` · 配 `lucide:arrow-right` 图标。**同一意图（如"联系我们"）全站只用
+一种措辞**，见 §8.2。
 
 ---
 
@@ -200,17 +221,32 @@ AI 拼版面时**默认照这个来**，才不会"语法对但平庸"。
 
 ## 6. 动效规则
 
-- 全站统一极克制：scroll-reveal（淡入 + 微上移）+ 个别微交互。
-- 用 `data-reveal` 触发（IntersectionObserver，不引 AOS 等依赖）。
+- `MOTION_INTENSITY: 4`——克制但要有差异化，不是"每个 section 一模一样淡入"。
+- 基础机制：scroll-reveal（淡入 + 微上移），`data-reveal` 触发
+  （IntersectionObserver，不引 AOS 等依赖）。
+- **卡片网格 stagger**：给循环里的每个子项加 `data-reveal` + 内联
+  `style={\`--reveal-delay: ${i * 70}ms\`}`（密集网格用更小步进，如 45ms），
+  取代整段一起淡入。已应用于 `HomeGoalPaths` / `PathDepthSection` /
+  `AboutEcosystemSection` / `AboutValuesSection` / `CourseLearningLadder` /
+  `ContactScenariosSection`（经 `ScenarioCard` 的 `delayMs` prop）/
+  `HomeFamiliarObjects`。新增同类卡片网格时照此模式加。
+- **CTA 火焰 hover**：`a.bg-brand-red:hover` / `button.bg-brand-red:hover`
+  全局叠加 `var(--gradient-flame)` + 暖色 `box-shadow` + 缓慢
+  `background-position` 位移动画（`theme.css` 里的 `flame-shift`
+  keyframe）。只按标签选择器生效（`a`/`button`），不影响 `module-tile` /
+  `level-badge` 等静态徽章 `span`。`prefers-reduced-motion` 下关闭动画、保留
+  静态渐变。
 - **必须**在 `@media (prefers-reduced-motion: reduce)` 下禁用，且不依赖动效才
   可见的内容（reduce 时直接显示）。
-- hover 只到 `--shadow-xs`；active 轻微 `scale(0.98)`。不堆砌、不炫技。
+- 不堆砌、不炫技——不引入 GSAP/Motion 等依赖，原生 CSS + IntersectionObserver
+  够用。
 
 ---
 
 ## 7. 字体策略
 
-大标题用 display 字面制造层级对比，方向为**几何科技黑**（契合硬件/创客）。
+大标题用 display 字面制造层级对比，方向为**几何工业体**（契合硬件/创客，齿轮
+母题的踏实感）。
 
 - **Display = 得意黑 Smiley Sans**（倾斜几何工业体，OFL 免费商用）。自托管
   子集：`public/fonts/SmileySans-Oblique.subset.woff2`（仅站内用字，~95KB），
@@ -223,26 +259,47 @@ AI 拼版面时**默认照这个来**，才不会"语法对但平庸"。
   「display marquee → bold sans 段落」的层级，别全站滥用倾斜体。
 - **改字符集后需重新子集**：站内新增大量生僻字时，用 `pyftsubset` 以全站文本
   为字符集重新生成（缺字会自动回退，不致破版）。
+- v4.0 本轮不换字体，见 §3。
 
 ---
 
 ## 8. 禁用清单（Banned）
 
-- 万物加 2px 黑边（brutalist）。
-- 硬阴影 / 偏移阴影（贴纸风）。
-- hero 里的装饰几何块。
-- 宽幅红铺面（`bg-brand-red` 覆盖整段）。
-- 大面积饱和黄底（黄是点缀，黄面只用柔黄 `-light` 且 ≤8rem）。
-- token 体系外的裸 hex / 自造圆角。
-- 纯白卡片不配 `card-hairline` / 不进 panel（看着像未样式化的裸 HTML）。
+替代 v3.0 的配色比例硬指标，针对审计出的真实问题：
+
+1. **Eyebrow 配额** — 每页 eyebrow 数量 ≤ `ceil(section 数 / 3)`，hero 算 1 个
+   section。标题本身够清楚就别加 eyebrow。
+2. **CTA 意图去重** — 同一目的地（如"联系我们"）在全站只用同一个措辞，不许
+   "申请合作咨询"/"了解合作方式"/"直接咨询合作"这样各页各写一套。
+3. **不得用 AI 生成的"仿真实拍"充当真实照片** — 教学场景/学员/工坊要么用真实
+   影像，要么统一走扁平图标插画风格，不要伪造照片质感（乱码 UI/乱码人名牌一类
+   AI 生成瑕疵尤其不可接受）。
+4. **Hero 文本元素 ≤4 个**（eyebrow/徽章、标题、副题、CTA 组）——不塞事实条/
+   场景标签/工具清单卡进 hero，这些下移到 hero 之后的第一个内容 section。
+5. **同一布局家族（如 3-col-card）连续出现 <3 次** ——一页里如果要连续放同款
+   网格/卡片布局，最多两次，第三次必须换一种构图（横向 scroll、非对称网格、
+   全宽数字带等）。
+6. **不得用占位符充当真实信任信号** —— 没有真实合作伙伴 logo/名单前，先不上
+   "合作伙伴墙"这类 section，不要用"合作伙伴1"这种占位文案顶替。
+7. **brutalist 相关禁令（沿用 v3.0，不冲突）**：
+   - 万物加 2px 黑边。
+   - 硬阴影 / 偏移阴影（贴纸风）。
+   - hero 里的装饰几何块。
+   - 宽幅纯红铺面（`bg-brand-red` 覆盖整段，火焰渐变除外）。
+   - token 体系外的裸 hex / 自造圆角。
+   - 纯白卡片不配 `card-hairline` / 不进 panel（看着像未样式化的裸 HTML）。
 
 ---
 
 ## 9. 改设计时的纪律
 
-1. 改 token → `theme.css` 与本文**两边同步**。
+1. 改 token → `theme.css` 与本文**两边同步**，`styleguide.astro` 的硬编码色卡
+   数组也要同步（它没有从 CSS 读取，是独立维护的镜像）。
 2. 先用现有 token / 组件（§5 货架），再考虑新建。
 3. 不写裸 hex、不造体系外圆角。
 4. 动效尊重 `prefers-reduced-motion`。
-5. 改完打开 `/styleguide` 自检，并跑 `pnpm check && pnpm build`。
+5. 改完打开 `/styleguide` 自检对比度（尤其按钮文字/focus-ring/表单），并跑
+   `pnpm check && pnpm build`。
 6. 内容只改 `src/data/*.ts`（`/llms.txt` 与 Course JSON-LD 会自动同步）。
+7. 新增/改动前对照 §8 禁用清单逐条自查，尤其 eyebrow 配额和 CTA 措辞一致性——
+   这两条最容易在多人/多次改动里悄悄破戒。

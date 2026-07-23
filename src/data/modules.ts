@@ -661,7 +661,7 @@ export const modules: Module[] = [
     oneLiner: '跨品牌、跨代际设备统一管控，打破数据孤岛，构建全场景智能中枢。',
     realProblem:
       '管理系统碎片化、能耗流向不可见、过度依赖云端——空间里的设备各管一摊，没有统一可编排的中枢。',
-    illustration: '/illustrations/m1.png',
+    illustration: '/illustrations/m1.svg',
     difficulty: '入门',
     duration: '2 天',
     scenarios: ['楼宇能源管理', '办公空间自动化', '机房环境监测', '酒店客控', '实验室管理'],
@@ -711,7 +711,7 @@ export const modules: Module[] = [
     oneLiner: '解放双手，主动服务：打造能听懂业务、能看见需求的 AI 交互终端。',
     realProblem:
       '系统操作依赖专业技能、物理交互限制效率、需求响应总是滞后——交互方式没跟上，AI 能力就落不了地。',
-    illustration: '/illustrations/m2.png',
+    illustration: '/illustrations/m2.svg',
     difficulty: '进阶',
     duration: '2 天',
     prerequisite: '建议先学习 M1 设备互联与智能管控',
@@ -758,7 +758,7 @@ export const modules: Module[] = [
     oneLiner: '零依赖，全连通，构建去中心化的韧性通信网络。',
     realProblem:
       '通信盲区就意味着失控、中心节点太脆弱、应急部署门槛又高——一旦断网，整个系统跟着失灵。',
-    illustration: '/illustrations/m3.png',
+    illustration: '/illustrations/m3.svg',
     difficulty: '进阶',
     duration: '1.5 天',
     scenarios: ['应急救援', '户外探索与赛事保障', '地下空间通信', '野外科考'],
@@ -812,7 +812,7 @@ export const modules: Module[] = [
     oneLiner: '从「事后追溯」进化为「事前阻断」，构建秒级响应的智能决策闭环。',
     realProblem:
       '摄像头只能录、不能防，无效告警形成风暴，自建智能化门槛又高——视频价值始终停在事后追溯。',
-    illustration: '/illustrations/m4.png',
+    illustration: '/illustrations/m4.svg',
     difficulty: '高级',
     duration: '2 天',
     scenarios: ['周界安防', '安全合规检测', '零售客流分析', '工业质检'],
@@ -857,7 +857,7 @@ export const modules: Module[] = [
     oneLiner: '消灭现场盲区，打破距离成本：构建从城市到野外的全域感知网络。',
     realProblem:
       '现场状态是黑箱、运维半径受限、非标设备接入处处是坑——想看见远端，却被距离和成本挡住。',
-    illustration: '/illustrations/m5.png',
+    illustration: '/illustrations/m5.svg',
     difficulty: '入门',
     duration: '2 天',
     scenarios: ['智慧农业', '智慧城市', '气象监测', '工业园区环境监测'],

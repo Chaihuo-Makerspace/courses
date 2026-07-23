@@ -87,7 +87,7 @@ const ogImageUrl = new URL(ogImage, Astro.site ?? Astro.url).toString();
     <!-- Page-specific head extras (JSON-LD, extra meta, etc.) -->
     <slot name="head" />
   </head>
-  <body class="min-h-screen flex flex-col bg-background text-gray-900 antialiased">
+  <body class="min-h-screen flex flex-col bg-background text-brand-black antialiased">
     <a href="#main-content" class="skip-link focus-ring">跳到主要内容</a>
     <Navbar currentPath={currentPath} />
 

@@ -6,7 +6,7 @@ export interface LinkItem {
 }
 
 export interface FinalCta {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   description: string;
   primary: LinkItem;
@@ -64,7 +64,6 @@ export interface OutcomeItem {
 }
 
 export const homeFinalCta: FinalCta = {
-  eyebrow: 'NEXT STEP',
   title: '把课程体系引入你的教学、培训或项目现场',
   description:
     '可以先引入单个模块，也可以按目标组合课程包；销售形态包括裸硬件套件、标准教学套件、全托交付与师资培训。',
@@ -73,16 +72,14 @@ export const homeFinalCta: FinalCta = {
 };
 
 export const pathsFinalCta: FinalCta = {
-  eyebrow: 'NEXT STEP',
   title: '选好组合后，回到课程体系确认模块与级别',
   description:
     '选课指南只帮助你缩小范围。真正落地时，还要看模块内容、课堂实验、硬件清单、交付材料和销售形态。',
-  primary: { label: '查看完整课程体系', href: '/courses' },
-  secondary: { label: '直接咨询合作', href: '/contact' },
+  primary: { label: '查看课程体系', href: '/courses' },
+  secondary: { label: '申请合作咨询', href: '/contact' },
 };
 
 export const coursesFinalCta: FinalCta = {
-  eyebrow: 'JOIN ECOSYSTEM',
   title: '把课程模块引入你的课程、团队或项目现场',
   description:
     '如果你已经有明确方向，可以继续讨论裸硬件套件、标准教学套件、全托交付或师资培训。我们会根据目标推荐模块组合与授课深度。',
@@ -139,7 +136,6 @@ export const aboutStats: StatItem[] = [
 ];
 
 export const aboutFinalCta: FinalCta = {
-  eyebrow: 'ECOSYSTEM OPPORTUNITIES',
   title: '想把这份生态能力带到你的组织？',
   description:
     '从裸硬件套件到全托交付，可以按你的目标选择销售形态。请留下意向信息，我们 3 个工作日内提供合作建议。',

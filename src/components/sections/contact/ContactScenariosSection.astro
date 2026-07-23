@@ -13,12 +13,11 @@ const { scenarios } = Astro.props as Props;
 <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-background">
   <div class="max-w-7xl mx-auto" data-reveal>
     <SectionHeader
-      eyebrow="Step 1 · 选场景"
       title="你的合作目标更接近哪一类？"
       subtitle="先按当前目标定位场景，再看下方适配的合作形态（A / B / C / D）。"
     />
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-      {scenarios.map((s) => <ScenarioCard scenario={s} />)}
+      {scenarios.map((s, i) => <ScenarioCard scenario={s} delayMs={i * 70} />)}
     </div>
   </div>
 </section>

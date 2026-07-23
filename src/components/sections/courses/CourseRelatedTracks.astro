@@ -15,7 +15,6 @@ const { relatedTracks } = Astro.props as Props;
     <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-neutral-1 border-t border-neutral-3">
       <div class="max-w-6xl mx-auto" data-reveal>
         <SectionHeader
-          eyebrow="Course Combinations"
           title="包含此模块的课程组合"
         />
         <div class="grid md:grid-cols-2 gap-6 mt-8">
@@ -31,11 +30,11 @@ const { relatedTracks } = Astro.props as Props;
               />
               <div class="flex-1 min-w-0">
                 <h4 class="font-black text-brand-black text-base">{t.name}</h4>
-                <p class="text-xs font-mono text-gray-500 mt-0.5">
+                <p class="text-xs font-mono text-neutral-6 mt-0.5">
                   {t.tagline}
                 </p>
               </div>
-              <Icon name="lucide:arrow-right" class="w-4 h-4 text-gray-400 group-hover:text-brand-black transition-colors" />
+              <Icon name="lucide:arrow-right" class="w-4 h-4 text-neutral-5 group-hover:text-brand-black transition-colors" />
             </a>
           ))}
         </div>

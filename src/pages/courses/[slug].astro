@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import CourseAudienceSection from '../../components/sections/courses/CourseAudienceSection.astro';
 import CourseCapabilities from '../../components/sections/courses/CourseCapabilities.astro';
 import CourseCurriculum from '../../components/sections/courses/CourseCurriculum.astro';
+import CourseDetailFactsStrip from '../../components/sections/courses/CourseDetailFactsStrip.astro';
 import CourseDetailHero from '../../components/sections/courses/CourseDetailHero.astro';
 import CourseDetailPanels from '../../components/sections/courses/CourseDetailPanels.astro';
 import CourseDeliverables from '../../components/sections/courses/CourseDeliverables.astro';
@@ -38,11 +39,10 @@ const totalDays = Object.values(module.cells).reduce(
 );
 
 const courseDetailCta: FinalCta = {
-  eyebrow: 'APPLY FOR COOPERATION',
   title: `把 ${module.code} 放进你的课程、团队或项目现场`,
   description:
     '如果这个方向正好对上你的目标，可以继续讨论裸硬件套件、标准教学套件、全托交付或师资培训。',
-  primary: { label: '立即申请合作', href: '/contact' },
+  primary: { label: '申请合作咨询', href: '/contact' },
   secondary: { label: '浏览其他模块', href: '/courses' },
 };
 
@@ -93,6 +93,7 @@ const courseJsonLdSafe = JSON.stringify(courseJsonLd).replace(/</g, '\\u003c');
     set:html={courseJsonLdSafe}
   />
   <CourseDetailHero module={module} totalDays={totalDays} />
+  <CourseDetailFactsStrip module={module} />
   {/*
     深度区块只在模块提供了对应数据时渲染（目前仅 M0），M1–M5 自动跳过。
     capabilityCards 就位时，核心硬件已由 hero 侧栏承担、关键能力由能力卡承担，
