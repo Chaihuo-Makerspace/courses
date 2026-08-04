@@ -188,7 +188,8 @@ export function translateValues(items: AboutValueItem[], locale: Locale): AboutV
 }
 
 export function translateStat(item: StatItem, locale: Locale): StatItem {
-  const key = `stat.${item.number}`;
+  const num = item.number.replace(/\+$/, '');
+  const key = `stat.${num}.label`;
   return { ...item, label: dt(locale, key) || item.label };
 }
 
