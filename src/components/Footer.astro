@@ -1,37 +1,55 @@
 ---
 import { Icon } from "astro-icon/components";
+import { t, type Locale, localizePath } from "../i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props as Props;
 const currentYear = new Date().getFullYear();
 
 const locations = [
   {
     city: "深圳",
+    cityEn: "Shenzhen",
     tag: "HQ",
     address: "深圳市南山区万科云城设计社区 B622",
+    addressEn: "B622, Vanke Cloud City Design Community, Nanshan District, Shenzhen",
     email: "jiayu.wang@seeed.cc",
   },
   {
     city: "成都",
+    cityEn: "Chengdu",
     tag: null,
     address: "成都市青羊区狮马路92号",
+    addressEn: "No. 92 Shima Road, Qingyang District, Chengdu",
     email: "xia.huang@seeed.cc",
   },
 ];
 
 const footerLinks = {
   about: {
-    title: "站内导航",
+    title: t(locale, 'footer.nav'),
     links: [
-      { label: "课程体系", href: "/courses" },
-      { label: "选课指南", href: "/paths" },
-      { label: "合作咨询", href: "/contact" },
-      { label: "学院简介", href: "/about" },
+      { label: t(locale, 'nav.courses'), href: localizePath(locale, '/courses') },
+      { label: t(locale, 'nav.paths'), href: localizePath(locale, '/paths') },
+      { label: t(locale, 'nav.contact'), href: localizePath(locale, '/contact') },
+      { label: t(locale, 'nav.about'), href: localizePath(locale, '/about') },
+    ],
+  },
+  ecosystem: {
+    title: t(locale, 'footer.ecosystem'),
+    links: [
+      { label: t(locale, 'footer.chaihuo'), href: 'https://chaihuo.org/' },
+      { label: t(locale, 'footer.mcv'), href: 'https://mcv.chaihuo.org/' },
     ],
   },
   social: {
-    title: "关注我们",
+    title: t(locale, 'footer.social'),
     links: [
-      { label: "微信公众号", href: "https://mp.weixin.qq.com/s/YgW1Nki5gJ2nFp9_2-oD2g" },
-      { label: "小红书", href: "https://www.xiaohongshu.com/search_result?keyword=%E6%9F%B4%E7%81%AB%E5%88%9B%E5%AE%A2%E7%A9%B5%E9%97%B4" },
+      { label: t(locale, 'footer.social.wechat'), href: "https://mp.weixin.qq.com/s/YgW1Nki5gJ2nFp9_2-oD2g" },
+      { label: t(locale, 'footer.social.xiaohongshu'), href: "https://www.xiaohongshu.com/search_result?keyword=%E6%9F%B4%E7%81%AB%E5%88%9B%E5%AE%A2%E7%A9%B5%E9%97%B4" },
       { label: "X (Twitter)", href: "https://x.com/seeedstudio" },
       { label: "Facebook", href: "https://www.facebook.com/seeedstudio" },
       { label: "Instagram", href: "https://www.instagram.com/seeedstudio/" },
@@ -42,16 +60,14 @@ const footerLinks = {
 
 <footer class="bg-brand-graphite text-white noise-overlay">
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Main Footer Content -->
     <div
       class="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-12 gap-x-8 lg:gap-x-12"
     >
-      <!-- Brand Column -->
       <div class="lg:col-span-4">
         <a
-          href="/"
+          href={localizePath(locale, '/')}
           class="inline-flex items-center gap-3 focus-ring rounded-md"
-          aria-label="柴火创客学院"
+          aria-label={t(locale, 'site.name')}
         >
           <img
             src="/favicon.svg"
@@ -62,30 +78,28 @@ const footerLinks = {
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
           />
           <span class="brand-fallback hidden items-center" aria-hidden="true">
-            <span class="text-lg font-bold text-white">柴火</span>
+            <span class="text-lg font-bold text-white">{t(locale, 'nav.brand')}</span>
           </span>
           <span class="h-7 w-px bg-white/30" aria-hidden="true"></span>
           <span
             class="text-base font-semibold text-white leading-none"
           >
-            柴火创客学院
+            {t(locale, 'site.name')}
           </span>
         </a>
         <p class="mt-4 text-sm text-white/70 leading-relaxed max-w-sm">
-          柴火创客学院把真实硬件、场景项目和交付经验整理成 M0–M5
-          课程体系，帮助学习者从动手基础走向可交付系统。
+          {t(locale, 'footer.tagline')}
         </p>
         <p
           class="mt-6 text-3xl leading-none text-brand-yellow"
           style="font-family: var(--font-display);"
         >
-          since 2011
+          {t(locale, 'footer.since')}
         </p>
       </div>
 
-      <!-- Location Cards -->
       <div class="md:col-span-2 lg:col-span-5">
-        <h4 class="text-base font-bold text-brand-yellow mb-4">联系我们</h4>
+        <h4 class="text-base font-bold text-brand-yellow mb-4">{t(locale, 'footer.contact')}</h4>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {
             locations.map((loc) => (
@@ -95,7 +109,7 @@ const footerLinks = {
                     name="lucide:map-pin"
                     class="w-4 h-4 text-brand-yellow shrink-0"
                   />
-                  <span class="font-medium text-white">{loc.city}</span>
+                  <span class="font-medium text-white">{loc.city} <span class="text-white/50 text-xs font-normal">({loc.cityEn})</span></span>
                   {loc.tag && (
                     <span class="text-[10px] font-mono font-bold bg-brand-yellow text-brand-black px-1.5 py-0.5 rounded">
                       {loc.tag}
@@ -103,6 +117,7 @@ const footerLinks = {
                   )}
                 </div>
                 <p class="text-sm text-white/70 mb-1 pl-6">{loc.address}</p>
+                <p class="text-xs text-white/40 mb-1 pl-6">{loc.addressEn}</p>
                 <a
                   href={`mailto:${loc.email}`}
                   class="focus-ring block text-sm text-white/70 pl-6 font-mono hover:text-brand-yellow transition-colors"
@@ -115,8 +130,7 @@ const footerLinks = {
         </div>
       </div>
 
-      <!-- Links Column -->
-      <div class="md:col-span-2 lg:col-span-3 grid grid-cols-2 gap-8">
+      <div class="md:col-span-2 lg:col-span-3 grid grid-cols-3 gap-8">
         <div>
           <h4 class="text-base font-bold text-brand-yellow mb-4">
             {footerLinks.about.title}
@@ -129,6 +143,28 @@ const footerLinks = {
                     href={link.href}
                     target={link.href.startsWith("http") ? "_blank" : undefined}
                     rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    class="text-sm text-white/70 hover:text-brand-yellow transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-base font-bold text-brand-yellow mb-4">
+            {footerLinks.ecosystem.title}
+          </h4>
+          <ul class="space-y-2">
+            {
+              footerLinks.ecosystem.links.map((link) => (
+                <li>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     class="text-sm text-white/70 hover:text-brand-yellow transition-colors"
                   >
                     {link.label}
@@ -161,10 +197,9 @@ const footerLinks = {
       </div>
     </div>
 
-    <!-- Bottom Bar -->
     <div class="py-6 border-t border-white/10">
       <p class="text-sm text-white/50 text-center font-mono">
-        &copy; {currentYear} Chaihuo Makerspace Academy. All rights reserved.
+        {t(locale, 'footer.copyright', { year: String(currentYear) })}
       </p>
     </div>
   </div>

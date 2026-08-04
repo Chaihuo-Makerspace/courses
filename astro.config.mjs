@@ -15,7 +15,6 @@ export default defineConfig({
   integrations: [
     icon({
       include: {
-        // 单一事实源在 src/data/icons.ts —— 新增图标改那里一处即可
         lucide: [...LUCIDE_ICONS]
       }
     })

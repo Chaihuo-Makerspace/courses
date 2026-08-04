@@ -1,45 +1,49 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
+import { t, defaultLocale, localizePath } from "../i18n";
+import type { Locale } from "../i18n";
+
+const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
 ---
 
-<Layout title="404 · 传感器连接中断">
+<Layout title={t(locale, '404.title')}>
   <section class="min-h-[70vh] flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 bg-neutral-1">
     <div class="max-w-xl w-full text-center">
       <div class="inline-flex items-center gap-3 mb-8 select-none">
-        <span class="text-7xl sm:text-8xl font-mono font-black tracking-widest leading-none text-brand-black">404</span>
+        <span class="text-7xl sm:text-8xl font-mono font-black tracking-widest leading-none text-brand-black">{t(locale, '404.heading')}</span>
         <span class="inline-flex items-center rounded-full bg-brand-red text-white px-2.5 py-1 text-[10px] font-mono font-bold uppercase tracking-wider">
-          Offline
+          {t(locale, '404.offline')}
         </span>
       </div>
 
       <h1 class="text-3xl sm:text-4xl font-bold text-brand-black mb-4">
-        传感器连接中断 / 找不到该路由
+        {t(locale, '404.message')}
       </h1>
 
       <p class="text-sm sm:text-base text-neutral-7 leading-relaxed max-w-md mx-auto mb-10">
-        系统没能在当前端口上读取到任何有效数据。可能该路径尚未组装完毕，或者发生了接触不良。
+        {t(locale, '404.submessage')}
       </p>
 
       <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
         <a
-          href="/courses"
+          href={localizePath(locale, '/courses')}
           class="focus-ring inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-brand-red text-white text-sm font-semibold rounded-md hover:bg-brand-red-hover transition-colors w-full sm:w-auto"
         >
           <Icon name="lucide:cpu" class="w-4 h-4 text-brand-yellow" />
-          浏览课程矩阵
+          {t(locale, 'courses.title')}
         </a>
         <a
-          href="/"
+          href={localizePath(locale, '/')}
           class="focus-ring inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-background text-brand-black border border-neutral-3 text-sm font-semibold rounded-md hover:border-brand-black/30 transition-colors w-full sm:w-auto"
         >
           <Icon name="lucide:compass" class="w-4 h-4 text-brand-red" />
-          返回网站首页
+          {t(locale, '404.backHome')}
         </a>
       </div>
 
       <p class="text-[10px] font-mono text-neutral-5 mt-12">
-        ERROR_CODE: 0x404_ROUTER_LOST · CHAIHUO ACADEMY OS
+        {t(locale, '404.terminal')}
       </p>
     </div>
   </section>

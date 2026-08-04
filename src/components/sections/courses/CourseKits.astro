@@ -1,12 +1,15 @@
 ---
 import SectionHeader from '../../SectionHeader.astro';
 import type { Module } from '../../../data/modules';
+import { dt } from '../../../i18n/data-translations';
+import type { Locale } from '../../../i18n';
 
 interface Props {
   module: Module;
+  locale: Locale;
 }
 
-const { module } = Astro.props as Props;
+const { module, locale } = Astro.props as Props;
 const kits = module.kits;
 ---
 
@@ -15,8 +18,8 @@ const kits = module.kits;
     <section class="py-14 md:py-20 px-4 sm:px-6 lg:px-8 border-t border-neutral-3 bg-surface">
       <div class="max-w-6xl mx-auto" data-reveal>
         <SectionHeader
-          title="感知 · 交互 · 视觉，三级能力递进"
-          subtitle="完整版人手一套三件；短形态只发对应的那一件。子套件按硬件平台划分，不代表 L1／L2／L3 的掌握深度。"
+          title={dt(locale, 'course.kitsTitle')}
+          subtitle={dt(locale, 'course.kitsSubtitle')}
         />
 
         <ul class="grid md:grid-cols-3 gap-5">

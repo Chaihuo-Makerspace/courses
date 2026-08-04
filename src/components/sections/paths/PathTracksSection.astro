@@ -2,21 +2,31 @@
 import { Icon } from 'astro-icon/components';
 import SectionHeader from '../../SectionHeader.astro';
 import type { Track } from '../../../data/tracks';
-import { getModule } from '../../../data/modules';
+import type { Module } from '../../../data/modules';
+import { dt } from '../../../i18n/data-translations';
+import { t } from '../../../i18n/translations';
+import type { Locale } from '../../../i18n';
+import { localizePath } from '../../../i18n';
 
 interface Props {
   tracks: Track[];
+  locale: Locale;
+  modules: Module[];
 }
 
-const { tracks } = Astro.props as Props;
+const { tracks, locale, modules } = Astro.props as Props;
+
+function getModuleFn(id: string): Module | undefined {
+  return modules.find((m) => m.id === id);
+}
 ---
 
 <section id="tracks" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-background">
   <div class="max-w-7xl mx-auto" data-reveal>
     <SectionHeader
-      eyebrow="Course Packages"
-      title="三大课程方向"
-      subtitle="三个并列方向，按课程目标给出建议组合。每个方向都对应模块、硬件、实验和交付材料，最终可以按你的场景调整深度和课时。"
+      eyebrow={t(locale, 'paths.tracks.eyebrow')}
+      title={dt(locale, 'pathTracks.title')}
+      subtitle={dt(locale, 'pathTracks.subtitle')}
     />
 
     {/* 非对称构图（1 主 + 2 副），跟前两个 section 的等分三栏网格拉开节奏 */}
@@ -40,30 +50,30 @@ const { tracks } = Astro.props as Props;
               </p>
               <div class="mt-6 flex flex-wrap gap-2">
                 <a
-                  href={`/courses#track-${tracks[0].id}`}
+                  href={localizePath(locale, `/courses#track-${tracks[0].id}`)}
                   class="focus-ring inline-flex items-center justify-center gap-2 rounded-md bg-brand-red px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-red-hover"
                 >
-                  在课程体系中定位
+                  {dt(locale, 'pathTracks.locate')}
                   <Icon name="lucide:arrow-right" class="w-4 h-4" />
                 </a>
                 <a
-                  href="/contact"
+                  href={localizePath(locale, '/contact')}
                   class="focus-ring inline-flex items-center justify-center gap-2 rounded-md border border-neutral-3 bg-background px-4 py-2.5 text-sm font-semibold text-brand-black transition-colors hover:border-brand-black/30"
                 >
-                  申请合作咨询
+                  {dt(locale, 'pathTracks.consult')}
                 </a>
               </div>
             </div>
             <ul class="grid grid-cols-2 gap-2.5 border-t border-neutral-3 pt-5 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-6">
               {tracks[0].moduleIds.map((id) => {
-                const module = getModule(id);
+                const module = getModuleFn(id);
                 if (!module) return null;
                 return (
                   <li>
                     <a
-                      href={`/courses/${module.slug}`}
+                      href={localizePath(locale, `/courses/${module.slug}`)}
                       class="focus-ring group flex items-center gap-3"
-                      aria-label={`查看 ${module.code} ${module.title}`}
+                      aria-label={`${dt(locale, 'pathTracks.view')} ${module.code} ${module.title}`}
                     >
                       <span
                         class:list={[
@@ -106,14 +116,14 @@ const { tracks } = Astro.props as Props;
 
                 <ul class="mt-5 space-y-2.5 border-t border-neutral-3 pt-5">
                   {track.moduleIds.map((id) => {
-                    const module = getModule(id);
+const module = getModuleFn(id);
                     if (!module) return null;
                     return (
                       <li>
                         <a
-                          href={`/courses/${module.slug}`}
+                          href={localizePath(locale, `/courses/${module.slug}`)}
                           class="focus-ring group flex items-center gap-3"
-                          aria-label={`查看 ${module.code} ${module.title}`}
+                          aria-label={`${dt(locale, 'pathTracks.view')} ${module.code} ${module.title}`}
                         >
                           <span
                             class:list={[
@@ -136,17 +146,17 @@ const { tracks } = Astro.props as Props;
 
                 <div class="mt-auto pt-6 flex flex-col gap-2">
                   <a
-                    href={`/courses#track-${track.id}`}
+                    href={localizePath(locale, `/courses#track-${track.id}`)}
                     class="focus-ring inline-flex items-center justify-center gap-2 rounded-md bg-brand-red px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-red-hover"
                   >
-                    在课程体系中定位
+                    {dt(locale, 'pathTracks.locate')}
                     <Icon name="lucide:arrow-right" class="w-4 h-4" />
                   </a>
                   <a
-                    href="/contact"
+                    href={localizePath(locale, '/contact')}
                     class="focus-ring inline-flex items-center justify-center gap-2 rounded-md border border-neutral-3 bg-background px-4 py-2.5 text-sm font-semibold text-brand-black transition-colors hover:border-brand-black/30"
                   >
-                    申请合作咨询
+                    {dt(locale, 'pathTracks.consult')}
                   </a>
                 </div>
               </article>

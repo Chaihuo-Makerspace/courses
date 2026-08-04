@@ -1,25 +1,36 @@
 ---
 import { Icon } from "astro-icon/components";
+import { t, type Locale, localizePath } from "../i18n";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
 
 interface Props {
   currentPath?: string;
+  locale: Locale;
 }
 
-const { currentPath = "/" } = Astro.props as Props;
+const { currentPath = "/", locale } = Astro.props as Props;
 
 const navItems = [
-  { label: "首页", href: "/" },
-  { label: "课程体系", href: "/courses" },
-  { label: "选课指南", href: "/paths" },
-  { label: "合作咨询", href: "/contact" },
-  { label: "关于学院", href: "/about" },
+  { label: t(locale, 'nav.home'), href: "/" },
+  { label: t(locale, 'nav.courses'), href: "/courses" },
+  { label: t(locale, 'nav.paths'), href: "/paths" },
+  { label: t(locale, 'nav.contact'), href: "/contact" },
+  { label: t(locale, 'nav.about'), href: "/about" },
+];
+
+const externalLinks = [
+  { label: t(locale, 'nav.chaihuo'), href: 'https://chaihuo.org/' },
 ];
 
 function isActive(href: string): boolean {
   if (href === "/") {
-    return currentPath === "/";
+    return currentPath === "/" || currentPath === `/${locale}`;
   }
-  return currentPath.startsWith(href);
+  return currentPath.startsWith(localizePath(locale, href)) || currentPath.startsWith(href);
+}
+
+function localizeHref(href: string): string {
+  return localizePath(locale, href);
 }
 ---
 
@@ -28,12 +39,11 @@ function isActive(href: string): boolean {
 >
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
-      <!-- Logo -->
       <div class="flex-shrink-0">
         <a
-          href="/"
+          href={localizeHref("/")}
           class="group inline-flex items-center gap-2.5 focus-ring rounded-md"
-          aria-label="柴火创客学院首页"
+          aria-label={t(locale, 'nav.homeAria')}
         >
           <img
             src="/favicon.svg"
@@ -43,12 +53,11 @@ function isActive(href: string): boolean {
             class="h-9 md:h-10 w-auto"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'"
           />
-          <!-- Fallback when image missing -->
           <span
             class="brand-fallback hidden items-center"
             aria-hidden="true"
           >
-            <span class="text-base font-bold text-brand-black">柴火</span>
+            <span class="text-base font-bold text-brand-black">{t(locale, 'nav.brand')}</span>
           </span>
 
           <span
@@ -58,17 +67,16 @@ function isActive(href: string): boolean {
           <span
             class="text-base font-semibold text-brand-black leading-none"
           >
-            柴火创客学院
+            {t(locale, 'site.name')}
           </span>
         </a>
       </div>
 
-      <!-- Desktop Navigation -->
       <div class="hidden md:flex md:items-center md:gap-2">
         {
           navItems.map((item) => (
             <a
-              href={item.href}
+              href={localizeHref(item.href)}
               class="nav-link focus-ring px-4 py-5 text-sm font-medium"
               aria-current={isActive(item.href) ? "page" : undefined}
             >
@@ -76,17 +84,33 @@ function isActive(href: string): boolean {
             </a>
           ))
         }
+        {
+          externalLinks.map((link) => (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-link focus-ring px-4 py-5 text-sm font-medium"
+            >
+              {link.label}
+              <Icon name="lucide:arrow-up-right" class="w-3 h-3 ml-1 inline-block opacity-50" />
+            </a>
+          ))
+        }
+        <div class="ml-2">
+          <LanguageSwitcher />
+        </div>
       </div>
 
-      <!-- Mobile Menu Button -->
-      <div class="md:hidden">
+      <div class="md:hidden flex items-center gap-2">
+        <LanguageSwitcher />
         <button
           type="button"
           class="hs-collapse-toggle focus-ring inline-flex justify-center items-center w-10 h-10 rounded-lg border border-neutral-3 bg-background text-neutral-7 hover:bg-neutral-1"
           id="hs-navbar-chaihuo"
           aria-expanded="false"
           aria-controls="hs-navbar-collapse"
-          aria-label="打开或关闭导航菜单"
+          aria-label={t(locale, 'nav.toggle')}
           data-hs-collapse="#hs-navbar-collapse"
         >
           <Icon
@@ -102,7 +126,6 @@ function isActive(href: string): boolean {
       </div>
     </div>
 
-    <!-- Mobile Navigation -->
     <div
       id="hs-navbar-collapse"
       class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow md:hidden"
@@ -112,7 +135,7 @@ function isActive(href: string): boolean {
         {
           navItems.map((item) => (
             <a
-              href={item.href}
+              href={localizeHref(item.href)}
               class:list={[
                 "focus-ring px-4 py-3 rounded-lg text-base font-medium transition-colors duration-200",
                 isActive(item.href)
@@ -122,6 +145,20 @@ function isActive(href: string): boolean {
               aria-current={isActive(item.href) ? "page" : undefined}
             >
               {item.label}
+            </a>
+          ))
+        }
+        <div class="border-t border-neutral-3 my-1"></div>
+        {
+          externalLinks.map((link) => (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="focus-ring px-4 py-3 rounded-lg text-base font-medium text-neutral-7 hover:bg-neutral-1 hover:text-brand-black transition-colors duration-200"
+            >
+              {link.label}
+              <Icon name="lucide:arrow-up-right" class="w-3.5 h-3.5 ml-1.5 inline-block opacity-50" />
             </a>
           ))
         }

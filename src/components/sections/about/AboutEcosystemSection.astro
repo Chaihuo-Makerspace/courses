@@ -2,20 +2,24 @@
 import { Icon } from 'astro-icon/components';
 import SectionHeader from '../../SectionHeader.astro';
 import type { AboutEcosystemItem } from '../../../data/site';
+import { dt } from '../../../i18n/data-translations';
+import { t } from '../../../i18n/translations';
+import type { Locale } from '../../../i18n';
 
 interface Props {
   ecosystem: AboutEcosystemItem[];
+  locale: Locale;
 }
 
-const { ecosystem } = Astro.props as Props;
+const { ecosystem, locale } = Astro.props as Props;
 ---
 
 <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-background">
   <div class="max-w-7xl mx-auto" data-reveal>
     <SectionHeader
-      eyebrow="Ecosystem"
-      title="柴火创客三位一体生态"
-      subtitle="硬件产品 · 创客空间 · 技术培训——彼此支撑，形成闭环。"
+      eyebrow={t(locale, 'about.ecosystem.eyebrow')}
+      title={dt(locale, 'section.ecosystemTitle')}
+      subtitle={dt(locale, 'section.ecosystemSubtitle')}
     />
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8">
       {
@@ -43,9 +47,9 @@ const { ecosystem } = Astro.props as Props;
                 target="_blank"
                 rel="noopener noreferrer"
                 class="focus-ring inline-flex items-center gap-1 text-sm font-bold text-brand-black hover:text-brand-red transition-colors mt-2"
-                aria-label={`访问 ${item.name}`}
+                aria-label={`${dt(locale, 'eco.learnMore')} ${item.name}`}
               >
-                了解更多
+                {dt(locale, 'eco.learnMore')}
                 <Icon name="lucide:arrow-up-right" class="w-4 h-4" />
               </a>
             )}

@@ -7,39 +7,45 @@ import HomeFamiliarObjects from '../components/sections/home/HomeFamiliarObjects
 import HomeGoalPaths from '../components/sections/home/HomeGoalPaths.astro';
 import HomeMapPreview from '../components/sections/home/HomeMapPreview.astro';
 import HomeOutcomes from '../components/sections/home/HomeOutcomes.astro';
-// PartnerLogoGrid 暂时下线：合作伙伴数据目前是"合作伙伴1"..."合作伙伴6"占位符，
-// 没有真实 logo/名单前不上这个信任信号 section（见 docs/DESIGN.md §8.6）。拿到
-// 真实名单后：填 src/content/partners/*.yaml，恢复 `getCollection('partners')`
-// 读取 + 下方 import 与 <PartnerLogoGrid> 渲染。
 import {
   homeFamiliarObjects,
   homeFinalCta,
-  homeMapLegend,
   homeOutcomes,
 } from '../data/site';
 import { tracks } from '../data/tracks';
+import { t, defaultLocale, localizePath } from '../i18n';
+import type { Locale } from '../i18n';
+import { translateTracks, translateFamiliarObjects, translateOutcomes, translateModules, translateCta } from '../i18n/helpers';
+import { modules } from '../data/modules';
+
+const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
+const translatedTracks = translateTracks(tracks, locale);
+const translatedObjects = translateFamiliarObjects(homeFamiliarObjects, locale);
+const translatedOutcomes = translateOutcomes(homeOutcomes, locale);
+const translatedModules = translateModules(modules, locale);
+const translatedCta = translateCta(homeFinalCta, locale);
 ---
 
-<Layout title="首页">
+<Layout title={t(locale, 'nav.home')}>
   <HeroBanner
-    eyebrow="柴火创客学院"
-    title="面向真实硬件与现场交付的系统课程"
-    subtitle="柴火创客学院"
-    description="围绕 M0–M5 六个课程模块，把零基础智能硬件入门、设备互联、多模态 AI、自组网通信、边缘视觉与环境感知整理成可引入、可授课、可共建的课程体系。"
+    eyebrow={t(locale, 'home.hero.eyebrow')}
+    title={t(locale, 'home.hero.title')}
+    subtitle={t(locale, 'home.hero.subtitle')}
+    description={t(locale, 'home.hero.description')}
     ctas={[
-      { label: '查看课程体系', href: '/courses', variant: 'primary' },
-      { label: '申请合作咨询', href: '/contact', variant: 'secondary' },
+      { label: t(locale, 'home.hero.ctaPrimary'), href: localizePath(locale, '/courses'), variant: 'primary' },
+      { label: t(locale, 'home.hero.ctaSecondary'), href: localizePath(locale, '/contact'), variant: 'secondary' },
     ]}
   >
     <Fragment slot="title">
-      面向真实硬件与现场交付的<span class="highlight">系统课程</span>
+      {t(locale, 'home.hero.title')}<span class="highlight">{t(locale, 'home.hero.titleHighlight')}</span>
     </Fragment>
-    <HeroCourseMap slot="anchor" />
+    <HeroCourseMap slot="anchor" modules={translatedModules} locale={locale} />
   </HeroBanner>
 
-  <HomeFamiliarObjects objects={homeFamiliarObjects} />
-  <HomeOutcomes outcomes={homeOutcomes} />
-  <HomeGoalPaths tracks={tracks} />
-  <HomeMapPreview legend={homeMapLegend} />
-  <FinalCtaSection cta={homeFinalCta} bordered headingSize="xl" />
+  <HomeFamiliarObjects objects={translatedObjects} locale={locale} />
+  <HomeOutcomes outcomes={translatedOutcomes} locale={locale} />
+  <HomeGoalPaths tracks={translatedTracks} locale={locale} modules={translatedModules} />
+  <HomeMapPreview locale={locale} modules={translatedModules} />
+  <FinalCtaSection cta={translatedCta} bordered headingSize="xl" />
 </Layout>

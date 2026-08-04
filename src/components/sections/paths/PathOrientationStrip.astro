@@ -1,28 +1,36 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { dt } from '../../../i18n/data-translations';
+import type { Locale } from '../../../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props as Props;
 
 const steps = [
   {
-    label: '模块范围',
-    detail: '选 M0–M5 中的课程方向',
+    label: dt(locale, 'pathOr.moduleRange'),
+    detail: dt(locale, 'pathOr.chooseDirection'),
     href: '/courses#module-reference',
     icon: 'lucide:layers',
   },
   {
-    label: '授课深度',
-    detail: '确定 L1 / L2 / L3',
+    label: dt(locale, 'pathOr.determineLevel'),
+    detail: dt(locale, 'pathOr.determineLevel'),
     href: '#levels',
     icon: 'lucide:graduation-cap',
   },
   {
-    label: '课程材料',
-    detail: '确认硬件、实验和项目产出',
+    label: dt(locale, 'pathOr.confirmHardware'),
+    detail: dt(locale, 'pathOr.confirmHardware'),
     href: '#tracks',
     icon: 'lucide:package',
   },
   {
-    label: '销售形态',
-    detail: '裸硬件 / 标准教学 / 全托交付 / 师资培训',
+    label: dt(locale, 'pathOr.formats'),
+    detail: dt(locale, 'pathOr.formats'),
     href: '/contact',
     icon: 'lucide:handshake',
   },
@@ -33,10 +41,10 @@ const steps = [
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-7" data-reveal>
     <div class="mb-4 flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between">
       <h2 class="text-xl md:text-2xl font-black text-brand-black">
-        先确认课程包的四个维度
+        {dt(locale, 'pathOr.heading')}
       </h2>
       <p class="text-sm text-brand-black/75">
-        这四项清楚了，后面的合作沟通会更具体。
+        {dt(locale, 'pathOr.subheading')}
       </p>
     </div>
 

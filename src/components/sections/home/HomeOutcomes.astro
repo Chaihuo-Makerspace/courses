@@ -1,26 +1,28 @@
 ---
 import { Icon } from 'astro-icon/components';
 import type { OutcomeItem } from '~/data/site';
+import { dt } from '../../../i18n/data-translations';
+import type { Locale } from '../../../i18n';
 
 interface Props {
   outcomes: OutcomeItem[];
+  locale: Locale;
 }
 
-const { outcomes } = Astro.props as Props;
+const { outcomes, locale } = Astro.props as Props;
 ---
 
 <section class="py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-brand-graphite text-white">
   <div class="max-w-6xl mx-auto" data-reveal>
     <div class="max-w-3xl">
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
-        机构引入课程时，需要看到这些实物和材料
+        {dt(locale, 'home.outcomes.title')}
       </h2>
       <p class="mt-4 text-base md:text-lg text-white/70 leading-relaxed">
-        课程不是一份讲义。每个模块都要对应硬件、实验、项目任务和可被复用的交付材料。
+        {dt(locale, 'home.outcomes.subtitle')}
       </p>
     </div>
 
-    {/* 全宽横向数字带，不做等分卡片网格——跟前后两个 section 的网格节奏拉开 */}
     <ul class="mt-10 flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-white/10 border-t border-b border-white/10">
       {outcomes.map((o) => (
         <li class="flex-1 flex gap-4 py-6 md:py-2 md:px-6 first:pl-0 last:pr-0">

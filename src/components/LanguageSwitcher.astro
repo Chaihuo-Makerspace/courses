@@ -1,0 +1,191 @@
+---
+import { locales, localeLabels, localeFlags, defaultLocale, getLocaleFromUrl, localizePath } from '../i18n';
+import { t } from '../i18n/translations';
+import type { Locale } from '../i18n';
+
+const currentLocale = (Astro.locals?.locale as Locale | undefined) ?? getLocaleFromUrl(Astro.url) ?? defaultLocale;
+const currentPath = Astro.url.pathname;
+
+function getBasePath(path: string, locale: Locale): string {
+  if (locale === defaultLocale) return path;
+  const prefix = `/${locale}`;
+  if (path.startsWith(`${prefix}/`)) return path.slice(prefix.length);
+  if (path === prefix) return '/';
+  return path;
+}
+
+const basePath = getBasePath(currentPath, currentLocale);
+---
+
+<nav class="lang-switcher" aria-label={t(currentLocale, 'lang.switcher')}>
+  <button
+    type="button"
+    class="lang-switcher-btn"
+    id="lang-switcher-btn"
+    aria-expanded="false"
+    aria-haspopup="true"
+  >
+    <span class="lang-current-flag">{localeFlags[currentLocale]}</span>
+    <span class="lang-current-label">{localeLabels[currentLocale]}</span>
+    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m6 9 6 6 6-6"/>
+    </svg>
+  </button>
+
+  <div class="lang-dropdown" role="menu" aria-labelledby="lang-switcher-btn" hidden>
+    {
+      locales.map((locale) => {
+        const href = localizePath(locale, basePath);
+        const isActive = locale === currentLocale;
+        return (
+          <a
+            href={href}
+            role="menuitem"
+            class:list={[
+              'lang-option',
+              { 'lang-option-active': isActive },
+            ]}
+            aria-current={isActive ? 'true' : undefined}
+            data-lang={locale}
+          >
+            <span class="lang-flag">{localeFlags[locale]}</span>
+            <span class="lang-label">{localeLabels[locale]}</span>
+            {isActive && (
+              <svg class="lang-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5"/>
+              </svg>
+            )}
+          </a>
+        );
+      })
+    }
+  </div>
+</nav>
+
+<script>
+  function initLangSwitcher() {
+    const btn = document.getElementById('lang-switcher-btn');
+    const dropdown = document.querySelector('.lang-dropdown') as HTMLElement;
+    if (!btn || !dropdown || btn.dataset.switcherReady) return;
+    btn.dataset.switcherReady = '1';
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      dropdown.hidden = expanded;
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!btn.contains(e.target as Node) && !dropdown.contains(e.target as Node)) {
+        btn.setAttribute('aria-expanded', 'false');
+        dropdown.hidden = true;
+      }
+    });
+
+    document.querySelectorAll('.lang-option').forEach((el) => {
+      el.addEventListener('click', () => {
+        const lang = el.getAttribute('data-lang');
+        if (lang) {
+          document.cookie = `chaihuo-lang=${lang}; Path=/; Max-Age=31536000; SameSite=Lax`;
+        }
+      });
+    });
+  }
+
+  document.addEventListener('astro:page-load', initLangSwitcher);
+</script>
+
+<style>
+  .lang-switcher {
+    position: relative;
+  }
+
+  .lang-switcher-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border: 1px solid var(--color-neutral-3, #e5e5e0);
+    border-radius: 8px;
+    background: var(--color-background, #fbfaf6);
+    color: var(--color-brand-black, #1a1a1a);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .lang-switcher-btn:hover {
+    border-color: var(--color-neutral-5, #c5c5c0);
+    background: var(--color-neutral-1, #f5f5f0);
+  }
+
+  .lang-current-flag {
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .lang-current-label {
+    line-height: 1;
+  }
+
+  .lang-chevron {
+    opacity: 0.5;
+    transition: transform 0.15s ease;
+  }
+
+  .lang-switcher-btn[aria-expanded="true"] .lang-chevron {
+    transform: rotate(180deg);
+  }
+
+  .lang-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    min-width: 200px;
+    background: var(--color-background, #fbfaf6);
+    border: 1px solid var(--color-neutral-3, #e5e5e0);
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    padding: 4px;
+    z-index: 100;
+  }
+
+  .lang-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-brand-black, #1a1a1a);
+    text-decoration: none;
+    transition: background 0.1s ease;
+    cursor: pointer;
+  }
+
+  .lang-option:hover {
+    background: var(--color-neutral-1, #f5f5f0);
+  }
+
+  .lang-option-active {
+    background: var(--color-brand-yellow-light, #FFF8E1);
+  }
+
+  .lang-flag {
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .lang-label {
+    flex: 1;
+    line-height: 1;
+  }
+
+  .lang-check {
+    color: var(--color-brand-yellow-dark, #B8860B);
+    flex-shrink: 0;
+  }
+</style>

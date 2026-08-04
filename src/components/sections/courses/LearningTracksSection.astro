@@ -1,16 +1,29 @@
 ---
 import SectionHeader from '../../SectionHeader.astro';
 import TrackFlow from '../../TrackFlow.astro';
+import { dt } from '../../../i18n/data-translations';
+import type { Locale } from '../../../i18n';
+import { tracks } from '../../../data/tracks';
+import { modules } from '../../../data/modules';
+import { translateTracks, translateModules } from '../../../i18n/helpers';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props as Props;
+const translatedTracks = translateTracks(tracks, locale);
+const translatedModules = translateModules(modules, locale);
 ---
 
 <section id="learning-tracks" class="py-14 md:py-20 px-4 sm:px-6 lg:px-8 bg-background">
   <div class="max-w-7xl mx-auto" data-reveal>
     <SectionHeader
-      title="三大课程方向"
-      subtitle="这些方向不是人群标签，而是常见引入方式：用 AI 造物（M0）、造 AI 的物（M2 · M4）、解决方案（M1 · M3 · M5）。"
+      title={dt(locale, 'course.tracksTitle')}
+      subtitle={dt(locale, 'course.tracksSubtitle')}
     />
     <div class="panel-light p-2 sm:p-4 border border-neutral-3 rounded-lg">
-      <TrackFlow />
+      <TrackFlow locale={locale} tracks={translatedTracks} modules={translatedModules} />
     </div>
   </div>
 </section>

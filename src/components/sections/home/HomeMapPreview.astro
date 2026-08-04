@@ -1,22 +1,30 @@
 ---
 import { Icon } from 'astro-icon/components';
 import SectionHeader from '../../SectionHeader.astro';
-import type { MapLegend } from '../../../data/site';
-import { modules } from '../../../data/modules';
+import { dt } from '../../../i18n/data-translations';
+import { t } from '../../../i18n/translations';
+import type { Locale } from '../../../i18n';
+import { localizePath } from '../../../i18n';
+import type { Module } from '../../../data/modules';
 
 interface Props {
-  legend: MapLegend;
+  locale: Locale;
+  modules: Module[];
 }
 
-const { legend } = Astro.props as Props;
+interface Props {
+  locale: Locale;
+}
+
+const { locale, modules } = Astro.props as Props;
 ---
 
 <section class="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-1">
   <div class="max-w-6xl mx-auto" data-reveal>
     <SectionHeader
-      eyebrow="Course Structure"
-      title="M0–M5 是课程模块，L1–L3 是授课深度"
-      subtitle="矩阵只是组织方式。真正交付时，它对应的是课程模块、课时深度、硬件材料和项目产出。"
+      eyebrow={t(locale, 'home.mapPreview.eyebrow')}
+      title={dt(locale, 'home.map.title')}
+      subtitle={dt(locale, 'home.map.subtitle')}
     />
 
     <div class="mt-10 grid gap-8 lg:grid-cols-[1.45fr_0.75fr] items-start">
@@ -43,31 +51,31 @@ const { legend } = Astro.props as Props;
       <div class="bg-background border border-neutral-3 rounded-lg p-6">
         <div class="flex items-center gap-2 text-xs font-mono font-semibold tracking-widest uppercase text-neutral-7 mb-5">
           <Icon name="lucide:graduation-cap" class="w-4 h-4 text-brand-red" />
-          L1 / L2 / L3
+          {t(locale, 'hero.levels')}
         </div>
 
         <ul class="space-y-4">
           <li>
-            <p class="text-sm font-semibold text-brand-black">L1 · 展示层</p>
-            <p class="mt-1 text-sm leading-relaxed text-neutral-7">适合短课、公开课与「魔法时刻」演示：看得懂、能讲解、能演示。</p>
+            <p class="text-sm font-semibold text-brand-black">{dt(locale, 'level.l1.label')}</p>
+            <p class="mt-1 text-sm leading-relaxed text-neutral-7">{dt(locale, 'level.l1.desc')}</p>
           </li>
           <li>
-            <p class="text-sm font-semibold text-brand-black">L2 · 顾问层</p>
-            <p class="mt-1 text-sm leading-relaxed text-neutral-7">适合课程周、训练营：独立配置可用系统，交付体验工作坊。</p>
+            <p class="text-sm font-semibold text-brand-black">{dt(locale, 'level.l2.label')}</p>
+            <p class="mt-1 text-sm leading-relaxed text-neutral-7">{dt(locale, 'level.l2.desc')}</p>
           </li>
           <li>
-            <p class="text-sm font-semibold text-brand-black">L3 · 设计层</p>
-            <p class="mt-1 text-sm leading-relaxed text-neutral-7">适合业务集成与深度定制：API 对接、模型训练、私有化部署。</p>
+            <p class="text-sm font-semibold text-brand-black">{dt(locale, 'level.l3.label')}</p>
+            <p class="mt-1 text-sm leading-relaxed text-neutral-7">{dt(locale, 'level.l3.desc')}</p>
           </li>
         </ul>
 
-        <p class="mt-6 text-xs leading-relaxed text-neutral-6">{legend.note}</p>
+        <p class="mt-6 text-xs leading-relaxed text-neutral-6">{dt(locale, 'mapLegend.note')}</p>
 
         <a
-          href="/courses"
+          href={localizePath(locale, '/courses')}
           class="focus-ring inline-flex items-center gap-2 mt-6 text-sm font-semibold text-brand-black hover:text-brand-red transition-colors"
         >
-          查看完整课程体系
+          {dt(locale, 'home.map.cta')}
           <Icon name="lucide:arrow-right" class="w-4 h-4" />
         </a>
       </div>
