@@ -2,12 +2,15 @@
 import { Icon } from 'astro-icon/components';
 import SectionHeader from '../../SectionHeader.astro';
 import type { Coverage, Module } from '../../../data/modules';
+import { dt } from '../../../i18n/data-translations';
+import type { Locale } from '../../../i18n';
 
 interface Props {
   module: Module;
+  locale: Locale;
 }
 
-const { module } = Astro.props as Props;
+const { module, locale } = Astro.props as Props;
 const curriculum = module.curriculum;
 const formats = module.formats;
 
@@ -19,10 +22,10 @@ const coverageMark: Record<Coverage, string> = {
 };
 
 const coverageLabel: Record<Coverage, string> = {
-  full: '完整',
-  part: '精简',
-  none: '不含',
-  plus: '比完整版更深',
+  full: dt(locale, 'course.curriculumCoverageLabels.full'),
+  part: dt(locale, 'course.curriculumCoverageLabels.part'),
+  none: dt(locale, 'course.curriculumCoverageLabels.none'),
+  plus: dt(locale, 'course.curriculumCoverageLabels.plus'),
 };
 
 const coverageClass: Record<Coverage, string> = {
@@ -38,15 +41,15 @@ const coverageClass: Record<Coverage, string> = {
     <section class="py-14 md:py-20 px-4 sm:px-6 lg:px-8 border-t border-neutral-3">
       <div class="max-w-6xl mx-auto" data-reveal>
         <SectionHeader
-          eyebrow={`Curriculum / ${curriculum.items.length} 个教学模块`}
-          title="模块顺序不变，切法由你定"
-          subtitle="选一种形态，看它覆盖哪些模块。完整版是同一门课的三种排法——内容、硬件、交付物完全一致，只是切法不同。"
+          eyebrow={`Curriculum / ${curriculum.items.length} ${dt(locale, 'course.curriculumModules')}`}
+          title={dt(locale, 'course.curriculumTitle')}
+          subtitle={dt(locale, 'course.curriculumSubtitle')}
         />
 
         <div
           class="flex flex-wrap gap-2"
           role="group"
-          aria-label="选择排课形态"
+          aria-label={dt(locale, 'course.curriculumChooseFormat')}
           data-fmt-bar
         >
           {formats.items.map((f, i) => (
@@ -65,12 +68,12 @@ const coverageClass: Record<Coverage, string> = {
         <div class="mt-6 overflow-x-auto border border-neutral-3 rounded-lg bg-card">
           <table class="w-full border-collapse text-left min-w-[52rem]" data-fmt-table>
             <caption class="sr-only">
-              {curriculum.items.length} 个教学模块在各排课形态下的覆盖深度
+              {curriculum.items.length} {dt(locale, 'course.curriculumCoverage')}
             </caption>
             <thead>
               <tr class="border-b border-neutral-3">
                 <th scope="col" colspan="3" class="p-3 text-xs font-mono font-bold uppercase tracking-widest text-neutral-6">
-                  模块 / 产出
+                  {dt(locale, 'course.curriculumModuleOutput')}
                 </th>
                 {formats.items.map((f) => (
                   <th
@@ -146,7 +149,6 @@ const coverageClass: Record<Coverage, string> = {
 }
 
 <script>
-  // Astro 的 ClientRouter 在导航间换 DOM，必须挂 astro:page-load 而非 DOMContentLoaded。
   function initFormatMatrix() {
     const bar = document.querySelector<HTMLElement>('[data-fmt-bar]');
     const table = document.querySelector<HTMLElement>('[data-fmt-table]');

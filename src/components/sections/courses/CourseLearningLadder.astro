@@ -8,19 +8,22 @@ import {
   type LevelId,
   type Module,
 } from '../../../data/modules';
+import { dt } from '../../../i18n/data-translations';
+import type { Locale } from '../../../i18n';
 
 interface Props {
   module: Module;
+  locale: Locale;
 }
 
-const { module } = Astro.props as Props;
+const { module, locale } = Astro.props as Props;
 const isM0 = module.id === 'm0';
 const platformLetters = ['A', 'B', 'C'] as const;
 const ladderTitle = isM0
-  ? '三套硬件平台：A 感知 · B 交互 · C 视觉'
-  : '三阶递进：展示层 → 顾问层 → 设计层';
+  ? dt(locale, 'course.ladderTitleM0')
+  : dt(locale, 'course.ladderTitle');
 const ladderSubtitle = isM0
-  ? 'M0 按硬件平台分层（A: Grove · B: Wio Terminal · C: XIAO ESP32S3 Sense），不是 L1/L2/L3 掌握深度。'
+  ? dt(locale, 'course.ladderSubtitleM0')
   : undefined;
 ---
 
@@ -47,14 +50,14 @@ const ladderSubtitle = isM0
               style={`--reveal-delay: ${i * 70}ms`}
             >
               <div class="flex items-start justify-between gap-2">
-                <LevelBadge level={lvl} label={isM0 ? `平台 ${platformLetters[i]}` : levelMeta[lvl].label} size="md" />
+                <LevelBadge level={lvl} label={isM0 ? `${dt(locale, 'course.platform')} ${platformLetters[i]}` : levelMeta[lvl].label} size="md" />
                 {cell.comingSoon ? (
                   <span class="text-xs font-mono font-bold text-brand-black/55 border border-dashed border-brand-black/30 px-2.5 py-1 rounded">
-                    即将推出
+                    {dt(locale, 'course.comingSoon')}
                   </span>
                 ) : (
                   <span class="text-xs font-mono font-bold bg-white/80 text-brand-black/85 border border-brand-black/10 px-2.5 py-1 rounded">
-                    {cell.durationDays} 天
+                    {cell.durationDays} {dt(locale, 'course.days')}
                   </span>
                 )}
               </div>

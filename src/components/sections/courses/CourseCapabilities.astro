@@ -2,12 +2,15 @@
 import { Icon } from 'astro-icon/components';
 import SectionHeader from '../../SectionHeader.astro';
 import type { Module } from '../../../data/modules';
+import { dt } from '../../../i18n/data-translations';
+import type { Locale } from '../../../i18n';
 
 interface Props {
   module: Module;
+  locale: Locale;
 }
 
-const { module } = Astro.props as Props;
+const { module, locale } = Astro.props as Props;
 const cards = module.capabilityCards;
 ---
 
@@ -16,8 +19,8 @@ const cards = module.capabilityCards;
     <section class="py-14 md:py-20 px-4 sm:px-6 lg:px-8 border-t border-neutral-3">
       <div class="max-w-6xl mx-auto" data-reveal>
         <SectionHeader
-          title="学完，学生会变成什么样的人"
-          subtitle="M0 不教语法。它教的是一套在门槛消失之后，仍然决定作品好坏的东西——想法、表达、协作、迭代、讲述。"
+          title={dt(locale, 'course.capabilitiesTitle')}
+          subtitle={dt(locale, 'course.capabilitiesSubtitle')}
         />
 
         <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-3 border border-neutral-3 rounded-lg overflow-hidden">

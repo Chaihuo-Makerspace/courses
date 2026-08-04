@@ -2,18 +2,21 @@
 import { Icon } from 'astro-icon/components';
 import SectionHeader from '../../SectionHeader.astro';
 import type { AboutValueItem } from '../../../data/site';
+import { dt } from '../../../i18n/data-translations';
+import type { Locale } from '../../../i18n';
 
 interface Props {
   values: AboutValueItem[];
+  locale: Locale;
 }
 
-const { values } = Astro.props as Props;
+const { values, locale } = Astro.props as Props;
 ---
 
 <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-neutral-1 border-t border-b border-neutral-3">
   <div class="max-w-7xl mx-auto" data-reveal>
     <SectionHeader
-      title="这为你带来什么价值？"
+      title={dt(locale, 'section.valuesTitle')}
     />
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
       {

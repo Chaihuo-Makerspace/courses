@@ -2,12 +2,16 @@
 import { Icon } from 'astro-icon/components';
 import SectionHeader from '../../SectionHeader.astro';
 import type { Track } from '../../../data/tracks';
+import { dt } from '../../../i18n/data-translations';
+import type { Locale } from '../../../i18n';
+import { localizePath } from '../../../i18n';
 
 interface Props {
   relatedTracks: Track[];
+  locale: Locale;
 }
 
-const { relatedTracks } = Astro.props as Props;
+const { relatedTracks, locale } = Astro.props as Props;
 ---
 
 {
@@ -15,14 +19,14 @@ const { relatedTracks } = Astro.props as Props;
     <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-neutral-1 border-t border-neutral-3">
       <div class="max-w-6xl mx-auto" data-reveal>
         <SectionHeader
-          title="包含此模块的课程组合"
+          title={dt(locale, 'course.relatedTracks')}
         />
         <div class="grid md:grid-cols-2 gap-6 mt-8">
           {relatedTracks.map((t) => (
             <a
-              href={`/paths#track-${t.id}`}
+              href={localizePath(locale, `/paths#track-${t.id}`)}
               class="group panel-light panel-interactive border border-neutral-3 hover:border-brand-black/30 p-5 flex items-center gap-4 focus-ring"
-              aria-label={`查看包含本模块的课程组合：${t.name}`}
+              aria-label={`${dt(locale, 'course.relatedTracksAria')}: ${t.name}`}
             >
               <Icon
                 name="lucide:route"

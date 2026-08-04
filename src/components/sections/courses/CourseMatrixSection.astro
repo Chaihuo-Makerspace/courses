@@ -2,24 +2,39 @@
 import CourseMatrix from '../../CourseMatrix.astro';
 import LevelBadge from '../../LevelBadge.astro';
 import SectionHeader from '../../SectionHeader.astro';
-import { levels, levelMeta } from '../../../data/modules';
+import { levels, levelMeta, modules } from '../../../data/modules';
+import { dt } from '../../../i18n/data-translations';
+import { t } from '../../../i18n/translations';
+import type { Locale } from '../../../i18n';
+import { translateModules } from '../../../i18n/helpers';
+import { deepTranslate } from '../../../i18n/module-translations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props as Props;
+const translatedModules = translateModules(modules, locale);
+const tLevelMeta = Object.fromEntries(
+  Object.entries(levelMeta).map(([k, v]) => [k, { label: deepTranslate(v.label, locale), description: deepTranslate(v.description, locale) }])
+) as typeof levelMeta;
 ---
 
 <section id="course-matrix" class="scroll-mt-24 py-14 md:py-20 px-4 sm:px-6 lg:px-8">
   <div class="max-w-7xl mx-auto" data-reveal>
     <SectionHeader
-      eyebrow="Course Matrix"
-      title="M0–M5 × L1/L2/L3 全景"
-      subtitle="M0 是零基础旗舰入口；M1–M5 按方向可独立选学；每个模块内按 L1 展示层 → L2 顾问层 → L3 设计层逐级递进。"
+      eyebrow={t(locale, 'courses.matrix.eyebrow')}
+      title={dt(locale, 'course.matrixTitle')}
+      subtitle={dt(locale, 'course.matrixSubtitle')}
     />
-    <CourseMatrix />
+    <CourseMatrix modules={translatedModules} locale={locale} />
 
     <div class="mt-8 flex flex-wrap items-center gap-3 text-sm text-neutral-7">
-      <span class="font-semibold text-brand-black">图例</span>
+      <span class="font-semibold text-brand-black">{dt(locale, 'course.matrixLegend')}</span>
       {levels.map((lvl) => (
         <span class="inline-flex items-center gap-2">
           <LevelBadge level={lvl} label={lvl} />
-          <span class="text-xs">{levelMeta[lvl].description}</span>
+          <span class="text-xs">{tLevelMeta[lvl].description}</span>
         </span>
       ))}
     </div>

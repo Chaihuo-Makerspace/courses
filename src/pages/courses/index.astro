@@ -8,24 +8,31 @@ import CourseModulesExplorer from '../../components/sections/courses/CourseModul
 import LearningTracksSection from '../../components/sections/courses/LearningTracksSection.astro';
 import { modules } from '../../data/modules';
 import { coursesFinalCta } from '../../data/site';
+import { t, defaultLocale, localizePath } from '../../i18n';
+import type { Locale } from '../../i18n';
+import { translateModules, translateCta } from '../../i18n/helpers';
+
+const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
+const translatedModules = translateModules(modules, locale);
+const translatedCta = translateCta(coursesFinalCta, locale);
 ---
 
-<Layout title="课程体系">
+<Layout title={t(locale, 'courses.title')}>
   <HeroBanner
-    eyebrow="课程体系 · M0 + M1–M5"
-    title="六个可引入课程模块，三种授课深度"
-    description="每个模块都对应一组真实硬件、课堂实验、项目产出和交付材料。可以单独引入，也可以按目标组合成完整课程包。"
+    eyebrow="M0 + M1–M5"
+    title={t(locale, 'courses.title')}
+    description={t(locale, 'courses.description')}
     ctas={[
-      { label: '查看六个模块', href: '#module-reference', variant: 'primary' },
-      { label: '按目标选组合', href: '/paths', variant: 'secondary' },
+      { label: t(locale, 'courses.overview'), href: '#module-reference', variant: 'primary' },
+      { label: t(locale, 'courses.cta.primary'), href: localizePath(locale, '/paths'), variant: 'secondary' },
     ]}
   />
 
-  <CourseMatrixSection />
-  <CourseAxisLegend />
-  <CourseModulesExplorer modules={modules} />
-  <LearningTracksSection />
-  <FinalCtaSection cta={coursesFinalCta} />
+  <CourseMatrixSection locale={locale} />
+  <CourseAxisLegend locale={locale} />
+  <CourseModulesExplorer modules={translatedModules} locale={locale} />
+  <LearningTracksSection locale={locale} />
+  <FinalCtaSection cta={translatedCta} />
 
   <script>
     import '../../scripts/courseViewToggle';

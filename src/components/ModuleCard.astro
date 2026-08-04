@@ -1,13 +1,17 @@
 ---
 import { Icon } from 'astro-icon/components';
 import type { Module } from '../data/modules';
+import { dt } from '../i18n/data-translations';
+import type { Locale } from '../i18n';
+import { localizePath } from '../i18n';
 
 interface Props {
   module: Module;
   variant?: 'compact' | 'full';
+  locale: Locale;
 }
 
-const { module, variant = 'full' } = Astro.props as Props;
+const { module, variant = 'full', locale } = Astro.props as Props;
 
 const isM0 = module.id === 'm0';
 // M0 = dark flagship card; M1–M5 = calm white hairline cards (yellow stays an accent, not a fill)
@@ -34,7 +38,7 @@ const totalDays = Object.values(module.cells).reduce(
 ---
 
 <a
-  href={`/courses/${module.slug}`}
+  href={localizePath(locale, `/courses/${module.slug}`)}
   class:list={[
     panelClass,
     'panel-interactive focus-ring group relative flex flex-col overflow-hidden',
@@ -71,7 +75,7 @@ const totalDays = Object.values(module.cells).reduce(
     >
       <img
         src={module.illustration}
-        alt={`${module.title} 插画`}
+        alt={`${module.title} ${dt(locale, 'moduleCard.illustration')}`}
         width="1024"
         height="768"
         class="w-full h-full object-cover relative z-10"
@@ -108,7 +112,7 @@ const totalDays = Object.values(module.cells).reduce(
                 labelColor,
               ]}
             >
-              核心硬件
+              {dt(locale, 'moduleCard.coreHardware')}
             </p>
             <ul class:list={['space-y-0.5', listColor]}>
               {module.coreHardware.slice(0, 3).map((h) => (
@@ -123,7 +127,7 @@ const totalDays = Object.values(module.cells).reduce(
                 labelColor,
               ]}
             >
-              关键能力
+              {dt(locale, 'moduleCard.keyCapabilities')}
             </p>
             <ul class:list={['space-y-0.5', listColor]}>
               {module.capabilities.slice(0, 3).map((c) => (
@@ -144,7 +148,7 @@ const totalDays = Object.values(module.cells).reduce(
       <span
         class:list={['text-xs font-mono font-semibold', footLabelColor]}
       >
-        约 {totalDays} 天 · L1→L3
+        {dt(locale, 'moduleCard.about')} {totalDays} {dt(locale, 'course.days')} · L1→L3
       </span>
       <span
         class:list={[
@@ -152,7 +156,7 @@ const totalDays = Object.values(module.cells).reduce(
           footLinkColor,
         ]}
       >
-        查看详情
+        {dt(locale, 'moduleCard.viewDetail')}
         <Icon name="lucide:arrow-right" class="w-4 h-4" />
       </span>
     </div>

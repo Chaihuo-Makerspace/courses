@@ -2,28 +2,33 @@
 import { Icon } from 'astro-icon/components';
 import SectionHeader from '../../SectionHeader.astro';
 import type { Track } from '../../../data/tracks';
-import { modules } from '../../../data/modules';
+import type { Module } from '../../../data/modules';
+import { dt } from '../../../i18n/data-translations';
+import type { Locale } from '../../../i18n';
+import { localizePath } from '../../../i18n';
 
 interface Props {
   tracks: Track[];
+  locale: Locale;
+  modules: Module[];
 }
 
-const { tracks } = Astro.props as Props;
+const { tracks, locale, modules } = Astro.props as Props;
 const codeOf = (id: string) => modules.find((m) => m.id === id)?.code ?? id;
 ---
 
 <section class="py-20 px-4 sm:px-6 lg:px-8 bg-background">
   <div class="max-w-6xl mx-auto" data-reveal>
     <SectionHeader
-      title="三大课程方向"
-      subtitle="用 AI 造物、造 AI 的物、解决方案——三条主线对应不同目标与模块组合；每个方向都能继续细分到 L1 / L2 / L3。"
+      title={dt(locale, 'home.paths.title')}
+      subtitle={dt(locale, 'home.paths.subtitle')}
     />
 
     <ul class="mt-10 grid gap-5 md:grid-cols-3">
       {tracks.map((t, i) => (
         <li data-reveal style={`--reveal-delay: ${i * 70}ms`}>
           <a
-            href={`/paths#track-${t.id}`}
+            href={localizePath(locale, `/paths#track-${t.id}`)}
             class="focus-ring group card-hairline flex h-full flex-col p-6 transition-colors hover:border-brand-black/30"
           >
             <p class="text-xs font-mono font-semibold uppercase tracking-widest text-brand-red mb-2">
@@ -44,7 +49,7 @@ const codeOf = (id: string) => modules.find((m) => m.id === id)?.code ?? id;
             </div>
 
             <span class="mt-auto pt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-black group-hover:text-brand-red transition-colors">
-              查看方向
+              {dt(locale, 'home.paths.view')}
               <Icon name="lucide:arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
             </span>
           </a>
@@ -54,17 +59,17 @@ const codeOf = (id: string) => modules.find((m) => m.id === id)?.code ?? id;
 
     <div class="mt-8 flex flex-wrap gap-3">
       <a
-        href="/paths"
+        href={localizePath(locale, '/paths')}
         class="focus-ring inline-flex items-center justify-center gap-2 rounded-md bg-brand-red px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-red-hover"
       >
-        查看选课指南
+        {dt(locale, 'home.paths.cta1')}
         <Icon name="lucide:arrow-right" class="w-4 h-4" />
       </a>
       <a
         href="/courses"
         class="focus-ring inline-flex items-center justify-center gap-2 rounded-md border border-neutral-3 px-5 py-2.5 text-sm font-semibold text-brand-black transition-colors hover:border-brand-black/30 bg-background"
       >
-        查看完整课程体系
+        {dt(locale, 'home.paths.cta2')}
       </a>
     </div>
   </div>
