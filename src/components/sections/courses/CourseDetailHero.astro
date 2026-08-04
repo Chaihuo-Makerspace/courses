@@ -1,13 +1,18 @@
 ---
 import { Icon } from 'astro-icon/components';
 import type { Module } from '../../../data/modules';
+import { dt } from '../../../i18n/data-translations';
+import { t } from '../../../i18n/translations';
+import type { Locale } from '../../../i18n';
+import { localizePath } from '../../../i18n';
 
 interface Props {
   module: Module;
   totalDays: number;
+  locale: Locale;
 }
 
-const { module } = Astro.props as Props;
+const { module, locale } = Astro.props as Props;
 const isM0 = module.id === 'm0';
 const illoBg = isM0 ? 'bg-brand-yellow/15' : 'bg-brand-yellow-light';
 
@@ -29,12 +34,12 @@ const oneLinerParts =
 <section class="bg-neutral-1 border-b border-neutral-3 py-16 md:py-24">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" data-reveal>
     <a
-      href="/courses"
+      href={localizePath(locale, '/courses')}
       class="focus-ring inline-flex items-center gap-1.5 text-sm font-semibold text-brand-black hover:text-brand-red transition-colors mb-8"
-      aria-label="返回课程矩阵"
+      aria-label={dt(locale, 'course.backToMatrix')}
     >
       <Icon name="lucide:arrow-left" class="w-4 h-4" />
-      返回课程矩阵
+      {dt(locale, 'course.backToMatrix')}
     </a>
 
     <div class="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-16 items-center">
@@ -78,7 +83,7 @@ const oneLinerParts =
         >
           <img
             src={module.illustration}
-            alt={`${module.title} 插画`}
+            alt={`${module.title} ${t(locale, 'course.illustration')}`}
             width="1024"
             height="768"
             class="w-full h-full object-cover relative z-10"
@@ -100,7 +105,7 @@ const oneLinerParts =
         {module.hardwareList && (
           <div class="mt-5 max-w-md mx-auto border border-neutral-3 rounded-lg bg-card p-5">
             <h2 class="text-[10px] font-mono font-bold uppercase tracking-widest text-neutral-6">
-              Core Hardware / 核心硬件
+              {t(locale, 'course.coreHardwareHeading')}
             </h2>
             <ul class="mt-3.5">
               {module.hardwareList.map((hw) => (

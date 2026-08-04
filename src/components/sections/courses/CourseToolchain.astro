@@ -2,12 +2,15 @@
 import { Icon } from 'astro-icon/components';
 import SectionHeader from '../../SectionHeader.astro';
 import type { Module } from '../../../data/modules';
+import { dt } from '../../../i18n/data-translations';
+import type { Locale } from '../../../i18n';
 
 interface Props {
   module: Module;
+  locale: Locale;
 }
 
-const { module } = Astro.props as Props;
+const { module, locale } = Astro.props as Props;
 const toolchain = module.toolchain;
 ---
 
@@ -16,8 +19,8 @@ const toolchain = module.toolchain;
     <section class="py-14 md:py-20 px-4 sm:px-6 lg:px-8 border-t border-neutral-3">
       <div class="max-w-6xl mx-auto" data-reveal>
         <SectionHeader
-          title={`Codecraft 帮你“敢做”，aily-blockly 帮你“做完”`}
-          subtitle="M0 不用 Arduino IDE 手写 C++，而是采用矽递自研的双平台接力工具链。前半程零安装、5 分钟见效；后半程把作品搬回自己的电脑，变成能带走、能继续演进的工程。"
+          title={dt(locale, 'course.toolchainTitle')}
+          subtitle={dt(locale, 'course.toolchainSubtitle')}
         />
 
         <div class="border border-neutral-3 rounded-lg overflow-hidden bg-card shadow-sm-soft">
@@ -26,7 +29,6 @@ const toolchain = module.toolchain;
               <div
                 class:list={[
                   'p-6 md:p-7',
-                  // 柔黄是全站唯一允许的黄面（docs/DESIGN.md §1.1）——不用饱和黄铺底。
                   stage.highlight ? 'bg-brand-yellow-light' : 'bg-card',
                   i > 0 && 'border-t md:border-t-0 md:border-l border-neutral-3',
                 ]}

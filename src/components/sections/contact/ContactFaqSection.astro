@@ -2,17 +2,21 @@
 import { Icon } from 'astro-icon/components';
 import SectionHeader from '../../SectionHeader.astro';
 import type { FaqItem } from '../../../data/site';
+import { dt } from '../../../i18n/data-translations';
+import { t } from '../../../i18n/translations';
+import type { Locale } from '../../../i18n';
 
 interface Props {
   faqs: FaqItem[];
+  locale: Locale;
 }
 
-const { faqs } = Astro.props as Props;
+const { faqs, locale } = Astro.props as Props;
 ---
 
 <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-background">
   <div class="max-w-3xl mx-auto" data-reveal>
-    <SectionHeader eyebrow="FAQ" title="常见问题" align="center" />
+    <SectionHeader eyebrow={t(locale, 'contact.faq.eyebrow')} title={dt(locale, 'section.faqTitle')} align="center" />
     <div class="space-y-4 mt-8">
       {
         faqs.map((faq, index) => (

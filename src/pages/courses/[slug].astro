@@ -17,21 +17,23 @@ import FinalCtaSection from '../../components/sections/FinalCtaSection.astro';
 import { modules, type Module } from '../../data/modules';
 import { getTracksForModule } from '../../data/tracks';
 import type { FinalCta } from '../../data/site';
+import { t, defaultLocale, localeHtmlLang, localizePath } from '../../i18n';
+import type { Locale } from '../../i18n';
+import { translateModule } from '../../i18n/helpers';
 
-export const prerender = true;
-
-export async function getStaticPaths() {
-  return modules.map((m) => ({
-    params: { slug: m.slug },
-    props: { module: m },
-  }));
-}
+export const prerender = false;
 
 interface Props {
-  module: Module;
+  module?: Module;
 }
 
-const { module } = Astro.props as Props;
+const slug = Astro.params.slug as string;
+const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
+const rawModule = Astro.props.module ?? modules.find((m) => m.slug === slug);
+if (!rawModule) {
+  return Astro.redirect('/404');
+}
+const module = translateModule(rawModule, locale);
 const relatedTracks = getTracksForModule(module.id);
 const totalDays = Object.values(module.cells).reduce(
   (sum, cell) => sum + cell.durationDays,
@@ -39,15 +41,16 @@ const totalDays = Object.values(module.cells).reduce(
 );
 
 const courseDetailCta: FinalCta = {
-  title: `把 ${module.code} 放进你的课程、团队或项目现场`,
-  description:
-    '如果这个方向正好对上你的目标，可以继续讨论裸硬件套件、标准教学套件、全托交付或师资培训。',
-  primary: { label: '申请合作咨询', href: '/contact' },
-  secondary: { label: '浏览其他模块', href: '/courses' },
+  title: `${module.code} ${module.title}`,
+  description: t(locale, 'course.cta.primary'),
+  primary: { label: t(locale, 'course.cta.primary'), href: localizePath(locale, '/contact') },
+  secondary: { label: t(locale, 'course.cta.secondary'), href: localizePath(locale, '/courses') },
 };
 
 const siteOrigin = (Astro.site?.toString() ?? 'https://opc.chaihuo.org/').replace(/\/$/, '');
-const courseUrl = `${siteOrigin}/courses/${module.slug}`;
+const courseUrl = locale === defaultLocale
+  ? `${siteOrigin}/courses/${module.slug}`
+  : `${siteOrigin}/${locale}/courses/${module.slug}`;
 
 const courseJsonLd = {
   '@context': 'https://schema.org',
@@ -55,7 +58,7 @@ const courseJsonLd = {
   name: `${module.code} · ${module.title}`,
   description: `${module.oneLiner.replace(/。$/, '')}。${module.realProblem}`,
   url: courseUrl,
-  inLanguage: 'zh-CN',
+  inLanguage: localeHtmlLang[locale],
   courseCode: module.code,
   about: module.subtitle,
   teaches: module.capabilities,
@@ -63,7 +66,7 @@ const courseJsonLd = {
   educationalLevel: ['Beginner', 'Intermediate', 'Advanced'],
   provider: {
     '@type': 'Organization',
-    name: '柴火创客学院',
+    name: 'Chaihuo Maker Academy',
     url: siteOrigin,
     sameAs: ['https://www.chaihuo.org', 'https://www.seeedstudio.com'],
   },
@@ -77,11 +80,10 @@ const courseJsonLd = {
     description: cell.subtitle,
     timeRequired: `P${cell.durationDays}D`,
     teaches: cell.outcomes,
-    inLanguage: 'zh-CN',
+    inLanguage: localeHtmlLang[locale],
   })),
 };
 
-// Escape `<` so a stray `</script>` in any future data field cannot break out of the script tag.
 const courseJsonLdSafe = JSON.stringify(courseJsonLd).replace(/</g, '\\u003c');
 ---
 
@@ -92,30 +94,20 @@ const courseJsonLdSafe = JSON.stringify(courseJsonLd).replace(/</g, '\\u003c');
     is:inline
     set:html={courseJsonLdSafe}
   />
-  <CourseDetailHero module={module} totalDays={totalDays} />
-  <CourseDetailFactsStrip module={module} />
-  {/*
-    深度区块只在模块提供了对应数据时渲染（目前仅 M0），M1–M5 自动跳过。
-    capabilityCards 就位时，核心硬件已由 hero 侧栏承担、关键能力由能力卡承担，
-    CourseDetailPanels 整块内容重复，因此跳过而非半渲染。
-  */}
+  <CourseDetailHero module={module} totalDays={totalDays} locale={locale} />
+  <CourseDetailFactsStrip module={module} locale={locale} />
   {module.capabilityCards ? (
-    <CourseCapabilities module={module} />
+    <CourseCapabilities module={module} locale={locale} />
   ) : (
-    <CourseDetailPanels module={module} />
+    <CourseDetailPanels module={module} locale={locale} />
   )}
-  <CourseToolchain module={module} />
-  {/*
-    kits 就位时，A/B/C 三套硬件已由 CourseKits 图文呈现，
-    学习阶梯（M0 下同为「三套硬件平台 A/B/C」）整块重复，因此跳过。
-    cells 数据本身保留——/courses 矩阵页与 Course JSON-LD 的 hasPart 仍在消费它。
-  */}
-  {module.kits ? <CourseKits module={module} /> : <CourseLearningLadder module={module} />}
-  <CourseCurriculum module={module} />
-  <CourseFormats module={module} />
-  <CourseDeliverables module={module} />
-  <CourseAudienceSection module={module} />
-  <CourseTeacherNotes module={module} />
-  <CourseRelatedTracks relatedTracks={relatedTracks} />
+  <CourseToolchain module={module} locale={locale} />
+  {module.kits ? <CourseKits module={module} locale={locale} /> : <CourseLearningLadder module={module} locale={locale} />}
+  <CourseCurriculum module={module} locale={locale} />
+  <CourseFormats module={module} locale={locale} />
+  <CourseDeliverables module={module} locale={locale} />
+  <CourseAudienceSection module={module} locale={locale} />
+  <CourseTeacherNotes module={module} locale={locale} />
+  <CourseRelatedTracks relatedTracks={relatedTracks} locale={locale} />
   <FinalCtaSection cta={courseDetailCta} bordered />
 </Layout>

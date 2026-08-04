@@ -166,7 +166,7 @@ export const modules: Module[] = [
       '用中文告诉 AI 你想做什么，AI 写代码、编译、烧录。零编程基础，也能做出属于自己的智能硬件作品。',
     oneLinerEmphasis: '零编程基础',
     realProblem:
-      '学生不会写代码、合格师资极少、从创意到原型总是断层——硬件启蒙卡在“先学会编程”这道伪门槛上。M0 把门槛拆掉，让想象力重新成为真正的难题。',
+      '学生不会写代码、合格师资极少、从创意到原型总是断层——硬件启蒙卡在"先学会编程"这道伪门槛上。M0 把门槛拆掉，让想象力重新成为真正的难题。',
     illustration: '/illustrations/m0.png',
     difficulty: '入门',
     duration: '半天起 · 完整版 16–20 小时',
@@ -288,7 +288,7 @@ export const modules: Module[] = [
       ],
       hinge: {
         title: '关键转折点 · 模块 8',
-        body: 'Codecraft 的作品在服务器上，关掉浏览器就带不走；aily-blockly 让学生第一次从“租户”变成项目的“主人”。',
+        body: 'Codecraft 的作品在服务器上，关掉浏览器就带不走；aily-blockly 让学生第一次从"租户"变成项目的"主人"。',
       },
       note: '另需 SenseCraft AI（无代码部署与训练视觉模型，用于模块 5 与视觉体验课，需外网）、NLHD 15 章中文教材（开源免费，结课后可长期自学）。',
     },

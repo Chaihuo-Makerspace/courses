@@ -24,7 +24,8 @@ pnpm-debug.log*
 .idea/
 
 # AI
-.opencode
+.opencode/
+.agents/
 .sisyphus/
 .claude/*
 !.claude/rules/
@@ -34,3 +35,7 @@ docs/*
 .agent
 .superpowers
 .playwright*
+
+# BMAD
+_bmad/
+_bmad-output/

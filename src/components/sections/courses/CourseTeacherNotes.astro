@@ -1,9 +1,11 @@
 ---
 import { Icon } from 'astro-icon/components';
 import type { Module } from '../../../data/modules';
+import type { Locale } from '../../../i18n';
 
 interface Props {
   module: Module;
+  locale: Locale;
 }
 
 const { module } = Astro.props as Props;

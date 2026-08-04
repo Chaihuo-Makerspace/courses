@@ -6,24 +6,34 @@ import ContactFormsSection from '../components/sections/contact/ContactFormsSect
 import ContactScenariosSection from '../components/sections/contact/ContactScenariosSection.astro';
 import { partnershipForms, scenarios } from '../data/partnerships';
 import { contactFaqs } from '../data/site';
+import { t, defaultLocale, localizePath } from '../i18n';
+import type { Locale } from '../i18n';
+import { translateScenarios, translatePartnershipForms, translateFaqs } from '../i18n/helpers';
+
+const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
+const translatedScenarios = translateScenarios(scenarios, locale);
+const translatedForms = translatePartnershipForms(partnershipForms, locale);
+const translatedFaqs = translateFaqs(contactFaqs, locale);
 ---
 
-<Layout title="合作咨询">
+<Layout title={t(locale, 'contact.title')}>
   <HeroBanner
-    eyebrow="合作咨询"
-    title="把课程模块变成可启动的合作"
-    description="选择合作场景和销售形态，扫码提交目标。我们再按模块、级别和交付材料，对齐裸硬件套件、标准教学套件、全托交付或师资培训。"
+    eyebrow={t(locale, 'contact.hero.eyebrow')}
+    title={t(locale, 'contact.hero.title')}
+    description={t(locale, 'contact.hero.description')}
     ctas={[
-      { label: '直接扫码咨询', href: '#partnership-qr', variant: 'primary' },
-      { label: '查看选课指南', href: '/paths', variant: 'secondary' },
+      { label: t(locale, 'contact.cta.primary'), href: '#partnership-qr', variant: 'primary' },
+      { label: t(locale, 'contact.cta.secondary'), href: localizePath(locale, '/paths'), variant: 'secondary' },
     ]}
   >
     <Fragment slot="title">
-      把课程模块变成<br />可启动的合作
+      {t(locale, 'contact.hero.title')}
+      <br />
+      <span class="highlight">{t(locale, 'contact.hero.titleHighlight')}</span>
     </Fragment>
   </HeroBanner>
 
-  <ContactScenariosSection scenarios={scenarios} />
-  <ContactFormsSection partnershipForms={partnershipForms} />
-  <ContactFaqSection faqs={contactFaqs} />
+  <ContactScenariosSection scenarios={translatedScenarios} locale={locale} />
+  <ContactFormsSection partnershipForms={translatedForms} locale={locale} />
+  <ContactFaqSection faqs={translatedFaqs} locale={locale} />
 </Layout>

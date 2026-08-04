@@ -1,13 +1,27 @@
 ---
 import LevelBadge from './LevelBadge.astro';
-import { modules, levels, levelMeta } from '../data/modules';
+import { levels, levelMeta, type Module } from '../data/modules';
+import { dt } from '../i18n/data-translations';
+import type { Locale } from '../i18n';
+import { localizePath } from '../i18n';
+import { deepTranslate } from '../i18n/module-translations';
+
+interface Props {
+  locale: Locale;
+  modules: Module[];
+}
+
+const { locale, modules } = Astro.props as Props;
+const tLevelMeta = Object.fromEntries(
+  Object.entries(levelMeta).map(([k, v]) => [k, { label: deepTranslate(v.label, locale), description: deepTranslate(v.description, locale) }])
+) as typeof levelMeta;
 ---
 
 <div class="w-full relative group">
   <!-- Horizontal Scroll Indicator for Mobile Devices -->
   <div class="md:hidden absolute top-2 right-2 z-20 pointer-events-none animate-pulse">
     <span class="inline-flex items-center gap-1 bg-brand-black/90 text-brand-yellow text-[10px] font-mono px-2.5 py-1 rounded-full shadow-lg">
-      ← 左右滑动查看完整矩阵 →
+      {dt(locale, 'courseMatrix.swipeHint')}
     </span>
   </div>
   
@@ -19,11 +33,11 @@ import { modules, levels, levelMeta } from '../data/modules';
       class="course-matrix w-full min-w-[960px] border-separate border-spacing-0"
     >
       <caption class="sr-only">
-        课程矩阵：横轴为 M0–M5 六个模块，纵轴为 L1–L3 三个层级；每格列出该模块在该层级的课程标题、时长与产出。
+        {dt(locale, 'courseMatrix.srCaption')}
       </caption>
       <thead>
         <tr>
-          <th class="w-[110px] p-2"><span class="sr-only">层级 / 模块</span></th>
+          <th class="w-[110px] p-2"><span class="sr-only">{dt(locale, 'courseMatrix.srHeader')}</span></th>
           {
             modules.map((m, i) => (
               <th
@@ -31,7 +45,7 @@ import { modules, levels, levelMeta } from '../data/modules';
                 class:list={['p-2 align-bottom', i === 0 && 'matrix-col-m0']}
               >
                 <a
-                  href={`/courses/${m.slug}`}
+                  href={localizePath(locale, `/courses/${m.slug}`)}
                   class="group matrix-head focus-ring block text-left px-3 py-3 rounded-xl panel-light panel-interactive"
                 >
                   <div class="flex items-center gap-2 mb-2">
@@ -51,7 +65,7 @@ import { modules, levels, levelMeta } from '../data/modules';
                   </span>
                   {m.id === 'm0' && (
                     <span class="mt-1 block font-mono text-[10px] text-brand-black/50">
-                      A/B/C 硬件平台分层
+                      {dt(locale, 'courseMatrix.platformLayers')}
                     </span>
                   )}
                 </a>
@@ -68,7 +82,7 @@ import { modules, levels, levelMeta } from '../data/modules';
                 <div class="flex flex-col items-start gap-1.5 pt-1">
                   <LevelBadge level={lvl} label={lvl} size="md" />
                   <span class="text-[11px] text-brand-black/70 leading-tight">
-                    {levelMeta[lvl].description}
+                    {tLevelMeta[lvl].description}
                   </span>
                 </div>
               </th>
@@ -85,7 +99,7 @@ import { modules, levels, levelMeta } from '../data/modules';
                         </h4>
                         {cell.comingSoon ? (
                           <span class="text-[10px] font-semibold font-mono text-brand-black/55 px-1.5 py-0.5 rounded shrink-0 border border-dashed border-brand-black/30">
-                            即将推出
+                            {dt(locale, 'courseMatrix.comingSoon')}
                           </span>
                         ) : (
                           <span class="text-[10px] font-semibold font-mono bg-white/70 text-brand-black/80 px-1.5 py-0.5 rounded shrink-0">

@@ -2,12 +2,15 @@
 import { Icon } from 'astro-icon/components';
 import SectionHeader from '../../SectionHeader.astro';
 import type { Module } from '../../../data/modules';
+import { dt } from '../../../i18n/data-translations';
+import type { Locale } from '../../../i18n';
 
 interface Props {
   module: Module;
+  locale: Locale;
 }
 
-const { module } = Astro.props as Props;
+const { module, locale } = Astro.props as Props;
 const formats = module.formats;
 ---
 
@@ -16,8 +19,8 @@ const formats = module.formats;
     <section class="py-14 md:py-20 px-4 sm:px-6 lg:px-8 border-t border-neutral-3 bg-surface">
       <div class="max-w-6xl mx-auto" data-reveal>
         <SectionHeader
-          title="先选层，再选排法"
-          subtitle="时间和目标决定选哪一层：要学生带走一个能继续演进的作品，选完整版；只有两天，选马拉松版；只有半天，两门体验课任选其一。"
+          title={dt(locale, 'course.formatsTitle')}
+          subtitle={dt(locale, 'course.formatsSubtitle')}
         />
 
         <ul class="grid md:grid-cols-3 gap-5 items-start">

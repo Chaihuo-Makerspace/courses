@@ -2,19 +2,22 @@
 import { Icon } from 'astro-icon/components';
 import SectionHeader from '../../SectionHeader.astro';
 import type { FamiliarObject } from '../../../data/site';
+import { dt } from '../../../i18n/data-translations';
+import type { Locale } from '../../../i18n';
 
 interface Props {
   objects: FamiliarObject[];
+  locale: Locale;
 }
 
-const { objects } = Astro.props as Props;
+const { objects, locale } = Astro.props as Props;
 ---
 
 <section class="py-20 px-4 sm:px-6 lg:px-8 bg-background">
   <div class="max-w-7xl mx-auto" data-reveal>
     <SectionHeader
-      title="课程从真实硬件和现场材料开始"
-      subtitle="LED、传感器、网关、摄像头、空间设备、交付文档，这些不是概念入口，而是课堂实验、项目训练和合作交付里的真实材料。"
+      title={dt(locale, 'home.objects.title')}
+      subtitle={dt(locale, 'home.objects.subtitle')}
     />
     <ul class="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-neutral-3 border border-neutral-3 rounded-lg overflow-hidden">
       {objects.map((o, i) => (

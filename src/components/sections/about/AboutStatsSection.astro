@@ -1,8 +1,10 @@
 ---
 import type { StatItem } from '../../../data/site';
+import type { Locale } from '../../../i18n';
 
 interface Props {
   stats: StatItem[];
+  locale: Locale;
 }
 
 const { stats } = Astro.props as Props;
