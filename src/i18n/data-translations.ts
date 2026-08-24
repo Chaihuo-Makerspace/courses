@@ -176,37 +176,6 @@ const zh: Record<string, string> = {
   'form.D.d2': 'Train-the-Trainer 师资培训',
   'form.D.d3': '讲师认证与复训',
 
-  'module.m0.title': '硬件基础与万物启蒙',
-  'module.m0.oneLiner':
-    '掌握 XIAO 系列开发板和传感器套件，打通 Arduino 编程与电路基础，完成第一个智能硬件项目。',
-  'module.m0.subtitle': 'Smart Hardware Fundamentals',
-  'module.m0.realProblem': '硬件是智能系统的物理基础。',
-  'module.m1.title': '设备互联与智能管控',
-  'module.m1.oneLiner':
-    '以 Home Assistant 为核心，打通 Zigbee、Matter、Shelly 等协议与设备，构建可远程管控的智能空间。',
-  'module.m1.subtitle': 'Smart Home & IoT Control',
-  'module.m1.realProblem': '设备互联是智能空间的基础。',
-  'module.m2.title': '远距无线与物联组网',
-  'module.m2.oneLiner':
-    '掌握 LoRa、Meshtastic 等远距无线通信技术，在无公网覆盖的野外或工业场景中自建物联网络。',
-  'module.m2.subtitle': 'LoRa & Mesh Networking',
-  'module.m2.realProblem': '远距通信是许多野外和工业场景的基础需求。',
-  'module.m3.title': '视觉 AI 与边缘推理',
-  'module.m3.oneLiner':
-    '使用 reComputer Jetson、reCamera 和 Grove Vision AI v2 部署视觉 AI 模型，在边缘端完成实时推理。',
-  'module.m3.subtitle': 'Edge Vision AI',
-  'module.m3.realProblem': '边缘视觉 AI 让设备拥有"看见"的能力。',
-  'module.m4.title': '空间智能与交互体验',
-  'module.m4.oneLiner':
-    '基于 ESP32S3、麦克风阵列和 reSpeaker，构建融合语音、视觉与环境感知的 AI Agent 交互空间。',
-  'module.m4.subtitle': 'Spatial AI Agent',
-  'module.m4.realProblem': '多模态交互是智能空间的未来。',
-  'module.m5.title': '行业场景与交付整合',
-  'module.m5.oneLiner':
-    '结合实际客户场景，整合 M1–M4 的技术栈，完成从需求分析、方案设计到现场交付的完整项目闭环。',
-  'module.m5.subtitle': 'Vertical Delivery',
-  'module.m5.realProblem': '技术整合能力是交付落地的关键。',
-
   'levelMeta.l1.label': 'L1 · 跑通',
   'levelMeta.l1.desc': '跟着教程完成 Demo，能独立演示和讲解，适合入门与公开课。',
   'levelMeta.l2.label': 'L2 · 小项目',
@@ -552,38 +521,6 @@ const en: Record<string, string> = {
   'form.D.d2': 'TTT instructor training',
   'form.D.d3': 'Instructor certification and refresher',
 
-  'module.m0.title': 'Hardware Foundation',
-  'module.m0.oneLiner':
-    'Master XIAO series boards and sensor kits, learn Arduino and circuit basics, complete your first smart hardware project.',
-  'module.m0.subtitle': 'Smart Hardware Fundamentals',
-  'module.m0.realProblem': 'Hardware is the physical foundation of intelligent systems.',
-  'module.m1.title': 'Device Connectivity & Smart Control',
-  'module.m1.oneLiner':
-    'Build smart spaces with Home Assistant, connecting Zigbee, Matter, Shelly for remote control.',
-  'module.m1.subtitle': 'Smart Home & IoT Control',
-  'module.m1.realProblem': 'Device connectivity is the foundation of smart spaces.',
-  'module.m2.title': 'Long-Range Wireless & IoT Mesh',
-  'module.m2.oneLiner':
-    'Master LoRa, Meshtastic for self-organized IoT networks in off-grid scenarios.',
-  'module.m2.subtitle': 'LoRa & Mesh Networking',
-  'module.m2.realProblem':
-    'Long-range communication is fundamental for field and industrial scenarios.',
-  'module.m3.title': 'Vision AI & Edge Inference',
-  'module.m3.oneLiner':
-    'Deploy vision AI models on reComputer Jetson, reCamera for real-time edge inference.',
-  'module.m3.subtitle': 'Edge Vision AI',
-  'module.m3.realProblem': 'Edge vision AI gives devices the ability to see.',
-  'module.m4.title': 'Spatial Intelligence & Interactive Experiences',
-  'module.m4.oneLiner':
-    'Build AI Agent spaces combining voice, vision, and environmental perception.',
-  'module.m4.subtitle': 'Spatial AI Agent',
-  'module.m4.realProblem': 'Multimodal interaction is the future of smart spaces.',
-  'module.m5.title': 'Industry Scenarios & Delivery Integration',
-  'module.m5.oneLiner':
-    'Integrate M1-M4 tech stacks with real customer scenarios for complete project delivery.',
-  'module.m5.subtitle': 'Vertical Delivery',
-  'module.m5.realProblem': 'Technology integration capability is key to delivery.',
-
   'levelMeta.l1.label': 'L1 · Demo',
   'levelMeta.l1.desc': 'Follow tutorials to complete a demo, suitable for beginners.',
   'levelMeta.l2.label': 'L2 · Project',
@@ -921,36 +858,6 @@ const ja: Record<string, string> = {
   'form.D.d1': 'ハードウェアとコースリソース',
   'form.D.d2': 'Train-the-Trainer講師研修',
   'form.D.d3': '講師認定と再研修',
-  'module.m0.title': 'ハードウェア基礎とものづくり入門',
-  'module.m0.oneLiner':
-    'XIAOシリーズ開発ボードとセンサーキットを習得し、Arduinoプログラミングと回路基礎をマスターして、初めてのスマートハードウェアプロジェクトを完成させます。',
-  'module.m0.subtitle': 'Smart Hardware Fundamentals',
-  'module.m0.realProblem': 'ハードウェアはスマートシステムの物理的基盤です。',
-  'module.m1.title': 'デバイス連携とスマート制御',
-  'module.m1.oneLiner':
-    'Home Assistantを中核に、Zigbee、Matter、Shellyなどのプロトコルとデバイスを統合し、遠隔制御可能なスマート空間を構築します。',
-  'module.m1.subtitle': 'Smart Home & IoT Control',
-  'module.m1.realProblem': 'デバイス連携はスマート空間の基盤です。',
-  'module.m2.title': '長距離無線とIoTネットワーキング',
-  'module.m2.oneLiner':
-    'LoRa、Meshtasticなどの長距離無線通信技術を習得し、公衆網のないフィールドや産業現場で自律的なIoTネットワークを構築します。',
-  'module.m2.subtitle': 'LoRa & Mesh Networking',
-  'module.m2.realProblem': '長距離通信は多くのフィールド・産業現場における基本的なニーズです。',
-  'module.m3.title': 'ビジョンAIとエッジ推論',
-  'module.m3.oneLiner':
-    'reComputer Jetson、reCamera、Grove Vision AI v2を使用してビジョンAIモデルをデプロイし、エッジ側でリアルタイム推論を実行します。',
-  'module.m3.subtitle': 'Edge Vision AI',
-  'module.m3.realProblem': 'エッジビジョンAIはデバイスに「見る」能力を与えます。',
-  'module.m4.title': '空間知能とインタラクション体験',
-  'module.m4.oneLiner':
-    'ESP32S3、マイクアレイ、reSpeakerをベースに、音声、ビジョン、環境センシングを融合したAI Agentインタラクション空間を構築します。',
-  'module.m4.subtitle': 'Spatial AI Agent',
-  'module.m4.realProblem': 'マルチモーダルインタラクションはスマート空間の未来です。',
-  'module.m5.title': '業界シーンとデリバリー統合',
-  'module.m5.oneLiner':
-    '実際の顧客シーンに合わせて、M1〜M4の技術スタックを統合し、要件分析からソリューション設計、現場デリバリーまでの完全なプロジェクトクローズドループを完了します。',
-  'module.m5.subtitle': 'Vertical Delivery',
-  'module.m5.realProblem': '技術統合力がデリバリー実現の鍵です。',
   'levelMeta.l1.label': 'L1 · 動かす',
   'levelMeta.l1.desc':
     'チュートリアルに沿ってデモを完成させ、独立して実演・説明できる。入門と公開授業に最適です。',
@@ -1297,40 +1204,6 @@ const es: Record<string, string> = {
   'form.D.d1': 'Hardware y recursos curriculares',
   'form.D.d2': 'Capacitación de instructores Train-the-Trainer',
   'form.D.d3': 'Certificación de instructores y recertificación',
-  'module.m0.title': 'Fundamentos de hardware e iniciación universal',
-  'module.m0.oneLiner':
-    'Domine las placas de desarrollo de la serie XIAO y los kits de sensores, comprenda la programación Arduino y los fundamentos de circuitos, y complete su primer proyecto de hardware inteligente.',
-  'module.m0.subtitle': 'Smart Hardware Fundamentals',
-  'module.m0.realProblem': 'El hardware es la base física de los sistemas inteligentes.',
-  'module.m1.title': 'Interconexión de dispositivos y control inteligente',
-  'module.m1.oneLiner':
-    'Con Home Assistant como núcleo, integre protocolos y dispositivos como Zigbee, Matter y Shelly para construir espacios inteligentes con control remoto.',
-  'module.m1.subtitle': 'Smart Home & IoT Control',
-  'module.m1.realProblem':
-    'La interconexión de dispositivos es la base de los espacios inteligentes.',
-  'module.m2.title': 'Comunicación inalámbrica de largo alcance y redes IoT',
-  'module.m2.oneLiner':
-    'Domine tecnologías de comunicación inalámbrica de largo alcance como LoRa y Meshtastic, y construya redes IoT autónomas en entornos rurales o industriales sin cobertura de red pública.',
-  'module.m2.subtitle': 'LoRa & Mesh Networking',
-  'module.m2.realProblem':
-    'La comunicación de largo alcance es una necesidad fundamental en muchos escenarios rurales e industriales.',
-  'module.m3.title': 'Visión artificial e inferencia en el borde',
-  'module.m3.oneLiner':
-    'Utilice reComputer Jetson, reCamera y Grove Vision AI v2 para desplegar modelos de visión artificial y realizar inferencia en tiempo real en el borde.',
-  'module.m3.subtitle': 'Edge Vision AI',
-  'module.m3.realProblem':
-    'La visión artificial en el borde otorga a los dispositivos la capacidad de "ver".',
-  'module.m4.title': 'Inteligencia espacial y experiencia interactiva',
-  'module.m4.oneLiner':
-    'Basado en ESP32S3, arrays de micrófonos y reSpeaker, construya espacios de interacción con agentes de IA que integren voz, visión y percepción ambiental.',
-  'module.m4.subtitle': 'Spatial AI Agent',
-  'module.m4.realProblem': 'La interacción multimodal es el futuro de los espacios inteligentes.',
-  'module.m5.title': 'Escenarios sectoriales e integración de entrega',
-  'module.m5.oneLiner':
-    'Combinando casos reales de clientes, integre el stack tecnológico de M1–M4 y complete el ciclo completo del proyecto, desde el análisis de requisitos y el diseño de soluciones hasta la entrega en campo.',
-  'module.m5.subtitle': 'Vertical Delivery',
-  'module.m5.realProblem':
-    'La capacidad de integración tecnológica es clave para la implementación y entrega.',
   'levelMeta.l1.label': 'L1 · Ejecutar',
   'levelMeta.l1.desc':
     'Complete una demo siguiendo el tutorial, capaz de demostrar y explicar de forma independiente. Adecuado para iniciación y clases abiertas.',
@@ -1681,38 +1554,6 @@ const ptBR: Record<string, string> = {
   'form.D.d1': 'Hardware e recursos do curso',
   'form.D.d2': 'Treinamento de instrutores Train-the-Trainer',
   'form.D.d3': 'Certificação de instrutores e reciclagem',
-  'module.m0.title': 'Fundamentos de Hardware e Introdução ao IoT',
-  'module.m0.oneLiner':
-    'Domine as placas de desenvolvimento da série XIAO e o kit de sensores, compreenda programação Arduino e fundamentos de circuitos, e conclua seu primeiro projeto de hardware inteligente.',
-  'module.m0.subtitle': 'Smart Hardware Fundamentals',
-  'module.m0.realProblem': 'O hardware é a base física dos sistemas inteligentes.',
-  'module.m1.title': 'Conectividade de Dispositivos e Controle Inteligente',
-  'module.m1.oneLiner':
-    'Tendo o Home Assistant como núcleo, integre protocolos e dispositivos como Zigbee, Matter e Shelly, construindo espaços inteligentes com controle remoto.',
-  'module.m1.subtitle': 'Smart Home & IoT Control',
-  'module.m1.realProblem': 'A conectividade de dispositivos é a base dos espaços inteligentes.',
-  'module.m2.title': 'Comunicação sem Fio de Longo Alcance e Redes IoT',
-  'module.m2.oneLiner':
-    'Domine tecnologias de comunicação sem fio de longo alcance como LoRa e Meshtastic, construindo redes IoT próprias em cenários rurais ou industriais sem cobertura de rede pública.',
-  'module.m2.subtitle': 'LoRa & Mesh Networking',
-  'module.m2.realProblem':
-    'A comunicação de longo alcance é uma necessidade fundamental em muitos cenários rurais e industriais.',
-  'module.m3.title': 'IA Visual e Inferência na Borda',
-  'module.m3.oneLiner':
-    'Utilize reComputer Jetson, reCamera e Grove Vision AI v2 para implantar modelos de IA visual e realizar inferência em tempo real na borda.',
-  'module.m3.subtitle': 'Edge Vision AI',
-  'module.m3.realProblem': 'A IA visual na borda dá aos dispositivos a capacidade de "enxergar".',
-  'module.m4.title': 'Inteligência Espacial e Experiência Interativa',
-  'module.m4.oneLiner':
-    'Baseado em ESP32S3, array de microfones e reSpeaker, construa espaços interativos com Agentes de IA que integram voz, visão e percepção ambiental.',
-  'module.m4.subtitle': 'Spatial AI Agent',
-  'module.m4.realProblem': 'A interação multimodal é o futuro dos espaços inteligentes.',
-  'module.m5.title': 'Cenários Setoriais e Integração de Entrega',
-  'module.m5.oneLiner':
-    'Combinando cenários reais de clientes, integre as stacks tecnológicas de M1–M4 e complete o ciclo completo do projeto, da análise de requisitos ao design da solução e entrega em campo.',
-  'module.m5.subtitle': 'Vertical Delivery',
-  'module.m5.realProblem':
-    'A capacidade de integração tecnológica é a chave para a entrega e implantação.',
   'levelMeta.l1.label': 'L1 · Executar',
   'levelMeta.l1.desc':
     'Siga o tutorial para completar uma demonstração, capaz de apresentar e explicar de forma independente. Ideal para iniciantes e aulas abertas.',
