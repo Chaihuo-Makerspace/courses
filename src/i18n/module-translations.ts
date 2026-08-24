@@ -2,6 +2,10 @@ import { enNewDict } from './module-en-new';
 import { esDict } from './module-es';
 import { jaDict } from './module-ja';
 import { ptDict } from './module-pt';
+import { hwEnDict } from './module-hw-en';
+import { hwEsDict } from './module-hw-es';
+import { hwJaDict } from './module-hw-ja';
+import { hwPtDict } from './module-hw-pt';
 import type { Locale } from './types';
 
 // Deep module translations by locale — maps Chinese literal strings to target language
@@ -584,6 +588,10 @@ const levelMetaBatch: Record<string, string> = {
 
 Object.assign(enDict, levelMetaBatch);
 Object.assign(enDict, enNewDict);
+Object.assign(enDict, hwEnDict);
+Object.assign(jaDict, hwJaDict);
+Object.assign(esDict, hwEsDict);
+Object.assign(ptDict, hwPtDict);
 
 const moduleDeepTranslations: Record<Locale, Record<string, string>> = {
   'zh-CN': {},
