@@ -39,7 +39,7 @@ const enDict: Record<string, string> = {
   '不可能挑战 → Grove 感知闭环 → 3 个小作品':
     'Impossible Challenge → Grove Sensing Loop → 3 Mini Projects',
   仓库管理: 'Warehouse Management',
-  '柴火创客学院 M0 结业认证（体验课为参与证明）。':
+  '柴火创客学园 M0 结业认证（体验课为参与证明）。':
     'Chaihuo Maker Academy M0 Completion Certificate (Participation Certificate for Taster Sessions).',
   柴火基地车巡游: 'Chaihuo Mobile Base Vehicle Tour',
   '超声波测距、水位、土壤湿度、震动、舵机、继电器、MP3、RGB 灯带…… 做自己的项目时自由取用，不受「套件里只有这几个模块」的限制。':

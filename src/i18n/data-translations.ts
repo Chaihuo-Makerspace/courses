@@ -75,13 +75,13 @@ const zh: Record<string, string> = {
   'eco.chaihuo.desc':
     '2011 年成立，中国最早的创客空间之一。提供物理空间、社区活动、项目孵化等服务。',
   'eco.chaihuo.tag': '创客空间',
-  'eco.opc.name': '柴火创客 OPC 学院',
+  'eco.opc.name': '柴火创客 OPC 学园',
   'eco.opc.role': '技术赋能平台',
   'eco.opc.desc': '将生态中的技术能力转化为可学习的课程，帮助个人和企业掌握新技术整合能力。',
-  'eco.opc.tag': '技术培训',
+  'eco.opc.tag': '技术课程',
   'eco.learnMore': '了解更多',
   'eco.title': '柴火创客三位一体生态',
-  'eco.subtitle': '硬件产品 · 创客空间 · 技术培训——彼此支撑，形成闭环。',
+  'eco.subtitle': '硬件产品 · 创客空间 · 技术课程——彼此支撑，形成闭环。',
 
   'values.title': '这为你带来什么价值？',
   'value.realHardware.title': '真硬件',
@@ -185,7 +185,7 @@ const zh: Record<string, string> = {
     '具备可交付的系统能力，能对接 API、训练模型、私有化部署，适合业务集成与深度定制。',
 
   'section.ecosystemTitle': '柴火创客三位一体生态',
-  'section.ecosystemSubtitle': '硬件产品 · 创客空间 · 技术培训——彼此支撑，形成闭环。',
+  'section.ecosystemSubtitle': '硬件产品 · 创客空间 · 技术课程——彼此支撑，形成闭环。',
   'section.valuesTitle': '这为你带来什么价值？',
   'section.statsTitle': '柴火创客 — 数据',
   'section.faqTitle': '常见问题',
@@ -343,7 +343,7 @@ const zh: Record<string, string> = {
   'cta.apply': '申请合作咨询',
   'cta.viewCourses': '查看课程体系',
   'cta.viewPaths': '查看选课指南',
-  'cta.aboutOrg': '了解学院背景',
+  'cta.aboutOrg': '关于学园',
 };
 
 const en: Record<string, string> = {

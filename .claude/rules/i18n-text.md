@@ -29,8 +29,8 @@ expressions inside `.astro` templates.
 
 | Surface | Use |
 |---|---|
-| Chrome (Navbar / Footer / `<title>`) | 柴火创客学院 |
-| Formal copy (about, hero subtitles, llms.txt heading) | 柴火创客 OPC 学院 |
+| Chrome (Navbar / Footer / `<title>`) | 柴火创客学园 |
+| Formal copy (about, hero subtitles, llms.txt heading) | 柴火创客 OPC 学园 |
 | Ecosystem reference | 柴火创客生态（Seeed Studio + 柴火创客空间） |
 
 ## Core narrative

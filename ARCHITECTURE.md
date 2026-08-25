@@ -1,6 +1,6 @@
 # OPC Academy Architecture Map
 
-A small Chinese-language marketing site for 柴火创客 OPC 学院 (Chaihuo Maker
+A small Chinese-language marketing site for 柴火创客 OPC 学园 (Chaihuo Maker
 Academy OPC Academy). Built on Astro 6 with a strict TypeScript data layer
 driving every page.
 

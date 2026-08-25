@@ -4,8 +4,8 @@ type TranslationDict = Record<string, string>;
 
 const zh: TranslationDict = {
   // Site
-  'site.name': '柴火创客学院',
-  'site.description': '柴火创客学院 · 从第一次点亮 LED，到独立交付智能系统',
+  'site.name': '柴火创客学园',
+  'site.description': '柴火创客学园 · 从第一次点亮 LED，到独立交付智能系统',
   'site.skipLink': '跳到主要内容',
 
   // Nav
@@ -13,11 +13,11 @@ const zh: TranslationDict = {
   'nav.courses': '课程体系',
   'nav.paths': '选课指南',
   'nav.contact': '合作咨询',
-  'nav.about': '关于学院',
+  'nav.about': '关于学园',
   'nav.chaihuo': '柴火创客空间',
   'nav.toggle': '打开或关闭导航菜单',
   'nav.brand': '柴火',
-  'nav.homeAria': '柴火创客学院首页',
+  'nav.homeAria': '柴火创客学园首页',
   'nav.pioneerBase': '先锋官 · 基地',
   'nav.map': '创客生态',
   'nav.ecosystem': '柴火生态',
@@ -26,7 +26,7 @@ const zh: TranslationDict = {
 
   // Footer
   'footer.tagline':
-    '柴火创客学院把真实硬件、场景项目和交付经验整理成 M0–M5 课程体系，帮助学习者从动手基础走向可交付系统。',
+    '柴火创客学园把真实硬件、场景项目和交付经验整理成 M0–M5 课程体系，帮助学习者从动手基础走向可交付系统。',
   'footer.contact': '联系我们',
   'footer.nav': '站内导航',
   'footer.social': '关注我们',
@@ -48,10 +48,10 @@ const zh: TranslationDict = {
     '基地——城市里看得见的柴火。有固定场地、有持续运营意愿，柴火给你教具、课程、品牌背书和派单流量。',
 
   // Home Hero
-  'home.hero.eyebrow': '柴火创客学院',
+  'home.hero.eyebrow': '柴火创客学园',
   'home.hero.title': '面向真实硬件与现场交付的',
   'home.hero.titleHighlight': '系统课程',
-  'home.hero.subtitle': '柴火创客学院',
+  'home.hero.subtitle': '柴火创客学园',
   'home.hero.description':
     '围绕 M0–M5 六个课程模块，把零基础智能硬件入门、设备互联、多模态 AI、自组网通信、边缘视觉与环境感知整理成可引入、可授课、可共建的课程体系。',
   'home.hero.ctaPrimary': '查看课程体系',
@@ -114,14 +114,14 @@ const zh: TranslationDict = {
   'paths.cta.secondary': '合作咨询',
 
   // About
-  'about.title': '关于学院',
-  'about.description': '柴火创客学院是柴火创客生态的技术赋能平台',
+  'about.title': '关于学园',
+  'about.description': '柴火创客学园是柴火创客生态的技术赋能平台',
   'about.hero.eyebrow': '关于我们',
   'about.hero.title': '柴火创客',
-  'about.hero.titleHighlight': '学院',
+  'about.hero.titleHighlight': '学园',
   'about.hero.subtitle': 'Chaihuo Makerspace Academy',
   'about.hero.description':
-    '背靠 Seeed Studio 与柴火创客空间，我们相信每个人都应该有能力\\"一个人也能上场\\"——把想法变成可交付的智能系统。',
+    '背靠 Seeed Studio 与柴火创客空间，我们相信每个人都应该有能力\\"一个人也能上场\\"——把想法变成可交付的智能系统。柴火创客学园面向机构提供可引入、可授课、可共建的课程体系。',
   'about.ecosystem.title': '柴火创客生态',
   'about.ecosystem.subtitle': '三大支柱支撑创客教育体系',
   'about.values.title': '我们的理念',
@@ -130,7 +130,7 @@ const zh: TranslationDict = {
   'about.stats.subtitle': '用数字说话',
   'about.cta.eyebrow': '加入我们',
   'about.cta.title': '想了解更多？',
-  'about.cta.description': '联系我们，了解柴火创客学院的课程与合作机会',
+  'about.cta.description': '联系我们，了解柴火创客学园的课程与合作机会',
   'about.cta.primary': '查看课程体系',
   'about.cta.secondary': '联系我们',
 

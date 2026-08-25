@@ -117,7 +117,7 @@ export function translateCta(cta: FinalCta, locale: Locale): FinalCta {
             ? dt(locale, 'cta.viewCourses')
             : cta.primary.label.includes('选课') || cta.primary.label.includes('Learning Path')
               ? dt(locale, 'cta.viewPaths')
-              : cta.primary.label.includes('了解学院') || cta.primary.label.includes('Learn About')
+              : cta.primary.label.includes('关于学园') || cta.primary.label.includes('Learn About')
                 ? dt(locale, 'cta.aboutOrg')
                 : cta.primary.label,
     },
@@ -134,7 +134,7 @@ export function translateCta(cta: FinalCta, locale: Locale): FinalCta {
                 : cta.secondary.label.includes('选课') ||
                     cta.secondary.label.includes('Learning Path')
                   ? dt(locale, 'cta.viewPaths')
-                  : cta.secondary.label.includes('了解学院') ||
+                  : cta.secondary.label.includes('关于学园') ||
                       cta.secondary.label.includes('Learn About')
                     ? dt(locale, 'cta.aboutOrg')
                     : cta.secondary.label,
