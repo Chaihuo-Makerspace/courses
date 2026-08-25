@@ -235,6 +235,8 @@ const zh: Record<string, string> = {
   'course.kitsTitle': '感知 · 交互 · 视觉，三级能力递进',
   'course.kitsSubtitle':
     '完整版人手一套三件；短形态只发对应的那一件。子套件按硬件平台划分，不代表 L1／L2／L3 的掌握深度。',
+  'course.hardwareIntroTitle': '课程所需硬件',
+  'course.hardwareIntroSubtitle': '本课程配套的教具清单，均为开箱即用的真实硬件。',
   'course.ladderTitleM0': '三套硬件平台：A 感知 · B 交互 · C 视觉',
   'course.ladderTitle': '三阶递进：展示层 → 顾问层 → 设计层',
   'course.ladderSubtitleM0':
@@ -578,6 +580,8 @@ const en: Record<string, string> = {
     'M0 adopts dual-platform relay toolchain for zero-install, 5-minute results.',
   'course.kitsTitle': 'Sensing · Interaction · Vision, three-tier capability progression',
   'course.kitsSubtitle': 'Sub-kits divided by hardware platform, not L1/L2/L3 mastery depth.',
+  'course.hardwareIntroTitle': 'Course Hardware',
+  'course.hardwareIntroSubtitle': 'The teaching kit list for this course — real hardware, ready to use out of the box.',
   'course.ladderTitleM0': 'Three Hardware Platforms: A Sensing · B Interaction · C Vision',
   'course.ladderTitle': 'Three-tier Progression: Demo → Consultant → Design',
   'course.ladderSubtitleM0':
@@ -920,6 +924,8 @@ const ja: Record<string, string> = {
   'course.kitsTitle': 'センシング · インタラクション · ビジョン、3段階の能力ステップアップ',
   'course.kitsSubtitle':
     '完全版は1人1セットの3点キット、短縮形態は該当する1点のみ配布。サブキットはハードウェアプラットフォーム別に区分され、L1/L2/L3の習熟深度を表すものではありません。',
+  'course.hardwareIntroTitle': 'コースで使用するハードウェア',
+  'course.hardwareIntroSubtitle': 'このコースに付属する教材キット一式——開封してすぐ使える本物のハードウェアです。',
   'course.ladderTitleM0':
     '3つのハードウェアプラットフォーム：A センシング · B インタラクション · C ビジョン',
   'course.ladderTitle': '3段階ステップアップ：デモ層 → コンサルタント層 → 設計層',
@@ -1271,6 +1277,8 @@ const es: Record<string, string> = {
     'Percepción · Interacción · Visión, progresión de capacidades en tres niveles',
   'course.kitsSubtitle':
     'En la versión completa, cada persona recibe un juego de tres kits; en las modalidades cortas, solo se entrega el kit correspondiente. Los sub-kits se dividen por plataforma de hardware, no representan la profundidad de dominio L1/L2/L3.',
+  'course.hardwareIntroTitle': 'Hardware del curso',
+  'course.hardwareIntroSubtitle': 'La lista de material didáctico de este curso: hardware real, listo para usar nada más abrirlo.',
   'course.ladderTitleM0': 'Tres plataformas de hardware: A Percepción · B Interacción · C Visión',
   'course.ladderTitle': 'Progresión en tres niveles: Demostración → Consultor → Diseño',
   'course.ladderSubtitleM0':
@@ -1617,6 +1625,8 @@ const ptBR: Record<string, string> = {
   'course.kitsTitle': 'Sensoriamento · Interação · Visão, progressão em três níveis',
   'course.kitsSubtitle':
     'Na versão completa, cada aluno recebe o conjunto de três peças; nos formatos reduzidos, apenas o kit correspondente. Os subkits são divididos por plataforma de hardware, não representando profundidade de domínio L1/L2/L3.',
+  'course.hardwareIntroTitle': 'Hardware do curso',
+  'course.hardwareIntroSubtitle': 'A lista de material didático deste curso — hardware real, pronto para usar ao abrir a caixa.',
   'course.ladderTitleM0': 'Três plataformas de hardware: A Sensoriamento · B Interação · C Visão',
   'course.ladderTitle': 'Progressão em três níveis: Demonstração → Consultoria → Design',
   'course.ladderSubtitleM0':

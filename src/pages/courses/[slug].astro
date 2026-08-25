@@ -8,6 +8,7 @@ import CourseDetailHero from '../../components/sections/courses/CourseDetailHero
 import CourseDetailPanels from '../../components/sections/courses/CourseDetailPanels.astro';
 import CourseDeliverables from '../../components/sections/courses/CourseDeliverables.astro';
 import CourseFormats from '../../components/sections/courses/CourseFormats.astro';
+import CourseHardware from '../../components/sections/courses/CourseHardware.astro';
 import CourseKits from '../../components/sections/courses/CourseKits.astro';
 import CourseLearningLadder from '../../components/sections/courses/CourseLearningLadder.astro';
 import CourseRelatedTracks from '../../components/sections/courses/CourseRelatedTracks.astro';
@@ -101,6 +102,7 @@ const courseJsonLdSafe = JSON.stringify(courseJsonLd).replace(/</g, '\\u003c');
   ) : (
     <CourseDetailPanels module={module} locale={locale} />
   )}
+  {module.hardwareIntro && <CourseHardware module={module} locale={locale} />}
   <CourseToolchain module={module} locale={locale} />
   {module.kits ? <CourseKits module={module} locale={locale} /> : <CourseLearningLadder module={module} locale={locale} />}
   <CourseCurriculum module={module} locale={locale} />
