@@ -1,0 +1,51 @@
+---
+import { Icon } from 'astro-icon/components';
+import SectionHeader from '../../SectionHeader.astro';
+import type { RevenueLine } from '../../../data/ecosystem';
+
+interface Props {
+  section: {
+    title: string;
+    subtitle: string;
+    lines: RevenueLine[];
+  };
+}
+
+const { section } = Astro.props as Props;
+const isGrid = section.lines.length >= 4;
+---
+
+<section class="py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-background">
+  <div class="max-w-6xl mx-auto" data-reveal>
+    <SectionHeader title={section.title} subtitle={section.subtitle} />
+
+    <ul
+      class:list={[
+        'mt-10',
+        isGrid ? 'grid gap-5 md:grid-cols-2' : 'max-w-3xl space-y-5',
+      ]}
+    >
+      {section.lines.map((line, i) => (
+        <li class="card-hairline p-6 flex items-start gap-5" data-reveal style={`--reveal-delay: ${i * 70}ms`}>
+          <span class="shrink-0 w-10 h-10 rounded-md bg-brand-yellow-light text-brand-yellow-dark flex items-center justify-center font-mono text-sm font-bold">
+            {line.number}
+          </span>
+          <div class="flex-1">
+            <div class="flex items-center gap-2">
+              <Icon name={line.icon} class="w-4 h-4 text-brand-red shrink-0" />
+              <h3 class="text-base font-bold text-brand-black leading-tight">{line.title}</h3>
+            </div>
+            <p class="mt-2 text-sm leading-relaxed text-neutral-8">{line.description}</p>
+            {
+              line.note && (
+                <p class="mt-2.5 text-xs leading-relaxed text-neutral-6">
+                  {line.note}
+                </p>
+              )
+            }
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

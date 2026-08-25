@@ -1,0 +1,33 @@
+---
+import { Icon } from 'astro-icon/components';
+import SectionHeader from '../../SectionHeader.astro';
+import type { IconBullet } from '../../../data/ecosystem';
+
+interface Props {
+  section: {
+    title: string;
+    subtitle: string;
+    items: IconBullet[];
+  };
+}
+
+const { section } = Astro.props as Props;
+---
+
+<section class="py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-neutral-1">
+  <div class="max-w-6xl mx-auto" data-reveal>
+    <SectionHeader title={section.title} subtitle={section.subtitle} />
+
+    <ul class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {section.items.map((item, i) => (
+        <li class="card-hairline p-6" data-reveal style={`--reveal-delay: ${i * 70}ms`}>
+          <span class="flex items-center justify-center w-11 h-11 rounded-lg bg-brand-yellow text-brand-black">
+            <Icon name={item.icon} class="w-5.5 h-5.5" />
+          </span>
+          <h3 class="mt-5 text-base font-bold text-brand-black leading-tight">{item.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-8">{item.description}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

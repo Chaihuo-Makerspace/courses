@@ -1,0 +1,86 @@
+---
+import { Icon } from 'astro-icon/components';
+import SectionHeader from '../../SectionHeader.astro';
+import type { FlowStep } from '../../../data/ecosystem';
+
+interface Props {
+  /** vertical：纵向时间线（四步走）；chain：横向流程条（认证流程 / 升级路径） */
+  layout: 'vertical' | 'chain';
+  /** yellow：柔黄强调段（认证流程）；light：默认段 */
+  tone?: 'light' | 'yellow';
+  section: {
+    title: string;
+    subtitle?: string;
+    steps: FlowStep[];
+    /** 流程下方的补充说明（认证流程的机制说明 / 升级路径的描述） */
+    footnote?: string;
+  };
+}
+
+const { layout, tone = 'light', section } = Astro.props as Props;
+const sectionBg = tone === 'yellow' ? 'bg-brand-yellow-light' : 'bg-neutral-1';
+---
+
+<section class:list={['py-20 md:py-24 px-4 sm:px-6 lg:px-8', sectionBg]}>
+  <div class:list={['mx-auto', layout === 'vertical' ? 'max-w-4xl' : 'max-w-6xl']} data-reveal>
+    <SectionHeader title={section.title} subtitle={section.subtitle} />
+
+    {
+      layout === 'vertical' && (
+        <ol class="mt-10 space-y-10 relative border-l border-neutral-3 pl-8 ml-5">
+          {section.steps.map((step, i) => (
+            <li class="relative" data-reveal style={`--reveal-delay: ${i * 80}ms`}>
+              <span class="absolute -left-[3.15rem] top-0 flex items-center justify-center w-10 h-10 rounded-full bg-brand-black text-brand-yellow font-mono text-xs font-bold border-4 border-background">
+                {i + 1}
+              </span>
+              <h3 class="text-base font-bold text-brand-black leading-tight">{step.title}</h3>
+              <p class="mt-1.5 text-sm leading-relaxed text-neutral-8">{step.description}</p>
+            </li>
+          ))}
+        </ol>
+      )
+    }
+
+    {
+      layout === 'chain' && (
+        <div class="mt-10">
+          <ul class="flex flex-wrap items-center gap-2.5">
+            {section.steps.map((step, i) => (
+              <Fragment>
+                <li
+                  class="inline-flex items-center gap-2 rounded-md bg-brand-yellow px-4 py-2 text-sm font-semibold text-brand-black"
+                  data-reveal
+                  style={`--reveal-delay: ${i * 70}ms`}
+                >
+                  <span class="text-xs font-mono font-bold opacity-60">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  {step.title}
+                </li>
+                {
+                  i < section.steps.length - 1 && (
+                    <li
+                      class="shrink-0"
+                      aria-hidden="true"
+                      data-reveal
+                      style={`--reveal-delay: ${i * 70}ms`}
+                    >
+                      <Icon name="lucide:chevron-right" class="w-4 h-4 text-neutral-5" />
+                    </li>
+                  )
+                }
+              </Fragment>
+            ))}
+          </ul>
+          {
+            section.footnote && (
+              <p class="max-w-3xl mt-6 text-sm leading-relaxed text-neutral-8">
+                {section.footnote}
+              </p>
+            )
+          }
+        </div>
+      )
+    }
+  </div>
+</section>

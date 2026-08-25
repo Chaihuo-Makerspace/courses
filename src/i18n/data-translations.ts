@@ -195,6 +195,12 @@ const zh: Record<string, string> = {
   'section.formsTitle': '合作形态',
   'section.formsSubtitle': '四种销售形态，从裸硬件到全托交付',
 
+  'contact.interest.heading': '我感兴趣的方向',
+  'contact.interest.o1': '课程引入',
+  'contact.interest.o2': '先锋官',
+  'contact.interest.o3': '基地',
+  'contact.interest.note': '扫码登记时请说明意向方向，社区经理会帮你对接到相应负责人。',
+
   'course.backToMatrix': '返回课程矩阵',
   'course.coreHardware': '核心硬件',
   'course.keyCapabilities': '关键能力',
@@ -541,6 +547,13 @@ const en: Record<string, string> = {
   'section.formsTitle': 'Partnership Formats',
   'section.formsSubtitle': 'Four delivery formats, from bare hardware to full-service delivery',
 
+  'contact.interest.heading': 'What Brings You Here?',
+  'contact.interest.o1': 'Course Introduction',
+  'contact.interest.o2': 'Pioneer',
+  'contact.interest.o3': 'Base',
+  'contact.interest.note':
+    'Mention your interest when registering — the community manager will route you to the right person.',
+
   'course.backToMatrix': 'Back to Course Matrix',
   'course.coreHardware': 'Core Hardware',
   'course.keyCapabilities': 'Key Capabilities',
@@ -581,7 +594,8 @@ const en: Record<string, string> = {
   'course.kitsTitle': 'Sensing · Interaction · Vision, three-tier capability progression',
   'course.kitsSubtitle': 'Sub-kits divided by hardware platform, not L1/L2/L3 mastery depth.',
   'course.hardwareIntroTitle': 'Course Hardware',
-  'course.hardwareIntroSubtitle': 'The teaching kit list for this course — real hardware, ready to use out of the box.',
+  'course.hardwareIntroSubtitle':
+    'The teaching kit list for this course — real hardware, ready to use out of the box.',
   'course.ladderTitleM0': 'Three Hardware Platforms: A Sensing · B Interaction · C Vision',
   'course.ladderTitle': 'Three-tier Progression: Demo → Consultant → Design',
   'course.ladderSubtitleM0':
@@ -882,6 +896,12 @@ const ja: Record<string, string> = {
   'section.scenariosSubtitle': 'あなたの役割を選択し、適切な協業方法を確認してください',
   'section.formsTitle': '協業形態',
   'section.formsSubtitle': '4つの販売形態、Bare Hardwareからフルデリバリーまで',
+  'contact.interest.heading': 'ご関心のある方向',
+  'contact.interest.o1': 'コース導入',
+  'contact.interest.o2': 'パイオニア',
+  'contact.interest.o3': '拠点',
+  'contact.interest.note':
+    'ご登録の際は関心のある方向をお知らせください。コミュニティマネージャーが担当者へおつなぎします。',
   'course.backToMatrix': 'コースマトリックスに戻る',
   'course.coreHardware': 'コアハードウェア',
   'course.keyCapabilities': 'キー能力',
@@ -925,7 +945,8 @@ const ja: Record<string, string> = {
   'course.kitsSubtitle':
     '完全版は1人1セットの3点キット、短縮形態は該当する1点のみ配布。サブキットはハードウェアプラットフォーム別に区分され、L1/L2/L3の習熟深度を表すものではありません。',
   'course.hardwareIntroTitle': 'コースで使用するハードウェア',
-  'course.hardwareIntroSubtitle': 'このコースに付属する教材キット一式——開封してすぐ使える本物のハードウェアです。',
+  'course.hardwareIntroSubtitle':
+    'このコースに付属する教材キット一式——開封してすぐ使える本物のハードウェアです。',
   'course.ladderTitleM0':
     '3つのハードウェアプラットフォーム：A センシング · B インタラクション · C ビジョン',
   'course.ladderTitle': '3段階ステップアップ：デモ層 → コンサルタント層 → 設計層',
@@ -1231,6 +1252,12 @@ const es: Record<string, string> = {
   'section.formsTitle': 'Modalidades de colaboración',
   'section.formsSubtitle':
     'Cuatro modalidades de venta, desde hardware básico hasta entrega integral',
+  'contact.interest.heading': 'Áreas de interés',
+  'contact.interest.o1': 'Introducción de cursos',
+  'contact.interest.o2': 'Pionero',
+  'contact.interest.o3': 'Base',
+  'contact.interest.note':
+    'Indica tu área de interés al registrarte y el community manager te pondrá en contacto con la persona adecuada.',
   'course.backToMatrix': 'Volver a la matriz curricular',
   'course.coreHardware': 'Hardware principal',
   'course.keyCapabilities': 'Capacidades clave',
@@ -1278,7 +1305,8 @@ const es: Record<string, string> = {
   'course.kitsSubtitle':
     'En la versión completa, cada persona recibe un juego de tres kits; en las modalidades cortas, solo se entrega el kit correspondiente. Los sub-kits se dividen por plataforma de hardware, no representan la profundidad de dominio L1/L2/L3.',
   'course.hardwareIntroTitle': 'Hardware del curso',
-  'course.hardwareIntroSubtitle': 'La lista de material didáctico de este curso: hardware real, listo para usar nada más abrirlo.',
+  'course.hardwareIntroSubtitle':
+    'La lista de material didáctico de este curso: hardware real, listo para usar nada más abrirlo.',
   'course.ladderTitleM0': 'Tres plataformas de hardware: A Percepción · B Interacción · C Visión',
   'course.ladderTitle': 'Progresión en tres niveles: Demostración → Consultor → Diseño',
   'course.ladderSubtitleM0':
@@ -1582,6 +1610,12 @@ const ptBR: Record<string, string> = {
   'section.scenariosSubtitle': 'Escolha seu perfil e veja a forma de cooperação mais adequada',
   'section.formsTitle': 'Formatos de parceria',
   'section.formsSubtitle': 'Quatro formatos comerciais, do hardware puro à entrega completa',
+  'contact.interest.heading': 'Áreas de interesse',
+  'contact.interest.o1': 'Introdução de cursos',
+  'contact.interest.o2': 'Pioneiro',
+  'contact.interest.o3': 'Base',
+  'contact.interest.note':
+    'Informe sua área de interesse ao se cadastrar; o community manager vai encaminhar você à pessoa certa.',
   'course.backToMatrix': 'Voltar à matriz de cursos',
   'course.coreHardware': 'Hardware principal',
   'course.keyCapabilities': 'Competências-chave',
@@ -1626,7 +1660,8 @@ const ptBR: Record<string, string> = {
   'course.kitsSubtitle':
     'Na versão completa, cada aluno recebe o conjunto de três peças; nos formatos reduzidos, apenas o kit correspondente. Os subkits são divididos por plataforma de hardware, não representando profundidade de domínio L1/L2/L3.',
   'course.hardwareIntroTitle': 'Hardware do curso',
-  'course.hardwareIntroSubtitle': 'A lista de material didático deste curso — hardware real, pronto para usar ao abrir a caixa.',
+  'course.hardwareIntroSubtitle':
+    'A lista de material didático deste curso — hardware real, pronto para usar ao abrir a caixa.',
   'course.ladderTitleM0': 'Três plataformas de hardware: A Sensoriamento · B Interação · C Visão',
   'course.ladderTitle': 'Progressão em três níveis: Demonstração → Consultoria → Design',
   'course.ladderSubtitleM0':

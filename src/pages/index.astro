@@ -7,6 +7,8 @@ import HomeFamiliarObjects from '../components/sections/home/HomeFamiliarObjects
 import HomeGoalPaths from '../components/sections/home/HomeGoalPaths.astro';
 import HomeMapPreview from '../components/sections/home/HomeMapPreview.astro';
 import HomeOutcomes from '../components/sections/home/HomeOutcomes.astro';
+import HomeEcosystemMap from '../components/sections/home/HomeEcosystemMap.astro';
+import HomePioneerBase from '../components/sections/home/HomePioneerBase.astro';
 import {
   homeFamiliarObjects,
   homeFinalCta,
@@ -46,6 +48,8 @@ const translatedCta = translateCta(homeFinalCta, locale);
   <HomeFamiliarObjects objects={translatedObjects} locale={locale} />
   <HomeOutcomes outcomes={translatedOutcomes} locale={locale} />
   <HomeGoalPaths tracks={translatedTracks} locale={locale} modules={translatedModules} />
+  <HomeEcosystemMap locale={locale} />
+  <HomePioneerBase locale={locale} />
   <HomeMapPreview locale={locale} modules={translatedModules} />
   <FinalCtaSection cta={translatedCta} bordered headingSize="xl" />
 </Layout>

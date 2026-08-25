@@ -5,6 +5,7 @@ interface CTA {
   label: string;
   href: string;
   variant?: 'primary' | 'secondary';
+  external?: boolean;
 }
 
 type Panel = 'white' | 'yellow-soft' | 'dark' | 'photo';
@@ -109,6 +110,8 @@ const ctaClass = (variant: CTA['variant']) => {
             {ctas.map((cta) => (
               <a
                 href={cta.href}
+                target={cta.external ? '_blank' : undefined}
+                rel={cta.external ? 'noopener noreferrer' : undefined}
                 class:list={[
                   'focus-ring inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md text-sm font-semibold transition-colors duration-150',
                   ctaClass(cta.variant),

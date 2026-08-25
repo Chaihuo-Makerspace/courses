@@ -1,0 +1,103 @@
+---
+import { Icon } from 'astro-icon/components';
+import SectionHeader from '../../SectionHeader.astro';
+import type { IconName } from '../../../data/ecosystem';
+
+interface Props {
+  section: {
+    title: string;
+    intro: string;
+    arrowLabel: string;
+    mutual: string;
+    cards: {
+      pioneer: { icon: IconName; label: string; tag: string; description: string };
+      base: { icon: IconName; label: string; tag: string; description: string };
+    };
+    bullets: string[];
+  };
+}
+
+const { section } = Astro.props as Props;
+---
+
+<section class="py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-brand-yellow-light">
+  <div class="max-w-6xl mx-auto" data-reveal>
+    <SectionHeader title={section.title} subtitle={section.intro} />
+
+    <div class="mt-10 grid gap-6 lg:grid-cols-[1fr_auto_1fr] items-stretch lg:items-center">
+      <article
+        class="card-hairline p-6"
+        data-reveal
+        style="--reveal-delay: 0ms"
+      >
+        <div class="flex items-center gap-3">
+          <span class="flex items-center justify-center w-11 h-11 rounded-lg bg-brand-yellow text-brand-black">
+            <Icon name={section.cards.pioneer.icon} class="w-5 h-5" />
+          </span>
+          <div>
+            <h3 class="text-base font-bold text-brand-black leading-tight">
+              {section.cards.pioneer.label}
+            </h3>
+            <p class="text-xs font-mono text-neutral-6">{section.cards.pioneer.tag}</p>
+          </div>
+        </div>
+        <p class="mt-4 text-sm leading-relaxed text-neutral-8">
+          {section.cards.pioneer.description}
+        </p>
+      </article>
+
+      <div
+        class="flex flex-row lg:flex-col items-center justify-center gap-2 px-2"
+        data-reveal
+        style="--reveal-delay: 100ms"
+      >
+        <Icon name="lucide:arrow-right" class="w-6 h-6 text-brand-black/50 hidden lg:block" />
+        <Icon name="lucide:arrow-down" class="w-6 h-6 text-brand-black/50 lg:hidden" />
+        <span class="text-xs font-semibold tracking-widest text-neutral-7 whitespace-nowrap">
+          {section.arrowLabel}
+        </span>
+      </div>
+
+      <article
+        class="card-hairline p-6"
+        data-reveal
+        style="--reveal-delay: 100ms"
+      >
+        <div class="flex items-center gap-3">
+          <span class="flex items-center justify-center w-11 h-11 rounded-lg bg-brand-black text-brand-yellow">
+            <Icon name={section.cards.base.icon} class="w-5 h-5" />
+          </span>
+          <div>
+            <h3 class="text-base font-bold text-brand-black leading-tight">
+              {section.cards.base.label}
+            </h3>
+            <p class="text-xs font-mono text-neutral-6">{section.cards.base.tag}</p>
+          </div>
+        </div>
+        <p class="mt-4 text-sm leading-relaxed text-neutral-8">
+          {section.cards.base.description}
+        </p>
+      </article>
+    </div>
+
+    <div class="mt-6 flex justify-center" data-reveal style="--reveal-delay: 160ms">
+      <span class="inline-flex items-center gap-2 rounded-full bg-brand-black text-brand-yellow px-4 py-1.5 text-xs font-semibold">
+        <Icon name="lucide:arrow-right-left" class="w-3.5 h-3.5" />
+        {section.mutual}
+      </span>
+    </div>
+
+    <ul class="mt-10 grid gap-3 md:grid-cols-3">
+      {section.bullets.map((item, i) => (
+        <li
+          class="flex items-start gap-2.5 rounded-lg bg-background/80 border border-brand-yellow-dark/20 p-4 text-sm leading-relaxed text-neutral-8"
+          data-reveal
+          style={`--reveal-delay: ${i * 70}ms`}
+        >
+          <Icon name="lucide:check" class="w-4 h-4 mt-0.5 text-brand-yellow-dark shrink-0" />
+          {item}
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
