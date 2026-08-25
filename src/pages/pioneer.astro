@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroBanner from '../components/HeroBanner.astro';
+import ChipTabs from '../components/sections/chip/ChipTabs.astro';
+import ChipWhatSection from '../components/sections/chip/ChipWhatSection.astro';
+import ChipBenefitsSection from '../components/sections/chip/ChipBenefitsSection.astro';
+import ChipRevenueSection from '../components/sections/chip/ChipRevenueSection.astro';
+import ChipFlowSection from '../components/sections/chip/ChipFlowSection.astro';
+import ChipFaqSection from '../components/sections/chip/ChipFaqSection.astro';
+import ChipCtaSection from '../components/sections/chip/ChipCtaSection.astro';
+import { pioneer } from '../data/ecosystem';
+import { t, defaultLocale } from '../i18n';
+import type { Locale } from '../i18n';
+import { chipHref, isExternalHref, translateEcosystem } from '../i18n/chip-translations';
+import { dt } from '../i18n/data-translations';
+
+const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
+const data = translateEcosystem(pioneer, locale);
+const hero = data.hero;
+const certificationSteps = data.certification.chain.map((label, i) => ({ step: String(i + 1), title: label }));
+---
+
+<Layout title={t(locale, 'page.pioneer.title')} description={t(locale, 'page.pioneer.description')}>
+  <ChipTabs active="pioneer" locale={locale} />
+
+  <HeroBanner
+    eyebrow={hero.eyebrow}
+    title={hero.title}
+    subtitle={hero.subtitle}
+    description={hero.description}
+    ctas={hero.ctas.map((cta) => ({
+      label: cta.label,
+      href: chipHref(locale, cta.href),
+      variant: cta.variant,
+      external: isExternalHref(cta.href),
+    }))}
+  >
+    <Fragment slot="title">
+      {hero.title}<span class="highlight">{hero.titleHighlight}</span>
+    </Fragment>
+  </HeroBanner>
+
+  <ChipWhatSection section={data.what} />
+  <ChipBenefitsSection section={data.benefits} />
+  <ChipRevenueSection section={data.revenue} />
+  <ChipFlowSection layout="vertical" section={data.steps} />
+  <ChipFlowSection
+    layout="chain"
+    tone="yellow"
+    section={{ title: data.certification.title, steps: certificationSteps, footnote: data.certification.note }}
+  />
+  <ChipFaqSection title={dt(locale, 'section.faqTitle')} faqs={data.faqs} />
+  <ChipCtaSection cta={data.cta} locale={locale} />
+</Layout>

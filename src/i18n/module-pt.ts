@@ -31,7 +31,7 @@ export const ptDict: Record<string, string> = {
   '不可能挑战 → Grove 感知闭环 → 3 个小作品':
     'Desafio Impossível → Ciclo de Sensoriamento Grove → 3 Mini Projetos',
   仓库管理: 'Gestão de Armazém',
-  '柴火创客学院 M0 结业认证（体验课为参与证明）。':
+  '柴火创客学园 M0 结业认证（体验课为参与证明）。':
     'Certificado de Conclusão M0 da Academia Chaihuo Maker (Certificado de Participação para Sessões Experimentais).',
   柴火基地车巡游: 'Turnê do Veículo Base Móvel Chaihuo',
   '超声波测距、水位、土壤湿度、震动、舵机、继电器、MP3、RGB 灯带…… 做自己的项目时自由取用，不受「套件里只有这几个模块」的限制。':

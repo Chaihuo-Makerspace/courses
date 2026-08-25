@@ -1,0 +1,46 @@
+---
+import { Icon } from 'astro-icon/components';
+import { t, localizePath } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+interface Props {
+  active: 'pioneer' | 'base';
+  locale: Locale;
+}
+
+const { active, locale } = Astro.props as Props;
+
+const tabs = [
+  { id: 'pioneer', label: t(locale, 'page.pioneer.title'), href: '/pioneer', icon: 'lucide:zap' },
+  { id: 'base', label: t(locale, 'page.base.title'), href: '/base', icon: 'lucide:home' },
+] as const;
+---
+
+<nav class="bg-background border-b border-neutral-3" aria-label={t(locale, 'chip.tabsAria')}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+    <div
+      class="inline-flex items-center gap-1 rounded-lg border border-neutral-3 bg-neutral-1 p-1"
+      role="tablist"
+    >
+      {
+        tabs.map((tab) => (
+          <a
+            href={localizePath(locale, tab.href)}
+            role="tab"
+            aria-selected={active === tab.id}
+            aria-current={active === tab.id ? 'page' : undefined}
+            class:list={[
+              'focus-ring inline-flex items-center gap-1.5 rounded-md px-4 py-2 text-sm font-semibold transition-colors duration-200',
+              active === tab.id
+                ? 'bg-background text-brand-red shadow-xs border border-neutral-3'
+                : 'text-neutral-7 hover:text-brand-black',
+            ]}
+          >
+            <Icon name={tab.icon} class="w-4 h-4" />
+            {tab.label}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</nav>

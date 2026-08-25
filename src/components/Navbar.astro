@@ -11,14 +11,16 @@ interface Props {
 const { currentPath = "/", locale } = Astro.props as Props;
 
 const navItems = [
-  { label: t(locale, 'nav.home'), href: "/" },
   { label: t(locale, 'nav.courses'), href: "/courses" },
   { label: t(locale, 'nav.paths'), href: "/paths" },
+  { label: t(locale, 'nav.pioneerBase'), href: "/pioneer" },
   { label: t(locale, 'nav.contact'), href: "/contact" },
   { label: t(locale, 'nav.about'), href: "/about" },
 ];
 
-const externalLinks = [
+const ecosystemItems = [
+  { label: t(locale, 'footer.ecosystemMap'), href: 'https://map.seeed.cc' },
+  { label: t(locale, 'nav.mcv'), href: 'https://mcv.chaihuo.org/' },
   { label: t(locale, 'nav.chaihuo'), href: 'https://chaihuo.org/' },
 ];
 
@@ -72,31 +74,69 @@ function localizeHref(href: string): string {
         </a>
       </div>
 
-      <div class="hidden md:flex md:items-center md:gap-2">
+      <div class="hidden md:flex md:items-center md:gap-1">
         {
           navItems.map((item) => (
             <a
               href={localizeHref(item.href)}
-              class="nav-link focus-ring px-4 py-5 text-sm font-medium"
+              class="nav-link focus-ring px-3.5 py-5 text-sm font-medium"
               aria-current={isActive(item.href) ? "page" : undefined}
             >
               {item.label}
             </a>
           ))
         }
-        {
-          externalLinks.map((link) => (
-            <a
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="nav-link focus-ring px-4 py-5 text-sm font-medium"
+
+        <div class="relative">
+          <button
+            type="button"
+            id="ecosystem-menu-btn"
+            class="nav-link focus-ring inline-flex items-center gap-1 px-3.5 py-5 text-sm font-medium cursor-pointer"
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-controls="ecosystem-menu-dropdown"
+          >
+            {t(locale, 'nav.ecosystem')}
+            <svg
+              class="ecosystem-chevron w-3.5 h-3.5 opacity-50"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
             >
-              {link.label}
-              <Icon name="lucide:arrow-up-right" class="w-3 h-3 ml-1 inline-block opacity-50" />
-            </a>
-          ))
-        }
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+
+          <div
+            id="ecosystem-menu-dropdown"
+            class="ecosystem-menu-dropdown"
+            role="menu"
+            aria-labelledby="ecosystem-menu-btn"
+            hidden
+          >
+            {
+              ecosystemItems.map((item) => (
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  role="menuitem"
+                  class="ecosystem-menu-item focus-ring"
+                >
+                  {item.label}
+                  <Icon name="lucide:arrow-up-right" class="w-3.5 h-3.5 opacity-50" />
+                </a>
+              ))
+            }
+          </div>
+        </div>
+
         <div class="ml-2">
           <LanguageSwitcher />
         </div>
@@ -149,15 +189,18 @@ function localizeHref(href: string): string {
           ))
         }
         <div class="border-t border-neutral-3 my-1"></div>
+        <p class="px-4 pt-2 pb-1 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-6">
+          {t(locale, 'nav.ecosystem')}
+        </p>
         {
-          externalLinks.map((link) => (
+          ecosystemItems.map((item) => (
             <a
-              href={link.href}
+              href={item.href}
               target="_blank"
               rel="noopener noreferrer"
               class="focus-ring px-4 py-3 rounded-lg text-base font-medium text-neutral-7 hover:bg-neutral-1 hover:text-brand-black transition-colors duration-200"
             >
-              {link.label}
+              {item.label}
               <Icon name="lucide:arrow-up-right" class="w-3.5 h-3.5 ml-1.5 inline-block opacity-50" />
             </a>
           ))
@@ -166,3 +209,80 @@ function localizeHref(href: string): string {
     </div>
   </nav>
 </header>
+
+<script>
+  function initEcosystemMenu() {
+    const btn = document.getElementById("ecosystem-menu-btn");
+    const menu = document.getElementById("ecosystem-menu-dropdown");
+    if (!btn || !menu || btn.dataset.menuReady) return;
+    btn.dataset.menuReady = "1";
+
+    const open = (forceOpen: boolean) => {
+      btn.setAttribute("aria-expanded", String(forceOpen));
+      menu.hidden = !forceOpen;
+    };
+
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      open(btn.getAttribute("aria-expanded") !== "true");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!btn.contains(e.target as Node) && !menu.contains(e.target as Node)) {
+        open(false);
+      }
+    });
+
+    btn.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        open(false);
+        btn.focus();
+      }
+    });
+
+    menu.addEventListener("click", () => open(false));
+  }
+
+  document.addEventListener("astro:page-load", initEcosystemMenu);
+</script>
+
+<style>
+  .ecosystem-menu-dropdown {
+    position: absolute;
+    top: calc(100% + 0.25rem);
+    right: 0;
+    min-width: 12.5rem;
+    background: var(--color-background);
+    border: 1px solid var(--color-neutral-3);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md-soft);
+    padding: 0.25rem;
+    z-index: 100;
+  }
+
+  .ecosystem-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.5rem 0.625rem;
+    border-radius: var(--radius-md);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-brand-black);
+    text-decoration: none;
+    transition: background-color 0.1s ease;
+  }
+
+  .ecosystem-menu-item:hover {
+    background-color: var(--color-neutral-1);
+  }
+
+  .ecosystem-menu-btn[aria-expanded="true"] .ecosystem-chevron {
+    transform: rotate(180deg);
+  }
+
+  .ecosystem-chevron {
+    transition: transform 0.15s ease;
+  }
+</style>

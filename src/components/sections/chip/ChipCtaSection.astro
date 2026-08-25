@@ -1,0 +1,61 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { ChipLink } from '../../../data/ecosystem';
+import { chipHref, isExternalHref } from '../../../i18n/chip-translations';
+import type { Locale } from '../../../i18n';
+
+interface Props {
+  cta: {
+    title: string;
+    description: string;
+    primary: ChipLink;
+    secondary?: ChipLink;
+    note?: string;
+  };
+  locale: Locale;
+}
+
+const { cta, locale } = Astro.props as Props;
+---
+
+<section class="py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-brand-graphite text-white noise-overlay">
+  <div class="relative z-10 max-w-4xl mx-auto text-center" data-reveal>
+    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight leading-tight">
+      {cta.title}
+    </h2>
+    <p class="mt-4 text-base sm:text-lg text-white/70 leading-relaxed max-w-2xl mx-auto">
+      {cta.description}
+    </p>
+
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+      <a
+        href={chipHref(locale, cta.primary.href)}
+        target={isExternalHref(cta.primary.href) ? '_blank' : undefined}
+        rel={isExternalHref(cta.primary.href) ? 'noopener noreferrer' : undefined}
+        class="focus-ring inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-red text-white rounded-md text-sm font-semibold hover:bg-brand-red-hover transition-colors"
+      >
+        {cta.primary.label}
+        <Icon
+          name={isExternalHref(cta.primary.href) ? 'lucide:arrow-up-right' : 'lucide:arrow-right'}
+          class="w-4 h-4"
+        />
+      </a>
+      {
+        cta.secondary && (
+          <a
+            href={chipHref(locale, cta.secondary.href)}
+            class="focus-ring inline-flex items-center justify-center gap-2 px-6 py-3 text-white rounded-md text-sm font-semibold hover:bg-white/10 transition-colors border border-white/20"
+          >
+            {cta.secondary.label}
+          </a>
+        )
+      }
+    </div>
+
+    {
+      cta.note && (
+        <p class="mt-6 text-sm text-white/50">{cta.note}</p>
+      )
+    }
+  </div>
+</section>

@@ -11,10 +11,10 @@ export const GET: APIRoute = (context) => {
   const base = (context.site?.toString() ?? FALLBACK_SITE).replace(/\/$/, '');
   const lines: string[] = [];
 
-  lines.push('# 柴火创客学院（柴火创客 OPC 学院）');
+  lines.push('# 柴火创客学园（柴火创客 OPC 学园）');
   lines.push('');
   lines.push(
-    '> 柴火创客学院是柴火创客生态（Seeed Studio + 柴火创客空间）旗下的技术赋能平台。' +
+    '> 柴火创客学园是柴火创客生态（Seeed Studio + 柴火创客空间）旗下的技术赋能平台。' +
       '依托 Seeed 的全球硬件供应链与柴火创客空间（2011 年成立）的社区基底，' +
       '把生态中已被验证的技术能力转化为可学习、可交付、可复用的课程体系。' +
       '核心定位：培养学员掌握"新技术整合"能力，而不是提供解决方案。',
@@ -75,11 +75,16 @@ export const GET: APIRoute = (context) => {
 
   lines.push('## Optional');
   lines.push('');
-  lines.push(`- [学院首页](${base}/): 一句话定位与整体导航`);
+  lines.push(`- [学园首页](${base}/): 一句话定位与整体导航`);
   lines.push(`- [选课指南](${base}/paths): 按目标筛选学习路径`);
   lines.push(`- [课程总览](${base}/courses): M0–M5 × L1/L2/L3 完整矩阵`);
-  lines.push(`- [关于学院](${base}/about): 生态背景与定位`);
+  lines.push(`- [关于学园](${base}/about): 生态背景与定位`);
   lines.push(`- [合作申请](${base}/contact): 通过 QR 码进入登记页`);
+  lines.push(
+    `- [先锋官计划](${base}/pioneer): 技术型 / 链接型个人加入计划，注册跳转 map.seeed.cc/apply`,
+  );
+  lines.push(`- [基地计划](${base}/base): 城市级实体空间节点申请，注册跳转 map.seeed.cc/apply`);
+  lines.push(`- [创客生态分布图](https://map.seeed.cc): 全球柴火生态节点地图与注册入口`);
   lines.push('');
 
   return new Response(lines.join('\n'), {
