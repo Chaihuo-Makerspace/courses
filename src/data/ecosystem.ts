@@ -11,7 +11,7 @@ export type { IconName } from './icons';
  */
 
 /** 先锋官 / 基地 的注册入口（外部平台，新窗口打开）。 */
-export const ecosystemApplyUrl = 'https://map.seeed.cc/apply';
+export const ecosystemApplyUrl = 'https://map.seeed.cc';
 
 /** 创客生态分布图（外部平台，新窗口打开）。 */
 export const ecosystemMapUrl = 'https://map.seeed.cc';
