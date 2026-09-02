@@ -96,11 +96,11 @@ export function translateOutcomes(outcomes: OutcomeItem[], locale: Locale): Outc
 
 export function translateCta(cta: FinalCta, locale: Locale): FinalCta {
   const ctaKey =
-    cta.title.includes('把课程体系引入') || cta.title.includes('Bring the course')
+    cta.title.includes('把学习体系引入') || cta.title.includes('Bring the course')
       ? 'home'
       : cta.title.includes('选好组合') || cta.title.includes('After selecting')
         ? 'paths'
-        : cta.title.includes('把课程模块引入') || cta.title.includes('Bring course modules')
+        : cta.title.includes('把学习模块引入') || cta.title.includes('Bring course modules')
           ? 'courses'
           : 'about';
   return {
@@ -113,9 +113,9 @@ export function translateCta(cta: FinalCta, locale: Locale): FinalCta {
       label:
         cta.primary.label.includes('申请合作') || cta.primary.label.includes('Apply for')
           ? dt(locale, 'cta.apply')
-          : cta.primary.label.includes('查看课程') || cta.primary.label.includes('View Course')
+          : cta.primary.label.includes('查看学习') || cta.primary.label.includes('View Course')
             ? dt(locale, 'cta.viewCourses')
-            : cta.primary.label.includes('选课') || cta.primary.label.includes('Learning Path')
+            : cta.primary.label.includes('路径') || cta.primary.label.includes('Learning Path')
               ? dt(locale, 'cta.viewPaths')
               : cta.primary.label.includes('关于学园') || cta.primary.label.includes('Learn About')
                 ? dt(locale, 'cta.aboutOrg')
@@ -128,10 +128,10 @@ export function translateCta(cta: FinalCta, locale: Locale): FinalCta {
           label:
             cta.secondary.label.includes('申请合作') || cta.secondary.label.includes('Apply for')
               ? dt(locale, 'cta.apply')
-              : cta.secondary.label.includes('查看课程') ||
+              : cta.secondary.label.includes('查看学习') ||
                   cta.secondary.label.includes('View Course')
                 ? dt(locale, 'cta.viewCourses')
-                : cta.secondary.label.includes('选课') ||
+                : cta.secondary.label.includes('路径') ||
                     cta.secondary.label.includes('Learning Path')
                   ? dt(locale, 'cta.viewPaths')
                   : cta.secondary.label.includes('关于学园') ||
