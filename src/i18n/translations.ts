@@ -10,8 +10,8 @@ const zh: TranslationDict = {
 
   // Nav
   'nav.home': '首页',
-  'nav.courses': '课程体系',
-  'nav.paths': '选课指南',
+  'nav.courses': '学习体系',
+  'nav.paths': '路径指南',
   'nav.contact': '合作咨询',
   'nav.about': '关于学园',
   'nav.chaihuo': '柴火创客空间',
@@ -26,7 +26,7 @@ const zh: TranslationDict = {
 
   // Footer
   'footer.tagline':
-    '柴火创客学园把真实硬件、场景项目和交付经验整理成 M0–M5 课程体系，帮助学习者从动手基础走向可交付系统。',
+    '柴火创客学园把真实硬件、场景项目和交付经验整理成 M0–M5 学习体系，帮助学习者从动手基础走向可交付系统。',
   'footer.contact': '联系我们',
   'footer.nav': '站内导航',
   'footer.social': '关注我们',
@@ -42,19 +42,19 @@ const zh: TranslationDict = {
   'footer.seeed': 'Seeed Studio',
   'page.pioneer.title': '先锋官计划',
   'page.pioneer.description':
-    '先锋官——在你的城市，做 AI 时代的点火人。柴火给你课程、教具和认证，你把 AI 创客教育带到你的城市。',
+    '先锋官——在你的城市，做 AI 时代的点火人。柴火给你学习体系、教具和认证，你把 AI 创客教育带到你的城市。',
   'page.base.title': '基地计划',
   'page.base.description':
-    '基地——城市里看得见的柴火。有固定场地、有持续运营意愿，柴火给你教具、课程、品牌背书和派单流量。',
+    '基地——城市里看得见的柴火。有固定场地、有持续运营意愿，柴火给你教具、学习体系、品牌背书和派单流量。',
 
   // Home Hero
   'home.hero.eyebrow': '柴火创客学园',
   'home.hero.title': '面向真实硬件与现场交付的',
-  'home.hero.titleHighlight': '系统课程',
+  'home.hero.titleHighlight': '系统学习',
   'home.hero.subtitle': '柴火创客学园',
   'home.hero.description':
-    '围绕 M0–M5 六个课程模块，把零基础智能硬件入门、设备互联、多模态 AI、自组网通信、边缘视觉与环境感知整理成可引入、可授课、可共建的课程体系。',
-  'home.hero.ctaPrimary': '查看课程体系',
+    '围绕 M0–M5 六个学习模块，把零基础智能硬件入门、设备互联、多模态 AI、自组网通信、边缘视觉与环境感知整理成可引入、可授课、可共建的学习体系。',
+  'home.hero.ctaPrimary': '查看学习体系',
   'home.hero.ctaSecondary': '申请合作咨询',
 
   // Home sections
@@ -62,55 +62,55 @@ const zh: TranslationDict = {
   'home.familiarObjects.subtitle': '从第一天开始，用真实硬件做出看得见摸得着的作品',
   'home.outcomes.title': '从这里，你将获得什么',
   'home.outcomes.subtitle': '不只是技术，更是交付能力',
-  'home.goalPaths.title': '三大课程方向',
+  'home.goalPaths.title': '三大学习方向',
   'home.goalPaths.subtitle': '无论你想用 AI 造物、造 AI 的物，还是交付解决方案，都能找到起点',
-  'home.mapPreview.title': '课程矩阵预览',
+  'home.mapPreview.title': '学习矩阵预览',
   'home.mapPreview.subtitle': 'M0–M5 六大模块 × L1/L2/L3 三阶递进',
 
   // Home CTA
   'home.cta.eyebrow': '开启学习之旅',
   'home.cta.title': '准备好动手了吗？',
   'home.cta.description': '从零基础到独立交付，选择你的起点，立即开始。',
-  'home.cta.primary': '查看课程体系',
+  'home.cta.primary': '查看学习体系',
   'home.cta.secondary': '联系我们',
 
   // Courses
-  'courses.title': '课程体系',
-  'courses.description': 'M0–M5 六大课程模块，覆盖从硬件入门到行业交付的完整技术栈',
-  'courses.overview': '课程总览',
-  'courses.matrix': '课程矩阵',
+  'courses.title': '学习体系',
+  'courses.description': 'M0–M5 六大学习模块，覆盖从硬件入门到行业交付的完整技术栈',
+  'courses.overview': '学习总览',
+  'courses.matrix': '学习矩阵',
   'courses.tracks': '学习路径',
   'courses.cta.eyebrow': '找到你的方向',
   'courses.cta.title': '不确定从哪里开始？',
-  'courses.cta.description': '查看三大课程方向，找到最适合你的学习路径',
-  'courses.cta.primary': '查看选课指南',
-  'courses.cta.secondary': '咨询课程顾问',
+  'courses.cta.description': '查看三大学习方向，找到最适合你的学习路径',
+  'courses.cta.primary': '查看路径指南',
+  'courses.cta.secondary': '咨询学习顾问',
 
   // Course detail
   'course.audience': '适合人群',
   'course.capabilities': '你将获得的能力',
-  'course.deliverables': '课程交付物',
+  'course.deliverables': '学习交付物',
   'course.formats': '教学形式',
   'course.kits': '硬件套件',
   'course.toolchain': '技术栈',
-  'course.curriculum': '课程大纲',
+  'course.curriculum': '学习大纲',
   'course.teacherNotes': '讲师须知',
   'course.relatedTracks': '相关学习路径',
-  'course.levels': '课程层级',
+  'course.levels': '学习层级',
   'course.level.l1': '入门',
   'course.level.l2': '进阶',
   'course.level.l3': '实战',
-  'course.backToCourses': '返回课程体系',
+  'course.backToCourses': '返回学习体系',
   'course.cta.primary': '咨询合作',
-  'course.cta.secondary': '查看其他课程',
+  'course.cta.secondary': '查看其他模块',
 
   // Paths
-  'paths.title': '选课指南',
+  'paths.title': '路径指南',
   'paths.description': '根据你的目标选择最适合的学习路径',
   'paths.cta.eyebrow': '选择你的方向',
   'paths.cta.title': '准备好开始了吗？',
   'paths.cta.description': '选择一条学习路径，开始你的 AIoT 实战之旅',
-  'paths.cta.primary': '查看课程体系',
+  'paths.cta.primary': '查看学习体系',
   'paths.cta.secondary': '合作咨询',
 
   // About
@@ -121,7 +121,7 @@ const zh: TranslationDict = {
   'about.hero.titleHighlight': '学园',
   'about.hero.subtitle': 'Chaihuo Makerspace Academy',
   'about.hero.description':
-    '背靠 Seeed Studio 与柴火创客空间，我们相信每个人都应该有能力\\"一个人也能上场\\"——把想法变成可交付的智能系统。柴火创客学园面向机构提供可引入、可授课、可共建的课程体系。',
+    '背靠 Seeed Studio 与柴火创客空间，我们相信每个人都应该有能力\\"一个人也能上场\\"——把想法变成可交付的智能系统。柴火创客学园面向机构提供可引入、可授课、可共建的学习体系。',
   'about.ecosystem.title': '柴火创客生态',
   'about.ecosystem.subtitle': '三大支柱支撑创客教育体系',
   'about.values.title': '我们的理念',
@@ -130,8 +130,8 @@ const zh: TranslationDict = {
   'about.stats.subtitle': '用数字说话',
   'about.cta.eyebrow': '加入我们',
   'about.cta.title': '想了解更多？',
-  'about.cta.description': '联系我们，了解柴火创客学园的课程与合作机会',
-  'about.cta.primary': '查看课程体系',
+  'about.cta.description': '联系我们，了解柴火创客学园的学习与合作机会',
+  'about.cta.primary': '查看学习体系',
   'about.cta.secondary': '联系我们',
 
   // Contact
@@ -140,18 +140,18 @@ const zh: TranslationDict = {
   'contact.hero.eyebrow': '合作咨询',
   'contact.hero.title': '找到适合你的',
   'contact.hero.titleHighlight': '合作方式',
-  'contact.hero.description': '三种合作场景 × 四种课程销售形态，匹配你的需求',
+  'contact.hero.description': '三种合作场景 × 四种销售形态，匹配你的需求',
   'contact.scenarios.title': '合作场景',
   'contact.scenarios.subtitle': '选择你的角色，找到最适合的合作方式',
   'contact.forms.title': '合作形态',
-  'contact.forms.subtitle': '四种课程销售形态，从裸硬件到全托交付',
+  'contact.forms.subtitle': '四种销售形态，从裸硬件到全托交付',
   'contact.faq.title': '常见问题',
-  'contact.faq.subtitle': '关于课程合作的常见问题',
+  'contact.faq.subtitle': '关于合作的常见问题',
   'contact.cta.eyebrow': '开始合作',
   'contact.cta.title': '准备好合作了吗？',
   'contact.cta.description': '扫描二维码或联系我们，找到最适合你的合作方式',
   'contact.cta.primary': '联系我们',
-  'contact.cta.secondary': '查看课程体系',
+  'contact.cta.secondary': '查看学习体系',
 
   // 404
   '404.title': '页面未找到',
@@ -168,11 +168,11 @@ const zh: TranslationDict = {
   'lang.switcher': '切换语言',
 
   // Hero
-  'hero.courseMap': '课程地图 · M0–M5',
+  'hero.courseMap': '学习地图 · M0–M5',
   'hero.levels': 'L1 · L2 · L3',
 
   // Home
-  'home.mapPreview.eyebrow': '课程结构',
+  'home.mapPreview.eyebrow': '学习结构',
 
   // About
   'about.ecosystem.eyebrow': '生态系统',
@@ -181,15 +181,15 @@ const zh: TranslationDict = {
   'course.illustration': '插画',
   'course.coreHardwareHeading': 'Core Hardware / 核心硬件',
   'course.keyCapabilitiesHeading': 'KEY CAPABILITIES /',
-  'courses.matrix.eyebrow': '课程矩阵',
+  'courses.matrix.eyebrow': '学习矩阵',
 
   // Paths
-  'paths.tracks.eyebrow': '课程组合',
+  'paths.tracks.eyebrow': '学习组合',
 
   // Contact
   'contact.faq.eyebrow': 'FAQ',
   'contact.forms.eyebrow': '合作咨询',
-  'contact.forms.qrAlt': '课程合作咨询二维码',
+  'contact.forms.qrAlt': '合作咨询二维码',
 
   // Scenario
   'scenario.formAria': '合作形态',

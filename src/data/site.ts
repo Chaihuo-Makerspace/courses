@@ -64,23 +64,23 @@ export interface OutcomeItem {
 }
 
 export const homeFinalCta: FinalCta = {
-  title: '把课程体系引入你的教学、培训或项目现场',
+  title: '把学习体系引入你的教学、培训或项目现场',
   description:
-    '可以先引入单个模块，也可以按目标组合课程包；销售形态包括裸硬件套件、标准教学套件、全托交付与师资培训。',
+    '可以先引入单个模块，也可以按目标组合学习包；销售形态包括裸硬件套件、标准教学套件、全托交付与师资培训。',
   primary: { label: '申请合作咨询', href: '/contact' },
-  secondary: { label: '查看课程体系', href: '/courses' },
+  secondary: { label: '查看学习体系', href: '/courses' },
 };
 
 export const pathsFinalCta: FinalCta = {
-  title: '选好组合后，回到课程体系确认模块与级别',
+  title: '选好组合后，回到学习体系确认模块与级别',
   description:
-    '选课指南只帮助你缩小范围。真正落地时，还要看模块内容、课堂实验、硬件清单、交付材料和销售形态。',
-  primary: { label: '查看课程体系', href: '/courses' },
+    '路径指南只帮助你缩小范围。真正落地时，还要看模块内容、课堂实验、硬件清单、交付材料和销售形态。',
+  primary: { label: '查看学习体系', href: '/courses' },
   secondary: { label: '申请合作咨询', href: '/contact' },
 };
 
 export const coursesFinalCta: FinalCta = {
-  title: '把课程模块引入你的课程、团队或项目现场',
+  title: '把学习模块引入你的教学、团队或项目现场',
   description:
     '如果你已经有明确方向，可以继续讨论裸硬件套件、标准教学套件、全托交付或师资培训。我们会根据目标推荐模块组合与授课深度。',
   primary: { label: '申请合作咨询', href: '/contact' },
@@ -107,7 +107,7 @@ export const aboutEcosystem: AboutEcosystemItem[] = [
     role: '技术赋能平台',
     description: '将生态中的技术能力转化为可学习的课程，帮助个人和企业掌握新技术整合能力。',
     link: null,
-    tag: '技术课程',
+    tag: '技术学习',
   },
 ];
 
@@ -140,7 +140,7 @@ export const aboutFinalCta: FinalCta = {
   description:
     '从裸硬件套件到全托交付，可以按你的目标选择销售形态。请留下意向信息，我们 3 个工作日内提供合作建议。',
   primary: { label: '申请合作咨询', href: '/contact' },
-  secondary: { label: '查看选课指南', href: '/paths' },
+  secondary: { label: '查看路径指南', href: '/paths' },
 };
 
 export const contactFaqs: FaqItem[] = [
@@ -157,7 +157,7 @@ export const contactFaqs: FaqItem[] = [
   {
     question: '四种销售形态有什么区别？',
     answer:
-      'A 裸硬件套件仅含硬件，适合有自研课程能力的机构；B 标准教学套件含完整课程资源包，开箱即可开课；C 全托交付套件由柴火讲师到场授课，适合首次采购；D 师资培训套件帮你培养自有讲师，可持续自主开课。',
+      'A 裸硬件套件仅含硬件，适合有自研课程能力的机构；B 标准教学套件含完整学习资源包，开箱即可开课；C 全托交付套件由柴火讲师到场授课，适合首次采购；D 师资培训套件帮你培养自有讲师，可持续自主开课。',
   },
   {
     question: '是否接受海外合作？',
@@ -214,7 +214,7 @@ export const homeMapLegend: MapLegend = {
   axisX: {
     label: '横轴 · M0–M5',
     description:
-      '课程方向。M0 是零基础旗舰入口（智能硬件入门），M1–M5 是五大行业方向，按目标可独立选学。',
+      '学习方向。M0 是零基础旗舰入口（智能硬件入门），M1–M5 是五大行业方向，按目标可独立选学。',
   },
   axisY: {
     label: '纵轴 · L1 / L2 / L3',
@@ -225,7 +225,7 @@ export const homeMapLegend: MapLegend = {
     { code: 'M0', role: '零基础旗舰入口' },
     { code: 'M1–M5', role: '五大行业方向' },
   ],
-  note: '可以按方向、深度或目标组合课程——不必从头到尾线性学习。这是当前版本的课程体系，未来会随技术发展继续扩展。',
+  note: '可以按方向、深度或目标组合课程——不必从头到尾线性学习。这是当前版本的学习体系，未来会随技术发展继续扩展。',
 };
 
 export const homeOutcomes: OutcomeItem[] = [
@@ -236,7 +236,7 @@ export const homeOutcomes: OutcomeItem[] = [
   },
   {
     icon: 'lucide:package',
-    label: '硬件套件与课程资源包',
+    label: '硬件套件与学习资源包',
     description: '课程可配套 Seeed 硬件、NLHD 教材、实验说明、教师材料和学员任务。',
   },
   {
