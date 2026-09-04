@@ -568,6 +568,458 @@ export const esDict: Record<string, string> = {
   跑通: 'Demo',
   小项目: 'Proyecto',
   可交付: 'Entregable',
+
+  '基于Home Assistant与ESPHome，在局域网内统一接入多协议设备，实现能耗监控与自动化联动。':
+    'Basado en Home Assistant y ESPHome, integra dispositivos multiprotocolo de forma unificada en la red local para lograr el monitoreo del consumo energético y la vinculación automatizada.',
+  '商业楼宇、老旧设施、酒店公寓与工厂辅助车间中，空调、照明、安防等多套子系统独立运行，运维人员需多平台切换且数据互不相通。缺乏回路级能耗计量，仅能查看总表账单，无法精确定位高耗能设备与浪费时段。传统BA系统采用专有封闭协议，设备扩展与更换依赖原厂，改造成本高且周期长。':
+    'En edificios comerciales, instalaciones antiguas, hoteles, apartamentos y talleres auxiliares de fábricas, subsistemas como climatización, iluminación y seguridad operan de forma independiente; el personal de mantenimiento debe alternar entre múltiples plataformas y los datos no se comunican entre sí. Falta medición de consumo a nivel de circuito, solo se puede consultar la factura del medidor general, sin poder localizar con precisión los equipos de alto consumo ni los periodos de desperdicio. Los sistemas BA tradicionales usan protocolos propietarios cerrados, la expansión y sustitución de equipos dependen del fabricante original, con costos de transformación elevados y ciclos largos.',
+  '入门 / 进阶 / 高级': 'Inicial / Intermedio / Avanzado',
+  'L1 1天 / L2 2–3天 / L3 3–5天': 'L1 1 día / L2 2–3 días / L3 3–5 días',
+  'L1无需编程基础，会基本电脑操作与本地区域网连接即可；L2需有基础编程概念，能读懂YAML配置文件；L3需有YAML/Node-RED与网络基础，熟悉L1–L2能力':
+    'L1 no requiere base de programación, basta con operaciones básicas de computadora y conexión a red local; L2 requiere conceptos básicos de programación y capacidad para leer archivos de configuración YAML; L3 requiere conocimientos de YAML/Node-RED y redes, familiarizado con las capacidades de L1–L2',
+  商业楼宇与办公园区智能化增量改造:
+    'Transformación incremental inteligente de edificios comerciales y campus de oficinas',
+  老旧设施电气与环境监测利旧升级:
+    'Reutilización y actualización de monitoreo eléctrico y ambiental en instalaciones antiguas',
+  '酒店、公寓与公共空间的统一环境管控与能耗审计':
+    'Control ambiental unificado y auditoría energética en hoteles, apartamentos y espacios públicos',
+  工厂辅助车间温湿度监视与用电回路计量:
+    'Monitoreo de temperatura y humedad y medición de circuitos eléctricos en talleres auxiliares de fábrica',
+  园区配电回路能耗分项计量与异常告警:
+    'Medición de consumo por circuito de distribución del campus y alertas de anomalías',
+  '多子系统割裂，数据互不相通':
+    'Múltiples subsistemas aislados, datos que no se comunican entre sí',
+  '能耗流向不明，缺乏回路级计量':
+    'Flujo de consumo energético poco claro, falta de medición a nivel de circuito',
+  '专有协议锁定，扩展改造成本高':
+    'Bloqueo por protocolos propietarios, costos elevados de expansión y transformación',
+  多协议设备统一接入与管理: 'Acceso y gestión unificados de dispositivos multiprotocolo',
+  回路级能耗计量与监控看板搭建:
+    'Medición de consumo a nivel de circuito y construcción de paneles de monitoreo',
+  '基于YAML与Node-RED的跨设备自动化编排':
+    'Orquestación de automatización entre dispositivos basada en YAML y Node-RED',
+  '第三方系统API/MQTT对接': 'Integración de API/MQTT con sistemas de terceros',
+  系统备份与灾难恢复: 'Respaldo del sistema y recuperación ante desastres',
+  方案顾问与商务销售: 'Consultores de soluciones y ventas comerciales',
+  实训讲师与教研团队: 'Instructores de formación práctica y equipos de investigación educativa',
+  职业院校与应用型本科师生:
+    'Docentes y estudiantes de institutos profesionales y universidades aplicadas',
+  企业运维与智能化改造工程师:
+    'Ingenieros de operaciones empresariales y transformación inteligente',
+  系统部署拓扑与网络配置说明:
+    'Topología de despliegue del sistema y documentación de configuración de red',
+  接入设备清单与Modbus寄存器映射表:
+    'Lista de dispositivos conectados y tabla de mapeo de registros Modbus',
+  '能耗看板与自动化YAML/Node-RED流程配置文件':
+    'Panel de consumo energético y archivos de configuración de flujos YAML/Node-RED de automatización',
+  系统备份恢复与日常运维指南:
+    'Guía de recuperación de respaldo y operaciones de mantenimiento diario',
+  平台初识与基础设备接入: 'Introducción a la plataforma y acceso básico de dispositivos',
+  '掌握Home Assistant核心架构，完成消费级设备与XIAO传感器节点快速接入':
+    'Dominar la arquitectura central de Home Assistant y completar el acceso rápido de dispositivos de consumo y nodos de sensores XIAO',
+  '理解Home Assistant基础架构与核心概念（实体、服务、状态、自动化）':
+    'Comprender la arquitectura básica y los conceptos centrales de Home Assistant (entidades, servicios, estados, automatizaciones)',
+  '掌握ESPHome固件配置与XIAO ESP32-C6传感器接入流程':
+    'Dominar la configuración de firmware ESPHome y el proceso de acceso de sensores XIAO ESP32-C6',
+  能在Lovelace仪表盘中配置卡片并进行状态监控:
+    'Capacidad para configurar tarjetas en el panel Lovelace y realizar monitoreo de estados',
+  工业总线对接与场景联动: 'Integración de buses industriales y vinculación de escenarios',
+  '掌握RS485/Modbus工业设备接入，搭建能耗看板与多条件自动化联动':
+    'Dominar el acceso de dispositivos industriales RS485/Modbus, construir paneles de consumo y vinculación automatizada multicondición',
+  '掌握Modbus RTU协议接线、调试与YAML寄存器配置':
+    'Dominar el cableado, depuración y configuración de registros YAML del protocolo Modbus RTU',
+  独立搭建完整的能耗计量与监控看板:
+    'Construir de forma independiente un panel completo de medición y monitoreo de consumo',
+  掌握多条件自动化编排与异常告警配置:
+    'Dominar la orquestación de automatización multicondición y la configuración de alertas de anomalías',
+  业务集成与系统运维: 'Integración de negocio y operaciones del sistema',
+  '掌握跨系统API/MQTT对接、Node-RED复杂业务流开发与系统备份恢复':
+    'Dominar la integración API/MQTT entre sistemas, el desarrollo de flujos de negocio complejos con Node-RED y el respaldo y recuperación del sistema',
+  '掌握HA与外部管理系统的数据集成方法（REST API/MQTT/Webhook）':
+    'Dominar los métodos de integración de datos entre HA y sistemas de gestión externos (REST API/MQTT/Webhook)',
+  '能够使用Node-RED编排复杂业务流':
+    'Capacidad para usar Node-RED en la orquestación de flujos de negocio complejos',
+  具备独立交付可维护系统与实施灾难备份的能力:
+    'Capacidad para entregar de forma independiente sistemas mantenibles e implementar respaldos ante desastres',
+  '基于物理AI终端，融合边缘视觉、语音与业务系统API，实现多模态空间交互。':
+    'Basado en terminales de IA físicos, integra visión en el borde, voz y APIs de sistemas de negocio para lograr la interacción espacial multimodal.',
+  '仓储管理、展厅导览、智能前台等场景中，现场人员需停下手工操作，通过键盘或手机手动检索业务数据，效率低下。传统交互终端缺乏视觉上下文，无法主动感知人员靠近或异常动作。智能终端多为封闭生态，难以与存量WMS/ERP/CRM系统对接；部分工业与政企场景禁止音频与业务数据上传公网。':
+    'En escenarios como gestión de almacenes, guías de salas de exposición y recepciones inteligentes, el personal en sitio debe detener las operaciones manuales para buscar datos de negocio mediante teclado o teléfono, con baja eficiencia. Los terminales de interacción tradicionales carecen de contexto visual y no pueden percibir proactivamente la aproximación de personas o movimientos anómalos. Los terminales inteligentes suelen ser ecosistemas cerrados, difíciles de integrar con sistemas existentes WMS/ERP/CRM; algunos escenarios industriales y gubernamentales prohíben la subida de audio y datos de negocio a la red pública.',
+  'L1零基础或首次接触边缘AI交互设备；L2需具备Docker基础与REST API调用经验；L3需具备Linux、PyTorch/Jetson基础与shell操作能力':
+    'L1 sin base o primer contacto con dispositivos de interacción de IA en el borde; L2 requiere base de Docker y experiencia en llamadas REST API; L3 requiere base de Linux, PyTorch/Jetson y capacidad de operaciones shell',
+  '智慧仓储与车间管理：免手动查库存、语音录入出入库、异常物料视觉提醒':
+    'Almacenes inteligentes y gestión de talleres: consulta de inventario sin operaciones manuales, registro de entrada/salida por voz, alertas visuales de materiales anómalos',
+  '展厅与公共导览：主动人员识别、多语种语音讲解、展位联动控制':
+    'Salas de exposición y guías públicas: reconocimiento proactivo de personas, explicaciones por voz multilingües, control vinculado de stands',
+  '智能前台与会议空间：访客接待、空间设备语音控制、日程自动化查询':
+    'Recepción inteligente y espacios de reunión: atención a visitantes, control por voz de dispositivos del espacio, consulta automatizada de agendas',
+  '辅助看护与空间服务：特定行为感知告警、语音求助与远程联动':
+    'Cuidado asistido y servicios espaciales: alertas de detección de comportamientos específicos, solicitud de ayuda por voz y vinculación remota',
+  '工业隔离区语音交互：纯局域网离线语音查询与设备状态播报':
+    'Interacción por voz en zonas industriales aisladas: consulta de voz offline en red local pura y reporte de estados de dispositivos',
+  '现场查询交互繁琐，需停下手工操作':
+    'Interacción de consulta en sitio engorrosa, requiere detener operaciones manuales',
+  固定终端缺乏空间感知与视觉上下文:
+    'Terminales fijos carecen de percepción espacial y contexto visual',
+  '业务系统封闭，难以与存量WMS/ERP对接':
+    'Sistemas de negocio cerrados, difíciles de integrar con WMS/ERP existentes',
+  '隐私与离网诉求，数据禁止出域':
+    'Demandas de privacidad y desconexión de red, datos prohibidos de salir del dominio',
+  'MCP 协议（Model Context Protocol）': 'Protocolo MCP (Model Context Protocol)',
+  'LLM（Qwen2.5-7B-Instruct 4-bit量化）': 'LLM (Qwen2.5-7B-Instruct cuantizado 4-bit)',
+  端侧视觉目标检测与事件触发: 'Detección de objetos visuales en el borde y activación de eventos',
+  自然语言语音查询与Agent角色配置:
+    'Consulta de voz en lenguaje natural y configuración de roles de Agente',
+  基于MCP协议的业务系统工具调用:
+    'Llamadas a herramientas de sistemas de negocio basadas en el protocolo MCP',
+  本地WMS系统Docker部署与API集成: 'Despliegue Docker del sistema WMS local e integración de API',
+  '纯本地离线语音AI管线部署（VAD→ASR→LLM→TTS）':
+    'Despliegue de pipeline de IA de voz offline puramente local (VAD→ASR→LLM→TTS)',
+  企业信息化与智能化工程师: 'Ingenieros de informatización e inteligencia empresarial',
+  Watcher硬件配置与视觉模型参数说明书:
+    'Manual de configuración de hardware Watcher y parámetros de modelos visuales',
+  多模态Agent角色提示词与记忆策略配置文件:
+    'Archivos de configuración de prompts de roles de Agente multimodal y estrategias de memoria',
+  '本地业务系统与MCP桥接服务部署指南（Docker Compose + config.yml）':
+    'Guía de despliegue de sistemas de negocio locales y servicio de puente MCP (Docker Compose + config.yml)',
+  OpenClaw自动化工具配置脚本:
+    'Script de configuración de la herramienta de automatización OpenClaw',
+  '本地离线语音AI管线部署与调优手册（L3）':
+    'Manual de despliegue y optimización del pipeline de IA de voz offline local (L3)',
+  多模态交互能力体验: 'Experiencia de capacidades de interacción multimodal',
+  '理解边缘视觉、语音Agent与MCP工具调用的端到端交互链路':
+    'Comprender la cadena de interacción extremo a extremo de visión en el borde, Agente de voz y llamadas a herramientas MCP',
+  理解边缘视觉与大模型Agent结合的技术架构:
+    'Comprender la arquitectura técnica de la combinación de visión en el borde y Agentes de grandes modelos',
+  掌握MCP协议在端侧AI与业务系统对接中的核心作用:
+    'Dominar el papel central del protocolo MCP en la integración entre IA en el borde y sistemas de negocio',
+  掌握云端协同与本地部署在不同业务场景下的选型逻辑:
+    'Dominar la lógica de selección entre colaboración en la nube y despliegue local en diferentes escenarios de negocio',
+  业务系统集成与联动配置: 'Integración de sistemas de negocio y configuración de vinculación',
+  '掌握Watcher配置、本地WMS部署、MCP桥接及自动化工具联调':
+    'Dominar la configuración de Watcher, el despliegue de WMS local, el puente MCP y la depuración conjunta de herramientas de automatización',
+  独立配置Watcher视觉与语音Agent参数:
+    'Configurar de forma independiente los parámetros de Agente visual y de voz de Watcher',
+  掌握基于Docker的本地业务系统与MCP桥接服务部署:
+    'Dominar el despliegue de sistemas de negocio locales y servicios de puente MCP basados en Docker',
+  掌握基于MCP协议扩展新业务API的方法:
+    'Dominar el método para extender nuevas APIs de negocio basadas en el protocolo MCP',
+  端到端本地离线语音AI管线部署:
+    'Despliegue de pipeline de IA de voz offline local extremo a extremo',
+  '在Jetson Orin NX上部署VAD→ASR→LLM→TTS纯本地闭环系统':
+    'Desplegar un sistema de ciclo cerrado puramente local VAD→ASR→LLM→TTS en Jetson Orin NX',
+  '掌握VAD→ASR→LLM→TTS完整本地端到端语音管线架构':
+    'Dominar la arquitectura completa del pipeline de voz local extremo a extremo VAD→ASR→LLM→TTS',
+  掌握在Jetson边缘计算硬件上进行大模型量化与部署优化的方法:
+    'Dominar los métodos de cuantización y optimización de despliegue de grandes modelos en hardware de computación en el borde Jetson',
+  具备在强隐私与工业隔离网环境下交付AI交互方案的能力:
+    'Capacidad para entregar soluciones de interacción de IA en entornos de alta privacidad y redes industriales aisladas',
+  '基于 LoRa Mesh 自组网协议，构建无公网依赖、多跳中继的离网应急通信与传感数据回传网络。':
+    'Basado en el protocolo de red autónoma LoRa Mesh, construye una red de comunicación de emergencia off-grid y retorno de datos de sensores con múltiples saltos de retransmisión, sin dependencia de red pública.',
+  '野外勘探、隧道施工、应急搜救等场景缺乏蜂窝基站覆盖，传统对讲机视距受限且无法回传坐标与传感数据。单点中继台依赖市电与高位节点，一旦受损整网中断；卫星电话终端昂贵且存在遮挡盲区，临时专网架设周期长、成本高。':
+    'Escenarios como exploración de campo, construcción de túneles y búsqueda y rescate de emergencia carecen de cobertura de estaciones base celulares; los radios tradicionales tienen alcance limitado a línea de vista y no pueden retornar coordenadas ni datos de sensores. Las estaciones repetidoras de un solo punto dependen de la red eléctrica y nodos en altura, y si se dañan, toda la red se interrumpe; los terminales de teléfono satelital son costosos y tienen zonas ciegas por obstrucción, y el despliegue de redes privadas temporales tiene ciclos largos y costos elevados.',
+  '入门至高级（分 L1/L2/L3 三级）': 'De inicial a avanzado (tres niveles L1/L2/L3)',
+  'L1 1 天 / L2 2–3 天 / L3 3–5 天': 'L1 1 día / L2 2–3 días / L3 3–5 días',
+  'L1 会使用智能手机与蓝牙配对，了解基础物联网概念；L2 具备 Node-RED 或 MQTT 基础，能配置网络与 Broker；L3 熟悉 C/C++ 与 PlatformIO，能阅读并修改开源固件源码':
+    'L1 sabe usar smartphones y emparejamiento Bluetooth, conoce conceptos básicos de IoT; L2 tiene base en Node-RED o MQTT, puede configurar redes y Broker; L3 está familiarizado con C/C++ y PlatformIO, puede leer y modificar código fuente de firmware de código abierto',
+  '野外勘探与户外赛事：队员位置实时追踪、分组文字通信、SOS 告警广播':
+    'Exploración de campo y eventos al aire libre: seguimiento en tiempo real de la ubicación de los miembros, comunicación de texto por grupos, difusión de alertas SOS',
+  '应急搜救与抢险救灾：受灾失联区域多跳中继搭建、前线搜救态势标绘':
+    'Búsqueda y rescate de emergencia y atención a desastres: despliegue de repetidores de múltiples saltos en zonas afectadas sin comunicación, mapeo de la situación de búsqueda en el frente',
+  '地下管廊、隧道与矿道施工：分段中继穿透阻隔、有害气体与温湿度离网监测':
+    'Construcción de galerías subterráneas, túneles y minas: repetidores por segmentos para atravesar obstrucciones, monitoreo off-grid de gases nocivos y temperatura/humedad',
+  '林区与无网园区监控：太阳能中继节点长期值守、关键设施运行状态回传':
+    'Monitoreo de áreas forestales y campus sin red: nodos repetidores solares de guardia prolongada, retorno del estado operativo de instalaciones clave',
+  偏远与地下盲区失联: 'Pérdida de comunicación en zonas remotas y subterráneas',
+  单点中继故障导致整网中断: 'Falla de repetidor de un solo punto causa interrupción de toda la red',
+  '应急通信架设成本高、周期长':
+    'Despliegue de comunicación de emergencia con costos elevados y ciclos largos',
+  'Meshtastic Mesh 协议': 'Protocolo Mesh Meshtastic',
+  '构建 LoRa Mesh 去中心化自组网': 'Construir red autónoma descentralizada LoRa Mesh',
+  配置信道加密与多跳中继路由:
+    'Configurar cifrado de canales y enrutamiento de repetidores de múltiples saltos',
+  '实现离线文字通信与 GPS 坐标回传':
+    'Lograr la comunicación de texto offline y el retorno de coordenadas GPS',
+  '搭建 LoRa-MQTT 网关桥接公网': 'Construir gateway LoRa-MQTT para puentear con la red pública',
+  '编排 Node-RED 态势监控与告警流':
+    'Orquestar flujos de monitoreo de situación y alertas con Node-RED',
+  '定制 Meshtastic 端侧固件与传感器集成':
+    'Personalizar firmware en el dispositivo Meshtastic e integración de sensores',
+  应急通信与搜救团队技术人员:
+    'Personal técnico de equipos de comunicación de emergencia y búsqueda y rescate',
+  野外勘探与户外赛事组织者: 'Organizadores de exploración de campo y eventos al aire libre',
+  '隧道/管廊/矿道施工通信工程师':
+    'Ingenieros de comunicación para construcción de túneles/galerías/minas',
+  物联网与嵌入式开发工程师: 'Ingenieros de desarrollo de IoT y sistemas embebidos',
+  'LoRa Mesh 应急通信网络规划与拓扑图':
+    'Planificación de red de comunicación de emergencia LoRa Mesh y diagrama de topología',
+  设备快速配网与信道加密操作手册:
+    'Manual de configuración rápida de red de dispositivos y cifrado de canales',
+  'LoRa-MQTT 网关固件配置与 Node-RED 监控流程文件':
+    'Configuración de firmware de gateway LoRa-MQTT y archivos de flujo de monitoreo Node-RED',
+  '离网传感定制固件源码与编译工程（L3）':
+    'Código fuente de firmware personalizado para sensores off-grid y proyecto de compilación (L3)',
+  基础组网与离线通信: 'Red básica y comunicación offline',
+  '理解 LoRa 物理特性与 Meshtastic 路由拓扑原理':
+    'Comprender las características físicas de LoRa y los principios de topología de enrutamiento Meshtastic',
+  '熟练配置节点角色（Client / Repeater / Router）与信道加密（256 位 AES PSK）':
+    'Configurar con soltura roles de nodos (Client / Repeater / Router) y cifrado de canales (AES PSK de 256 bits)',
+  掌握离网环境下终端通信与地图定位实操:
+    'Dominar la práctica de comunicación de terminales y localización por mapas en entornos off-grid',
+  '完成至少 3 节点现场组网，实现点对点、群组广播及位置共享':
+    'Completar la red en sitio con al menos 3 nodos, logrando punto a punto, difusión grupal y compartición de ubicación',
+  '状态监控与 MQTT 桥接': 'Monitoreo de estados y puente MQTT',
+  '掌握 LoRa Mesh 与局域网/公网的 MQTT 桥接方法':
+    'Dominar el método de puente MQTT entre LoRa Mesh y red local/pública',
+  '掌握基于 Node-RED 的 Mesh 遥测数据解析与自动化流编排':
+    'Dominar el análisis de datos de telemetría Mesh y la orquestación de flujos automatizados basados en Node-RED',
+  具备搭建全域通信态势监控看板的能力:
+    'Capacidad para construir paneles de monitoreo de situación de comunicación de dominio completo',
+  '完成 1 套 LoRa-MQTT 网关上线，看板实时显示节点坐标与电量状态':
+    'Completar la puesta en marcha de 1 gateway LoRa-MQTT, con panel mostrando en tiempo real coordenadas de nodos y estado de batería',
+  离网传感集成与固件定制: 'Integración de sensores off-grid y personalización de firmware',
+  '掌握 Meshtastic 开源固件架构与 C++ 源码定制流程':
+    'Dominar la arquitectura de firmware de código abierto Meshtastic y el proceso de personalización de código C++',
+  '掌握基于 PlatformIO 的嵌入式编译与固件烧录':
+    'Dominar la compilación embebida y la grabación de firmware basadas en PlatformIO',
+  具备独立设计与构建离网环境监测节点的能力:
+    'Capacidad para diseñar y construir de forma independiente nodos de monitoreo ambiental off-grid',
+  '完成集成 BME280 环境传感器的 Wio Tracker L1 Pro 定制固件编译与实机验证':
+    'Completar la compilación de firmware personalizado para Wio Tracker L1 Pro con sensor ambiental BME280 integrado y verificación en dispositivo real',
+  '基于轻量边缘摄像头与工业级多路 AI 计算主机，构建目标检测、区域入侵告警与自动化联动的边缘视觉方案。':
+    'Basado en cámaras ligeras de borde y hosts de cómputo de IA multicanal de grado industrial, construye una solución de visión en el borde con detección de objetos, alertas de intrusión en zona y vinculación automatizada.',
+  '传统监控仅能事后录像回溯，无法在风险发生瞬间产生结构化告警；移动侦测受光线变化、雨雪晃动干扰严重，误报率高。视觉 AI 定制开发周期长、需专门算法工程师与专用服务机架，方案商难以权衡单点嵌入式设备与多路集中服务器的性能与成本。':
+    'La videovigilancia tradicional solo permite revisar grabaciones después del evento, sin poder generar alertas estructuradas en el instante en que ocurre el riesgo; la detección de movimiento se ve gravemente afectada por cambios de iluminación y agitación por lluvia/nieve, con altas tasas de falsas alarmas. El desarrollo personalizado de visión por IA tiene ciclos largos, requiere ingenieros de algoritmos especializados y racks de servidores dedicados, y a los proveedores de soluciones les cuesta equilibrar el rendimiento y costo entre dispositivos embebidos de un solo punto y servidores centralizados multicanal.',
+  'L1 具备基础网络与浏览器操作经验，能连接 Wi-Fi 与访问 Web 界面；L2 理解 IP 网络、Docker 与 MQTT 基础，能编辑 YAML 配置文件；L3 具备 Python 与 Linux 命令行基础，了解目标检测基本原理':
+    'L1 tiene experiencia básica en redes y operaciones de navegador, puede conectarse a Wi-Fi y acceder a interfaces Web; L2 entiende redes IP, Docker y conceptos básicos de MQTT, puede editar archivos de configuración YAML; L3 tiene base en Python y línea de comandos Linux, conoce los principios básicos de detección de objetos',
+  '物业与园区安防：周界防范、人员越界告警、夜间异常驻留检测':
+    'Seguridad de propiedades y campus: protección perimetral, alertas de cruce de límites por personas, detección de permanencia anómala nocturna',
+  '工业制造与安全生产：未佩戴安全帽/反光衣检测、危险区域人员闯入、输送带状态监控':
+    'Fabricación industrial y seguridad laboral: detección de falta de casco/chaleco reflectante, intrusión de personas en zonas peligrosas, monitoreo de estado de cintas transportadoras',
+  '智慧客流与商业统计：区域人流计数、驻留时长热力图':
+    'Tráfico inteligente y estadísticas comerciales: conteo de personas por zona, mapas de calor de duración de permanencia',
+  '农业与室外监控：PoE 供电户外点位监测、特定目标识别':
+    'Agricultura y monitoreo exterior: monitoreo de puntos exteriores con alimentación PoE, reconocimiento de objetivos específicos',
+  '缺乏实时事件感知，仅能事后回溯':
+    'Falta de percepción de eventos en tiempo real, solo permite revisión posterior',
+  '移动侦测误报率高，规则单一':
+    'Alta tasa de falsas alarmas en detección de movimiento, reglas simples',
+  '视觉 AI 落地与工程门槛高': 'Implementación de visión por IA con barreras de ingeniería elevadas',
+  '边缘算力适配困难，单点与多路选型难':
+    'Dificultad de adaptación de cómputo en el borde, selección compleja entre un solo punto y multicanal',
+  '配置 reCamera 端侧目标检测与 RTSP 推流':
+    'Configurar detección de objetos en el dispositivo reCamera y transmisión RTSP',
+  '编排 Node-RED 视觉事件与声光告警联动':
+    'Orquestar la vinculación de eventos visuales Node-RED con alertas audiovisuales',
+  '搭建 Frigate 多路 RTSP 汇聚与 NVR 录像管理':
+    'Construir agregación multicanal RTSP de Frigate y gestión de grabación NVR',
+  '配置检测区域（Zones）与置信度阈值调优':
+    'Configurar zonas de detección (Zones) y optimización de umbrales de confianza',
+  '集成 Home Assistant 跨系统自动化联动':
+    'Integrar vinculación automatizada entre sistemas con Home Assistant',
+  '训练 YOLO 自定义模型并完成 TensorRT/cvimodel 量化部署':
+    'Entrenar modelos personalizados YOLO y completar el despliegue cuantizado TensorRT/cvimodel',
+  物业园区安防与运维工程师: 'Ingenieros de seguridad y operaciones de campus y propiedades',
+  工业制造安全生产管理人员: 'Personal de gestión de seguridad en fabricación industrial',
+  智慧商业与客流分析从业者: 'Profesionales de comercio inteligente y análisis de tráfico',
+  农业与户外监控系统集成商: 'Integradores de sistemas de monitoreo agrícola y exterior',
+  'AIoT 与计算机视觉开发工程师': 'Ingenieros de desarrollo de AIoT y visión por computadora',
+  视觉系统架构设计图与网络拓扑说明:
+    'Diagrama de diseño de arquitectura del sistema visual y documentación de topología de red',
+  'reCamera Node-RED 联动流程配置文件':
+    'Archivo de configuración de flujo de vinculación reCamera Node-RED',
+  'Frigate 配置文件（frigate.yml）与 HA 自动化脚本':
+    'Archivo de configuración Frigate (frigate.yml) y scripts de automatización HA',
+  误报率调优前后测试对比记录表:
+    'Tabla de registro comparativa de pruebas antes y después de la optimización de tasa de falsas alarmas',
+  '自定义数据集、训练配置与量化后模型文件（L3）':
+    'Conjunto de datos personalizado, configuración de entrenamiento y archivos de modelo cuantizado (L3)',
+  双线体验与基础配置: 'Experiencia de doble línea y configuración básica',
+  '理解帧率、分辨率、置信度阈值与 IoU 等视觉核心概念':
+    'Comprender conceptos visuales centrales como tasa de fotogramas, resolución, umbral de confianza e IoU',
+  '独立完成 reCamera 设备的网络配置与视频流输出':
+    'Completar de forma independiente la configuración de red y la salida de flujo de video del dispositivo reCamera',
+  掌握轻节点与强节点方案的适用边界与选型依据:
+    'Dominar los límites de aplicabilidad y criterios de selección entre soluciones de nodo ligero y nodo potente',
+  '完成 1 台 reCamera 节点的网络配置与基础目标识别验证':
+    'Completar la configuración de red de 1 nodo reCamera y la verificación básica de reconocimiento de objetivos',
+  双线场景联动与多路汇聚: 'Vinculación de escenarios de doble línea y agregación multicanal',
+  '掌握在 reCamera 上使用 Node-RED 实现边缘事件的本地联动':
+    'Dominar el uso de Node-RED en reCamera para lograr la vinculación local de eventos en el borde',
+  '掌握 Frigate frigate.yml 的多路配置、区域绘制与参数调优':
+    'Dominar la configuración multicanal, dibujo de zonas y optimización de parámetros en frigate.yml de Frigate',
+  '掌握 Frigate 与 Home Assistant 联动配置与跨系统事件驱动逻辑':
+    'Dominar la configuración de vinculación entre Frigate y Home Assistant y la lógica de activación de eventos entre sistemas',
+  '完成 1 套包含 2 路以上 RTSP 接入、Frigate 检测、HA 联动与误报调优的完整系统':
+    'Completar 1 sistema completo con más de 2 canales de acceso RTSP, detección Frigate, vinculación HA y optimización de falsas alarmas',
+  模型定制与边缘部署优化: 'Personalización de modelos y optimización de despliegue en el borde',
+  '掌握视觉 AI 从数据标注、模型训练到边缘部署的完整工程闭环':
+    'Dominar el ciclo de ingeniería completo de visión por IA, desde anotación de datos y entrenamiento de modelos hasta despliegue en el borde',
+  '掌握 TensorRT 与嵌入式模型量化转换的关键工具链':
+    'Dominar las cadenas de herramientas clave para la conversión de cuantización de modelos TensorRT y embebidos',
+  具备独立设计和交付垂直行业视觉识别方案的能力:
+    'Capacidad para diseñar y entregar de forma independiente soluciones de reconocimiento visual para industrias verticales',
+  '交付 1 套自定义训练的目标检测模型，并在硬件上完成实跑验证':
+    'Entregar 1 modelo de detección de objetos entrenado personalizado y completar la verificación de ejecución en hardware',
+  '工业级传感器与4G/LoRaWAN双链路，实现广域场景低功耗环境监测与数据采集。':
+    'Sensores de grado industrial y doble enlace 4G/LoRaWAN para lograr el monitoreo ambiental de bajo consumo y la recolección de datos en escenarios de amplia cobertura.',
+  '面向连栋温室大棚、设施园艺、河道水质监测、城市内涝点与工业仓储等广域分散场景，偏远点位布线取电成本高，野外山地与河流断面上百米至数公里铺设线缆工程量巨大。现场多厂商传感器各自定义私有协议，二次开发与协议适配周期长；霜冻、水质恶化、土壤干旱等异常依赖人工定期巡检，故障发现晚且耗费人力；采集到的环境数据停留在云端大屏或手机App，无法与既有灌溉/风机等执行机构联动，也无法对接第三方业务系统。':
+    'Para escenarios dispersos de amplia cobertura como invernaderos multivanos, horticultura protegida, monitoreo de calidad de agua en ríos, puntos de inundación urbana y almacenes industriales, el cableado y la toma de energía en puntos remotos tienen costos elevados, y el tendido de cables de cientos de metros a varios kilómetros en terrenos montañosos y secciones de río implica una obra enorme. Los sensores de múltiples fabricantes en sitio definen sus propios protocolos privados, con ciclos largos de desarrollo secundario y adaptación de protocolos; anomalías como heladas, deterioro de la calidad del agua y sequía del suelo dependen de inspecciones manuales periódicas, con detección tardía de fallas y alto consumo de mano de obra; los datos ambientales recolectados se quedan en paneles en la nube o aplicaciones móviles, sin poder vincularse con actuadores existentes como sistemas de riego/ventiladores, ni integrarse con sistemas de negocio de terceros.',
+  'L1无；L2建议具备RS485/Modbus或电子接线基础，能读懂传感器接线图；L3建议具备HTTP API调用、JSON解析与Linux命令行基础':
+    'L1 sin requisitos; L2 se recomienda tener base en RS485/Modbus o cableado electrónico, capaz de leer diagramas de cableado de sensores; L3 se recomienda tener base en llamadas HTTP API, análisis de JSON y línea de comandos Linux',
+  '智慧农业与设施园艺：土壤温湿度/EC监测、温室CO2浓度调控、精准水肥灌溉联动':
+    'Agricultura inteligente y horticultura protegida: monitoreo de temperatura/humedad/EC del suelo, regulación de concentración de CO2 en invernaderos, vinculación de riego preciso de agua y fertilizantes',
+  '水质与生态环境监测：河道断面与养殖水体pH值监测、户外微型气象站':
+    'Monitoreo de calidad de agua y entorno ecológico: monitoreo de pH en secciones de río y cuerpos de agua de cultivo, mini estaciones meteorológicas exteriores',
+  '智慧市政与城市内涝：立交桥与低洼积水监测、管网温湿度与压力状态监测':
+    'Municipio inteligente e inundación urbana: monitoreo de acumulación de agua en pasos a desnivel y zonas bajas, monitoreo de temperatura, humedad y presión en redes de tuberías',
+  '工业仓储与厂房监控：恒温恒湿库房监测、工业除尘与废气排放环境参数监控':
+    'Almacenes industriales y monitoreo de plantas: monitoreo de almacenes con temperatura y humedad constantes, monitoreo de parámetros ambientales de eliminación de polvo industrial y emisión de gases de escape',
+  偏远点位取电与布线成本高: 'Costos elevados de toma de energía y cableado en puntos remotos',
+  传感器协议多且不兼容: 'Múltiples protocolos de sensores incompatibles entre sí',
+  异常响应滞后与人工巡检耗时:
+    'Respuesta tardía a anomalías e inspecciones manuales que consumen tiempo',
+  缺乏标准化自动化与第三方对接能力:
+    'Falta de automatización estandarizada y capacidad de integración con terceros',
+  '4G全网通': '4G multibanda global',
+  '多环境要素采集（土壤/气象/气体/水质）':
+    'Recolección de múltiples factores ambientales (suelo/meteorología/gases/calidad del agua)',
+  '无线广域传输（4G蜂窝直连 / LoRaWAN）':
+    'Transmisión inalámbrica de amplia cobertura (conexión directa celular 4G / LoRaWAN)',
+  云端报表与多条件告警配置: 'Informes en la nube y configuración de alertas multicondición',
+  'SenseCAP Open API数据对接与提取': 'Integración y extracción de datos mediante SenseCAP Open API',
+  'Node-RED本地阈值联动控制编排':
+    'Orquestación de control de vinculación por umbrales locales con Node-RED',
+  时序数据库存储与Grafana私有化看板:
+    'Almacenamiento en base de datos de series temporales y paneles privados con Grafana',
+  教研团队与实训讲师: 'Equipos de investigación educativa e instructores de formación práctica',
+  '农业、环保、市政工程技术人员':
+    'Personal técnico de agricultura, protección ambiental e ingeniería municipal',
+  合作院校与政企实训学员:
+    'Estudiantes de formación práctica de instituciones colaboradoras y entidades gubernamentales/empresariales',
+  传感器网络部署图与电气接线定义表:
+    'Diagrama de despliegue de red de sensores y tabla de definición de cableado eléctrico',
+  'Modbus RTU从机地址与寄存器映射字典':
+    'Diccionario de mapeo de direcciones de esclavos y registros Modbus RTU',
+  'SenseCraft Data告警策略配置清单':
+    'Lista de configuración de estrategias de alerta de SenseCraft Data',
+  'Node-RED自动化流程文件（.json）与API集成调用示例代码（L3）':
+    'Archivo de flujo de automatización Node-RED (.json) y código de ejemplo de llamadas de integración API (L3)',
+  'Grafana监控大屏配置文件（L3）':
+    'Archivo de configuración de panel de monitoreo grande Grafana (L3)',
+  环境感知网络架构与数据监视: 'Arquitectura de red de detección ambiental y monitoreo de datos',
+  '理解4G与LoRaWAN双通信拓扑，掌握SenseCraft Data平台实时监视与报表操作':
+    'Comprender la topología de doble comunicación 4G y LoRaWAN, dominar el monitoreo en tiempo real y las operaciones de informes de la plataforma SenseCraft Data',
+  '理解4G DTU与LoRaWAN网关在物联网数据采集中的不同拓扑结构与适用条件':
+    'Comprender las diferentes topologías y condiciones de aplicabilidad de los DTU 4G y gateways LoRaWAN en la recolección de datos IoT',
+  '熟练使用SenseCraft Data网页端与移动端App查看多维度环境参数与历史趋势曲线':
+    'Usar con soltura la versión web y la aplicación móvil de SenseCraft Data para consultar parámetros ambientales multidimensionales y curvas de tendencias históricas',
+  '了解土壤、水质、气象等典型工业传感器的测量原理与部署注意事项':
+    'Conocer los principios de medición y las consideraciones de despliegue de sensores industriales típicos como los de suelo, calidad de agua y meteorología',
+  '传感器接线、Modbus配置与规则告警':
+    'Cableado de sensores, configuración Modbus y alertas por reglas',
+  '掌握RS485硬件接线、Modbus RTU寄存器配置与多条件告警策略':
+    'Dominar el cableado de hardware RS485, la configuración de registros Modbus RTU y las estrategias de alertas multicondición',
+  '掌握RS485差分接线、5V/12V电源分配与Modbus RTU寄存器寻址配置':
+    'Dominar el cableado diferencial RS485, la distribución de energía 5V/12V y la configuración de direccionamiento de registros Modbus RTU',
+  '熟练完成4G数据采集器（或LoRaWAN网关）的设备绑定与轮询周期设置':
+    'Completar con soltura la vinculación de dispositivos y la configuración de periodos de sondeo del registrador de datos 4G (o gateway LoRaWAN)',
+  '配置3类以上业务告警策略（温度上限报警、土壤水分过低告警、设备离线通知）':
+    'Configurar más de 3 tipos de estrategias de alertas de negocio (alarma de límite superior de temperatura, alerta de humedad del suelo demasiado baja, notificación de dispositivo fuera de línea)',
+  API数据集成与本地边缘自动化: 'Integración de datos API y automatización local en el borde',
+  '掌握SenseCAP Open API调用，使用reComputer R1025+Node-RED实现本地闭环控制与第三方平台对接':
+    'Dominar las llamadas a SenseCAP Open API, usar reComputer R1025+Node-RED para lograr el control de ciclo cerrado local e integración con plataformas de terceros',
+  '掌握SenseCAP Open API鉴权（Access ID / Access Key，HTTP Basic Auth）与遥测数据提取接口调用':
+    'Dominar la autenticación de SenseCAP Open API (Access ID / Access Key, HTTP Basic Auth) y las llamadas a interfaces de extracción de datos de telemetría',
+  '在reComputer R1025上部署Node-RED编排本地自动化控制流，根据传感器数值触发执行机构':
+    'Desplegar Node-RED en reComputer R1025 para orquestar flujos de control de automatización locales, activando actuadores según los valores de los sensores',
+  '将环境时序数据接入InfluxDB与Grafana，设计私有化数据监控大屏':
+    'Integrar datos de series temporales ambientales en InfluxDB y Grafana, diseñar paneles grandes de monitoreo de datos privados',
+  '六轴桌面机械臂加多模态感知，实现主从遥操到3D空间精准抓取与具身智能开发。':
+    'Brazo robótico de escritorio de seis ejes combinado con percepción multimodal, para lograr la teleoperación maestro-esclavo hasta la captura precisa en espacio 3D y el desarrollo de inteligencia corporizada.',
+  '面向农产品外观分拣、轻量自动化产线辅助上下料、展厅展位迎宾演示与辅助作业工位等场景，传统机械臂教学从运动学推导与电机控制讲起，应用侧人员上手周期长。大语言模型多局限于文本生成，缺乏接入物理执行机构的标准路径；从零搭建分拣/搬运演示需联调视觉识别、运动规划与抓取时序，多系统集成难度大；新手操作带动力机械臂，存在碰撞、误入工作空间等物理安全风险。':
+    'Para escenarios como clasificación por apariencia de productos agrícolas, asistencia de carga/descarga en líneas de producción automatizadas ligeras, demostraciones de recepción en stands de exposición y estaciones de trabajo asistidas, la enseñanza tradicional de brazos robóticos comienza con derivación cinemática y control de motores, con ciclos de aprendizaje largos para el personal del lado de aplicaciones. Los grandes modelos de lenguaje se limitan mayoritariamente a la generación de texto, careciendo de una ruta estándar para conectarse a actuadores físicos; construir desde cero una demostración de clasificación/transporte requiere la depuración conjunta de reconocimiento visual, planificación de movimiento y secuenciación de captura, con gran dificultad de integración de múltiples sistemas; los principiantes que operan brazos robóticos con motores enfrentan riesgos de seguridad física como colisiones e entrada accidental al espacio de trabajo.',
+  'L1无（零基础，具备基本电脑操作技能）；L2掌握基础网络配置与系统联动概念；L3具备基础Python编程与Linux技能':
+    'L1 sin requisitos (sin base, con habilidades básicas de operación de computadora); L2 domina conceptos básicos de configuración de red y vinculación de sistemas; L3 tiene base en programación Python y habilidades Linux',
+  '农产品与工业件外观分拣：合格品、瑕疵品与疑似品分类抓取':
+    'Clasificación por apariencia de productos agrícolas y piezas industriales: captura clasificatoria de productos conformes, defectuosos y sospechosos',
+  '轻量自动化产线辅助：物料移载、工件推送、按序码放':
+    'Asistencia en líneas de producción automatizadas ligeras: transferencia de materiales, empuje de piezas, apilado ordenado',
+  '展厅展位与教学演示：语音/视觉交互迎宾、轨迹展示':
+    'Stands de exposición y demostraciones educativas: recepción con interacción por voz/visión, exhibición de trayectorias',
+  '辅助作业与自动化工位：定时定点巡检摆拍、轻量协作抓取':
+    'Trabajo asistido y estaciones automatizadas: inspección y fotografía programada en puntos específicos, captura colaborativa ligera',
+  底层控制与算法门槛高: 'Barreras elevadas en control de bajo nivel y algoritmos',
+  自然语言到物理执行断层: 'Brecha entre el lenguaje natural y la ejecución física',
+  视觉与执行协同调试复杂: 'Depuración conjunta compleja entre visión y ejecución',
+  现场运行安全风险: 'Riesgos de seguridad en la operación en sitio',
+  'Pinocchio（Python刚体运动学解算库）':
+    'Pinocchio (biblioteca de resolución cinemática de cuerpos rígidos en Python)',
+  'Motorbridge SDK（总线伺服舵机驱动）': 'Motorbridge SDK (controlador de servos de bus)',
+  'HTTP / MQTT消息通知': 'Notificaciones de mensajes HTTP / MQTT',
+  'LeRobot（动作数据集标准）': 'LeRobot (estándar de conjuntos de datos de acciones)',
+  'Isaac Sim（数字孪生仿真，L3选修）': 'Isaac Sim (simulación de gemelo digital, opcional en L3)',
+  机械臂选型与商业取舍判断: 'Selección de brazos robóticos y juicio de compensaciones comerciales',
+  硬件急停与工作空间安全规范操作:
+    'Parada de emergencia de hardware y operación normativa de seguridad del espacio de trabajo',
+  主从臂遥操与语音指令控制: 'Teleoperación de brazo maestro-esclavo y control por comandos de voz',
+  多动作流程编排与安全确认机制配置:
+    'Orquestación de flujos de múltiples acciones y configuración de mecanismos de confirmación de seguridad',
+  工位视觉事件触发与微场景联调:
+    'Activación de eventos visuales en estación de trabajo y depuración conjunta de microescenarios',
+  'RGB-D深度相机3D定位与手眼对齐':
+    'Localización 3D con cámara de profundidad RGB-D y alineación ojo-mano',
+  Pinocchio逆运动学求解与异常处理:
+    'Resolución de cinemática inversa con Pinocchio y manejo de anomalías',
+  Motorbridge驱动真机空间抓取闭环:
+    'Ciclo cerrado de captura espacial en robot real conducido por Motorbridge',
+  '遥操动作数据集采集（LeRobot标准）':
+    'Recolección de conjuntos de datos de acciones de teleoperación (estándar LeRobot)',
+  'VLA具身大模型与Isaac Sim数字孪生初探':
+    'Introducción a grandes modelos corporizados VLA y gemelos digitales Isaac Sim',
+  机器人与自动化工程技术人员: 'Personal técnico de ingeniería robótica y de automatización',
+  机械臂工作空间布置与安全操作记录:
+    'Distribución del espacio de trabajo del brazo robótico y registro de operaciones seguras',
+  SenseCraft动作流程配置与工位视觉联动演示系统:
+    'Sistema de demostración de configuración de flujos de acciones SenseCraft y vinculación visual en estación de trabajo',
+  '3D空间自动抓取Python工程源码（深度相机 + Pinocchio + Motorbridge）':
+    'Código fuente de proyecto Python de captura automática en espacio 3D (cámara de profundidad + Pinocchio + Motorbridge)',
+  遥操动作数据集样本与方案设计交付文档:
+    'Muestras de conjuntos de datos de acciones de teleoperación y documento de entrega de diseño de solución',
+  '选型认知、安全规范与开箱上手':
+    'Conocimiento de selección, normativas de seguridad y puesta en marcha',
+  '建立商业选型认知与现场安全底线，使用SenseCraft平台零代码完成语音与遥操初体验':
+    'Establecer el conocimiento de selección comercial y la línea base de seguridad en sitio, usar la plataforma SenseCraft sin código para completar la experiencia inicial de voz y teleoperación',
+  '理解工业机械臂分类（直角坐标滑台、SCARA、Delta、六轴关节）与速度/精度/负载/安全/成本的商业选型权衡':
+    'Comprender la clasificación de brazos robóticos industriales (mesa cartesiana, SCARA, Delta, articulado de seis ejes) y las compensaciones comerciales de velocidad/precisión/carga útil/seguridad/costo',
+  '掌握机械臂物理工作空间边界、硬件急停使用与安全操作规程':
+    'Dominar los límites del espacio de trabajo físico del brazo robótico, el uso de la parada de emergencia de hardware y los procedimientos de operación segura',
+  '掌握SenseCraft平台开箱连接，跑通主从遥操与语音指令夹取':
+    'Dominar la conexión inicial de la plataforma SenseCraft, ejecutar la teleoperación maestro-esclavo y la captura por comando de voz',
+  '场景剖析、空间直觉与多模态编排':
+    'Análisis de escenarios, intuición espacial y orquestación multimodal',
+  '讲清机械臂与3D场景的匹配价值，掌握多动作流程编排与工位视觉事件触发联动':
+    'Explicar claramente el valor de coincidencia entre brazos robóticos y escenarios 3D, dominar la orquestación de flujos de múltiples acciones y la vinculación por activación de eventos visuales en estación de trabajo',
+  能向客户清晰阐述3D场景为什么需要六轴机械臂及其选型边界:
+    'Capacidad para explicar claramente a los clientes por qué los escenarios 3D requieren brazos robóticos de seis ejes y sus límites de selección',
+  '掌握SenseCraft多动作流程编排与"生成 → 3D预览 → 人工确认 → 真机执行"安全确认机制':
+    'Dominar la orquestación de flujos de múltiples acciones SenseCraft y el mecanismo de confirmación de seguridad «generar → vista previa 3D → confirmación humana → ejecución en robot real»',
+  '掌握基于工位视觉的事件触发与微场景搭建，连续3次稳定运行':
+    'Dominar la activación de eventos basada en visión de estación de trabajo y la construcción de microescenarios, con ejecución estable durante 3 veces consecutivas',
+  '3D空间抓取闭环与具身智能前瞻':
+    'Ciclo cerrado de captura en espacio 3D y perspectivas de inteligencia corporizada',
+  '通过深度相机打通确定性3D空间抓取工程底座，拓展具身大模型与数字孪生视野':
+    'Establecer la base de ingeniería de captura determinista en espacio 3D mediante cámara de profundidad, ampliar las perspectivas de grandes modelos corporizados y gemelos digitales',
+  '使用RGB-D深度相机获取目标3D物理坐标，通过Python调用Pinocchio完成电机角度自动换算，利用Motorbridge驱动真机完成空间抓取与异常处理':
+    'Usar cámara de profundidad RGB-D para obtener coordenadas físicas 3D del objetivo, llamar a Pinocchio mediante Python para completar la conversión automática de ángulos de motores, y usar Motorbridge para conducir el robot real en la captura espacial y el manejo de anomalías',
+  '掌握主从遥操动作数据集采集流程（LeRobot标准格式），理解VLA具身大模型与Isaac Sim数字孪生仿真基本原理':
+    'Dominar el flujo de recolección de conjuntos de datos de acciones de teleoperación maestro-esclavo (formato estándar LeRobot), comprender los principios básicos de los grandes modelos corporizados VLA y la simulación de gemelos digitales Isaac Sim',
+  '交付完整Python抓取工程源码、遥操数据集与方案设计文档':
+    'Entregar el código fuente completo del proyecto de captura Python, el conjunto de datos de teleoperación y el documento de diseño de solución',
+
+  实战课: 'Curso Práctico',
+  交付课: 'Curso de Entrega',
+  机器人控制与具身智能: 'Control Robótico e Inteligencia Corporizada',
 };
 
 Object.assign(esDict, esNewDict);

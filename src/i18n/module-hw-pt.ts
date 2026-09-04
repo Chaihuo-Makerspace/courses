@@ -131,4 +131,222 @@ export const hwPtDict: Record<string, string> = {
   'reTerminal E1001 电子纸显示屏': 'Display ePaper reTerminal E1001',
   工业级叶面温湿度传感器: 'Sensor Industrial de Temperatura & Umidade Foliar',
   '耘小果 多要素环境监测仪': 'Monitor Ambiental Multiparâmetro Yunxiaoguo',
+  // === M1 hardwareIntro ===
+  'reComputer R1125 / R1225 工业物联网网关': 'Gateway IoT Industrial reComputer R1125 / R1225',
+  'XIAO ESP32-C6 开发板': 'Placa de Desenvolvimento XIAO ESP32-C6',
+  'DDSU666 单相导轨式智能电表': 'Medidor de Energia Inteligente Monofásico para Trilho DIN DDSU666',
+  'XY-MD02 工业温湿度变送器': 'Transmissor Industrial de Temperatura e Umidade XY-MD02',
+  'XIAO RS485 扩展板': 'Placa de Expansão XIAO RS485',
+  '现场中枢主机，运行Home Assistant平台与能耗看板':
+    'Host central local, executa a plataforma Home Assistant e o painel de consumo de energia',
+  '国内版R1125，海外带LoRa版R1225。作为局域网边缘中枢，统一纳管多协议设备并承载能耗监控与自动化逻辑。':
+    'Versão doméstica R1125, versão internacional com LoRa R1225. Como hub de borda na rede local, gerencia unificadamente dispositivos multiprotocolo e hospeda o monitoramento de consumo e a lógica de automação.',
+  '双频Wi-Fi 6 + BLE 5微控制器主控': 'Microcontrolador principal com Wi-Fi 6 dual-band + BLE 5',
+  '分别用于灯带控制节点、RS485通信节点与备用节点。通过ESPHome固件配置实现传感器采集与执行器控制，支持OTA管理。':
+    'Usado respectivamente como nó de controle de faixa de LED, nó de comunicação RS485 e nó reserva. A configuração do firmware ESPHome realiza aquisição de sensores e controle de atuadores, com suporte a gerenciamento OTA.',
+  'RS485 Modbus RTU能耗计量设备': 'Dispositivo de medição de consumo RS485 Modbus RTU',
+  '采集电压、电流、功率与累计电量，接入HA Energy模块实现实时用电功率曲线与分时能耗统计。':
+    'Coleta tensão, corrente, potência e consumo acumulado; integrado ao módulo HA Energy para curva de potência em tempo real e estatísticas de consumo por período.',
+  'Modbus RTU协议工业级环境传感设备': 'Sensor ambiental industrial com protocolo Modbus RTU',
+  '通过RS485差分总线接入，读取温湿度寄存器数据，用于工业环境状态监视与阈值联动。':
+    'Conectado via barramento diferencial RS485, lê dados de registradores de temperatura e umidade para monitoramento de estado ambiental industrial e automação por limiar.',
+  为XIAO开发板扩展工业RS485接口: 'Expande a interface industrial RS485 para a placa XIAO',
+  '连接温湿度变送器与电表，支持Modbus RTU寄存器读取，是消费级主控与工业总线之间的桥接硬件。':
+    'Conecta transmissores de temperatura/umidade e medidores de energia, suporta leitura de registradores Modbus RTU — é o hardware de ponte entre controladores de nível consumidor e barramentos industriais.',
+
+  // === M2 hardwareIntro ===
+  'SenseCAP Watcher（小智英文版）': 'SenseCAP Watcher (versão em inglês)',
+  'reComputer RK3588-40 边缘智能控制器': 'Controlador Inteligente de Borda reComputer RK3588-40',
+  '端侧多模态交互终端，语音采集与视觉识别入口':
+    'Terminal de interação multimodal de borda, ponto de entrada para captura de voz e reconhecimento visual',
+  '集成音视频采集与屏幕显示，支持目标检测、人员靠近感知与自然语言语音交互，通过Wi-Fi接入SenseCraft AI平台。':
+    'Integra captura audiovisual e tela, suporta detecção de objetos, percepção de aproximação de pessoas e interação por voz em linguagem natural, conectando-se à plataforma SenseCraft AI via Wi-Fi.',
+  'SenseCAP Watcher 小智英文版': 'SenseCAP Watcher versão em inglês',
+  运行业务系统与MCP桥接服务的边缘主机:
+    'Host de borda que executa sistemas de negócios e serviços de ponte MCP',
+  '16GB内存，6 TOPS算力，运行Docker容器化WMS仓储系统与MCP Bridge桥接服务，实现局域网内业务数据与大模型工具调用的对接。':
+    '16GB de memória, 6 TOPS de capacidade computacional; executa o sistema de armazenamento WMS em contêiner Docker e o serviço MCP Bridge, integrando dados de negócios na rede local com chamadas de ferramentas de modelos de linguagem.',
+  'L3进阶边缘算力主机，部署纯本地离线语音管线':
+    'Host de computação de borda avançado L3, implanta pipeline de voz puramente local offline',
+  '100 TOPS级别算力，预置JetPack/CUDA/TensorRT/PyTorch环境，部署Silero VAD+Whisper ASR+Qwen LLM+ChatTTS纯本地离线语音AI管线，断网依然可用。':
+    'Capacidade computacional de nível 100 TOPS, com ambiente JetPack/CUDA/TensorRT/PyTorch pré-instalado; implanta o pipeline de IA de voz puramente local offline Silero VAD + Whisper ASR + Qwen LLM + ChatTTS, funcionando mesmo sem internet.',
+
+  // === M3 hardwareIntro ===
+  'Meshtastic 应急通信套件 (Hazard Response Mission Pack, E2410180)':
+    'Kit de Comunicação de Emergência Meshtastic (Hazard Response Mission Pack, E2410180)',
+  'Wio 追踪器开发板 L1 Pro (114993649)':
+    'Placa de Desenvolvimento Rastreadora Wio L1 Pro (114993649)',
+  'SenseCAP Meshtastic & LoRa 太阳能节点 P1-Pro (114993633)':
+    'Nó Solar SenseCAP Meshtastic & LoRa P1-Pro (114993633)',
+  'Grove BME280 环境传感器 (101020193)': 'Sensor Ambiental Grove BME280 (101020193)',
+  '自组网标准实训包，含 4 台 T1000-E 卡片终端及配件':
+    'Pacote padrão de treinamento de rede auto-organizada, com 4 terminais de cartão T1000-E e acessórios',
+  '去中心化离线文字与位置通信标准实训包。包含 4 台 SenseCAP T1000-E 卡片式追踪终端，支持蓝牙配对与 Meshtastic App 配置，适用于 L1 基础组网与离线通信体验。终端内置 GPS 与 LoRa 射频，开机自动入网，支持点对点与群组广播。':
+    'Pacote padrão de treinamento para comunicação de texto e localização offline descentralizada. Inclui 4 terminais rastreadores de cartão SenseCAP T1000-E, com suporte a pareamento Bluetooth e configuração pelo app Meshtastic, adequado para rede básica e experiência de comunicação offline no L1. Os terminais têm GPS e rádio LoRa integrados, entram automaticamente na rede ao ligar e suportam ponto a ponto e broadcast em grupo.',
+  'Meshtastic 应急通信套件 Hazard Response Mission Pack':
+    'Kit de Comunicação de Emergência Meshtastic Hazard Response Mission Pack',
+  '带屏手持开发终端，支持位置追踪与固件定制':
+    'Terminal de desenvolvimento portátil com tela, suporta rastreamento de localização e personalização de firmware',
+  '带 1.3" OLED 屏幕的手持开发终端，内置 GPS 与 2000mAh 电池。适用于 L3 端侧固件定制开发，支持屏幕 UI 自定义与 I2C/UART 传感器扩展。基于 PlatformIO 编译 Meshtastic 源码，目标板型为 seeed_wio_tracker_L1。':
+    'Terminal de desenvolvimento portátil com tela OLED de 1.3", GPS integrado e bateria de 2000mAh. Adequado para desenvolvimento personalizado de firmware de borda no L3, com suporte a personalização de UI na tela e expansão de sensores I2C/UART. Compila o código-fonte Meshtastic via PlatformIO, com placa-alvo seeed_wio_tracker_L1.',
+  'Wio 追踪器开发板 L1 Pro': 'Placa de Desenvolvimento Rastreadora Wio L1 Pro',
+  '野外免维护中继基站，太阳能自供电':
+    'Estação repetidora de campo sem manutenção, com autoalimentação solar',
+  '户外太阳能自供电中继节点，IPX6 防护等级。扩展网络覆盖与跳数，适用于野外长期值守与高位中继部署。支持 Meshtastic 协议自动中继转发，无需市电供电。':
+    'Nó repetidor externo com autoalimentação solar, grau de proteção IPX6. Estende a cobertura e o número de saltos da rede, adequado para operação prolongada em campo e implantação de repetidor em ponto elevado. Suporta retransmissão automática via protocolo Meshtastic, sem necessidade de energia da rede elétrica.',
+  'SenseCAP Meshtastic & LoRa 太阳能节点 P1-Pro': 'Nó Solar SenseCAP Meshtastic & LoRa P1-Pro',
+  'LoRa-MQTT 网关节点，桥接 Mesh 与局域网':
+    'Nó gateway LoRa-MQTT, faz a ponte entre a rede Mesh e a rede local',
+  '出厂预刷 Meshtastic 固件的网关节点。将 LoRa Mesh 报文桥接至局域网 MQTT Broker 与监控大屏，支持 Wi-Fi 连接与数据上行转发、下行命令广播。适用于 L2 公网融合与态势监控。':
+    'Nó gateway com firmware Meshtastic pré-instalado de fábrica. Faz a ponte de mensagens LoRa Mesh para o MQTT Broker da rede local e painéis de monitoramento, suporta conexão Wi-Fi, encaminhamento ascendente de dados e broadcast descendente de comandos. Adequado para integração com rede pública e monitoramento de situação no L2.',
+  高精度温湿度与气压测量传感器:
+    'Sensor de alta precisão para medição de temperatura, umidade e pressão atmosférica',
+  '通过 Grove I2C 接口连接至 Wio Tracker L1 Pro，采集温湿度与气压数据。作为自定义遥测数据注入 Mesh 网络，适用于 L3 离网环境监测节点开发。':
+    'Conectado ao Wio Tracker L1 Pro via interface Grove I2C para coletar dados de temperatura, umidade e pressão. Injeta dados de telemetria personalizados na rede Mesh, adequado para desenvolvimento de nós de monitoramento ambiental off-grid no L3.',
+  'Grove BME280 环境传感器': 'Sensor Ambiental Grove BME280',
+
+  // === M4 hardwareIntro ===
+  '8+2 口千兆 PoE 工业交换机 (802.3af/at)':
+    'Switch Industrial Gigabit PoE de 8+2 portas (802.3af/at)',
+  'CUDY AX3000 Wi-Fi 6 千兆路由器': 'Roteador Gigabit CUDY AX3000 Wi-Fi 6',
+  '轻量视觉推理主机，8GB 内存，6 TOPS 算力':
+    'Host leve de inferência visual, 8GB de memória, 6 TOPS de capacidade',
+  '运行事件联动与轻量视频监控看板的边缘智能控制器。配备 8GB 内存与 6 TOPS NPU 算力，适用于 L1/L2 阶段的轻量视觉推理与 Node-RED 事件联动。可作为 Frigate 与 Home Assistant 的轻量部署主机。':
+    'Controlador inteligente de borda que executa vinculação de eventos e painel leve de monitoramento de vídeo. Equipado com 8GB de memória e NPU de 6 TOPS, adequado para inferência visual leve e vinculação de eventos com Node-RED nas fases L1/L2. Pode servir como host de implantação leve para Frigate e Home Assistant.',
+  '单机位视觉节点，端侧轻量目标检测与 RTSP 推流':
+    'Nó visual de câmera única, detecção leve de objetos na borda e streaming RTSP',
+  '模块化开源 AI 相机，2002w 支持 Wi-Fi/AP 模式，2002 支持百兆有线以太网。内置 NPU 推理与 Node-RED 零代码编排，即插即用，适用于 L1 单点轻量节点体验与 L2 端侧自动化联动。支持 RTSP 视频流输出（554 端口）。':
+    'Câmera de IA open-source modular; o modelo 2002w suporta modo Wi-Fi/AP, o 2002 suporta Ethernet com fio de 100Mbps. Com inferência NPU integrada e orquestração sem código via Node-RED, é plug-and-play, adequado para experiência de nó leve único no L1 e automação de borda no L2. Suporta saída de fluxo de vídeo RTSP (porta 554).',
+  'reCamera 2002w/2002 开源 AI 相机': 'Câmera de IA Open-Source reCamera 2002w/2002',
+  '多机位主力相机，PoE 单线供电推流':
+    'Câmera principal para múltiplas câmeras, alimentação e streaming por único cabo PoE',
+  '模块化开源 AI 相机，支持 PoE 交换机单线供电与视频推流。8GB 内存配置，适用于多路 NVR 汇聚分析的主力机位。通过 RTSP 接入 Frigate，支持检测区域与置信度阈值配置。':
+    'Câmera de IA open-source modular, suporta alimentação e streaming de vídeo por único cabo via switch PoE. Configuração de 8GB de memória, adequada como câmera principal para análise agregada de NVR multicanal. Conecta-se ao Frigate via RTSP, com suporte a configuração de zonas de detecção e limiar de confiança.',
+  'reCamera 2002 HQ PoE 8GB 开源 AI 相机': 'Câmera de IA Open-Source reCamera 2002 HQ PoE 8GB',
+  '高性能视频中枢，工业级 Jetson 边缘服务器':
+    'Hub de vídeo de alto desempenho, servidor de borda Jetson industrial',
+  '工业级 Jetson Orin NX 16GB 边缘计算服务器，运行 Frigate NVR 汇聚多路检测。支持 GPU 硬件解码与 TensorRT 量化加速，适用于 L2 多路视频流汇聚与 L3 自定义模型推理部署。需刷写 JetPack 镜像并配置 Docker --runtime nvidia。':
+    'Servidor de computação de borda industrial Jetson Orin NX 16GB, executa o Frigate NVR para agregação de detecção multicanal. Suporta decodificação de vídeo por GPU e aceleração por quantização TensorRT, adequado para agregação de fluxos de vídeo multicanal no L2 e implantação de inferência de modelo personalizado no L3. Requer flash da imagem JetPack e configuração do Docker com --runtime nvidia.',
+  集中供电与高速组网: 'Alimentação centralizada e rede de alta velocidade',
+  '8+2 口千兆 PoE 交换机，符合 802.3af/at 标准。为 PoE 相机供电并汇聚局域网流量，适用于多路 reCamera HQ PoE 集中部署与 Frigate NVR 汇聚场景。':
+    'Switch Gigabit PoE de 8+2 portas, em conformidade com o padrão 802.3af/at. Alimenta câmeras PoE e agrega o tráfego da rede local, adequado para implantação centralizada de múltiplas reCamera HQ PoE e cenários de agregação Frigate NVR.',
+  '8+2 口千兆 PoE 工业交换机': 'Switch Industrial Gigabit PoE de 8+2 portas',
+  '独立现场局域网，承载多路视频推流':
+    'Rede local independente no local, suporta streaming de vídeo multicanal',
+  'Wi-Fi 6 千兆路由器，USB-C 供电。搭建独立现场局域网，分配静态 IP 地址段，承载多路高码率 RTSP 视频推流与开发调试。适用于培训现场与临时部署场景。':
+    'Roteador Gigabit Wi-Fi 6 com alimentação USB-C. Cria uma rede local independente no local, atribui faixa de IPs estáticos e suporta streaming RTSP de alta taxa de bits multicanal e desenvolvimento/depuração. Adequado para ambientes de treinamento e implantações temporárias.',
+  '接入现场时另配监控支架及通用配件（屏幕、电源）。':
+    'Na implantação no local, são configurados adicionalmente suportes de monitoramento e acessórios comuns (tela, fonte de alimentação).',
+
+  // === M5 hardwareIntro ===
+  '4G多通道数据采集器（114992169）': 'Coletor de Dados Multicanal 4G (114992169)',
+  '七合一气象环境传感器（101991050）': 'Sensor Ambiental Meteorológico 7-em-1 (101991050)',
+  '耘小果多要素农业监测仪（114993122）': 'Monitor Agrícola Multiparâmetro Yunxiaoguo (114993122)',
+  '4G土壤墒情监测仪（114993646）': 'Medidor de Umidade do Solo 4G (114993646)',
+  '叶面温湿度传感器（314990737）': 'Sensor de Temperatura e Umidade Foliar (314990737)',
+  'SenseCAP S2105土壤传感器（114992871）': 'Sensor de Solo SenseCAP S2105 (114992871)',
+  'SenseCAP S2103 CO2/温湿度传感器（114992869）':
+    'Sensor de CO2/Temperatura e Umidade SenseCAP S2103 (114992869)',
+  '4路RS485工业数采仪，经4G上报云平台':
+    'Aquisição de dados industrial com 4 canais RS485, relatório para nuvem via 4G',
+  '数采中枢，支持4路RS485通道，可经分线器扩展至最多32个传感器；4G蜂窝全网通直连，插卡即用，标准Modbus RTU协议，12V/2A电源适配器供电。':
+    'Hub de aquisição de dados com 4 canais RS485, expansível até 32 sensores via divisor; conexão direta 4G celular todas as bandas, plug-and-play com chip SIM, protocolo padrão Modbus RTU, alimentação por adaptador 12V/2A.',
+  '4G多通道数据采集器': 'Coletor de Dados Multicanal 4G',
+  '工业七合一气象站，RS485/SDI-12输出':
+    'Estação meteorológica industrial 7-em-1, saída RS485/SDI-12',
+  '集成超声波风速风向、雷达雨量、光照、温湿压与太阳总辐射；12~24V DC供电，IP66一体式防护，用于气象多参数总线解析实操。':
+    'Integra velocidade e direção do vento por ultrassom, precipitação por radar, luminosidade, temperatura/umidade/pressão e radiação solar total; alimentação 12~24V DC, proteção integrada IP66, usado para prática de análise de barramento multiparâmetro meteorológico.',
+  七合一气象环境传感器: 'Sensor Ambiental Meteorológico 7-em-1',
+  '一体化微气象农业监测仪，RS485输出': 'Monitor agrícola micrometeorológico integrado, saída RS485',
+  '集成空气温湿度、光照度、CO2紧凑型一体化监测；12V DC供电，农业室外防护等级，用于农业多要素采集教学对比与扩展测试。':
+    'Monitoramento compacto integrado de temperatura e umidade do ar, luminosidade e CO2; alimentação 12V DC, grau de proteção para ambientes agrícolas externos, usado para comparação didática e testes de expansão na coleta multiparâmetro agrícola.',
+  耘小果多要素农业监测仪: 'Monitor Agrícola Multiparâmetro Yunxiaoguo',
+  '管式土壤多层监测仪，内置4G与太阳能':
+    'Medidor tubular de solo em múltiplas camadas, com 4G e energia solar integrados',
+  '免布线深层土壤水分与温度连续监测；太阳能+锂电自供电，IP68防护，4G全网通无线直发，适用于野外无人值守土壤墒情监测。':
+    'Monitoramento contínuo de umidade e temperatura do solo em profundidade sem fiação; autoalimentação por energia solar + bateria de lítio, proteção IP68, transmissão direta sem fio 4G todas as bandas, adequado para monitoramento de umidade do solo em campo sem supervisão.',
+  '4G土壤墒情监测仪': 'Medidor de Umidade do Solo 4G',
+  '仿生叶片表面温湿度监测探头，RS485接口':
+    'Sonda de monitoramento de temperatura e umidade superficial de folha bionica, interface RS485',
+  '监测叶面温湿度与叶面结露时长；5~24V DC供电，IP67防护，用于作物叶面微气候监测与病害预警实验。':
+    'Monitora temperatura e umidade foliar e duração de orvalho na folha; alimentação 5~24V DC, proteção IP67, usado para monitoramento microclimático foliar de culturas e experimentos de alerta precoce de doenças.',
+  '本地自动化主机，运行Node-RED与API对接':
+    'Host de automação local, executa Node-RED e integração de API',
+  '带隔离RS485与双网口的边缘智能控制器；通过官方安装脚本部署Node-RED，访问http://[设备IP]:1880进行本地自动化编排，实现阈值判断与执行机构联动；12V/2A独立供电。':
+    'Controlador inteligente de borda com RS485 isolado e portas Ethernet duplas; implanta o Node-RED via script oficial de instalação, acessa http://[IP do dispositivo]:1880 para orquestração de automação local, realizando julgamento por limiar e vinculação com atuadores; alimentação independente 12V/2A.',
+  '工业级室外LoRaWAN汇聚网关，IP66': 'Gateway agregador LoRaWAN externo industrial, IP66',
+  '区域中心基站，汇聚无线传感器报文并经以太网/4G回传至云平台；EU868/US915频段，适用于野外大面积农场、无市电林区等远距离多点位免布线监测。':
+    'Estação-base central regional, agrega mensagens de sensores sem fio e as retorna à plataforma em nuvem via Ethernet/4G; bandas EU868/US915, adequado para monitoramento remoto multiponto sem fiação em grandes fazendas e florestas sem energia elétrica.',
+  '通用无线数据记录仪，协议转换节点':
+    'Registrador de dados sem fio universal, nó de conversão de protocolo',
+  '将传统有线Modbus RS485传感器改造为LoRaWAN节点，实现有线传感器的无线化接入与远距离回传。':
+    'Transforma sensores tradicionais com fio Modbus RS485 em nós LoRaWAN, permitindo acesso sem fio e retorno de longa distância de sensores com fio.',
+  '工业级探针型土壤水分/温度/EC传感器':
+    'Sensor industrial de umidade/temperatura/EC do solo tipo sonda',
+  '内置大容量锂亚电池，LoRaWAN无线报文，IP66防护；测量土壤水分（0~100%）、温度（-40~85℃）、电导率EC（0~20000 μS/cm），适用于农田土壤水肥环境无线远距离监测。':
+    'Bateria de lítio-tionila de grande capacidade integrada, transmissão sem fio LoRaWAN, proteção IP66; mede umidade do solo (0~100%), temperatura (-40~85℃) e condutividade elétrica EC (0~20000 μS/cm), adequado para monitoramento remoto sem fio do ambiente hídrico e fertilizante do solo em campos agrícolas.',
+  'SenseCAP S2105土壤传感器': 'Sensor de Solo SenseCAP S2105',
+  室内与大棚空气质量无线监测节点:
+    'Nó de monitoramento sem fio da qualidade do ar em ambientes internos e estufas',
+  '内置大容量锂亚电池，LoRaWAN无线报文，IP66防护；NDIR原理测量CO2（400~5000 ppm）与空气温湿度，适用于室内与大棚空气质量无线远距离监测。':
+    'Bateria de lítio-tionila de grande capacidade integrada, transmissão sem fio LoRaWAN, proteção IP66; mede CO2 (400~5000 ppm) por princípio NDIR e temperatura/umidade do ar, adequado para monitoramento remoto sem fio da qualidade do ar em ambientes internos e estufas.',
+  'SenseCAP S2103 CO2/温湿度传感器': 'Sensor de CO2/Temperatura e Umidade SenseCAP S2103',
+  '通用配件含屏幕、整体电源设计、4G 物联网卡 ×2。':
+    'Os acessórios comuns incluem tela, projeto de alimentação integrada e 2× chips SIM IoT 4G.',
+
+  // === M6 hardwareIntro ===
+  'reBot DevArm B601-RS机械臂（100019336）': 'Braço Robótico reBot DevArm B601-RS (100019336)',
+  'Star Arm 102主控示教臂（100004723）': 'Braço de Ensino Mestre Star Arm 102 (100004723)',
+  '奥比中光Gemini 2 3D相机（101090144）': 'Câmera 3D Orbbec Gemini 2 (101090144)',
+  'ET-S231广角1080P USB摄像头（100035502）': 'Câmera USB Grande-angular 1080P ET-S231 (100035502)',
+  '双机位摄像头支架（100006505）': 'Suporte para Câmeras Duplas (100006505)',
+  '机械臂数据采集光控箱（100094392）':
+    'Caixa de Aquisição de Dados com Iluminação Controlada para Braço Robótico (100094392)',
+  'reSpeaker Flex语音套件（100005504 / 100099135）':
+    'Kit de Voz reSpeaker Flex (100005504 / 100099135)',
+  '工业级独立急停按钮（100091373）':
+    'Botão de Parada de Emergência Independente Industrial (100091373)',
+  '本课程以「六轴桌面机械臂 + 多模态感知 + 边缘算力」为核心教具，覆盖遥操到3D抓取全链路。':
+    'Este curso usa como ferramenta de ensino central o "braço robótico de mesa de 6 eixos + percepção multimodal + computação de borda", cobrindo toda a cadeia de teleoperação a captura 3D.',
+  '6+1自由度开源从动机械臂成品，含电动夹爪与总线舵机':
+    'Braço robótico escravo pronto open-source com 6+1 graus de liberdade, incluindo garra elétrica e servos de barramento',
+  '受控从臂，响应指令执行动作与抓取；48V/600W工业级开关电源（SKU 100054289）独立稳压供电，需使用6寸G字夹（SKU 100014192）物理紧固于实验台防止动作倾倒。':
+    'Braço escravo controlado que executa movimentos e capturas em resposta a comandos; fonte chaveada industrial 48V/600W (SKU 100054289) para alimentação regulada independente; requer fixação física à bancada com braçadeira tipo G de 6 polegadas (SKU 100014192) para evitar tombamento durante o movimento.',
+  'reBot DevArm B601-RS机械臂': 'Braço Robótico reBot DevArm B601-RS',
+  '6自由度模块化主控示教臂，兼容LeRobot':
+    'Braço de ensino mestre modular de 6 graus de liberdade, compatível com LeRobot',
+  '主控示教端，手动引导操作并驱动从臂实时镜像动作，实现1:1主从位姿镜像映射；12V/2A多国插脚电源适配器（SKU 100033211）独立供电，套件自带XT30公头线。':
+    'Terminal mestre de ensino que guia manualmente a operação e aciona o braço escravo para espelhar movimentos em tempo real, realizando mapeamento de pose mestre-escravo 1:1; alimentação independente por adaptador 12V/2A com plugues internacionais (SKU 100033211), o kit inclui cabo XT30 macho.',
+  'Star Arm 102主控示教臂': 'Braço de Ensino Mestre Star Arm 102',
+  'Jetson Orin NX 16GB边缘算力主机': 'Host de computação de borda Jetson Orin NX 16GB',
+  '控制中枢，运行机械臂运动学解算、控制服务与大模型推理；出厂预装JetPack 6.2，需确认SenseCraft Robotics服务与Python（Pinocchio / Motorbridge SDK）运行环境就绪；19V/4.7A大功率电源适配器供电。':
+    'Hub de controle que executa cinemática do braço, serviços de controle e inferência de modelos de linguagem; JetPack 6.2 pré-instalado de fábrica, é necessário confirmar que o serviço SenseCraft Robotics e o ambiente Python (Pinocchio / Motorbridge SDK) estão prontos; alimentação por adaptador de alta potência 19V/4.7A.',
+  '双目红外3D深度相机，Type-C接口':
+    'Câmera de profundidade 3D infravermelha estéreo, interface Type-C',
+  '空间三维视觉引导，直接读取物体在空间中的三维物理坐标（X, Y, Z）实现空间闭环抓取；L3阶段需与机械臂基座坐标系完成手眼标定对齐，确保测出的坐标可被Pinocchio正确换算为关节角度。':
+    'Guiamento visual tridimensional espacial, lê diretamente as coordenadas físicas tridimensionais (X, Y, Z) do objeto para captura com ciclo fechado espacial; na fase L3, requer calibração mão-olho alinhada ao sistema de coordenadas da base do braço, garantindo que as coordenadas medidas sejam convertidas corretamente em ângulos de junta pelo Pinocchio.',
+  '奥比中光Gemini 2 3D相机': 'Câmera 3D Orbbec Gemini 2',
+  工位图像采集端: 'Terminal de aquisição de imagem da estação de trabalho',
+  '用于机械臂工位物料到位检测、工序事件触发与具身数采视觉输入；配合双机位支架实现前视/俯视多角度采集，在结构化恒定光照环境中提供状态触发信号。':
+    'Usado para detecção de chegada de material na estação do braço, acionamento de eventos de processo e entrada visual para aquisição de dados embodied; em conjunto com o suporte de câmeras duplas, realiza aquisição em múltiplos ângulos (frontal/topo), fornecendo sinais de acionamento de estado em ambiente de iluminação constante estruturada.',
+  'ET-S231广角1080P USB摄像头': 'Câmera USB Grande-angular 1080P ET-S231',
+  '机械臂视觉安装支架，支持双摄像头固定':
+    'Suporte de montagem visual para braço robótico, suporta fixação de duas câmeras',
+  '支持前视与俯视双机位多角度灵活调整，配合光控箱构建结构化恒定光照实验环境，保障视觉识别与数据采集的稳定性。':
+    'Suporta ajuste flexível em múltiplos ângulos para câmeras frontal e superior; em conjunto com a caixa de iluminação controlada, constrói um ambiente experimental de iluminação constante estruturada, garantindo estabilidade no reconhecimento visual e na aquisição de dados.',
+  双机位摄像头支架: 'Suporte para Câmeras Duplas',
+  'SenseCraft Robotics标准实验箱': 'Caixa experimental padrão SenseCraft Robotics',
+  '集成恒定光源、相机固定位与工件标定区，消除环境杂光对识别的干扰，保障模型复现与稳定抓取；用于L2工位视觉事件触发与L3遥操动作数据采集。':
+    'Integra fonte de luz constante, posição fixa para câmera e área de calibração de peças, eliminando interferência de luz ambiente no reconhecimento e garantindo reprodutibilidade do modelo e captura estável; usado para acionamento de eventos visuais da estação no L2 e aquisição de dados de movimentos de teleoperação no L3.',
+  机械臂数据采集光控箱: 'Caixa de Aquisição de Dados com Iluminação Controlada para Braço Robótico',
+  'XVF3800 AI降噪麦克风阵列语音套件':
+    'Kit de voz com array de microfones com redução de ruído por IA XVF3800',
+  '语音交互终端，现场语音指令采集与播报；配合SenseCraft Robotics平台实现自然语言描述触发预设夹取动作，USB-A转Type-C数据线连接。':
+    'Terminal de interação por voz para captura e reprodução de comandos de voz no local; em conjunto com a plataforma SenseCraft Robotics, permite que descrições em linguagem natural acionem movimentos de captura predefinidos, conectado via cabo USB-A para Type-C.',
+  'reSpeaker Flex语音套件': 'Kit de Voz reSpeaker Flex',
+  带常闭机械触点的大蘑菇头急停开关:
+    'Interruptor de parada de emergência de cabeça de cogumelo grande com contato mecânico normalmente fechado',
+  '安全闸门，串入动力电回路，拍下即刻硬切动力电；为独立硬件常闭回路，不接软件控制，置于操作者触手可及处。':
+    'Portão de segurança inserido no circuito de alimentação de força; ao pressionar, corta imediatamente a energia de força por hardware; é um circuito normalmente fechado de hardware independente, sem conexão com controle de software, posicionado ao alcance do operador.',
+  工业级独立急停按钮: 'Botão de Parada de Emergência Independente Industrial',
 };
