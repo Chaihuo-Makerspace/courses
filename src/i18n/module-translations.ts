@@ -1,11 +1,11 @@
 import { enNewDict } from './module-en-new';
 import { esDict } from './module-es';
-import { jaDict } from './module-ja';
-import { ptDict } from './module-pt';
 import { hwEnDict } from './module-hw-en';
 import { hwEsDict } from './module-hw-es';
 import { hwJaDict } from './module-hw-ja';
 import { hwPtDict } from './module-hw-pt';
+import { jaDict } from './module-ja';
+import { ptDict } from './module-pt';
 import type { Locale } from './types';
 
 // Deep module translations by locale — maps Chinese literal strings to target language

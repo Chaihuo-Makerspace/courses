@@ -46,7 +46,7 @@ export const hwEnDict: Record<string, string> = {
     'A low-power node designed for LoRa mesh communication, with built-in 862–930 MHz long-range LoRa radio — the workhorse terminal for decentralized messaging and positioning networks.',
   '为 XIAO 提供稳定有线以太网接入，适合对 Wi-Fi 不稳、要求可靠连线的设备（弱电箱、工业柜等）做免维护部署。':
     'Gives XIAO reliable wired Ethernet — ideal for maintenance-free deployment where Wi-Fi is unstable and connections must be dependable (low-voltage panels, industrial cabinets, etc.).',
-  '人体存在与跌倒识别': 'Human Presence & Fall Detection',
+  人体存在与跌倒识别: 'Human Presence & Fall Detection',
   '仿叶片形态的温湿度传感器，用于病害预警与灌溉决策，是理解非标传感器接入与数据建模的典型教学案例。':
     'A leaf-shaped temperature & humidity sensor for disease early-warning and irrigation decisions — a classic teaching case for non-standard sensor integration and data modeling.',
   '低功耗 Meshtastic 节点': 'Low-Power Meshtastic Node',
@@ -57,7 +57,7 @@ export const hwEnDict: Record<string, string> = {
     'Common accessories (screen, integrated power design, router, etc.) are configured separately.',
   '另配屏幕、整体电源设计、路由器等通用配件，以及 Wi-Fi 灯、485 传感器等待控制配件。':
     'Common accessories (screen, integrated power design, router, etc.) plus to-be-controlled devices (Wi-Fi light, 485 sensors) are configured separately.',
-  '叶面温湿度传感器': 'Leaf Wetness & Temperature Sensor',
+  叶面温湿度传感器: 'Leaf Wetness & Temperature Sensor',
   '土壤三参数 · 单节电池续航 1~3 年': '3 Soil Parameters · 1–3-Year Battery Life (Single Cell)',
   '基于 ESP32-P4 的 8 英寸智能 HMI 终端，带摄像头与双麦克风，支持 Wi-Fi 6 / BLE 5 / Zigbee / Matter，是展厅导览、前台接待等交互场景的主力界面。':
     'An 8-inch smart HMI powered by ESP32-P4 with camera and dual microphones, supporting Wi-Fi 6 / BLE 5 / Zigbee / Matter — the primary interface for interactive scenarios like exhibition guides and front-desk reception.',
@@ -110,7 +110,8 @@ export const hwEnDict: Record<string, string> = {
   // imageAlt strings (M1–M5 hardware card images)
   'Mission Pack 自组网套件': 'Mission Pack Mesh Networking Kit',
   'S700-C 7合1 紧凑型气象站': 'S700-C 7-in-1 Compact Weather Station',
-  'SenseCAP Indicator D1S 触摸屏开发平台': 'SenseCAP Indicator D1S Touchscreen Development Platform',
+  'SenseCAP Indicator D1S 触摸屏开发平台':
+    'SenseCAP Indicator D1S Touchscreen Development Platform',
   'SenseCAP Solar Node P1-Pro 太阳能 Mesh 节点': 'SenseCAP Solar Node P1-Pro Solar Mesh Node',
   'SenseCAP Watcher 小智版': 'SenseCAP Watcher (XiaoZhi Edition)',
   'Wio Tracker L1 Pro Meshtastic 节点': 'Wio Tracker L1 Pro Meshtastic Node',
@@ -119,11 +120,12 @@ export const hwEnDict: Record<string, string> = {
   'XIAO 以太网适配器': 'XIAO Ethernet Adapter',
   'reCamera 2002 HQ PoE 开源 AI 相机': 'reCamera 2002 HQ PoE Open AI Camera',
   'reCamera Pro 开放 AI 相机': 'reCamera Pro Open AI Camera',
-  'reComputer R1225 LoRaWAN 网关与工业控制器': 'reComputer R1225 LoRaWAN Gateway & Industrial Controller',
+  'reComputer R1225 LoRaWAN 网关与工业控制器':
+    'reComputer R1225 LoRaWAN Gateway & Industrial Controller',
   'reComputer RK3576-30 边缘 AI 盒子': 'reComputer RK3576-30 Edge AI Box',
   'reComputer RK3588-40 AI 边缘计算盒子': 'reComputer RK3588-40 AI Edge Computing Box',
   'reTerminal D1001 触摸屏 HMI 终端': 'reTerminal D1001 Touchscreen HMI Terminal',
   'reTerminal E1001 电子纸显示屏': 'reTerminal E1001 ePaper Display',
-  '工业级叶面温湿度传感器': 'Industrial Leaf Wetness & Temperature Sensor',
+  工业级叶面温湿度传感器: 'Industrial Leaf Wetness & Temperature Sensor',
   '耘小果 多要素环境监测仪': 'Yunxiaoguo Multi-Parameter Environmental Monitor',
 };

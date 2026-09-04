@@ -46,7 +46,7 @@ export const hwEsDict: Record<string, string> = {
     'Un nodo de bajo consumo diseñado para comunicación LoRa Mesh, con radio LoRa de largo alcance de 862–930 MHz integrada: el terminal principal para construir redes descentralizadas de mensajería y posicionamiento.',
   '为 XIAO 提供稳定有线以太网接入，适合对 Wi-Fi 不稳、要求可靠连线的设备（弱电箱、工业柜等）做免维护部署。':
     'Proporciona a XIAO una conexión Ethernet por cable estable, ideal para el despliegue sin mantenimiento de dispositivos con Wi-Fi poco fiable que requieren una conexión segura (armarios de baja tensión, gabinetes industriales, etc.).',
-  '人体存在与跌倒识别': 'Presencia Humana y Detección de Caídas',
+  人体存在与跌倒识别: 'Presencia Humana y Detección de Caídas',
   '仿叶片形态的温湿度传感器，用于病害预警与灌溉决策，是理解非标传感器接入与数据建模的典型教学案例。':
     'Un sensor de temperatura y humedad con forma de hoja, para alerta temprana de enfermedades y decisiones de riego: un caso didáctico clásico para entender la integración de sensores no estándar y el modelado de datos.',
   '低功耗 Meshtastic 节点': 'Nodo Meshtastic de Bajo Consumo',
@@ -57,8 +57,9 @@ export const hwEsDict: Record<string, string> = {
     'Los accesorios generales (pantalla, diseño de alimentación integrado, router, etc.) se configuran por separado.',
   '另配屏幕、整体电源设计、路由器等通用配件，以及 Wi-Fi 灯、485 传感器等待控制配件。':
     'Los accesorios generales (pantalla, diseño de alimentación integrado, router, etc.), así como los dispositivos a controlar (lámpara Wi-Fi, sensores 485, etc.), se configuran por separado.',
-  '叶面温湿度传感器': 'Sensor de Temperatura y Humedad de Hoja',
-  '土壤三参数 · 单节电池续航 1~3 年': 'Tres Parámetros del Suelo · Autonomía de 1 a 3 Años con una Sola Pila',
+  叶面温湿度传感器: 'Sensor de Temperatura y Humedad de Hoja',
+  '土壤三参数 · 单节电池续航 1~3 年':
+    'Tres Parámetros del Suelo · Autonomía de 1 a 3 Años con una Sola Pila',
   '基于 ESP32-P4 的 8 英寸智能 HMI 终端，带摄像头与双麦克风，支持 Wi-Fi 6 / BLE 5 / Zigbee / Matter，是展厅导览、前台接待等交互场景的主力界面。':
     'Un terminal HMI inteligente de 8 pulgadas basado en ESP32-P4, con cámara y doble micrófono, compatible con Wi-Fi 6 / BLE 5 / Zigbee / Matter: la interfaz principal para escenarios de interacción como guías en salas de exposición y recepción.',
   '基于 ESP32-S3 的开源单色电子纸显示器，功耗极低，适合做能耗看板、房间状态牌等常显不插电的展示终端。':
@@ -110,20 +111,25 @@ export const hwEsDict: Record<string, string> = {
   // imageAlt strings
   'Mission Pack 自组网套件': 'Kit de Red Autónoma Mission Pack',
   'S700-C 7合1 紧凑型气象站': 'Estación Meteorológica Compacta S700-C 7 en 1',
-  'SenseCAP Indicator D1S 触摸屏开发平台': 'Plataforma de Desarrollo con Pantalla Táctil SenseCAP Indicator D1S',
-  'SenseCAP Solar Node P1-Pro 太阳能 Mesh 节点': 'Nodo Mesh de Energía Solar SenseCAP Solar Node P1-Pro',
+  'SenseCAP Indicator D1S 触摸屏开发平台':
+    'Plataforma de Desarrollo con Pantalla Táctil SenseCAP Indicator D1S',
+  'SenseCAP Solar Node P1-Pro 太阳能 Mesh 节点':
+    'Nodo Mesh de Energía Solar SenseCAP Solar Node P1-Pro',
   'SenseCAP Watcher 小智版': 'SenseCAP Watcher, Edición XiaoZhi',
   'Wio Tracker L1 Pro Meshtastic 节点': 'Nodo Meshtastic Wio Tracker L1 Pro',
-  'XIAO 60GHz 毫米波人体跌倒检测传感器': 'Sensor XIAO de Detección de Caídas por Onda Milimétrica de 60 GHz',
+  'XIAO 60GHz 毫米波人体跌倒检测传感器':
+    'Sensor XIAO de Detección de Caídas por Onda Milimétrica de 60 GHz',
   'XIAO ESP32-C5 开发板': 'Placa de Desarrollo XIAO ESP32-C5',
   'XIAO 以太网适配器': 'Adaptador Ethernet para XIAO',
   'reCamera 2002 HQ PoE 开源 AI 相机': 'Cámara de IA de Código Abierto reCamera 2002 HQ PoE',
   'reCamera Pro 开放 AI 相机': 'Cámara de IA Abierta reCamera Pro',
-  'reComputer R1225 LoRaWAN 网关与工业控制器': 'Gateway LoRaWAN y Controlador Industrial reComputer R1225',
+  'reComputer R1225 LoRaWAN 网关与工业控制器':
+    'Gateway LoRaWAN y Controlador Industrial reComputer R1225',
   'reComputer RK3576-30 边缘 AI 盒子': 'Caja de IA en el Borde reComputer RK3576-30',
-  'reComputer RK3588-40 AI 边缘计算盒子': 'Caja de Computación en el Borde con IA reComputer RK3588-40',
+  'reComputer RK3588-40 AI 边缘计算盒子':
+    'Caja de Computación en el Borde con IA reComputer RK3588-40',
   'reTerminal D1001 触摸屏 HMI 终端': 'Terminal HMI con Pantalla Táctil reTerminal D1001',
   'reTerminal E1001 电子纸显示屏': 'Display de ePaper reTerminal E1001',
-  '工业级叶面温湿度传感器': 'Sensor de Temperatura y Humedad de Hoja de Grado Industrial',
+  工业级叶面温湿度传感器: 'Sensor de Temperatura y Humedad de Hoja de Grado Industrial',
   '耘小果 多要素环境监测仪': 'Monitor Ambiental Multifactorial Yunxiaoguo',
 };
