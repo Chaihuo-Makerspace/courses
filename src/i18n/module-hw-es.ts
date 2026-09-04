@@ -354,4 +354,54 @@ export const hwEsDict: Record<string, string> = {
   '安全闸门，串入动力电回路，拍下即刻硬切动力电；为独立硬件常闭回路，不接软件控制，置于操作者触手可及处。':
     'Compuerta de seguridad, conectada en serie al circuito de alimentación de motores, al presionarlo corta inmediatamente la energía de los motores por hardware; es un circuito independiente de hardware normalmente cerrado, sin conexión a control por software, colocado al alcance del operador.',
   工业级独立急停按钮: 'Botón de parada de emergencia independiente de grado industrial',
+  '另配双机位摄像头支架（100006505）、机械臂数据采集光控箱（100094392）、reSpeaker Flex语音套件（100005504 / 100099135）、屏幕、整体电源设计、路由器等通用配件。':
+    'Se configuran por separado accesorios generales como el soporte de cámara de doble posición (100006505), la caja de control de luz para recolección de datos de brazo robótico (100094392), el kit de voz reSpeaker Flex (100005504 / 100099135), pantalla, diseño de alimentación integrado y router.',
+
+  '100 TOPS级别算力，预置JetPack/CUDA/TensorRT/PyTorch环境，部署Silero VAD+Whisper ASR+Qwen LLM+ChatTTS纯本地离线语音AI管线，断网依然可用。SKU 114110314，配19V/4.7A电源适配器。':
+    'Potencia de computo de nivel 100 TOPS, con entorno JetPack/CUDA/TensorRT/PyTorch preinstalado, despliega pipeline de IA de voz puramente local y offline Silero VAD+Whisper ASR+Qwen LLM+ChatTTS, utilizable incluso sin red. SKU 114110314, con adaptador de alimentacion 19V/4.7A.',
+  '16GB内存，6 TOPS算力，运行Docker容器化WMS仓储系统与MCP Bridge桥接服务，实现局域网内业务数据与大模型工具调用的对接。SKU 100086238，自带12V电源适配器。':
+    '16GB de memoria, 6 TOPS de potencia de computo, ejecuta sistema de gestion de almacenes WMS contenerizado en Docker y servicio de puente MCP Bridge, logrando la integracion entre datos de negocio en red local y llamadas a herramientas de grandes modelos. SKU 100086238, con adaptador de alimentacion 12V integrado.',
+  '4英寸RGB触控显示屏，作为本地人机交互界面，实时展示环境参数与设备状态，并提供快捷控制入口，适用于无需外接显示器的轻量部署场景。':
+    'Pantalla tactil RGB de 4 pulgadas, como interfaz local hombre-maquina, muestra en tiempo real parametros ambientales y estado de dispositivos, y proporciona acceso de control rapido, adecuada para escenarios de despliegue ligero sin necesidad de monitor externo.',
+  '60GHz 毫米波人体存在与跌倒检测模块':
+    'Modulo de deteccion de presencia humana y caidas por radar milimetrico de 60GHz',
+  '60GHz毫米波雷达模块（MR60FDA2），可检测人体存在、微动与跌倒姿态，隐私友好（不采集图像），通过ESPHome接入HA后触发人员在位联动与异常告警。':
+    'Modulo de radar milimetrico de 60GHz (MR60FDA2), puede detectar presencia humana, micro-movimientos y posturas de caida, amigable con la privacidad (no captura imagenes), tras conectarse a HA mediante ESPHome activa la vinculacion de presencia de personas y alertas por anomalias.',
+  '8寸工业智能触控终端，含摄像头与双麦，SKU 100058144。作为工位人机交互界面，用于仓管业务数据录入与状态监视，可直连主机展示WMS管理控制台与交互日志。':
+    'Terminal tactil inteligente industrial de 8 pulgadas, con camara y doble microfono, SKU 100058144. Como interfaz hombre-maquina de estacion de trabajo, se utiliza para entrada de datos de negocio de almacenamiento y monitoreo de estado, puede conectarse directamente al host para mostrar la consola de administracion WMS y registros de interaccion.',
+  'SenseCAP Indicator 4英寸 RGB 触控屏': 'Pantalla tactil RGB SenseCAP Indicator de 4 pulgadas',
+  'XIAO W5500 以太网开发套件': 'Kit de desarrollo Ethernet XIAO W5500',
+  'XIAO W5500 以太网开发套件（PoE 蓝牙代理网关）':
+    'Kit de desarrollo Ethernet XIAO W5500 (gateway proxy Bluetooth PoE)',
+  'reCamera Pro AI 相机': 'Camara AI reCamera Pro',
+  'reCamera Pro AI 相机 (100092895)': 'Camara AI reCamera Pro (100092895)',
+  'reTerminal D1001 8寸智能触控屏': 'Pantalla tactil inteligente reTerminal D1001 de 8 pulgadas',
+  '人体微动感知与跌倒监测，联动报警自动化':
+    'Percepcion de micro-movimientos humanos y monitoreo de caidas, vinculacion con automatizacion de alarmas',
+  '免布线蓝牙网关，接收BLE设备广播并接入平台':
+    'Gateway Bluetooth sin cableado, recibe transmisiones de dispositivos BLE y se conecta a la plataforma',
+  '另配 Grove 4P 连接线（20cm，连接 BME280 至 Wio Tracker L1 Pro）、屏幕、整体电源设计、路由器等通用配件。':
+    'Adicionalmente se incluyen cable de conexion Grove 4P (20cm, para conectar BME280 a Wio Tracker L1 Pro), pantalla, diseno de alimentacion general, router y otros accesorios generales.',
+  '另配CUDY AX3000 Wi-Fi 6千兆路由器、迷你三脚架×3（114993412）、便携式13.3" 1080P现场显示器（含mini HDMI与Type-C线）、六类千兆网线×4（1m）、公牛3位五孔+3×USB供电排插、场景模拟物料包（安全帽/反光背心标贴、测试工件模型）。':
+    'Adicionalmente se incluyen router gigabit CUDY AX3000 Wi-Fi 6, tripodes mini x3 (114993412), monitor portatil de sitio 13.3" 1080P (con cable mini HDMI y Type-C), cables de red gigabit categoria 6 x4 (1m), regleta de alimentacion Bull de 3 tomas de cinco pines + 3xUSB, paquete de materiales de simulacion de escenario (etiquetas de casco de seguridad/chaleco reflectante, modelos de piezas de prueba).',
+  '另配DDSU666单相导轨式智能电表、XY-MD02工业温湿度变送器（必配，无独立插图）、屏幕、整体电源设计、路由器等通用配件。':
+    'Adicionalmente se incluyen contador inteligente monofasico para riel DIN DDSU666, transmisor industrial de temperatura y humedad XY-MD02 (obligatorio, sin ilustracion independiente), pantalla, diseno de alimentacion general, router y otros accesorios generales.',
+  '另配SenseCAP Outdoor Gateway（114992982）、SenseCAP S2100 Data Logger（114992872）、SenseCAP S2105土壤传感器（114992871）、SenseCAP S2103 CO2/温湿度传感器（114992869）等LoRaWAN路线硬件（待补图），以及4G物联网SIM卡、屏幕、整体电源设计、路由器等通用配件。':
+    'Adicionalmente se incluyen hardware de ruta LoRaWAN como SenseCAP Outdoor Gateway (114992982), SenseCAP S2100 Data Logger (114992872), sensor de suelo SenseCAP S2105 (114992871), sensor de CO2/temperatura/humedad SenseCAP S2103 (114992869) (imagenes pendientes), asi como tarjeta SIM IoT 4G, pantalla, diseno de alimentacion general, router y otros accesorios generales.',
+  '另配便携式现场显示器（13.3" 1080P）、CUDY AX3000 Wi-Fi 6路由器、供电排插、六类千兆网线、智能仓管WMS实操模拟物料包（条码标贴/货位标签/实体样本盒）、Watcher桌面支架等通用配件。':
+    'Adicionalmente se incluyen monitor portatil de sitio (13.3" 1080P), router CUDY AX3000 Wi-Fi 6, regleta de alimentacion, cables de red gigabit categoria 6, paquete de materiales de simulacion practica de WMS de gestion inteligente de almacenes (etiquetas de codigo de barras/etiquetas de ubicacion/cajas de muestra fisicas), soporte de escritorio Watcher y otros accesorios generales.',
+  '可选扩展设备，reCamera 系列高性能型号，适用于进阶视觉开发与更高算力模型验证。可承担更复杂的端侧推理任务与多模型并行验证，作为 L2/L3 阶段的进阶算力选项。':
+    'Dispositivo de expansion opcional, modelo de alto rendimiento de la serie reCamera, adecuado para desarrollo visual avanzado y verificacion de modelos de mayor potencia de computo. Puede manejar tareas de inferencia en dispositivo mas complejas y verificacion paralela de multiples modelos, como opcion de computo avanzado en las etapas L2/L3.',
+  '基于PoE供电的有线网络蓝牙代理网关，捕获米家蓝牙温湿度计等BLE广播设备的数据，通过有线网络回传至Home Assistant，解决蓝牙信号覆盖范围有限的问题。':
+    'Gateway proxy Bluetooth de red cableada basado en alimentacion PoE, captura datos de dispositivos de transmision BLE como higrometros Bluetooth de Xiaomi, y los retorna a Home Assistant mediante red cableada, resolviendo el problema de cobertura limitada de senal Bluetooth.',
+  '工业级 Jetson Orin NX 16GB 边缘计算服务器，运行 Frigate NVR 汇聚多路检测。支持 GPU 硬件解码与 TensorRT 量化加速，适用于 L2 多路视频流汇聚与 L3 自定义模型推理部署。需刷写 JetPack 镜像并配置 Docker --runtime nvidia，Frigate 使用 stable-tensorrt-jp6 镜像。':
+    'Servidor de computo en el borde industrial Jetson Orin NX 16GB, ejecuta Frigate NVR para agregar deteccion multicanal. Soporta decodificacion de hardware GPU y aceleracion por cuantizacion TensorRT, adecuado para la agregacion de flujos de video multicanal L2 y el despliegue de inferencia de modelos personalizados L3. Requiere flashear la imagen JetPack y configurar Docker --runtime nvidia, Frigate usa la imagen stable-tensorrt-jp6.',
+  '工位人机界面，仓管业务数据录入与状态监视':
+    'Interfaz hombre-maquina de estacion de trabajo, entrada de datos de negocio de almacenamiento y monitoreo de estado',
+  '桌面触控中枢，展示环境参数与设备快捷控制':
+    'Central tactil de escritorio, muestra parametros ambientales y control rapido de dispositivos',
+  '集成音视频采集与屏幕显示，支持目标检测、人员靠近感知与自然语言语音交互，通过Wi-Fi接入SenseCraft AI平台。SKU 100051523，每组配置2台。':
+    'Integra captura audio/video y visualizacion en pantalla, soporta deteccion de objetos, percepcion de aproximacion de personas e interaccion por voz en lenguaje natural, se conecta a la plataforma SenseCraft AI mediante Wi-Fi. SKU 100051523, 2 unidades por grupo.',
+  '高性能开源 AI 视觉相机，进阶视觉开发与更高算力模型验证':
+    'Camara visual AI de codigo abierto de alto rendimiento, para desarrollo visual avanzado y verificacion de modelos de mayor potencia de computo',
 };

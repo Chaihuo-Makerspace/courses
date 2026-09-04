@@ -326,4 +326,54 @@ export const hwEnDict: Record<string, string> = {
   '安全闸门，串入动力电回路，拍下即刻硬切动力电；为独立硬件常闭回路，不接软件控制，置于操作者触手可及处。':
     'Safety gate, wired in series with the power circuit; pressing it immediately hard-cuts power; an independent hardware normally-closed circuit not connected to software control, placed within easy reach of the operator.',
   工业级独立急停按钮: 'Industrial-Grade Independent Emergency Stop Button',
+
+  // === M6 hardwareIntro note ===
+  '另配双机位摄像头支架（100006505）、机械臂数据采集光控箱（100094392）、reSpeaker Flex语音套件（100005504 / 100099135）、屏幕、整体电源设计、路由器等通用配件。':
+    'Additionally configured with dual-camera mount (100006505), robotic-arm data collection light-control box (100094392), reSpeaker Flex voice kit (100005504 / 100099135), screen, integrated power design, router, and other common accessories.',
+
+  // === M1–M6 new hardwareIntro translations ===
+  '100 TOPS级别算力，预置JetPack/CUDA/TensorRT/PyTorch环境，部署Silero VAD+Whisper ASR+Qwen LLM+ChatTTS纯本地离线语音AI管线，断网依然可用。SKU 114110314，配19V/4.7A电源适配器。':
+    '100 TOPS-class compute, pre-installed JetPack/CUDA/TensorRT/PyTorch environment, deploying Silero VAD + Whisper ASR + Qwen LLM + ChatTTS pure local offline voice AI pipeline, usable even without network. SKU 114110314, with 19V/4.7A power adapter.',
+  '16GB内存，6 TOPS算力，运行Docker容器化WMS仓储系统与MCP Bridge桥接服务，实现局域网内业务数据与大模型工具调用的对接。SKU 100086238，自带12V电源适配器。':
+    '16GB RAM, 6 TOPS compute, running Docker-containerized WMS warehouse system and MCP Bridge service, enabling integration between LAN business data and LLM tool calling. SKU 100086238, includes 12V power adapter.',
+  '4英寸RGB触控显示屏，作为本地人机交互界面，实时展示环境参数与设备状态，并提供快捷控制入口，适用于无需外接显示器的轻量部署场景。':
+    '4-inch RGB touch display, serving as a local HMI interface that displays environmental parameters and device status in real time and provides quick control entry, suitable for lightweight deployment scenarios without an external monitor.',
+  '60GHz 毫米波人体存在与跌倒检测模块': '60GHz mmWave Human Presence & Fall Detection Module',
+  '60GHz毫米波雷达模块（MR60FDA2），可检测人体存在、微动与跌倒姿态，隐私友好（不采集图像），通过ESPHome接入HA后触发人员在位联动与异常告警。':
+    '60GHz mmWave radar module (MR60FDA2), detects human presence, micro-motion, and fall posture, privacy-friendly (no image capture); triggers occupancy linkage and anomaly alerts after connecting to HA via ESPHome.',
+  '8+2口千兆PoE交换机': '8+2-Port Gigabit PoE Switch',
+  '8寸工业智能触控终端，含摄像头与双麦，SKU 100058144。作为工位人机交互界面，用于仓管业务数据录入与状态监视，可直连主机展示WMS管理控制台与交互日志。':
+    '8-inch industrial smart touch terminal, with camera and dual microphones, SKU 100058144. Serves as a workstation HMI for warehouse business data entry and status monitoring, can directly connect to the host to display the WMS management console and interaction logs.',
+  'Meshtastic 应急通信套件': 'Meshtastic Emergency Communication Kit',
+  'SenseCAP Indicator 4英寸 RGB 触控屏': 'SenseCAP Indicator 4-Inch RGB Touchscreen',
+  'XIAO W5500 以太网开发套件': 'XIAO W5500 Ethernet Development Kit',
+  'XIAO W5500 以太网开发套件（PoE 蓝牙代理网关）':
+    'XIAO W5500 Ethernet Development Kit (PoE Bluetooth Proxy Gateway)',
+  'reCamera Pro AI 相机': 'reCamera Pro AI Camera',
+  'reCamera Pro AI 相机 (100092895)': 'reCamera Pro AI Camera (100092895)',
+  'reTerminal D1001 8寸智能触控屏': 'reTerminal D1001 8-Inch Smart Touchscreen',
+  '人体微动感知与跌倒监测，联动报警自动化':
+    'Human micro-motion sensing and fall monitoring, linked to alert automation',
+  '免布线蓝牙网关，接收BLE设备广播并接入平台':
+    'Wiring-free Bluetooth gateway, receives BLE device broadcasts and connects to the platform',
+  '另配 Grove 4P 连接线（20cm，连接 BME280 至 Wio Tracker L1 Pro）、屏幕、整体电源设计、路由器等通用配件。':
+    'Additionally configured with Grove 4P cable (20cm, connecting BME280 to Wio Tracker L1 Pro), screen, integrated power design, router, and other common accessories.',
+  '另配CUDY AX3000 Wi-Fi 6千兆路由器、迷你三脚架×3（114993412）、便携式13.3" 1080P现场显示器（含mini HDMI与Type-C线）、六类千兆网线×4（1m）、公牛3位五孔+3×USB供电排插、场景模拟物料包（安全帽/反光背心标贴、测试工件模型）。':
+    'Additionally configured with CUDY AX3000 Wi-Fi 6 gigabit router, mini tripod ×3 (114993412), portable 13.3" 1080P on-site monitor (with mini HDMI and Type-C cable), Cat6 gigabit Ethernet cable ×4 (1m), Bull 3-position 5-hole + 3×USB power strip, scenario simulation material kit (hard hat/reflective vest labels, test workpiece models).',
+  '另配DDSU666单相导轨式智能电表、XY-MD02工业温湿度变送器（必配，无独立插图）、屏幕、整体电源设计、路由器等通用配件。':
+    'Additionally configured with DDSU666 single-phase DIN-rail smart meter, XY-MD02 industrial temperature/humidity transmitter (required, no standalone illustration), screen, integrated power design, router, and other common accessories.',
+  '另配SenseCAP Outdoor Gateway（114992982）、SenseCAP S2100 Data Logger（114992872）、SenseCAP S2105土壤传感器（114992871）、SenseCAP S2103 CO2/温湿度传感器（114992869）等LoRaWAN路线硬件（待补图），以及4G物联网SIM卡、屏幕、整体电源设计、路由器等通用配件。':
+    'Additionally configured with SenseCAP Outdoor Gateway (114992982), SenseCAP S2100 Data Logger (114992872), SenseCAP S2105 soil sensor (114992871), SenseCAP S2103 CO2/temperature-humidity sensor (114992869) and other LoRaWAN route hardware (images pending), as well as 4G IoT SIM card, screen, integrated power design, router, and other common accessories.',
+  '可选扩展设备，reCamera 系列高性能型号，适用于进阶视觉开发与更高算力模型验证。可承担更复杂的端侧推理任务与多模型并行验证，作为 L2/L3 阶段的进阶算力选项。':
+    'Optional expansion device, high-performance model in the reCamera series, suitable for advanced vision development and higher-compute model verification. Can handle more complex on-device inference tasks and multi-model parallel verification, serving as an advanced compute option for L2/L3 stages.',
+  '基于PoE供电的有线网络蓝牙代理网关，捕获米家蓝牙温湿度计等BLE广播设备的数据，通过有线网络回传至Home Assistant，解决蓝牙信号覆盖范围有限的问题。':
+    'Wired-network Bluetooth proxy gateway powered by PoE, captures data from BLE broadcast devices such as Mi Home Bluetooth thermometers, backhauls to Home Assistant via wired network, solving the limited Bluetooth signal coverage problem.',
+  '工业级 Jetson Orin NX 16GB 边缘计算服务器，运行 Frigate NVR 汇聚多路检测。支持 GPU 硬件解码与 TensorRT 量化加速，适用于 L2 多路视频流汇聚与 L3 自定义模型推理部署。需刷写 JetPack 镜像并配置 Docker --runtime nvidia，Frigate 使用 stable-tensorrt-jp6 镜像。':
+    'Industrial-grade Jetson Orin NX 16GB edge computing server, running Frigate NVR for multi-channel detection aggregation. Supports GPU hardware decoding and TensorRT quantization acceleration, suitable for L2 multi-channel video stream aggregation and L3 custom model inference deployment. Requires flashing JetPack image and configuring Docker --runtime nvidia; Frigate uses the stable-tensorrt-jp6 image.',
+  '工位人机界面，仓管业务数据录入与状态监视':
+    'Workstation HMI, warehouse business data entry and status monitoring',
+  '桌面触控中枢，展示环境参数与设备快捷控制':
+    'Desktop touch hub, displaying environmental parameters and device quick controls',
+  '集成音视频采集与屏幕显示，支持目标检测、人员靠近感知与自然语言语音交互，通过Wi-Fi接入SenseCraft AI平台。SKU 100051523，每组配置2台。':
+    'Integrates audio/video capture and screen display, supports object detection, person-approach sensing, and natural-language voice interaction; connects to the SenseCraft AI platform via Wi-Fi. SKU 100051523, 2 units per group.',
 };

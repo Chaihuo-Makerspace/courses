@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import CourseAudienceSection from '../../components/sections/courses/CourseAudienceSection.astro';
 import CourseCapabilities from '../../components/sections/courses/CourseCapabilities.astro';
+import CourseComplianceBoundary from '../../components/sections/courses/CourseComplianceBoundary.astro';
 import CourseCurriculum from '../../components/sections/courses/CourseCurriculum.astro';
 import CourseDetailFactsStrip from '../../components/sections/courses/CourseDetailFactsStrip.astro';
 import CourseDetailHero from '../../components/sections/courses/CourseDetailHero.astro';
@@ -110,6 +111,7 @@ const courseJsonLdSafe = JSON.stringify(courseJsonLd).replace(/</g, '\\u003c');
   <CourseDeliverables module={module} locale={locale} />
   <CourseAudienceSection module={module} locale={locale} />
   <CourseTeacherNotes module={module} locale={locale} />
+  <CourseComplianceBoundary module={module} locale={locale} />
   <CourseRelatedTracks relatedTracks={relatedTracks} locale={locale} />
   <FinalCtaSection cta={courseDetailCta} bordered />
 </Layout>
