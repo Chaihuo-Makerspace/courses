@@ -15,6 +15,27 @@ export interface ModuleFact {
   value: string;
 }
 
+/** 一件课程硬件：名称 + 一句话速览 + 图文说明。 */
+export interface HardwareItem {
+  name: string;
+  /** 一句话速览（卡片副标题）。 */
+  note: string;
+  /** 详细介绍（卡片正文）。 */
+  description: string;
+  image: string;
+  imageAlt: string;
+}
+
+/** 课程所需硬件的图文介绍区块（M1–M5 使用；M0 用 kits/hardwareList）。 */
+export interface HardwareIntro {
+  /** 区块主标题。缺省时用通用标题「课程所需硬件」。 */
+  title?: string;
+  subtitle?: string;
+  items: HardwareItem[];
+  /** 区块底部的配件备注（屏幕 / 电源 / 路由器等通用配件）。 */
+  note?: string;
+}
+
 /** 一张能力卡：标题 + 展开说明。`capabilities` 的长文形态。 */
 export interface Capability {
   title: string;
@@ -135,6 +156,8 @@ export interface Module {
   facts?: ModuleFact[];
   /** 核心硬件的图文清单（hero 侧栏）。 */
   hardwareList?: { key: string; name: string; note: string }[];
+  /** M1–M5 课程所需硬件的图文介绍区块。 */
+  hardwareIntro?: HardwareIntro;
   /** 能力卡长文版。存在时取代 `capabilities` 的短语渲染。 */
   capabilityCards?: Capability[];
   /** 能力卡下方的补充说明块。 */
@@ -701,6 +724,77 @@ export const modules: Module[] = [
         outcomes: ['改造传统工业设备并数字化', '接入智能中枢', '实现私有化部署'],
       },
     },
+
+    hardwareIntro: {
+      subtitle: '本课程的教学核心设备，围绕「统一管控中枢 + 多协议接入」构建。',
+      items: [
+        {
+          name: 'reComputer R1225',
+          note: 'LoRaWAN 网关 & 工业控制器',
+          description:
+            '基于树莓派 CM4 的工业级边缘网关，自带 3×RS485、双以太网，原生支持 BACnet / Modbus，可对接楼宇自控与工业设备，做私有化部署的智能中枢。',
+          image: '/illustrations/m1-recomputer-r1225.png',
+          imageAlt: 'reComputer R1225 LoRaWAN 网关与工业控制器',
+        },
+        {
+          name: 'XIAO ESP32-C5',
+          note: '双频 Wi-Fi 6 · RISC-V',
+          description:
+            'XIAO 家族首款支持 5GHz Wi-Fi 的模块，体积拇指大小，作为 ESPHome 节点的低功耗主控，让普通电器快速联网入系。',
+          image: '/illustrations/m1-xiao-esp32-c5.png',
+          imageAlt: 'XIAO ESP32-C5 开发板',
+        },
+        {
+          name: 'XIAO W5500 以太网适配器',
+          note: '有线接入 · ESPHome 即插即用',
+          description:
+            '为 XIAO 提供稳定有线以太网接入，适合对 Wi-Fi 不稳、要求可靠连线的设备（弱电箱、工业柜等）做免维护部署。',
+          image: '/illustrations/m1-xiao-ethernet-adapter.png',
+          imageAlt: 'XIAO 以太网适配器',
+        },
+        {
+          name: 'RS485 扩展板',
+          note: 'RS-485 收发 · 1200m 传输',
+          description:
+            '把 XIAO 变成标准 RS-485 设备，配合 Modbus 协议读写工业仪表、电表、变频器等存量设备，是工业数字化改造的入口。',
+          image: '/illustrations/m1-rs485-breakout.png',
+          imageAlt: 'RS485 扩展板',
+        },
+        {
+          name: 'Indicator D1S',
+          note: '4 英寸触摸屏 IoT 开发平台',
+          description:
+            'ESP32S3 + RP2040 双主控的可编程触控屏，开源可定制，用来做温控面板、场景开关等本地交互终端。',
+          image: '/illustrations/m1-indicator-d1s.png',
+          imageAlt: 'SenseCAP Indicator D1S 触摸屏开发平台',
+        },
+        {
+          name: 'reTerminal E1001',
+          note: '7.5 英寸电子纸屏 · 续航 3 个月',
+          description:
+            '基于 ESP32-S3 的开源单色电子纸显示器，功耗极低，适合做能耗看板、房间状态牌等常显不插电的展示终端。',
+          image: '/illustrations/m1-reterminal-e1001.png',
+          imageAlt: 'reTerminal E1001 电子纸显示屏',
+        },
+        {
+          name: '60GHz 毫米波跌倒检测',
+          note: '人体存在与跌倒识别',
+          description:
+            'MR60FDA2 毫米波传感器套件，无需摄像头即可检测人体存在与跌倒，结合 ESPHome 接入中枢，实现安防与照护联动。',
+          image: '/illustrations/m1-60ghz-mmwave-fall.png',
+          imageAlt: 'XIAO 60GHz 毫米波人体跌倒检测传感器',
+        },
+        {
+          name: 'SenseCAP Watcher',
+          note: '小智 AI 语音交互设备',
+          description:
+            '能看、能听、能说的 AI 交互设备，接本地大模型后作为空间的语音控制入口，演示「说一句话开灯关空调」的完整闭环。',
+          image: '/illustrations/m1-sensecap-watcher.png',
+          imageAlt: 'SenseCAP Watcher 小智版',
+        },
+      ],
+      note: '另配屏幕、整体电源设计、路由器等通用配件，以及 Wi-Fi 灯、485 传感器等待控制配件。',
+    },
   },
   {
     id: 'm2',
@@ -747,6 +841,36 @@ export const modules: Module[] = [
         durationDays: 1,
         outcomes: ['本地化部署大语言模型', '开发自定义工具', '实现完全私有化的业务闭环'],
       },
+    },
+    hardwareIntro: {
+      subtitle: '本课程以「看得见的 AI 终端 + 本地推理算力」为核心教具。',
+      items: [
+        {
+          name: 'reComputer RK3588-40',
+          note: 'AI 边缘计算盒子 · 6 TOPS NPU',
+          description:
+            '8 核 + 6 TOPS NPU 的开源 AI 盒子，可一键扩展至 26 TOPS，用于本地部署大语言模型与多模态推理服务，是所有 AI 能力落地的算力底座。',
+          image: '/illustrations/m2-recomputer-rk3588.png',
+          imageAlt: 'reComputer RK3588-40 AI 边缘计算盒子',
+        },
+        {
+          name: 'reTerminal D1001',
+          note: '8 英寸触摸 HMI · Wi-Fi 6',
+          description:
+            '基于 ESP32-P4 的 8 英寸智能 HMI 终端，带摄像头与双麦克风，支持 Wi-Fi 6 / BLE 5 / Zigbee / Matter，是展厅导览、前台接待等交互场景的主力界面。',
+          image: '/illustrations/m2-reterminal-d1001.png',
+          imageAlt: 'reTerminal D1001 触摸屏 HMI 终端',
+        },
+        {
+          name: 'SenseCAP Watcher ×2',
+          note: '小智 AI 语音视觉交互设备',
+          description:
+            '能看、能听、能说的 AI 终端，接本地大模型后担当空间里的「主动服务口」——客人来了主动招呼，提问即时作答，演示多模态交互闭环。',
+          image: '/illustrations/m1-sensecap-watcher.png',
+          imageAlt: 'SenseCAP Watcher 小智版',
+        },
+      ],
+      note: '另配屏幕、整体电源设计、路由器等通用配件。',
     },
   },
   {
@@ -802,6 +926,35 @@ export const modules: Module[] = [
         ],
       },
     },
+    hardwareIntro: {
+      subtitle: '本课程围绕「离网组网终端 + 太阳能自治节点」展开，均基于 Mission Pack 生态。',
+      items: [
+        {
+          name: 'Mission Pack（现有套件）',
+          note: 'LoRa · GPS · 传感器一体的出发套件',
+          description:
+            '课程集成的基础套件，包含 LoRa 通信、GPS 定位与基础传感能力，是搭建 Mesh 网络的起点硬件平台。',
+          image: '/illustrations/m3-mission-pack.png',
+          imageAlt: 'Mission Pack 自组网套件',
+        },
+        {
+          name: 'Wio Tracker L1 Pro',
+          note: '低功耗 Meshtastic 节点',
+          description:
+            '专为 LoRa Mesh 通信设计的低功耗节点，内置 862–930MHz 长距 LoRa 射频，是构建去中心化消息与定位网络的主力终端。',
+          image: '/illustrations/m3-wio-tracker-l1-pro.png',
+          imageAlt: 'Wio Tracker L1 Pro Meshtastic 节点',
+        },
+        {
+          name: 'SenseCAP Solar Node P1-Pro',
+          note: '太阳能供电 · 户外自治节点',
+          description:
+            '由太阳能供电的 Mesh 通信节点，结合 Meshtastic 与 XIAO nRF52840 主控，可长期无人值守部署在野外做中继与传感采集。',
+          image: '/illustrations/m3-solar-node-p1-pro.png',
+          imageAlt: 'SenseCAP Solar Node P1-Pro 太阳能 Mesh 节点',
+        },
+      ],
+    },
   },
   {
     id: 'm4',
@@ -846,6 +999,36 @@ export const modules: Module[] = [
         durationDays: 1,
         outcomes: ['训练专属识别模型并部署', '识别数据接入报表 / 可视化看板', '形成业务闭环'],
       },
+    },
+    hardwareIntro: {
+      subtitle: '本课程以「开源 AI 相机 + 边缘推理盒子」为核心教具，覆盖采集、推理到告警全链路。',
+      items: [
+        {
+          name: 'reComputer RK3576-30',
+          note: '边缘 AI 盒子 · 6 TOPS NPU',
+          description:
+            '8 核 + 6 TOPS NPU 的开源 AI 计算盒子，用于本地跑视频推理、Frigate 告警与多路分析服务，是整套视觉系统的算力中枢。',
+          image: '/illustrations/m4-recomputer-rk3576.png',
+          imageAlt: 'reComputer RK3576-30 边缘 AI 盒子',
+        },
+        {
+          name: 'reCamera 2002 HQ PoE',
+          note: '开源模块化 AI 相机 · 1 TOPS',
+          description:
+            '完全开源、模块化的 AI 摄像头，内嵌 AI SoC 与 YOLO 目标检测预置模型，PoE 供电组网，是打造可用 AI 相机的最短路径。',
+          image: '/illustrations/m4-recamera-poe.png',
+          imageAlt: 'reCamera 2002 HQ PoE 开源 AI 相机',
+        },
+        {
+          name: 'reCamera Pro',
+          note: '边缘 AI 相机 · 3 TOPS',
+          description:
+            '基于 RK1126B 的开放 AI 相机，3 TOPS NPU 可本地运行计算机视觉、VLM 大模型与语音识别，8MP 星光级成像，告警识别直接发生在设备端。',
+          image: '/illustrations/m4-recamera-pro.png',
+          imageAlt: 'reCamera Pro 开放 AI 相机',
+        },
+      ],
+      note: '接入现场时另配海康威视 / 大华 IP 摄像头、POE 交换机（约 500 元）、监控支架 ×3 及通用配件（屏幕、电源、路由器）。',
     },
   },
   {
@@ -901,6 +1084,52 @@ export const modules: Module[] = [
           '该层级正在开发中，敬请期待',
         ],
       },
+    },
+    hardwareIntro: {
+      subtitle: '本课程以「4G 数据采集 + 多类传感终端」为核心教具，覆盖农田、气象到园区的感知采集。',
+      items: [
+        {
+          name: '4G 多通道数据采集器',
+          note: '工业级 4G 采集站 · MODBUS-RTU',
+          description:
+            '4 路 RS-485 通道、最多接入 32 个传感器，IP66 防护，支持 4G/3G/2G 全球蜂窝回传、内置 GPS 与本地存储，是传感数据的回传中枢。',
+          image: '/illustrations/m5-4g-multi-channel-logger.png',
+          imageAlt: '4G 多通道数据采集器',
+        },
+        {
+          name: 'S700-C 7合1 气象站',
+          note: '温湿度 · 气压 · 太阳辐射 · 雨量',
+          description:
+            '一台集成气温、湿度、气压、太阳辐射、日照、风速风向与雷达雨量的紧凑型气象站，适合智慧农业与气象监测的户外长期部署。',
+          image: '/illustrations/m5-s700-weather-station.png',
+          imageAlt: 'S700-C 7合1 紧凑型气象站',
+        },
+        {
+          name: '4G 土壤墒情仪',
+          note: '土壤三参数 · 单节电池续航 1~3 年',
+          description:
+            '超低功耗的土壤温度、湿度与电导率采集设备，4G 直连云端并内置 GPS，「插土-开机-扫码」三步即可远程查看全域墒情。',
+          image: '/illustrations/m5-4g-soil-moisture.png',
+          imageAlt: '4G 土壤墒情仪',
+        },
+        {
+          name: '耘小果 多要素监测仪',
+          note: '多要素采集 · 10 路 RS-485 扩展',
+          description:
+            '低功耗多要素数据采集器，内置温度、湿度、露点、光照、CO₂、大气压测量，并支持最多 10 个 Modbus-RTU RS-485 传感器扩展。',
+          image: '/illustrations/m5-yunxiaoguo-monitor.png',
+          imageAlt: '耘小果 多要素环境监测仪',
+        },
+        {
+          name: '叶面温湿度传感器',
+          note: '模拟叶面 · MODBUS-RTU RS485',
+          description:
+            '仿叶片形态的温湿度传感器，用于病害预警与灌溉决策，是理解非标传感器接入与数据建模的典型教学案例。',
+          image: '/illustrations/m5-leaf-wetness.png',
+          imageAlt: '工业级叶面温湿度传感器',
+        },
+      ],
+      note: '海外形态另配 S2105 土壤传感器、SenseCAP M2 LoRaWAN 网关与 S2102 光照传感器；通用配件含屏幕、整体电源设计、4G 物联网卡 ×2。',
     },
   },
 ];

@@ -30,13 +30,9 @@ export function translateTracks(tracks: Track[], locale: Locale): Track[] {
 
 export function translateModule(m: Module, locale: Locale): Module {
   if (locale === 'zh-CN') return m;
-  return {
-    ...deepTranslateObj(m, locale),
-    title: dt(locale, `module.${m.id}.title`) || m.title,
-    oneLiner: dt(locale, `module.${m.id}.oneLiner`) || m.oneLiner,
-    subtitle: dt(locale, `module.${m.id}.subtitle`) || m.subtitle,
-    realProblem: dt(locale, `module.${m.id}.realProblem`) || m.realProblem,
-  };
+  // 模块文案以 deep translation 字典为准（module-translations.ts 及 *-new 覆盖文件）。
+  // 早期放在 data-translations.ts 里的 module.* 字段是旧课程体系残留，已不再作为来源。
+  return deepTranslateObj(m, locale);
 }
 
 function deepTranslateObj<T>(obj: T, locale: Locale): T {

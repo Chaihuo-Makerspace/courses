@@ -10,21 +10,20 @@
 
 | 模块 | 方向 | 关键技术栈 |
 | :--- | :--- | :--- |
-| **M0** | 硬件基础与万物启蒙 · Hardware Foundation | XIAO 系列 · 传感器套件 · 面包板 |
-| **M1** | 设备互联与智能管控 · Home Assistant 生态 | HA Green/Yellow · Zigbee · Matter · Shelly |
-| **M2** | 远距无线与物联组网 · LoRa / Mesh | LoRa-E5 · Meshtastic · TTN |
-| **M3** | 视觉 AI 与边缘推理 · Edge Vision AI | reComputer Jetson · reCamera · Grove Vision AI v2 |
-| **M4** | 空间智能与交互体验 · Spatial AI Agent | ESP32S3 · 麦克风阵列 · LLM Agent · reSpeaker |
-| **M5** | 行业场景与交付整合 · Vertical Delivery | 按项目选型 · 系统集成 · 交付管理 |
+| **M0** | 零基础智能硬件入门 · Smart Hardware Fundamentals | Grove 套件 · Wio Terminal · XIAO ESP32S3 Sense |
+| **M1** | 设备互联与智能管控 · Device Integration & Intelligent Control | Home Assistant 智能中枢 · ESPHome · Modbus 网关 |
+| **M2** | 多模态 AI 交互 · Multimodal AI Interaction | Watcher · 麦克风阵列 · 边缘 AI 主机 |
+| **M3** | 自组网与韧性通信 · Mesh Networking & Resilient Communication | Mission Pack · Meshtastic · LoRa 模块 |
+| **M4** | 边缘视觉 AI · Edge Visual AI | reCamera · reComputer Jetson · 网络摄像头 |
+| **M5** | 环境感知与数据采集 · Environmental Sensing & Data Acquisition | SenseCAP 传感器 · 数据采集网关 · 4G 回传模块 |
 
 每个模块内部再按 **L1 入门 → L2 进阶 → L3 实战** 三阶递进：L1 跑通 demo，L2 独立完成小项目，L3 具备可交付的系统能力。
 
 ### 🎯 推荐学习路径 (Tracks)
 
-- **智能空间集成** — `M0 → M1 → M5`（面向集成商）
-- **野外物联网** — `M0 → M2 → M5`（面向农业 / 城市 / 科研）
-- **边缘视觉 AI** — `M0 → M3 → M5`（面向安防 / 零售 / 工业）
-- **空间 Agent** — `M0 → M4 → M5`（面向文旅 / 展陈 / 品牌）
+- **用 AI 造物** — `M0`（零基础旗舰入口）
+- **造 AI 的物** — `M2 → M4`（多模态 AI 交互 → 边缘视觉 AI）
+- **解决方案** — `M1 · M3 · M5`（设备互联 · 自组网通信 · 环境感知）
 
 ## 🤝 合作体系 · 3 类场景 × 4 种形态
 
