@@ -1,0 +1,52 @@
+---
+import { Icon } from 'astro-icon/components';
+import SectionHeader from '../../SectionHeader.astro';
+import type { ChipFaqItem } from '../../../data/ecosystem';
+
+interface Props {
+  title: string;
+  faqs: ChipFaqItem[];
+}
+
+const { title, faqs } = Astro.props as Props;
+---
+
+<section class="py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-background">
+  <div class="max-w-3xl mx-auto" data-reveal>
+    <SectionHeader title={title} align="center" />
+    <div class="space-y-4 mt-10">
+      {
+        faqs.map((faq, index) => (
+          <div class="hs-accordion card-hairline overflow-hidden" id={`chip-faq-accordion-${index}`}>
+            <button
+              id={`chip-faq-accordion-trigger-${index}`}
+              class="hs-accordion-toggle hs-accordion-active:text-brand-red py-5 px-6 inline-flex items-center justify-between gap-x-3 w-full font-bold text-left text-brand-black transition hover:text-brand-red cursor-pointer"
+              aria-expanded="false"
+              aria-controls={`chip-faq-accordion-content-${index}`}
+            >
+              {faq.question}
+              <Icon
+                name="lucide:chevron-down"
+                class="hs-accordion-active:hidden block w-4 h-4 text-neutral-5 shrink-0"
+              />
+              <Icon
+                name="lucide:chevron-up"
+                class="hs-accordion-active:block hidden w-4 h-4 text-brand-red shrink-0"
+              />
+            </button>
+            <div
+              id={`chip-faq-accordion-content-${index}`}
+              class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300 bg-neutral-1"
+              role="region"
+              aria-labelledby={`chip-faq-accordion-trigger-${index}`}
+            >
+              <p class="pb-5 pt-2 px-6 text-neutral-8 leading-relaxed text-sm whitespace-pre-line">
+                {faq.answer}
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

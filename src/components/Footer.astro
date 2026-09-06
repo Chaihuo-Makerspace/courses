@@ -41,8 +41,10 @@ const footerLinks = {
   ecosystem: {
     title: t(locale, 'footer.ecosystem'),
     links: [
-      { label: t(locale, 'footer.chaihuo'), href: 'https://chaihuo.org/' },
-      { label: t(locale, 'footer.mcv'), href: 'https://mcv.chaihuo.org/' },
+      { label: t(locale, 'footer.ecosystemMap'), href: 'https://map.seeed.cc' },
+      { label: t(locale, 'footer.pioneer'), href: localizePath(locale, '/pioneer') },
+      { label: t(locale, 'footer.base'), href: localizePath(locale, '/base') },
+      { label: t(locale, 'footer.seeed'), href: 'https://www.seeedstudio.com' },
     ],
   },
   social: {
@@ -163,8 +165,8 @@ const footerLinks = {
                 <li>
                   <a
                     href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                     class="text-sm text-white/70 hover:text-brand-yellow transition-colors"
                   >
                     {link.label}

@@ -1,0 +1,90 @@
+---
+import { Icon } from 'astro-icon/components';
+import SectionHeader from '../../SectionHeader.astro';
+import type { IconBullet } from '../../../data/ecosystem';
+
+interface Props {
+  section: {
+    title: string;
+    intro: string;
+    coreTitle: string;
+    core: IconBullet[];
+    /** 先锋官页：关键约束说明（柔黄强调面板） */
+    note?: string;
+    /** 基地页：加分项列表 */
+    plusTitle?: string;
+    plus?: string[];
+  };
+}
+
+const { section } = Astro.props as Props;
+const plusItems = section.plus ?? [];
+---
+
+<section class="py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-background">
+  <div class="max-w-6xl mx-auto" data-reveal>
+    <SectionHeader title={section.title} />
+
+    <div class="grid gap-8 lg:grid-cols-[1.4fr_0.8fr] items-start">
+      <div>
+        <p class="max-w-3xl text-base md:text-lg leading-relaxed text-neutral-8 mb-6">
+          {section.intro}
+        </p>
+        <h3 class="text-sm font-mono font-bold uppercase tracking-widest text-neutral-6 mb-4">
+          {section.coreTitle}
+        </h3>
+        <div class="grid gap-5 sm:grid-cols-2">
+          {section.core.map((bullet, i) => (
+            <article
+              class="card-hairline p-6 flex items-start gap-4"
+              data-reveal
+              style={`--reveal-delay: ${i * 70}ms`}
+            >
+              <span class="shrink-0 w-10 h-10 rounded-md bg-brand-yellow text-brand-black flex items-center justify-center">
+                <Icon name={bullet.icon} class="w-5 h-5" />
+              </span>
+              <div>
+                <h4 class="text-base font-bold text-brand-black leading-tight">{bullet.title}</h4>
+                <p class="mt-1.5 text-sm leading-relaxed text-neutral-8">{bullet.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <aside>
+        {
+          plusItems.length > 0 && (
+            <div class="card-hairline p-6" data-reveal style="--reveal-delay: 120ms">
+              <h3 class="text-sm font-mono font-bold uppercase tracking-widest text-brand-red mb-4">
+                {section.plusTitle}
+              </h3>
+              <ul class="space-y-3">
+                {plusItems.map((item) => (
+                  <li class="flex items-start gap-2.5 text-sm leading-relaxed text-neutral-8">
+                    <Icon name="lucide:check" class="w-4 h-4 mt-1 text-brand-red shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
+        {
+          section.note && (
+            <div
+              class="panel-yellow noise-overlay p-6"
+              data-reveal
+              style="--reveal-delay: 120ms"
+            >
+              <div class="relative z-10 flex items-start gap-3">
+                <Icon name="lucide:info" class="w-5 h-5 mt-0.5 shrink-0 text-brand-black" />
+                <p class="text-sm font-medium leading-relaxed text-brand-black">{section.note}</p>
+              </div>
+            </div>
+          )
+        }
+      </aside>
+    </div>
+  </div>
+</section>

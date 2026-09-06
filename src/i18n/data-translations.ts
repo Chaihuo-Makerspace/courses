@@ -26,6 +26,7 @@ const zh: Record<string, string> = {
   'home.map.title': 'M0–M6 是学习模块，L1–L3 是实践深度',
   'home.map.subtitle':
     '矩阵只是组织方式。真正交付时，它对应的是模块、课时深度、硬件材料和项目产出。',
+
   'home.paths.view': '查看方向',
   'home.paths.cta1': '查看路径指南',
   'home.paths.cta2': '查看完整学习体系',
@@ -78,10 +79,10 @@ const zh: Record<string, string> = {
   'eco.opc.name': '柴火创客 OPC 学园',
   'eco.opc.role': '技术赋能平台',
   'eco.opc.desc': '将生态中的技术能力转化为可学习的课程，帮助个人和企业掌握新技术整合能力。',
-  'eco.opc.tag': '技术培训',
+  'eco.opc.tag': '技术学习',
   'eco.learnMore': '了解更多',
   'eco.title': '柴火创客三位一体生态',
-  'eco.subtitle': '硬件产品 · 创客空间 · 技术培训——彼此支撑，形成闭环。',
+  'eco.subtitle': '硬件产品 · 创客空间 · 技术学习——彼此支撑，形成闭环。',
 
   'values.title': '这为你带来什么价值？',
   'value.realHardware.title': '真硬件',
@@ -99,6 +100,7 @@ const zh: Record<string, string> = {
   'mapLegend.axisX.label': '横轴 · M0–M6',
   'mapLegend.axisX.desc':
     '学习方向。M0 是零基础旗舰入口（智能硬件入门），M1–M6 是六大行业方向，按目标可独立选学。',
+
   'mapLegend.axisY.label': '纵轴 · L1 / L2 / L3',
   'mapLegend.axisY.desc':
     '掌握深度。L1 展示层看得懂能演示，L2 顾问层独立配置可用系统，L3 设计层做到业务集成与深度定制。',
@@ -113,7 +115,7 @@ const zh: Record<string, string> = {
     '裸硬件套件与标准教学套件使用 Seeed 原厂硬件，保证课程实验与教材一致。合作伙伴也可以在自己的硬件平台上做适配，但实验手册和课程素材以原厂硬件为准。',
   'faq.q3.q': '师资培训套件具体包含什么内容？',
   'faq.q3.a':
-    '包含对应模块的硬件套件、完整课程资源包以及 Train-the-Trainer 师训。师训通常由柴火讲师现场授课，时间 2–3 天，培养机构自有讲师。',
+    '包含对应模块的硬件套件、完整学习资源包以及 Train-the-Trainer 师训。师训通常由柴火讲师现场授课，时间 2–3 天，培养机构自有讲师。',
   'faq.q4.q': '全托交付套件可以按需定制吗？',
   'faq.q4.a':
     '可以。全托交付套件可按模块、级别、学员人数和目标场景定制。我们会根据需求配置硬件、课程和讲师资源，端到端托管交付。',
@@ -145,7 +147,7 @@ const zh: Record<string, string> = {
 
   'form.A.title': '裸硬件套件',
   'form.A.subtitle': 'Bare Hardware Kit',
-  'form.A.f1': '仅含硬件与配件，不含课程资源',
+  'form.A.f1': '仅含硬件与配件，不含学习资源',
   'form.A.f2': '适配自研课程，灵活组合',
   'form.A.f3': '按 M0–M6 模块自由选配',
   'form.A.d1': 'Seeed 原厂硬件与配件',
@@ -153,26 +155,26 @@ const zh: Record<string, string> = {
   'form.A.d3': '硬件保修与供货支持',
   'form.B.title': '标准教学套件',
   'form.B.subtitle': 'Standard Teaching Kit',
-  'form.B.f1': '硬件 + 完整课程资源包',
+  'form.B.f1': '硬件 + 完整学习资源包',
   'form.B.f2': '含 NLHD 教材、课件与实验手册',
   'form.B.f3': '开箱即可开课',
   'form.B.d1': '对应模块硬件套件',
-  'form.B.d2': '完整课程资源包',
-  'form.B.d3': '持续课程内容更新',
+  'form.B.d2': '完整学习资源包',
+  'form.B.d3': '持续学习内容更新',
   'form.C.title': '全托交付套件',
   'form.C.subtitle': 'Full-Delivery Kit',
   'form.C.f1': '硬件 + 课程 + 柴火讲师到场授课',
   'form.C.f2': '适合首次采购、零师资客户',
   'form.C.f3': '端到端托管交付',
-  'form.C.d1': '硬件与课程资源',
+  'form.C.d1': '硬件与学习资源',
   'form.C.d2': '柴火讲师现场授课',
-  'form.C.d3': '课程交付与结业支持',
+  'form.C.d3': '学习交付与结业支持',
   'form.D.title': '师资培训套件',
   'form.D.subtitle': 'Train-the-Trainer Kit',
   'form.D.f1': '硬件 + 课程 + Train-the-Trainer 师训',
   'form.D.f2': '培养机构自有讲师',
   'form.D.f3': '可持续自主开课',
-  'form.D.d1': '硬件与课程资源',
+  'form.D.d1': '硬件与学习资源',
   'form.D.d2': 'Train-the-Trainer 师资培训',
   'form.D.d3': '讲师认证与复训',
 
@@ -185,15 +187,21 @@ const zh: Record<string, string> = {
     '具备可交付的系统能力，能对接 API、训练模型、私有化部署，适合业务集成与深度定制。',
 
   'section.ecosystemTitle': '柴火创客三位一体生态',
-  'section.ecosystemSubtitle': '硬件产品 · 创客空间 · 技术培训——彼此支撑，形成闭环。',
+  'section.ecosystemSubtitle': '硬件产品 · 创客空间 · 技术学习——彼此支撑，形成闭环。',
   'section.valuesTitle': '这为你带来什么价值？',
   'section.statsTitle': '柴火创客 — 数据',
   'section.faqTitle': '常见问题',
-  'section.faqSubtitle': '关于合作与课程引入的常见问题',
+  'section.faqSubtitle': '关于合作与学习引入的常见问题',
   'section.scenariosTitle': '合作场景',
   'section.scenariosSubtitle': '选择你的角色，查看适合的合作方式',
   'section.formsTitle': '合作形态',
   'section.formsSubtitle': '四种销售形态，从裸硬件到全托交付',
+
+  'contact.interest.heading': '我感兴趣的方向',
+  'contact.interest.o1': '学习引入',
+  'contact.interest.o2': '先锋官',
+  'contact.interest.o3': '基地',
+  'contact.interest.note': '扫码登记时请说明意向方向，社区经理会帮你对接到相应负责人。',
 
   'course.backToMatrix': '返回学习矩阵',
   'course.coreHardware': '核心硬件',
@@ -204,11 +212,11 @@ const zh: Record<string, string> = {
   'course.typicalScenarios': '典型应用场景',
   'course.days': '天',
   'course.comingSoon': '即将推出',
-  'course.viewDetail': '查看课程详情',
+  'course.viewDetail': '查看学习详情',
   'course.platform': '平台',
   'course.audienceTitle': '适合这些人学',
-  'course.relatedTracks': '包含此模块的课程组合',
-  'course.relatedTracksAria': '查看包含本模块的课程组合',
+  'course.relatedTracks': '包含此模块的学习组合',
+  'course.relatedTracksAria': '查看包含本模块的学习组合',
   'course.deliverablesTitle': '学完拿走什么',
   'course.deliverablesTitleM0': '不是一堆 demo，是能被点亮、被验收、被复制的产出物',
   'course.deliverablesIntro': '不是一堆 demo，而是可以被现场点亮、被客户验收、被团队复制的产出物。',
@@ -235,8 +243,9 @@ const zh: Record<string, string> = {
   'course.kitsTitle': '感知 · 交互 · 视觉，三级能力递进',
   'course.kitsSubtitle':
     '完整版人手一套三件；短形态只发对应的那一件。子套件按硬件平台划分，不代表 L1／L2／L3 的掌握深度。',
-  'course.hardwareIntroTitle': '课程所需硬件',
-  'course.hardwareIntroSubtitle': '本课程配套的教具清单，均为开箱即用的真实硬件。',
+  'course.hardwareIntroTitle': '学习所需硬件',
+  'course.hardwareIntroSubtitle': '本学习模块配套的教具清单，均为开箱即用的真实硬件。',
+
   'course.ladderTitleM0': '三套硬件平台：A 感知 · B 交互 · C 视觉',
   'course.ladderTitle': '三阶递进：展示层 → 顾问层 → 设计层',
   'course.ladderSubtitleM0':
@@ -248,6 +257,7 @@ const zh: Record<string, string> = {
   'course.explorerTitle': '七个可引入学习模块',
   'course.explorerSubtitle':
     '每个模块都包含真实硬件、课堂实验、能力目标和可带走材料。可以单独引入，也可以组合成系列方案。',
+
   'course.explorer.cardView': '详细卡片',
   'course.explorer.listView': '紧凑列表',
   'course.explorer.switchCard': '切换至卡片视图',
@@ -261,18 +271,20 @@ const zh: Record<string, string> = {
   'moduleCard.viewDetail': '查看详情',
   'moduleCard.illustration': '插画',
   'moduleCard.about': '约',
-  'moduleOneLiner.viewDetail': '查看课程详情',
+  'moduleOneLiner.viewDetail': '查看学习详情',
 
   'courseMatrix.swipeHint': '← 左右滑动查看完整矩阵 →',
   'courseMatrix.srCaption':
     '学习矩阵：横轴为 L1–L3 三个层级，纵轴为 M0–M6 七个模块；每格列出该模块在该层级的模块标题、时长与产出。',
   'courseMatrix.srHeader': '模块 / 层级',
+
   'courseMatrix.platformLayers': 'A/B/C 硬件平台分层',
   'courseMatrix.comingSoon': '即将推出',
 
   'courseAxis.title': '模块与级别如何组合',
   'courseAxis.subtitle':
     'M0–M6 说明学习方向，L1 / L2 / L3 说明实践深度。机构引入时，可以按模块和级别确定方案包范围。',
+
   'courseAxis.l1': '展示层｜看得懂、能演示',
   'courseAxis.l2': '顾问层｜独立配置可用系统',
   'courseAxis.l3': '设计层｜业务集成与深度定制',
@@ -283,10 +295,11 @@ const zh: Record<string, string> = {
 
   'pathOr.moduleRange': '模块范围',
   'pathOr.chooseDirection': '选 M0–M6 中的课程方向',
+
   'pathOr.determineLevel': '确定 L1 / L2 / L3',
   'pathOr.confirmHardware': '确认硬件、实验和项目产出',
   'pathOr.formats': '裸硬件 / 标准教学 / 全托交付 / 师资培训',
-  'pathOr.heading': '先确认课程包的四个维度',
+  'pathOr.heading': '先确认学习包的四个维度',
   'pathOr.subheading': '这四项清楚了，后面的合作沟通会更具体。',
 
   'pathDepth.l1Title': '展示层 · 看得懂、能演示',
@@ -304,6 +317,7 @@ const zh: Record<string, string> = {
 
   'pathTracks.title': '三大学习方向',
   'pathTracks.subtitle': '三个并列方向，按课程目标给出建议组合。',
+
   'pathTracks.locate': '在学习体系中定位',
   'pathTracks.consult': '申请合作咨询',
   'pathTracks.view': '查看',
@@ -319,6 +333,7 @@ const zh: Record<string, string> = {
 
   'heroMap.title': 'M0–M6 × L1/L2/L3 学习矩阵',
   'heroMap.subtitle': '每个模块都可按 L1/L2/L3 三个深度独立引入，也可以跨模块组合成完整方案包。',
+
   'heroMap.viewAll': '查看完整学习体系',
   'heroMap.viewGuide': '查看路径指南',
 
@@ -329,6 +344,7 @@ const zh: Record<string, string> = {
   'cta.paths.desc':
     '路径指南只帮助你缩小范围。真正落地时，还要看模块内容、课堂实验、硬件清单、交付材料和销售形态。',
   'cta.courses.title': '把学习模块引入你的团队或项目现场',
+
   'cta.courses.desc':
     '如果你已经有明确方向，可以继续讨论裸硬件套件、标准教学套件、全托交付或师资培训。我们会根据目标推荐模块组合与实践深度。',
   'cta.about.title': '想把这份生态能力带到你的组织？',
@@ -337,7 +353,7 @@ const zh: Record<string, string> = {
   'cta.apply': '申请合作咨询',
   'cta.viewCourses': '查看学习体系',
   'cta.viewPaths': '查看路径指南',
-  'cta.aboutOrg': '了解学园背景',
+  'cta.aboutOrg': '关于学园',
 };
 
 const en: Record<string, string> = {
@@ -540,6 +556,13 @@ const en: Record<string, string> = {
   'section.scenariosSubtitle': 'Choose your role and explore collaboration approaches',
   'section.formsTitle': 'Partnership Formats',
   'section.formsSubtitle': 'Four delivery formats, from bare hardware to full-service delivery',
+
+  'contact.interest.heading': 'What Brings You Here?',
+  'contact.interest.o1': 'Course Introduction',
+  'contact.interest.o2': 'Pioneer',
+  'contact.interest.o3': 'Base',
+  'contact.interest.note':
+    'Mention your interest when registering — the community manager will route you to the right person.',
 
   'course.backToMatrix': 'Back to Learning Matrix',
   'course.coreHardware': 'Core Hardware',
@@ -884,6 +907,13 @@ const ja: Record<string, string> = {
   'section.scenariosSubtitle': 'あなたの役割を選択し、適切な協業方法を確認してください',
   'section.formsTitle': '協業形態',
   'section.formsSubtitle': '4つの販売形態、Bare Hardwareからフルデリバリーまで',
+
+  'contact.interest.heading': 'ご関心のある方向',
+  'contact.interest.o1': 'コース導入',
+  'contact.interest.o2': 'パイオニア',
+  'contact.interest.o3': '拠点',
+  'contact.interest.note':
+    'ご登録の際は関心のある方向をお知らせください。コミュニティマネージャーが担当者へおつなぎします。',
   'course.backToMatrix': '学習マトリックスに戻る',
   'course.coreHardware': 'コアハードウェア',
   'course.keyCapabilities': 'キー能力',
@@ -1235,6 +1265,13 @@ const es: Record<string, string> = {
   'section.formsTitle': 'Modalidades de colaboración',
   'section.formsSubtitle':
     'Cuatro modalidades de venta, desde hardware básico hasta entrega integral',
+
+  'contact.interest.heading': 'Áreas de interés',
+  'contact.interest.o1': 'Introducción de cursos',
+  'contact.interest.o2': 'Pionero',
+  'contact.interest.o3': 'Base',
+  'contact.interest.note':
+    'Indica tu área de interés al registrarte y el community manager te pondrá en contacto con la persona adecuada.',
   'course.backToMatrix': 'Volver a la matriz de aprendizaje',
   'course.coreHardware': 'Hardware principal',
   'course.keyCapabilities': 'Capacidades clave',
@@ -1586,6 +1623,13 @@ const ptBR: Record<string, string> = {
   'section.scenariosSubtitle': 'Escolha seu perfil e veja a forma de cooperação mais adequada',
   'section.formsTitle': 'Formatos de parceria',
   'section.formsSubtitle': 'Quatro formatos comerciais, do hardware puro à entrega completa',
+
+  'contact.interest.heading': 'Áreas de interesse',
+  'contact.interest.o1': 'Introdução de cursos',
+  'contact.interest.o2': 'Pioneiro',
+  'contact.interest.o3': 'Base',
+  'contact.interest.note':
+    'Informe sua área de interesse ao se cadastrar; o community manager vai encaminhar você à pessoa certa.',
   'course.backToMatrix': 'Voltar à matriz de aprendizado',
   'course.coreHardware': 'Hardware principal',
   'course.keyCapabilities': 'Competências-chave',

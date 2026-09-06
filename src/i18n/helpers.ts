@@ -100,7 +100,9 @@ export function translateCta(cta: FinalCta, locale: Locale): FinalCta {
       ? 'home'
       : cta.title.includes('选好组合') || cta.title.includes('After selecting')
         ? 'paths'
-        : cta.title.includes('把学习模块引入') || cta.title.includes('Bring learning modules')
+        : cta.title.includes('把学习模块引入') ||
+            cta.title.includes('Bring learning modules') ||
+            cta.title.includes('Bring course modules')
           ? 'courses'
           : 'about';
   return {
@@ -114,15 +116,19 @@ export function translateCta(cta: FinalCta, locale: Locale): FinalCta {
         cta.primary.label.includes('申请合作') || cta.primary.label.includes('Apply for')
           ? dt(locale, 'cta.apply')
           : cta.primary.label.includes('查看课程') ||
+              cta.primary.label.includes('查看学习') ||
               cta.primary.label.includes('查看学习体系') ||
               cta.primary.label.includes('View Course') ||
               cta.primary.label.includes('View Learning')
             ? dt(locale, 'cta.viewCourses')
             : cta.primary.label.includes('选课') ||
                 cta.primary.label.includes('查看路径指南') ||
+                cta.primary.label.includes('路径') ||
                 cta.primary.label.includes('Learning Path')
               ? dt(locale, 'cta.viewPaths')
-              : cta.primary.label.includes('了解学园') || cta.primary.label.includes('Learn About')
+              : cta.primary.label.includes('了解学园') ||
+                  cta.primary.label.includes('关于学园') ||
+                  cta.primary.label.includes('Learn About')
                 ? dt(locale, 'cta.aboutOrg')
                 : cta.primary.label,
     },
@@ -134,15 +140,18 @@ export function translateCta(cta: FinalCta, locale: Locale): FinalCta {
             cta.secondary.label.includes('申请合作') || cta.secondary.label.includes('Apply for')
               ? dt(locale, 'cta.apply')
               : cta.secondary.label.includes('查看课程') ||
+                  cta.secondary.label.includes('查看学习') ||
                   cta.secondary.label.includes('查看学习体系') ||
                   cta.secondary.label.includes('View Course') ||
                   cta.secondary.label.includes('View Learning')
                 ? dt(locale, 'cta.viewCourses')
                 : cta.secondary.label.includes('选课') ||
                     cta.secondary.label.includes('查看路径指南') ||
+                    cta.secondary.label.includes('路径') ||
                     cta.secondary.label.includes('Learning Path')
                   ? dt(locale, 'cta.viewPaths')
                   : cta.secondary.label.includes('了解学园') ||
+                      cta.secondary.label.includes('关于学园') ||
                       cta.secondary.label.includes('Learn About')
                     ? dt(locale, 'cta.aboutOrg')
                     : cta.secondary.label,

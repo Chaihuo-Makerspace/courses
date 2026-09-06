@@ -1,0 +1,57 @@
+---
+import SectionHeader from '../../SectionHeader.astro';
+import type { ComparisonRow } from '../../../data/ecosystem';
+
+interface Props {
+  section: {
+    title: string;
+    subtitle: string;
+    header: { first: string; pioneer: string; base: string };
+    rows: ComparisonRow[];
+  };
+}
+
+const { section } = Astro.props as Props;
+---
+
+<section class="py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-neutral-1">
+  <div class="max-w-6xl mx-auto" data-reveal>
+    <SectionHeader title={section.title} subtitle={section.subtitle} />
+
+    <div class="mt-10 card-hairline overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm min-w-[640px]">
+          <caption class="sr-only">
+            {section.title}
+          </caption>
+          <thead>
+            <tr class="bg-brand-yellow-light text-left">
+              <th scope="col" class="px-6 py-4 font-bold text-brand-black whitespace-nowrap w-1/3">
+                {section.header.first}
+              </th>
+              <th scope="col" class="px-6 py-4 font-bold text-brand-black whitespace-nowrap">
+                {section.header.pioneer}
+              </th>
+              <th scope="col" class="px-6 py-4 font-bold text-brand-yellow-dark whitespace-nowrap">
+                {section.header.base}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {section.rows.map((row) => (
+              <tr class="border-t border-neutral-3">
+                <th scope="row" class="px-6 py-4 font-semibold text-brand-black whitespace-nowrap align-top">
+                  {row.label}
+                </th>
+                <td class="px-6 py-4 text-neutral-8 align-top">{row.pioneer}</td>
+                <td class="px-6 py-4 text-neutral-8 font-medium align-top bg-brand-yellow-light/40">
+                  {row.base}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

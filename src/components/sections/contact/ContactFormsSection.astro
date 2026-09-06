@@ -46,16 +46,20 @@ const { partnershipForms, locale } = Astro.props as Props;
         <p class="mt-3 text-sm md:text-base text-white/70 leading-relaxed max-w-2xl">
           {t(locale, 'contact.cta.description')}
         </p>
-        <div class="mt-5">
-          <p class="text-xs font-mono font-bold uppercase tracking-widest text-white/50 mb-2">
-            {t(locale, 'contact.forms.interestsHeading')}
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-full bg-white/10 text-sm text-white/80">{t(locale, 'contact.forms.interestLearning')}</span>
-            <span class="px-3 py-1 rounded-full bg-white/10 text-sm text-white/80">{t(locale, 'contact.forms.interestPioneer')}</span>
-          </div>
-          <p class="mt-4 text-xs text-white/50 leading-relaxed">{t(locale, 'contact.forms.qrHint')}</p>
+
+        <p class="mt-6 text-sm font-semibold text-white">
+          {dt(locale, 'contact.interest.heading')}
+        </p>
+        <div class="mt-2.5 flex flex-wrap gap-2">
+          {['o1', 'o2', 'o3'].map((key) => (
+            <span class="rounded-full border border-white/25 px-3 py-1.5 text-xs text-white/80">
+              {dt(locale, `contact.interest.${key}`)}
+            </span>
+          ))}
         </div>
+        <p class="mt-3 text-xs leading-relaxed text-white/50 max-w-2xl">
+          {dt(locale, 'contact.interest.note')}
+        </p>
       </div>
     </div>
   </div>

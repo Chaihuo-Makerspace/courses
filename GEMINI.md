@@ -7,7 +7,7 @@ sync when editing.
 
 ## Scope
 
-- Project is 柴火创客 OPC 学院 (Chaihuo Maker Academy) — a Chinese-language
+- Project is 柴火创客 OPC 学园 (Chaihuo Maker Academy) — a Chinese-language
   marketing / 招生 / 招商 site. **Not** a docs platform, **not** a CMS-backed
   blog.
 - Source-of-truth files in this repo: `ARCHITECTURE.md` (repo map),

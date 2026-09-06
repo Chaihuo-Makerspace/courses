@@ -1,4 +1,4 @@
-# 柴火创客学院 · 设计方案（Design System）v4.0 — Warm Maker Signal
+# 柴火创客学园 · 设计方案（Design System）v4.0 — Warm Maker Signal
 
 > **这是设计系统的唯一权威文档。** Token 值与 `src/styles/themes/theme.css` 的
 > `@theme` 块逐一对齐；改 token 必须两边同步。本文不只记"用什么"，更记

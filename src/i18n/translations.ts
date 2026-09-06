@@ -19,10 +19,14 @@ const zh: TranslationDict = {
   'nav.toggle': '打开或关闭导航菜单',
   'nav.brand': '柴火',
   'nav.homeAria': '柴火创客学园首页',
-
   // Footer
   'footer.tagline':
     '柴火创客学园把真实硬件、场景项目和交付经验整理成 M0–M6 学习体系，帮助学习者从动手基础走向可交付系统。',
+  'nav.pioneerBase': '先锋官 · 基地',
+  'nav.map': '创客生态',
+  'nav.ecosystem': '柴火生态',
+  'nav.mcv': '柴火基地车',
+  'chip.tabsAria': '在先锋官计划与基地计划之间切换',
   'footer.contact': '联系我们',
   'footer.nav': '站内导航',
   'footer.social': '关注我们',
@@ -31,7 +35,17 @@ const zh: TranslationDict = {
   'footer.copyright': '© {year} Chaihuo Makerspace Academy. All rights reserved.',
   'footer.chaihuo': '柴火创客空间',
   'footer.mcv': '柴火数字基地车',
-  'footer.ecosystem': '生态伙伴',
+  'footer.ecosystem': '柴火生态',
+  'footer.ecosystemMap': '创客生态分布图',
+  'footer.pioneer': '先锋官计划',
+  'footer.base': '基地计划',
+  'footer.seeed': 'Seeed Studio',
+  'page.pioneer.title': '先锋官计划',
+  'page.pioneer.description':
+    '先锋官——在你的城市，做 AI 时代的点火人。柴火给你学习体系、教具和认证，你把 AI 创客教育带到你的城市。',
+  'page.base.title': '基地计划',
+  'page.base.description':
+    '基地——城市里看得见的柴火。有固定场地、有持续运营意愿，柴火给你教具、学习体系、品牌背书和派单流量。',
 
   // Home Hero
   'home.hero.eyebrow': '柴火创客学园',
@@ -40,6 +54,7 @@ const zh: TranslationDict = {
   'home.hero.subtitle': '柴火创客学园',
   'home.hero.description':
     '围绕 M0–M6 七个学习模块，把零基础智能硬件入门、设备互联、多模态 AI、自组网通信、边缘视觉与环境感知整理成可引入、可交付、可共建的学习体系。',
+
   'home.hero.ctaPrimary': '查看学习体系',
   'home.hero.ctaSecondary': '申请合作咨询',
 
@@ -63,6 +78,7 @@ const zh: TranslationDict = {
   // Courses
   'courses.title': '学习体系',
   'courses.description': 'M0–M6 七大学习模块，覆盖从硬件入门到行业交付的完整技术栈',
+
   'courses.overview': '学习总览',
   'courses.matrix': '学习矩阵',
   'courses.tracks': '学习路径',
@@ -70,29 +86,29 @@ const zh: TranslationDict = {
   'courses.cta.title': '不确定从哪里开始？',
   'courses.cta.description': '查看三大学习方向，找到最适合你的学习路径',
   'courses.cta.primary': '查看路径指南',
-  'courses.cta.secondary': '咨询课程顾问',
+  'courses.cta.secondary': '咨询学习顾问',
 
   // Course detail
   'course.audience': '适合人群',
   'course.capabilities': '你将获得的能力',
-  'course.deliverables': '课程交付物',
+  'course.deliverables': '学习交付物',
   'course.formats': '学习形式',
   'course.kits': '硬件套件',
   'course.toolchain': '技术栈',
-  'course.curriculum': '课程大纲',
+  'course.curriculum': '学习大纲',
   'course.teacherNotes': '讲师须知',
   'course.complianceBoundary': '能力边界与合规约束',
   'course.compliance.principles': '核心原则',
   'course.compliance.applicable': '适用范围',
   'course.compliance.notApplicable': '不适用范围',
   'course.relatedTracks': '相关学习路径',
-  'course.levels': '课程层级',
+  'course.levels': '学习层级',
   'course.level.l1': '入门',
   'course.level.l2': '进阶',
   'course.level.l3': '实战',
   'course.backToCourses': '返回学习体系',
   'course.cta.primary': '咨询合作',
-  'course.cta.secondary': '查看其他课程',
+  'course.cta.secondary': '查看其他模块',
 
   // Paths
   'paths.title': '路径指南',
@@ -111,7 +127,7 @@ const zh: TranslationDict = {
   'about.hero.titleHighlight': '学园',
   'about.hero.subtitle': 'Chaihuo Makerspace Academy',
   'about.hero.description':
-    '背靠 Seeed Studio 与柴火创客空间，我们相信每个人都应该有能力\\"一个人也能上场\\"——把想法变成可交付的智能系统。',
+    '背靠 Seeed Studio 与柴火创客空间，我们相信每个人都应该有能力\\"一个人也能上场\\"——把想法变成可交付的智能系统。柴火创客学园面向机构提供可引入、可授课、可共建的学习体系。',
   'about.ecosystem.title': '柴火创客生态',
   'about.ecosystem.subtitle': '三大支柱支撑创客教育体系',
   'about.values.title': '我们的理念',
@@ -120,7 +136,8 @@ const zh: TranslationDict = {
   'about.stats.subtitle': '用数字说话',
   'about.cta.eyebrow': '加入我们',
   'about.cta.title': '想了解更多？',
-  'about.cta.description': '联系我们，了解柴火创客学园的课程与合作机会',
+  'about.cta.description': '联系我们，了解柴火创客学园的学习与合作机会',
+
   'about.cta.primary': '查看学习体系',
   'about.cta.secondary': '联系我们',
 
@@ -130,13 +147,13 @@ const zh: TranslationDict = {
   'contact.hero.eyebrow': '合作咨询',
   'contact.hero.title': '找到适合你的',
   'contact.hero.titleHighlight': '合作方式',
-  'contact.hero.description': '三种合作场景 × 四种课程销售形态，匹配你的需求',
+  'contact.hero.description': '三种合作场景 × 四种销售形态，匹配你的需求',
   'contact.scenarios.title': '合作场景',
   'contact.scenarios.subtitle': '选择你的角色，找到最适合的合作方式',
   'contact.forms.title': '合作形态',
-  'contact.forms.subtitle': '四种课程销售形态，从裸硬件到全托交付',
+  'contact.forms.subtitle': '四种销售形态，从裸硬件到全托交付',
   'contact.faq.title': '常见问题',
-  'contact.faq.subtitle': '关于课程合作的常见问题',
+  'contact.faq.subtitle': '关于合作的常见问题',
   'contact.cta.eyebrow': '开始合作',
   'contact.cta.title': '准备好合作了吗？',
   'contact.cta.description': '扫描二维码或联系我们，找到最适合你的合作方式',
@@ -159,6 +176,7 @@ const zh: TranslationDict = {
 
   // Hero
   'hero.courseMap': '学习地图 · M0–M6',
+
   'hero.levels': 'L1 · L2 · L3',
 
   // Home
@@ -174,16 +192,12 @@ const zh: TranslationDict = {
   'courses.matrix.eyebrow': '学习矩阵',
 
   // Paths
-  'paths.tracks.eyebrow': '课程组合',
+  'paths.tracks.eyebrow': '学习组合',
 
   // Contact
   'contact.faq.eyebrow': 'FAQ',
   'contact.forms.eyebrow': '合作咨询',
-  'contact.forms.qrAlt': '学习合作咨询二维码',
-  'contact.forms.interestsHeading': '我感兴趣的方向',
-  'contact.forms.interestLearning': '学习引入',
-  'contact.forms.interestPioneer': '先锋官基地',
-  'contact.forms.qrHint': '扫码登记时请说明意向方向，社区经理会帮你对接到相应负责人。',
+  'contact.forms.qrAlt': '合作咨询二维码',
 
   // Scenario
   'scenario.formAria': '合作形态',
@@ -212,6 +226,11 @@ const en: TranslationDict = {
   'nav.toggle': 'Toggle navigation menu',
   'nav.brand': 'Chaihuo',
   'nav.homeAria': 'Chaihuo Maker Academy Home',
+  'nav.pioneerBase': 'Pioneer · Base',
+  'nav.map': 'Maker Ecosystem',
+  'nav.ecosystem': 'Chaihuo Ecosystem',
+  'nav.mcv': 'Chaihuo Mobile Base (MCV)',
+  'chip.tabsAria': 'Switch between the Pioneer and Base programs',
 
   'footer.tagline':
     'Chaihuo Maker Academy organizes real hardware, real-world projects, and delivery experience into the M0–M6 learning system, helping learners progress from hands-on fundamentals to deliverable systems.',
@@ -223,7 +242,17 @@ const en: TranslationDict = {
   'footer.copyright': '© {year} Chaihuo Makerspace Academy. All rights reserved.',
   'footer.chaihuo': 'Chaihuo Makerspace',
   'footer.mcv': 'Chaihuo Mobile Base Vehicle',
-  'footer.ecosystem': 'Ecosystem',
+  'footer.ecosystem': 'Chaihuo Ecosystem',
+  'footer.ecosystemMap': 'Maker Ecosystem Map',
+  'footer.pioneer': 'Pioneer Program',
+  'footer.base': 'Base Program',
+  'footer.seeed': 'Seeed Studio',
+  'page.pioneer.title': 'Pioneer Program',
+  'page.pioneer.description':
+    'Pioneer Program — In your city, be the spark of the AI era. Chaihuo provides courses, kits, and certification so you can bring AI maker education to your city.',
+  'page.base.title': 'Base Program',
+  'page.base.description':
+    'Base Program — Chaihuo you can see in the city. With a fixed venue and commitment to ongoing operation, Chaihuo provides kits, courses, brand backing, and work-order flow.',
 
   'home.hero.eyebrow': 'Chaihuo Maker Academy',
   'home.hero.title': 'Real Hardware, Real Delivery —',
@@ -402,6 +431,11 @@ const ja: TranslationDict = {
   'nav.toggle': 'ナビゲーションメニューを切り替え',
   'nav.brand': '柴火',
   'nav.homeAria': '柴火創客学園ホーム',
+  'nav.pioneerBase': 'パイオニア · 拠点',
+  'nav.map': 'メーカーエコシステム',
+  'nav.ecosystem': '柴火エコシステム',
+  'nav.mcv': '柴火基地車',
+  'chip.tabsAria': 'パイオニア計画と拠点計画を切り替え',
 
   'footer.tagline':
     '柴火創客学園は、実際のハードウェア、現場プロジェクト、納品経験をM0〜M6の学習体系に整理し、学習者が実践的な基礎から納品可能なシステムへと進めるよう支援します。',
@@ -413,7 +447,17 @@ const ja: TranslationDict = {
   'footer.copyright': '© {year} Chaihuo Makerspace Academy. All rights reserved.',
   'footer.chaihuo': '柴火創客空間',
   'footer.mcv': '柴火デジタル基地車',
-  'footer.ecosystem': 'エコシステム',
+  'footer.ecosystem': '柴火エコシステム',
+  'footer.ecosystemMap': 'メーカーエコシステムマップ',
+  'footer.pioneer': 'パイオニア計画',
+  'footer.base': '拠点計画',
+  'footer.seeed': 'Seeed Studio',
+  'page.pioneer.title': 'パイオニア計画',
+  'page.pioneer.description':
+    'パイオニア計画——あなたの街で、AI時代の火を灯す人に。柴火がコース・教材・認定を提供します。',
+  'page.base.title': '拠点計画',
+  'page.base.description':
+    '拠点計画——街に現れる柴火。固定の場と継続運営の意志があれば、柴火が教材・コース・ブランド・受注フローを提供します。',
 
   'home.hero.eyebrow': '柴火創客学園',
   'home.hero.title': '実機による現場納品のための',
@@ -587,6 +631,11 @@ const es: TranslationDict = {
   'nav.toggle': 'Alternar menú de navegación',
   'nav.brand': 'Chaihuo',
   'nav.homeAria': 'Inicio de Academia Chaihuo Maker',
+  'nav.pioneerBase': 'Pioneros · Bases',
+  'nav.map': 'Ecosistema Maker',
+  'nav.ecosystem': 'Ecosistema Chaihuo',
+  'nav.mcv': 'Vehículo Base Móvil Chaihuo',
+  'chip.tabsAria': 'Alternar entre el programa de Pioneros y el de Bases',
 
   'footer.tagline':
     'La Academia Chaihuo Maker organiza hardware real, proyectos del mundo real y experiencia de entrega en el sistema de aprendizaje M0–M6, ayudando a los estudiantes a progresar desde fundamentos prácticos hasta sistemas entregables.',
@@ -598,7 +647,17 @@ const es: TranslationDict = {
   'footer.copyright': '© {year} Chaihuo Makerspace Academy. Todos los derechos reservados.',
   'footer.chaihuo': 'Chaihuo Makerspace',
   'footer.mcv': 'Vehículo Base Móvil Chaihuo',
-  'footer.ecosystem': 'Ecosistema',
+  'footer.ecosystem': 'Ecosistema Chaihuo',
+  'footer.ecosystemMap': 'Mapa del Ecosistema Maker',
+  'footer.pioneer': 'Programa de Pioneros',
+  'footer.base': 'Programa de Bases',
+  'footer.seeed': 'Seeed Studio',
+  'page.pioneer.title': 'Programa de Pioneros',
+  'page.pioneer.description':
+    'Programa de Pioneros — Sé la chispa de la era de la IA en tu ciudad. Chaihuo te da cursos, kits y certificación para llevar la educación maker a tu ciudad.',
+  'page.base.title': 'Programa de Bases',
+  'page.base.description':
+    'Programa de Bases — Chaihuo visible en tu ciudad. Con un espacio fijo y voluntad de operación continua, Chaihuo aporta kits, cursos, marca y pedidos.',
 
   'home.hero.eyebrow': 'Academia Chaihuo Maker',
   'home.hero.title': 'Hardware Real, Entrega Real —',
@@ -781,6 +840,11 @@ const ptBR: TranslationDict = {
   'nav.toggle': 'Alternar menu de navegação',
   'nav.brand': 'Chaihuo',
   'nav.homeAria': 'Início da Academia Chaihuo Maker',
+  'nav.pioneerBase': 'Pioneiros · Bases',
+  'nav.map': 'Ecossistema Maker',
+  'nav.ecosystem': 'Ecossistema Chaihuo',
+  'nav.mcv': 'Veículo Base Móvel Chaihuo',
+  'chip.tabsAria': 'Alternar entre o Programa de Pioneiros e o de Bases',
 
   'footer.tagline':
     'A Academia Chaihuo Maker organiza hardware real, projetos do mundo real e experiência de entrega no sistema de aprendizagem M0–M6, ajudando os alunos a progredir dos fundamentos práticos até sistemas entregáveis.',
@@ -792,7 +856,17 @@ const ptBR: TranslationDict = {
   'footer.copyright': '© {year} Chaihuo Makerspace Academy. Todos os direitos reservados.',
   'footer.chaihuo': 'Chaihuo Makerspace',
   'footer.mcv': 'Veículo Base Móvel Chaihuo',
-  'footer.ecosystem': 'Ecossistema',
+  'footer.ecosystem': 'Ecossistema Chaihuo',
+  'footer.ecosystemMap': 'Mapa do Ecossistema Maker',
+  'footer.pioneer': 'Programa de Pioneiros',
+  'footer.base': 'Programa de Bases',
+  'footer.seeed': 'Seeed Studio',
+  'page.pioneer.title': 'Programa de Pioneiros',
+  'page.pioneer.description':
+    'Programa de Pioneiros — Seja a faísca da era da IA na sua cidade. A Chaihuo oferece cursos, kits e certificação para levar a educação maker à sua cidade.',
+  'page.base.title': 'Programa de Bases',
+  'page.base.description':
+    'Programa de Bases — Chaihuo visível na cidade. Com espaço fixo e vontade de operação contínua, a Chaihuo fornece kits, cursos, marca e demanda.',
 
   'home.hero.eyebrow': 'Academia Chaihuo Maker',
   'home.hero.title': 'Hardware Real, Entrega Real —',

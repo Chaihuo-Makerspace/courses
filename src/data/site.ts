@@ -67,6 +67,7 @@ export const homeFinalCta: FinalCta = {
   title: '把学习体系引入你的教学、培训或项目现场',
   description:
     '可以先引入单个模块，也可以按目标组合方案包；销售形态包括裸硬件套件、标准实训套件、全托交付与师资培训。',
+
   primary: { label: '申请合作咨询', href: '/contact' },
   secondary: { label: '查看学习体系', href: '/courses' },
 };
@@ -81,10 +82,11 @@ export const pathsFinalCta: FinalCta = {
 
 export const coursesFinalCta: FinalCta = {
   title: '把学习模块引入你的团队或项目现场',
+
   description:
     '如果你已经有明确方向，可以继续讨论裸硬件套件、标准教学套件、全托交付或师资培训。我们会根据目标推荐模块组合与实践深度。',
   primary: { label: '申请合作咨询', href: '/contact' },
-  secondary: { label: '了解学园背景', href: '/about' },
+  secondary: { label: '关于学园', href: '/about' },
 };
 
 export const aboutEcosystem: AboutEcosystemItem[] = [
@@ -107,7 +109,7 @@ export const aboutEcosystem: AboutEcosystemItem[] = [
     role: '技术赋能平台',
     description: '将生态中的技术能力转化为可学习的课程，帮助个人和企业掌握新技术整合能力。',
     link: null,
-    tag: '技术培训',
+    tag: '技术学习',
   },
 ];
 
@@ -157,7 +159,7 @@ export const contactFaqs: FaqItem[] = [
   {
     question: '四种销售形态有什么区别？',
     answer:
-      'A 裸硬件套件仅含硬件，适合有自研课程能力的机构；B 标准教学套件含完整课程资源包，开箱即可开课；C 全托交付套件由柴火讲师到场授课，适合首次采购；D 师资培训套件帮你培养自有讲师，可持续自主开课。',
+      'A 裸硬件套件仅含硬件，适合有自研课程能力的机构；B 标准教学套件含完整学习资源包，开箱即可开课；C 全托交付套件由柴火讲师到场授课，适合首次采购；D 师资培训套件帮你培养自有讲师，可持续自主开课。',
   },
   {
     question: '是否接受海外合作？',
@@ -236,7 +238,7 @@ export const homeOutcomes: OutcomeItem[] = [
   },
   {
     icon: 'lucide:package',
-    label: '硬件套件与课程资源包',
+    label: '硬件套件与学习资源包',
     description: '课程可配套 Seeed 硬件、NLHD 教材、实验说明、教师材料和学员任务。',
   },
   {
