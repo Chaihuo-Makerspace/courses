@@ -67,11 +67,11 @@ const { form, locale } = Astro.props as Props;
   </div>
 
   <a
-    href="#partnership-qr"
+    href="#partnership-contact"
     class="focus-ring mt-auto inline-flex items-center justify-center gap-2 bg-brand-red text-white font-semibold px-4 py-2.5 rounded-md hover:bg-brand-red-hover transition-colors"
     aria-label={`${dt(locale, 'partnership.scanFormAria')} ${form.code}：${form.title}`}
   >
     {dt(locale, 'partnership.scanForm')}
-    <Icon name="lucide:qr-code" class="w-4 h-4" />
+    <Icon name="lucide:mail" class="w-4 h-4" />
   </a>
 </article>

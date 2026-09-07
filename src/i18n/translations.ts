@@ -156,7 +156,7 @@ const zh: TranslationDict = {
   'contact.faq.subtitle': '关于合作的常见问题',
   'contact.cta.eyebrow': '开始合作',
   'contact.cta.title': '准备好合作了吗？',
-  'contact.cta.description': '扫描二维码或联系我们，找到最适合你的合作方式',
+  'contact.cta.description': '发送邮件至 business@chaihuo.org，找到最适合你的合作方式',
   'contact.cta.primary': '联系我们',
   'contact.cta.secondary': '查看学习体系',
 
@@ -361,7 +361,7 @@ const en: TranslationDict = {
   'contact.cta.eyebrow': 'Start Collaborating',
   'contact.cta.title': 'Ready to partner?',
   'contact.cta.description':
-    'Scan the QR code or contact us to find the best collaboration model for you',
+    'Email us at business@chaihuo.org to find the best collaboration model for you',
   'contact.cta.primary': 'Contact Us',
   'contact.cta.secondary': 'Explore Courses',
 
@@ -560,7 +560,7 @@ const ja: TranslationDict = {
   'contact.faq.subtitle': 'コースパートナーシップに関するよくある質問',
   'contact.cta.eyebrow': '連携を始める',
   'contact.cta.title': 'パートナーシップの準備はできましたか？',
-  'contact.cta.description': 'QRコードをスキャンするか、お問い合わせください',
+  'contact.cta.description': 'business@chaihuo.org までメールでお問い合わせください',
   'contact.cta.primary': 'お問い合わせ',
   'contact.cta.secondary': 'コースを見る',
 
@@ -769,7 +769,7 @@ const es: TranslationDict = {
   'contact.cta.eyebrow': 'Comienza a Colaborar',
   'contact.cta.title': '¿Listo para colaborar?',
   'contact.cta.description':
-    'Escanea el código QR o contáctanos para encontrar el mejor modelo de colaboración para ti',
+    'Escríbenos a business@chaihuo.org para encontrar el mejor modelo de colaboración para ti',
   'contact.cta.primary': 'Contáctanos',
   'contact.cta.secondary': 'Explorar Cursos',
 
@@ -977,7 +977,7 @@ const ptBR: TranslationDict = {
   'contact.cta.eyebrow': 'Comece a Colaborar',
   'contact.cta.title': 'Pronto para fazer parceria?',
   'contact.cta.description':
-    'Escaneie o QR code ou entre em contato para encontrar o melhor modelo de colaboração para você',
+    'Envie um e-mail para business@chaihuo.org para encontrar o melhor modelo de colaboração para você',
   'contact.cta.primary': 'Contate-nos',
   'contact.cta.secondary': 'Explorar Cursos',
 
