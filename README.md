@@ -58,7 +58,6 @@ cd deploy
 
 ## 📖 相关文档
 
-- [CLAUDE.md](./CLAUDE.md) — AI 协作指南 · 架构速览
-- [docs/design-system/MASTER.md](./docs/design-system/MASTER.md) — 完整视觉设计规范（配色、字体、组件）
-- [docs/design-system/QUICK-REFERENCE.md](./docs/design-system/QUICK-REFERENCE.md) — 开发速查卡
-- [AGENTS.md](./AGENTS.md) — AI 协作补充说明
+- [AGENTS.md](./AGENTS.md) — AI 协作指南
+- [ARCHITECTURE.md](./ARCHITECTURE.md) — 架构速览
+- [docs/DESIGN.md](./docs/DESIGN.md) — 视觉设计规范（配色、字体、组件）
