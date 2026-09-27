@@ -86,7 +86,7 @@ export const coursesFinalCta: FinalCta = {
   description:
     '如果你已经有明确方向，可以继续讨论裸硬件套件、标准教学套件、全托交付或师资培训。我们会根据目标推荐模块组合与实践深度。',
   primary: { label: '申请合作咨询', href: '/contact' },
-  secondary: { label: '关于学园', href: '/about' },
+  secondary: { label: '关于学院', href: '/about' },
 };
 
 export const aboutEcosystem: AboutEcosystemItem[] = [
@@ -105,7 +105,7 @@ export const aboutEcosystem: AboutEcosystemItem[] = [
     tag: '创客空间',
   },
   {
-    name: '柴火创客 OPC 学园',
+    name: '柴火创客 OPC 学院',
     role: '技术赋能平台',
     description: '将生态中的技术能力转化为可学习的课程，帮助个人和企业掌握新技术整合能力。',
     link: null,
