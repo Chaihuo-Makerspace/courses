@@ -1,8 +1,8 @@
-# 柴火创客学园 · AIoT 实战课程体系
+# 柴火创客学院 · AIoT 实战课程体系
 
 > **让新技术为你所用 — 掌握 AIoT 实战技能，解决真实场景问题**
 >
-> 柴火创客学园是柴火创客生态的技术赋能平台，背靠 Seeed Studio（全球开源硬件领导者）与柴火创客空间（2011 年成立的中国创客先驱）。我们不提供解决方案——我们培养人掌握新技术整合能力，让每一个个体都能拥有"一个人也能上场"的全栈交付能力。
+> 柴火创客学院是柴火创客生态的技术赋能平台，背靠 Seeed Studio（全球开源硬件领导者）与柴火创客空间（2011 年成立的中国创客先驱）。我们不提供解决方案——我们培养人掌握新技术整合能力，让每一个个体都能拥有"一个人也能上场"的全栈交付能力。
 
 ## 📚 课程矩阵 · M0–M6 × L1/L2/L3
 
@@ -58,7 +58,6 @@ cd deploy
 
 ## 📖 相关文档
 
-- [CLAUDE.md](./CLAUDE.md) — AI 协作指南 · 架构速览
-- [docs/design-system/MASTER.md](./docs/design-system/MASTER.md) — 完整视觉设计规范（配色、字体、组件）
-- [docs/design-system/QUICK-REFERENCE.md](./docs/design-system/QUICK-REFERENCE.md) — 开发速查卡
-- [AGENTS.md](./AGENTS.md) — AI 协作补充说明
+- [AGENTS.md](./AGENTS.md) — AI 协作指南
+- [ARCHITECTURE.md](./ARCHITECTURE.md) — 架构速览
+- [docs/DESIGN.md](./docs/DESIGN.md) — 视觉设计规范（配色、字体、组件）

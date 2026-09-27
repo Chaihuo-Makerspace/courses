@@ -2,12 +2,11 @@
 
 Repository entry point for coding agents (Claude Code, Codex, Gemini CLI).
 Read this first; descend into `ARCHITECTURE.md` and `.claude/rules/*.md` as
-work demands. This file is mirrored verbatim in `GEMINI.md` — keep them in
-sync when editing.
+work demands.
 
 ## Scope
 
-- Project is 柴火创客 OPC 学园 (Chaihuo Maker Academy) — a Chinese-language
+- Project is 柴火创客 OPC 学院 (Chaihuo Maker Academy) — a Chinese-language
   marketing / 招生 / 招商 site. **Not** a docs platform, **not** a CMS-backed
   blog.
 - Source-of-truth files in this repo: `ARCHITECTURE.md` (repo map),
