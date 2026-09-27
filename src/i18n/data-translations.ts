@@ -76,7 +76,7 @@ const zh: Record<string, string> = {
   'eco.chaihuo.desc':
     '2011 年成立，中国最早的创客空间之一。提供物理空间、社区活动、项目孵化等服务。',
   'eco.chaihuo.tag': '创客空间',
-  'eco.opc.name': '柴火创客 OPC 学园',
+  'eco.opc.name': '柴火创客 OPC 学院',
   'eco.opc.role': '技术赋能平台',
   'eco.opc.desc': '将生态中的技术能力转化为可学习的课程，帮助个人和企业掌握新技术整合能力。',
   'eco.opc.tag': '技术学习',
@@ -353,7 +353,7 @@ const zh: Record<string, string> = {
   'cta.apply': '申请合作咨询',
   'cta.viewCourses': '查看学习体系',
   'cta.viewPaths': '查看路径指南',
-  'cta.aboutOrg': '关于学园',
+  'cta.aboutOrg': '关于学院',
 };
 
 const en: Record<string, string> = {
