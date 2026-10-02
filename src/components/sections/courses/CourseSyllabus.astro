@@ -30,12 +30,7 @@ const coverageClass: Record<Coverage, string> = {
   plus: 'text-brand-red font-bold',
 };
 
-// 数据里个别说明以 schema 注释或模板句开头，不该渲染给访客：只剥已知开头。
-const SCHEMA_PREFIX =
-  /^(?:coverage 键对应|The coverage key maps|coverageキーは|La clave coverage|A chave coverage)[^。.]*[。.]\s*/;
-const TASTER_TEMPLATE =
-  /^(?:体验课目标是「看得懂、能讲解、能演示」，|The taster session goal is|体験講座の目標は|El objetivo de la clase de experiencia es|O objetivo da aula experimental e)[^。.]*[。.]\s*/;
-const callout = curriculum?.callout?.replace(SCHEMA_PREFIX, '');
+const callout = curriculum?.callout;
 const count = String(curriculum?.items.length ?? 0);
 ---
 
@@ -200,7 +195,7 @@ const count = String(curriculum?.items.length ?? 0);
                   ))}
                 </ul>
                 <p class="mt-2 text-xs leading-relaxed text-neutral-7">
-                  {tier.footnote.replace(TASTER_TEMPLATE, '')}
+                  {tier.footnote}
                 </p>
               </li>
             ))}

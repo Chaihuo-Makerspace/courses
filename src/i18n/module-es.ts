@@ -187,7 +187,7 @@ export const esDict: Record<string, string> = {
     'Vender "la IA cabe en una uña" — entrena tu propio modelo sin escribir una sola línea de código. Barrera más baja.',
   '两门可合并成一个整天（4h）体验日：上午编程、下午视觉，覆盖生成式 AI + 端侧 AI 两条主线。':
     'Dos sesiones pueden combinarse en un día completo (4h) de experiencia: programación por la mañana, visión por la tarde, cubriendo tanto IA generativa como IA en el borde.',
-  '编程体验课是柴火基地车全国巡游的标配工作坊。零安装、单一硬件、2 小时闭环、断网只是慢不会废场——这四条正是「车到人到、当天开课」最需要的性质。柴火基地车上的分工：快闪一站 → 编程体验课；驻校两天 → 马拉松版；有网络且做 AI 主题 → 视觉体验课。':
+  '编程体验课是柴火基地车全国巡游的标配工作坊。零安装、单一硬件、2 小时做完一个作品、断网只是慢不会废场——这四条正是「车到人到、当天开课」最需要的性质。柴火基地车上的分工：快闪一站 → 编程体验课；驻校两天 → 马拉松版；有网络且做 AI 主题 → 视觉体验课。':
     'La Sesión de Iniciación a la Programación es el taller estándar de la gira nacional del Vehículo Base Móvil Chaihuo. Sin instalación, hardware único, ciclo de 2 horas, sin conexión solo se ralentiza pero no se cancela — estas cuatro propiedades son exactamente lo que requiere "llegar y enseñar el mismo día". División de trabajo en el Vehículo Base Móvil Chaihuo: parada rápida → Sesión de Iniciación a la Programación; estancia de dos días en campus → Maratón; con internet y tema de IA → Sesión de Iniciación a la Visión.',
   '选课后排（16×1h）前请注意：16 × 1h = 16 小时，比周课排的 20 小时少 4 小时；每节固定开销（开机、发设备、连线、收纳）约 10 分钟，节数越多损耗越大——实际动手时间约 13h vs 18h。取舍是真实的：FP 迭代从两轮压到一轮，发布会 1 小时偏紧，建议争取双节连堂。':
     'Antes de elegir Horario Extraescolar (16×1h): 16 × 1h = 16 horas, 4 horas menos que las 20h del Horario Semanal; cada sesión tiene ~10min de gastos fijos (encender, distribuir dispositivos, conectar, guardar), más sesiones = más pérdida — tiempo práctico real ~13h vs 18h. Las compensaciones son reales: iteración de PF comprimida de dos rondas a una, día de demostración de 1 hora es ajustado, se recomienda luchar por sesiones de período doble.',
@@ -446,8 +446,8 @@ export const esDict: Record<string, string> = {
   方案复盘与交付总结: 'Revisión de soluciones y resumen de entrega',
   '各组项目方案演练与配置评审、现场总线稳定性与网络拓扑复盘、交付文档与配置归档':
     'Práctica de solución de proyecto de cada grupo y revisión de configuraciones, revisión de estabilidad de bus en sitio y topología de red, archivo de documentos de entrega y configuraciones',
-  'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 平台接入与传感器节点，不含工业总线与业务集成；实战课（workshop）覆盖 L1+L2 完整工业总线与能耗看板；交付课（bootcamp）全覆盖 L1+L2+L3。':
-    'La clave coverage corresponde al ID de formato de curso (taster / workshop / bootcamp), los valores son full (cobertura completa) / part (cobertura reducida) / none (no incluido) / plus (más profundo que la versión completa). La clase de experiencia (taster) se enfoca en la conexión a plataforma y nodos sensores L1, no incluye bus industrial ni integración de negocio; la clase práctica (workshop) cubre el bus industrial completo y el panel de consumo L1+L2; la clase de entrega (bootcamp) cubre completamente L1+L2+L3.',
+  '体验课（taster）聚焦 L1 平台接入与传感器节点，不含工业总线与业务集成；实战课（workshop）覆盖 L1+L2 完整工业总线与能耗看板；交付课（bootcamp）全覆盖 L1+L2+L3。':
+    'La clase de experiencia (taster) se enfoca en la conexión a plataforma y nodos sensores L1, no incluye bus industrial ni integración de negocio; la clase práctica (workshop) cubre el bus industrial completo y el panel de consumo L1+L2; la clase de entrega (bootcamp) cubre completamente L1+L2+L3.',
   '体验课 · L1展示层': 'Curso de iniciación · capa de demostración L1',
   '1 天 · 6–8h': '1 día · 6–8 h',
   体验: 'Iniciación',
@@ -468,8 +468,7 @@ export const esDict: Record<string, string> = {
   '模块 04 + 05 + 13(精简)': 'Modulos 04 + 05 + 13 (reducido)',
   'XIAO传感器节点 → 能耗看板初识 → 总结复盘':
     'Nodo sensor XIAO → introducción al panel de consumo → resumen y revisión',
-  '体验课目标是「看得懂、能讲解、能演示」，3分钟跑出设备接入与状态监控的演示效果。不含工业总线与业务集成。':
-    'El objetivo de la clase de experiencia es «comprender, poder explicar y poder demostrar», lograr el efecto de demostración de conexión de dispositivos y monitoreo de estado en 3 minutos. No incluye bus industrial ni integración de negocio.',
+  '不含工业总线与业务集成。': 'No incluye bus industrial ni integración de negocio.',
   实战课: 'Curso Práctico',
   '2–3 天 · 14–20h · L1+L2 · 工业总线对接 + 能耗看板 + 自动化联动':
     '2–3 días · 14–20h · L1+L2 · conexión a bus industrial + panel de consumo energético + vinculación de automatización',
@@ -500,8 +499,8 @@ export const esDict: Record<string, string> = {
     'Practica de respaldo de sistema y recuperacion ante desastres → revision de solucion y archivo de entrega',
   '交付课目标是具备独立交付可维护系统的能力。学员基础要求：有 YAML/Node-RED 与网络基础，熟悉 L1–L2 能力。':
     'El objetivo de la clase de entrega es poseer la capacidad de entregar de forma independiente sistemas mantenibles. Requisitos básicos de los estudiantes: conocimientos básicos de YAML/Node-RED y redes, familiaridad con las capacidades L1–L2.',
-  '体验课是方案演示与客户沟通的标配形态：零工业接线门槛、1天闭环、聚焦「设备能接入、数据能看见」。适合展会、技术开放日与客户初次接触场景。':
-    'La clase de experiencia es el formato estándar para demostración de soluciones y comunicación con clientes: cero barreras de cableado industrial, ciclo cerrado de 1 día, enfocado en «los dispositivos pueden conectarse y los datos pueden verse». Adecuado para ferias, días de puertas abiertas tecnológicas y escenarios de primer contacto con clientes.',
+  '体验课 1 天上完，不用做工业接线，做到「设备能接入、数据能看见」为止。适合展会、技术开放日和第一次接触的客户。':
+    'El curso de iniciación dura un día, no requiere cableado industrial y llega hasta «los dispositivos se conectan y los datos se ven». Es adecuado para ferias, jornadas de puertas abiertas y primeros contactos con un cliente.',
   '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并备份与复盘）；若需更多自动化调优时间则用满 3 天。':
     'El Day 3 de la clase práctica es un día flexible opcional: si los estudiantes tienen buena base puede comprimirse a 2 días (la tarde del Day 2 combina el respaldo y la revisión); si se necesita más tiempo para la optimización de automatización se usan los 3 días completos.',
   'DDSU666 电表接线涉及 AC 220V 强电回路，必须由讲师或持证电工完成进线与负载接线，学员仅操作 RS485 通信侧。严禁学员自行插拔强电端子。':
@@ -700,7 +699,7 @@ export const esDict: Record<string, string> = {
   断网联调与延迟优化: 'Integracion sin red y optimizacion de latencia',
   '关键转折点 · 从云端协同到本地离线私有化部署':
     'Punto de inflexión clave · de la colaboración en nube al despliegue privatizado local y offline',
-  'SenseCraft AI云端方案解决「快速验证与开箱即用」；MCP桥接让业务数据第一次在局域网内闭环，核心库存与业务数据不出域；Jetson离线管线则彻底切断公网依赖，在强隐私与工业隔离网环境下实现零外网语音交互。':
+  'SenseCraft AI云端方案解决「快速验证、到手就能用」；MCP桥接让业务数据第一次在局域网内闭环，核心库存与业务数据不出域；Jetson离线管线则彻底切断公网依赖，在强隐私与工业隔离网环境下实现零外网语音交互。':
     'La solución en nube SenseCraft AI resuelve la «verificación rápida y lista para usar»; el puente MCP permite que los datos de negocio cierren ciclo dentro de la red local por primera vez, los datos centrales de inventario y negocio no salen del dominio; el pipeline offline Jetson corta completamente la dependencia de red pública, logrando interacción de voz sin internet en entornos de alta privacidad y redes aisladas industriales.',
   'L1/L2依赖互联网连接大模型服务；L3需100 TOPS级别边缘算力（Jetson Orin NX 16GB），RK3588-40（6 TOPS）无法承载本地大模型推理。':
     'L1/L2 dependen de conexión a internet para servicios de grandes modelos; L3 requiere potencia de cómputo en el borde de nivel 100 TOPS (Jetson Orin NX 16GB), el RK3588-40 (6 TOPS) no puede soportar inferencia de grandes modelos locales.',
@@ -747,8 +746,8 @@ export const esDict: Record<string, string> = {
     'Verificacion de operacion de ciclo cerrado autonomo de red local mediante desconexion fisica de internet, medicion de tiempo de cada etapa, optimizacion de longitud de contexto y parametros de muestreo del modelo',
   '各组成果展示与业务场景适配答辩、云端SaaS架构vs本地边缘计算架构成本与选型复盘、业务系统API扩展规范与标准化交付文档归档':
     'Presentación de resultados de cada grupo y defensa de adaptación a escenarios de negocio, revisión de costos y selección entre arquitectura SaaS en nube vs arquitectura de cómputo en el borde local, archivo de especificaciones de extensión API de sistemas de negocio y documentos de entrega estandarizados',
-  'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 端侧体验与MCP工具调用演示，不含本地业务系统部署与离线管线；实战课（workshop）覆盖 L1+L2 完整Watcher配置、WMS部署与MCP桥接；交付课（bootcamp）全覆盖 L1+L2+L3，含Jetson离线语音管线部署。':
-    'La clave coverage corresponde al ID de formato de curso (taster / workshop / bootcamp), los valores son full (cobertura completa) / part (cobertura reducida) / none (no incluido) / plus (más profundo que la versión completa). La clase de experiencia (taster) se enfoca en la experiencia en dispositivo y demostración de llamadas a herramientas MCP L1, no incluye despliegue de sistemas de negocio locales ni pipeline offline; la clase práctica (workshop) cubre la configuración completa Watcher, despliegue WMS y puente MCP L1+L2; la clase de entrega (bootcamp) cubre completamente L1+L2+L3, incluyendo despliegue de pipeline de voz offline Jetson.',
+  '体验课（taster）聚焦 L1 端侧体验与MCP工具调用演示，不含本地业务系统部署与离线管线；实战课（workshop）覆盖 L1+L2 完整Watcher配置、WMS部署与MCP桥接；交付课（bootcamp）全覆盖 L1+L2+L3，含Jetson离线语音管线部署。':
+    'La clase de experiencia (taster) se enfoca en la experiencia en dispositivo y demostración de llamadas a herramientas MCP L1, no incluye despliegue de sistemas de negocio locales ni pipeline offline; la clase práctica (workshop) cubre la configuración completa Watcher, despliegue WMS y puente MCP L1+L2; la clase de entrega (bootcamp) cubre completamente L1+L2+L3, incluyendo despliegue de pipeline de voz offline Jetson.',
   '1 天 · 6–8h · L1 展示层 · 聚焦端侧体验与MCP工具调用演示':
     '1 día · 6–8h · L1 capa de demostración · enfocado en experiencia en dispositivo y demostración de llamadas a herramientas MCP',
   '环境预检 → 多模态架构概念 → 端侧视觉推理体验':
@@ -756,8 +755,8 @@ export const esDict: Record<string, string> = {
   '模块 04 + 05 + 15(精简)': 'Módulos 04 + 05 + 15 (simplificado)',
   '语音问答与Agent机制 → MCP工具调用与业务集成演示 → 总结复盘':
     'Preguntas y respuestas por voz y mecanismo de Agent → demostracion de llamadas a herramientas MCP e integracion de negocio → resumen y revision',
-  '体验课目标是「看得懂、能讲解、能演示」，3分钟跑通语音查询与视觉触发联动的演示效果。不含本地业务系统部署与离线语音管线。':
-    'El objetivo de la clase de experiencia es «comprender, poder explicar y poder demostrar», lograr el efecto de demostración de consulta por voz y vinculación activada por visión en 3 minutos. No incluye despliegue de sistemas de negocio locales ni pipeline de voz offline.',
+  '不含本地业务系统部署与离线语音管线。':
+    'No incluye despliegue de sistemas de negocio locales ni pipeline de voz offline.',
   '2–3 天 · 14–20h · L1+L2 · Watcher配置 + 本地WMS部署 + MCP桥接 + 自动化联动':
     '2–3 días · 14–20h · L1+L2 · configuración Watcher + despliegue WMS local + puente MCP + vinculación de automatización',
   '环境预检 → 多模态架构 → 端侧视觉 → 语音Agent → MCP工具调用演示':
@@ -783,8 +782,8 @@ export const esDict: Record<string, string> = {
     'Integracion sin red y optimizacion de latencia → revision de solucion y archivo de entrega',
   '交付课目标是具备在强隐私与工业隔离网环境下交付AI交互方案的能力。学员基础要求：具备Linux、PyTorch/Jetson基础与shell操作能力，熟悉 L1–L2 能力。':
     'El objetivo de la clase de entrega es poseer la capacidad de entregar soluciones de interacción de IA en entornos de alta privacidad y redes aisladas industriales. Requisitos básicos de los estudiantes: conocimientos básicos de Linux, PyTorch/Jetson y operaciones shell, familiaridad con las capacidades L1–L2.',
-  '体验课是方案演示与客户沟通的标配形态：零部署门槛、1天闭环、聚焦「语音能查询、视觉能触发」。适合展会、技术开放日与客户初次接触场景。':
-    'La clase de experiencia es el formato estándar para demostración de soluciones y comunicación con clientes: cero barreras de despliegue, ciclo cerrado de 1 día, enfocado en «la voz puede consultar y la visión puede activar». Adecuado para ferias, días de puertas abiertas tecnológicas y escenarios de primer contacto con clientes.',
+  '体验课 1 天上完，不用部署业务系统，做到「语音能查询、视觉能触发」为止。适合展会、技术开放日和第一次接触的客户。':
+    'El curso de iniciación dura un día, no requiere desplegar sistemas de negocio y llega hasta «la voz consulta y la visión dispara acciones». Es adecuado para ferias, jornadas de puertas abiertas y primeros contactos con un cliente.',
   '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并 OpenClaw 与全链路联调）；若需更多 MCP 桥接调优时间则用满 3 天。':
     'El Day 3 de la clase práctica es un día flexible opcional: si los estudiantes tienen buena base puede comprimirse a 2 días (la tarde del Day 2 combina OpenClaw y la integración de cadena completa); si se necesita más tiempo para la optimización del puente MCP se usan los 3 días completos.',
   'L1/L2 云端协同方案要求现场具备稳定上行互联网带宽，用于 SenseCraft AI 平台与大模型服务调用；无外网环境下 L1/L2 无法运行，需切换至 L3 离线方案。':
@@ -1032,16 +1031,15 @@ export const esDict: Record<string, string> = {
     'Compilacion de firmware personalizado y flasheo mediante USB/puerto serie a Wio Tracker L1 Pro, verificacion de difusion de multiples saltos y analisis de datos de sensores dentro de la red Mesh',
   '复杂遮挡环境下信号衰减/中继跳数/丢包率数据复盘，应急通信网络部署拓扑与频段合规规范归档，硬件采购清单与备件建议':
     'Revisión de datos de atenuación de señal/número de saltos de repetidores/tasa de pérdida de paquetes en entornos con obstrucción compleja, archivo de topología de despliegue de red de comunicación de emergencia y especificaciones de cumplimiento de bandas, lista de compras de hardware y recomendaciones de repuestos',
-  'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 基础组网与离线通信，不含 MQTT 桥接与固件定制；实战课（workshop）覆盖 L1+L2 完整网关搭建与态势监控；交付课（bootcamp）全覆盖 L1+L2+L3。':
-    'La clave coverage corresponde al ID de formato de curso (taster / workshop / bootcamp), los valores son full (cobertura completa) / part (cobertura reducida) / none (no incluido) / plus (más profundo que la versión completa). La clase de experiencia (taster) se enfoca en la red básica y comunicación offline L1, no incluye puente MQTT ni personalización de firmware; la clase práctica (workshop) cubre la construcción completa de gateway y monitoreo de situación L1+L2; la clase de entrega (bootcamp) cubre completamente L1+L2+L3.',
+  '体验课（taster）聚焦 L1 基础组网与离线通信，不含 MQTT 桥接与固件定制；实战课（workshop）覆盖 L1+L2 完整网关搭建与态势监控；交付课（bootcamp）全覆盖 L1+L2+L3。':
+    'La clase de experiencia (taster) se enfoca en la red básica y comunicación offline L1, no incluye puente MQTT ni personalización de firmware; la clase práctica (workshop) cubre la construcción completa de gateway y monitoreo de situación L1+L2; la clase de entrega (bootcamp) cubre completamente L1+L2+L3.',
   '1 天 · 6–8h · L1 展示层 · 聚焦 Meshtastic 组网与离线通信':
     '1 día · 6–8h · L1 capa de demostración · enfocado en red Mesh Meshtastic y comunicación offline',
   '环境预检 → LoRa/Mesh 原理 → 终端与中继初始化':
     'Verificacion previa del entorno → principios LoRa/Mesh → inicializacion de terminales y repetidores',
   '信道加密 → 离线通信与定位实测 → 总结复盘':
     'Cifrado de canal → medición real de comunicación offline y posicionamiento → resumen y revisión',
-  '体验课目标是「看得懂、能讲解、能演示」，完成 3 节点现场组网与离线消息/位置共享。不含 MQTT 桥接与固件定制。':
-    'El objetivo de la clase de experiencia es «comprender, poder explicar y poder demostrar», completar la red de 3 nodos en sitio y el intercambio offline de mensajes/ubicación. No incluye puente MQTT ni personalización de firmware.',
+  '不含 MQTT 桥接与固件定制。': 'No incluye puente MQTT ni personalización de firmware.',
   '2–3 天 · 14–20h · L1+L2 · Mesh 组网 + MQTT 桥接 + 态势监控':
     '2–3 días · 14–20h · L1+L2 · red Mesh + puente MQTT + monitoreo de situación',
   '环境预检 → 原理 → 终端初始化 → 信道加密 → 离线通信实测':
@@ -1064,8 +1062,8 @@ export const esDict: Record<string, string> = {
     'Compilacion, flasheo y verificacion en dispositivo real → revision de solucion y archivo de entrega',
   '交付课目标是具备独立开发离网传感节点的能力。学员基础要求：熟悉 C/C++ 与 PlatformIO。':
     'El objetivo de la clase de entrega es poseer la capacidad de desarrollar de forma independiente nodos de sensores off-grid. Requisitos básicos de los estudiantes: familiaridad con C/C++ y PlatformIO.',
-  '体验课是方案演示与客户沟通的标配形态：零开发门槛、1 天闭环、聚焦「设备能组网、消息能送达」。适合展会、技术开放日与客户初次接触场景。':
-    'La clase de experiencia es el formato estándar para demostración de soluciones y comunicación con clientes: cero barreras de desarrollo, ciclo cerrado de 1 día, enfocado en «los dispositivos pueden formar red y los mensajes pueden entregarse». Adecuado para ferias, días de puertas abiertas tecnológicas y escenarios de primer contacto con clientes.',
+  '体验课 1 天上完，不用写代码，做到「设备能组网、消息能送达」为止。适合展会、技术开放日和第一次接触的客户。':
+    'El curso de iniciación dura un día, no requiere programar y llega hasta «los dispositivos forman red y los mensajes llegan». Es adecuado para ferias, jornadas de puertas abiertas y primeros contactos con un cliente.',
   '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并复盘）；若需更多 Node-RED 调优与看板定制时间则用满 3 天。':
     'El Day 3 de la clase práctica es un día flexible opcional: si los estudiantes tienen buena base puede comprimirse a 2 días (la tarde del Day 2 combina la revisión); si se necesita más tiempo para la optimización de Node-RED y la personalización de paneles se usan los 3 días completos.',
   '所有 LoRa 设备必须使用同一频段（433/868/915 MHz），混用频段将导致物理层无法解调组网。本课程仅面向海外无线频段（EU868/US915 等），不得用于国内频段应用。':
@@ -1218,7 +1216,7 @@ export const esDict: Record<string, string> = {
   模型定制与边缘部署优化: 'Personalización de modelos y optimización de despliegue en el borde',
   训练自己的检测模型并部署到边缘硬件:
     'Entrene su propio modelo de detección y despliéguelo en hardware de borde',
-  '掌握视觉 AI 从数据标注、模型训练到边缘部署的完整工程闭环':
+  '掌握视觉 AI 从数据标注、模型训练到边缘部署的完整工程流程':
     'Dominar el ciclo de ingeniería completo de visión por IA, desde anotación de datos y entrenamiento de modelos hasta despliegue en el borde',
   '掌握 TensorRT 与嵌入式模型量化转换的关键工具链':
     'Dominar las cadenas de herramientas clave para la conversión de cuantización de modelos TensorRT y embebidos',
@@ -1341,8 +1339,8 @@ export const esDict: Record<string, string> = {
     'Escritura de datos estadisticos de deteccion de objetos en base de datos de series temporales InfluxDB, construccion de panel de tendencias de frecuencia de alertas/popularidad por zona/tasa de cumplimiento en Grafana',
   '各组项目方案演练与误报调优效果答辩、边缘算力开销与网络带宽占用复盘、交付物与配置文件归档':
     'Práctica de solución de proyecto de cada grupo y defensa de efectos de optimización de falsas alarmas, revisión de gasto de cómputo en el borde y uso de ancho de banda de red, archivo de entregables y archivos de configuración',
-  'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 双线体验与基础配置，Jetson NVR为演示观摩不含实操；实战课（workshop）覆盖 L1+L2 完整Node-RED联动与Frigate多路汇聚；交付课（bootcamp）全覆盖 L1+L2+L3 含自定义模型训练与边缘部署。':
-    'La clave coverage corresponde al ID de formato de curso (taster / workshop / bootcamp), los valores son full (cobertura completa) / part (cobertura reducida) / none (no incluido) / plus (más profundo que la versión completa). La clase de experiencia (taster) se enfoca en la experiencia de doble línea L1 y configuración básica, Jetson NVR es demostración observada sin práctica; la clase práctica (workshop) cubre la vinculación Node-RED completa L1+L2 y la agregación multicanal Frigate; la clase de entrega (bootcamp) cubre completamente L1+L2+L3 incluyendo entrenamiento de modelos personalizados y despliegue en el borde.',
+  '体验课（taster）聚焦 L1 双线体验与基础配置，Jetson NVR为演示观摩不含实操；实战课（workshop）覆盖 L1+L2 完整Node-RED联动与Frigate多路汇聚；交付课（bootcamp）全覆盖 L1+L2+L3 含自定义模型训练与边缘部署。':
+    'La clase de experiencia (taster) se enfoca en la experiencia de doble línea L1 y configuración básica, Jetson NVR es demostración observada sin práctica; la clase práctica (workshop) cubre la vinculación Node-RED completa L1+L2 y la agregación multicanal Frigate; la clase de entrega (bootcamp) cubre completamente L1+L2+L3 incluyendo entrenamiento de modelos personalizados y despliegue en el borde.',
   '1 天 · 6–8h · L1 展示层 · 聚焦reCamera单点配置与双主线架构认知':
     '1 día · 6–8h · L1 capa de demostración · enfocado en configuración de un solo punto reCamera y comprensión de arquitectura de doble línea principal',
   '环境预检 → 视觉AI核心概念 → reCamera单点轻节点配置':
@@ -1350,8 +1348,8 @@ export const esDict: Record<string, string> = {
   '模块 04 + 05(演示) + 15(精简)': 'Modulos 04 + 05 (demostracion) + 15 (reducido)',
   '基础入侵检测 → Jetson NVR架构演示 → 总结复盘':
     'Detección básica de intrusiones → demostración de arquitectura Jetson NVR → resumen y revisión',
-  '体验课目标是「看得懂、能讲解、能演示」，3分钟跑出reCamera目标检测与入侵告警的演示效果。Jetson多路NVR为观摩演示，不含实操。':
-    'El objetivo de la clase de experiencia es «comprender, poder explicar y poder demostrar», lograr el efecto de demostración de detección de objetos y alertas de invasión con reCamera en 3 minutos. Jetson NVR multicanal es demostración observada, sin práctica.',
+  'Jetson多路NVR为观摩演示，不含实操。':
+    'Jetson NVR multicanal es demostración observada, sin práctica.',
   '2–3 天 · 14–20h · L1+L2 · Node-RED告警联动 + Frigate多路汇聚 + HA自动化 + 误报调优':
     '2–3 días · 14–20h · L1+L2 · vinculación de alertas Node-RED + agregación multicanal Frigate + automatización HA + optimización de falsas alarmas',
   '环境预检 → 视觉概念 → reCamera配置 → 基础检测 → Jetson NVR演示':
@@ -1378,8 +1376,8 @@ export const esDict: Record<string, string> = {
   方案复盘与交付归档: 'Revisión de soluciones y archivado de entrega',
   '交付课目标是具备独立设计和交付垂直行业视觉识别方案的能力。学员基础要求：具备 Python 与 Linux 命令行基础，了解目标检测基本原理，熟悉 L1–L2 能力。':
     'El objetivo de la clase de entrega es poseer la capacidad de diseñar y entregar de forma independiente soluciones de reconocimiento visual para industrias verticales. Requisitos básicos de los estudiantes: conocimientos básicos de Python y línea de comandos Linux, comprensión de los principios básicos de detección de objetos, familiaridad con las capacidades L1–L2.',
-  '体验课是方案演示与客户沟通的标配形态：零算法门槛、1天闭环、聚焦「摄像头能出流、目标能检测、告警能触发」。适合展会、技术开放日与客户初次接触场景。':
-    'La clase de experiencia es el formato estándar para demostración de soluciones y comunicación con clientes: cero barreras algorítmicas, ciclo cerrado de 1 día, enfocado en «la cámara puede emitir flujo, los objetos pueden detectarse y las alertas pueden activarse». Adecuado para ferias, días de puertas abiertas tecnológicas y escenarios de primer contacto con clientes.',
+  '体验课 1 天上完，不涉及模型训练，做到「摄像头能出流、目标能检测、告警能触发」为止。适合展会、技术开放日和第一次接触的客户。':
+    'El curso de iniciación dura un día, no requiere entrenar modelos y llega hasta «la cámara emite, los objetivos se detectan y las alertas saltan». Es adecuado para ferias, jornadas de puertas abiertas y primeros contactos con un cliente.',
   '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并 HA 集成与误报调优）；若需更多 Frigate 配置调优时间则用满 3 天。':
     'El Day 3 de la clase práctica es un día flexible opcional: si los estudiantes tienen buena base puede comprimirse a 2 días (la tarde del Day 2 combina la integración HA y la optimización de falsas alarmas); si se necesita más tiempo para la optimización de configuración Frigate se usan los 3 días completos.',
   'PoE 交换机与 reCamera HQ PoE 接线需确认交换机端口支持 802.3af/at 标准，非标准 PoE 注入器可能损坏相机网口。严禁将非 PoE 端口误接为 PoE 供电。':
@@ -1634,16 +1632,16 @@ export const esDict: Record<string, string> = {
     'Escritura de datos de percepción ambiental en la base de datos de series temporales InfluxDB; importación de plantillas de panel Grafana, configuración de panel grande de comparación ambiental multizona y monitoreo de datos privatizado',
   '现场传感器布设抗干扰/防水等级（IP66/IP68）与防雷规范复盘；功耗预算计算（太阳能板瓦数与电池容量配比）；方案交付物与API接口说明文档归档':
     'Revision de antiinterferencia/grado de impermeabilidad (IP66/IP68) y especificaciones de proteccion contra rayos para el despliegue de sensores en sitio; calculo de presupuesto de consumo (relacion entre vataje de panel solar y capacidad de bateria); archivo de entregables de solucion y documentacion de interfaces API',
-  'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 平台架构认知与云端数据监视，不含RS485接线与API集成；实战课（workshop）覆盖 L1+L2 完整传感器接线、Modbus配置与告警编排；交付课（bootcamp）全覆盖 L1+L2+L3，含SenseCAP Open API对接与Node-RED本地自动化。':
-    'La clave coverage corresponde al ID de formato de curso (taster / workshop / bootcamp), los valores son full (cobertura completa) / part (cobertura reducida) / none (no incluido) / plus (más profundo que la versión completa). La clase de experiencia (taster) se enfoca en la comprensión de arquitectura de plataforma y monitoreo de datos en nube L1, no incluye cableado RS485 ni integración API; la clase práctica (workshop) cubre el cableado completo de sensores, configuración Modbus y orquestación de alertas L1+L2; la clase de entrega (bootcamp) cubre completamente L1+L2+L3, incluyendo integración SenseCAP Open API y automatización local Node-RED.',
+  '体验课（taster）聚焦 L1 平台架构认知与云端数据监视，不含RS485接线与API集成；实战课（workshop）覆盖 L1+L2 完整传感器接线、Modbus配置与告警编排；交付课（bootcamp）全覆盖 L1+L2+L3，含SenseCAP Open API对接与Node-RED本地自动化。':
+    'La clase de experiencia (taster) se enfoca en la comprensión de arquitectura de plataforma y monitoreo de datos en nube L1, no incluye cableado RS485 ni integración API; la clase práctica (workshop) cubre el cableado completo de sensores, configuración Modbus y orquestación de alertas L1+L2; la clase de entrega (bootcamp) cubre completamente L1+L2+L3, incluyendo integración SenseCAP Open API y automatización local Node-RED.',
   '1 天 · 6–8h · L1 展示层 · 聚焦双通信架构认知与云端数据监视':
     '1 día · 6–8h · L1 capa de demostración · enfocado en comprensión de arquitectura de doble comunicación y monitoreo de datos en la nube',
   '环境预检 → 双通信架构解析 → 传感器测量原理与场景':
     'Verificacion previa del entorno → analisis de arquitectura de doble comunicacion → principios de medicion de sensores y escenarios',
   'SenseCraft Data平台监控 → 报表导出与移动端操作 → 总结复盘':
     'Monitoreo de plataforma SenseCraft Data → exportación de reportes y operación móvil → resumen y revisión',
-  '体验课目标是「看得懂、能讲解、能演示」，3分钟跑出多节点传感器数据上云与实时看板的演示效果。不含RS485接线、Modbus配置与API集成。':
-    'El objetivo de la clase de experiencia es «comprender, poder explicar y poder demostrar», lograr el efecto de demostración de datos de sensores de múltiples nodos subiendo a la nube y panel en tiempo real en 3 minutos. No incluye cableado RS485, configuración Modbus ni integración API.',
+  '不含RS485接线、Modbus配置与API集成。':
+    'No incluye cableado RS485, configuración Modbus ni integración API.',
   '2–3 天 · 14–20h · L1+L2 · 传感器接线 + Modbus配置 + 多级告警编排':
     '2–3 días · 14–20h · L1+L2 · cableado de sensores + configuración Modbus + orquestación de alertas multinivel',
   '环境预检 → 双通信架构 → 传感器原理 → 云端数据监控 → 报表导出':
@@ -1666,8 +1664,8 @@ export const esDict: Record<string, string> = {
     'Panel privatizado InfluxDB+Grafana → revisión de solución y archivo de entrega',
   '交付课目标是具备独立交付环境监测系统与API数据集成的能力。学员基础要求：有HTTP API调用、JSON解析与Linux命令行基础，熟悉 L1–L2 能力。':
     'El objetivo de la clase de entrega es poseer la capacidad de entregar de forma independiente sistemas de monitoreo ambiental e integración de datos API. Requisitos básicos de los estudiantes: conocimientos básicos de llamadas HTTP API, análisis JSON y línea de comandos Linux, familiaridad con las capacidades L1–L2.',
-  '体验课是方案演示与客户沟通的标配形态：零接线门槛、1天闭环、聚焦「传感器能接入、数据能上云、看板能看见」。适合展会、技术开放日与客户初次接触场景。':
-    'La clase de experiencia es el formato estándar para demostración de soluciones y comunicación con clientes: cero barreras de cableado, ciclo cerrado de 1 día, enfocado en «los sensores pueden conectarse, los datos pueden subir a la nube y el panel puede verse». Adecuado para ferias, días de puertas abiertas tecnológicas y escenarios de primer contacto con clientes.',
+  '体验课 1 天上完，不用接线，做到「传感器能接入、数据能上云、看板能看见」为止。适合展会、技术开放日和第一次接触的客户。':
+    'El curso de iniciación dura un día, no requiere cableado y llega hasta «los sensores se conectan, los datos llegan a la nube y el panel los muestra». Es adecuado para ferias, jornadas de puertas abiertas y primeros contactos con un cliente.',
   '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并复盘与交付总结）；若需更多告警策略调优与接线排障时间则用满 3 天。':
     'El Day 3 de la clase práctica es un día flexible opcional: si los estudiantes tienen buena base puede comprimirse a 2 días (la tarde del Day 2 combina la revisión y el resumen de entrega); si se necesita más tiempo para la optimización de estrategias de alertas y la depuración de cableado se usan los 3 días completos.',
   '4G采集器与传感器供电涉及12V/24V DC直流回路，必须确认电源适配器规格与传感器供电要求匹配（5V/12V/24V DC），避免过压损坏传感器或欠压导致读数异常。学员操作前需由讲师确认接线无误后方可通电。':
@@ -1955,16 +1953,16 @@ export const esDict: Record<string, string> = {
     'Comprensión de la arquitectura del modelo VLA (entrada de texto + imagen, salida de acciones), carga de activos 3D del brazo robótico en Isaac Sim, colisión física virtual y control de simulación, enfoque de desarrollo «primero simulación, luego robot real»',
   '各组方案演练与配置评审、异常与失败案例复盘、演示线与工业产线工程差距总结（重复定位精度/连续运行可靠性/工业节拍/安全认证）、源码文档配置归档':
     'Práctica de soluciones y revisión de configuraciones por grupo, revisión de casos de anomalía y fracaso, resumen de brechas de ingeniería entre línea de demostración y línea de producción industrial (precisión de posicionamiento repetible / fiabilidad de operación continua / ciclo industrial / certificación de seguridad), archivado de código fuente, documentación y configuraciones',
-  'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 选型认知、安全规范与SenseCraft开箱遥操，不含视觉联动与3D抓取开发；实战课（workshop）覆盖 L1+L2 完整场景剖析、动作编排与工位视觉事件触发；交付课（bootcamp）全覆盖 L1+L2+L3，含确定性3D空间抓取闭环与具身智能前沿探索。':
-    'La clave coverage corresponde al ID de formato de curso (taster / workshop / bootcamp), y su valor es full (cobertura completa) / part (cobertura simplificada) / none (sin incluir) / plus (más profundo que la versión completa). El curso de iniciación (taster) se centra en el reconocimiento de selección de L1, normas de seguridad y teleoperación inicial de SenseCraft, sin incluir vinculación visual ni desarrollo de captura 3D; el curso práctico (workshop) cubre el análisis completo de escenarios L1+L2, orquestación de acciones y activación de eventos visuales de estación de trabajo; el curso de entrega (bootcamp) cubre completamente L1+L2+L3, incluyendo el ciclo cerrado de captura determinista en espacio 3D y la exploración de vanguardia en inteligencia corporizada.',
+  '体验课（taster）聚焦 L1 选型认知、安全规范与SenseCraft开箱遥操，不含视觉联动与3D抓取开发；实战课（workshop）覆盖 L1+L2 完整场景剖析、动作编排与工位视觉事件触发；交付课（bootcamp）全覆盖 L1+L2+L3，含确定性3D空间抓取闭环与具身智能前沿探索。':
+    'El curso de iniciación (taster) se centra en el reconocimiento de selección de L1, normas de seguridad y teleoperación inicial de SenseCraft, sin incluir vinculación visual ni desarrollo de captura 3D; el curso práctico (workshop) cubre el análisis completo de escenarios L1+L2, orquestación de acciones y activación de eventos visuales de estación de trabajo; el curso de entrega (bootcamp) cubre completamente L1+L2+L3, incluyendo el ciclo cerrado de captura determinista en espacio 3D y la exploración de vanguardia en inteligencia corporizada.',
   '1 天 · 6–8h · L1 展示层 · 聚焦选型认知、安全规范与SenseCraft开箱遥操':
     '1 día · 6–8 h · capa de demostración L1 · enfocado en reconocimiento de selección, normas de seguridad y teleoperación inicial de SenseCraft',
   '环境预检 → 机械臂选型与商业取舍 → 实训安全第一课与急停演练':
     'Verificación de entorno → selección de brazo robótico y compensaciones comerciales → primera lección de seguridad práctica y ejercicio de parada de emergencia',
   'SenseCraft开箱与主从遥操 → 语音指令夹取首验 → 总结复盘':
     'Inicio de SenseCraft y teleoperación maestro-esclavo → primera prueba de captura por comando de voz → resumen y revisión',
-  '体验课目标是「看得懂、能讲解、能演示」，跑出主从遥操与语音指令抓取的演示效果。不含工位视觉联动与3D空间抓取开发。':
-    'El objetivo del curso de iniciación es «comprender, explicar y demostrar», logrando el efecto de demostración de teleoperación maestro-esclavo y captura por comando de voz. No incluye vinculación visual de estación de trabajo ni desarrollo de captura en espacio 3D.',
+  '不含工位视觉联动与3D空间抓取开发。':
+    'No incluye vinculación visual de estación de trabajo ni desarrollo de captura en espacio 3D.',
   '2–3 天 · 14–20h · L1+L2 · 场景剖析 + 动作编排 + 工位视觉事件触发联动':
     '2–3 días · 14–20 h · L1+L2 · análisis de escenarios + orquestación de acciones + activación y vinculación de eventos visuales de estación de trabajo',
   '环境预检 → 选型认知 → 安全急停 → SenseCraft遥操 → 语音夹取首验':
@@ -1985,8 +1983,8 @@ export const esDict: Record<string, string> = {
     'Recolección de conjunto de datos de acciones de teleoperación LeRobot → primera aproximación a grandes modelos corporizados VLA y simulación Isaac Sim',
   '交付课目标是具备独立交付确定性3D空间抓取工程的能力。学员基础要求：具备基础Python编程与Linux技能，熟悉 L1–L2 能力。':
     'El objetivo del curso de entrega es contar con la capacidad para entregar de forma independiente proyectos de captura determinista en espacio 3D. Requisito básico de los estudiantes: poseer habilidades básicas de programación Python y Linux, y estar familiarizado con las capacidades L1–L2.',
-  '体验课是方案演示与客户沟通的标配形态：零代码门槛、1天闭环、聚焦「机械臂能动、语音能控」。适合展会、技术开放日与客户初次接触场景。':
-    'El curso de iniciación es el formato estándar para demostración de soluciones y comunicación con clientes: sin barrera de código, ciclo cerrado de 1 día, enfocado en «el brazo robótico se mueve, la voz lo controla». Adecuado para ferias, días de puertas abiertas tecnológicas y escenarios de primer contacto con clientes.',
+  '体验课 1 天上完，不用写代码，做到「机械臂能动、语音能控」为止。适合展会、技术开放日和第一次接触的客户。':
+    'El curso de iniciación dura un día, no requiere programar y llega hasta «el brazo se mueve y la voz lo controla». Es adecuado para ferias, jornadas de puertas abiertas y primeros contactos con un cliente.',
   '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并复盘）；若需更多微场景联调时间则用满 3 天。':
     'El Día 3 del curso práctico es un día flexible opcional: si los estudiantes tienen buena base, puede comprimirse a 2 días (la revisión se integra en la tarde del Día 2); si se requiere más tiempo de integración de microescenarios, se utilizan los 3 días completos.',
   '机械臂为带动力机构，实操过程中必须严格遵守安全规程，禁止将身体部位伸入机械臂运动包络区。急停按钮为独立硬件常闭回路，不接软件控制，置于操作者触手可及处。':

@@ -33,7 +33,7 @@ const zh: Record<string, string> = {
     'M0 不教语法。它教的是一套在门槛消失之后，仍然决定作品好坏的东西——想法、表达、协作、迭代、讲述。',
   'course.toolchainTitle': 'Codecraft 帮你"敢做"，aily-blockly 帮你"做完"',
   'course.toolchainSubtitle':
-    'M0 不用 Arduino IDE 手写 C++，而是采用矽递自研的双平台接力工具链。前半程零安装、5 分钟见效；后半程把作品搬回自己的电脑，变成能带走、能继续演进的工程。',
+    'M0 不用 Arduino IDE 手写 C++，而是采用 Seeed Studio（矽递科技）自研的双平台接力工具链。前半程零安装、5 分钟见效；后半程把作品搬回自己的电脑，变成能带走、能继续演进的工程。',
   'course.toolchainTitle.m1': 'ESPHome 把设备接进来，Node-RED 把业务串起来',
   'course.toolchainSubtitle.m1':
     '先用 ESPHome + HA OS 完成设备固件烧录与统一接入，再用 Node-RED 做跨系统业务编排——从单平台联动走向业务集成。',

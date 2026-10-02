@@ -468,7 +468,7 @@ export const modules: Module[] = [
         },
       ],
       callouts: [
-        '编程体验课是柴火基地车全国巡游的标配工作坊。零安装、单一硬件、2 小时闭环、断网只是慢不会废场——这四条正是「车到人到、当天开课」最需要的性质。柴火基地车上的分工：快闪一站 → 编程体验课；驻校两天 → 马拉松版；有网络且做 AI 主题 → 视觉体验课。',
+        '编程体验课是柴火基地车全国巡游的标配工作坊。零安装、单一硬件、2 小时做完一个作品、断网只是慢不会废场——这四条正是「车到人到、当天开课」最需要的性质。柴火基地车上的分工：快闪一站 → 编程体验课；驻校两天 → 马拉松版；有网络且做 AI 主题 → 视觉体验课。',
       ],
       warnings: [
         '选课后排（16×1h）前请注意：16 × 1h = 16 小时，比周课排的 20 小时少 4 小时；每节固定开销（开机、发设备、连线、收纳）约 10 分钟，节数越多损耗越大——实际动手时间约 13h vs 18h。取舍是真实的：FP 迭代从两轮压到一轮，发布会 1 小时偏紧，建议争取双节连堂。',
@@ -967,7 +967,7 @@ export const modules: Module[] = [
         },
       ],
       callout:
-        'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 平台接入与传感器节点，不含工业总线与业务集成；实战课（workshop）覆盖 L1+L2 完整工业总线与能耗看板；交付课（bootcamp）全覆盖 L1+L2+L3。',
+        '体验课（taster）聚焦 L1 平台接入与传感器节点，不含工业总线与业务集成；实战课（workshop）覆盖 L1+L2 完整工业总线与能耗看板；交付课（bootcamp）全覆盖 L1+L2+L3。',
     },
 
     formats: {
@@ -1011,8 +1011,7 @@ export const modules: Module[] = [
               body: 'XIAO传感器节点 → 能耗看板初识 → 总结复盘',
             },
           ],
-          footnote:
-            '体验课目标是「看得懂、能讲解、能演示」，3分钟跑出设备接入与状态监控的演示效果。不含工业总线与业务集成。',
+          footnote: '不含工业总线与业务集成。',
         },
         {
           title: '实战课',
@@ -1069,7 +1068,7 @@ export const modules: Module[] = [
         },
       ],
       callouts: [
-        '体验课是方案演示与客户沟通的标配形态：零工业接线门槛、1天闭环、聚焦「设备能接入、数据能看见」。适合展会、技术开放日与客户初次接触场景。',
+        '体验课 1 天上完，不用做工业接线，做到「设备能接入、数据能看见」为止。适合展会、技术开放日和第一次接触的客户。',
         '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并备份与复盘）；若需更多自动化调优时间则用满 3 天。',
       ],
       warnings: [
@@ -1338,7 +1337,7 @@ export const modules: Module[] = [
       ],
       hinge: {
         title: '关键转折点 · 从云端协同到本地离线私有化部署',
-        body: 'SenseCraft AI云端方案解决「快速验证与开箱即用」；MCP桥接让业务数据第一次在局域网内闭环，核心库存与业务数据不出域；Jetson离线管线则彻底切断公网依赖，在强隐私与工业隔离网环境下实现零外网语音交互。',
+        body: 'SenseCraft AI云端方案解决「快速验证、到手就能用」；MCP桥接让业务数据第一次在局域网内闭环，核心库存与业务数据不出域；Jetson离线管线则彻底切断公网依赖，在强隐私与工业隔离网环境下实现零外网语音交互。',
       },
       note: 'L1/L2依赖互联网连接大模型服务；L3需100 TOPS级别边缘算力（Jetson Orin NX 16GB），RK3588-40（6 TOPS）无法承载本地大模型推理。',
     },
@@ -1467,7 +1466,7 @@ export const modules: Module[] = [
         },
       ],
       callout:
-        'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 端侧体验与MCP工具调用演示，不含本地业务系统部署与离线管线；实战课（workshop）覆盖 L1+L2 完整Watcher配置、WMS部署与MCP桥接；交付课（bootcamp）全覆盖 L1+L2+L3，含Jetson离线语音管线部署。',
+        '体验课（taster）聚焦 L1 端侧体验与MCP工具调用演示，不含本地业务系统部署与离线管线；实战课（workshop）覆盖 L1+L2 完整Watcher配置、WMS部署与MCP桥接；交付课（bootcamp）全覆盖 L1+L2+L3，含Jetson离线语音管线部署。',
     },
 
     formats: {
@@ -1511,8 +1510,7 @@ export const modules: Module[] = [
               body: '语音问答与Agent机制 → MCP工具调用与业务集成演示 → 总结复盘',
             },
           ],
-          footnote:
-            '体验课目标是「看得懂、能讲解、能演示」，3分钟跑通语音查询与视觉触发联动的演示效果。不含本地业务系统部署与离线语音管线。',
+          footnote: '不含本地业务系统部署与离线语音管线。',
         },
         {
           title: '实战课',
@@ -1569,7 +1567,7 @@ export const modules: Module[] = [
         },
       ],
       callouts: [
-        '体验课是方案演示与客户沟通的标配形态：零部署门槛、1天闭环、聚焦「语音能查询、视觉能触发」。适合展会、技术开放日与客户初次接触场景。',
+        '体验课 1 天上完，不用部署业务系统，做到「语音能查询、视觉能触发」为止。适合展会、技术开放日和第一次接触的客户。',
         '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并 OpenClaw 与全链路联调）；若需更多 MCP 桥接调优时间则用满 3 天。',
       ],
       warnings: [
@@ -1955,7 +1953,7 @@ export const modules: Module[] = [
         },
       ],
       callout:
-        'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 基础组网与离线通信，不含 MQTT 桥接与固件定制；实战课（workshop）覆盖 L1+L2 完整网关搭建与态势监控；交付课（bootcamp）全覆盖 L1+L2+L3。',
+        '体验课（taster）聚焦 L1 基础组网与离线通信，不含 MQTT 桥接与固件定制；实战课（workshop）覆盖 L1+L2 完整网关搭建与态势监控；交付课（bootcamp）全覆盖 L1+L2+L3。',
     },
 
     formats: {
@@ -1999,8 +1997,7 @@ export const modules: Module[] = [
               body: '信道加密 → 离线通信与定位实测 → 总结复盘',
             },
           ],
-          footnote:
-            '体验课目标是「看得懂、能讲解、能演示」，完成 3 节点现场组网与离线消息/位置共享。不含 MQTT 桥接与固件定制。',
+          footnote: '不含 MQTT 桥接与固件定制。',
         },
         {
           title: '实战课',
@@ -2057,7 +2054,7 @@ export const modules: Module[] = [
         },
       ],
       callouts: [
-        '体验课是方案演示与客户沟通的标配形态：零开发门槛、1 天闭环、聚焦「设备能组网、消息能送达」。适合展会、技术开放日与客户初次接触场景。',
+        '体验课 1 天上完，不用写代码，做到「设备能组网、消息能送达」为止。适合展会、技术开放日和第一次接触的客户。',
         '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并复盘）；若需更多 Node-RED 调优与看板定制时间则用满 3 天。',
       ],
       warnings: [
@@ -2243,7 +2240,7 @@ export const modules: Module[] = [
         subtitle: '训练自己的检测模型并部署到边缘硬件',
         durationDays: 5,
         outcomes: [
-          '掌握视觉 AI 从数据标注、模型训练到边缘部署的完整工程闭环',
+          '掌握视觉 AI 从数据标注、模型训练到边缘部署的完整工程流程',
           '掌握 TensorRT 与嵌入式模型量化转换的关键工具链',
           '具备独立设计和交付垂直行业视觉识别方案的能力',
           '交付 1 套自定义训练的目标检测模型，并在硬件上完成实跑验证',
@@ -2487,7 +2484,7 @@ export const modules: Module[] = [
         },
       ],
       callout:
-        'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 双线体验与基础配置，Jetson NVR为演示观摩不含实操；实战课（workshop）覆盖 L1+L2 完整Node-RED联动与Frigate多路汇聚；交付课（bootcamp）全覆盖 L1+L2+L3 含自定义模型训练与边缘部署。',
+        '体验课（taster）聚焦 L1 双线体验与基础配置，Jetson NVR为演示观摩不含实操；实战课（workshop）覆盖 L1+L2 完整Node-RED联动与Frigate多路汇聚；交付课（bootcamp）全覆盖 L1+L2+L3 含自定义模型训练与边缘部署。',
     },
 
     formats: {
@@ -2531,8 +2528,7 @@ export const modules: Module[] = [
               body: '基础入侵检测 → Jetson NVR架构演示 → 总结复盘',
             },
           ],
-          footnote:
-            '体验课目标是「看得懂、能讲解、能演示」，3分钟跑出reCamera目标检测与入侵告警的演示效果。Jetson多路NVR为观摩演示，不含实操。',
+          footnote: 'Jetson多路NVR为观摩演示，不含实操。',
         },
         {
           title: '实战课',
@@ -2590,7 +2586,7 @@ export const modules: Module[] = [
         },
       ],
       callouts: [
-        '体验课是方案演示与客户沟通的标配形态：零算法门槛、1天闭环、聚焦「摄像头能出流、目标能检测、告警能触发」。适合展会、技术开放日与客户初次接触场景。',
+        '体验课 1 天上完，不涉及模型训练，做到「摄像头能出流、目标能检测、告警能触发」为止。适合展会、技术开放日和第一次接触的客户。',
         '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并 HA 集成与误报调优）；若需更多 Frigate 配置调优时间则用满 3 天。',
       ],
       warnings: [
@@ -3000,7 +2996,7 @@ export const modules: Module[] = [
         },
       ],
       callout:
-        'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 平台架构认知与云端数据监视，不含RS485接线与API集成；实战课（workshop）覆盖 L1+L2 完整传感器接线、Modbus配置与告警编排；交付课（bootcamp）全覆盖 L1+L2+L3，含SenseCAP Open API对接与Node-RED本地自动化。',
+        '体验课（taster）聚焦 L1 平台架构认知与云端数据监视，不含RS485接线与API集成；实战课（workshop）覆盖 L1+L2 完整传感器接线、Modbus配置与告警编排；交付课（bootcamp）全覆盖 L1+L2+L3，含SenseCAP Open API对接与Node-RED本地自动化。',
     },
 
     formats: {
@@ -3044,8 +3040,7 @@ export const modules: Module[] = [
               body: 'SenseCraft Data平台监控 → 报表导出与移动端操作 → 总结复盘',
             },
           ],
-          footnote:
-            '体验课目标是「看得懂、能讲解、能演示」，3分钟跑出多节点传感器数据上云与实时看板的演示效果。不含RS485接线、Modbus配置与API集成。',
+          footnote: '不含RS485接线、Modbus配置与API集成。',
         },
         {
           title: '实战课',
@@ -3102,7 +3097,7 @@ export const modules: Module[] = [
         },
       ],
       callouts: [
-        '体验课是方案演示与客户沟通的标配形态：零接线门槛、1天闭环、聚焦「传感器能接入、数据能上云、看板能看见」。适合展会、技术开放日与客户初次接触场景。',
+        '体验课 1 天上完，不用接线，做到「传感器能接入、数据能上云、看板能看见」为止。适合展会、技术开放日和第一次接触的客户。',
         '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并复盘与交付总结）；若需更多告警策略调优与接线排障时间则用满 3 天。',
       ],
       warnings: [
@@ -3527,7 +3522,7 @@ export const modules: Module[] = [
         },
       ],
       callout:
-        'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 选型认知、安全规范与SenseCraft开箱遥操，不含视觉联动与3D抓取开发；实战课（workshop）覆盖 L1+L2 完整场景剖析、动作编排与工位视觉事件触发；交付课（bootcamp）全覆盖 L1+L2+L3，含确定性3D空间抓取闭环与具身智能前沿探索。',
+        '体验课（taster）聚焦 L1 选型认知、安全规范与SenseCraft开箱遥操，不含视觉联动与3D抓取开发；实战课（workshop）覆盖 L1+L2 完整场景剖析、动作编排与工位视觉事件触发；交付课（bootcamp）全覆盖 L1+L2+L3，含确定性3D空间抓取闭环与具身智能前沿探索。',
     },
 
     formats: {
@@ -3571,8 +3566,7 @@ export const modules: Module[] = [
               body: 'SenseCraft开箱与主从遥操 → 语音指令夹取首验 → 总结复盘',
             },
           ],
-          footnote:
-            '体验课目标是「看得懂、能讲解、能演示」，跑出主从遥操与语音指令抓取的演示效果。不含工位视觉联动与3D空间抓取开发。',
+          footnote: '不含工位视觉联动与3D空间抓取开发。',
         },
         {
           title: '实战课',
@@ -3629,7 +3623,7 @@ export const modules: Module[] = [
         },
       ],
       callouts: [
-        '体验课是方案演示与客户沟通的标配形态：零代码门槛、1天闭环、聚焦「机械臂能动、语音能控」。适合展会、技术开放日与客户初次接触场景。',
+        '体验课 1 天上完，不用写代码，做到「机械臂能动、语音能控」为止。适合展会、技术开放日和第一次接触的客户。',
         '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并复盘）；若需更多微场景联调时间则用满 3 天。',
       ],
       warnings: [
