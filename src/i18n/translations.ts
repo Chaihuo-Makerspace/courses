@@ -34,7 +34,7 @@ const zh: TranslationDict = {
   'footer.social.xiaohongshu': '小红书',
   'footer.copyright': '© {year} Chaihuo Makerspace Academy. All rights reserved.',
   'footer.chaihuo': '柴火创客空间',
-  'footer.mcv': '柴火数字基地车',
+  'footer.mcv': '柴火基地车',
   'footer.ecosystem': '柴火生态',
   'footer.ecosystemMap': '创客生态分布图',
   'footer.pioneer': '先锋官计划',
@@ -230,7 +230,7 @@ const en: TranslationDict = {
   'nav.pioneerBase': 'Pioneer · Base',
   'nav.map': 'Maker Ecosystem',
   'nav.ecosystem': 'Chaihuo Ecosystem',
-  'nav.mcv': 'Chaihuo Mobile Base (MCV)',
+  'nav.mcv': 'Chaihuo Mobile Base Vehicle',
   'chip.tabsAria': 'Switch between the Pioneer and Base programs',
 
   'footer.tagline':
@@ -448,7 +448,7 @@ const ja: TranslationDict = {
   'footer.social.xiaohongshu': '小紅書',
   'footer.copyright': '© {year} Chaihuo Makerspace Academy. All rights reserved.',
   'footer.chaihuo': '柴火創客空間',
-  'footer.mcv': '柴火デジタル基地車',
+  'footer.mcv': '柴火基地車',
   'footer.ecosystem': '柴火エコシステム',
   'footer.ecosystemMap': 'メーカーエコシステムマップ',
   'footer.pioneer': 'パイオニア計画',

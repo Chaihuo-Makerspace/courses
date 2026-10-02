@@ -163,8 +163,8 @@ const zhToEn: Record<string, string> = {
   '科技馆 / 高校 Fab Lab 等公共教育空间':
     'Public education spaces like science museums / university Fab Labs',
   '已有创客 / STEAM 教育基础': 'Existing maker / STEAM education foundation',
-  '基地车巡游已触达、双方已建立信任':
-    'Already reached by the MCV tour, with mutual trust established',
+  '柴火基地车巡游已触达、双方已建立信任':
+    'Already reached by the Chaihuo Mobile Base Vehicle tour, with mutual trust established',
 
   // 基地 · 权益对比
   基地权益: 'Base Benefits',
@@ -371,7 +371,8 @@ const zhToJa: Record<string, string> = {
   加分项: '加点項目',
   '科技馆 / 高校 Fab Lab 等公共教育空间': '科学館 / 大学の Fab Lab などの公共教育スペース',
   '已有创客 / STEAM 教育基础': 'すでにメーカー / STEAM 教育の基盤がある',
-  '基地车巡游已触达、双方已建立信任': '基地車キャラバンで訪問済み、相互の信頼関係が構築されている',
+  '柴火基地车巡游已触达、双方已建立信任':
+    '柴火基地車キャラバンで訪問済み、相互の信頼関係が構築されている',
   基地权益: '拠点の特典',
   '同一套支持体系，个人与空间各取所需': '同じサポート体制で、個人もスペースも必要なものを選択',
   权益: '特典',
@@ -569,8 +570,8 @@ const zhToEs: Record<string, string> = {
   '科技馆 / 高校 Fab Lab 等公共教育空间':
     'Espacios públicos como museos de ciencia / Fab Labs universitarios',
   '已有创客 / STEAM 教育基础': 'Con base previa en educación maker / STEAM',
-  '基地车巡游已触达、双方已建立信任':
-    'Contactados por la gira móvil de Chaihuo, con confianza mutua establecida',
+  '柴火基地车巡游已触达、双方已建立信任':
+    'Alcanzados por la gira del Vehículo Base Móvil Chaihuo, con confianza mutua establecida',
   基地权益: 'Beneficios de la Base',
   '同一套支持体系，个人与空间各取所需':
     'Un mismo sistema de apoyo, a medida para personas y espacios',
@@ -781,8 +782,8 @@ const zhToPt: Record<string, string> = {
   '科技馆 / 高校 Fab Lab 等公共教育空间':
     'Espaços públicos de educação, como museus de ciência / Fab Labs universitários',
   '已有创客 / STEAM 教育基础': 'Com base em educação maker / STEAM',
-  '基地车巡游已触达、双方已建立信任':
-    'Já alcançado pela turnê da base móvel, com confiança mútua estabelecida',
+  '柴火基地车巡游已触达、双方已建立信任':
+    'Já alcançado pela turnê do Veículo Base Móvel Chaihuo, com confiança mútua estabelecida',
 
   基地权益: 'Benefícios da Base',
   '同一套支持体系，个人与空间各取所需':

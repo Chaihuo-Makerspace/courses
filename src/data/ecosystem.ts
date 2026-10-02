@@ -392,7 +392,7 @@ export const base: BaseProgram = {
     plus: [
       '科技馆 / 高校 Fab Lab 等公共教育空间',
       '已有创客 / STEAM 教育基础',
-      '基地车巡游已触达、双方已建立信任',
+      '柴火基地车巡游已触达、双方已建立信任',
     ],
   },
   comparison: {

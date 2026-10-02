@@ -28,8 +28,8 @@ const enDict: Record<string, string> = {
   本地告警与设备控制自动化: 'Local Alerts & Device Control Automation',
   本地化部署大语言模型: 'Deploy LLM Locally',
   编程体验课: 'Coding Taster Session',
-  '编程体验课是柴火基地车（MCV）全国巡游的标配工作坊。零安装、单一硬件、2 小时闭环、断网只是慢不会废场——这四条正是「车到人到、当天开课」最需要的性质。基地车上的分工：快闪一站 → 编程体验课；驻校两天 → 马拉松版；有网络且做 AI 主题 → 视觉体验课。':
-    'The Coding Taster is the standard workshop for the Chaihuo Mobile Base Vehicle (MCV) national tour. Zero install, single hardware, 2-hour closed loop, offline only slows down but won\'t cancel — these four properties are exactly what "arrive and teach same day" requires. MCV division of work: pop-up stop → Coding Taster; two-day campus stay → Marathon; with internet and AI theme → Vision Taster.',
+  '编程体验课是柴火基地车全国巡游的标配工作坊。零安装、单一硬件、2 小时闭环、断网只是慢不会废场——这四条正是「车到人到、当天开课」最需要的性质。柴火基地车上的分工：快闪一站 → 编程体验课；驻校两天 → 马拉松版；有网络且做 AI 主题 → 视觉体验课。':
+    'The Coding Taster is the standard workshop for the Chaihuo Mobile Base Vehicle national tour. Zero install, single hardware, 2-hour closed loop, offline only slows down but won\'t cancel — these four properties are exactly what "arrive and teach same day" requires. Division of work on the Chaihuo Mobile Base Vehicle: pop-up stop → Coding Taster; two-day campus stay → Marathon; with internet and AI theme → Vision Taster.',
   '边缘 AI 图像分类 demo': 'Edge AI Image Classification Demo',
   '边缘 AI 主机': 'Edge AI Host',
   '边缘视觉 AI': 'Edge Vision AI',
