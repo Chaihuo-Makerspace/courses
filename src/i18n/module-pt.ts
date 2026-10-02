@@ -3,19 +3,17 @@
 export const ptDict: Record<string, string> = {
   // ── L1 / L2 / L3 层级说明（levelMeta） ──
   'L1 · 展示层': 'L1 · Nível Demonstração',
-  '看得懂、能讲解、能演示——3 分钟跑出「魔法时刻」':
-    'Compreensível, Explicável, Demonstrável — 3 Minutos para o "Momento Mágico"',
+  '看得懂、讲得清、能当场演示': 'Entende, explica e demonstra na hora',
   'L2 · 顾问层': 'L2 · Nível Consultor',
-  '独立配置可用系统，交付体验工作坊':
-    'Configurar Independentemente Sistemas Utilizáveis, Realizar Workshops Experimentais',
+  能独立配出一套可用系统: 'Configura sozinho um sistema utilizável',
   'L3 · 设计层': 'L3 · Nível Design',
-  '商业闭环与深度定制：API 对接 / 模型训练 / 私有化部署':
-    'Ciclo Comercial Fechado & Personalização Profunda: Integração de API / Treinamento de Modelo / Implantação Privada',
+  '能做业务集成与定制：API 对接、模型训练、私有化部署':
+    'Integra e personaliza para o negócio: integração por API, treinamento de modelos, implantação privada',
 
   // ── M0 ──
   零基础智能硬件入门: 'Introdução ao Hardware Inteligente Sem Base',
-  '告别编程门槛，用中文告诉 AI 做什么，零基础也能做出智能硬件作品':
-    'Sem barreiras de programação: diga à IA o que construir em chinês e crie hardware inteligente do zero',
+  '零基础入门课。三套硬件由浅入深：Grove 做感知，Wio Terminal 做交互，XIAO 做图像识别。':
+    'Curso de entrada para quem começa do zero. Três plataformas de hardware em profundidade crescente: Grove para sensoriamento, Wio Terminal para interação e XIAO para reconhecimento de imagens.',
   '用中文告诉 AI 你想做什么，AI 写代码、编译、烧录。零编程基础，也能做出属于自己的智能硬件作品。':
     'Diga à IA em chinês o que você quer fazer, a IA escreve código, compila, grava. Zero base em programação, ainda assim crie seu próprio projeto de hardware inteligente.',
   零编程基础: 'Zero Base em Programação',
@@ -34,7 +32,6 @@ export const ptDict: Record<string, string> = {
   学生不会写代码: 'Alunos Não Sabem Programar',
   合格师资极少: 'Professores Qualificados São Escassos',
   创意到原型断层: 'Lacuna Ideia-para-Protótipo',
-  'NLHD 教材': 'Material didático NLHD',
   'Grove 套件': 'Kit Grove',
   'AI 辅助编程 5 大法则': '5 princípios da programação assistida por IA',
   '感知→逻辑→输出 心智模型': 'Modelo Mental Sensor→Lógica→Saída',
@@ -90,6 +87,7 @@ export const ptDict: Record<string, string> = {
   '和 AI 协作': 'Colaborar com IA',
   'AI 辅助编程 5 大法则：一次只改一件事、报错原样贴回去、先跑通再优化、让 AI 解释、留住能用的版本。':
     '5 princípios da programação assistida por IA: altere uma coisa de cada vez, cole o erro exatamente como está, primeiro faça funcionar depois otimize, peça para a IA explicar, mantenha as versões que funcionam.',
+  'BMAD 五角色工作流': 'Fluxo de trabalho BMAD de cinco papéis',
   '用 PM / UX / 架构 / 开发 / 测试 五个角色分步驱动 AI，把「能跑」的原型做成「有结构、能维护」的项目。':
     'Use os cinco papéis PM / UX / Arquitetura / Desenvolvimento / Teste para conduzir a IA passo a passo, transformando um protótipo "funcional" em um projeto "estruturado e mantenível".',
   调试与迭代: 'Depurar & Iterar',
@@ -110,8 +108,8 @@ export const ptDict: Record<string, string> = {
   '关键转折点 · 模块 8': 'Ponto de Virada Crítico · Módulo 8',
   'Codecraft 的作品在服务器上，关掉浏览器就带不走；aily-blockly 让学生第一次从"租户"变成项目的"主人"。':
     'Os projetos no Codecraft ficam no servidor — feche o navegador e não os leva; o aily-blockly permite que o aluno deixe de ser "inquilino" e se torne "dono" do projeto pela primeira vez.',
-  '另需 SenseCraft AI（无代码部署与训练视觉模型，用于模块 5 与视觉体验课，需外网）、NLHD 15 章中文教材（开源免费，结课后可长期自学）。':
-    'Requer adicionalmente SenseCraft AI (implantação e treinamento de modelos visuais sem código, para Módulo 5 e Sessão de Visão, requer internet), livro didático NLHD de 15 capítulos em chinês (código aberto, gratuito, para autoestudo contínuo após o curso).',
+  '另需 SenseCraft AI（无代码部署与训练视觉模型，用于模块 5 与视觉体验课，需外网），以及一套 15 章的中文开源教材（免费，结课后可长期自学）。':
+    'Requer adicionalmente SenseCraft AI (implantação e treinamento de modelos visuais sem código, para Módulo 5 e Sessão de Visão, requer internet), livro didático de 15 capítulos em chinês (código aberto, gratuito, para autoestudo contínuo após o curso).',
   环境感知: 'Sensoriamento Ambiental',
   '11 个模块一体式底板：OLED 屏、按键、旋钮、蜂鸣器、LED、光线／温湿度／气压／声音／加速度传感器。免焊接、免面包板。第一个「感知→逻辑→输出」闭环作品。':
     'Placa integrada com 11 módulos: tela OLED, botões, potenciômetro, buzzer, LED, sensores de luz, temperatura/umidade, pressão atmosférica, som e acelerômetro. Sem solda, sem protoboard. O primeiro projeto de ciclo fechado "percepção → lógica → saída".',
@@ -255,8 +253,8 @@ export const ptDict: Record<string, string> = {
     'Certificado de Conclusão M0 da Academia Chaihuo Maker (Certificado de Participação para Sessões Experimentais).',
   我们希望你把它改成我们认不出来的样子: 'Esperamos Que Você o Transforme Além do Reconhecimento',
   我们认不出来的样子: 'Irreconhecível para Nós',
-  '这份课程不是一个封闭的产品，是一个底座。柴火是一家创客空间，开源是我们的底色——M0 交付的从来不只是「一次上课」，而是一整套可以被拆开、改写、重新组装的东西：10 模块骨架、教师教案与 PPT、学生手册、Codecraft 云端项目、NLHD 开源教材、40 合一备料池。':
-    'Este curso não é um produto fechado, é uma fundação. A Chaihuo é um espaço maker, código aberto é nossa essência — o M0 nunca entrega apenas "uma aula", mas um conjunto completo que pode ser desmontado, reescrito, remontado: esqueleto de 10 módulos, planos de aula e PPTs para professores, manual do aluno, projetos na nuvem Codecraft, livro didático aberto NLHD, pool de peças 40-em-1.',
+  '这份课程不是一个封闭的产品，是一个底座。柴火是一家创客空间，开源是我们的底色——M0 交付的从来不只是「一次上课」，而是一整套可以被拆开、改写、重新组装的东西：10 模块骨架、教师教案与 PPT、学生手册、Codecraft 云端项目、开源教材、40 合一备料池。':
+    'Este curso não é um produto fechado, é uma fundação. A Chaihuo é um espaço maker, código aberto é nossa essência — o M0 nunca entrega apenas "uma aula", mas um conjunto completo que pode ser desmontado, reescrito, remontado: esqueleto de 10 módulos, planos de aula e PPTs para professores, manual do aluno, projetos na nuvem Codecraft, livro didático aberto , pool de peças 40-em-1.',
   '口子 01': 'Abertura 01',
   换主题: 'Trocar Tema',
   '模块 6「找一个真问题」的问题域是开放的：你的学科、贵校的科技节、这座城市正在发生的一件真事。问题越靠近学生的生活，效果越好——而这件事你比我们懂。':
@@ -269,20 +267,17 @@ export const ptDict: Record<string, string> = {
   加你的东西: 'Adicione o Seu',
   '你教了很多年书攒下的那些：讲法、比喻、能让学生眼睛亮起来的那一下——那正是我们没有、也给不了的部分。':
     'O que você acumulou ao longo de anos ensinando: métodos, metáforas, aquele momento que faz os olhos dos alunos brilharem — isso é exatamente o que não temos e não podemos oferecer.',
-  '一门课最好的归宿，不是被完整地执行一遍，而是被一位老师改到面目全非，然后变成只有他能上的那门课。':
-    'O melhor destino de um curso não é ser executado perfeitamente uma vez, mas ser transformado por um professor até ficar irreconhecível, tornando-se um curso que só ele pode ministrar.',
-  '—— 冯磊，本系列课程作者': '— Feng Lei, autor desta série de cursos',
 
   // ── M1 ──
   设备互联与智能管控: 'Conectividade de Dispositivos & Controle Inteligente',
-  '摆脱昂贵商业软件授权，在本地统一纳管各品牌老旧设备':
-    'Livre-se de licencas caras de software comercial, gerencie unificadamente dispositivos antigos de varias marcas no local',
+  '把不同品牌的空调、照明、电表接进一个本地平台，看清每条回路用了多少电。':
+    'Conecte ar-condicionado, iluminação e medidores de energia de marcas diferentes a uma plataforma local e veja quanto cada circuito consome.',
   '基于Home Assistant与ESPHome，在局域网内统一接入多协议设备，实现能耗监控与自动化联动。':
     'Com base em Home Assistant e ESPHome, integre dispositivos multiprotocolo de forma unificada na rede local, implementando monitoramento de consumo de energia e automação vinculada.',
   统一接入多协议设备: 'Integracao unificada de dispositivos multiprotocolo',
   '商业楼宇、老旧设施、酒店公寓与工厂辅助车间中，空调、照明、安防等多套子系统独立运行，运维人员需多平台切换且数据互不相通。缺乏回路级能耗计量，仅能查看总表账单，无法精确定位高耗能设备与浪费时段。传统BA系统采用专有封闭协议，设备扩展与更换依赖原厂，改造成本高且周期长。':
     'Em edifícios comerciais, instalações antigas, hotéis, apartamentos e oficinas auxiliares de fábricas, subsistemas como ar-condicionado, iluminação e segurança operam independentemente; a equipe de manutenção precisa alternar entre múltiplas plataformas e os dados não se comunicam. Falta medição de consumo em nível de circuito, sendo possível ver apenas a conta do medidor geral, sem localizar com precisão equipamentos de alto consumo e períodos de desperdício. Os sistemas BA tradicionais usam protocolos proprietários fechados, e a expansão e substituição de equipamentos dependem do fabricante original, com custos de reforma altos e ciclos longos.',
-  '2 天': '2 dias',
+  'L1 1 天 / L2 2–3 天 / L3 3–5 天': 'L1 1 dia / L2 2–3 dias / L3 3–5 dias',
   商业楼宇与办公园区智能化增量改造:
     'Reforma incremental de inteligência em edifícios comerciais e parques de escritórios',
   老旧设施电气与环境监测利旧升级:
@@ -322,8 +317,8 @@ export const ptDict: Record<string, string> = {
     'Arquivos de configuração de painel de consumo e fluxos de automação YAML/Node-RED',
   系统备份恢复与日常运维指南: 'Guia de recuperação de backup e operações diárias do sistema',
   平台初识与基础设备接入: 'Introdução à plataforma e integração básica de dispositivos',
-  '在一个面板统一纳管各品牌设备，摆脱昂贵的商业软件授权':
-    'Gerencie unificadamente dispositivos de varias marcas em um unico painel, livre-se de licencas caras de software comercial',
+  在一个面板里看到各品牌设备的状态:
+    'Veja em um único painel o estado dos dispositivos de todas as marcas',
   '理解Home Assistant基础架构与核心概念（实体、服务、状态、自动化）':
     'Compreender a arquitetura básica e conceitos centrais do Home Assistant (entidades, serviços, estados, automação)',
   '掌握ESPHome固件配置与XIAO ESP32-C6传感器接入流程':
@@ -331,8 +326,8 @@ export const ptDict: Record<string, string> = {
   能在Lovelace仪表盘中配置卡片并进行状态监控:
     'Capacidade de configurar cartões no dashboard Lovelace e realizar monitoramento de estado',
   工业总线对接与场景联动: 'Integração de barramento industrial e vinculação de cenários',
-  '打通存量工业设备，直接查看实时数据并实现跨设备联动':
-    'Integre equipamentos industriais existentes, visualize dados em tempo real diretamente e implemente vinculacao entre dispositivos',
+  '接入 Modbus 电表与变送器，做出能耗看板和跨设备联动':
+    'Conecte medidores e transmissores Modbus e monte um painel de energia e automações entre dispositivos',
   '掌握Modbus RTU协议接线、调试与YAML寄存器配置':
     'Dominar a fiação, depuração do protocolo Modbus RTU e configuração de registradores YAML',
   独立搭建完整的能耗计量与监控看板:
@@ -340,8 +335,8 @@ export const ptDict: Record<string, string> = {
   掌握多条件自动化编排与异常告警配置:
     'Dominar a orquestração de automação com múltiplas condições e configuração de alarmes de anomalia',
   业务集成与系统运维: 'Integração de negócios e operações do sistema',
-  '拥有专属的智慧楼宇监控看板，核心数据完全留在本地':
-    'Tenha um painel de monitoramento de edificio inteligente exclusivo, com dados centrais permanecendo completamente no local',
+  '对接外部系统，做好备份与运维，数据留在本地':
+    'Integre sistemas externos e organize backup e operação, com os dados no local',
   '掌握HA与外部管理系统的数据集成方法（REST API/MQTT/Webhook）':
     'Dominar métodos de integração de dados entre HA e sistemas de gerenciamento externos (REST API/MQTT/Webhook)',
   '能够使用Node-RED编排复杂业务流':
@@ -543,8 +538,6 @@ export const ptDict: Record<string, string> = {
     'Os dispositivos existentes dos seus clientes, os sensores na bancada de treinamento da escola, os dispositivos de protocolo proprietario dos parceiros — podem ser conectados apos o modulo 06, tornando-se o pool de objetos para o exercicio de integracao Modbus. O M1 e responsavel por explicar o metodo a fundo; qual dispositivo conectar apos a porta, voce decide.',
   '你在行业里攒下的那些：接线经验、踩过的坑、能让学员瞬间理解 Modbus 的那个比喻、客户现场最常问的三个问题——那正是我们没有、也给不了的部分。':
     'Aquilo que voce acumulou no setor: experiencia de fiacao, armadilhas que enfrentou, a metafora que faz os alunos entenderem instantaneamente o Modbus, as tres perguntas mais frequentes no local do cliente — isso e exatamente o que nao temos e nao podemos oferecer.',
-  '一门集成课最好的归宿，不是被完整地执行一遍，而是被一位工程师改到面目全非，然后变成只有他能交付的那个方案。':
-    'O melhor destino de um curso de integração não é ser executado completamente uma vez, mas ser transformado por um engenheiro além do reconhecimento, tornando-se a solução que só ele pode entregar.',
   '仅做单向状态监视，不执行反向控制。':
     'Apenas monitoramento unidirecional de status, sem executar controle reverso.',
   跨品牌设备状态聚合与统一监控看板:
@@ -572,15 +565,14 @@ export const ptDict: Record<string, string> = {
 
   // ── M2 ──
   '多模态 AI 交互': 'Interação Multimodal com IA',
-  '告别繁琐系统界面与复杂操作，说话就能查数据、办业务、控设备':
-    'Adeus as interfaces de sistema complicadas e operacoes complexas, basta falar para consultar dados, realizar tarefas de negocios e controlar dispositivos',
+  '对着终端说话就能查库存、录出入库、控设备；也可以整套跑在本地，断网可用。':
+    'Fale com o terminal para consultar estoque, registrar entradas e saídas e controlar dispositivos. Tudo também pode rodar localmente e continuar funcionando sem internet.',
   '基于物理AI终端，融合边缘视觉、语音与业务系统API，实现多模态空间交互。':
     'Com base em terminais de IA físicos, integre visão de borda, voz e APIs de sistemas de negócios para implementar interação espacial multimodal.',
   多模态空间交互: 'Interacao espacial multimodal',
   '仓储管理、展厅导览、智能前台等场景中，现场人员需停下手工操作，通过键盘或手机手动检索业务数据，效率低下。传统交互终端缺乏视觉上下文，无法主动感知人员靠近或异常动作。智能终端多为封闭生态，难以与存量WMS/ERP/CRM系统对接；部分工业与政企场景禁止音频与业务数据上传公网。':
     'Em cenários como gestão de armazéns, guias de exposições e recepções inteligentes, a equipe no local precisa interromper o trabalho manual para buscar dados de negócios via teclado ou celular, com baixa eficiência. Os terminais de interação tradicionais carecem de contexto visual e não percebem proativamente a aproximação de pessoas ou ações anômalas. Os terminais inteligentes são frequentemente ecossistemas fechados, difíceis de integrar com sistemas WMS/ERP/CRM existentes; alguns cenários industriais e governamentais proíbem o upload de áudio e dados de negócios para a internet pública.',
   进阶: 'Avançado',
-  'L1 1天 / L2 2–3天 / L3 3–5天': 'L1 1 dia / L2 2–3 dias / L3 3–5 dias',
   'L1零基础或首次接触边缘AI交互设备；L2需具备Docker基础与REST API调用经验；L3需具备Linux、PyTorch/Jetson基础与shell操作能力':
     'L1 sem base ou primeiro contato com dispositivos de interação de IA de borda; L2 requer base em Docker e experiência com chamadas REST API; L3 requer base em Linux, PyTorch/Jetson e capacidade de operação via shell',
   '智慧仓储与车间管理：免手动查库存、语音录入出入库、异常物料视觉提醒':
@@ -625,8 +617,8 @@ export const ptDict: Record<string, string> = {
   '本地离线语音AI管线部署与调优手册（L3）':
     'Manual de implantação e otimização de pipeline de IA de voz local offline (L3)',
   多模态交互能力体验: 'Experiência de capacidades de interação multimodal',
-  '拥有专属的 AI 语音助手，通过日常说话直接查询数据与控制设备':
-    'Tenha um assistente de voz de IA exclusivo, consulte dados e controle dispositivos diretamente por meio da fala cotidiana',
+  '用语音向 Watcher 查询数据、控制设备':
+    'Consulte dados e controle dispositivos falando com o Watcher',
   理解边缘视觉与大模型Agent结合的技术架构:
     'Compreender a arquitetura técnica da combinação entre visão de borda e Agentes de grandes modelos',
   掌握MCP协议在端侧AI与业务系统对接中的核心作用:
@@ -634,8 +626,8 @@ export const ptDict: Record<string, string> = {
   掌握云端协同与本地部署在不同业务场景下的选型逻辑:
     'Dominar a lógica de escolha entre colaboração em nuvem e implantação local em diferentes cenários de negócios',
   业务系统集成与联动配置: 'Integração de sistemas de negócios e configuração de vinculação',
-  '打通内部业务系统，让语音交互直接流转工单、简化繁琐操作':
-    'Integre sistemas internos de negocios, permita que a interacao por voz flua diretamente em ordens de servico, simplifique operacoes complicadas',
+  '通过 MCP 把语音接到仓储等业务系统':
+    'Conecte a voz ao armazém e a outros sistemas de negócio via MCP',
   独立配置Watcher视觉与语音Agent参数:
     'Configurar independentemente os parâmetros visuais e de Agent de voz do Watcher',
   掌握基于Docker的本地业务系统与MCP桥接服务部署:
@@ -643,8 +635,8 @@ export const ptDict: Record<string, string> = {
   掌握基于MCP协议扩展新业务API的方法:
     'Dominar o método de extensão de novas APIs de negócios baseado no protocolo MCP',
   端到端本地离线语音AI管线部署: 'Implantação de pipeline de IA de voz local offline ponta a ponta',
-  '实现纯本地离线部署，断网可用且核心业务数据绝不出内网':
-    'Implemente deploy puramente local offline, utilizavel sem rede e com dados centrais de negocios nunca saindo da rede interna',
+  '语音管线全部跑在本地，断网可用，数据不出内网':
+    'Execute todo o pipeline de voz localmente: funciona offline e os dados não saem da intranet',
   '掌握VAD→ASR→LLM→TTS完整本地端到端语音管线架构':
     'Dominar a arquitetura completa do pipeline de voz local ponta a ponta VAD→ASR→LLM→TTS',
   掌握在Jetson边缘计算硬件上进行大模型量化与部署优化的方法:
@@ -816,8 +808,6 @@ export const ptDict: Record<string, string> = {
     'Os sistemas de negocios existentes dos seus clientes, o software de gerenciamento na plataforma de treinamento da escola, os servicos REST API dos parceiros — podem ser conectados apos o modulo 08, tornando-se o pool de objetos para o exercicio de ponte MCP. O M2 e responsavel por explicar o metodo a fundo; qual sistema conectar apos a porta, voce decide.',
   '你在行业里攒下的那些：Agent提示词调优经验、踩过的MCP鉴权坑、能让学员瞬间理解语音管线延迟的那个比喻、客户现场最常问的三个隐私问题——那正是我们没有、也给不了的部分。':
     'Aquilo que voce acumulou no setor: experiencia de ajuste de prompts de Agent, armadilhas de autenticacao MCP que enfrentou, a metafora que faz os alunos entenderem instantaneamente a latencia do pipeline de voz, as tres perguntas de privacidade mais frequentes no local do cliente — isso e exatamente o que nao temos e nao podemos oferecer.',
-  '一门AI交互课最好的归宿，不是被完整地执行一遍，而是被一位工程师改到面目全非，然后变成只有他能交付的那个方案。':
-    'O melhor destino de um curso de interação de IA não é ser executado completamente uma vez, mas ser transformado por um engenheiro além do reconhecimento, tornando-se a solução que só ele pode entregar.',
   'L1/L2业务数据经本地MCP桥接在局域网内流转，核心数据不出域；L3纯本地离线运行，零公网依赖。':
     'Os dados de negócios L1/L2 fluem na rede local via ponte MCP local, os dados centrais não saem do domínio; L3 executa puramente local offline, com zero dependência de rede pública.',
   现场目标感知与结构化业务语音问答:
@@ -847,14 +837,13 @@ export const ptDict: Record<string, string> = {
 
   // ── M3 ──
   自组网与韧性通信: 'Rede Mesh & Comunicação Resiliente',
-  '没网没信号也能联通，支持信号中继，快速拉起可查位置、能发消息的应急专网':
-    'Conectividade mesmo sem rede e sem sinal, suporte a repeticao de sinal, implante rapidamente uma rede privada de emergencia com consulta de posicao e envio de mensagens',
+  '在没有公网的地方，用 LoRa Mesh 发消息、报位置、回传传感数据。套件仅面向海外频段。':
+    'Onde não há rede pública, use LoRa Mesh para enviar mensagens, informar posições e recuperar dados de sensores. O kit cobre apenas faixas de frequência de fora da China.',
   '基于 LoRa Mesh 自组网协议，构建无公网依赖、多跳中继的离网应急通信与传感数据回传网络。':
     'Com base no protocolo de auto-organização LoRa Mesh, construa redes de comunicação de emergência off-grid e retorno de dados de sensores com múltiplos saltos de retransmissão, sem dependência de rede pública.',
   '无公网依赖、多跳中继': 'Zero dependencia de rede publica, repeticao multi-salto',
   '野外勘探、隧道施工、应急搜救等场景缺乏蜂窝基站覆盖，传统对讲机视距受限且无法回传坐标与传感数据。单点中继台依赖市电与高位节点，一旦受损整网中断；卫星电话终端昂贵且存在遮挡盲区，临时专网架设周期长、成本高。':
     'Cenários como exploração de campo, construção de túneis e busca e resgate de emergência carecem de cobertura de estações celulares; os rádios comunicadores tradicionais têm alcance limitado à linha de visada e não podem retornar coordenadas e dados de sensores. As estações repetidoras de ponto único dependem de energia elétrica e nós elevados; se danificadas, toda a rede cai. Os terminais de telefone via satélite são caros e têm zonas mortas por obstrução, e a implantação de redes privadas temporárias tem ciclos longos e custos altos.',
-  'L1 1 天 / L2 2–3 天 / L3 3–5 天': 'L1 1 dia / L2 2–3 dias / L3 3–5 dias',
   'L1 会使用智能手机与蓝牙配对，了解基础物联网概念；L2 具备 Node-RED 或 MQTT 基础，能配置网络与 Broker；L3 熟悉 C/C++ 与 PlatformIO，能阅读并修改开源固件源码':
     'L1 sabe usar smartphone e pareamento Bluetooth, conhece conceitos básicos de IoT; L2 tem base em Node-RED ou MQTT, sabe configurar rede e Broker; L3 domina C/C++ e PlatformIO, sabe ler e modificar código-fonte de firmware open-source',
   '野外勘探与户外赛事：队员位置实时追踪、分组文字通信、SOS 告警广播':
@@ -901,8 +890,8 @@ export const ptDict: Record<string, string> = {
   '离网传感定制固件源码与编译工程（L3）':
     'Código-fonte de firmware personalizado para sensoriamento off-grid e projeto de compilação (L3)',
   基础组网与离线通信: 'Rede básica e comunicação offline',
-  '拥有自己的应急通信网，在无网环境下互发消息并共享位置':
-    'Tenha sua propria rede de comunicacao de emergencia, troque mensagens e compartilhe posicao em ambientes sem internet',
+  '3 个以上节点组网，无公网互发消息、共享位置':
+    'Conecte três ou mais nós e troque mensagens e posições sem rede pública',
   '理解 LoRa 物理特性与 Meshtastic 路由拓扑原理':
     'Compreender as características físicas do LoRa e os princípios de topologia de roteamento Meshtastic',
   '熟练配置节点角色（Client / Repeater / Router）与信道加密（256 位 AES PSK）':
@@ -912,19 +901,19 @@ export const ptDict: Record<string, string> = {
   '完成至少 3 节点现场组网，实现点对点、群组广播及位置共享':
     'Concluir rede local com pelo menos 3 nós, implementando ponto a ponto, broadcast em grupo e compartilhamento de localização',
   '状态监控与 MQTT 桥接': 'Monitoramento de estado e ponte MQTT',
-  '实现野外离网传感监控，自动采集环境数据与异常告警':
-    'Implemente monitoramento de sensoriamento off-grid em campo, aquisicao automatica de dados ambientais e alertas de anomalia',
+  '把 Mesh 数据桥接到 MQTT，在看板上看节点位置与电量':
+    'Leve os dados da malha para MQTT e veja em um painel a posição e a bateria de cada nó',
   '掌握 LoRa Mesh 与局域网/公网的 MQTT 桥接方法':
     'Dominar o método de ponte MQTT entre LoRa Mesh e rede local/pública',
   '掌握基于 Node-RED 的 Mesh 遥测数据解析与自动化流编排':
     'Dominar a análise de dados de telemetria Mesh e orquestração de fluxos de automação baseados em Node-RED',
-  具备搭建全域通信态势监控看板的能力:
+  具备搭建全网通信态势监控看板的能力:
     'Capacidade de construir painel de monitoramento de situação de comunicação de domínio completo',
   '完成 1 套 LoRa-MQTT 网关上线，看板实时显示节点坐标与电量状态':
     'Concluir a implantação de 1 gateway LoRa-MQTT, com painel exibindo em tempo real coordenadas e status de bateria dos nós',
   离网传感集成与固件定制: 'Integração de sensoriamento off-grid e personalização de firmware',
-  '打通离网专网与物联生态，让无网专网也能与现场设备联动':
-    'Integre redes privadas off-grid e ecossistema IoT, permita que redes privadas sem internet tambem se vinculem a dispositivos no local',
+  '改 Meshtastic 固件，给节点接上环境传感器':
+    'Modifique o firmware do Meshtastic e conecte um sensor ambiental a um nó',
   '掌握 Meshtastic 开源固件架构与 C++ 源码定制流程':
     'Dominar a arquitetura de firmware open-source Meshtastic e o fluxo de personalização de código-fonte C++',
   '掌握基于 PlatformIO 的嵌入式编译与固件烧录':
@@ -1102,8 +1091,6 @@ export const ptDict: Record<string, string> = {
     'Os sensores no local dos seus clientes, os equipamentos de monitoramento ambiental na bancada de treinamento da escola, os terminais de protocolo proprietario dos parceiros — podem ser conectados apos o modulo 09, tornando-se o pool de objetos para o exercicio de integracao de sensoriamento off-grid. O M3 e responsavel por explicar o metodo a fundo; qual sensor conectar apos a porta, voce decide.',
   '你在行业里攒下的那些：野外部署经验、踩过的坑、能让学员瞬间理解 LoRa 跳数的那个比喻、客户现场最常问的三个问题——那正是我们没有、也给不了的部分。':
     'Aquilo que voce acumulou no setor: experiencia de deploy em campo, armadilhas que enfrentou, a metafora que faz os alunos entenderem instantaneamente o numero de saltos LoRa, as tres perguntas mais frequentes no local do cliente — isso e exatamente o que nao temos e nao podemos oferecer.',
-  '一门通信课最好的归宿，不是被完整地执行一遍，而是被一位工程师改到面目全非，然后变成只有他能交付的那个方案。':
-    'O melhor destino de um curso de comunicação não é ser executado completamente uma vez, mas ser transformado por um engenheiro além do reconhecimento, tornando-se a solução que só ele pode entregar.',
   '仅面向海外无线频段（EU868/US915 等），不得用于国内频段应用。':
     'Destinado apenas a faixas de radiofrequencia internacionais (EU868/US915 etc.), nao pode ser usado em aplicacoes de faixas domesticas chinesas.',
   无公网环境下的短文本即时通讯与群组广播:
@@ -1133,8 +1120,8 @@ export const ptDict: Record<string, string> = {
 
   // ── M4 ──
   '边缘视觉 AI': 'IA de Visão de Borda',
-  '告别事后翻查监控录像，把老旧摄像头升级为实时抓拍、可联动的智能视觉防线':
-    'Adeus a consulta retrospectiva de gravacoes de monitoramento, atualize cameras antigas para uma linha de defesa visual inteligente com captura em tempo real e capacidade de vinculacao',
+  '让摄像头在事件发生时就告警：目标检测、区域入侵、联动声光。不做人脸识别。':
+    'As câmeras alertam no momento em que algo acontece: detecção de objetos, invasão de zona e alarmes sonoros e luminosos vinculados. Sem reconhecimento facial.',
   '基于轻量边缘摄像头与工业级多路 AI 计算主机，构建目标检测、区域入侵告警与自动化联动的边缘视觉方案。':
     'Com base em câmeras de borda leves e hosts industriais de computação de IA multicanal, construa soluções de visão de borda para detecção de objetos, alarme de invasão de área e automação vinculada.',
   '目标检测、区域入侵告警与自动化联动':
@@ -1192,8 +1179,8 @@ export const ptDict: Record<string, string> = {
   '自定义数据集、训练配置与量化后模型文件（L3）':
     'Conjunto de dados personalizado, configuração de treinamento e arquivo de modelo quantizado (L3)',
   双线体验与基础配置: 'Experiência de duas linhas e configuração básica',
-  '拥有自己的智能视觉哨兵，划定警戒区域并自动抓拍留证':
-    'Tenha seu proprio sentinela visual inteligente, delimite zonas de vigilancia e capture automaticamente para registro',
+  '配好一台 reCamera，划定区域并识别目标':
+    'Configure uma reCamera, delimite uma zona e detecte alvos',
   '理解帧率、分辨率、置信度阈值与 IoU 等视觉核心概念':
     'Compreender conceitos centrais de visão como taxa de quadros, resolução, limiar de confiança e IoU',
   '独立完成 reCamera 设备的网络配置与视频流输出':
@@ -1203,8 +1190,8 @@ export const ptDict: Record<string, string> = {
   '完成 1 台 reCamera 节点的网络配置与基础目标识别验证':
     'Concluir a configuração de rede e validação básica de detecção de objetos de 1 nó reCamera',
   双线场景联动与多路汇聚: 'Vinculação de cenários de duas linhas e agregação multicanal',
-  '把既有老旧摄像头升级为智能监控网，过滤误报并联动现场声光报警':
-    'Atualize cameras antigas existentes para uma rede de monitoramento inteligente, filtre falsos positivos e vincule a alarmes sonoros/luminosos no local',
+  '多路摄像头接入 Frigate，调低误报并联动声光告警':
+    'Conecte várias câmeras ao Frigate, reduza falsos alarmes e acione alertas sonoros e luminosos',
   '掌握在 reCamera 上使用 Node-RED 实现边缘事件的本地联动':
     'Dominar o uso de Node-RED na reCamera para implementar vinculação local de eventos de borda',
   '掌握 Frigate frigate.yml 的多路配置、区域绘制与参数调优':
@@ -1214,8 +1201,8 @@ export const ptDict: Record<string, string> = {
   '完成 1 套包含 2 路以上 RTSP 接入、Frigate 检测、HA 联动与误报调优的完整系统':
     'Concluir 1 sistema completo com mais de 2 entradas RTSP, detecção Frigate, vinculação HA e otimização de falsos alarmes',
   模型定制与边缘部署优化: 'Personalização de modelo e otimização de implantação de borda',
-  '定制专属视觉识别模型，实时大屏业务数据':
-    'Personalize modelos exclusivos de reconhecimento visual, dados de negocios em painel grande em tempo real',
+  训练自己的检测模型并部署到边缘硬件:
+    'Treine seu próprio modelo de detecção e implante-o em hardware de borda',
   '掌握视觉 AI 从数据标注、模型训练到边缘部署的完整工程闭环':
     'Dominar o ciclo de engenharia completo da visão de IA, desde anotação de dados e treinamento de modelo até implantação de borda',
   '掌握 TensorRT 与嵌入式模型量化转换的关键工具链':
@@ -1235,7 +1222,7 @@ export const ptDict: Record<string, string> = {
     'Jetson Orin NX 16GB · agregação multicanal Frigate · TensorRT',
   '8+2口千兆PoE交换机': 'Switch Gigabit PoE de 8+2 portas',
   '802.3af/at · PoE供电与流量汇聚': '802.3af/at · alimentação PoE e agregação de tráfego',
-  '本课程以「开源 AI 相机 + 边缘推理盒子」为核心教具，覆盖采集、推理到告警全链路。':
+  '本课程以「开源 AI 相机 + 边缘推理盒子」为核心教具，覆盖从采集、推理到告警的整条流程。':
     'Este curso usa como ferramenta de ensino central as "câmeras de IA open-source + caixas de inferência de borda", cobrindo toda a cadeia de coleta, inferência e alertas.',
   '轻量视觉推理主机，8GB 内存，6 TOPS 算力':
     'Host leve de inferência visual, 8GB de memória, 6 TOPS de capacidade',
@@ -1413,8 +1400,6 @@ export const ptDict: Record<string, string> = {
     'As cameras de rede existentes dos seus clientes, os dispositivos RTSP na bancada de treinamento da escola, as cameras de protocolo proprietario dos parceiros — podem ser conectadas apos o modulo 08, tornando-se o pool de objetos para o exercicio de integracao multicanal Frigate. O M4 e responsavel por explicar o metodo a fundo; qual camera conectar apos a porta, voce decide.',
   '你在行业里攒下的那些：现场踩过的坑、能让学员瞬间理解置信度阈值的那个比喻、客户现场最常问的三个问题、误报调优的独门经验——那正是我们没有、也给不了的部分。':
     'Aquilo que voce acumulou no setor: armadilhas enfrentadas no local, a metafora que faz os alunos entenderem instantaneamente o limiar de confianca, as tres perguntas mais frequentes no local do cliente, a experiencia exclusiva de ajuste de falsos positivos — isso e exatamente o que nao temos e nao podemos oferecer.',
-  '一门视觉AI课最好的归宿，不是被完整地执行一遍，而是被一位工程师改到面目全非，然后变成只有他能交付的那个方案。':
-    'O melhor destino de um curso de visão de IA não é ser executado completamente uma vez, mas ser transformado por um engenheiro além do reconhecimento, tornando-se a solução que só ele pode entregar.',
   '仅做物体/行为/区域检测与事件告警，严禁人脸身份识别与生物特征追踪。':
     'Apenas deteccao de objetos/comportamentos/zonas e alertas de eventos; e estritamente proibido o reconhecimento facial de identidade e o rastreamento de caracteristicas biometricas.',
   '通用与特定目标检测（人/车/安全帽/反光衣/工件等物体类别）':
@@ -1442,8 +1427,8 @@ export const ptDict: Record<string, string> = {
 
   // ── M5 ──
   环境感知与数据采集: 'Sensoriamento Ambiental & Aquisição de Dados',
-  '无需复杂拉线施工，搭建广域传感网络，轻松实现产业数字化升级':
-    'Sem necessidade de construcao complexa de fiacao, implante rede de sensoriamento de area ampla, implemente facilmente a atualizacao digital industrial',
+  '在温室、河道、库房里装上工业传感器，数据直接进手机。4G 或 LoRaWAN 两种接法，不用布线。':
+    'Instale sensores industriais em estufas, rios e armazéns e veja os dados no celular. Conexão por 4G ou LoRaWAN, sem cabeamento.',
   '工业级传感器与4G/LoRaWAN双链路，实现广域场景低功耗环境监测与数据采集。':
     'Sensores industriais e link duplo 4G/LoRaWAN para implementar monitoramento ambiental de baixo consumo e aquisição de dados em cenários de ampla área.',
   '工业级传感器与4G/LoRaWAN双链路': 'Sensores de nivel industrial e link duplo 4G/LoRaWAN',
@@ -1496,8 +1481,8 @@ export const ptDict: Record<string, string> = {
     'Arquivo de configuração de painel de monitoramento Grafana (L3)',
   环境感知网络架构与数据监视:
     'Arquitetura de rede de sensoriamento ambiental e monitoramento de dados',
-  '实现免拉线广域传感监测，设备上电即刻查看环境数据':
-    'Implemente monitoramento de sensoriamento de area ampla sem fiacao, visualize dados ambientais imediatamente apos ligar o dispositivo',
+  '设备上电后，在网页和 App 上看到环境数据':
+    'Ligue os equipamentos e veja os dados ambientais na web e no aplicativo',
   '理解4G DTU与LoRaWAN网关在物联网数据采集中的不同拓扑结构与适用条件':
     'Compreender as diferentes topologias e condições de aplicação de DTU 4G e gateways LoRaWAN na aquisição de dados de IoT',
   '熟练使用SenseCraft Data网页端与移动端App查看多维度环境参数与历史趋势曲线':
@@ -1506,8 +1491,8 @@ export const ptDict: Record<string, string> = {
     'Conhecer os princípios de medição e precauções de implantação de sensores industriais típicos como solo, qualidade da água e meteorologia',
   '传感器接线、Modbus配置与规则告警':
     'Fiação de sensores, configuração Modbus e alarmes por regras',
-  '拥有个性化传感数据统一看板，异常自动告警':
-    'Tenha um painel unificado de dados de sensoriamento personalizado, com alertas automaticos de anomalias',
+  '接好 RS485 传感器，配置轮询与三类以上告警':
+    'Faça a fiação dos sensores RS485 e configure a varredura e três ou mais regras de alerta',
   '掌握RS485差分接线、5V/12V电源分配与Modbus RTU寄存器寻址配置':
     'Dominar a fiação diferencial RS485, distribuição de energia 5V/12V e configuração de endereçamento de registradores Modbus RTU',
   '熟练完成4G数据采集器（或LoRaWAN网关）的设备绑定与轮询周期设置':
@@ -1515,8 +1500,8 @@ export const ptDict: Record<string, string> = {
   '配置3类以上业务告警策略（温度上限报警、土壤水分过低告警、设备离线通知）':
     'Configurar mais de 3 tipos de estratégias de alarme de negócios (alarme de limite superior de temperatura, alarme de umidade do solo muito baixa, notificação de dispositivo offline)',
   API数据集成与本地边缘自动化: 'Integração de dados de API e automação de borda local',
-  '打通数据接口，将现场监测数据无缝集成至自有系统':
-    'Integre interfaces de dados, integre perfeitamente dados de monitoramento no local aos sistemas proprios',
+  '用 Open API 取数，接入 Grafana 与本地自动化':
+    'Obtenha dados pela Open API e leve-os ao Grafana e a automações locais',
   '掌握SenseCAP Open API鉴权（Access ID / Access Key，HTTP Basic Auth）与遥测数据提取接口调用':
     'Dominar a autenticação do SenseCAP Open API (Access ID / Access Key, HTTP Basic Auth) e chamadas de interface de extração de dados de telemetria',
   '在reComputer R1025上部署Node-RED编排本地自动化控制流，根据传感器数值触发执行机构':
@@ -1698,8 +1683,6 @@ export const ptDict: Record<string, string> = {
     'Os sensores existentes dos seus clientes, as sondas ambientais na bancada de treinamento da escola, os dispositivos RS485 dos parceiros — podem ser conectados apos o modulo 06, tornando-se o pool de objetos para o exercicio de integracao Modbus. O M5 e responsavel por explicar o metodo a fundo; qual sensor conectar apos a porta, voce decide.',
   '你在行业里攒下的那些：野外布设经验、踩过的坑、能让学员瞬间理解LoRaWAN视距覆盖的那个比喻、客户现场最常问的三个问题——那正是我们没有、也给不了的部分。':
     'Aquilo que voce acumulou no setor: experiencia de implantacao em campo, armadilhas que enfrentou, a metafora que faz os alunos entenderem instantaneamente a cobertura de linha de visada LoRaWAN, as tres perguntas mais frequentes no local do cliente — isso e exatamente o que nao temos e nao podemos oferecer.',
-  '一门环境监测课最好的归宿，不是被完整地执行一遍，而是被一位工程师改到面目全非，然后变成只有他能交付的那个方案。':
-    'O melhor destino de um curso de monitoramento ambiental não é ser executado completamente uma vez, mas ser transformado por um engenheiro além do reconhecimento, tornando-se a solução que só ele pode entregar.',
   '4G与LoRaWAN为两条独立交付路线，硬件不混用；环境数据属低频物联监测，不做毫秒级闭环控制。':
     '4G e LoRaWAN são duas rotas de entrega independentes, o hardware não é misturado; dados ambientais pertencem a monitoramento IoT de baixa frequência, não se faz controle de ciclo fechado em nível de milissegundos.',
   '多环境要素采集（土壤温湿度/EC、气象七参数、CO2、叶面温湿度、水质pH等）与广域分散点位监测':
@@ -1735,8 +1718,8 @@ export const ptDict: Record<string, string> = {
 
   // ── M6 ──
   机器人控制与具身智能: 'Controle Robótico & Inteligência Embodied',
-  '告别繁琐的传统机器人编程，轻松掌控多自由度动作，快速响应现场作业需求':
-    'Adeus a programacao tradicional complicada de robos, controle facilmente movimentos de multiplos graus de liberdade, responda rapidamente as demandas de operacao no local',
+  '在六轴桌面机械臂上，从主从遥操作一路做到按 3D 视觉结果抓取。':
+    'Em um braço robótico de mesa de seis eixos, vá da teleoperação líder-seguidor à preensão guiada por visão 3D.',
   '六轴桌面机械臂加多模态感知，实现主从遥操到3D空间精准抓取与具身智能开发。':
     'Braço robótico de mesa de 6 eixos com percepção multimodal, para implementar teleoperação mestre-escravo até captura precisa em espaço 3D e desenvolvimento de inteligência embodied.',
   主从遥操到3D空间精准抓取: 'Da teleoperação mestre-escravo à captura precisa em espaço 3D',
@@ -1813,8 +1796,8 @@ export const ptDict: Record<string, string> = {
     'Dominar a conexão inicial da plataforma SenseCraft, executar com sucesso teleoperação mestre-escravo e captura por comando de voz',
   '场景剖析、空间直觉与多模态编排':
     'Análise de cenários, intuição espacial e orquestração multimodal',
-  '自主识别目标并执行抓取，灵活应对位置变化':
-    'Reconhece objetos autonomamente e executa captura, adaptando-se flexivelmente a variacoes de posicao',
+  '编排多步动作，按视觉事件触发抓取':
+    'Encadeie movimentos de várias etapas e acione a preensão por eventos de visão',
   能向客户清晰阐述3D场景为什么需要六轴机械臂及其选型边界:
     'Capacidade de explicar claramente aos clientes por que cenários 3D exigem braços robóticos de 6 eixos e seus limites de escolha',
   '掌握SenseCraft多动作流程编排与"生成 → 3D预览 → 人工确认 → 真机执行"安全确认机制':
@@ -1823,8 +1806,8 @@ export const ptDict: Record<string, string> = {
     'Dominar o acionamento de eventos baseado em visão da estação e a construção de microcenários, com operação estável por 3 vezes consecutivas',
   '3D空间抓取闭环与具身智能前瞻':
     'Ciclo fechado de captura em espaço 3D e perspectivas de inteligência embodied',
-  '定制专属场景应用，快速适配特定作业流程':
-    'Personalize aplicativos de cenario exclusivos, adapte rapidamente fluxos de operacao especificos',
+  '用深度相机取 3D 坐标，Python 驱动真机抓取':
+    'Obtenha coordenadas 3D com uma câmera de profundidade e mova o braço real via Python',
   '使用RGB-D深度相机获取目标3D物理坐标，通过Python调用Pinocchio完成电机角度自动换算，利用Motorbridge驱动真机完成空间抓取与异常处理':
     'Usar câmera de profundidade RGB-D para obter coordenadas físicas 3D do alvo, chamar Pinocchio via Python para concluir conversão automática de ângulos de motores, usar Motorbridge para acionar o dispositivo real e completar captura espacial e tratamento de anomalias',
   '掌握主从遥操动作数据集采集流程（LeRobot标准格式），理解VLA具身大模型与Isaac Sim数字孪生仿真基本原理':
@@ -1846,7 +1829,7 @@ export const ptDict: Record<string, string> = {
   工业级独立急停按钮: 'Botão de Parada de Emergência Independente Industrial',
   '常闭硬件回路 · 硬切动力电 · 不接软件':
     'Circuito de hardware normalmente fechado · corte físico de energia de força · sem conexão com software',
-  '本课程以「六轴桌面机械臂 + 多模态感知 + 边缘算力」为核心教具，覆盖遥操到3D抓取全链路。':
+  '本课程以「六轴桌面机械臂 + 多模态感知 + 边缘算力」为核心教具，覆盖从遥操到 3D 抓取的整条流程。':
     'Este curso usa como ferramenta de ensino central o "braço robótico de mesa de 6 eixos + percepção multimodal + computação de borda", cobrindo toda a cadeia de teleoperação a captura 3D.',
   '6+1自由度开源从动机械臂成品，含电动夹爪与总线舵机':
     'Braço robótico escravo pronto open-source com 6+1 graus de liberdade, incluindo garra elétrica e servos de barramento',
@@ -2020,8 +2003,6 @@ export const ptDict: Record<string, string> = {
     'Os equipamentos legados dos seus clientes, os sensores nas bancadas de treinamento da escola e os sistemas de inspeção visual dos parceiros podem ser conectados após o módulo 09, tornando-se o pool de objetos para exercícios de acionamento de eventos. O M6 se responsabiliza por explicar o método a fundo; o que conectar após essa porta como fonte de acionamento, você decide.',
   '你在行业里攒下的那些：机械臂选型踩过的坑、能让学员瞬间理解逆运动学的那个比喻、客户现场最常问的三个安全问题——那正是我们没有、也给不了的部分。':
     'Tudo o que você acumulou no setor: os erros cometidos na seleção de braços robóticos, a metáfora que faz os alunos entenderem a cinemática inversa instantaneamente, as três perguntas de segurança mais frequentes no local do cliente — essa é exatamente a parte que não temos e não podemos oferecer.',
-  '一门机器人课最好的归宿，不是被完整地执行一遍，而是被一位工程师改到面目全非，然后变成只有他能交付的那个方案。':
-    'O melhor destino de um curso de robótica não é ser executado integralmente uma vez, mas sim ser modificado por um engenheiro até ficar irreconhecível, transformando-se então naquela solução que só ele pode entregar.',
   '低速监督控制 + 独立硬件急停，不做安全关键系统替代。':
     'Controle supervisionado de baixa velocidade + parada de emergência por hardware independente, não substitui sistemas de segurança crítica.',
   '轻量分拣演示、展位互动、教学实训与低速监督控制场景':
