@@ -11,117 +11,23 @@ import { type Locale, localizePath } from './types';
  */
 
 const zhToEn: Record<string, string> = {
-  // 首页 · 创客生态分布图（模块 A）
-  查看分布图: 'View the Map',
-
-  // 首页 · 先锋官 · 基地 双栏卡片（模块 B）
-  先锋官: 'Pioneer',
-  基地: 'Base',
-
-  // 先锋官 Hero
-  先锋官计划: 'Pioneer Program',
-  基地计划: 'Base Program',
-  立即申请: 'Apply Now',
-  先了解基地: 'Learn About Bases First',
-  先了解先锋官: 'Learn About Pioneers First',
-
-  // 先锋官 · 什么是先锋官
-  技术型: 'Technical',
-  '有技术背景，想用创客技能开展教育 / 服务':
-    'Has a technical background and wants to run education / services with maker skills',
-  链接型: 'Connector',
-  '有教育 / 社区资源，想引入创客课程但不一定亲自教':
-    'Has education / community resources and wants to bring in maker courses without necessarily teaching',
-  '每个基地必须先有先锋官；先锋官也可独立运营，不挂靠基地。':
-    'Every base must first have a Pioneer; a Pioneer can also operate independently without affiliating with a base.',
-
-  // 先锋官 · 你能得到什么
   'M0 教具 5 套': '5 × M0 Kits',
   '赠送，不回收': 'Free, never taken back',
   'Codecraft 账号 5 个': '5 Codecraft Accounts',
   '365 天 / 5 席位': '365 days / 5 seats',
-  课程包: 'Course Pack',
-  官方认证: 'Official Certification',
-  '通过认证后登上 map.seeed.cc 全球分布图':
-    'Get certified and appear on the map.seeed.cc global map',
-  总部支持: 'HQ Support',
   '社区经理对接、技术答疑、课程更新': 'Community manager, technical Q&A, and course updates',
   'M1–M6 升级路径': 'M1–M6 Upgrade Path',
   '保证金租赁制，退出全退': 'Deposit-based rental, fully refundable on exit',
-
-  // 先锋官 · 怎么赚钱
-  开课收费: 'Course Fees',
-  '用 M0 课程在当地开班，学费 100% 归你。课程包现成、教具到位，你只需招生和上课。':
-    'Run M0 courses locally — 100% of tuition is yours. The course pack is ready and kits are in place; you only handle enrollment and teaching.',
-  总部派单: 'HQ Work Orders',
-  '柴火接到的培训 / 工作坊需求，派给当地先锋官执行。你出人出力，直接收服务费。':
-    'Chaihuo routes local training / workshop demand to you. You provide the people and effort and collect the service fee directly.',
-  教具销售佣金: 'Kit Sales Commission',
-  '向当地学校 / 机构推荐柴火教具，成交后拿佣金。':
-    'Refer Chaihuo kits to local schools / institutions and earn commission on closed deals.',
-  '向当地学校 / 机构推荐教具，成交后拿佣金。':
-    'Refer kits to local schools / institutions and earn commission on closed deals.',
-
-  // 先锋官 · 四步走
-  体验活动: 'Hands-On Event',
   '在你的城市 / 场地办一场 AI 编程体验': 'Run an AI coding experience in your city / venue',
-  培训认证: 'Training & Certification',
-  '参加总部讲师培训与认证（线上即可开始）':
-    'Join HQ instructor training & certification (can start online)',
   '教具到位、正式开课': 'Kits Delivered, Classes Start',
-  '认证通过后发放教具与账号，开第一期收费课':
-    'After certification, kits and accounts are issued — launch your first paid class',
-  验证升级: 'Validate & Upgrade',
-  '跑通首期 → 追加支持 → 条件成熟可挂牌基地':
-    'Complete the first cohort → get more support → qualify for base status when ready',
-
-  // 先锋官 · 认证流程
-  认证流程: 'Certification Process',
-  拿到教具: 'Receive Kits',
-  完成一个项目: 'Complete a Project',
-  录一段讲课视频: 'Record a Teaching Video',
-  总部审核: 'HQ Review',
-  发证: 'Get Certified',
-  '参照校园大使机制：每人定一个教具，做项目 + 录课，审核通过才发证。不是给了教具就是先锋官——要做出来、讲出来。':
-    'Modeled on the campus ambassador mechanism: each person picks a kit, builds a project, and records a lesson — certification comes only after review. Getting kits doesn\u2019t make you a Pioneer — you have to build it and teach it.',
-
-  // 先锋官 · FAQ
   '第一批名额多少？': 'How many spots are in the first batch?',
-  '第一阶段 10 基地 + 20 先锋官，先到先评估。':
-    'Phase 1 covers 10 bases + 20 pioneers; first come, first evaluated.',
   '没选上怎么办？': "What if I'm not selected?",
-  '第二期、第三期陆续开放；也可选择交保证金提前参与作为预备。第一批报名者优先纳入后续筛选。':
-    'Phase 2 and 3 will open later; you can also join early as a reserve with a deposit. First-batch applicants get priority in later rounds.',
   '需要交钱吗？': 'Is there a fee?',
-  'M0 教具赠送不回收；M1–M6 教具保证金租赁制，退出全退。':
-    'M0 kits are free and never taken back; M1–M6 kits use a deposit-based rental system, fully refundable on exit.',
   '不懂编程能当先锋官吗？': 'Can I be a Pioneer without coding skills?',
-  '可以。Codecraft 沙盒零安装、浏览器即用，AI 帮你写代码。任何有上课经验的老师，跑一遍流程就能上课。':
-    'Yes. The Codecraft sandbox needs zero installation — it runs in the browser and AI writes the code. Any teacher with classroom experience can run the flow and start teaching.',
   '先锋官和基地什么关系？': 'How do Pioneers and Bases relate?',
-  '每个基地必须先有先锋官。先锋官可以是基地员工，也可以是合作制。先锋官可挂靠多个基地，基地权益是基地内先锋官共用的。':
-    'Every base must first have a Pioneer. A Pioneer can be a base employee or an independent partner and can affiliate with multiple bases. Base benefits are shared by all Pioneers at that base.',
-
-  // 先锋官 · CTA
-  '第一阶段 10 基地 + 20 先锋官，先到先评估。填写申请表，社区经理将在 3 个工作日内联系你。':
-    'Phase 1 covers 10 bases + 20 pioneers — first come, first evaluated. Fill in the application and a community manager will contact you within 3 working days.',
-  联系我们: 'Contact Us',
-
-  // 基地 · 什么是基地
   '准入标准（2 项核心）': 'Admission Criteria (2 Core Requirements)',
-  两项均需满足: 'Both requirements must be met',
-  固定场地: 'Fixed Venue',
-  可承接活动与课程: 'Able to host events and courses',
-  持续运营: 'Ongoing Operation',
   '有专人负责、有运营计划': 'A dedicated person in charge with an operation plan',
-  加分项: 'Bonus Points',
-  '科技馆 / 高校 Fab Lab 等公共教育空间':
-    'Public education spaces like science museums / university Fab Labs',
   '已有创客 / STEAM 教育基础': 'Existing maker / STEAM education foundation',
-
-  // 基地 · 权益对比
-  基地权益: 'Base Benefits',
-  权益: 'Benefit',
   '先锋官（个人）': 'Pioneer (Individual)',
   '基地（空间）': 'Base (Space)',
   'M0 教具': 'M0 Kits',
@@ -130,538 +36,686 @@ const zhToEn: Record<string, string> = {
   'Codecraft 账号': 'Codecraft Accounts',
   '5 个（365 天 / 5 席位）': '5 (365 days / 5 seats)',
   '10 个': '10',
-  登上地图: 'On the map',
   '牌匾 + 区域优先权': 'Plaque + regional priority',
-  开课获利: 'Course Profits',
   '学费 100% 归个人': '100% of tuition to the individual',
   '同 + 派单服务费': 'Same + work-order fees',
-  额外盈利线: 'Extra Revenue Lines',
   '派单 / 销售佣金': 'Work orders / sales commission',
-  '佣金 / 派单 / 跨基地分佣 / 公益捐赠':
-    'Commission / work orders / cross-base sharing / public donations',
-  升级路径: 'Upgrade Path',
   '→ 基地': '→ Base',
   '→ 区域代理枢纽': '→ Regional Hub',
-
-  // 基地 · 怎么赚钱
   '基地内开班，学费归基地运营方。': 'Run classes at the base — tuition goes to the operator.',
-  '柴火接到的当地培训 / 工作坊需求，派给基地执行，直接收服务费。':
-    'Chaihuo routes local training / workshop demand to your base — you execute and collect service fees directly.',
-  跨基地分佣: 'Cross-Base Sharing',
   '多基地协作项目，按贡献分佣。': 'Multi-base collaboration projects share fees by contribution.',
-  '另：公益捐赠渠道（适合公共教育空间）。':
-    'Also: a public donation channel (great for public education spaces).',
-
-  // 基地 · 关系
-  基地与先锋官关系: 'How Bases and Pioneers Relate',
-  '没有先锋官，就没有基地；有了基地，先锋官才有自己的主场。':
-    'No Pioneers, no base; with a base, Pioneers have their home turf.',
-  个人: 'Individual',
   '可挂靠多个基地，也可独立运营': 'Can affiliate with multiple bases or operate independently',
-  空间: 'Space',
   '权益基地内共用，可有多个先锋官': 'Benefits shared within the base; can have multiple Pioneers',
-  '先锋官可以是基地员工，也可以是合作制':
-    'A Pioneer can be a base employee or an independent partner',
-  '一个先锋官可挂靠多个基地（如南山基地 + 龙岗基地）':
-    'One Pioneer can affiliate with multiple bases (e.g., Nanshan + Longgang)',
-  '基地权益（教具、账号等）是基地内所有先锋官共用的':
-    'Base benefits (kits, accounts, etc.) are shared by all Pioneers at that base',
-
-  // 基地 · 升级路径
-  区域代理枢纽: 'Regional Hub',
-  '条件成熟时，基地可升级为区域代理枢纽，负责区域内先锋官 / 基地的招募、培训与协调。':
-    'When conditions mature, a base can upgrade to a regional hub responsible for recruiting, training, and coordinating Pioneers / bases in its region.',
-
-  // 基地 · FAQ
   '基地必须有先锋官吗？': 'Must a base have a Pioneer?',
-  '是的。每个基地必须先有至少一名先锋官。先锋官可以是基地员工，也可以是外部合作。':
-    'Yes. Every base must first have at least one Pioneer — either an employee or an external partner.',
   '基地教具和先锋官教具是一回事吗？': 'Are base kits and Pioneer kits the same?',
-  '基地获得 10 套教具（基地内共用），先锋官个人获得 5 套。如果先锋官挂靠基地，共用基地教具，不重复领取。':
-    'A base receives 10 kits (shared internally); a Pioneer receives 5. If a Pioneer affiliates with a base, they share the base kits instead of receiving duplicate ones.',
-  '已经有空间但没做过创客教育，能申请基地吗？':
-    'Can I apply as a base if I have a space but no maker education experience?',
-  '可以。核心标准是固定场地 + 持续运营意愿。柴火提供课程、教具和培训，帮你跑通第一期。':
-    'Yes. The core criteria are a fixed venue + commitment to ongoing operation. Chaihuo provides courses, kits, and training to help you complete your first cohort.',
-
-  // 基地 · CTA
-  '核心标准只有两条：固定场地 + 持续运营意愿。填写申请表，社区经理将在 3 个工作日内联系你。':
-    'Only two core criteria: fixed venue + commitment to ongoing operation. Fill in the application and a community manager will contact you within 3 working days.',
-  招募点火人与基地: 'Igniters and Bases wanted',
-  '先锋官是柴火招募的点火人：先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。有固定场地的，可以申请挂牌基地。':
-    'Pioneers are Igniters recruited by Chaihuo: learn the courses first, then teach and promote them in your own city, carrying the maker-education flame to more places. Organisations with a permanent venue can apply to become a certified Base.',
-  个人申请: 'For individuals',
-  有固定场地的机构申请: 'For organisations with a permanent venue',
   '先锋官：柴火招募的点火人': 'Pioneers: the Igniters Chaihuo recruits',
-  '先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。柴火提供课程包、教具和认证；你负责招生、授课和本地推广。':
-    'Learn Chaihuo courses first, then teach and promote them in your own city, carrying the maker-education flame to more places. Chaihuo provides the course pack, teaching kits and certification; you handle enrolment, teaching and local promotion.',
-  条件与条款: 'Requirements and terms',
-  '先锋官是柴火认证的点火人：学会课程，在当地开课，并向学校和机构推广。':
-    'A Pioneer is an Igniter certified by Chaihuo: they learn the courses, run classes locally and promote them to schools and organisations.',
-  谁可以申请: 'Who can apply',
-  两类满足其一即可申请: 'Meeting either profile qualifies you to apply',
-  柴火提供什么: 'What Chaihuo provides',
   'PPT + md 格式，可以自行修改和二次创作': 'PPT + md format; you may modify and rework it',
-  收益来自哪里: 'Where the income comes from',
-  从申请到开课: 'From application to first class',
-  申请成为先锋官: 'Apply to become a Pioneer',
   '基地：柴火认证的本地授课点': 'Bases: Chaihuo-certified local teaching sites',
-  '有固定场地、有专人持续运营的机构可以申请挂牌基地。柴火提供教具、课程和总部派单；基地在本地开课，并为先锋官提供授课场地。':
-    'Organisations with a permanent venue and someone to run it on an ongoing basis can apply to become a certified Base. Chaihuo provides teaching kits, courses and work dispatched from headquarters; the Base runs classes locally and gives Pioneers a place to teach.',
-  条件与权益: 'Requirements and benefits',
-  '基地是柴火认证的、有固定场地的本地授课点。':
-    'A Base is a local teaching site with a permanent venue, certified by Chaihuo.',
-  '柴火基地车巡游到过、双方已有合作基础':
-    'Already reached by the Chaihuo Mobile Base Vehicle tour, with mutual trust established',
-  申请挂牌基地: 'Apply to become a Base',
+  教学合作网络与基地: 'Teaching Network & Bases',
+  '已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家）与首批 10 家签约交付基地。常年开放申请，支持个人讲师开课与机构空间挂牌。':
+    'Over 79 Pioneers (57 across 19 provinces in China, 22 across 15 countries overseas) and the first 10 signed partner bases. Applications are open year-round for independent instructors and educational spaces.',
+  个人讲师申请: 'Instructor Application',
+  实体空间合作: 'Physical Space Partnership',
+  '先锋官：柴火教学点火人': 'Pioneers: Sparking Maker Education',
+  '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有 79 位先锋官（国内 57 位、海外 22 位）在 15 个国家持续开课。':
+    "Pioneers are Chaihuo's local teaching partners: mastering the curriculum to run classes, workshops, and educational projects locally. Chaihuo provides kits, lesson plans, and certification. Applications are open year-round, with 79 Pioneers (57 in China, 22 overseas) active across 15 countries.",
+  申请成为先锋官: 'Apply as a Pioneer',
+  了解基地合作: 'Explore Base Partnerships',
+  准入条件与合作机制: 'Eligibility & Collaboration Mechanism',
+  '先锋官是柴火认证的本地讲师与合作者：掌握课程体系，在当地开课交付，并对接学校与机构培训需求。':
+    'Pioneers are certified local instructors and partners: delivering the curriculum locally while connecting with schools and institutional training needs.',
+  '申请条件（满足其一即可）': 'Eligibility (Meet Either Condition)',
+  '有硬件或编程背景，希望使用柴火课程与套件开展教学服务':
+    'Technical background in hardware or coding, wanting to teach using Chaihuo kits and courses',
+  '拥有学校、机构或社区资源，希望引入创客课程并组织本地交付':
+    'Access to educational, institutional, or community networks, looking to introduce maker courses locally',
+  两类满足其一即可申请: 'Meet either criterion to apply',
+  '每处基地须至少配备一名先锋官；先锋官也可独立运作，无需绑定实体基地。':
+    'Each base must have at least one Pioneer; Pioneers can also operate independently without a physical base.',
+  柴火提供的支持: 'Support Provided by Chaihuo',
+  '通过认证即配发，支持常态开课': 'Issued upon certification to support ongoing classes',
+  '365 天有效，含 5 个独立教学席位': 'Valid for 365 days, includes 5 dedicated seats',
+  '含讲义与源码工程，支持根据本地学情二次开发与定制':
+    'Complete courseware and code repositories, open for local customization',
+  '通过评估后登载于 map.seeed.cc 全球创客网络':
+    'Listed on map.seeed.cc global maker network upon evaluation',
+  '社区经理直连、常态技术答疑与课程版本更新':
+    'Direct community manager support, continuous technical Q&A, and curriculum updates',
+  '支持押金租赁高阶硬件，项目结束押金全额退还':
+    'Deposit-based hardware rental for advanced modules, fully refunded upon course completion',
+  收益渠道与分成: 'Revenue Streams & Share',
+  开课学费收益: 'Course Tuition',
+  '在本地使用 M0 课程自主开班，学费由开课方全额留存。套件与备课讲义现成，重点投入本地学员招募与课堂交付。':
+    'Deliver M0 courses locally and keep 100% of student tuition. With turnkey kits and lesson plans ready, focus your energy on local enrollment and teaching.',
+  总部委托派单: 'HQ Dispatches',
+  '柴火承接的异地企业实训与工作坊需求，就近委托当地先锋官交付，按场次结算讲师酬劳。':
+    'Enterprise training and workshops booked by Chaihuo are dispatched to local Pioneers, paying competitive per-session trainer fees.',
+  教具集采佣金: 'Kit Sales Commission',
+  '协助本地学校与培训机构批量采购柴火硬件套件，根据成交规模结算佣金。':
+    'Earn commissions on bulk hardware kit procurement from local schools and institutions.',
+  加入与开课流程: 'Onboarding & Launch Process',
+  体验与沟通: 'Experience & Discovery',
+  '在本地组织一次小规模硬件体验，或与教研团队电话沟通':
+    'Host a hands-on hardware trial session locally, or schedule an exploratory call with our curriculum team.',
+  教研与试讲: 'Training & Demonstration',
+  '参加总部线上备课辅导，提交一段实操项目试讲视频':
+    'Attend online preparation sessions and submit a recorded demo lesson based on a hands-on build.',
+  配发套件并开课: 'Receive Kits & Launch',
+  '通过认证后配发 5 套 M0 教具与账号，启动本地首期课程':
+    'Receive 5 complimentary M0 kits and accounts upon certification, and launch your first cohort.',
+  进阶与基地升级: 'Scale & Base Upgrade',
+  '常态开班后可申请高阶硬件，具备固定场地时可申请挂牌合作基地':
+    'Access higher-tier hardware as classes run continuously; apply to establish a certified Base once you have dedicated space.',
+  认证考核机制: 'Certification Standard',
+  申领教具: 'Claim Kits',
+  完成实操项目: 'Build a Project',
+  录制试讲片段: 'Record Demo Video',
+  总部教研评估: 'HQ Review',
+  发放认证证书: 'Issue Certificate',
+  '认证关注真实的课堂交付与动手能力：申请人需基于指定硬件完成一个实物作品并录制试讲片段，经教研评估合格后正式发放认证。能做出实物、讲清原理，是先锋官的核心标准。':
+    'Certification focuses on real teaching and hands-on skill: applicants build a physical project and submit a demo teaching video. Being able to build it and teach it clearly is our core standard.',
+  '申请有截止时间或名额限制吗？': 'Is there an application deadline or seat limit?',
+  '先锋官计划常年开放申请，不设名额上限。提交申请后，教研团队会在 3 个工作日内通过邮件与你联系沟通。':
+    'The Pioneer Program accepts applications year-round with no quota caps. Our curriculum team will follow up via email within 3 business days.',
+  '目前先锋官网络的实际规模有多大？': 'What is the current scale of the Pioneer network?',
+  '截至目前，全球已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家），并有首批 10 家签约基地配备教具开课。':
+    'To date, there are 79 Pioneers worldwide (57 across 19 provinces in China, 22 across 15 countries overseas), with 10 signed bases equipped and operating.',
+  '加入需要支付加盟费用吗？': 'Is there a franchise fee to join?',
+  '不需要加盟费。M0 基础教具在认证通过后配发赠送；M1–M6 高阶模块教具实行押金租赁制，项目结课退还设备后押金全额退回。':
+    'No franchise fees. 5 sets of M0 kits are provided complimentary upon certification. Advanced M1–M6 kits are leased on a deposit basis, fully refunded upon return.',
+  '非计算机或工科专业可以申请吗？': 'Can non-CS or non-engineering backgrounds apply?',
+  '可以。M0 课程使用图形化免配置沙盒环境，辅以 AI 助教指令，上手门槛低。有教学意愿或课堂组织经验的老师，演练 1–2 次即可熟练授课。':
+    'Yes. M0 uses a zero-install graphical sandbox and AI assistant workflows with a gentle learning curve. Anyone with teaching experience can master delivery after 1–2 rehearsal runs.',
+  '先锋官和基地之间如何协作？': 'How do Pioneers and Bases collaborate?',
+  '每家基地须有至少一名签约先锋官负责实训。先锋官既可以是基地的专职教师，也可以是独立合作讲师，支持跨基地共享实训台架与设备资源。':
+    'Each Base must have at least one certified Pioneer guiding workshops. Pioneers can be full-time staff or external partners, sharing hardware facilities across spaces.',
+  申请成为柴火先锋官: 'Apply to Become a Chaihuo Pioneer',
+  '常年开放个人讲师与创客申请。提交你的背景与开课计划，教研团队将在 3 个工作日内与你沟通对接。':
+    'Open year-round for independent instructors and makers. Submit your background and teaching plan, and our team will get in touch within 3 business days.',
+  提交申请: 'Submit Application',
+  邮件咨询: 'Email Inquiry',
+  '基地：柴火认证的本地授课中心': 'Bases: Certified Local Learning Hubs',
+  '面向拥有固定教学场地与日常运营能力的机构。首批 10 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。':
+    'For institutions with permanent teaching spaces and ongoing operational capability. 10 bases have signed and received kits; new base applications are open year-round. Chaihuo provides kits, lesson packages, and workshop dispatches; bases run ongoing classes and host Pioneers with dedicated maker benches.',
+  申请设立基地: 'Apply for a Base',
+  准入条件与权益: 'Eligibility & Benefits',
+  '基地是柴火官方认证的实体教学中心，具备承接实训与常态化开课的场地条件。':
+    'A Base is an officially certified learning center with physical facilities for regular hands-on training.',
+  '准入标准（2 项基本要求）': 'Admission Criteria (2 Core Requirements)',
+  '具备可容纳 15–30 人同时动手的实训或创客工坊':
+    'Dedicated workshop space accommodating 15–30 learners working hands-on',
+  '配备专职教学或运营对接人，有明确的开班排课规划':
+    'Dedicated education or operations coordinator with a concrete scheduling plan',
+  两项均为基本要求: 'Both requirements are mandatory',
+  优先合作条件: 'Preferred Qualifications',
+  '具备创客、STEAM 或电子信息类社团与开课经验':
+    'Prior experience hosting maker, STEAM, or electronics clubs and programs',
+  基地与先锋官权益对照: 'Rights & Benefits Comparison',
+  权益项目: 'Benefit Item',
+  'M0 教学套件': 'M0 Teaching Kits',
+  '5 套（通过认证后配发）': '5 sets (granted upon certification)',
+  '10 套（工坊共用实训台架）': '10 sets (shared across workshop benches)',
+  '5 个（365 天 / 5 独立席位）': '5 accounts (365 days / 5 seats)',
+  '10 个独立教学席位': '10 dedicated seats',
+  官方授牌: 'Official Recognition',
+  登上全球创客网络地图: 'Featured on global maker map',
+  '实体铜牌认证 + 本地业务优先权': 'Official plaque + regional priority',
+  学费收益: 'Tuition Revenue',
+  自主开班学费全额归个人: '100% of tuition retained by instructor',
+  '学费归基地 + 派单讲师酬劳': 'Tuition to base + dispatch fees to trainers',
+  多元收益渠道: 'Multiple Revenue Streams',
+  '总部派单 / 教具佣金': 'HQ Dispatches / Kit Commissions',
+  '套件代销 / 区域派单 / 多基地协同收益': 'Kit distribution / regional dispatches / network share',
+  发展方向: 'Growth Trajectory',
+  '→ 筹建独立基地': '→ Found an independent Base',
+  '→ 区域教研与交付中心': '→ Regional Curriculum & Delivery Hub',
+  基地收益来源: 'Base Revenue Sources',
+  自主开课学费: 'Regular Course Tuition',
+  '在基地工坊常态开设课程与工作坊，学费收益全部由基地运营方支配。':
+    'Run regular courses and workshops in your maker space; all tuition fees are retained directly by the base operator.',
+  '柴火承接的企事业单位区域实训需求，优先委托当地基地承办，按场次结算服务费。':
+    'Enterprise and public sector training requests in your region are preferentially dispatched to the local base, settled per session.',
+  '为本地高校、中小学及研学机构提供教具配套采购，根据订单流水获得返佣。':
+    'Facilitate hardware kit procurement for local colleges, schools, and study groups to earn sales commissions.',
+  多基地业务协作: 'Multi-Base Collaboration',
+  '参与跨区域大型交付或承接异地集训，按照实际协作分工结算收益。':
+    'Participate in cross-regional rollouts or host intensive training camps, splitting revenue based on actual contribution.',
+  '另：支持对接地方公共科教专项与公益项目。':
+    'Note: Also supports local public science education grants and community initiatives.',
+  基地与先锋官的协作关系: 'Relationship Between Bases and Pioneers',
+  '先锋官提供教学实操能力，基地提供工坊硬件承载，两者互为支撑、协同运转。':
+    'Pioneers provide hands-on instructional capacity; Bases provide physical maker facilities. Both reinforce each other.',
+  讲师与个人: 'Instructor / Individual',
+  实体工坊: 'Physical Workshop',
+  '可入驻签约多家基地，也可独立组织教学': 'Can partner with multiple bases or teach independently',
+  '硬件设备在工坊共用，可聚合多位先锋官共同开课':
+    'Shared workshop hardware, uniting multiple Pioneers to deliver classes',
+  '先锋官既可以是基地的专职讲师，也可以作为外部特邀合作导师':
+    'Pioneers can serve as full-time in-house instructors or external guest mentors.',
+  '一位先锋官可与同城多家基地签约合作，跨工坊开展教学':
+    'A single Pioneer can partner with multiple local bases, delivering across different workshops.',
+  基地配发的教具与云端账号供工坊内所有认证先锋官共同使用:
+    'Kits and platform seats assigned to a base are shared among all certified Pioneers in that workshop.',
+  基地发展路径: 'Base Growth Path',
+  个人创客: 'Maker',
+  认证先锋官: 'Certified Pioneer',
+  合作基地: 'Partner Base',
+  区域教研中心: 'Regional Hub',
+  '运营良好、具备稳定开班能力的基地，可升级为区域教研中心，协同负责本区域内新先锋官的实操辅导与基地拓展。':
+    'High-performing bases with steady enrollment can level up to Regional Hubs, helping onboard new local Pioneers and establish further bases.',
+  '挂牌基地必须配备先锋官吗？': 'Does a Base need to have a Pioneer?',
+  '是的。每家合作基地须至少有一位通过认证的先锋官担任教学督导，确保实训安全与教学质量。':
+    'Yes. Each partner base must have at least one certified Pioneer as instructional lead to guarantee quality and safety.',
+  '基地教具与先锋官个人教具如何管理？': 'How are Base kits and personal Pioneer kits handled?',
+  '基地签约后配发 10 套教学套件，留存基地共用；入驻先锋官此前持有的个人教具归个人所有，可一同充实课堂台架。':
+    'The 10 kits provided upon base signing remain shared workshop property. Personal kits previously awarded to Pioneers remain theirs and can complement classroom benches.',
+  '有成熟场地但未做过开源硬件培训，能否申请？':
+    "Can spaces apply if they haven't run open-source hardware training before?",
+  '可以。只要场地具备基础动手条件且有团队持续运营，柴火提供完整的讲义备课包与师资辅导，协助跑通首期。':
+    'Yes. As long as you have adequate maker benches and an active operating team, Chaihuo supplies full lesson packages and instructor coaching to launch your first session.',
+  '基地申请需要缴纳加盟费吗？': 'Are there franchise or licensing fees for Bases?',
+  '不收取加盟费。柴火负责提供首批教学套件、课程备课资料与派单机会，合作重点在于本地持续开课。':
+    'No franchise fees. Chaihuo provides the initial teaching kits, lesson preparation materials, and dispatch opportunities, focusing entirely on sustaining local classes.',
+  申请设立柴火教学基地: 'Apply to Establish a Chaihuo Learning Base',
+  '常年开放机构合作。拥有线下教学场地并计划引入 AIoT 实训体系的团队，提交申请后教研顾问将在 3 个工作日内与你沟通方案。':
+    'Institutional partnerships are open year-round. If you have physical facilities and want to bring in the AIoT curriculum, submit an application and our advisors will respond within 3 business days.',
+  了解先锋官: 'Explore Pioneers',
+  先锋官: 'Pioneer',
+  先锋官计划: 'Pioneer Program',
+  固定场地: 'Dedicated Space',
+  基地: 'Base',
+  基地计划: 'Base Program',
+  官方认证: 'Official Certification',
+  总部支持: 'HQ Support',
+  技术型: 'Technical Profile',
+  持续运营: 'Continuous Operation',
+  '曾与柴火基地车或 Seeed 硬件开展过工作坊合作':
+    'Prior workshop collaboration with Chaihuo Maker Truck or Seeed hardware',
+  查看分布图: 'View Global Map',
+  '科技馆、青少年活动中心、高校 Fab Lab 等公共空间':
+    'Public spaces such as science museums, youth centers, or university Fab Labs',
+  课程包: 'Curriculum Package',
+  链接型: 'Network Profile',
 };
 
 const zhToJa: Record<string, string> = {
-  查看分布图: '分布図を見る',
-  先锋官: 'パイオニア',
-  基地: '拠点',
-  先锋官计划: 'パイオニア計画',
-  基地计划: '拠点計画',
-  立即申请: '今すぐ申し込む',
-  先了解基地: 'まず拠点を知る',
-  先了解先锋官: 'まずパイオニアを知る',
-  技术型: 'テクニカル型',
-  '有技术背景，想用创客技能开展教育 / 服务':
-    '技術バックグラウンドを持ち、メーカースキルで教育 / サービスを展開したい方',
-  链接型: 'コネクター型',
-  '有教育 / 社区资源，想引入创客课程但不一定亲自教':
-    '教育 / コミュニティ資源を持ち、メーカーコースを導入したいが自ら教えるとは限らない方',
-  '每个基地必须先有先锋官；先锋官也可独立运营，不挂靠基地。':
-    '各拠点には必ず先にパイオニアが必要です。パイオニアは拠点に属さず独立運営も可能です。',
   'M0 教具 5 套': 'M0 キット 5 セット',
   '赠送，不回收': '贈呈・回収なし',
   'Codecraft 账号 5 个': 'Codecraft アカウント 5 つ',
   '365 天 / 5 席位': '365 日 / 5 席',
-  课程包: 'コースパック',
-  官方认证: '公式認証',
   '通过认证后登上 map.seeed.cc 全球分布图': '認証を通過すると map.seeed.cc の全世界分布図に掲載',
-  总部支持: '本部サポート',
   '社区经理对接、技术答疑、课程更新': 'コミュニティマネージャー対応、技術サポート、コース更新',
   'M1–M6 升级路径': 'M1–M6 アップグレードパス',
   '保证金租赁制，退出全退': '保証金レンタル制、退会時は全額返金',
-  开课收费: '講座開催で収益',
-  '用 M0 课程在当地开班，学费 100% 归你。课程包现成、教具到位，你只需招生和上课。':
-    'M0 コースで地元に講座を開き、受講料は 100% あなたのもの。コースパックもキットも準備済み、生徒募集と授業に集中できます。',
-  总部派单: '本部からの案件配信',
-  '柴火接到的培训 / 工作坊需求，派给当地先锋官执行。你出人出力，直接收服务费。':
-    '柴火に寄せられた研修 / ワークショップの依頼を地元のパイオニアに配信。人と労力を提供し、サービス料を直接受け取れます。',
-  教具销售佣金: 'キット販売コミッション',
-  '向当地学校 / 机构推荐柴火教具，成交后拿佣金。':
-    '地元の学校 / 機関に柴火キットを紹介し、成約後にコミッションを獲得。',
-  '向当地学校 / 机构推荐教具，成交后拿佣金。':
-    '地元の学校 / 機関にキットを紹介し、成約後にコミッションを獲得。',
-  体验活动: '体験イベント',
   '在你的城市 / 场地办一场 AI 编程体验': 'あなたの街 / 会場で AI プログラミング体験を開催',
-  培训认证: '研修・認証',
-  '参加总部讲师培训与认证（线上即可开始）':
-    '本部の講師研修と認証に参加（オンラインからでも開始可能）',
   '教具到位、正式开课': 'キット到着、正式開講',
-  '认证通过后发放教具与账号，开第一期收费课':
-    '認証通過後にキットとアカウントを発行し、第 1 期の有料講座を開講',
-  验证升级: '検証とアップグレード',
-  '跑通首期 → 追加支持 → 条件成熟可挂牌基地':
-    '第 1 期を完走 → 追加サポート → 条件が整えば拠点へ昇格',
-  认证流程: '認証フロー',
-  拿到教具: 'キットを受け取る',
-  完成一个项目: 'プロジェクトを 1 つ完成',
-  录一段讲课视频: '授業動画を 1 本録画',
-  总部审核: '本部審査',
-  发证: '認証発行',
-  '参照校园大使机制：每人定一个教具，做项目 + 录课，审核通过才发证。不是给了教具就是先锋官——要做出来、讲出来。':
-    'キャンパスアンバサダー制度と同じ：各自キットを 1 つ選び、プロジェクト + 録画、審査通過で認証発行。キットをもらっただけでパイオニアにはなれません——作り、教えることが必要です。',
   '第一批名额多少？': '第 1 期の募集人数は？',
-  '第一阶段 10 基地 + 20 先锋官，先到先评估。':
-    '第 1 期は拠点 10 か所 + パイオニア 20 名、先着順で評価します。',
   '没选上怎么办？': '選ばれなかったら？',
-  '第二期、第三期陆续开放；也可选择交保证金提前参与作为预备。第一批报名者优先纳入后续筛选。':
-    '第 2 期・第 3 期は順次開放。保証金を納めれば予備として先行参加も可能。第 1 期の申込者はその後の選考で優先されます。',
   '需要交钱吗？': '費用はかかりますか？',
-  'M0 教具赠送不回收；M1–M6 教具保证金租赁制，退出全退。':
-    'M0 キットは贈呈で回収なし。M1–M6 キットは保証金レンタル制で、退会時は全額返金。',
   '不懂编程能当先锋官吗？': 'プログラミングが分からなくてもパイオニアになれますか？',
-  '可以。Codecraft 沙盒零安装、浏览器即用，AI 帮你写代码。任何有上课经验的老师，跑一遍流程就能上课。':
-    'なれます。Codecraft サンドボックスはインストール不要、ブラウザですぐ使え、AI がコードを書きます。授業経験のある先生なら、流れを一度試せばそのまま授業ができます。',
   '先锋官和基地什么关系？': 'パイオニアと拠点の関係は？',
-  '每个基地必须先有先锋官。先锋官可以是基地员工，也可以是合作制。先锋官可挂靠多个基地，基地权益是基地内先锋官共用的。':
-    '各拠点には必ず先にパイオニアが必要です。パイオニアは拠点スタッフでも提携パートナーでも構いません。複数の拠点に所属でき、拠点の特典はその拠点内のパイオニア全員で共有されます。',
-  '第一阶段 10 基地 + 20 先锋官，先到先评估。填写申请表，社区经理将在 3 个工作日内联系你。':
-    '第 1 期は拠点 10 か所 + パイオニア 20 名、先着順で評価。申込フォームにご記入いただければ、コミュニティマネージャーが 3 営業日以内にご連絡します。',
-  联系我们: 'お問い合わせ',
   '准入标准（2 项核心）': '参入基準（コア 2 項目）',
-  两项均需满足: '両方の条件を満たす必要があります',
-  固定场地: '固定会場',
-  可承接活动与课程: 'イベントと講座を開催可能',
-  持续运营: '継続運営',
   '有专人负责、有运营计划': '専任担当者と運営計画があること',
-  加分项: '加点項目',
   '科技馆 / 高校 Fab Lab 等公共教育空间': '科学館 / 大学の Fab Lab などの公共教育スペース',
   '已有创客 / STEAM 教育基础': 'すでにメーカー / STEAM 教育の基盤がある',
-  基地权益: '拠点の特典',
-  权益: '特典',
   '先锋官（个人）': 'パイオニア（個人）',
-  '基地（空间）': '拠点（スペース）',
+  '基地（空间）': '拠点（施設）',
   'M0 教具': 'M0 キット',
   '5 套（赠送不回收）': '5 セット（贈呈・回収なし）',
   '10 套（基地内共用）': '10 セット（拠点内で共用）',
   'Codecraft 账号': 'Codecraft アカウント',
   '5 个（365 天 / 5 席位）': '5 つ（365 日 / 5 席）',
   '10 个': '10 つ',
-  登上地图: '地図に掲載',
   '牌匾 + 区域优先权': 'プレート + エリア優先権',
-  开课获利: '講座で収益',
   '学费 100% 归个人': '受講料は 100% 個人のもの',
   '同 + 派单服务费': '同 + 案件配信サービス料',
-  额外盈利线: '追加の収益ライン',
   '派单 / 销售佣金': '案件配信 / 販売コミッション',
   '佣金 / 派单 / 跨基地分佣 / 公益捐赠': 'コミッション / 案件配信 / 拠点間分与 / 公益寄付',
-  升级路径: 'アップグレードパス',
   '→ 基地': '→ 拠点',
   '→ 区域代理枢纽': '→ エリア代理ハブ',
   '基地内开班，学费归基地运营方。': '拠点内で講座を開き、受講料は拠点運営側の収益に。',
-  '柴火接到的当地培训 / 工作坊需求，派给基地执行，直接收服务费。':
-    '柴火に寄せられた地元の研修 / ワークショップ依頼を拠点が実施し、サービス料を直接受け取れます。',
-  跨基地分佣: '拠点間分与',
   '多基地协作项目，按贡献分佣。': '複数拠点の協働プロジェクトで、貢献度に応じて分与。',
   '另：公益捐赠渠道（适合公共教育空间）。': 'また：公益寄付のチャネル（公共教育スペースに最適）。',
-  基地与先锋官关系: '拠点とパイオニアの関係',
-  '没有先锋官，就没有基地；有了基地，先锋官才有自己的主场。':
-    'パイオニアがいなければ拠点はなく、拠点があってこそパイオニアは自分のホームを持てます。',
-  个人: '個人',
   '可挂靠多个基地，也可独立运营': '複数の拠点に所属可能、独立運営も可能',
-  空间: 'スペース',
   '权益基地内共用，可有多个先锋官': '特典は拠点内で共有、複数のパイオニアを置くことも可能',
-  '先锋官可以是基地员工，也可以是合作制':
-    'パイオニアは拠点スタッフでも提携パートナーでも構いません',
-  '一个先锋官可挂靠多个基地（如南山基地 + 龙岗基地）':
-    '1 人のパイオニアは複数の拠点に所属可能（例：南山拠点 + 龍崗拠点）',
-  '基地权益（教具、账号等）是基地内所有先锋官共用的':
-    '拠点の特典（キット、アカウントなど）は拠点内の全パイオニアで共有されます',
-  区域代理枢纽: 'エリア代理ハブ',
-  '条件成熟时，基地可升级为区域代理枢纽，负责区域内先锋官 / 基地的招募、培训与协调。':
-    '条件が整えば、拠点はエリア代理ハブにアップグレードでき、エリア内のパイオニア / 拠点の募集・研修・調整を担当します。',
   '基地必须有先锋官吗？': '拠点にはパイオニアが必須ですか？',
-  '是的。每个基地必须先有至少一名先锋官。先锋官可以是基地员工，也可以是外部合作。':
-    'はい。各拠点には必ず先に少なくとも 1 名のパイオニアが必要です。スタッフでも外部パートナーでも構いません。',
   '基地教具和先锋官教具是一回事吗？': '拠点のキットとパイオニアのキットは同じものですか？',
-  '基地获得 10 套教具（基地内共用），先锋官个人获得 5 套。如果先锋官挂靠基地，共用基地教具，不重复领取。':
-    '拠点はキット 10 セット（拠点内共用）、パイオニア個人は 5 セットを獲得。パイオニアが拠点に所属する場合は拠点のキットを共用し、重複して受け取りません。',
-  '已经有空间但没做过创客教育，能申请基地吗？':
-    'スペースはあるがメーカー教育の経験がない場合、拠点に応募できますか？',
-  '可以。核心标准是固定场地 + 持续运营意愿。柴火提供课程、教具和培训，帮你跑通第一期。':
-    'できます。コア基準は固定会場 + 継続運営の意志です。柴火がコース・キット・研修を提供し、第 1 期の完走をサポートします。',
-  '核心标准只有两条：固定场地 + 持续运营意愿。填写申请表，社区经理将在 3 个工作日内联系你。':
-    'コア基準はたった 2 つ：固定会場 + 継続運営の意志。申込フォームにご記入いただければ、コミュニティマネージャーが 3 営業日以内にご連絡します。',
-  招募点火人与基地: '点火人・拠点募集',
-  '先锋官是柴火招募的点火人：先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。有固定场地的，可以申请挂牌基地。':
-    'パイオニアは柴火が募集する点火人です。まず柴火の講座を学び、その後自分の都市で開講・普及を行い、メーカー教育の火をより多くの場所へ届けます。常設の会場をお持ちの場合は、認定拠点に申請できます。',
-  个人申请: '個人向け',
-  有固定场地的机构申请: '常設会場を持つ団体向け',
   '先锋官：柴火招募的点火人': 'パイオニア：柴火が募集する点火人',
-  '先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。柴火提供课程包、教具和认证；你负责招生、授课和本地推广。':
-    'まず柴火の講座を学び、その後自分の都市で開講・普及を行い、メーカー教育の火をより多くの場所へ届けます。柴火は講座パック、教具、認定を提供し、受講者募集・授業・地域での普及はパイオニアが担います。',
-  条件与条款: '条件と規約',
-  '先锋官是柴火认证的点火人：学会课程，在当地开课，并向学校和机构推广。':
-    'パイオニアは柴火が認定する点火人です。講座を習得し、地元で開講し、学校や団体に普及します。',
-  谁可以申请: '応募できる人',
-  两类满足其一即可申请: 'どちらか一方のタイプに該当すれば応募できます',
-  柴火提供什么: '柴火が提供するもの',
   'PPT + md 格式，可以自行修改和二次创作': 'PPT＋md形式。自由に改変・再構成できます',
-  收益来自哪里: '収益の出どころ',
-  从申请到开课: '応募から開講まで',
-  申请成为先锋官: 'パイオニアに応募する',
   '基地：柴火认证的本地授课点': '拠点：柴火が認定する地域の授業拠点',
-  '有固定场地、有专人持续运营的机构可以申请挂牌基地。柴火提供教具、课程和总部派单；基地在本地开课，并为先锋官提供授课场地。':
-    '常設の会場があり、専任の担当者が継続して運営できる団体は、認定拠点に申請できます。柴火は教具、講座、本部からの案件紹介を提供し、拠点は地域で開講するとともに、パイオニアに授業の場を提供します。',
-  条件与权益: '条件と特典',
-  '基地是柴火认证的、有固定场地的本地授课点。':
-    '拠点は、柴火が認定する常設会場を持つ地域の授業拠点です。',
-  '柴火基地车巡游到过、双方已有合作基础':
-    '柴火基地車キャラバンで訪問済み、相互の信頼関係が構築されている',
-  申请挂牌基地: '拠点に応募する',
+  教学合作网络与基地: '教育連携ネットワークと拠点',
+  '已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家）与首批 10 家签约交付基地。常年开放申请，支持个人讲师开课与机构空间挂牌。':
+    '79名のパイオニア（国内57名・19省、海外22名・15カ国）と第1期10拠点が稼働中。個人講師の開講や教育拠点の設立申請を通年で受け付けています。',
+  个人讲师申请: '個人講師の応募',
+  实体空间合作: '実体拠点の連携',
+  '先锋官：柴火教学点火人': 'パイオニア：柴火の教育イグナイター',
+  '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有 79 位先锋官（国内 57 位、海外 22 位）在 15 个国家持续开课。':
+    'パイオニアは各地で活動する教育パートナーです。カリキュラムを習得し、地元で授業やワークショップを展開します。柴火がキット、指導案、認定を提供し、通年で募集しています。現在79名（国内57名、海外22名）が15カ国で活動中です。',
+  申请成为先锋官: 'パイオニアに応募する',
+  了解基地合作: '拠点連携について知る',
+  准入条件与合作机制: '参加条件と連携の仕組み',
+  '先锋官是柴火认证的本地讲师与合作者：掌握课程体系，在当地开课交付，并对接学校与机构培训需求。':
+    'パイオニアは公認の地域講師・パートナーです。体系を習得して授業を提供し、教育機関のニーズに応えます。',
+  '申请条件（满足其一即可）': '応募要件（いずれか1つに該当）',
+  '有硬件或编程背景，希望使用柴火课程与套件开展教学服务':
+    'ハードウェアやプログラミングの知見を持ち、柴火の教材で教育サービスを展開したい方',
+  '拥有学校、机构或社区资源，希望引入创客课程并组织本地交付':
+    '学校や地域のネットワークを持ち、メイカー教育プログラムを導入・運営したい方',
+  两类满足其一即可申请: 'いずれか1つの条件を満たせば応募可能',
+  '每处基地须至少配备一名先锋官；先锋官也可独立运作，无需绑定实体基地。':
+    '各拠点には最低1名のパイオニアが必要です。パイオニア単独での独立運営も可能です。',
+  柴火提供的支持: '柴火からの提供サポート',
+  '通过认证即配发，支持常态开课': '認定完了後に提供、日常授業に活用可能',
+  '365 天有效，含 5 个独立教学席位': '365日間有効、5つの専用学習アカウント付き',
+  '含讲义与源码工程，支持根据本地学情二次开发与定制':
+    'スライドとソースコード一式、地域ニーズに合わせたカスタマイズが可能',
+  '通过评估后登载于 map.seeed.cc 全球创客网络': '審査通過後、map.seeed.cc のグローバルマップに掲載',
+  '社区经理直连、常态技术答疑与课程版本更新':
+    '専任コミュニティマネージャー、技術サポート、教材アップデートの提供',
+  '支持押金租赁高阶硬件，项目结束押金全额退还':
+    'デポジット制で上位機材をレンタル可能、終了後に全額返金',
+  收益渠道与分成: '収益モデルと分配',
+  开课学费收益: '開講による受講料',
+  '在本地使用 M0 课程自主开班，学费由开课方全额留存。套件与备课讲义现成，重点投入本地学员招募与课堂交付。':
+    'M0コースで自主開講し、受講料は100%主催者の収益に。教材一式が揃っているため生徒集客と指導に集中できます。',
+  总部委托派单: '本部からの案件紹介',
+  '柴火承接的异地企业实训与工作坊需求，就近委托当地先锋官交付，按场次结算讲师酬劳。':
+    '柴火が受託した企業研修やワークショップを地域のパイオニアに委託し、セッションごとに報酬を支払います。',
+  教具集采佣金: '教材販売コミッション',
+  '协助本地学校与培训机构批量采购柴火硬件套件，根据成交规模结算佣金。':
+    '地元の学校や教育機関への教材導入を仲介し、成約規模に応じた手数料を獲得できます。',
+  加入与开课流程: '参加から開講までのステップ',
+  体验与沟通: '体験とヒアリング',
+  '在本地组织一次小规模硬件体验，或与教研团队电话沟通':
+    '地元で小規模な体験会を実施するか、教育担当チームとオンライン相談を実施。',
+  教研与试讲: '研修と模擬授業',
+  '参加总部线上备课辅导，提交一段实操项目试讲视频':
+    'オンライン教材講習に参加し、自作プロジェクトの実演動画を提出。',
+  配发套件并开课: '教材受領と初回開講',
+  '通过认证后配发 5 套 M0 教具与账号，启动本地首期课程':
+    '認定完了後に5セットの教材とアカウントを受領し、最初のクラスを開講。',
+  进阶与基地升级: 'ステップアップと拠点化',
+  '常态开班后可申请高阶硬件，具备固定场地时可申请挂牌合作基地':
+    '定期開催の実績を重ねて上位教材へ進み、固定拠点を確保した段階で公式認定拠点へ移行。',
+  认证考核机制: '認定審査の基準',
+  申领教具: '教材受領',
+  完成实操项目: '作品制作',
+  录制试讲片段: '模擬授業録画',
+  总部教研评估: '本部審査',
+  发放认证证书: '認定証発行',
+  '认证关注真实的课堂交付与动手能力：申请人需基于指定硬件完成一个实物作品并录制试讲片段，经教研评估合格后正式发放认证。能做出实物、讲清原理，是先锋官的核心标准。':
+    '認定は実践力と指導力を重視します。所定の機材で作品を完成させ、模擬授業を提出して審査を受けます。作れること、そして教えられることが基準です。',
+  '申请有截止时间或名额限制吗？': '応募締め切りや人数の制限はありますか？',
+  '先锋官计划常年开放申请，不设名额上限。提交申请后，教研团队会在 3 个工作日内通过邮件与你联系沟通。':
+    'パイオニア計画は通年で募集しており、定員制限はありません。申請後3営業日以内に担当チームからメールでご連絡します。',
+  '目前先锋官网络的实际规模有多大？': '現在、パイオニアネットワークの規模はどのくらいですか？',
+  '截至目前，全球已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家），并有首批 10 家签约基地配备教具开课。':
+    '現在、世界中で79名（国内57名・19省、海外22名・15カ国）のパイオニアと、機材を配備済みの第1期10拠点が活動しています。',
+  '加入需要支付加盟费用吗？': '加盟金や初期費用はかかりますか？',
+  '不需要加盟费。M0 基础教具在认证通过后配发赠送；M1–M6 高阶模块教具实行押金租赁制，项目结课退还设备后押金全额退回。':
+    '加盟金は一切不要です。M0教材は認定完了後に無償提供されます。M1–M6の上位教材はデポジット制レンタルで、返却時に全額返金されます。',
+  '非计算机或工科专业可以申请吗？': '情報科学や工学の専門でなくても応募できますか？',
+  '可以。M0 课程使用图形化免配置沙盒环境，辅以 AI 助教指令，上手门槛低。有教学意愿或课堂组织经验的老师，演练 1–2 次即可熟练授课。':
+    '可能です。M0はブラウザ完結のGUI環境とAIプロンプトを活用するため敷居が低く、指導経験のある方なら1〜2回の演習で授業を行えます。',
+  '先锋官和基地之间如何协作？': 'パイオニアと拠点はどのように協力しますか？',
+  '每家基地须有至少一名签约先锋官负责实训。先锋官既可以是基地的专职教师，也可以是独立合作讲师，支持跨基地共享实训台架与设备资源。':
+    '各拠点には指導を担当する公認パイオニアが最低1名必要です。拠点の専任講師でも外部提携講師でもよく、機材や作業台を共有して活動します。',
+  申请成为柴火先锋官: '柴火パイオニアに申し込む',
+  '常年开放个人讲师与创客申请。提交你的背景与开课计划，教研团队将在 3 个工作日内与你沟通对接。':
+    '個人講師やメイカー向けに随時受付中。ご経歴と開講プランをお知らせいただければ、3営業日以内にご連絡いたします。',
+  提交申请: '申請を送信',
+  邮件咨询: 'メールで問い合わせ',
+  '基地：柴火认证的本地授课中心': '拠点：柴火認定の地域教育拠点',
+  '面向拥有固定教学场地与日常运营能力的机构。首批 10 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。':
+    '常設スペースと継続的な運営体制を持つ教育施設向け。すでに10拠点が締結し教材を導入済みで、新規拠点の申請を通年で受け付けています。柴火がキット、指導案、案件委託を提供し、拠点は日常授業の実施とパイオニアへの実習スペース提供を担います。',
+  申请设立基地: '拠点の設立を申請',
+  准入条件与权益: '認定条件と特典',
+  '基地是柴火官方认证的实体教学中心，具备承接实训与常态化开课的场地条件。':
+    '拠点は公式認定の実践教育センターであり、常設の実習と定期開講が可能な施設です。',
+  '准入标准（2 项基本要求）': '認定基準（2つの必須要件）',
+  '具备可容纳 15–30 人同时动手的实训或创客工坊':
+    '15〜30名が同時に手を動かせるメイカースペースまたは実習室',
+  '配备专职教学或运营对接人，有明确的开班排课规划':
+    '専任の教育または運営担当者を配置し、明確な開講スケジュールを持つこと',
+  两项均为基本要求: '2項目とも満たす必要があります',
+  优先合作条件: '優遇条件',
+  '具备创客、STEAM 或电子信息类社团与开课经验':
+    'メイカー、STEAM、電子工作関連のクラブや講座の実績があること',
+  基地与先锋官权益对照: '拠点とパイオニアの特典比較',
+  权益项目: '項目',
+  'M0 教学套件': 'M0 教材セット',
+  '5 套（通过认证后配发）': '5セット（認定完了時に配備）',
+  '10 套（工坊共用实训台架）': '10セット（拠点共有の実習機材）',
+  '5 个（365 天 / 5 独立席位）': '5アカウント（365日 / 5枠）',
+  '10 个独立教学席位': '10専用アカウント',
+  官方授牌: '公式認定',
+  登上全球创客网络地图: '世界マップに掲載',
+  '实体铜牌认证 + 本地业务优先权': '公式プレート授与 + 地域優先権',
+  学费收益: '受講料収益',
+  自主开班学费全额归个人: '自主開催の受講料は全額個人へ',
+  '学费归基地 + 派单讲师酬劳': '受講料は拠点へ + 派遣講師報酬',
+  多元收益渠道: '多様な収益ルート',
+  '总部派单 / 教具佣金': '本部案件委託 / 教材販売手数料',
+  '套件代销 / 区域派单 / 多基地协同收益': '教材再販 / 地域案件委託 / 拠点連携シェア',
+  发展方向: '発展ステップ',
+  '→ 筹建独立基地': '→ 独立拠点の設立',
+  '→ 区域教研与交付中心': '→ 地域研修・教育中核拠点',
+  基地收益来源: '拠点の収益モデル',
+  自主开课学费: '定期講座の受講料',
+  '在基地工坊常态开设课程与工作坊，学费收益全部由基地运营方支配。':
+    '拠点で定期的に講座やワークショップを開講し、受講料収入は全額拠点の運営資金となります。',
+  '柴火承接的企事业单位区域实训需求，优先委托当地基地承办，按场次结算服务费。':
+    '柴火が受注した地域内の企業・公共向け研修を優先委託し、実施回数に応じて費用を精算します。',
+  '为本地高校、中小学及研学机构提供教具配套采购，根据订单流水获得返佣。':
+    '地元の学校や教育団体への教材導入を一括仲介し、調達額に応じたキックバックを獲得できます。',
+  多基地业务协作: '複数拠点での共同受託',
+  '参与跨区域大型交付或承接异地集训，按照实际协作分工结算收益。':
+    '広域の大型受託や合宿型研修に共同で参画し、役割に応じた分配金を得られます。',
+  '另：支持对接地方公共科教专项与公益项目。':
+    '注：自治体の科学教育助成金やCSRプログラムとの連携も支援します。',
+  基地与先锋官的协作关系: '拠点とパイオニアの協力体制',
+  '先锋官提供教学实操能力，基地提供工坊硬件承载，两者互为支撑、协同运转。':
+    'パイオニアが指導力を担い、拠点がハードウェアと空間を提供することで相互に補完し合います。',
+  讲师与个人: '講師 / 個人',
+  实体工坊: '実体工房',
+  '可入驻签约多家基地，也可独立组织教学': '複数拠点と提携することも、単独で教えることも可能',
+  '硬件设备在工坊共用，可聚合多位先锋官共同开课':
+    '工房内の設備を共有し、複数のパイオニアが集まって授業を実施可能',
+  '先锋官既可以是基地的专职讲师，也可以作为外部特邀合作导师':
+    'パイオニアは拠点の専任講師でも、外部の客員メンターでも構いません。',
+  '一位先锋官可与同城多家基地签约合作，跨工坊开展教学':
+    '1名のパイオニアが同一市内の複数拠点と提携し、教室を巡回して教えることも可能です。',
+  基地配发的教具与云端账号供工坊内所有认证先锋官共同使用:
+    '拠点に支給された機材とアカウントは、工房内の全公認パイオニアで共同利用できます。',
+  基地发展路径: '拠点の発展ステップ',
+  个人创客: 'メイカー',
+  认证先锋官: '公認パイオニア',
+  合作基地: '提携拠点',
+  区域教研中心: '地域教育中核',
+  '运营良好、具备稳定开班能力的基地，可升级为区域教研中心，协同负责本区域内新先锋官的实操辅导与基地拓展。':
+    '安定して開講実績を上げている拠点は地域中核拠点へ昇格し、周辺地域での新規パイオニア育成や拠点立ち上げを支援します。',
+  '挂牌基地必须配备先锋官吗？': '拠点には必ずパイオニアが必要ですか？',
+  '是的。每家合作基地须至少有一位通过认证的先锋官担任教学督导，确保实训安全与教学质量。':
+    'はい。各提携拠点には、指導品質と実習安全を担保するため最低1名の公認パイオニアが必要です。',
+  '基地教具与先锋官个人教具如何管理？': '拠点の機材とパイオニア個人の機材はどう管理されますか？',
+  '基地签约后配发 10 套教学套件，留存基地共用；入驻先锋官此前持有的个人教具归个人所有，可一同充实课堂台架。':
+    '拠点締結時に支給される10セットは拠点の共用備品となります。パイオニア個人の機材はそのまま本人の所有で、教室の機材拡充に併用できます。',
+  '有成熟场地但未做过开源硬件培训，能否申请？':
+    '常設スペースはあるがハードウェア講座の経験がない場合でも応募できますか？',
+  '可以。只要场地具备基础动手条件且有团队持续运营，柴火提供完整的讲义备课包与师资辅导，协助跑通首期。':
+    '可能です。基礎的な工作スペースと専任スタッフがいれば、柴火が指導案一式とメンター研修を提供し、初回開講を伴走します。',
+  '基地申请需要缴纳加盟费吗？': '拠点の申請に加盟金やロイヤリティは発生しますか？',
+  '不收取加盟费。柴火负责提供首批教学套件、课程备课资料与派单机会，合作重点在于本地持续开课。':
+    '加盟金はかかりません。柴火が教材、指導案、案件紹介を提供し、地域で継続的に授業を行っていただくことが目的です。',
+  申请设立柴火教学基地: '柴火教育拠点の設立を申請',
+  '常年开放机构合作。拥有线下教学场地并计划引入 AIoT 实训体系的团队，提交申请后教研顾问将在 3 个工作日内与你沟通方案。':
+    '教育機関・施設との連携を通年で受付中。実習スペースを持ち AIoT カリキュラムの導入をお考えの場合、申請後3営業日以内にご提案をご案内します。',
+  了解先锋官: 'パイオニアについて知る',
+  先锋官: 'パイオニア',
+  先锋官计划: 'パイオニア計画',
+  固定场地: '常設スペース',
+  基地: '拠点',
+  基地计划: '拠点計画',
+  官方认证: '公式認定',
+  总部支持: '本部サポート',
+  技术型: '技術型',
+  持续运营: '継続的な運営',
+  '曾与柴火基地车或 Seeed 硬件开展过工作坊合作':
+    '柴火ベーストラックやSeeed機材を活用したワークショップの共催実績',
+  查看分布图: '分布マップを見る',
+  '科技馆、青少年活动中心、高校 Fab Lab 等公共空间':
+    '科学館、青少年センター、大学の Fab Lab 等の公共教育スペース',
+  课程包: '教材パッケージ',
+  链接型: 'コネクター型',
 };
 
 const zhToEs: Record<string, string> = {
-  查看分布图: 'Ver el Mapa',
-  先锋官: 'Pionero',
-  基地: 'Base',
-  先锋官计划: 'Programa de Pioneros',
-  基地计划: 'Programa de Bases',
-  立即申请: 'Solicitar ahora',
-  先了解基地: 'Conoce las Bases primero',
-  先了解先锋官: 'Conoce a los Pioneros primero',
-  技术型: 'Perfil técnico',
-  '有技术背景，想用创客技能开展教育 / 服务':
-    'Con perfil técnico: impartir educación / servicios con habilidades maker',
-  链接型: 'Perfil conector',
-  '有教育 / 社区资源，想引入创客课程但不一定亲自教':
-    'Con recursos educativos / comunitarios: traer cursos maker sin enseñar personalmente',
-  '每个基地必须先有先锋官；先锋官也可独立运营，不挂靠基地。':
-    'Toda Base debe tener primero un Pionero; el Pionero puede operar solo, sin adscribirse a una Base.',
   'M0 教具 5 套': '5 kits M0',
   '赠送，不回收': 'Regalo, no se recuperan',
   'Codecraft 账号 5 个': '5 cuentas de Codecraft',
   '365 天 / 5 席位': '365 días / 5 plazas',
-  课程包: 'Paquete de cursos',
-  官方认证: 'Certificación oficial',
-  '通过认证后登上 map.seeed.cc 全球分布图':
-    'Certifícate y aparece en el mapa global de map.seeed.cc',
-  总部支持: 'Apoyo de la sede',
-  '社区经理对接、技术答疑、课程更新':
-    'Community manager, soporte técnico y actualización de cursos',
   'M1–M6 升级路径': 'Ruta de ascenso M1–M6',
   '保证金租赁制，退出全退': 'Alquiler con depósito; reembolso total al salir',
-  开课收费: 'Ingresos por cursos',
-  '用 M0 课程在当地开班，学费 100% 归你。课程包现成、教具到位，你只需招生和上课。':
-    'Imparte cursos M0 en tu ciudad: el 100% de la matrícula es tuyo. Paquete listo y kits a mano; solo capta alumnos y enseña.',
-  总部派单: 'Pedidos de la sede',
-  '柴火接到的培训 / 工作坊需求，派给当地先锋官执行。你出人出力，直接收服务费。':
-    'Chaihuo deriva a los Pioneros locales las demandas de formación / talleres; tú pones el trabajo y cobras directo.',
-  教具销售佣金: 'Comisión por venta de kits',
-  '向当地学校 / 机构推荐柴火教具，成交后拿佣金。':
-    'Recomienda kits de Chaihuo a escuelas e instituciones locales y gana comisión por venta.',
-  '向当地学校 / 机构推荐教具，成交后拿佣金。':
-    'Recomienda kits a escuelas e instituciones locales y gana comisión por venta.',
-  体验活动: 'Evento de experiencia',
-  '在你的城市 / 场地办一场 AI 编程体验':
-    'Organiza una experiencia de programación con IA en tu ciudad / espacio',
-  培训认证: 'Formación y certificación',
-  '参加总部讲师培训与认证（线上即可开始）':
-    'Formación y certificación de la sede (puedes empezar en línea)',
   '教具到位、正式开课': 'Kits entregados, clases en marcha',
-  '认证通过后发放教具与账号，开第一期收费课':
-    'Tras certificarte recibes kits y cuentas: lanza tu primera clase de pago',
-  验证升级: 'Valida y asciende',
-  '跑通首期 → 追加支持 → 条件成熟可挂牌基地':
-    'Completa la primera cohorte → recibe más apoyo → califica como Base',
-  认证流程: 'Proceso de certificación',
-  拿到教具: 'Recibir los kits',
-  完成一个项目: 'Completar un proyecto',
-  录一段讲课视频: 'Grabar un video de clase',
-  总部审核: 'Revisión de la sede',
-  发证: 'Obtener la certificación',
-  '参照校园大使机制：每人定一个教具，做项目 + 录课，审核通过才发证。不是给了教具就是先锋官——要做出来、讲出来。':
-    'Como los embajadores de campus: cada uno elige un kit, hace un proyecto y graba una clase; la certificación llega tras la revisión. Los kits no te hacen Pionero: hay que crearlo y enseñarlo.',
   '第一批名额多少？': '¿Cuántas plazas hay en el primer grupo?',
-  '第一阶段 10 基地 + 20 先锋官，先到先评估。':
-    'La fase 1 incluye 10 bases + 20 pioneros; primero en llegar, primero en evaluarse.',
   '没选上怎么办？': '¿Y si no me seleccionan?',
-  '第二期、第三期陆续开放；也可选择交保证金提前参与作为预备。第一批报名者优先纳入后续筛选。':
-    'Las fases 2 y 3 se abrirán luego; también puedes adelantarte como reserva con un depósito. El primer grupo tiene prioridad en las siguientes rondas.',
   '需要交钱吗？': '¿Hay que pagar?',
-  'M0 教具赠送不回收；M1–M6 教具保证金租赁制，退出全退。':
-    'Los kits M0 son un regalo; los M1–M6 se alquilan con depósito, reembolsable al salir.',
   '不懂编程能当先锋官吗？': '¿Puedo ser Pionero sin saber programar?',
-  '可以。Codecraft 沙盒零安装、浏览器即用，AI 帮你写代码。任何有上课经验的老师，跑一遍流程就能上课。':
-    'Sí. El sandbox de Codecraft no requiere instalación: corre en el navegador y la IA escribe el código. Cualquier docente puede empezar a enseñar tras probar el flujo.',
   '先锋官和基地什么关系？': '¿Qué relación hay entre Pioneros y Bases?',
-  '每个基地必须先有先锋官。先锋官可以是基地员工，也可以是合作制。先锋官可挂靠多个基地，基地权益是基地内先锋官共用的。':
-    'Toda Base debe tener primero un Pionero: empleado o socio independiente, adscrito a varias Bases. Los beneficios de la Base se comparten entre sus Pioneros.',
-  '第一阶段 10 基地 + 20 先锋官，先到先评估。填写申请表，社区经理将在 3 个工作日内联系你。':
-    'La fase 1 cubre 10 bases + 20 pioneros: primero en llegar, primero en evaluarse. Completa la solicitud y un community manager te contactará en 3 días hábiles.',
-  联系我们: 'Contáctanos',
   '准入标准（2 项核心）': 'Criterios de admisión (2 requisitos clave)',
-  两项均需满足: 'Se deben cumplir ambos requisitos',
-  固定场地: 'Espacio fijo',
-  可承接活动与课程: 'Capaz de albergar eventos y cursos',
-  持续运营: 'Operación continua',
   '有专人负责、有运营计划': 'Una persona responsable y un plan de operación',
-  加分项: 'Puntos extra',
-  '科技馆 / 高校 Fab Lab 等公共教育空间':
-    'Espacios públicos como museos de ciencia / Fab Labs universitarios',
   '已有创客 / STEAM 教育基础': 'Con base previa en educación maker / STEAM',
-  基地权益: 'Beneficios de la Base',
-  权益: 'Beneficios',
-  '先锋官（个人）': 'Pionero (individual)',
-  '基地（空间）': 'Base (espacio)',
+  '先锋官（个人）': 'Pionero (Individual)',
+  '基地（空间）': 'Base (Espacio)',
   'M0 教具': 'Kits M0',
   '5 套（赠送不回收）': '5 (regalo, no se recuperan)',
   '10 套（基地内共用）': '10 (compartidos en la Base)',
   'Codecraft 账号': 'Cuentas de Codecraft',
   '5 个（365 天 / 5 席位）': '5 (365 días / 5 plazas)',
   '10 个': '10',
-  登上地图: 'En el mapa',
   '牌匾 + 区域优先权': 'Placa + prioridad regional',
-  开课获利: 'Ganancias por cursos',
   '学费 100% 归个人': 'El 100% de la matrícula para el individuo',
   '同 + 派单服务费': 'Igual + tarifa por pedidos',
-  额外盈利线: 'Líneas de ingreso extra',
   '派单 / 销售佣金': 'Pedidos / comisión por ventas',
   '佣金 / 派单 / 跨基地分佣 / 公益捐赠': 'Comisión / pedidos / reparto entre Bases / donaciones',
-  升级路径: 'Ruta de ascenso',
   '→ 基地': '→ Base',
   '→ 区域代理枢纽': '→ Hub regional',
   '基地内开班，学费归基地运营方。': 'Imparte clases en la Base: la matrícula es del operador.',
-  '柴火接到的当地培训 / 工作坊需求，派给基地执行，直接收服务费。':
-    'Chaihuo deriva a la Base las demandas locales de formación / talleres; ejecuta y cobra directo.',
-  跨基地分佣: 'Reparto entre Bases',
   '多基地协作项目，按贡献分佣。': 'En proyectos entre Bases, el reparto sigue la contribución.',
-  '另：公益捐赠渠道（适合公共教育空间）。':
-    'Además: canal de donaciones (ideal para espacios educativos públicos).',
-  基地与先锋官关系: 'Relación entre Bases y Pioneros',
-  '没有先锋官，就没有基地；有了基地，先锋官才有自己的主场。':
-    'Sin Pioneros no hay Base; con una, los Pioneros tienen su propio terreno.',
-  个人: 'Individual',
-  '可挂靠多个基地，也可独立运营':
-    'Puede adscribirse a varias Bases u operar de forma independiente',
-  空间: 'Espacio',
-  '权益基地内共用，可有多个先锋官':
-    'Beneficios compartidos en la Base; puede tener varios Pioneros',
   '先锋官可以是基地员工，也可以是合作制': 'El Pionero puede ser empleado de la Base o un socio',
-  '一个先锋官可挂靠多个基地（如南山基地 + 龙岗基地）':
-    'Un Pionero puede adscribirse a varias Bases (p. ej., la base de Nanshan + la de Longgang)',
-  '基地权益（教具、账号等）是基地内所有先锋官共用的':
-    'Los beneficios de la Base (kits, cuentas, etc.) son compartidos por todos sus Pioneros',
-  区域代理枢纽: 'Hub regional',
-  '条件成熟时，基地可升级为区域代理枢纽，负责区域内先锋官 / 基地的招募、培训与协调。':
-    'Cuando maduren las condiciones, la Base puede ascender a hub regional y coordinar el reclutamiento y la formación de Pioneros / Bases de su región.',
   '基地必须有先锋官吗？': '¿Una Base debe tener un Pionero?',
-  '是的。每个基地必须先有至少一名先锋官。先锋官可以是基地员工，也可以是外部合作。':
-    'Sí. Toda Base necesita al menos un Pionero: empleado o socio externo.',
   '基地教具和先锋官教具是一回事吗？': '¿Los kits de la Base y del Pionero son lo mismo?',
-  '基地获得 10 套教具（基地内共用），先锋官个人获得 5 套。如果先锋官挂靠基地，共用基地教具，不重复领取。':
-    'La Base recibe 10 kits (compartidos) y el Pionero 5. Si se adscribe a la Base, comparte sus kits en lugar de recibir otros.',
-  '已经有空间但没做过创客教育，能申请基地吗？':
-    '¿Puedo solicitar ser Base si tengo un espacio pero no experiencia en educación maker?',
-  '可以。核心标准是固定场地 + 持续运营意愿。柴火提供课程、教具和培训，帮你跑通第一期。':
-    'Sí. Clave: un espacio fijo + voluntad de operar a largo plazo. Chaihuo aporta cursos, kits y formación para tu primera cohorte.',
-  '核心标准只有两条：固定场地 + 持续运营意愿。填写申请表，社区经理将在 3 个工作日内联系你。':
-    'Solo dos criterios: espacio fijo + voluntad de operar a largo plazo. Completa la solicitud y un community manager te contactará en 3 días hábiles.',
-  招募点火人与基地: 'Buscamos Ignitores y Bases',
-  '先锋官是柴火招募的点火人：先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。有固定场地的，可以申请挂牌基地。':
-    'Los Pioneros son Ignitores que recluta Chaihuo: primero aprenden los cursos y después los imparten y promueven en su ciudad, llevando la llama de la educación maker a más lugares. Quien disponga de un espacio fijo puede solicitar ser Base certificada.',
-  个人申请: 'Para particulares',
-  有固定场地的机构申请: 'Para organizaciones con espacio fijo',
   '先锋官：柴火招募的点火人': 'Pioneros: los Ignitores que recluta Chaihuo',
-  '先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。柴火提供课程包、教具和认证；你负责招生、授课和本地推广。':
-    'Primero aprenda los cursos de Chaihuo y después impártalos y promuévalos en su ciudad, llevando la llama de la educación maker a más lugares. Chaihuo aporta el paquete de cursos, los kits didácticos y la certificación; usted se ocupa de la captación, la docencia y la promoción local.',
-  条件与条款: 'Requisitos y condiciones',
-  '先锋官是柴火认证的点火人：学会课程，在当地开课，并向学校和机构推广。':
-    'Un Pionero es un Ignitor certificado por Chaihuo: aprende los cursos, imparte clases en su zona y los promueve entre centros educativos y organizaciones.',
-  谁可以申请: 'Quién puede solicitarlo',
-  两类满足其一即可申请: 'Basta con cumplir uno de los dos perfiles para solicitarlo',
-  柴火提供什么: 'Qué aporta Chaihuo',
   'PPT + md 格式，可以自行修改和二次创作': 'Formato PPT + md; puede modificarlo y reelaborarlo',
-  收益来自哪里: 'De dónde vienen los ingresos',
-  从申请到开课: 'De la solicitud a la primera clase',
-  申请成为先锋官: 'Solicite ser Pionero',
   '基地：柴火认证的本地授课点': 'Bases: puntos de enseñanza locales certificados por Chaihuo',
-  '有固定场地、有专人持续运营的机构可以申请挂牌基地。柴火提供教具、课程和总部派单；基地在本地开课，并为先锋官提供授课场地。':
-    'Las organizaciones con un espacio fijo y una persona que lo gestione de forma continuada pueden solicitar ser Base certificada. Chaihuo aporta kits didácticos, cursos y encargos derivados desde la sede; la Base imparte clases en su zona y ofrece a los Pioneros un lugar donde enseñar.',
-  条件与权益: 'Requisitos y ventajas',
-  '基地是柴火认证的、有固定场地的本地授课点。':
-    'Una Base es un punto local de formación con espacio fijo, certificado por Chaihuo.',
-  '柴火基地车巡游到过、双方已有合作基础':
-    'Alcanzados por la gira del Vehículo Base Móvil Chaihuo, con confianza mutua establecida',
-  申请挂牌基地: 'Solicite ser Base',
+  教学合作网络与基地: 'Red de Enseñanza y Bases',
+  '已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家）与首批 10 家签约交付基地。常年开放申请，支持个人讲师开课与机构空间挂牌。':
+    'Más de 79 Pioneros (57 en 19 provincias de China, 22 en 15 países) y 10 bases equipadas. Solicitudes abiertas todo el año para instructores independientes y espacios educativos.',
+  个人讲师申请: 'Solicitud de instructor',
+  实体空间合作: 'Colaboración de espacio físico',
+  '先锋官：柴火教学点火人': 'Pioneros: Impulsores de la Educación Maker',
+  '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有 79 位先锋官（国内 57 位、海外 22 位）在 15 个国家持续开课。':
+    'Los Pioneros son socios docentes locales de Chaihuo: dominan los cursos para impartir clases y talleres en su comunidad. Chaihuo aporta kits, temarios y certificación con convocatoria continua. Actualmente hay 79 Pioneros (57 en China, 22 en el extranjero) activos en 15 países.',
+  申请成为先锋官: 'Solicitar ser Pionero',
+  了解基地合作: 'Conocer el Programa de Bases',
+  准入条件与合作机制: 'Criterios de Admisión y Modelo de Trabajo',
+  '先锋官是柴火认证的本地讲师与合作者：掌握课程体系，在当地开课交付，并对接学校与机构培训需求。':
+    'Los Pioneros son formadores certificados que imparten los cursos localmente y canalizan la demanda formativa de escuelas e instituciones.',
+  '申请条件（满足其一即可）': 'Requisitos de Admisión (Cumplir al menos uno)',
+  '有硬件或编程背景，希望使用柴火课程与套件开展教学服务':
+    'Con experiencia en hardware o programación, con interés en enseñar con los kits de Chaihuo',
+  '拥有学校、机构或社区资源，希望引入创客课程并组织本地交付':
+    'Con acceso a centros educativos o comunidades, buscando implementar cursos maker en su entorno',
+  两类满足其一即可申请: 'Cualquiera de los dos perfiles puede postular',
+  '每处基地须至少配备一名先锋官；先锋官也可独立运作，无需绑定实体基地。':
+    'Cada base debe contar con al menos un Pionero; los Pioneros también pueden operar de forma independiente.',
+  柴火提供的支持: 'Apoyo Proporcionado por Chaihuo',
+  '通过认证即配发，支持常态开课': 'Entregado tras la certificación para impartir clases habituales',
+  '365 天有效，含 5 个独立教学席位': 'Válido por 365 días, incluye 5 licencias independientes',
+  '含讲义与源码工程，支持根据本地学情二次开发与定制':
+    'Material didáctico y código fuente completo, adaptable a necesidades locales',
+  '通过评估后登载于 map.seeed.cc 全球创客网络':
+    'Publicado en el mapa global map.seeed.cc tras la evaluación',
+  '社区经理直连、常态技术答疑与课程版本更新':
+    'Contacto directo con gestores de comunidad, soporte técnico continuo y actualizaciones',
+  '支持押金租赁高阶硬件，项目结束押金全额退还':
+    'Alquiler de hardware avanzado mediante depósito reembolsable al finalizar',
+  收益渠道与分成: 'Fuentes de Ingresos y Distribución',
+  开课学费收益: 'Ingresos por Matrícula',
+  '在本地使用 M0 课程自主开班，学费由开课方全额留存。套件与备课讲义现成，重点投入本地学员招募与课堂交付。':
+    'Organiza cursos M0 en tu zona y conserva el 100% de las matrículas. Con el material listo, tu foco es la captación y la enseñanza.',
+  总部委托派单: 'Derivaciones de la Central',
+  '柴火承接的异地企业实训与工作坊需求，就近委托当地先锋官交付，按场次结算讲师酬劳。':
+    'Talleres y formaciones de empresas son derivados a los Pioneros locales, liquidando honorarios por jornada.',
+  教具集采佣金: 'Comisión por Venta de Kits',
+  '协助本地学校与培训机构批量采购柴火硬件套件，根据成交规模结算佣金。':
+    'Facilita la compra de kits para escuelas e instituciones locales y recibe comisiones por venta.',
+  加入与开课流程: 'Proceso de Incorporación y Lanzamiento',
+  体验与沟通: 'Experiencia y Contacto Inicial',
+  '在本地组织一次小规模硬件体验，或与教研团队电话沟通':
+    'Organiza una sesión práctica en tu entorno o mantén una llamada con el equipo docente.',
+  教研与试讲: 'Capacitación y Clase de Prueba',
+  '参加总部线上备课辅导，提交一段实操项目试讲视频':
+    'Participa en sesiones online de preparación y envía una breve clase grabada demostrando un proyecto.',
+  配发套件并开课: 'Recepción de Kits y Apertura',
+  '通过认证后配发 5 套 M0 教具与账号，启动本地首期课程':
+    'Obtén 5 kits M0 y licencias tras la certificación para inaugurar tu primer grupo.',
+  进阶与基地升级: 'Consolidación y Base Propia',
+  '常态开班后可申请高阶硬件，具备固定场地时可申请挂牌合作基地':
+    'Accede a módulos superiores con clases regulares; postula para fundar una Base cuando cuentes con local fijo.',
+  认证考核机制: 'Mecanismo de Certificación',
+  申领教具: 'Solicitar Kits',
+  完成实操项目: 'Completar Proyecto',
+  录制试讲片段: 'Grabar Demostración',
+  总部教研评估: 'Evaluación Central',
+  发放认证证书: 'Emisión de Certificado',
+  '认证关注真实的课堂交付与动手能力：申请人需基于指定硬件完成一个实物作品并录制试讲片段，经教研评估合格后正式发放认证。能做出实物、讲清原理，是先锋官的核心标准。':
+    'La certificación evalúa capacidad docente y técnica: los candidatos crean un proyecto físico y graban una clase de prueba. Construirlo y explicarlo con claridad es el requisito clave.',
+  '申请有截止时间或名额限制吗？': '¿Hay fechas límite o cupos máximos?',
+  '先锋官计划常年开放申请，不设名额上限。提交申请后，教研团队会在 3 个工作日内通过邮件与你联系沟通。':
+    'El programa está abierto todo el año sin límite de plazas. El equipo pedagógico se pondrá en contacto por correo en un plazo de 3 días laborables.',
+  '目前先锋官网络的实际规模有多大？': '¿Cuál es el alcance actual de la red de Pioneros?',
+  '截至目前，全球已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家），并有首批 10 家签约基地配备教具开课。':
+    'Hasta la fecha, hay 79 Pioneros en el mundo (57 en 19 provincias chinas, 22 en 15 países) y 10 bases firmadas y equipadas.',
+  '加入需要支付加盟费用吗？': '¿Se cobra alguna cuota de franquicia o adhesión?',
+  '不需要加盟费。M0 基础教具在认证通过后配发赠送；M1–M6 高阶模块教具实行押金租赁制，项目结课退还设备后押金全额退回。':
+    'No hay cuota de franquicia. Los kits M0 se entregan de forma gratuita tras certificarse; los módulos M1–M6 usan depósito reembolsable íntegro al devolver el equipo.',
+  '非计算机或工科专业可以申请吗？':
+    '¿Pueden postular personas sin formación técnica o informática?',
+  '可以。M0 课程使用图形化免配置沙盒环境，辅以 AI 助教指令，上手门槛低。有教学意愿或课堂组织经验的老师，演练 1–2 次即可熟练授课。':
+    'Sí. M0 funciona en navegador con entorno gráfico y apoyo de IA. Cualquier docente con experiencia en aula puede dominarlo en una o dos sesiones de práctica.',
+  '先锋官和基地之间如何协作？': '¿Cómo colaboran los Pioneros y las Bases?',
+  '每家基地须有至少一名签约先锋官负责实训。先锋官既可以是基地的专职教师，也可以是独立合作讲师，支持跨基地共享实训台架与设备资源。':
+    'Cada Base debe contar con al menos un Pionero certificado. Puede ser personal propio o un colaborador externo que comparta instalaciones y equipos.',
+  申请成为柴火先锋官: 'Solicitar ser Pionero de Chaihuo',
+  '常年开放个人讲师与创客申请。提交你的背景与开课计划，教研团队将在 3 个工作日内与你沟通对接。':
+    'Convocatoria continua para instructores y creadores. Envíanos tu perfil y plan formativo; te responderemos en 3 días laborables.',
+  提交申请: 'Enviar Solicitud',
+  邮件咨询: 'Consulta por Correo',
+  '基地：柴火认证的本地授课中心': 'Bases: Centros Locales de Formación Certificados',
+  '面向拥有固定教学场地与日常运营能力的机构。首批 10 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。':
+    'Dirigido a centros con espacio permanente y gestión activa. 10 bases ya han firmado y recibido material; nuevas solicitudes abiertas todo el año. Chaihuo provee kits, temarios y proyectos; las bases imparten cursos y albergan a los Pioneros en sus talleres.',
+  申请设立基地: 'Solicitar una Base',
+  准入条件与权益: 'Requisitos y Beneficios',
+  '基地是柴火官方认证的实体教学中心，具备承接实训与常态化开课的场地条件。':
+    'Una Base es un centro formativo certificado con instalaciones preparadas para talleres periódicos.',
+  '准入标准（2 项基本要求）': 'Criterios de Entrada (2 Requisitos Clave)',
+  '具备可容纳 15–30 人同时动手的实训或创客工坊':
+    'Espacio de taller con capacidad para 15–30 alumnos trabajando de forma práctica',
+  '配备专职教学或运营对接人，有明确的开班排课规划':
+    'Responsable docente u operativo designado con un calendario formativo definido',
+  两项均为基本要求: 'Ambos requisitos son indispensables',
+  优先合作条件: 'Condiciones Preferentes',
+  '具备创客、STEAM 或电子信息类社团与开课经验':
+    'Experiencia previa en clubes o talleres maker, STEAM o de electrónica',
+  基地与先锋官权益对照: 'Comparativa de Beneficios',
+  权益项目: 'Concepto',
+  'M0 教学套件': 'Kits Docentes M0',
+  '5 套（通过认证后配发）': '5 kits (entregados al certificarse)',
+  '10 套（工坊共用实训台架）': '10 kits (compartidos en el taller)',
+  '5 个（365 天 / 5 独立席位）': '5 licencias (365 días / 5 accesos)',
+  '10 个独立教学席位': '10 accesos dedicados',
+  官方授牌: 'Reconocimiento Oficial',
+  登上全球创客网络地图: 'Inclusión en el mapa global',
+  '实体铜牌认证 + 本地业务优先权': 'Placa oficial + prioridad regional',
+  学费收益: 'Rendimiento de Matrículas',
+  自主开班学费全额归个人: '100% de la matrícula para el formador',
+  '学费归基地 + 派单讲师酬劳': 'Matrícula para la base + remuneración por derivación',
+  多元收益渠道: 'Vías de Ingreso Adicionales',
+  '总部派单 / 教具佣金': 'Derivaciones / Comisiones de kits',
+  '套件代销 / 区域派单 / 多基地协同收益':
+    'Distribución de kits / derivaciones / ingresos compartidos',
+  发展方向: 'Vía de Crecimiento',
+  '→ 筹建独立基地': '→ Fundar una Base independiente',
+  '→ 区域教研与交付中心': '→ Centro Regional de Formación e Innovación',
+  基地收益来源: 'Vías de Financiación de la Base',
+  自主开课学费: 'Matrículas de Cursos Propios',
+  '在基地工坊常态开设课程与工作坊，学费收益全部由基地运营方支配。':
+    'Organiza cursos periódicos en tu taller; todos los ingresos por matrícula van directamente a la base.',
+  '柴火承接的企事业单位区域实训需求，优先委托当地基地承办，按场次结算服务费。':
+    'Las formaciones corporativas de la zona se asignan con prioridad a la base local, cobrando por sesión.',
+  '为本地高校、中小学及研学机构提供教具配套采购，根据订单流水获得返佣。':
+    'Canaliza la compra de material para centros educativos locales con comisiones por volumen.',
+  多基地业务协作: 'Cooperación entre Bases',
+  '参与跨区域大型交付或承接异地集训，按照实际协作分工结算收益。':
+    'Participa en grandes programas multisede o campamentos formativos, repartiendo beneficios según aportación.',
+  '另：支持对接地方公共科教专项与公益项目。':
+    'Nota: Compatible con convocatorias públicas de divulgación y proyectos comunitarios.',
+  基地与先锋官的协作关系: 'Relación entre Bases y Pioneros',
+  '先锋官提供教学实操能力，基地提供工坊硬件承载，两者互为支撑、协同运转。':
+    'Los Pioneros aportan la docencia práctica; las Bases facilitan el taller físico y su equipamiento.',
+  讲师与个人: 'Instructor / Individual',
+  实体工坊: 'Taller Físico',
+  '可入驻签约多家基地，也可独立组织教学':
+    'Puede afiliarse a varias bases o enseñar de manera autónoma',
+  '硬件设备在工坊共用，可聚合多位先锋官共同开课':
+    'Equipos compartidos en el taller, reuniendo a varios Pioneros para dar clase',
+  '先锋官既可以是基地的专职讲师，也可以作为外部特邀合作导师':
+    'El Pionero puede ser formador contratado de la base o mentor externo colaborador.',
+  '一位先锋官可与同城多家基地签约合作，跨工坊开展教学':
+    'Un mismo Pionero puede colaborar con varios centros de la ciudad e impartir talleres en diferentes sedes.',
+  基地配发的教具与云端账号供工坊内所有认证先锋官共同使用:
+    'Los kits y accesos asignados a la base son de uso común para todos los Pioneros acreditados.',
+  基地发展路径: 'Trayectoria de Desarrollo de la Base',
+  个人创客: 'Maker',
+  认证先锋官: 'Pionero Certificado',
+  合作基地: 'Base Asociada',
+  区域教研中心: 'Centro Regional',
+  '运营良好、具备稳定开班能力的基地，可升级为区域教研中心，协同负责本区域内新先锋官的实操辅导与基地拓展。':
+    'Las bases con actividad consolidada pueden ascender a Centros Regionales, coordinando la formación de nuevos Pioneros y la expansión local.',
+  '挂牌基地必须配备先锋官吗？': '¿Es obligatorio contar con un Pionero para constituir una Base?',
+  '是的。每家合作基地须至少有一位通过认证的先锋官担任教学督导，确保实训安全与教学质量。':
+    'Sí. Toda base debe tener al menos un Pionero acreditado como referente pedagógico para garantizar la calidad y seguridad.',
+  '基地教具与先锋官个人教具如何管理？':
+    '¿Cómo se gestiona el material de la base frente al equipo personal del Pionero?',
+  '基地签约后配发 10 套教学套件，留存基地共用；入驻先锋官此前持有的个人教具归个人所有，可一同充实课堂台架。':
+    'Los 10 kits entregados a la base pertenecen al centro; el material personal previo del Pionero sigue siendo suyo y puede sumarse al aula.',
+  '有成熟场地但未做过开源硬件培训，能否申请？':
+    '¿Puede solicitarlo un espacio sin experiencia previa en hardware abierto?',
+  '可以。只要场地具备基础动手条件且有团队持续运营，柴火提供完整的讲义备课包与师资辅导，协助跑通首期。':
+    'Sí. Con mesas de trabajo adecuadas y un equipo operativo, Chaihuo aporta temarios completos y asesoramiento para arrancar la primera edición.',
+  '基地申请需要缴纳加盟费吗？': '¿La solicitud de Base conlleva cánones o costes de franquicia?',
+  '不收取加盟费。柴火负责提供首批教学套件、课程备课资料与派单机会，合作重点在于本地持续开课。':
+    'No se cobra canon ni franquicia. Chaihuo entrega los kits iniciales, materiales didácticos y oportunidades de proyectos con el objetivo de fomentar la docencia local.',
+  申请设立柴火教学基地: 'Solicitar la Apertura de una Base Chaihuo',
+  '常年开放机构合作。拥有线下教学场地并计划引入 AIoT 实训体系的团队，提交申请后教研顾问将在 3 个工作日内与你沟通方案。':
+    'Colaboración abierta todo el año con centros. Si cuentas con aulas prácticas y deseas incorporar la formación en AIoT, envía tu solicitud y te contactaremos en 3 días laborables.',
+  了解先锋官: 'Conocer a los Pioneros',
+  先锋官: 'Pionero',
+  先锋官计划: 'Programa de Pioneros',
+  固定场地: 'Espacio Físico Dedicado',
+  基地: 'Base',
+  基地计划: 'Programa de Bases',
+  官方认证: 'Certificación Oficial',
+  总部支持: 'Apoyo de la Central',
+  技术型: 'Perfil Técnico',
+  持续运营: 'Gestión Continua',
+  '曾与柴火基地车或 Seeed 硬件开展过工作坊合作':
+    'Colaboración previa en talleres con Chaihuo Maker Truck o hardware de Seeed',
+  查看分布图: 'Ver Mapa Global',
+  '科技馆、青少年活动中心、高校 Fab Lab 等公共空间':
+    'Espacios públicos como museos de ciencia, centros juveniles o Fab Labs universitarios',
+  课程包: 'Paquete Didáctico',
+  链接型: 'Perfil Conector',
 };
 
 const zhToPt: Record<string, string> = {
-  查看分布图: 'Ver o Mapa',
-
-  先锋官: 'Pioneiro',
-  基地: 'Base',
-
-  先锋官计划: 'Programa de Pioneiros',
-  基地计划: 'Programa de Bases',
-  立即申请: 'Inscreva-se Agora',
-  先了解基地: 'Conheça as Bases Primeiro',
-  先了解先锋官: 'Conheça os Pioneiros Primeiro',
-
-  技术型: 'Técnico',
-  '有技术背景，想用创客技能开展教育 / 服务':
-    'Tem formação técnica e quer atuar com educação / serviços usando habilidades maker',
-  链接型: 'Conector',
-  '有教育 / 社区资源，想引入创客课程但不一定亲自教':
-    'Tem recursos de educação / comunidade e quer trazer cursos maker sem necessariamente dar aulas',
-  '每个基地必须先有先锋官；先锋官也可独立运营，不挂靠基地。':
-    'Toda base precisa primeiro ter um Pioneiro; um Pioneiro também pode operar de forma independente, sem vínculo com uma base.',
-
   'M0 教具 5 套': '5 kits M0',
   '赠送，不回收': 'Grátis, sem devolução',
   'Codecraft 账号 5 个': '5 contas Codecraft',
   '365 天 / 5 席位': '365 dias / 5 vagas',
-  课程包: 'Pacote de Cursos',
-  官方认证: 'Certificação Oficial',
-  '通过认证后登上 map.seeed.cc 全球分布图':
-    'Após a certificação, apareça no mapa global do map.seeed.cc',
-  总部支持: 'Suporte da Central',
-  '社区经理对接、技术答疑、课程更新':
-    'Gerente de comunidade, suporte técnico e atualizações de cursos',
   'M1–M6 升级路径': 'Trilha de upgrade M1–M6',
   '保证金租赁制，退出全退': 'Locação com caução, reembolso total ao sair',
-
-  开课收费: 'Mensalidades de Cursos',
-  '用 M0 课程在当地开班，学费 100% 归你。课程包现成、教具到位，你只需招生和上课。':
-    'Use os cursos M0 para abrir turmas locais — 100% da mensalidade é sua. O pacote de cursos está pronto e os kits entregues; você só cuida das matrículas e das aulas.',
-  总部派单: 'Demandas da Central',
-  '柴火接到的培训 / 工作坊需求，派给当地先锋官执行。你出人出力，直接收服务费。':
-    'A Chaihuo repassa as demandas locais de treinamento / workshops ao Pioneiro. Você fornece a equipe e o esforço e recebe o valor do serviço diretamente.',
-  教具销售佣金: 'Comissão de Vendas de Kits',
-  '向当地学校 / 机构推荐柴火教具，成交后拿佣金。':
-    'Indique kits Chaihuo a escolas / instituições locais e ganhe comissão em cada venda fechada.',
-  '向当地学校 / 机构推荐教具，成交后拿佣金。':
-    'Indique kits a escolas / instituições locais e ganhe comissão em cada venda fechada.',
-
-  体验活动: 'Evento de Experiência',
-  '在你的城市 / 场地办一场 AI 编程体验':
-    'Realize uma experiência de programação com IA na sua cidade / espaço',
-  培训认证: 'Treinamento e Certificação',
-  '参加总部讲师培训与认证（线上即可开始）':
-    'Participe do treinamento e da certificação de instrutores da central (pode começar online)',
   '教具到位、正式开课': 'Kits Entregues, Aulas Começam',
-  '认证通过后发放教具与账号，开第一期收费课':
-    'Após a certificação, kits e contas são liberados — lance sua primeira turma paga',
-  验证升级: 'Valide e Evolua',
-  '跑通首期 → 追加支持 → 条件成熟可挂牌基地':
-    'Conclua a primeira turma → ganhe mais apoio → torne-se uma base quando estiver pronto',
-
-  认证流程: 'Processo de Certificação',
-  拿到教具: 'Receber os Kits',
-  完成一个项目: 'Concluir um Projeto',
-  录一段讲课视频: 'Gravar um Vídeo de Aula',
-  总部审核: 'Revisão da Central',
-  发证: 'Receber a Certificação',
-  '参照校园大使机制：每人定一个教具，做项目 + 录课，审核通过才发证。不是给了教具就是先锋官——要做出来、讲出来。':
-    'Inspirado no mecanismo de embaixadores de campus: cada pessoa escolhe um kit, faz um projeto e grava uma aula — a certificação sai só após a revisão. Ter kits não torna você um Pioneiro — é preciso construir e ensinar.',
-
   '第一批名额多少？': 'Quantas vagas há na primeira turma?',
-  '第一阶段 10 基地 + 20 先锋官，先到先评估。':
-    'A fase 1 tem 10 bases + 20 pioneiros; quem chega primeiro é avaliado primeiro.',
   '没选上怎么办？': 'E se eu não for selecionado?',
-  '第二期、第三期陆续开放；也可选择交保证金提前参与作为预备。第一批报名者优先纳入后续筛选。':
-    'As fases 2 e 3 serão abertas em breve; você também pode participar antes como reserva com caução. Quem se inscreveu no primeiro lote tem prioridade nas seleções seguintes.',
   '需要交钱吗？': 'Preciso pagar alguma coisa?',
-  'M0 教具赠送不回收；M1–M6 教具保证金租赁制，退出全退。':
-    'Os kits M0 são grátis e não são devolvidos; os kits M1–M6 usam locação com caução, com reembolso total ao sair.',
   '不懂编程能当先锋官吗？': 'Posso ser Pioneiro sem saber programar?',
-  '可以。Codecraft 沙盒零安装、浏览器即用，AI 帮你写代码。任何有上课经验的老师，跑一遍流程就能上课。':
-    'Sim. O sandbox Codecraft não exige instalação — roda no navegador e a IA escreve o código. Qualquer professor com experiência em sala de aula segue o fluxo e começa a ensinar.',
   '先锋官和基地什么关系？': 'Qual é a relação entre Pioneiros e Bases?',
-  '每个基地必须先有先锋官。先锋官可以是基地员工，也可以是合作制。先锋官可挂靠多个基地，基地权益是基地内先锋官共用的。':
-    'Toda base precisa primeiro ter um Pioneiro. O Pioneiro pode ser funcionário da base ou parceiro e pode se vincular a várias bases. Os benefícios da base são compartilhados por todos os Pioneiros dela.',
-  '第一阶段 10 基地 + 20 先锋官，先到先评估。填写申请表，社区经理将在 3 个工作日内联系你。':
-    'A fase 1 tem 10 bases + 20 pioneiros — quem chega primeiro é avaliado primeiro. Preencha o formulário e um gerente de comunidade entrará em contato em até 3 dias úteis.',
-  联系我们: 'Fale Conosco',
-
   '准入标准（2 项核心）': 'Critérios de Admissão (2 Requisitos Essenciais)',
-  两项均需满足: 'Os dois requisitos devem ser atendidos',
-  固定场地: 'Espaço Fixo',
-  可承接活动与课程: 'Pode sediar eventos e cursos',
-  持续运营: 'Operação Contínua',
   '有专人负责、有运营计划': 'Com uma pessoa responsável e um plano de operação',
-  加分项: 'Pontos Extras',
-  '科技馆 / 高校 Fab Lab 等公共教育空间':
-    'Espaços públicos de educação, como museus de ciência / Fab Labs universitários',
   '已有创客 / STEAM 教育基础': 'Com base em educação maker / STEAM',
-
-  基地权益: 'Benefícios da Base',
-  权益: 'Benefício',
-  '先锋官（个人）': 'Pioneiro (Pessoa)',
+  '先锋官（个人）': 'Pioneiro (Individual)',
   '基地（空间）': 'Base (Espaço)',
   'M0 教具': 'Kits M0',
   '5 套（赠送不回收）': '5 (grátis, sem devolução)',
@@ -669,87 +723,208 @@ const zhToPt: Record<string, string> = {
   'Codecraft 账号': 'Contas Codecraft',
   '5 个（365 天 / 5 席位）': '5 (365 dias / 5 vagas)',
   '10 个': '10',
-  登上地图: 'No mapa',
   '牌匾 + 区域优先权': 'Placa + prioridade regional',
-  开课获利: 'Lucro com Cursos',
   '学费 100% 归个人': '100% da mensalidade para a pessoa',
   '同 + 派单服务费': 'O mesmo + taxas de demandas',
-  额外盈利线: 'Linhas Extras de Receita',
   '派单 / 销售佣金': 'Demandas / comissão de vendas',
-  '佣金 / 派单 / 跨基地分佣 / 公益捐赠':
-    'Comissão / demandas / divisão entre bases / doações sociais',
-  升级路径: 'Trilha de Upgrade',
   '→ 基地': '→ Base',
   '→ 区域代理枢纽': '→ Hub Regional',
-
-  '基地内开班，学费归基地运营方。':
-    'Abra turmas na base — a mensalidade vai para quem opera a base.',
-  '柴火接到的当地培训 / 工作坊需求，派给基地执行，直接收服务费。':
-    'A Chaihuo repassa as demandas locais de treinamento / workshops para a sua base — você executa e recebe o valor do serviço diretamente.',
-  跨基地分佣: 'Divisão Entre Bases',
-  '多基地协作项目，按贡献分佣。':
-    'Projetos colaborativos entre várias bases dividem os ganhos pela contribuição de cada uma.',
-  '另：公益捐赠渠道（适合公共教育空间）。':
-    'Além disso: um canal de doações sociais (ideal para espaços públicos de educação).',
-
-  基地与先锋官关系: 'Como Bases e Pioneiros Se Relacionam',
-  '没有先锋官，就没有基地；有了基地，先锋官才有自己的主场。':
-    'Sem Pioneiros, não há base; com uma base, os Pioneiros têm seu próprio território.',
-  个人: 'Pessoa',
   '可挂靠多个基地，也可独立运营': 'Pode se vincular a várias bases ou operar de forma independente',
-  空间: 'Espaço',
   '权益基地内共用，可有多个先锋官': 'Benefícios compartilhados na base; pode ter vários Pioneiros',
-  '先锋官可以是基地员工，也可以是合作制':
-    'Um Pioneiro pode ser funcionário da base ou parceiro independente',
-  '一个先锋官可挂靠多个基地（如南山基地 + 龙岗基地）':
-    'Um Pioneiro pode se vincular a várias bases (ex.: base de Nanshan + base de Longgang)',
-  '基地权益（教具、账号等）是基地内所有先锋官共用的':
-    'Os benefícios da base (kits, contas etc.) são compartilhados por todos os Pioneiros da base',
-
-  区域代理枢纽: 'Hub Regional',
-  '条件成熟时，基地可升级为区域代理枢纽，负责区域内先锋官 / 基地的招募、培训与协调。':
-    'Quando as condições amadurecerem, a base pode evoluir para um hub regional que recruta, treina e coordena Pioneiros / bases na região.',
-
   '基地必须有先锋官吗？': 'Uma base precisa ter um Pioneiro?',
-  '是的。每个基地必须先有至少一名先锋官。先锋官可以是基地员工，也可以是外部合作。':
-    'Sim. Toda base precisa primeiro ter pelo menos um Pioneiro — pode ser um funcionário ou um parceiro externo.',
   '基地教具和先锋官教具是一回事吗？': 'Os kits da base e os kits do Pioneiro são os mesmos?',
-  '基地获得 10 套教具（基地内共用），先锋官个人获得 5 套。如果先锋官挂靠基地，共用基地教具，不重复领取。':
-    'A base recebe 10 kits (compartilhados na base) e o Pioneiro recebe 5. Se o Pioneiro se vincula a uma base, ele usa os kits da base em vez de receber outros.',
-  '已经有空间但没做过创客教育，能申请基地吗？':
-    'Já tenho um espaço, mas nunca fiz educação maker. Posso me candidatar a uma base?',
-  '可以。核心标准是固定场地 + 持续运营意愿。柴火提供课程、教具和培训，帮你跑通第一期。':
-    'Sim. Os critérios essenciais são espaço fixo + vontade de operação contínua. A Chaihuo fornece cursos, kits e treinamento para você concluir sua primeira turma.',
-
-  '核心标准只有两条：固定场地 + 持续运营意愿。填写申请表，社区经理将在 3 个工作日内联系你。':
-    'Apenas dois critérios essenciais: espaço fixo + vontade de operação contínua. Preencha o formulário e um gerente de comunidade entrará em contato em até 3 dias úteis.',
-  招募点火人与基地: 'Buscamos Ignitores e Bases',
-  '先锋官是柴火招募的点火人：先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。有固定场地的，可以申请挂牌基地。':
-    'Os Pioneiros são Ignitores recrutados pela Chaihuo: primeiro aprendem os cursos e depois os ministram e divulgam na própria cidade, levando a chama da educação maker a mais lugares. Quem tem um espaço fixo pode se candidatar a Base certificada.',
-  个人申请: 'Para pessoas físicas',
-  有固定场地的机构申请: 'Para organizações com espaço fixo',
   '先锋官：柴火招募的点火人': 'Pioneiros: os Ignitores que a Chaihuo recruta',
-  '先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。柴火提供课程包、教具和认证；你负责招生、授课和本地推广。':
-    'Primeiro aprenda os cursos da Chaihuo e depois ministre e divulgue-os na sua cidade, levando a chama da educação maker a mais lugares. A Chaihuo fornece o pacote de cursos, os kits didáticos e a certificação; você cuida das matrículas, das aulas e da divulgação local.',
-  条件与条款: 'Requisitos e condições',
-  '先锋官是柴火认证的点火人：学会课程，在当地开课，并向学校和机构推广。':
-    'Um Pioneiro é um Ignitor certificado pela Chaihuo: aprende os cursos, ministra aulas na sua região e os divulga a escolas e organizações.',
-  谁可以申请: 'Quem pode se candidatar',
-  两类满足其一即可申请: 'Basta atender a um dos dois perfis para se candidatar',
-  柴火提供什么: 'O que a Chaihuo fornece',
   'PPT + md 格式，可以自行修改和二次创作': 'Formato PPT + md; você pode modificar e reelaborar',
-  收益来自哪里: 'De onde vem a receita',
-  从申请到开课: 'Da candidatura à primeira aula',
-  申请成为先锋官: 'Candidate-se a Pioneiro',
   '基地：柴火认证的本地授课点': 'Bases: pontos de ensino locais certificados pela Chaihuo',
-  '有固定场地、有专人持续运营的机构可以申请挂牌基地。柴火提供教具、课程和总部派单；基地在本地开课，并为先锋官提供授课场地。':
-    'Organizações com espaço fixo e alguém para operá-lo de forma contínua podem se candidatar a Base certificada. A Chaihuo fornece kits didáticos, cursos e demandas encaminhadas pela sede; a Base ministra aulas na região e oferece aos Pioneiros um lugar para ensinar.',
-  条件与权益: 'Requisitos e benefícios',
-  '基地是柴火认证的、有固定场地的本地授课点。':
-    'Uma Base é um ponto local de ensino com espaço fixo, certificado pela Chaihuo.',
-  '柴火基地车巡游到过、双方已有合作基础':
-    'Já alcançado pela turnê do Veículo Base Móvel Chaihuo, com confiança mútua estabelecida',
-  申请挂牌基地: 'Candidate-se a Base',
+  教学合作网络与基地: 'Rede de Ensino e Bases',
+  '已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家）与首批 10 家签约交付基地。常年开放申请，支持个人讲师开课与机构空间挂牌。':
+    'Mais de 79 Pioneiros (57 em 19 províncias na China, 22 em 15 países) e 10 bases já equipadas. Inscrições abertas o ano todo para instrutores e espaços educacionais.',
+  个人讲师申请: 'Inscrição para instrutores',
+  实体空间合作: 'Parceria para espaços físicos',
+  '先锋官：柴火教学点火人': 'Pioneiros: Multiplicadores da Educação Maker',
+  '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有 79 位先锋官（国内 57 位、海外 22 位）在 15 个国家持续开课。':
+    'Os Pioneiros são parceiros locais de ensino da Chaihuo: dominam o currículo para ministrar aulas e oficinas em suas regiões. A Chaihuo fornece kits, planos de aula e certificação contínua. Atualmente, 79 Pioneiros (57 na China, 22 no exterior) atuam em 15 países.',
+  申请成为先锋官: 'Inscreva-se como Pioneiro',
+  了解基地合作: 'Conhecer o Programa de Bases',
+  准入条件与合作机制: 'Critérios de Admissão e Modelo de Parceria',
+  '先锋官是柴火认证的本地讲师与合作者：掌握课程体系，在当地开课交付，并对接学校与机构培训需求。':
+    'Os Pioneiros são instrutores certificados que ministram o currículo localmente e atendem à demanda de instituições de ensino.',
+  '申请条件（满足其一即可）': 'Requisitos de Admissão (Cumprir pelo menos um)',
+  '有硬件或编程背景，希望使用柴火课程与套件开展教学服务':
+    'Com experiência em hardware ou programação, com interesse em ensinar usando os kits da Chaihuo',
+  '拥有学校、机构或社区资源，希望引入创客课程并组织本地交付':
+    'Com acesso a redes educacionais ou comunitárias, buscando implementar cursos maker localmente',
+  两类满足其一即可申请: 'Qualquer um dos perfis pode se inscrever',
+  '每处基地须至少配备一名先锋官；先锋官也可独立运作，无需绑定实体基地。':
+    'Cada base deve contar com ao menos um Pioneiro; os Pioneiros também podem atuar de forma independente.',
+  柴火提供的支持: 'Suporte Oferecido pela Chaihuo',
+  '通过认证即配发，支持常态开课': 'Entregue após a certificação para apoiar aulas contínuas',
+  '365 天有效，含 5 个独立教学席位': 'Válido por 365 dias, inclui 5 licenças dedicadas',
+  '含讲义与源码工程，支持根据本地学情二次开发与定制':
+    'Material didático e código-fonte completos, adaptáveis às necessidades locais',
+  '通过评估后登载于 map.seeed.cc 全球创客网络':
+    'Listado no mapa global map.seeed.cc após a avaliação',
+  '社区经理直连、常态技术答疑与课程版本更新':
+    'Contato direto com gestor comunitário, suporte técnico contínuo e atualizações de conteúdo',
+  '支持押金租赁高阶硬件，项目结束押金全额退还':
+    'Locação de hardware avançado mediante depósito, reembolsado integralmente ao final',
+  收益渠道与分成: 'Fontes de Renda e Repasse',
+  开课学费收益: 'Mensalidades e Matrículas',
+  '在本地使用 M0 课程自主开班，学费由开课方全额留存。套件与备课讲义现成，重点投入本地学员招募与课堂交付。':
+    'Ministre cursos M0 localmente e retenha 100% do valor das matrículas. Com kits e apostilas prontos, foque em captação e ensino.',
+  总部委托派单: 'Encaminhamentos da Matriz',
+  '柴火承接的异地企业实训与工作坊需求，就近委托当地先锋官交付，按场次结算讲师酬劳。':
+    'Treinamentos corporativos e oficinas são repassados aos Pioneiros da região, com remuneração por sessão.',
+  教具集采佣金: 'Comissão por Venda de Kits',
+  '协助本地学校与培训机构批量采购柴火硬件套件，根据成交规模结算佣金。':
+    'Intermedeie a aquisição de kits para escolas e instituições locais e receba comissões por venda.',
+  加入与开课流程: 'Passo a Passo de Entrada e Lançamento',
+  体验与沟通: 'Experiência e Alinhamento',
+  '在本地组织一次小规模硬件体验，或与教研团队电话沟通':
+    'Realize uma sessão prática local ou agende uma reunião com a equipe pedagógica.',
+  教研与试讲: 'Capacitação e Demonstração',
+  '参加总部线上备课辅导，提交一段实操项目试讲视频':
+    'Participe de sessões online de preparação e envie um vídeo demonstrativo de um projeto prático.',
+  配发套件并开课: 'Recebimento de Kits e Abertura',
+  '通过认证后配发 5 套 M0 教具与账号，启动本地首期课程':
+    'Receba 5 kits M0 e licenças após a certificação para dar início à sua primeira turma.',
+  进阶与基地升级: 'Expansão e Criação de Base',
+  '常态开班后可申请高阶硬件，具备固定场地时可申请挂牌合作基地':
+    'Acesse módulos avançados conforme as aulas se tornam regulares; estabeleça uma Base quando possuir espaço físico fixo.',
+  认证考核机制: 'Processo de Certificação',
+  申领教具: 'Receber Kits',
+  完成实操项目: 'Criar Projeto',
+  录制试讲片段: 'Gravar Demonstração',
+  总部教研评估: 'Avaliação da Matriz',
+  发放认证证书: 'Emissão de Certificado',
+  '认证关注真实的课堂交付与动手能力：申请人需基于指定硬件完成一个实物作品并录制试讲片段，经教研评估合格后正式发放认证。能做出实物、讲清原理，是先锋官的核心标准。':
+    'A certificação avalia a didática e a prática técnica: os candidatos constroem um projeto real e gravam uma aula demonstrativa. Construir e ensinar com clareza são os critérios essenciais.',
+  '申请有截止时间或名额限制吗？': 'Existe prazo de inscrição ou limite de vagas?',
+  '先锋官计划常年开放申请，不设名额上限。提交申请后，教研团队会在 3 个工作日内通过邮件与你联系沟通。':
+    'O programa tem inscrições abertas o ano todo, sem limite de vagas. A equipe pedagógica responderá por e-mail em até 3 dias úteis.',
+  '目前先锋官网络的实际规模有多大？': 'Qual é a abrangência atual da rede de Pioneiros?',
+  '截至目前，全球已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家），并有首批 10 家签约基地配备教具开课。':
+    'Até o momento, há 79 Pioneiros no mundo (57 em 19 províncias na China, 22 em 15 países) e 10 bases já firmadas e equipadas.',
+  '加入需要支付加盟费用吗？': 'É cobrada alguma taxa de franquia ou adesão?',
+  '不需要加盟费。M0 基础教具在认证通过后配发赠送；M1–M6 高阶模块教具实行押金租赁制，项目结课退还设备后押金全额退回。':
+    'Não há taxa de franquia. Os kits M0 são fornecidos gratuitamente após a certificação; os módulos M1–M6 operam com depósito totalmente reembolsável na devolução.',
+  '非计算机或工科专业可以申请吗？':
+    'Quem não tem formação em computação ou engenharia pode se candidatar?',
+  '可以。M0 课程使用图形化免配置沙盒环境，辅以 AI 助教指令，上手门槛低。有教学意愿或课堂组织经验的老师，演练 1–2 次即可熟练授课。':
+    'Sim. O M0 roda diretamente no navegador em ambiente visual com apoio de IA. Qualquer professor experiente consegue dominá-lo com apenas 1 ou 2 ensaios.',
+  '先锋官和基地之间如何协作？': 'Como funciona a colaboração entre Pioneiros e Bases?',
+  '每家基地须有至少一名签约先锋官负责实训。先锋官既可以是基地的专职教师，也可以是独立合作讲师，支持跨基地共享实训台架与设备资源。':
+    'Cada Base deve ter pelo menos um Pioneiro certificado. Ele pode ser funcionário da instituição ou parceiro externo, compartilhando as bancadas de laboratório.',
+  申请成为柴火先锋官: 'Candidate-se a Pioneiro da Chaihuo',
+  '常年开放个人讲师与创客申请。提交你的背景与开课计划，教研团队将在 3 个工作日内与你沟通对接。':
+    'Inscrições abertas o ano todo para instrutores e makers. Envie seu histórico e plano de aulas; entraremos em contato em até 3 dias úteis.',
+  提交申请: 'Enviar Inscrição',
+  邮件咨询: 'Contato por E-mail',
+  '基地：柴火认证的本地授课中心': 'Bases: Centros Locais de Ensino Certificados',
+  '面向拥有固定教学场地与日常运营能力的机构。首批 10 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。':
+    'Para instituições com espaço fixo e operação ativa. 10 bases já assinaram e receberam materiais; novas inscrições abertas o ano todo. A Chaihuo fornece kits, apostilas e projetos; as bases realizam aulas regulares e acolhem Pioneiros em suas oficinas.',
+  申请设立基地: 'Solicitar uma Base',
+  准入条件与权益: 'Requisitos e Benefícios',
+  '基地是柴火官方认证的实体教学中心，具备承接实训与常态化开课的场地条件。':
+    'Uma Base é um centro de ensino certificado com infraestrutura física para cursos contínuos.',
+  '准入标准（2 项基本要求）': 'Critérios de Entrada (2 Requisitos Essenciais)',
+  '具备可容纳 15–30 人同时动手的实训或创客工坊':
+    'Espaço de oficina com capacidade para 15–30 alunos realizando práticas simultâneas',
+  '配备专职教学或运营对接人，有明确的开班排课规划':
+    'Responsável pedagógico ou operacional com plano de aulas e turmas definido',
+  两项均为基本要求: 'Ambos os requisitos são obrigatórios',
+  优先合作条件: 'Condições Preferenciais',
+  '具备创客、STEAM 或电子信息类社团与开课经验':
+    'Experiência prévia em oficinas maker, STEAM ou eletrônica aplicada',
+  基地与先锋官权益对照: 'Comparativo de Benefícios',
+  权益项目: 'Item',
+  'M0 教学套件': 'Kits Didáticos M0',
+  '5 套（通过认证后配发）': '5 kits (concedidos após certificação)',
+  '10 套（工坊共用实训台架）': '10 kits (compartilhados na bancada)',
+  '5 个（365 天 / 5 独立席位）': '5 contas (365 dias / 5 acessos)',
+  '10 个独立教学席位': '10 licenças dedicadas',
+  官方授牌: 'Reconhecimento Oficial',
+  登上全球创客网络地图: 'Inclusão no mapa global',
+  '实体铜牌认证 + 本地业务优先权': 'Placa física oficial + prioridade regional',
+  学费收益: 'Receita de Matrículas',
+  自主开班学费全额归个人: '100% das matrículas para o instrutor',
+  '学费归基地 + 派单讲师酬劳': 'Matrículas para a base + honorários de repasse',
+  多元收益渠道: 'Fontes Diversificadas de Renda',
+  '总部派单 / 教具佣金': 'Repasses da Matriz / Comissões de kits',
+  '套件代销 / 区域派单 / 多基地协同收益':
+    'Revenda de kits / repasses regionais / receitas compartilhadas',
+  发展方向: 'Trajetória de Crescimento',
+  '→ 筹建独立基地': '→ Criar uma Base independente',
+  '→ 区域教研与交付中心': '→ Centro Regional de Ensino e Formação',
+  基地收益来源: 'Fontes de Receita da Base',
+  自主开课学费: 'Matrículas de Cursos Próprios',
+  '在基地工坊常态开设课程与工作坊，学费收益全部由基地运营方支配。':
+    'Realize cursos regulares na oficina; todas as mensalidades ficam integralmente com a gestão da base.',
+  '柴火承接的企事业单位区域实训需求，优先委托当地基地承办，按场次结算服务费。':
+    'Demandas corporativas na região são repassadas prioritariamente à base local, remuneradas por evento.',
+  '为本地高校、中小学及研学机构提供教具配套采购，根据订单流水获得返佣。':
+    'Atenda a demanda de compras de kits para escolas e faculdades locais com comissão por volume.',
+  多基地业务协作: 'Cooperação entre Bases',
+  '参与跨区域大型交付或承接异地集训，按照实际协作分工结算收益。':
+    'Participe de grandes entregas regionais ou acampamentos de formação, repartindo resultados de acordo com a atuação.',
+  '另：支持对接地方公共科教专项与公益项目。':
+    'Nota: Compatível com editais de fomento à educação e projetos sociais.',
+  基地与先锋官的协作关系: 'Relação entre Bases e Pioneiros',
+  '先锋官提供教学实操能力，基地提供工坊硬件承载，两者互为支撑、协同运转。':
+    'Os Pioneiros trazem a capacidade didática; as Bases oferecem o laboratório físico e os equipamentos.',
+  讲师与个人: 'Instrutor / Pessoa Física',
+  实体工坊: 'Espaço Físico',
+  '可入驻签约多家基地，也可独立组织教学':
+    'Pode vincular-se a várias bases ou lecionar de forma autônoma',
+  '硬件设备在工坊共用，可聚合多位先锋官共同开课':
+    'Equipamentos compartilhados na oficina, reunindo múltiplos Pioneiros para lecionar',
+  '先锋官既可以是基地的专职讲师，也可以作为外部特邀合作导师':
+    'O Pioneiro pode ser instrutor contratado da base ou mentor parceiro convidado.',
+  '一位先锋官可与同城多家基地签约合作，跨工坊开展教学':
+    'Um mesmo Pioneiro pode atuar em várias bases da cidade, ministrando aulas em diferentes locais.',
+  基地配发的教具与云端账号供工坊内所有认证先锋官共同使用:
+    'Os kits e acessos atribuídos à base são compartilhados por todos os Pioneiros certificados do local.',
+  基地发展路径: 'Plano de Evolução da Base',
+  个人创客: 'Maker',
+  认证先锋官: 'Pioneiro Certificado',
+  合作基地: 'Base Parceira',
+  区域教研中心: 'Centro Regional',
+  '运营良好、具备稳定开班能力的基地，可升级为区域教研中心，协同负责本区域内新先锋官的实操辅导与基地拓展。':
+    'Bases consolidadas com fluxo regular de turmas podem evoluir para Centros Regionais, auxiliando na formação de novos Pioneiros e expansão da rede.',
+  '挂牌基地必须配备先锋官吗？': 'É obrigatório ter um Pioneiro para criar uma Base?',
+  '是的。每家合作基地须至少有一位通过认证的先锋官担任教学督导，确保实训安全与教学质量。':
+    'Sim. Toda base deve ter pelo menos um Pioneiro certificado como responsável técnico para garantir a segurança e a qualidade do ensino.',
+  '基地教具与先锋官个人教具如何管理？':
+    'Como são geridos os materiais da base em relação ao kit pessoal do Pioneiro?',
+  '基地签约后配发 10 套教学套件，留存基地共用；入驻先锋官此前持有的个人教具归个人所有，可一同充实课堂台架。':
+    'Os 10 kits entregues na assinatura pertencem à base; os kits prévios do Pioneiro permanecem sendo dele e podem complementar as bancadas.',
+  '有成熟场地但未做过开源硬件培训，能否申请？':
+    'Espaços que nunca realizaram oficinas de hardware livre podem se candidatar?',
+  '可以。只要场地具备基础动手条件且有团队持续运营，柴火提供完整的讲义备课包与师资辅导，协助跑通首期。':
+    'Sim. Contando com bancadas adequadas e equipe dedicada, a Chaihuo oferece material completo e tutoria para colocar a primeira turma de pé.',
+  '基地申请需要缴纳加盟费吗？': 'A inscrição de uma Base envolve taxas de franquia ou royalties?',
+  '不收取加盟费。柴火负责提供首批教学套件、课程备课资料与派单机会，合作重点在于本地持续开课。':
+    'Sem taxas de franquia. A Chaihuo fornece os kits iniciais, materiais de aula e oportunidades de projetos, visando à continuidade das turmas locais.',
+  申请设立柴火教学基地: 'Solicitar a Abertura de uma Base Chaihuo',
+  '常年开放机构合作。拥有线下教学场地并计划引入 AIoT 实训体系的团队，提交申请后教研顾问将在 3 个工作日内与你沟通方案。':
+    'Parcerias institucionais abertas o ano todo. Se você possui espaço físico e deseja implementar a formação em AIoT, inscreva-se e entraremos em contato em até 3 dias úteis.',
+  了解先锋官: 'Conhecer os Pioneiros',
+  先锋官: 'Pioneiro',
+  先锋官计划: 'Programa de Pioneiros',
+  固定场地: 'Espaço Físico Dedicado',
+  基地: 'Base',
+  基地计划: 'Programa de Bases',
+  官方认证: 'Certificação Oficial',
+  总部支持: 'Suporte da Matriz',
+  技术型: 'Perfil Técnico',
+  持续运营: 'Operação Contínua',
+  '曾与柴火基地车或 Seeed 硬件开展过工作坊合作':
+    'Colaboração prévia em oficinas com o Chaihuo Maker Truck ou hardware da Seeed',
+  查看分布图: 'Ver Mapa Global',
+  '科技馆、青少年活动中心、高校 Fab Lab 等公共空间':
+    'Espaços públicos como museus de ciências, centros juvenis ou Fab Labs universitários',
+  课程包: 'Pacote Curricular',
+  链接型: 'Perfil Conector',
 };
 
 const chipDeepTranslations: Record<string, Record<string, string>> = {
