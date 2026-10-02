@@ -1,0 +1,27 @@
+---
+import { Icon } from 'astro-icon/components';
+
+// 一行流程链：认证流程 / 升级路径。
+interface Props {
+  title: string;
+  steps: string[];
+  note?: string;
+}
+
+const { title, steps, note } = Astro.props as Props;
+---
+
+<div>
+  <h3 class="text-base font-bold text-brand-black">{title}</h3>
+  <ol class="mt-3 flex flex-wrap items-center gap-x-2 gap-y-2 text-sm font-semibold text-brand-black">
+    {
+      steps.map((step, i) => (
+        <li class="inline-flex items-center gap-2">
+          {i > 0 && <Icon name="lucide:arrow-right" class="h-4 w-4 text-neutral-5" aria-hidden="true" />}
+          <span class="rounded-sm bg-brand-yellow-light px-2.5 py-1">{step}</span>
+        </li>
+      ))
+    }
+  </ol>
+  {note && <p class="mt-3 max-w-3xl text-sm leading-relaxed text-neutral-8">{note}</p>}
+</div>

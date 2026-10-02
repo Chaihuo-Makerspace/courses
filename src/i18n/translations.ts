@@ -42,10 +42,10 @@ const zh: TranslationDict = {
   'footer.seeed': 'Seeed Studio',
   'page.pioneer.title': '先锋官计划',
   'page.pioneer.description':
-    '先锋官——在你的城市，做 AI 时代的点火人。柴火给你学习体系、教具和认证，你把 AI 创客教育带到你的城市。',
+    '先锋官是柴火招募的渠道伙伴：先学会柴火的课，再在自己的城市开课、推广。柴火提供课程包、教具和认证。',
   'page.base.title': '基地计划',
   'page.base.description':
-    '基地——城市里看得见的柴火。有固定场地、有持续运营意愿，柴火给你教具、学习体系、品牌背书和派单流量。',
+    '基地是有固定场地的渠道伙伴：柴火提供教具、课程和总部派单，基地在本地开课，并为先锋官提供授课场地。',
 
   // Home Hero
   'home.hero.eyebrow': '柴火创客学院',
@@ -266,10 +266,10 @@ const en: TranslationDict = {
   'footer.seeed': 'Seeed Studio',
   'page.pioneer.title': 'Pioneer Program',
   'page.pioneer.description':
-    'Pioneer Program — In your city, be the spark of the AI era. Chaihuo provides courses, kits, and certification so you can bring AI maker education to your city.',
+    'Pioneers are channel partners recruited by Chaihuo: they learn the courses, then teach and promote them in their own city. Chaihuo provides the course pack, teaching kits and certification.',
   'page.base.title': 'Base Program',
   'page.base.description':
-    'Base Program — Chaihuo you can see in the city. With a fixed venue and commitment to ongoing operation, Chaihuo provides kits, courses, brand backing, and work-order flow.',
+    'Bases are channel partners with a permanent venue: Chaihuo provides teaching kits, courses and dispatched work; the Base runs classes locally and gives Pioneers a place to teach.',
 
   'home.hero.eyebrow': 'Chaihuo Maker Academy',
   'home.hero.title':
@@ -488,10 +488,10 @@ const ja: TranslationDict = {
   'footer.seeed': 'Seeed Studio',
   'page.pioneer.title': 'パイオニア計画',
   'page.pioneer.description':
-    'パイオニア計画——あなたの街で、AI時代の火を灯す人に。柴火がコース・教材・認定を提供します。',
+    'パイオニアは柴火が募集するチャネルパートナーです。講座を学び、自分の都市で開講・普及を行います。柴火は講座パック、教具、認定を提供します。',
   'page.base.title': '拠点計画',
   'page.base.description':
-    '拠点計画——街に現れる柴火。固定の場と継続運営の意志があれば、柴火が教材・コース・ブランド・受注フローを提供します。',
+    '拠点は常設会場を持つチャネルパートナーです。柴火は教具、講座、本部からの案件紹介を提供し、拠点は地域で開講するとともに、パイオニアに授業の場を提供します。',
 
   'home.hero.eyebrow': '柴火創客学院',
   'home.hero.title': 'スマートハードウェア7講座。\nキット・教案・講師をまとめて提供',
@@ -705,10 +705,10 @@ const es: TranslationDict = {
   'footer.seeed': 'Seeed Studio',
   'page.pioneer.title': 'Programa de Pioneros',
   'page.pioneer.description':
-    'Programa de Pioneros — Sé la chispa de la era de la IA en tu ciudad. Chaihuo te da cursos, kits y certificación para llevar la educación maker a tu ciudad.',
+    'Los Pioneros son socios de canal reclutados por Chaihuo: aprenden los cursos y después los imparten y promueven en su ciudad. Chaihuo aporta el paquete de cursos, los kits didácticos y la certificación.',
   'page.base.title': 'Programa de Bases',
   'page.base.description':
-    'Programa de Bases — Chaihuo visible en tu ciudad. Con un espacio fijo y voluntad de operación continua, Chaihuo aporta kits, cursos, marca y pedidos.',
+    'Las Bases son socios de canal con un espacio fijo: Chaihuo aporta kits didácticos, cursos y encargos derivados; la Base imparte clases en su zona y ofrece a los Pioneros un lugar donde enseñar.',
 
   'home.hero.eyebrow': 'Academia Chaihuo Maker',
   'home.hero.title':
@@ -932,10 +932,10 @@ const ptBR: TranslationDict = {
   'footer.seeed': 'Seeed Studio',
   'page.pioneer.title': 'Programa de Pioneiros',
   'page.pioneer.description':
-    'Programa de Pioneiros — Seja a faísca da era da IA na sua cidade. A Chaihuo oferece cursos, kits e certificação para levar a educação maker à sua cidade.',
+    'Os Pioneiros são parceiros de canal recrutados pela Chaihuo: aprendem os cursos e depois os ministram e divulgam na própria cidade. A Chaihuo fornece o pacote de cursos, os kits didáticos e a certificação.',
   'page.base.title': 'Programa de Bases',
   'page.base.description':
-    'Programa de Bases — Chaihuo visível na cidade. Com espaço fixo e vontade de operação contínua, a Chaihuo fornece kits, cursos, marca e demanda.',
+    'As Bases são parceiros de canal com espaço fixo: a Chaihuo fornece kits didáticos, cursos e demandas encaminhadas; a Base ministra aulas na região e oferece aos Pioneiros um lugar para ensinar.',
 
   'home.hero.eyebrow': 'Academia Chaihuo Maker',
   'home.hero.title': 'Sete cursos de hardware inteligente,\ncom kit, planos de aula e instrutores',

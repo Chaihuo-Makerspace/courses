@@ -1,0 +1,38 @@
+---
+// 带小标题的台账式清单：先锋官 / 基地页的条件、权益、收益、步骤都用它。
+interface Props {
+  title?: string;
+  items: { title: string; description?: string; note?: string }[];
+  /** 列数：1 = 竖排清单；2–4 = 等宽分栏 */
+  columns?: 1 | 2 | 3 | 4;
+  /** 给每条加两位序号 */
+  numbered?: boolean;
+}
+
+const { title, items, columns = 1, numbered = false } = Astro.props as Props;
+const cols = { 1: '', 2: 'sm:grid-cols-2', 3: 'md:grid-cols-3', 4: 'sm:grid-cols-2 lg:grid-cols-4' }[
+  columns
+];
+---
+
+<div>
+  {title && <h3 class="mb-3 text-base font-bold text-brand-black">{title}</h3>}
+  <ul class:list={['grid gap-x-10 border-t border-neutral-3', cols]}>
+    {
+      items.map((item, i) => (
+        <li class="border-b border-neutral-3 py-3.5">
+          {numbered && (
+            <span class="font-mono text-sm font-semibold text-brand-red">
+              {String(i + 1).padStart(2, '0')}
+            </span>
+          )}
+          <p class:list={['text-sm font-bold text-brand-black', numbered && 'mt-1']}>{item.title}</p>
+          {item.description && (
+            <p class="mt-1 text-sm leading-relaxed text-neutral-8">{item.description}</p>
+          )}
+          {item.note && <p class="mt-1.5 text-xs leading-relaxed text-neutral-6">{item.note}</p>}
+        </li>
+      ))
+    }
+  </ul>
+</div>
