@@ -417,20 +417,20 @@ const en: TranslationDict = {
 };
 
 const ja: TranslationDict = {
-  'site.name': '柴火創客学園',
-  'site.description': '柴火創客学園 · 初めてのLED点灯から、インテリジェントシステムの独立納品まで',
+  'site.name': '柴火創客学院',
+  'site.description': '柴火創客学院 · 初めてのLED点灯から、インテリジェントシステムの独立納品まで',
   'site.skipLink': 'メインコンテンツへスキップ',
 
   'nav.home': 'ホーム',
   'nav.courses': '学習体系',
   'nav.paths': 'パスガイド',
   'nav.contact': 'パートナーシップ',
-  'nav.about': '学園概要',
+  'nav.about': '学院概要',
   'nav.chaihuo': '柴火創客空間',
   'nav.pioneer': 'パイオニア・拠点',
   'nav.toggle': 'ナビゲーションメニューを切り替え',
   'nav.brand': '柴火',
-  'nav.homeAria': '柴火創客学園ホーム',
+  'nav.homeAria': '柴火創客学院ホーム',
   'nav.pioneerBase': 'パイオニア · 拠点',
   'nav.map': 'メーカーエコシステム',
   'nav.ecosystem': '柴火エコシステム',
@@ -438,7 +438,7 @@ const ja: TranslationDict = {
   'chip.tabsAria': 'パイオニア計画と拠点計画を切り替え',
 
   'footer.tagline':
-    '柴火創客学園は、実際のハードウェア、現場プロジェクト、納品経験をM0〜M6の学習体系に整理し、学習者が実践的な基礎から納品可能なシステムへと進めるよう支援します。',
+    '柴火創客学院は、実際のハードウェア、現場プロジェクト、納品経験をM0〜M6の学習体系に整理し、学習者が実践的な基礎から納品可能なシステムへと進めるよう支援します。',
   'footer.contact': 'お問い合わせ',
   'footer.nav': 'サイトナビゲーション',
   'footer.social': 'フォローする',
@@ -459,10 +459,10 @@ const ja: TranslationDict = {
   'page.base.description':
     '拠点計画——街に現れる柴火。固定の場と継続運営の意志があれば、柴火が教材・コース・ブランド・受注フローを提供します。',
 
-  'home.hero.eyebrow': '柴火創客学園',
+  'home.hero.eyebrow': '柴火創客学院',
   'home.hero.title': '実機による現場納品のための',
   'home.hero.titleHighlight': '体系的な学習',
-  'home.hero.subtitle': '柴火創客学園',
+  'home.hero.subtitle': '柴火創客学院',
   'home.hero.description':
     'M0〜M6の7つの学習モジュールで、ゼロからのハードウェア入門、デバイス連携、マルチモーダルAI、メッシュネットワーク、エッジビジョン、環境センシングを、導入・交付・共同構築可能なカリキュラムに体系化。',
   'home.hero.ctaPrimary': 'コースを見る',
@@ -525,11 +525,11 @@ const ja: TranslationDict = {
   'paths.cta.primary': 'コースを見る',
   'paths.cta.secondary': 'パートナーシップ',
 
-  'about.title': '学園について',
-  'about.description': '柴火創客学園は柴火創客エコシステムの技術力強化プラットフォームです',
+  'about.title': '学院について',
+  'about.description': '柴火創客学院は柴火創客エコシステムの技術力強化プラットフォームです',
   'about.hero.eyebrow': '私たちについて',
   'about.hero.title': '柴火創客',
-  'about.hero.titleHighlight': '学園',
+  'about.hero.titleHighlight': '学院',
   'about.hero.subtitle': 'Chaihuo Makerspace Academy',
   'about.hero.description':
     'Seeed Studioと柴火創客空間を背景に、私たちは誰もが「一人で現場に立てる」能力を持つべきだと信じています — アイデアを納品可能なインテリジェントシステムに変える力を。',
@@ -542,7 +542,7 @@ const ja: TranslationDict = {
   'about.cta.eyebrow': '参加する',
   'about.cta.title': 'もっと詳しく知りたいですか？',
   'about.cta.description':
-    '柴火創客学園のコースとパートナーシップの機会についてお問い合わせください',
+    '柴火創客学院のコースとパートナーシップの機会についてお問い合わせください',
   'about.cta.primary': 'コースを見る',
   'about.cta.secondary': 'お問い合わせ',
 

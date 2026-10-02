@@ -787,7 +787,7 @@ const ja: Record<string, string> = {
   'eco.chaihuo.desc':
     '2011年設立、中国最古のメイカースペースの一つ。物理スペース、コミュニティイベント、プロジェクトインキュベーションなどのサービスを提供しています。',
   'eco.chaihuo.tag': 'メイカースペース',
-  'eco.opc.name': '柴火創客 OPC 学園',
+  'eco.opc.name': '柴火創客 OPC 学院',
   'eco.opc.role': '技術エンパワーメントプラットフォーム',
   'eco.opc.desc':
     'エコシステムの技術力を学習可能なコースに変換し、個人や企業が新技術の統合力を習得できるよう支援します。',
@@ -1054,7 +1054,7 @@ const ja: Record<string, string> = {
   'cta.apply': '協業相談を申し込む',
   'cta.viewCourses': '学習体系を見る',
   'cta.viewPaths': 'パスガイドを見る',
-  'cta.aboutOrg': '学園の背景を知る',
+  'cta.aboutOrg': '学院の背景を知る',
 };
 
 const es: Record<string, string> = {
