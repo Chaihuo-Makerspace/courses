@@ -78,6 +78,7 @@ const zh: TranslationDict = {
   // Courses
   'courses.title': '学习体系',
   'courses.description': 'M0–M6 七大学习模块，覆盖从硬件入门到行业交付的完整技术栈',
+  'courses.hero.eyebrow': 'M0–M6 × L1/L2/L3',
 
   'courses.overview': '学习总览',
   'courses.matrix': '学习矩阵',
@@ -127,7 +128,7 @@ const zh: TranslationDict = {
   'about.hero.titleHighlight': '学院',
   'about.hero.subtitle': 'Chaihuo Makerspace Academy',
   'about.hero.description':
-    '背靠 Seeed Studio 与柴火创客空间，我们相信每个人都应该有能力\\"一个人也能上场\\"——把想法变成可交付的智能系统。柴火创客学院面向机构提供可引入、可授课、可共建的学习体系。',
+    '背靠 Seeed Studio 与柴火创客空间，我们相信每个人都应该有能力"一个人也能上场"——把想法变成可交付的智能系统。柴火创客学院面向机构提供可引入、可授课、可共建的学习体系。',
   'about.ecosystem.title': '柴火创客生态',
   'about.ecosystem.subtitle': '三大支柱支撑创客教育体系',
   'about.values.title': '我们的理念',
@@ -281,6 +282,7 @@ const en: TranslationDict = {
   'home.cta.secondary': 'Contact Us',
 
   'courses.title': 'Learning System',
+  'courses.hero.eyebrow': 'M0–M6 × L1/L2/L3',
   'courses.description':
     'Seven learning modules (M0–M6) covering the complete tech stack from hardware basics to industry delivery',
   'courses.overview': 'Learning Overview',
@@ -485,6 +487,7 @@ const ja: TranslationDict = {
   'home.cta.secondary': 'お問い合わせ',
 
   'courses.title': '学習体系',
+  'courses.hero.eyebrow': 'M0–M6 × L1/L2/L3',
   'courses.description':
     'ハードウェア基礎から業界納品までの完全な技術スタックをカバーする7つの学習モジュール（M0〜M6）',
   'courses.overview': '学習概要',
@@ -687,6 +690,7 @@ const es: TranslationDict = {
   'home.cta.secondary': 'Contáctanos',
 
   'courses.title': 'Sistema de Aprendizaje',
+  'courses.hero.eyebrow': 'M0–M6 × L1/L2/L3',
   'courses.description':
     'Siete módulos de aprendizaje (M0–M6) que cubren la pila tecnológica completa desde fundamentos de hardware hasta entrega industrial',
   'courses.overview': 'Resumen de Aprendizaje',
@@ -896,6 +900,7 @@ const ptBR: TranslationDict = {
   'home.cta.secondary': 'Contate-nos',
 
   'courses.title': 'Sistema de Aprendizagem',
+  'courses.hero.eyebrow': 'M0–M6 × L1/L2/L3',
   'courses.description':
     'Sete módulos de aprendizado (M0–M6) cobrindo a stack tecnológica completa, dos fundamentos de hardware à entrega industrial',
   'courses.overview': 'Visão Geral de Aprendizado',
