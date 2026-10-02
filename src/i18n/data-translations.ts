@@ -76,7 +76,7 @@ const zh: Record<string, string> = {
   'eco.chaihuo.desc':
     '2011 年成立，中国最早的创客空间之一。提供物理空间、社区活动、项目孵化等服务。',
   'eco.chaihuo.tag': '创客空间',
-  'eco.opc.name': '柴火创客 OPC 学园',
+  'eco.opc.name': '柴火创客 OPC 学院',
   'eco.opc.role': '技术赋能平台',
   'eco.opc.desc': '将生态中的技术能力转化为可学习的课程，帮助个人和企业掌握新技术整合能力。',
   'eco.opc.tag': '技术学习',
@@ -353,7 +353,7 @@ const zh: Record<string, string> = {
   'cta.apply': '申请合作咨询',
   'cta.viewCourses': '查看学习体系',
   'cta.viewPaths': '查看路径指南',
-  'cta.aboutOrg': '关于学园',
+  'cta.aboutOrg': '关于学院',
 };
 
 const en: Record<string, string> = {
@@ -787,7 +787,7 @@ const ja: Record<string, string> = {
   'eco.chaihuo.desc':
     '2011年設立、中国最古のメイカースペースの一つ。物理スペース、コミュニティイベント、プロジェクトインキュベーションなどのサービスを提供しています。',
   'eco.chaihuo.tag': 'メイカースペース',
-  'eco.opc.name': '柴火創客 OPC 学園',
+  'eco.opc.name': '柴火創客 OPC 学院',
   'eco.opc.role': '技術エンパワーメントプラットフォーム',
   'eco.opc.desc':
     'エコシステムの技術力を学習可能なコースに変換し、個人や企業が新技術の統合力を習得できるよう支援します。',
@@ -1054,7 +1054,7 @@ const ja: Record<string, string> = {
   'cta.apply': '協業相談を申し込む',
   'cta.viewCourses': '学習体系を見る',
   'cta.viewPaths': 'パスガイドを見る',
-  'cta.aboutOrg': '学園の背景を知る',
+  'cta.aboutOrg': '学院の背景を知る',
 };
 
 const es: Record<string, string> = {

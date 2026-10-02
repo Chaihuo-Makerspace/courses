@@ -29,9 +29,16 @@ expressions inside `.astro` templates.
 
 | Surface | Use |
 |---|---|
-| Chrome (Navbar / Footer / `<title>`) | 柴火创客学园 |
-| Formal copy (about, hero subtitles, llms.txt heading) | 柴火创客 OPC 学园 |
+| Chrome (Navbar / Footer / `<title>`) | 柴火创客学院 |
+| Formal copy (about, hero subtitles, llms.txt heading) | 柴火创客 OPC 学院 |
 | Ecosystem reference | 柴火创客生态（Seeed Studio + 柴火创客空间） |
+| English | Chaihuo Maker Academy |
+| Japanese | 柴火創客学院 |
+
+The brand word is **学院**, not 学园. 学园 is the Japanese word 学園
+(gakuen) written in simplified characters. The Japanese locale keeps the
+proper noun in its original form (柴火創客学院) instead of localising it to
+学園.
 
 ## Core narrative
 
