@@ -1,49 +1,28 @@
 ---
 interface Props {
-  eyebrow?: string;
   title: string;
   subtitle?: string;
-  align?: 'left' | 'center';
-  as?: 'h1' | 'h2' | 'h3';
+  as?: 'h2' | 'h3';
   tone?: 'light' | 'dark';
 }
 
-const {
-  eyebrow,
-  title,
-  subtitle,
-  align = 'left',
-  as: Heading = 'h2',
-  tone = 'light',
-} = Astro.props as Props;
+const { title, subtitle, as: Heading = 'h2', tone = 'light' } = Astro.props as Props;
 
-const alignClass = align === 'center' ? 'text-center mx-auto' : 'text-left';
 const isDark = tone === 'dark';
-const eyebrowColor = isDark ? 'text-brand-yellow' : 'text-brand-red';
-const titleColor = isDark ? 'text-white' : 'text-brand-black';
-const subtitleColor = isDark ? 'text-white/70' : 'text-neutral-7';
 ---
 
-<header class:list={['max-w-3xl', alignClass, 'mb-10 md:mb-14']}>
-  {
-    eyebrow && (
-      <p class:list={['text-xs font-mono font-semibold uppercase tracking-widest mb-3', eyebrowColor]}>
-        {eyebrow}
-      </p>
-    )
-  }
-  <Heading
-    class:list={[
-      'section-flag text-3xl md:text-4xl lg:text-5xl font-bold leading-tight',
-      titleColor,
-      align === 'center' && 'inline-block',
-    ]}
-  >
+<header class="max-w-3xl mb-8 md:mb-10">
+  <Heading class:list={['heading-section', isDark ? 'text-white' : 'text-brand-black']}>
     {title}
   </Heading>
   {
     subtitle && (
-      <p class:list={['mt-4 text-base md:text-lg leading-relaxed', subtitleColor]}>
+      <p
+        class:list={[
+          'mt-3 text-base leading-relaxed',
+          isDark ? 'text-white/70' : 'text-neutral-7',
+        ]}
+      >
         {subtitle}
       </p>
     )

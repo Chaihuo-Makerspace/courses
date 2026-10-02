@@ -17,9 +17,9 @@ const zh: Record<string, string> = {
   'home.objects.title': '学习从真实硬件和现场材料开始',
   'home.objects.subtitle':
     'LED、传感器、网关、摄像头、空间设备、交付文档，这些不是概念入口，而是课堂实验、项目训练和合作交付里的真实材料。',
-  'home.outcomes.title': '机构引入时，需要看到这些实物和材料',
+  'home.outcomes.title': '引入一门课，到手这四样',
   'home.outcomes.subtitle':
-    '学习不是一份讲义。每个模块都要对应硬件、实验、项目任务和可被复用的交付材料。',
+    '柴火创客空间 2011 年在深圳成立，是中国最早的创客空间之一。课上用的硬件全部是 Seeed Studio 在售的产品，按 SKU 就能买到。',
   'home.paths.title': '三大学习方向',
   'home.paths.subtitle':
     '用 AI 造物、造 AI 的物、解决方案——三条主线对应不同目标与模块组合；每个方向都能继续细分到 L1 / L2 / L3。',
@@ -372,6 +372,9 @@ const zh: Record<string, string> = {
   'cta.viewCourses': '查看学习体系',
   'cta.viewPaths': '查看路径指南',
   'cta.aboutOrg': '关于学院',
+  'home.matrix.note':
+    '格内数字是该档的课时天数（d = 天）。点模块名，看这门课的设备、大纲和验收标准。',
+  'course.overseasOnly': '仅海外交付',
 };
 
 const en: Record<string, string> = {
@@ -391,9 +394,9 @@ const en: Record<string, string> = {
   'home.objects.title': 'Learning starts with real hardware and field materials',
   'home.objects.subtitle':
     'LEDs, sensors, gateways, cameras, spatial devices, and delivery documentation — real materials used in classroom experiments, project training, and collaborative delivery.',
-  'home.outcomes.title': 'When institutions adopt, they need to see these materials',
+  'home.outcomes.title': 'What you receive when you bring in one course',
   'home.outcomes.subtitle':
-    'Learning is not just a handout. Each module must correspond to hardware, experiments, project tasks, and reusable delivery materials.',
+    "Chaihuo Makerspace was founded in Shenzhen in 2011, one of the earliest makerspaces in China. All hardware used in class is from Seeed Studio's current catalogue and can be ordered by SKU.",
   'home.paths.title': 'Three Learning Tracks',
   'home.paths.subtitle':
     'Build with AI, Build AI Products, Solutions — three tracks for different goals and module combinations.',
@@ -728,9 +731,9 @@ const en: Record<string, string> = {
   'heroMap.viewAll': 'View Full Learning System',
   'heroMap.viewGuide': 'View Learning Paths',
 
-  'cta.home.title': 'Bring the learning system into your teaching, training, or project site',
+  'cta.home.title': 'Start with one course.',
   'cta.home.desc':
-    'You can start with a single module or combine solution packages by goal; delivery formats include Bare Hardware Kit, Standard Training Kit, Full-Delivery, and Train-the-Trainer.',
+    'Pick one module and run a trial cohort: the hardware kit, lesson plans and learner assignments are all provided. If it works for you, we can talk about adopting the full programme. Email us and we will reply with a proposal within 3 working days.',
   'cta.paths.title':
     'After selecting a combination, return to the learning system to confirm modules and levels',
   'cta.paths.desc':
@@ -745,6 +748,21 @@ const en: Record<string, string> = {
   'cta.viewCourses': 'View Courses',
   'cta.viewPaths': 'View Learning Paths',
   'cta.aboutOrg': 'Learn About the Academy',
+  'home.matrix.note':
+    'The number in each cell is the course length in days for that level. Select a module to see its hardware, syllabus and acceptance criteria.',
+  'course.overseasOnly': 'Outside mainland China only',
+  'outcome.lab.label': 'Labs that run in the classroom',
+  'outcome.lab.desc':
+    'Every module is built around real hardware: learners assemble it, debug it and demo it in class.',
+  'outcome.kit.label': 'Hardware kit and course materials',
+  'outcome.kit.desc':
+    'Seeed hardware plus textbook, lab manual, teacher materials and learner assignments.',
+  'outcome.docs.label': 'Project documents you can file',
+  'outcome.docs.desc':
+    'Deployment topology, configuration files, operations and acceptance documents, itemised on each module page.',
+  'outcome.forms.label': 'Four ways to buy',
+  'outcome.forms.desc':
+    'Hardware only, the standard teaching kit, a Chaihuo instructor teaching on site, or training your own instructors first.',
 };
 
 const ja: Record<string, string> = {
@@ -763,9 +781,9 @@ const ja: Record<string, string> = {
   'home.objects.title': '学習は本物のハードウェアと現場の教材から始まります',
   'home.objects.subtitle':
     'LED、センサー、ゲートウェイ、カメラ、空間デバイス、納品ドキュメント——これらは概念の入口ではなく、授業実験、プロジェクト演習、協業納品で使われる実際の教材です。',
-  'home.outcomes.title': '教育機関が導入する際に確認すべき実物と教材',
+  'home.outcomes.title': '1講座を導入すると手元に届く4つのもの',
   'home.outcomes.subtitle':
-    '学習は単なる講義資料ではありません。各モジュールには、ハードウェア、実験、プロジェクト課題、再利用可能な納品教材が対応しています。',
+    '柴火創客空間は2011年に深圳で設立された、中国で最も早い時期のメイカースペースの一つです。授業で使うハードウェアはすべてSeeed Studioの現行製品で、SKUで購入できます。',
   'home.paths.title': '3つの学習方向',
   'home.paths.subtitle':
     'AIでものづくり、AIプロダクト開発、ソリューション——3つの主軸が異なる目標とモジュール構成に対応。各方向はさらにL1/L2/L3に細分化できます。',
@@ -1095,9 +1113,9 @@ const ja: Record<string, string> = {
     '各モジュールはL1/L2/L3の3つの深度で個別に導入でき、またモジュールを組み合わせて完全なソリューションパッケージにすることもできます。',
   'heroMap.viewAll': '学習体系全体を見る',
   'heroMap.viewGuide': 'パスガイドを見る',
-  'cta.home.title': '学習体系をあなたの教育、研修、プロジェクト現場に導入する',
+  'cta.home.title': 'まずは1講座から。',
   'cta.home.desc':
-    '単一モジュールから導入することも、目標に応じてソリューションパッケージを組み合わせることも可能です。販売形態はBare Hardware Kit、Standard Training Kit、Full-Delivery、Train-the-Trainerがあります。',
+    'モジュールを1つ選んで試験的に1期開講してみてください。ハードウェアキット、教案、受講者課題は一式そろっています。手応えがあれば、体系全体の導入をご相談ください。メールをいただければ、3営業日以内に協業のご提案をお返しします。',
   'cta.paths.title': '組み合わせを選んだら、学習体系に戻ってモジュールとレベルを確認',
   'cta.paths.desc':
     'パスガイドは範囲を絞り込むためのものです。実際の導入時には、モジュール内容、授業実験、ハードウェアリスト、納品教材、販売形態も確認する必要があります。',
@@ -1111,6 +1129,21 @@ const ja: Record<string, string> = {
   'cta.viewCourses': '学習体系を見る',
   'cta.viewPaths': 'パスガイドを見る',
   'cta.aboutOrg': '学院の背景を知る',
+  'home.matrix.note':
+    '各セルの数字はそのレベルの日数（d = 日）です。モジュール名を選ぶと、使用機器・シラバス・検収基準を確認できます。',
+  'course.overseasOnly': '中国本土以外のみ提供',
+  'outcome.lab.label': '教室でその場で動かせる実験',
+  'outcome.lab.desc':
+    'どのモジュールも実機ハードウェアを中心に構成され、授業内で組み立て・結合調整・デモまで行います。',
+  'outcome.kit.label': 'ハードウェアキットと講座資料',
+  'outcome.kit.desc':
+    'Seeed製ハードウェアに加え、教材、実験マニュアル、講師用資料、受講者課題が付きます。',
+  'outcome.docs.label': '保管できるプロジェクト資料',
+  'outcome.docs.desc':
+    '構成図、設定ファイル、運用・検収ドキュメント。各モジュールページに項目ごとに記載しています。',
+  'outcome.forms.label': '4つの購入形態',
+  'outcome.forms.desc':
+    'ハードウェアのみ、標準教育キット、柴火講師による現地授業、または自社講師の育成から。',
 };
 
 const es: Record<string, string> = {
@@ -1129,10 +1162,9 @@ const es: Record<string, string> = {
   'home.objects.title': 'El aprendizaje empieza con hardware real y materiales físicos',
   'home.objects.subtitle':
     'LEDs, sensores, gateways, cámaras, dispositivos espaciales, documentación de entrega — no son puertas de entrada conceptuales, sino materiales reales para experimentos en clase, entrenamiento de proyectos y entregas colaborativas.',
-  'home.outcomes.title':
-    'Al introducir, las instituciones necesitan ver estos materiales y resultados',
+  'home.outcomes.title': 'Lo que recibe al incorporar un curso',
   'home.outcomes.subtitle':
-    'El aprendizaje no es solo un plan de estudios. Cada módulo debe corresponderse con hardware, experimentos, tareas de proyecto y materiales de entrega reutilizables.',
+    'Chaihuo Makerspace se fundó en Shenzhen en 2011 y es uno de los primeros makerspaces de China. Todo el hardware que se usa en clase pertenece al catálogo actual de Seeed Studio y se puede pedir por SKU.',
   'home.paths.title': 'Tres direcciones de aprendizaje',
   'home.paths.subtitle':
     'Crear con IA, Construir productos con IA, Soluciones — tres líneas principales que corresponden a diferentes objetivos y combinaciones de módulos; cada dirección puede profundizarse hasta L1 / L2 / L3.',
@@ -1480,9 +1512,9 @@ const es: Record<string, string> = {
     'Cada módulo puede introducirse individualmente en las tres profundidades L1/L2/L3, o combinarse con otros módulos para formar paquetes de solución completos.',
   'heroMap.viewAll': 'Ver sistema curricular completo',
   'heroMap.viewGuide': 'Ver rutas de aprendizaje',
-  'cta.home.title': 'Incorpore el sistema curricular en su enseñanza, capacitación o proyecto',
+  'cta.home.title': 'Empiece con un curso.',
   'cta.home.desc':
-    'Puede introducir primero un módulo individual o combinar paquetes de solución según sus objetivos; las modalidades incluyen kit de hardware básico, kit de formación práctica estándar, entrega integral y capacitación de instructores.',
+    'Elija un módulo y pruebe con un primer grupo: el kit de hardware, los planes de clase y las tareas del alumnado están incluidos. Si funciona, hablamos de incorporar el programa completo. Escríbanos y le responderemos con una propuesta en 3 días hábiles.',
   'cta.paths.title':
     'Una vez seleccionada la combinación, vuelva al sistema curricular para confirmar módulos y niveles',
   'cta.paths.desc':
@@ -1497,6 +1529,21 @@ const es: Record<string, string> = {
   'cta.viewCourses': 'Ver sistema curricular',
   'cta.viewPaths': 'Ver rutas de aprendizaje',
   'cta.aboutOrg': 'Conocer la academia',
+  'home.matrix.note':
+    'El número de cada celda indica los días de curso de ese nivel. Seleccione un módulo para ver su hardware, temario y criterios de aceptación.',
+  'course.overseasOnly': 'Solo fuera de China continental',
+  'outcome.lab.label': 'Prácticas que funcionan en el aula',
+  'outcome.lab.desc':
+    'Cada módulo gira en torno a hardware real: se monta, se ajusta y se demuestra en clase.',
+  'outcome.kit.label': 'Kit de hardware y materiales del curso',
+  'outcome.kit.desc':
+    'Hardware de Seeed más libro de texto, manual de prácticas, materiales para el docente y tareas para el alumnado.',
+  'outcome.docs.label': 'Documentación de proyecto archivable',
+  'outcome.docs.desc':
+    'Topología de despliegue, archivos de configuración y documentos de operación y aceptación, detallados en la página de cada módulo.',
+  'outcome.forms.label': 'Cuatro modalidades de compra',
+  'outcome.forms.desc':
+    'Solo hardware, el kit didáctico estándar, un instructor de Chaihuo en sus instalaciones o formar primero a sus propios instructores.',
 };
 
 const ptBR: Record<string, string> = {
@@ -1515,9 +1562,9 @@ const ptBR: Record<string, string> = {
   'home.objects.title': 'O aprendizado começa com hardware real e materiais práticos',
   'home.objects.subtitle':
     'LEDs, sensores, gateways, câmeras, dispositivos espaciais e documentação de entrega — estes não são portas de entrada conceituais, mas materiais reais usados em experimentos em sala de aula, treinamento de projetos e entregas para parceiros.',
-  'home.outcomes.title': 'Ao introduzir, as instituições precisam ver estes materiais e resultados',
+  'home.outcomes.title': 'O que você recebe ao adotar um curso',
   'home.outcomes.subtitle':
-    'O aprendizado não é apenas um plano de aula. Cada módulo corresponde a hardware, experimentos, tarefas de projeto e materiais de entrega reutilizáveis.',
+    'O Chaihuo Makerspace foi fundado em Shenzhen em 2011 e é um dos primeiros makerspaces da China. Todo o hardware usado em aula faz parte do catálogo atual da Seeed Studio e pode ser pedido por SKU.',
   'home.paths.title': 'Três direções de aprendizado',
   'home.paths.subtitle':
     'Criar com IA, Criar produtos com IA, Soluções — três eixos principais com diferentes objetivos e combinações de módulos; cada direção pode ser detalhada em L1 / L2 / L3.',
@@ -1854,9 +1901,9 @@ const ptBR: Record<string, string> = {
     'Cada módulo pode ser introduzido individualmente nos três níveis de profundidade L1/L2/L3, ou combinado com outros módulos para formar pacotes completos de solução.',
   'heroMap.viewAll': 'Ver grade curricular completa',
   'heroMap.viewGuide': 'Ver trilhas de aprendizado',
-  'cta.home.title': 'Leve a grade curricular para seu ensino, treinamento ou projeto',
+  'cta.home.title': 'Comece por um curso.',
   'cta.home.desc':
-    'Você pode introduzir um único módulo ou combinar pacotes de solução conforme seus objetivos. Os formatos comerciais incluem Bare Hardware Kit, Standard Training Kit, Full-Delivery Kit e Train-the-Trainer Kit.',
+    'Escolha um módulo e faça uma turma piloto: kit de hardware, planos de aula e tarefas dos alunos já vêm incluídos. Se der certo, conversamos sobre adotar o programa completo. Envie um e-mail e respondemos com uma proposta em até 3 dias úteis.',
   'cta.paths.title':
     'Após escolher a combinação, volte à grade curricular para confirmar módulos e níveis',
   'cta.paths.desc':
@@ -1871,6 +1918,21 @@ const ptBR: Record<string, string> = {
   'cta.viewCourses': 'Ver grade curricular',
   'cta.viewPaths': 'Ver trilhas de aprendizado',
   'cta.aboutOrg': 'Conhecer a Academia',
+  'home.matrix.note':
+    'O número em cada célula indica os dias de curso daquele nível. Selecione um módulo para ver hardware, programa e critérios de aceitação.',
+  'course.overseasOnly': 'Somente fora da China continental',
+  'outcome.lab.label': 'Práticas que funcionam em sala',
+  'outcome.lab.desc':
+    'Cada módulo gira em torno de hardware real: montagem, ajuste e demonstração acontecem em aula.',
+  'outcome.kit.label': 'Kit de hardware e materiais do curso',
+  'outcome.kit.desc':
+    'Hardware da Seeed mais apostila, manual de experimentos, materiais do professor e tarefas dos alunos.',
+  'outcome.docs.label': 'Documentação de projeto arquivável',
+  'outcome.docs.desc':
+    'Topologia de implantação, arquivos de configuração e documentos de operação e aceitação, detalhados na página de cada módulo.',
+  'outcome.forms.label': 'Quatro formas de contratar',
+  'outcome.forms.desc':
+    'Apenas hardware, o kit didático padrão, um instrutor da Chaihuo no local ou treinar primeiro os seus próprios instrutores.',
 };
 
 export const dataTranslations: Record<Locale, Record<string, string>> = {

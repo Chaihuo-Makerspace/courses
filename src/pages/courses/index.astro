@@ -7,10 +7,10 @@ import CourseMatrixSection from '../../components/sections/courses/CourseMatrixS
 import CourseModulesExplorer from '../../components/sections/courses/CourseModulesExplorer.astro';
 import LearningTracksSection from '../../components/sections/courses/LearningTracksSection.astro';
 import { modules } from '../../data/modules';
-import { coursesFinalCta } from '../../data/site';
+import { coursesFinalCta } from '../../data/site-legacy';
 import { t, defaultLocale, localizePath } from '../../i18n';
 import type { Locale } from '../../i18n';
-import { translateModules, translateCta } from '../../i18n/helpers';
+import { translateModules, translateCta } from '../../i18n/helpers-legacy';
 
 const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
 const translatedModules = translateModules(modules, locale);
@@ -19,7 +19,6 @@ const translatedCta = translateCta(coursesFinalCta, locale);
 
 <Layout title={t(locale, 'courses.title')}>
   <HeroBanner
-    eyebrow={t(locale, 'courses.hero.eyebrow')}
     title={t(locale, 'courses.title')}
     description={t(locale, 'courses.description')}
     ctas={[

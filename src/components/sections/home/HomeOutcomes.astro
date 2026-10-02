@@ -1,6 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components';
-import type { OutcomeItem } from '~/data/site';
+import type { OutcomeItem } from '../../../data/site';
 import { dt } from '../../../i18n/data-translations';
 import type { Locale } from '../../../i18n';
 
@@ -12,29 +11,29 @@ interface Props {
 const { outcomes, locale } = Astro.props as Props;
 ---
 
-<section class="py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-brand-graphite text-white">
-  <div class="max-w-6xl mx-auto" data-reveal>
-    <div class="max-w-3xl">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
-        {dt(locale, 'home.outcomes.title')}
-      </h2>
-      <p class="mt-4 text-base md:text-lg text-white/70 leading-relaxed">
+<section class="section bg-background">
+  <div class="container-page grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14" data-reveal>
+    <div>
+      <h2 class="heading-section text-brand-black">{dt(locale, 'home.outcomes.title')}</h2>
+      <p class="mt-4 text-base leading-relaxed text-neutral-8">
         {dt(locale, 'home.outcomes.subtitle')}
       </p>
     </div>
 
-    <ul class="mt-10 flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-white/10 border-t border-b border-white/10">
-      {outcomes.map((o) => (
-        <li class="flex-1 flex gap-4 py-6 md:py-2 md:px-6 first:pl-0 last:pr-0">
-          <div class="shrink-0 w-10 h-10 rounded-md bg-brand-yellow text-brand-black flex items-center justify-center">
-            <Icon name={o.icon} class="w-5 h-5" />
-          </div>
-          <div>
-            <p class="text-base font-semibold text-white">{o.label}</p>
-            <p class="mt-2 text-sm leading-relaxed text-white/70">{o.description}</p>
-          </div>
-        </li>
-      ))}
-    </ul>
+    <ol class="border-t border-neutral-3">
+      {
+        outcomes.map((o, i) => (
+          <li class="grid grid-cols-[2.5rem_1fr] gap-x-3 border-b border-neutral-3 py-4">
+            <span class="pt-0.5 font-mono text-sm font-semibold text-brand-red">
+              {String(i + 1).padStart(2, '0')}
+            </span>
+            <div>
+              <p class="text-base font-semibold text-brand-black">{o.label}</p>
+              <p class="mt-1 text-sm leading-relaxed text-neutral-8">{o.description}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
   </div>
 </section>

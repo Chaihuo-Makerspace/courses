@@ -6,8 +6,8 @@ import ChipWhatSection from '../components/sections/chip/ChipWhatSection.astro';
 import ChipBenefitsSection from '../components/sections/chip/ChipBenefitsSection.astro';
 import ChipRevenueSection from '../components/sections/chip/ChipRevenueSection.astro';
 import ChipFlowSection from '../components/sections/chip/ChipFlowSection.astro';
-import ChipFaqSection from '../components/sections/chip/ChipFaqSection.astro';
-import ChipCtaSection from '../components/sections/chip/ChipCtaSection.astro';
+import FaqSection from '../components/sections/FaqSection.astro';
+import FinalCtaSection from '../components/sections/FinalCtaSection.astro';
 import { pioneer } from '../data/ecosystem';
 import { t, defaultLocale } from '../i18n';
 import type { Locale } from '../i18n';
@@ -17,6 +17,16 @@ import { dt } from '../i18n/data-translations';
 const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
 const data = translateEcosystem(pioneer, locale);
 const hero = data.hero;
+const link = (l: { label: string; href: string }) => ({
+  label: l.label,
+  href: chipHref(locale, l.href),
+  external: isExternalHref(l.href),
+});
+const cta = {
+  ...data.cta,
+  primary: link(data.cta.primary),
+  secondary: data.cta.secondary ? link(data.cta.secondary) : undefined,
+};
 const certificationSteps = data.certification.chain.map((label, i) => ({ step: String(i + 1), title: label }));
 ---
 
@@ -24,9 +34,7 @@ const certificationSteps = data.certification.chain.map((label, i) => ({ step: S
   <ChipTabs active="pioneer" locale={locale} />
 
   <HeroBanner
-    eyebrow={hero.eyebrow}
     title={hero.title}
-    subtitle={hero.subtitle}
     description={hero.description}
     ctas={hero.ctas.map((cta) => ({
       label: cta.label,
@@ -49,6 +57,6 @@ const certificationSteps = data.certification.chain.map((label, i) => ({ step: S
     tone="yellow"
     section={{ title: data.certification.title, steps: certificationSteps, footnote: data.certification.note }}
   />
-  <ChipFaqSection title={dt(locale, 'section.faqTitle')} faqs={data.faqs} />
-  <ChipCtaSection cta={data.cta} locale={locale} />
+  <FaqSection title={dt(locale, 'section.faqTitle')} faqs={data.faqs} />
+  <FinalCtaSection cta={cta} />
 </Layout>

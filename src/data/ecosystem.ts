@@ -137,13 +137,6 @@ export interface ChipUpgradeData {
   description: string;
 }
 
-export interface HomeEcosystemMapData {
-  eyebrow: string;
-  title: string;
-  description: string[];
-  ctas: ChipLink[];
-}
-
 export interface PioneerProgram {
   hero: ChipHeroData;
   what: ChipWhatData;
@@ -167,58 +160,26 @@ export interface BaseProgram {
 }
 
 /* ------------------------------------------------------------------ */
-/* 首页模块 A —— 创客生态分布图卡片                                     */
+/* 首页 —— 渠道伙伴入口（先锋官 / 基地 / 生态分布图）                   */
 /* ------------------------------------------------------------------ */
 
-export const homeEcosystemMap: HomeEcosystemMapData = {
-  eyebrow: '柴火生态',
-  title: '柴火全球创客生态分布图',
-  description: [
-    '先锋官与基地正在全国及全球铺开。',
-    '在地图上找到你身边的柴火节点，',
-    '或者——成为下一个。',
-  ],
-  ctas: [
-    { label: '查看分布图', href: ecosystemMapUrl, variant: 'primary' },
-    { label: '我要加入', href: '/pioneer', variant: 'secondary' },
-  ],
-};
-
-/* ------------------------------------------------------------------ */
-/* 首页模块 B —— 先锋官 · 基地 双栏卡片                                */
-/* ------------------------------------------------------------------ */
-
-export interface PioneerBaseCard {
-  icon: IconName;
-  label: string;
-  headline: string;
-  points: string[];
-  cta: ChipLink;
-}
-
-export const homePioneerBase: {
-  pioneer: PioneerBaseCard;
-  base: PioneerBaseCard;
-  section: { title: string; subtitle: string };
+/**
+ * owner 2026-10-02：站点第一受众是机构；先锋官是我们招募的渠道伙伴
+ * （先学会课程，再去本地开课、推广），不是终端客户。首页只留一条入口带。
+ */
+export const homeChannel: {
+  title: string;
+  description: string;
+  links: (ChipLink & { note: string })[];
 } = {
-  section: {
-    title: '先锋官与基地计划',
-    subtitle: '把 AI 创客教育带到你的城市——柴火给你课程、教具和认证，你做本地的那根火柴。',
-  },
-  pioneer: {
-    icon: 'lucide:zap',
-    label: '先锋官',
-    headline: '在你的城市，做 AI 时代的点火人。',
-    points: ['5 套 M0 教具赠送', '学费 100% 归你', '官方认证登上地图'],
-    cta: { label: '了解先锋官', href: '/pioneer' },
-  },
-  base: {
-    icon: 'lucide:home',
-    label: '基地',
-    headline: '城市里看得见的柴火。',
-    points: ['10 套教具共用', '承接总部派单', '区域优先权'],
-    cta: { label: '了解基地', href: '/base' },
-  },
+  title: '招募渠道伙伴',
+  description:
+    '先锋官是我们招募的渠道伙伴：先学会柴火的课，再在自己的城市开课、推广。有固定场地的，可以申请挂牌基地。',
+  links: [
+    { label: '先锋官计划', note: '个人申请', href: '/pioneer' },
+    { label: '基地计划', note: '有固定场地的机构申请', href: '/base' },
+    { label: '查看分布图', note: 'map.seeed.cc', href: ecosystemMapUrl },
+  ],
 };
 
 /* ------------------------------------------------------------------ */

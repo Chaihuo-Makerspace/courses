@@ -107,6 +107,116 @@
   font-display: swap;
 }
 
+/*
+ * 版式与组件类（components 层：模板里的工具类可以覆盖它们）。
+ * 规则见 docs/DESIGN.md §2–§4。
+ */
+@layer components {
+  /* 全站唯一的内容容器：所有 section 共用同一条左边线 */
+  .container-page {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 40rem) {
+    .container-page {
+      padding-inline: 1.5rem;
+    }
+  }
+  @media (min-width: 64rem) {
+    .container-page {
+      padding-inline: 2rem;
+    }
+  }
+
+  /* Section 纵向节奏只有两档：标准段与紧凑带 */
+  .section {
+    padding-block: 3.5rem;
+  }
+  .section-tight {
+    padding-block: 2.25rem;
+  }
+  @media (min-width: 48rem) {
+    .section {
+      padding-block: 4.5rem;
+    }
+    .section-tight {
+      padding-block: 2.75rem;
+    }
+  }
+
+  /* Section H2：得意黑 display 字面，与 16px 正文拉开约 2 倍 */
+  .heading-section {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+  }
+  @media (min-width: 48rem) {
+    .heading-section {
+      font-size: 2.25rem;
+    }
+  }
+
+  /* 小标签：中文不套 mono / uppercase，用字重与字色区分 */
+  .label {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    color: var(--color-neutral-6);
+  }
+
+  /* 按钮 —— 规格见 docs/DESIGN.md §4.4 */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    transition:
+      background-color var(--dur-fast) var(--ease-standard),
+      border-color var(--dur-fast) var(--ease-standard),
+      box-shadow var(--dur-fast) var(--ease-standard);
+  }
+  .btn-primary {
+    background-color: var(--color-brand-red);
+    color: #fff;
+  }
+  .btn-secondary {
+    background-color: var(--color-background);
+    border-color: var(--color-neutral-3);
+    color: var(--color-brand-black);
+  }
+  .btn-secondary:hover {
+    border-color: color-mix(in srgb, var(--color-brand-black) 30%, transparent);
+  }
+  /* 反转面上的次按钮 */
+  .btn-ghost {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  .btn-ghost:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  /* 火焰细线：每页至多一处分隔带（hero 底边） */
+  .flame-rule {
+    height: 3px;
+    background-image: var(--gradient-flame);
+  }
+  /* 火焰铺面：只用于首页 hero 的背景层，矩阵压在它上面 */
+  .flame-band {
+    background-image: var(--gradient-flame);
+  }
+}
+
 /* Utility classes for brand colors */
 @layer utilities {
   /* Display 大标题字面（得意黑）— 仅用于 hero H1 / 大 section 标题，见 docs/DESIGN.md §7 */
@@ -405,7 +515,8 @@
     }
   }
   a.bg-brand-red:hover,
-  button.bg-brand-red:hover {
+  button.bg-brand-red:hover,
+  .btn-primary:hover {
     background-image: var(--gradient-flame);
     background-size: 200% 200%;
     box-shadow: 0 4px 16px rgba(216, 65, 68, 0.32);
@@ -413,7 +524,8 @@
   }
   @media (prefers-reduced-motion: reduce) {
     a.bg-brand-red:hover,
-    button.bg-brand-red:hover {
+    button.bg-brand-red:hover,
+    .btn-primary:hover {
       animation: none;
     }
   }

@@ -1,55 +1,21 @@
 ---
-import HeroBanner from '../components/HeroBanner.astro';
-import HeroCourseMap from '../components/HeroCourseMap.astro';
 import Layout from '../layouts/Layout.astro';
 import FinalCtaSection from '../components/sections/FinalCtaSection.astro';
-import HomeFamiliarObjects from '../components/sections/home/HomeFamiliarObjects.astro';
-import HomeGoalPaths from '../components/sections/home/HomeGoalPaths.astro';
-import HomeMapPreview from '../components/sections/home/HomeMapPreview.astro';
+import HomeChannel from '../components/sections/home/HomeChannel.astro';
+import HomeHero from '../components/sections/home/HomeHero.astro';
 import HomeOutcomes from '../components/sections/home/HomeOutcomes.astro';
-import HomeEcosystemMap from '../components/sections/home/HomeEcosystemMap.astro';
-import HomePioneerBase from '../components/sections/home/HomePioneerBase.astro';
-import {
-  homeFamiliarObjects,
-  homeFinalCta,
-  homeOutcomes,
-} from '../data/site';
-import { tracks } from '../data/tracks';
-import { t, defaultLocale, localizePath } from '../i18n';
-import type { Locale } from '../i18n';
-import { translateTracks, translateFamiliarObjects, translateOutcomes, translateModules, translateCta } from '../i18n/helpers';
 import { modules } from '../data/modules';
+import { homeFinalCta, homeOutcomes } from '../data/site';
+import { t, defaultLocale } from '../i18n';
+import type { Locale } from '../i18n';
+import { translateCta, translateModules, translateOutcomes } from '../i18n/helpers';
 
 const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
-const translatedTracks = translateTracks(tracks, locale);
-const translatedObjects = translateFamiliarObjects(homeFamiliarObjects, locale);
-const translatedOutcomes = translateOutcomes(homeOutcomes, locale);
-const translatedModules = translateModules(modules, locale);
-const translatedCta = translateCta(homeFinalCta, locale);
 ---
 
 <Layout title={t(locale, 'nav.home')}>
-  <HeroBanner
-    eyebrow={t(locale, 'home.hero.eyebrow')}
-    title={t(locale, 'home.hero.title')}
-    subtitle={t(locale, 'home.hero.subtitle')}
-    description={t(locale, 'home.hero.description')}
-    ctas={[
-      { label: t(locale, 'home.hero.ctaPrimary'), href: localizePath(locale, '/courses'), variant: 'primary' },
-      { label: t(locale, 'home.hero.ctaSecondary'), href: localizePath(locale, '/contact'), variant: 'secondary' },
-    ]}
-  >
-    <Fragment slot="title">
-      {t(locale, 'home.hero.title')}<span class="highlight">{t(locale, 'home.hero.titleHighlight')}</span>
-    </Fragment>
-    <HeroCourseMap slot="anchor" modules={translatedModules} locale={locale} />
-  </HeroBanner>
-
-  <HomeFamiliarObjects objects={translatedObjects} locale={locale} />
-  <HomeOutcomes outcomes={translatedOutcomes} locale={locale} />
-  <HomeGoalPaths tracks={translatedTracks} locale={locale} modules={translatedModules} />
-  <HomeEcosystemMap locale={locale} />
-  <HomePioneerBase locale={locale} />
-  <HomeMapPreview locale={locale} modules={translatedModules} />
-  <FinalCtaSection cta={translatedCta} bordered headingSize="xl" />
+  <HomeHero modules={translateModules(modules, locale)} locale={locale} />
+  <HomeOutcomes outcomes={translateOutcomes(homeOutcomes, locale)} locale={locale} />
+  <HomeChannel locale={locale} />
+  <FinalCtaSection cta={translateCta(homeFinalCta, locale)} />
 </Layout>

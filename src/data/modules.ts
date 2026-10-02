@@ -146,6 +146,8 @@ export interface Module {
   audience: string[];
   deliverables: string[];
   accent: 'red' | 'yellow';
+  /** 仅面向海外交付（M3：套件只有海外无线频段）。矩阵与模块列表据此打标。 */
+  overseasOnly?: boolean;
   cells: Record<LevelId, ModuleCell>;
 
   // ── 以下为可选深度内容 ─────────────────────────────────────────
@@ -1669,6 +1671,7 @@ export const modules: Module[] = [
     id: 'm3',
     slug: 'm3',
     code: 'M3',
+    overseasOnly: true,
     title: '自组网与韧性通信',
     subtitle: '没网没信号也能联通，支持信号中继，快速拉起可查位置、能发消息的应急专网',
     oneLiner:

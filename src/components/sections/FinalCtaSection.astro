@@ -1,57 +1,77 @@
 ---
 import { Icon } from 'astro-icon/components';
-import type { FinalCta } from '../../data/site';
 
-interface Props {
-  cta: FinalCta;
-  bordered?: boolean;
-  headingSize?: 'md' | 'xl';
+interface CtaLink {
+  label: string;
+  href: string;
+  external?: boolean;
 }
 
-const { cta, bordered = false, headingSize = 'md' } = Astro.props as Props;
-const headingClass =
-  headingSize === 'xl'
-    ? 'text-3xl sm:text-4xl lg:text-5xl'
-    : 'text-3xl sm:text-4xl';
+// 全站唯一的页尾 CTA（原 FinalCtaSection 与 ChipCtaSection 合并）。
+// tone="dark" 是该页的深色面；页面中段已有深色面时用 tone="light"。
+interface Props {
+  cta: {
+    title: string;
+    description: string;
+    primary: CtaLink;
+    secondary?: CtaLink;
+    note?: string;
+  };
+  tone?: 'dark' | 'light';
+}
+
+const { cta, tone = 'dark' } = Astro.props as Props;
+const isDark = tone === 'dark';
 ---
 
 <section
   class:list={[
-    'py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-brand-graphite text-white relative',
-    bordered ? 'border-t border-white/10' : '',
+    'section',
+    isDark ? 'bg-brand-graphite text-white' : 'bg-neutral-1 border-t border-neutral-3',
   ]}
 >
-  <div class="relative z-10 max-w-4xl mx-auto text-center" data-reveal>
-    {
-      cta.eyebrow && (
-        <p class="text-xs font-mono font-semibold tracking-widest uppercase text-brand-yellow mb-3">
-          {cta.eyebrow}
-        </p>
-      )
-    }
-    <h2 class:list={[headingClass, 'font-bold tracking-tight mb-4']}>
-      {cta.title}
-    </h2>
-    <p class="text-base sm:text-lg text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed">
-      {cta.description}
-    </p>
-
-    <div class="flex flex-col sm:flex-row gap-3 justify-center">
-      <a
-        href={cta.primary.href}
-        class="focus-ring inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-red text-white rounded-md text-sm font-semibold hover:bg-brand-red-hover transition-colors"
+  <div class="container-page" data-reveal>
+    <div class="max-w-2xl">
+      <h2 class="heading-section">{cta.title}</h2>
+      <p
+        class:list={[
+          'mt-4 text-base leading-relaxed',
+          isDark ? 'text-white/75' : 'text-neutral-8',
+        ]}
       >
-        {cta.primary.label}
-        <Icon name="lucide:arrow-right" class="w-4 h-4" />
-      </a>
+        {cta.description}
+      </p>
+
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a
+          href={cta.primary.href}
+          target={cta.primary.external ? '_blank' : undefined}
+          rel={cta.primary.external ? 'noopener noreferrer' : undefined}
+          class="btn btn-primary focus-ring"
+        >
+          {cta.primary.label}
+          <Icon
+            name={cta.primary.external ? 'lucide:arrow-up-right' : 'lucide:arrow-right'}
+            class="w-4 h-4"
+          />
+        </a>
+        {
+          cta.secondary && (
+            <a
+              href={cta.secondary.href}
+              class:list={['btn focus-ring', isDark ? 'btn-ghost' : 'btn-secondary']}
+            >
+              {cta.secondary.label}
+            </a>
+          )
+        }
+      </div>
+
       {
-        cta.secondary && (
-          <a
-            href={cta.secondary.href}
-            class="focus-ring inline-flex items-center justify-center gap-2 px-6 py-3 text-white rounded-md text-sm font-semibold hover:bg-white/10 transition-colors border border-white/20"
-          >
-            {cta.secondary.label}
-          </a>
+        cta.note && (
+          <p class:list={['mt-5 text-sm', isDark ? 'text-white/55' : 'text-neutral-6']}>
+            {cta.note}
+          </p>
         )
       }
     </div>

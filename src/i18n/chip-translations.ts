@@ -240,6 +240,11 @@ const zhToEn: Record<string, string> = {
   '把城市的锚点，和柴火一起建': 'Build Your City\u2019s Anchor Together with Chaihuo',
   '核心标准只有两条：固定场地 + 持续运营意愿。填写申请表，社区经理将在 3 个工作日内联系你。':
     'Only two core criteria: fixed venue + commitment to ongoing operation. Fill in the application and a community manager will contact you within 3 working days.',
+  招募渠道伙伴: 'Channel partners wanted',
+  '先锋官是我们招募的渠道伙伴：先学会柴火的课，再在自己的城市开课、推广。有固定场地的，可以申请挂牌基地。':
+    'Pioneers are channel partners we recruit: they learn Chaihuo courses first, then teach and promote them in their own city. Organisations with a permanent venue can apply to become a certified Base.',
+  个人申请: 'For individuals',
+  有固定场地的机构申请: 'For organisations with a permanent venue',
 };
 
 const zhToJa: Record<string, string> = {
@@ -434,6 +439,11 @@ const zhToJa: Record<string, string> = {
   '把城市的锚点，和柴火一起建': '街のアンカーを、柴火と一緒に築こう',
   '核心标准只有两条：固定场地 + 持续运营意愿。填写申请表，社区经理将在 3 个工作日内联系你。':
     'コア基準はたった 2 つ：固定会場 + 継続運営の意志。申込フォームにご記入いただければ、コミュニティマネージャーが 3 営業日以内にご連絡します。',
+  招募渠道伙伴: 'チャネルパートナー募集',
+  '先锋官是我们招募的渠道伙伴：先学会柴火的课，再在自己的城市开课、推广。有固定场地的，可以申请挂牌基地。':
+    'パイオニアは当学院が募集するチャネルパートナーです。まず柴火の講座を学び、その後自分の都市で開講・普及を行います。常設の会場をお持ちの場合は、認定拠点に申請できます。',
+  个人申请: '個人向け',
+  有固定场地的机构申请: '常設会場を持つ団体向け',
 };
 
 const zhToEs: Record<string, string> = {
@@ -637,6 +647,11 @@ const zhToEs: Record<string, string> = {
   '把城市的锚点，和柴火一起建': 'Construye el ancla de tu ciudad junto a Chaihuo',
   '核心标准只有两条：固定场地 + 持续运营意愿。填写申请表，社区经理将在 3 个工作日内联系你。':
     'Solo dos criterios: espacio fijo + voluntad de operar a largo plazo. Completa la solicitud y un community manager te contactará en 3 días hábiles.',
+  招募渠道伙伴: 'Buscamos socios de canal',
+  '先锋官是我们招募的渠道伙伴：先学会柴火的课，再在自己的城市开课、推广。有固定场地的，可以申请挂牌基地。':
+    'Los Pioneros son socios de canal que reclutamos: primero aprenden los cursos de Chaihuo y después los imparten y promueven en su ciudad. Quien disponga de un espacio fijo puede solicitar ser Base certificada.',
+  个人申请: 'Para particulares',
+  有固定场地的机构申请: 'Para organizaciones con espacio fijo',
 };
 
 const zhToPt: Record<string, string> = {
@@ -857,6 +872,11 @@ const zhToPt: Record<string, string> = {
   '把城市的锚点，和柴火一起建': 'Construa a Âncora da Cidade Junto com a Chaihuo',
   '核心标准只有两条：固定场地 + 持续运营意愿。填写申请表，社区经理将在 3 个工作日内联系你。':
     'Apenas dois critérios essenciais: espaço fixo + vontade de operação contínua. Preencha o formulário e um gerente de comunidade entrará em contato em até 3 dias úteis.',
+  招募渠道伙伴: 'Buscamos parceiros de canal',
+  '先锋官是我们招募的渠道伙伴：先学会柴火的课，再在自己的城市开课、推广。有固定场地的，可以申请挂牌基地。':
+    'Os Pioneiros são parceiros de canal que recrutamos: primeiro aprendem os cursos da Chaihuo e depois os ministram e divulgam na própria cidade. Quem tem um espaço fixo pode se candidatar a Base certificada.',
+  个人申请: 'Para pessoas físicas',
+  有固定场地的机构申请: 'Para organizações com espaço fixo',
 };
 
 const chipDeepTranslations: Record<string, Record<string, string>> = {

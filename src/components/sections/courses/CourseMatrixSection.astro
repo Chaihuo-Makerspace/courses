@@ -6,7 +6,7 @@ import { levels, levelMeta, modules } from '../../../data/modules';
 import { dt } from '../../../i18n/data-translations';
 import { t } from '../../../i18n/translations';
 import type { Locale } from '../../../i18n';
-import { translateModules } from '../../../i18n/helpers';
+import { translateModules } from '../../../i18n/helpers-legacy';
 import { deepTranslate } from '../../../i18n/module-translations';
 
 interface Props {
@@ -23,7 +23,6 @@ const tLevelMeta = Object.fromEntries(
 <section id="course-matrix" class="scroll-mt-24 py-14 md:py-20 px-4 sm:px-6 lg:px-8">
   <div class="max-w-7xl mx-auto" data-reveal>
     <SectionHeader
-      eyebrow={t(locale, 'courses.matrix.eyebrow')}
       title={dt(locale, 'course.matrixTitle')}
       subtitle={dt(locale, 'course.matrixSubtitle')}
     />

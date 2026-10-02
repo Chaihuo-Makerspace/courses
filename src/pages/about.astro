@@ -10,10 +10,10 @@ import {
   aboutFinalCta,
   aboutStats,
   aboutValues,
-} from '../data/site';
+} from '../data/site-legacy';
 import { t, defaultLocale, localizePath } from '../i18n';
 import type { Locale } from '../i18n';
-import { translateEcosystems, translateValues, translateStats, translateCta } from '../i18n/helpers';
+import { translateEcosystems, translateValues, translateStats, translateCta } from '../i18n/helpers-legacy';
 
 const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
 const translatedEcosystem = translateEcosystems(aboutEcosystem, locale);
@@ -24,7 +24,6 @@ const translatedCta = translateCta(aboutFinalCta, locale);
 
 <Layout title={t(locale, 'about.title')}>
   <HeroBanner
-    eyebrow={t(locale, 'about.hero.eyebrow')}
     title={t(locale, 'about.hero.title')}
     description={t(locale, 'about.hero.description')}
     ctas={[
@@ -40,5 +39,5 @@ const translatedCta = translateCta(aboutFinalCta, locale);
   <AboutEcosystemSection ecosystem={translatedEcosystem} locale={locale} />
   <AboutValuesSection values={translatedValues} locale={locale} />
   <AboutStatsSection stats={translatedStats} locale={locale} />
-  <FinalCtaSection cta={translatedCta} bordered />
+  <FinalCtaSection cta={translatedCta} />
 </Layout>

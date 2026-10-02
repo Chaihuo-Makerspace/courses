@@ -49,11 +49,11 @@ const zh: TranslationDict = {
 
   // Home Hero
   'home.hero.eyebrow': '柴火创客学院',
-  'home.hero.title': '面向真实硬件与现场交付的',
+  'home.hero.title': '七门智能硬件课，\n套件、教案、讲师一次配齐',
   'home.hero.titleHighlight': '系统学习',
   'home.hero.subtitle': '柴火创客学院',
   'home.hero.description':
-    '围绕 M0–M6 七个学习模块，把零基础智能硬件入门、设备互联、多模态 AI、自组网通信、边缘视觉与环境感知整理成可引入、可交付、可共建的学习体系。',
+    'M0 到 M6，每门课都配 Seeed 真实硬件、逐课时教案和验收标准。学校拿去开课，集成商拿去练交付团队。M0 零基础可进，其余六门按方向独立选学。',
 
   'home.hero.ctaPrimary': '查看学习体系',
   'home.hero.ctaSecondary': '申请合作咨询',
@@ -209,6 +209,9 @@ const zh: TranslationDict = {
 
   // Footer
   'footer.since': 'since 2011',
+  'cta.contact': '合作咨询',
+  'cta.courses': '查看学习体系',
+  'cta.about': '关于学院',
 };
 
 const en: TranslationDict = {
@@ -256,11 +259,12 @@ const en: TranslationDict = {
     'Base Program — Chaihuo you can see in the city. With a fixed venue and commitment to ongoing operation, Chaihuo provides kits, courses, brand backing, and work-order flow.',
 
   'home.hero.eyebrow': 'Chaihuo Maker Academy',
-  'home.hero.title': 'Real Hardware, Real Delivery —',
+  'home.hero.title':
+    'Seven smart-hardware courses,\neach with its kit, lesson plans and instructors',
   'home.hero.titleHighlight': 'Systematic Learning',
   'home.hero.subtitle': 'Chaihuo Maker Academy',
   'home.hero.description':
-    'Seven learning modules (M0–M6) covering zero-to-hero hardware fundamentals, device interconnectivity, multimodal AI, mesh networking, edge vision, and environmental sensing — organized into a deliverable, adoptable, and co-buildable curriculum.',
+    'From M0 to M6, every course comes with real Seeed hardware, lesson-by-lesson teaching plans and acceptance criteria. Schools use them to run classes; integrators use them to train delivery teams. M0 needs no prior experience, and the other six can be taken independently by direction.',
   'home.hero.ctaPrimary': 'Explore Courses',
   'home.hero.ctaSecondary': 'Partner With Us',
 
@@ -416,6 +420,9 @@ const en: TranslationDict = {
 
   // Footer
   'footer.since': 'since 2011',
+  'cta.contact': 'Partnership Inquiry',
+  'cta.courses': 'View Courses',
+  'cta.about': 'About the Academy',
 };
 
 const ja: TranslationDict = {
@@ -462,11 +469,11 @@ const ja: TranslationDict = {
     '拠点計画——街に現れる柴火。固定の場と継続運営の意志があれば、柴火が教材・コース・ブランド・受注フローを提供します。',
 
   'home.hero.eyebrow': '柴火創客学院',
-  'home.hero.title': '実機による現場納品のための',
+  'home.hero.title': 'スマートハードウェア7講座。\nキット・教案・講師をまとめて提供',
   'home.hero.titleHighlight': '体系的な学習',
   'home.hero.subtitle': '柴火創客学院',
   'home.hero.description':
-    'M0〜M6の7つの学習モジュールで、ゼロからのハードウェア入門、デバイス連携、マルチモーダルAI、メッシュネットワーク、エッジビジョン、環境センシングを、導入・交付・共同構築可能なカリキュラムに体系化。',
+    'M0からM6まで、どの講座にもSeeedの実機ハードウェア、授業ごとの教案、検収基準が付きます。学校は授業の開講に、インテグレーターは納品チームの育成に使えます。M0は未経験から受講でき、残り6講座は分野ごとに単独で選べます。',
   'home.hero.ctaPrimary': 'コースを見る',
   'home.hero.ctaSecondary': 'パートナーシップを申し込む',
 
@@ -616,6 +623,9 @@ const ja: TranslationDict = {
 
   // Footer
   'footer.since': 'since 2011',
+  'cta.contact': '協業のご相談',
+  'cta.courses': '学習体系を見る',
+  'cta.about': '学院について',
 };
 
 const es: TranslationDict = {
@@ -663,11 +673,12 @@ const es: TranslationDict = {
     'Programa de Bases — Chaihuo visible en tu ciudad. Con un espacio fijo y voluntad de operación continua, Chaihuo aporta kits, cursos, marca y pedidos.',
 
   'home.hero.eyebrow': 'Academia Chaihuo Maker',
-  'home.hero.title': 'Hardware Real, Entrega Real —',
+  'home.hero.title':
+    'Siete cursos de hardware inteligente,\ncon kit, planes de clase e instructores',
   'home.hero.titleHighlight': 'Aprendizaje Sistemático',
   'home.hero.subtitle': 'Academia Chaihuo Maker',
   'home.hero.description':
-    'Siete módulos de aprendizaje (M0–M6) que cubren desde fundamentos de hardware, interconectividad de dispositivos, IA multimodal, redes mesh, visión edge y detección ambiental — organizados en un plan de estudios entregable, adoptable y co-construible.',
+    'De M0 a M6, cada curso incluye hardware real de Seeed, planes de clase sesión por sesión y criterios de aceptación. Los centros educativos los usan para impartir clases; los integradores, para formar a sus equipos de entrega. M0 no requiere experiencia previa y los otros seis se pueden cursar por separado según la orientación.',
   'home.hero.ctaPrimary': 'Explorar Cursos',
   'home.hero.ctaSecondary': 'Colabora con Nosotros',
 
@@ -826,6 +837,9 @@ const es: TranslationDict = {
 
   // Footer
   'footer.since': 'since 2011',
+  'cta.contact': 'Consultar colaboración',
+  'cta.courses': 'Ver sistema curricular',
+  'cta.about': 'Sobre la academia',
 };
 
 const ptBR: TranslationDict = {
@@ -873,11 +887,11 @@ const ptBR: TranslationDict = {
     'Programa de Bases — Chaihuo visível na cidade. Com espaço fixo e vontade de operação contínua, a Chaihuo fornece kits, cursos, marca e demanda.',
 
   'home.hero.eyebrow': 'Academia Chaihuo Maker',
-  'home.hero.title': 'Hardware Real, Entrega Real —',
+  'home.hero.title': 'Sete cursos de hardware inteligente,\ncom kit, planos de aula e instrutores',
   'home.hero.titleHighlight': 'Aprendizado Sistemático',
   'home.hero.subtitle': 'Academia Chaihuo Maker',
   'home.hero.description':
-    'Sete módulos de aprendizado (M0–M6) cobrindo do zero aos fundamentos de hardware, interconectividade de dispositivos, IA multimodal, redes mesh, visão de borda e sensoriamento ambiental — organizados em um currículo entregável, adotável e co-construível.',
+    'De M0 a M6, cada curso vem com hardware real da Seeed, planos de aula sessão por sessão e critérios de aceitação. Escolas usam para abrir turmas; integradores, para treinar equipes de entrega. O M0 não exige experiência prévia e os outros seis podem ser feitos separadamente, conforme a direção.',
   'home.hero.ctaPrimary': 'Explorar Cursos',
   'home.hero.ctaSecondary': 'Seja Nosso Parceiro',
 
@@ -1035,6 +1049,9 @@ const ptBR: TranslationDict = {
 
   // Footer
   'footer.since': 'since 2011',
+  'cta.contact': 'Consultar parceria',
+  'cta.courses': 'Ver grade curricular',
+  'cta.about': 'Sobre a Academia',
 };
 
 const dictionaries: Record<Locale, TranslationDict> = {

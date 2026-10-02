@@ -5,11 +5,11 @@ import FinalCtaSection from '../components/sections/FinalCtaSection.astro';
 import PathDepthSection from '../components/sections/paths/PathDepthSection.astro';
 import PathOrientationStrip from '../components/sections/paths/PathOrientationStrip.astro';
 import PathTracksSection from '../components/sections/paths/PathTracksSection.astro';
-import { pathsFinalCta } from '../data/site';
+import { pathsFinalCta } from '../data/site-legacy';
 import { tracks } from '../data/tracks';
 import { t, defaultLocale, localizePath } from '../i18n';
 import type { Locale } from '../i18n';
-import { translateTracks, translateCta, translateModules } from '../i18n/helpers';
+import { translateTracks, translateCta, translateModules } from '../i18n/helpers-legacy';
 import { modules } from '../data/modules';
 
 const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
@@ -31,5 +31,5 @@ const translatedModules = translateModules(modules, locale);
   <PathOrientationStrip locale={locale} />
   <PathDepthSection locale={locale} />
   <PathTracksSection tracks={translatedTracks} locale={locale} modules={translatedModules} />
-  <FinalCtaSection cta={translatedCta} bordered headingSize="xl" />
+  <FinalCtaSection cta={translatedCta} />
 </Layout>

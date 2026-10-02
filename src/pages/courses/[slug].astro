@@ -18,10 +18,10 @@ import CourseToolchain from '../../components/sections/courses/CourseToolchain.a
 import FinalCtaSection from '../../components/sections/FinalCtaSection.astro';
 import { modules, type Module } from '../../data/modules';
 import { getTracksForModule } from '../../data/tracks';
-import type { FinalCta } from '../../data/site';
+import type { FinalCta } from '../../data/site-legacy';
 import { t, defaultLocale, localeHtmlLang, localizePath } from '../../i18n';
 import type { Locale } from '../../i18n';
-import { translateModule } from '../../i18n/helpers';
+import { translateModule } from '../../i18n/helpers-legacy';
 
 export const prerender = false;
 
@@ -113,5 +113,5 @@ const courseJsonLdSafe = JSON.stringify(courseJsonLd).replace(/</g, '\\u003c');
   <CourseTeacherNotes module={module} locale={locale} />
   <CourseComplianceBoundary module={module} locale={locale} />
   <CourseRelatedTracks relatedTracks={relatedTracks} locale={locale} />
-  <FinalCtaSection cta={courseDetailCta} bordered />
+  <FinalCtaSection cta={courseDetailCta} />
 </Layout>
