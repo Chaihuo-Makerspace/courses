@@ -2,38 +2,42 @@
 import HeroBanner from '../components/HeroBanner.astro';
 import Layout from '../layouts/Layout.astro';
 import FaqSection from '../components/sections/FaqSection.astro';
-import ContactFormsSection from '../components/sections/contact/ContactFormsSection.astro';
-import ContactScenariosSection from '../components/sections/contact/ContactScenariosSection.astro';
+import ContactPartnership from '../components/sections/contact/ContactPartnership.astro';
 import { partnershipForms, scenarios } from '../data/partnerships';
-import { contactFaqs } from '../data/site-legacy';
-import { t, defaultLocale, localizePath } from '../i18n';
+import { contactEmail, contactFaqs } from '../data/site';
+import { t, defaultLocale } from '../i18n';
 import { dt } from '../i18n/data-translations';
 import type { Locale } from '../i18n';
-import { translateScenarios, translatePartnershipForms, translateFaqs } from '../i18n/helpers-legacy';
+import {
+  ctaLink,
+  translateFaqs,
+  translatePartnershipForms,
+  translateScenarios,
+} from '../i18n/helpers';
 
 const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
-const translatedScenarios = translateScenarios(scenarios, locale);
-const translatedForms = translatePartnershipForms(partnershipForms, locale);
-const translatedFaqs = translateFaqs(contactFaqs, locale);
 ---
 
 <Layout title={t(locale, 'contact.title')}>
   <HeroBanner
+    id="partnership-contact"
     title={t(locale, 'contact.hero.title')}
     description={t(locale, 'contact.hero.description')}
     ctas={[
-      { label: t(locale, 'contact.cta.primary'), href: '#partnership-contact', variant: 'primary' },
-      { label: t(locale, 'contact.cta.secondary'), href: localizePath(locale, '/courses'), variant: 'secondary' },
+      {
+        label: `${t(locale, 'contact.mailCta')} · ${contactEmail}`,
+        href: `mailto:${contactEmail}`,
+        variant: 'primary',
+        icon: 'lucide:mail',
+      },
+      { ...ctaLink('courses', locale), variant: 'secondary' },
     ]}
-  >
-    <Fragment slot="title">
-      {t(locale, 'contact.hero.title')}
-      <br />
-      <span class="highlight">{t(locale, 'contact.hero.titleHighlight')}</span>
-    </Fragment>
-  </HeroBanner>
+  />
 
-  <ContactScenariosSection scenarios={translatedScenarios} locale={locale} />
-  <ContactFormsSection partnershipForms={translatedForms} locale={locale} />
-  <FaqSection title={dt(locale, 'section.faqTitle')} faqs={translatedFaqs} />
+  <ContactPartnership
+    scenarios={translateScenarios(scenarios, locale)}
+    forms={translatePartnershipForms(partnershipForms, locale)}
+    locale={locale}
+  />
+  <FaqSection title={dt(locale, 'section.faqTitle')} faqs={translateFaqs(contactFaqs, locale)} />
 </Layout>

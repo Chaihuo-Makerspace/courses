@@ -147,9 +147,10 @@ const zh: TranslationDict = {
   'contact.title': '合作咨询',
   'contact.description': '高校、集成商、企业 —— 找到适合你的合作方式',
   'contact.hero.eyebrow': '合作咨询',
-  'contact.hero.title': '找到适合你的',
+  'contact.hero.title': '三类机构，四种合作形态',
   'contact.hero.titleHighlight': '合作方式',
-  'contact.hero.description': '三种合作场景 × 四种销售形态，匹配你的需求',
+  'contact.hero.description':
+    '按班型与规模报价，不设统一标价。发邮件说明你是哪类机构、想上哪个模块，3 个工作日内给方案。',
   'contact.scenarios.title': '合作场景',
   'contact.scenarios.subtitle': '选择你的角色，找到最适合的合作方式',
   'contact.forms.title': '合作形态',
@@ -223,6 +224,7 @@ const zh: TranslationDict = {
   'course.syllabusSubtitle': '共 {n} 个教学模块。先看有哪几种排课形态，完整大纲在下面展开。',
   'course.syllabusDetails': '展开 {n} 个教学模块的完整大纲与各形态日程',
   'about.history.title': '从一间创客空间到七门课',
+  'contact.mailCta': '发邮件联系',
 };
 
 const en: TranslationDict = {
@@ -364,10 +366,10 @@ const en: TranslationDict = {
   'contact.description':
     'Universities, integrators, enterprises — find the right collaboration model for you',
   'contact.hero.eyebrow': 'Partnership Inquiry',
-  'contact.hero.title': 'Find Your',
+  'contact.hero.title': 'Three kinds of organisation, four ways to work together',
   'contact.hero.titleHighlight': 'Collaboration Model',
   'contact.hero.description':
-    '3 partnership scenarios × 4 course delivery formats, tailored to your needs',
+    'Pricing depends on class format and size, so there is no list price. Email us what kind of organisation you are and which module you want, and we will send a proposal within 3 working days.',
   'contact.scenarios.title': 'Partnership Scenarios',
   'contact.scenarios.subtitle': 'Choose your role and find the best collaboration approach',
   'contact.forms.title': 'Collaboration Formats',
@@ -445,6 +447,7 @@ const en: TranslationDict = {
     '{n} teaching units in total. The delivery formats come first; the full syllabus expands below.',
   'course.syllabusDetails': 'Show the full syllabus of {n} units and the schedule for each format',
   'about.history.title': 'From a makerspace to seven courses',
+  'contact.mailCta': 'Email us',
 };
 
 const ja: TranslationDict = {
@@ -581,9 +584,10 @@ const ja: TranslationDict = {
   'contact.title': 'パートナーシップ',
   'contact.description': '大学、インテグレーター、企業 — あなたに合った連携モデルを見つける',
   'contact.hero.eyebrow': 'パートナーシップ inquiry',
-  'contact.hero.title': 'あなたに合った',
+  'contact.hero.title': '3種類の機関、4つの協業形態',
   'contact.hero.titleHighlight': '連携モデル',
-  'contact.hero.description': '3つの連携シナリオ × 4つのコース提供形態、あなたのニーズに合わせて',
+  'contact.hero.description':
+    '料金はクラス形態と規模に応じてお見積りするため、定価は設けていません。機関の種類と希望するモジュールをメールでお知らせいただければ、3営業日以内にご提案をお送りします。',
   'contact.scenarios.title': '連携シナリオ',
   'contact.scenarios.subtitle': 'あなたの役割を選び、最適な連携方法を見つける',
   'contact.forms.title': '連携形態',
@@ -659,6 +663,7 @@ const ja: TranslationDict = {
     '教育ユニットは全{n}個。まず開講形態を示し、シラバス全体は下で展開できます。',
   'course.syllabusDetails': '全{n}ユニットのシラバスと形態別の日程を表示',
   'about.history.title': '一つのメイカースペースから7つの講座へ',
+  'contact.mailCta': 'メールで相談する',
 };
 
 const es: TranslationDict = {
@@ -803,10 +808,10 @@ const es: TranslationDict = {
   'contact.description':
     'Universidades, integradores, empresas — encuentra el modelo de colaboración adecuado para ti',
   'contact.hero.eyebrow': 'Consulta de Colaboración',
-  'contact.hero.title': 'Encuentra tu',
+  'contact.hero.title': 'Tres tipos de organización, cuatro formas de colaborar',
   'contact.hero.titleHighlight': 'Modelo de Colaboración',
   'contact.hero.description':
-    '3 escenarios de colaboración × 4 formatos de entrega de cursos, adaptados a tus necesidades',
+    'El precio depende del formato y del tamaño de la clase, por lo que no hay tarifa fija. Escríbanos indicando qué tipo de organización es y qué módulo le interesa, y le enviaremos una propuesta en 3 días hábiles.',
   'contact.scenarios.title': 'Escenarios de Colaboración',
   'contact.scenarios.subtitle': 'Elige tu rol y encuentra el mejor enfoque de colaboración',
   'contact.forms.title': 'Formatos de Colaboración',
@@ -885,6 +890,7 @@ const es: TranslationDict = {
   'course.syllabusDetails':
     'Ver el temario completo de {n} unidades y el calendario de cada formato',
   'about.history.title': 'De un makerspace a siete cursos',
+  'contact.mailCta': 'Escríbanos',
 };
 
 const ptBR: TranslationDict = {
@@ -1027,10 +1033,10 @@ const ptBR: TranslationDict = {
   'contact.description':
     'Universidades, integradores, empresas — encontre o modelo de colaboração ideal para você',
   'contact.hero.eyebrow': 'Consulta de Parceria',
-  'contact.hero.title': 'Encontre Seu',
+  'contact.hero.title': 'Três tipos de organização, quatro formas de parceria',
   'contact.hero.titleHighlight': 'Modelo de Colaboração',
   'contact.hero.description':
-    '3 cenários de parceria × 4 formatos de entrega de cursos, adaptados às suas necessidades',
+    'O preço depende do formato e do tamanho da turma, por isso não há tabela fixa. Envie um e-mail dizendo que tipo de organização você é e qual módulo deseja, e enviaremos uma proposta em até 3 dias úteis.',
   'contact.scenarios.title': 'Cenários de Parceria',
   'contact.scenarios.subtitle': 'Escolha seu papel e encontre a melhor abordagem de colaboração',
   'contact.forms.title': 'Formatos de Colaboração',
@@ -1109,6 +1115,7 @@ const ptBR: TranslationDict = {
   'course.syllabusDetails':
     'Ver o programa completo de {n} unidades e o cronograma de cada formato',
   'about.history.title': 'De um makerspace a sete cursos',
+  'contact.mailCta': 'Envie um e-mail',
 };
 
 const dictionaries: Record<Locale, TranslationDict> = {
