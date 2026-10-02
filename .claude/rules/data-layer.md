@@ -8,10 +8,11 @@ fetch. Architecture / data flow: see `ARCHITECTURE.md`.
 
 | File | Owns |
 |---|---|
-| `src/data/modules.ts` | M0–M5 modules + L1/L2/L3 cells per module |
+| `src/data/modules.ts` | M0–M6 modules + L1/L2/L3 cells per module |
 | `src/data/tracks.ts` | 3 goal-oriented course directions |
 | `src/data/partnerships.ts` | 3 scenarios + 4 sales-form kits (3 × 4 IA) |
-| `src/data/site.ts` | Hero / CTA / about / FAQ copy, ecosystem cards, homepage strips |
+| `src/data/site.ts` | Closing CTAs, home outcomes, /about history + named person, contact FAQ and email |
+| `src/data/ecosystem.ts` | Pioneer / Base programme pages and the home channel-partner band |
 | `src/data/icons.ts` | Lucide icon registry (single source for `astro-icon`) |
 | `src/data/index.ts` | Barrel re-export |
 
@@ -21,24 +22,31 @@ fetch. Architecture / data flow: see `ARCHITECTURE.md`.
 ---
 import { modules, levels, levelMeta } from '../data/modules';
 import { tracks, getTracksForModule } from '../data/tracks';
-import {
-  scenarios,
-  partnershipForms,
-  getFormsForScenario,
-  getScenariosForForm,
-} from '../data/partnerships';
+import { scenarios, partnershipForms } from '../data/partnerships';
 ---
 ```
 
 ## Editing rules
 
-- **Module combination rule** — M0 is the zero-base flagship entry; M1–M5
-  are five independently readable industry directions. M0 is layered A/B/C
-  by hardware platform (mapped onto the L1/L2/L3 rows); M5's L3 is 开发中
-  (`durationDays: 0`). Tracks are 3 goal directions (`make-with-ai` M0,
-  `build-ai-products` M2·M4, `solutions` M1·M3·M5) — they group by goal, not
-  a fixed `M0 → … → M5` sequence. Use `goal` and `tagline` on each Track to
-  surface intent.
+- **Module combination rule** — M0 is the entry course for beginners; M1–M6
+  can each be run on their own. M0 is layered A/B/C by hardware platform
+  (mapped onto the L1/L2/L3 cells). Tracks are 3 goal directions
+  (`make-with-ai` M0, `build-ai-products` M2·M4·M6, `solutions` M1·M3·M5) —
+  they group by goal, not a fixed `M0 → … → M6` sequence.
+- **zh lives here and only here** — pages read zh-CN straight from these
+  files. Do not repeat zh copy in `src/i18n/data-translations.ts`; its zh
+  block is for interface strings with no data file behind them. Other
+  locales are looked up by each item's stable `id`.
+- **Changing a Chinese string in `modules.ts` or `ecosystem.ts`** changes
+  its dictionary key: those two files are translated by exact source string.
+  Add the new key to all four locale dictionaries (`module-{en,ja,es,pt}.ts`
+  or `chip-translations.ts`) in the same commit, or that string silently
+  falls back to Chinese in the other locales.
+- **Every visitor-facing number or factual claim needs a source** — a
+  comment next to it naming the source document, the public fact, or the
+  date the owner confirmed it. No source, no claim.
+- **No prices.** Use the action wording: 按班型与规模报价，邮件后 3 个工作日内
+  给方案.
 - **Bidirectional cross-references** — scenario `applicableForms` ↔ form
   `suitableScenarios` are mirrored. Keep them consistent when editing
   either side.

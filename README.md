@@ -1,40 +1,47 @@
-# 柴火创客学院 · AIoT 实战课程体系
+# 柴火创客学院 · 官网
 
-> **让新技术为你所用 — 掌握 AIoT 实战技能，解决真实场景问题**
->
-> 柴火创客学院是柴火创客生态的技术赋能平台，背靠 Seeed Studio（全球开源硬件领导者）与柴火创客空间（2011 年成立的中国创客先驱）。我们不提供解决方案——我们培养人掌握新技术整合能力，让每一个个体都能拥有"一个人也能上场"的全栈交付能力。
+柴火创客学院隶属于柴火创客空间（2011 年在深圳成立），课程使用 Seeed Studio
+在售的硬件。我们培养人掌握新技术整合能力，不提供解决方案：提供的是课程、
+硬件套件和讲师培训，教会机构自己的团队做交付。
 
-## 📚 课程矩阵 · M0–M6 × L1/L2/L3
+这个仓库是学院的招生招商站，面向院校、集成商和企业。
 
-7 个模块 × 3 个层级的二维课程体系。M0 是所有人的起点；M1–M6 按方向各自独立，也可与 M0/M5 组合成完整交付路径。
+## 课程矩阵 · M0–M6 × L1/L2/L3
 
-| 模块 | 方向 | 关键技术栈 |
+七个模块，每个模块三档深度。M0 是零基础入口，M1–M6 可以单独开课。
+
+| 模块 | 方向 | 主要技术 |
 | :--- | :--- | :--- |
-| **M0** | 零基础智能硬件入门 · Smart Hardware Fundamentals | Grove 套件 · Wio Terminal · XIAO ESP32S3 Sense |
-| **M1** | 设备互联与智能管控 · Device Interconnection and Intelligent Management | Home Assistant OS · ESPHome · Node-RED · Modbus RTU/TCP |
-| **M2** | 多模态 AI 交互 · Multimodal AI Interaction | SenseCraft AI · SenseCAP Watcher · MCP 协议 · Jetson Orin NX |
-| **M3** | 自组网与韧性通信 · Self-organizing Mesh & Resilient Communication (Overseas Only) | LoRa · Meshtastic Mesh 协议 · Wio Tracker L1 Pro · Node-RED |
-| **M4** | 边缘视觉 AI · Edge Vision AI | reCamera · Jetson Orin NX · Frigate NVR · YOLO · TensorRT |
-| **M5** | 环境感知与数据采集 · Environmental Sensing & Data Acquisition | Modbus RTU · 4G全网通 · LoRaWAN · SenseCraft Data · Node-RED |
-| **M6** | 机器人控制与具身智能 · Robotic Control & Embodied Intelligence | SenseCraft Robotics · Pinocchio · Motorbridge SDK · LeRobot · Isaac Sim |
+| **M0** | 零基础智能硬件入门 | Grove 套件 · Wio Terminal · XIAO ESP32S3 Sense |
+| **M1** | 设备互联与智能管控 | Home Assistant OS · ESPHome · Node-RED · Modbus RTU/TCP |
+| **M2** | 多模态 AI 交互 | SenseCraft AI · SenseCAP Watcher · MCP 协议 · Jetson Orin NX |
+| **M3** | 自组网与韧性通信（仅海外交付） | LoRa · Meshtastic · Wio Tracker L1 Pro · Node-RED |
+| **M4** | 边缘视觉 AI | reCamera · Jetson Orin NX · Frigate NVR · YOLO · TensorRT |
+| **M5** | 环境感知与数据采集 | Modbus RTU · 4G · LoRaWAN · SenseCraft Data · Node-RED |
+| **M6** | 机器人控制与具身智能 | SenseCraft Robotics · Pinocchio · Motorbridge SDK · LeRobot |
 
-每个模块内部再按 **L1 入门 → L2 进阶 → L3 实战** 三阶递进：L1 跑通 demo，L2 独立完成小项目，L3 具备可交付的系统能力。
+三档深度：**L1 展示层**（1 天）· **L2 顾问层**（2–3 天）· **L3 设计层**（3–5 天）。
+M0 按硬件平台分 A / B / C 三层，完整版 16–20 小时。
 
-### 🎯 推荐学习路径 (Tracks)
+三个方向按目标分组，不是固定顺序：
 
-- **用 AI 造物** — `M0`（零基础旗舰入口）
-- **造 AI 的物** — `M2 → M4 → M6`（多模态 AI 交互 → 边缘视觉 AI → 机器人控制与具身智能）
-- **解决方案** — `M1 · M3 · M5`（设备互联 · 自组网通信 · 环境感知）
+- **用 AI 造物** — M0
+- **造 AI 的物** — M2 · M4 · M6
+- **解决方案** — M1 · M3 · M5
 
-## 🤝 合作体系 · 3 类场景 × 4 种形态
+## 合作 · 三类对象 × 四种形态
 
-| | A · 标准课程授权 | B · 联合课程共建 | C · 企业定制内训 | D · 战略联合交付 |
+| | A 裸硬件套件 | B 标准教学套件 | C 全托交付套件 | D 师资培训套件 |
 | :--- | :---: | :---: | :---: | :---: |
-| **高校 · 职业院校** | ✓ | ✓ |  | ✓ |
-| **集成商 · 方案商** |  | ✓ | ✓ |  |
-| **企业 · 产业端** |  |  | ✓ | ✓ |
+| **高校 · 职业院校** | ✓ | ✓ | ✓ | ✓ |
+| **集成商 · 方案商** | ✓ | ✓ | ✓ | ✓ |
+| **企业 · 产业端** |  | ✓ | ✓ |  |
 
-## 🚀 开发与部署
+按班型与规模报价，站内不写价格。合作意向发邮件到 business@chaihuo.org。
+
+以上内容的唯一来源是 `src/data/*.ts`；这里只是摘要，以数据文件为准。
+
+## 开发与部署
 
 本站基于 **Astro 6 + Tailwind CSS v4 + Preline UI v4** 构建，服务端输出模式（`@astrojs/node` standalone），课程详情页按请求渲染（SSR，以适配请求语言）。
 
@@ -56,9 +63,8 @@ cd deploy
 
 完整部署说明见 [deploy/DEPLOYMENT.md](./deploy/DEPLOYMENT.md)。
 
-## 📖 相关文档
+## 相关文档
 
-- [CLAUDE.md](./CLAUDE.md) — AI 协作指南 · 架构速览
-- [docs/design-system/MASTER.md](./docs/design-system/MASTER.md) — 完整视觉设计规范（配色、字体、组件）
-- [docs/design-system/QUICK-REFERENCE.md](./docs/design-system/QUICK-REFERENCE.md) — 开发速查卡
-- [AGENTS.md](./AGENTS.md) — AI 协作补充说明
+- [AGENTS.md](./AGENTS.md) — 协作规则与命令
+- [ARCHITECTURE.md](./ARCHITECTURE.md) — 仓库地图与数据流
+- [docs/DESIGN.md](./docs/DESIGN.md) — 设计系统与每页契约
