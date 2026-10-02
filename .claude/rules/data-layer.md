@@ -44,10 +44,10 @@ import {
   either side.
 - **Don't reintroduce removed collections** — `courses` /
   `classic-courses` / `testimonials` content collections were retired with
-  the matrix refactor. The only Astro content collection that remains is
-  `partners` (homepage logo grid).
-- **No inline forms** — partnership intake is QR → external page. Don't
-  add `<form>` elements or contact-form components.
+  the matrix refactor. No Astro content collection remains; the placeholder
+  `partners` collection was deleted (no real partner logos exist yet).
+- **No inline forms** — partnership intake is a `mailto:` link on `/contact`.
+  Don't add `<form>` elements or contact-form components.
 
 ## Side effects when editing
 

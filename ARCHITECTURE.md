@@ -20,9 +20,6 @@ positioning: **培养人掌握新技术整合能力**, not "提供解决方案".
   `<slot name="head" />` for per-page extras (JSON-LD, extra meta).
 - `src/data/*.ts` — typed data layer; **single source of truth for all
   marketing content**.
-- `src/content/partners/` — only remaining Astro content collection
-  (homepage logo grid). `src/content.config.ts` declares its schema via the
-  `glob` loader per Astro 6.
 - `src/styles/` — Tailwind v4 + brand tokens (`themes/theme.css`).
 
 ## Course Matrix (Two-Dimensional)
@@ -57,8 +54,8 @@ Tracks group modules by goal, not by a fixed `M0 → … → M6` sequence.
 - Each scenario cross-links to applicable forms via `applicableForms`
   (anchor `#form-{code}` on `/contact`); forms cross-link back via
   `suitableScenarios` (anchor `#scenario-{id}`).
-- Intake is **QR code → external page** per project convention. No inline
-  web forms anywhere.
+- Intake is a **`mailto:` link** to business@chaihuo.org on `/contact`. No
+  inline web forms anywhere.
 
 ## Data Flow
 

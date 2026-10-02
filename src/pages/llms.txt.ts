@@ -24,7 +24,7 @@ export const GET: APIRoute = (context) => {
     '学习体系为 M0–M6 × L1/L2/L3 二维矩阵：七个模块（横轴，M0 为零基础旗舰入口，M1–M6 为六大行业方向）' +
       '× 三个掌握深度（纵轴：L1 展示层 / L2 顾问层 / L3 设计层），配三大学习方向（用 AI 造物 / 造 AI 的物 / 解决方案）。' +
       '销售矩阵为 3 类对象（高校/集成商/企业）× 4 种销售形态（A 裸硬件 / B 标准教学 / C 全托交付 / D 师资培训）。' +
-      '合作意向通过 QR 码引导到外部登记页，本站不提供内嵌表单。',
+      '合作意向通过邮件 business@chaihuo.org 联系，本站不提供内嵌表单。',
   );
   lines.push('');
   lines.push(
@@ -81,7 +81,9 @@ export const GET: APIRoute = (context) => {
   lines.push(`- [学习总览](${base}/courses): M0–M6 × L1/L2/L3 完整矩阵`);
 
   lines.push(`- [关于学院](${base}/about): 生态背景与定位`);
-  lines.push(`- [合作申请](${base}/contact): 通过 QR 码进入登记页`);
+  lines.push(
+    `- [合作咨询](${base}/contact): 三类合作对象与四种销售形态，邮件 business@chaihuo.org 联系`,
+  );
   lines.push(`- [先锋官计划](${base}/pioneer): 技术型 / 链接型个人加入计划，注册跳转 map.seeed.cc`);
   lines.push(`- [基地计划](${base}/base): 城市级实体空间节点申请，注册跳转 map.seeed.cc`);
   lines.push(`- [创客生态分布图](https://map.seeed.cc): 全球柴火生态节点地图与注册入口`);

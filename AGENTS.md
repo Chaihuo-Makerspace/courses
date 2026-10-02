@@ -44,8 +44,8 @@ work demands.
 - Do not commit AI process artifacts (`docs/` except `docs/DESIGN.md`,
   `.claude/` except `.claude/rules/`, `.superpowers/`). They are gitignored
   intentionally. `docs/DESIGN.md` is the one committed design-system doc.
-- Do not put inline web forms anywhere — partnership intake is QR → external
-  page, per project convention.
+- Do not put inline web forms anywhere — partnership intake is a `mailto:`
+  link to business@chaihuo.org on `/contact`.
 
 ## Commands
 
