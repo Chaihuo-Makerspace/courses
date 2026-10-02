@@ -47,7 +47,8 @@ export async function getStaticPaths() {
 }
 ```
 
-Applied to `/courses/[slug]` and `/llms.txt`. Everything else is SSR via
+Applied to `/llms.txt` only. Course detail pages (`/courses/[slug]`) are SSR
+so they can respect the request locale; everything else is SSR via
 `output: 'server'`.
 
 ## `<head>` extras — use the named slot
