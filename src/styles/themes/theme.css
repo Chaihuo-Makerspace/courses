@@ -587,3 +587,11 @@
 
 /* Custom variant for hover */
 @custom-variant hover (&:hover);
+
+/* 得意黑没有日文汉字字形：日语标题整行用正文字体，避免一行里混两种字体。
+ * 写在 layer 之外，才能压过 utilities 层里的 .font-display。 */
+html[lang="ja"] .font-display,
+html[lang="ja"] .heading-section {
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
