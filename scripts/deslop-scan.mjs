@@ -24,12 +24,15 @@ const RULES = [
     label: 'zh marketing clichés',
     pattern: /赋能|打造|一站式|全方位|深耕|闭环|轻松实现|轻松掌控|无限可能|之旅/g,
     why: 'AI-flavored zh marketing filler; replace with concrete claims per docs/DESIGN.md voice.',
+    // DESIGN.md §5 has to name the banned words in order to ban them.
+    exclude: ['docs/DESIGN.md'],
   },
   {
     id: 'zh-japanese-flavor',
     label: 'Japanese-flavored words in zh copy',
     pattern: /学园|物语|匠心|极致|臻选/g,
     why: 'Register drift in zh copy (学园 rename is tracked separately; others are faux-Japanese garnish).',
+    exclude: ['docs/DESIGN.md'],
   },
   {
     id: 'bg-white-solid',

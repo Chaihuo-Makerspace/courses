@@ -1182,12 +1182,12 @@ export const enDict: Record<string, string> = {
   '轻量视觉推理主机，8GB 内存，6 TOPS 算力':
     'Lightweight vision inference host, 8GB RAM, 6 TOPS compute',
   '运行事件联动与轻量视频监控看板的边缘智能控制器。配备 8GB 内存与 6 TOPS NPU 算力，适用于 L1/L2 阶段的轻量视觉推理与 Node-RED 事件联动。可作为 Frigate 与 Home Assistant 的轻量部署主机。':
-    'Edge intelligence controller running event联动 and lightweight video monitoring dashboards. Equipped with 8GB RAM and 6 TOPS NPU compute, suitable for L1/L2 lightweight vision inference and Node-RED event联动. Can serve as a lightweight deployment host for Frigate and Home Assistant.',
+    'Edge intelligence controller running event-triggered automation and lightweight video monitoring dashboards. Equipped with 8GB RAM and 6 TOPS NPU compute, suitable for L1/L2 lightweight vision inference and Node-RED event联动. Can serve as a lightweight deployment host for Frigate and Home Assistant.',
   'reComputer RK3576-30 边缘 AI 盒子': 'reComputer RK3576-30 Edge AI Box',
   '单机位视觉节点，端侧轻量目标检测与 RTSP 推流':
     'Single-camera vision node, on-device lightweight object detection and RTSP streaming',
   '模块化开源 AI 相机，2002w 支持 Wi-Fi/AP 模式，2002 支持百兆有线以太网。内置 NPU 推理与 Node-RED 零代码编排，即插即用，适用于 L1 单点轻量节点体验与 L2 端侧自动化联动。支持 RTSP 视频流输出（554 端口）。':
-    'Modular open-source AI camera; 2002w supports Wi-Fi/AP mode, 2002 supports 100Mbps wired Ethernet. Built-in NPU inference and Node-RED zero-code orchestration, plug-and-play, suitable for L1 single-point lightweight node experience and L2 on-device automation联动. Supports RTSP video stream output (port 554).',
+    'Modular open-source AI camera; 2002w supports Wi-Fi/AP mode, 2002 supports 100Mbps wired Ethernet. Built-in NPU inference and Node-RED zero-code orchestration, plug-and-play, suitable for L1 single-point lightweight node experience and L2 on-device automation. Supports RTSP video stream output (port 554).',
   'reCamera 2002w/2002 开源 AI 相机': 'reCamera 2002w/2002 Open AI Camera',
   '多机位主力相机，PoE 单线供电推流':
     'Multi-camera primary camera, PoE single-cable power and streaming',
@@ -1492,7 +1492,7 @@ export const enDict: Record<string, string> = {
   '本地自动化主机，运行Node-RED与API对接':
     'Local automation host, running Node-RED and API integration',
   '带隔离RS485与双网口的边缘智能控制器；通过官方安装脚本部署Node-RED，访问http://[设备IP]:1880进行本地自动化编排，实现阈值判断与执行机构联动；12V/2A独立供电。':
-    'Edge intelligence controller with isolated RS485 and dual Ethernet ports; deploy Node-RED via the official installation script, access http://[device IP]:1880 for local automation orchestration, implementing threshold judgment and actuator联动; 12V/2A independent power supply.',
+    'Edge intelligence controller with isolated RS485 and dual Ethernet ports; deploy Node-RED via the official installation script, access http://[device IP]:1880 for local automation orchestration, implementing threshold judgment and actuator control; 12V/2A independent power supply.',
   '另配SenseCAP Outdoor Gateway（114992982）、SenseCAP S2100 Data Logger（114992872）、SenseCAP S2105土壤传感器（114992871）、SenseCAP S2103 CO2/温湿度传感器（114992869）等LoRaWAN路线硬件（待补图），以及4G物联网SIM卡、屏幕、整体电源设计、路由器等通用配件。':
     'Additionally configured with SenseCAP Outdoor Gateway (114992982), SenseCAP S2100 Data Logger (114992872), SenseCAP S2105 soil sensor (114992871), SenseCAP S2103 CO2/temperature-humidity sensor (114992869) and other LoRaWAN route hardware (images pending), as well as 4G IoT SIM card, screen, integrated power design, router, and other common accessories.',
   'SenseCAP 传感器 + SenseCraft Data': 'SenseCAP Sensors + SenseCraft Data',
