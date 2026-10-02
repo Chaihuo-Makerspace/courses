@@ -24,7 +24,7 @@ const { relatedTracks, locale } = Astro.props as Props;
         <div class="grid md:grid-cols-2 gap-6 mt-8">
           {relatedTracks.map((t) => (
             <a
-              href={localizePath(locale, `/paths#track-${t.id}`)}
+              href={localizePath(locale, `/courses#track-${t.id}`)}
               class="group panel-light panel-interactive border border-neutral-3 hover:border-brand-black/30 p-5 flex items-center gap-4 focus-ring"
               aria-label={`${dt(locale, 'course.relatedTracksAria')}: ${dt(locale, `track.${t.id}.name`)}`}
             >

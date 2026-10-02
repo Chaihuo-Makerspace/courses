@@ -77,7 +77,8 @@ const zh: TranslationDict = {
 
   // Courses
   'courses.title': '学习体系',
-  'courses.description': 'M0–M6 七大学习模块，覆盖从硬件入门到行业交付的完整技术栈',
+  'courses.description':
+    '七个模块（M0–M6），每个模块分 L1 / L2 / L3 三档深度。每行是一个模块，每列是一档深度；格子里写的是这一档的课名、天数和学完的产出。',
   'courses.hero.eyebrow': 'M0–M6 × L1/L2/L3',
 
   'courses.overview': '学习总览',
@@ -288,7 +289,7 @@ const en: TranslationDict = {
   'courses.title': 'Learning System',
   'courses.hero.eyebrow': 'M0–M6 × L1/L2/L3',
   'courses.description':
-    'Seven learning modules (M0–M6) covering the complete tech stack from hardware basics to industry delivery',
+    "Seven modules (M0–M6), each offered at three depths: L1, L2 and L3. Each row is a module and each column a depth; a cell gives that level's course title, length in days and what learners produce.",
   'courses.overview': 'Learning Overview',
   'courses.matrix': 'Learning Matrix',
   'courses.tracks': 'Learning Paths',
@@ -496,7 +497,7 @@ const ja: TranslationDict = {
   'courses.title': '学習体系',
   'courses.hero.eyebrow': 'M0–M6 × L1/L2/L3',
   'courses.description':
-    'ハードウェア基礎から業界納品までの完全な技術スタックをカバーする7つの学習モジュール（M0〜M6）',
+    '7つのモジュール（M0〜M6）を、それぞれL1・L2・L3の3段階の深さで提供します。行がモジュール、列が深さで、各セルにはそのレベルの講座名、日数、修了時の成果物を記載しています。',
   'courses.overview': '学習概要',
   'courses.matrix': '学習マトリックス',
   'courses.tracks': '学習パス',
@@ -703,7 +704,7 @@ const es: TranslationDict = {
   'courses.title': 'Sistema de Aprendizaje',
   'courses.hero.eyebrow': 'M0–M6 × L1/L2/L3',
   'courses.description':
-    'Siete módulos de aprendizaje (M0–M6) que cubren la pila tecnológica completa desde fundamentos de hardware hasta entrega industrial',
+    'Siete módulos (M0–M6), cada uno en tres niveles de profundidad: L1, L2 y L3. Cada fila es un módulo y cada columna un nivel; la celda indica el título del curso, su duración en días y lo que produce el alumnado.',
   'courses.overview': 'Resumen de Aprendizaje',
   'courses.matrix': 'Matriz de Aprendizaje',
   'courses.tracks': 'Rutas de Aprendizaje',
@@ -916,7 +917,7 @@ const ptBR: TranslationDict = {
   'courses.title': 'Sistema de Aprendizagem',
   'courses.hero.eyebrow': 'M0–M6 × L1/L2/L3',
   'courses.description':
-    'Sete módulos de aprendizado (M0–M6) cobrindo a stack tecnológica completa, dos fundamentos de hardware à entrega industrial',
+    'Sete módulos (M0–M6), cada um em três níveis de profundidade: L1, L2 e L3. Cada linha é um módulo e cada coluna um nível; a célula traz o título do curso, a duração em dias e o que os alunos produzem.',
   'courses.overview': 'Visão Geral de Aprendizado',
   'courses.matrix': 'Matriz de Aprendizado',
   'courses.tracks': 'Trilhas de Aprendizado',

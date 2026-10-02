@@ -280,9 +280,9 @@ const zh: Record<string, string> = {
   'course.explorer.listView': '紧凑列表',
   'course.explorer.switchCard': '切换至卡片视图',
   'course.explorer.switchList': '切换至列表视图',
-  'course.tracksTitle': '三大学习方向',
+  'course.tracksTitle': '七个模块，分三个方向',
   'course.tracksSubtitle':
-    '这些方向不是人群标签，而是常见引入方式：用 AI 造物（M0）、造 AI 的物（M2 · M4）、解决方案（M1 · M3 · M5）。',
+    '方向按目标分组，不是固定的学习顺序。M0 是零基础入口，其余六门可以单独开课。',
 
   'moduleCard.coreHardware': '核心硬件',
   'moduleCard.keyCapabilities': '关键能力',
@@ -379,17 +379,18 @@ const zh: Record<string, string> = {
 
 const en: Record<string, string> = {
   'track.make-with-ai.name': 'Build with AI',
-  'track.make-with-ai.goal': 'Create with AI tools, zero coding experience required',
+  'track.make-with-ai.goal':
+    'No coding background needed: AI writes the code and you build working hardware',
   'track.make-with-ai.desc':
-    'Let AI be your programmer while you be the maker. Use natural language to drive AI code generation, and create your own smart hardware projects.',
+    'M0 covers three hardware platforms in one course: Grove for sensing, Wio Terminal for interaction and XIAO ESP32S3 Sense for image classification. AI writes the code; learners are responsible for stating the requirement clearly and getting the project to work.',
   'track.build-ai-products.name': 'Build AI Products',
-  'track.build-ai-products.goal': 'Develop products with AI capabilities',
+  'track.build-ai-products.goal': 'Build terminals and devices with AI capabilities',
   'track.build-ai-products.desc':
-    'From multimodal AI interaction to edge vision AI, build smart terminals and products that understand business needs.',
+    'M2 makes a terminal that understands speech and sees; M4 makes cameras detect targets and raise alerts; M6 makes a robotic arm grasp based on vision. The three modules cover voice interaction, visual detection and robot control.',
   'track.solutions.name': 'Solutions',
-  'track.solutions.goal': 'System integration & scenario deployment',
+  'track.solutions.goal': 'Integrate multiple devices and networks into one site',
   'track.solutions.desc':
-    'Combine device interconnectivity, mesh networking, and environmental sensing into deliverable industry solutions.',
+    'M1 brings devices from different brands onto one local platform; M3 builds a network where there is no public connectivity; M5 brings field sensor data back. Suited to integration teams working on building, emergency, agriculture and environmental projects.',
 
   'home.objects.title': 'Learning starts with real hardware and field materials',
   'home.objects.subtitle':
@@ -662,9 +663,9 @@ const en: Record<string, string> = {
   'course.explorer.listView': 'Compact List',
   'course.explorer.switchCard': 'Switch to card view',
   'course.explorer.switchList': 'Switch to list view',
-  'course.tracksTitle': 'Three Learning Tracks',
+  'course.tracksTitle': 'Seven modules in three directions',
   'course.tracksSubtitle':
-    'Build with AI (M0), Build AI Products (M2 · M4), Solutions (M1 · M3 · M5).',
+    'Directions group modules by goal, not by a fixed order. M0 is the entry point for beginners; the other six can each be run on their own.',
 
   'moduleCard.coreHardware': 'Core Hardware',
   'moduleCard.keyCapabilities': 'Key Capabilities',
@@ -738,9 +739,9 @@ const en: Record<string, string> = {
     'After selecting a combination, return to the learning system to confirm modules and levels',
   'cta.paths.desc':
     'The learning path guide only helps narrow down options. For actual implementation, you also need to review module content, classroom experiments, hardware lists, delivery materials, and delivery formats.',
-  'cta.courses.title': 'Bring learning modules into your team or project site',
+  'cta.courses.title': 'Once the module and depth are chosen, we can talk about running it.',
   'cta.courses.desc':
-    'If you already have a clear direction, we can discuss Bare Hardware Kit, Standard Teaching Kit, Full-Delivery, or Train-the-Trainer. We will recommend module combinations and practice depth based on your goals.',
+    'Tell us the module, the depth (L1 / L2 / L3) and the class size. Pricing depends on class format and size; we send a proposal within 3 working days of your email.',
   'cta.about.title': 'Want to bring this ecosystem capability to your organization?',
   'cta.about.desc':
     'From Bare Hardware Kit to Full-Delivery, you can choose the delivery format based on your goals. Leave your contact information and we will provide partnership recommendations within 3 business days.',
@@ -767,17 +768,17 @@ const en: Record<string, string> = {
 
 const ja: Record<string, string> = {
   'track.make-with-ai.name': 'AIでものづくり',
-  'track.make-with-ai.goal': 'AIツールで創作を支援、プログラミング未経験でもすぐに始められる',
+  'track.make-with-ai.goal': 'プログラミング未経験でも、AIにコードを書かせてハードウェア作品を作る',
   'track.make-with-ai.desc':
-    'AIをプログラマーに、あなたをメイカーに。自然言語でAIにコードを書かせ、ゼロからでもセンシング、インタラクション、エッジビジョンまで、自分だけのスマートハードウェア作品を作り上げます。',
+    'M0は1講座で3種類のハードウェアを扱います。Groveでセンシング、Wio Terminalでインタラクション、XIAO ESP32S3 Senseで画像分類。コードはAIが書き、受講者は要件を明確に伝え、作品を動く状態に仕上げます。',
   'track.build-ai-products.name': 'AIプロダクト開発',
-  'track.build-ai-products.goal': 'AI機能を備えた製品を開発する',
+  'track.build-ai-products.goal': 'AI機能を備えた端末・機器を作る',
   'track.build-ai-products.desc':
-    'マルチモーダルAIインタラクションからエッジビジョンAIまで、ビジネスを理解し、ニーズを見抜き、ミリ秒で応答するスマート端末と製品を生み出します。',
+    'M2は音声を理解し映像を認識する端末、M4は対象を検出してアラートを出すカメラ、M6は視覚結果に基づいて把持するロボットアームを扱います。3つのモジュールはそれぞれ音声対話、視覚検出、ロボット制御に対応します。',
   'track.solutions.name': 'ソリューション',
-  'track.solutions.goal': 'システム統合と現場導入',
+  'track.solutions.goal': '複数の機器とネットワークを一つの現場に統合する',
   'track.solutions.desc':
-    'デバイス連携、アドホックネットワーク通信、環境センシングの3つのラインを組み合わせ、マルチベンダーデバイス、オフグリッド通信、全域センシングを統合し、納品可能な業界ソリューションを構築します。',
+    'M1は複数ブランドの機器を一つのローカルプラットフォームに接続し、M3は公衆網のない場所でネットワークを構築し、M5は屋外センサーのデータを回収します。ビル、防災、農業、環境分野の案件を手がけるインテグレーションチームに向いています。',
   'home.objects.title': '学習は本物のハードウェアと現場の教材から始まります',
   'home.objects.subtitle':
     'LED、センサー、ゲートウェイ、カメラ、空間デバイス、納品ドキュメント——これらは概念の入口ではなく、授業実験、プロジェクト演習、協業納品で使われる実際の教材です。',
@@ -1049,9 +1050,9 @@ const ja: Record<string, string> = {
   'course.explorer.listView': 'コンパクトリスト',
   'course.explorer.switchCard': 'カードビューに切り替え',
   'course.explorer.switchList': 'リストビューに切り替え',
-  'course.tracksTitle': '3つの学習方向',
+  'course.tracksTitle': '7つのモジュール、3つの方向',
   'course.tracksSubtitle':
-    'これらの方向はユーザーラベルではなく、一般的な導入方法です：AIでものづくり（M0）、AIプロダクト開発（M2 · M4）、ソリューション（M1 · M3 · M5）。',
+    '方向は目的別のグループ分けで、決まった受講順ではありません。M0は未経験者向けの入口で、残りの6講座はそれぞれ単独で開講できます。',
   'moduleCard.coreHardware': 'コアハードウェア',
   'moduleCard.keyCapabilities': 'キー能力',
   'moduleCard.viewDetail': '詳細を見る',
@@ -1119,9 +1120,9 @@ const ja: Record<string, string> = {
   'cta.paths.title': '組み合わせを選んだら、学習体系に戻ってモジュールとレベルを確認',
   'cta.paths.desc':
     'パスガイドは範囲を絞り込むためのものです。実際の導入時には、モジュール内容、授業実験、ハードウェアリスト、納品教材、販売形態も確認する必要があります。',
-  'cta.courses.title': '学習モジュールをあなたのチーム、プロジェクト現場に導入する',
+  'cta.courses.title': 'モジュールと深さが決まれば、開講の相談ができます。',
   'cta.courses.desc':
-    'すでに明確な方向性をお持ちでしたら、Bare Hardware Kit、Standard Teaching Kit、Full-Delivery、Train-the-Trainerについて引き続きご相談いただけます。目標に応じてモジュール構成と実践深度を推奨いたします。',
+    'モジュール、深さ（L1 / L2 / L3）、クラス規模をお知らせください。お見積りはクラス形態と規模に応じて行い、メール受領後3営業日以内にご提案をお送りします。',
   'cta.about.title': 'このエコシステムの力をあなたの組織に導入しませんか？',
   'cta.about.desc':
     'Bare Hardware KitからFull-Deliveryまで、あなたの目標に応じて販売形態を選択できます。ご意向をお知らせいただければ、3営業日以内に協業のご提案をいたします。',
@@ -1148,17 +1149,18 @@ const ja: Record<string, string> = {
 
 const es: Record<string, string> = {
   'track.make-with-ai.name': 'Crear con IA',
-  'track.make-with-ai.goal': 'Crear con herramientas de IA, sin necesidad de programación previa',
+  'track.make-with-ai.goal':
+    'Sin saber programar: la IA escribe el código y usted construye hardware que funciona',
   'track.make-with-ai.desc':
-    'Deje que la IA programe y usted sea el maker. Use lenguaje natural para guiar a la IA a escribir código, y cree dispositivos inteligentes propios — desde percepción e interacción hasta visión en el borde — sin experiencia previa.',
+    'M0 recorre tres plataformas de hardware en un solo curso: Grove para la percepción, Wio Terminal para la interacción y XIAO ESP32S3 Sense para la clasificación de imágenes. La IA escribe el código; el alumnado se encarga de expresar bien el requisito y de dejar el proyecto funcionando.',
   'track.build-ai-products.name': 'Construir productos con IA',
-  'track.build-ai-products.goal': 'Desarrollar productos con capacidades de IA',
+  'track.build-ai-products.goal': 'Construir terminales y dispositivos con capacidades de IA',
   'track.build-ai-products.desc':
-    'Desde interacción multimodal con IA hasta visión artificial en el borde, cree terminales y productos inteligentes que entiendan el negocio, vean las necesidades y respondan en milisegundos.',
+    'M2 hace que un terminal entienda la voz y vea; M4, que las cámaras detecten objetivos y generen alertas; M6, que un brazo robótico agarre según lo que ve. Los tres módulos cubren interacción por voz, detección visual y control de robots.',
   'track.solutions.name': 'Soluciones',
-  'track.solutions.goal': 'Integración de sistemas y despliegue de escenarios',
+  'track.solutions.goal': 'Integrar varios dispositivos y redes en una misma instalación',
   'track.solutions.desc':
-    'Combinando interconexión de dispositivos, comunicación en red ad-hoc y percepción ambiental, integre dispositivos de múltiples marcas, comunicación fuera de red y percepción integral en soluciones sectoriales entregables.',
+    'M1 conecta dispositivos de distintas marcas a una plataforma local; M3 monta una red donde no hay conexión pública; M5 trae de vuelta los datos de sensores en campo. Indicado para equipos de integración en proyectos de edificios, emergencias, agricultura y medio ambiente.',
   'home.objects.title': 'El aprendizaje empieza con hardware real y materiales físicos',
   'home.objects.subtitle':
     'LEDs, sensores, gateways, cámaras, dispositivos espaciales, documentación de entrega — no son puertas de entrada conceptuales, sino materiales reales para experimentos en clase, entrenamiento de proyectos y entregas colaborativas.',
@@ -1446,9 +1448,9 @@ const es: Record<string, string> = {
   'course.explorer.listView': 'Vista de lista',
   'course.explorer.switchCard': 'Cambiar a vista de tarjetas',
   'course.explorer.switchList': 'Cambiar a vista de lista',
-  'course.tracksTitle': 'Tres direcciones de aprendizaje',
+  'course.tracksTitle': 'Siete módulos en tres orientaciones',
   'course.tracksSubtitle':
-    'Estas direcciones no son etiquetas de público, sino formas comunes de introducción: Crear con IA (M0), Construir productos con IA (M2 · M4), Soluciones (M1 · M3 · M5).',
+    'Las orientaciones agrupan los módulos por objetivo, no por un orden fijo. M0 es la entrada para principiantes; los otros seis se pueden impartir por separado.',
   'moduleCard.coreHardware': 'Hardware principal',
   'moduleCard.keyCapabilities': 'Capacidades clave',
   'moduleCard.viewDetail': 'Ver detalles',
@@ -1519,9 +1521,9 @@ const es: Record<string, string> = {
     'Una vez seleccionada la combinación, vuelva al sistema curricular para confirmar módulos y niveles',
   'cta.paths.desc':
     'La guía de rutas solo le ayuda a acotar opciones. Para la implementación real, deberá revisar el contenido de los módulos, los experimentos en clase, las listas de hardware, los materiales de entrega y las modalidades de venta.',
-  'cta.courses.title': 'Incorpore los módulos de aprendizaje en su equipo o proyecto',
+  'cta.courses.title': 'Con el módulo y el nivel elegidos, podemos hablar de cómo impartirlo.',
   'cta.courses.desc':
-    'Si ya tiene una dirección clara, podemos continuar la discusión sobre el kit de hardware básico, el kit de enseñanza estándar, la entrega integral o la capacitación de instructores. Recomendaremos combinaciones de módulos y profundidad de práctica según sus objetivos.',
+    'Indíquenos el módulo, el nivel (L1 / L2 / L3) y el tamaño del grupo. El presupuesto depende del formato y del tamaño de la clase; enviamos una propuesta en 3 días hábiles tras su correo.',
   'cta.about.title': '¿Quiere llevar esta capacidad del ecosistema a su organización?',
   'cta.about.desc':
     'Desde el kit de hardware básico hasta la entrega integral, puede elegir la modalidad según sus objetivos. Deje sus datos de interés y le proporcionaremos una propuesta de colaboración en un plazo de 3 días hábiles.',
@@ -1548,17 +1550,18 @@ const es: Record<string, string> = {
 
 const ptBR: Record<string, string> = {
   'track.make-with-ai.name': 'Criar com IA',
-  'track.make-with-ai.goal': 'Criar com ferramentas de IA, sem necessidade de programação',
+  'track.make-with-ai.goal':
+    'Sem saber programar: a IA escreve o código e você constrói hardware que funciona',
   'track.make-with-ai.desc':
-    'Deixe a IA programar e você faz o papel de maker. Use linguagem natural para orientar a IA a escrever código. Mesmo sem experiência, você poderá criar seu próprio hardware inteligente — de sensoriamento e interação até visão computacional na borda.',
+    'O M0 percorre três plataformas de hardware em um único curso: Grove para sensoriamento, Wio Terminal para interação e XIAO ESP32S3 Sense para classificação de imagens. A IA escreve o código; os alunos cuidam de expressar bem o requisito e de deixar o projeto funcionando.',
   'track.build-ai-products.name': 'Criar produtos com IA',
-  'track.build-ai-products.goal': 'Desenvolver produtos com capacidades de IA',
+  'track.build-ai-products.goal': 'Construir terminais e dispositivos com capacidades de IA',
   'track.build-ai-products.desc':
-    'De interação multimodal com IA até visão computacional na borda, crie terminais e produtos inteligentes que entendem o negócio, enxergam demandas e respondem em tempo real.',
+    'O M2 faz um terminal entender a fala e enxergar; o M4 faz as câmeras detectarem alvos e gerarem alertas; o M6 faz um braço robótico agarrar com base na visão. Os três módulos cobrem interação por voz, detecção visual e controle de robôs.',
   'track.solutions.name': 'Soluções',
-  'track.solutions.goal': 'Integração de sistemas e implantação de cenários',
+  'track.solutions.goal': 'Integrar vários dispositivos e redes em uma mesma instalação',
   'track.solutions.desc':
-    'Conectividade de dispositivos, comunicação em rede ad-hoc e percepção ambiental se combinam para integrar equipamentos de múltiplas marcas, comunicação off-grid e percepção abrangente em soluções setoriais entregáveis.',
+    'O M1 conecta dispositivos de marcas diferentes a uma plataforma local; o M3 monta uma rede onde não há conexão pública; o M5 traz de volta os dados de sensores em campo. Indicado para equipes de integração em projetos de edifícios, emergências, agricultura e meio ambiente.',
   'home.objects.title': 'O aprendizado começa com hardware real e materiais práticos',
   'home.objects.subtitle':
     'LEDs, sensores, gateways, câmeras, dispositivos espaciais e documentação de entrega — estes não são portas de entrada conceituais, mas materiais reais usados em experimentos em sala de aula, treinamento de projetos e entregas para parceiros.',
@@ -1836,9 +1839,9 @@ const ptBR: Record<string, string> = {
   'course.explorer.listView': 'Lista compacta',
   'course.explorer.switchCard': 'Alternar para visualização em cartões',
   'course.explorer.switchList': 'Alternar para visualização em lista',
-  'course.tracksTitle': 'Três direções de aprendizado',
+  'course.tracksTitle': 'Sete módulos em três direções',
   'course.tracksSubtitle':
-    'Estas direções não são rótulos de público, mas formas comuns de introdução: Criar com IA (M0), Criar produtos com IA (M2 · M4), Soluções (M1 · M3 · M5).',
+    'As direções agrupam os módulos por objetivo, não por uma ordem fixa. O M0 é a entrada para iniciantes; os outros seis podem ser oferecidos separadamente.',
   'moduleCard.coreHardware': 'Hardware principal',
   'moduleCard.keyCapabilities': 'Competências-chave',
   'moduleCard.viewDetail': 'Ver detalhes',
@@ -1908,9 +1911,9 @@ const ptBR: Record<string, string> = {
     'Após escolher a combinação, volte à grade curricular para confirmar módulos e níveis',
   'cta.paths.desc':
     'O guia de trilhas apenas ajuda a reduzir o escopo. Para a implementação real, é preciso ver o conteúdo dos módulos, experimentos em sala, lista de hardware, materiais de entrega e formatos comerciais.',
-  'cta.courses.title': 'Leve os módulos de aprendizado para sua equipe ou projeto',
+  'cta.courses.title': 'Com o módulo e o nível definidos, podemos conversar sobre como oferecê-lo.',
   'cta.courses.desc':
-    'Se você já tem uma direção definida, podemos discutir Bare Hardware Kit, Standard Teaching Kit, Full-Delivery Kit ou Train-the-Trainer Kit. Recomendaremos combinações de módulos e profundidade de prática de acordo com seus objetivos.',
+    'Informe o módulo, o nível (L1 / L2 / L3) e o tamanho da turma. O orçamento depende do formato e do tamanho da turma; enviamos uma proposta em até 3 dias úteis após o seu e-mail.',
   'cta.about.title': 'Quer levar esta capacidade do ecossistema para sua organização?',
   'cta.about.desc':
     'Do Bare Hardware Kit à entrega completa, você pode escolher o formato comercial de acordo com seus objetivos. Deixe suas informações de interesse e forneceremos recomendações de parceria em até 3 dias úteis.',

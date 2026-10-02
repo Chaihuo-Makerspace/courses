@@ -54,7 +54,9 @@ export const GET: APIRoute = (context) => {
   lines.push('## 三大学习方向（目标导向学习组合）');
   lines.push('');
   for (const t of tracks) {
-    lines.push(`- [${t.name}](${base}/paths#track-${t.id}): ${t.goal} · 模块路径 ${t.tagline}`);
+    lines.push(
+      `- [${t.name}](${base}/courses#track-${t.id}): ${t.goal} · 模块 ${t.moduleIds.map((id) => id.toUpperCase()).join(' · ')}`,
+    );
   }
   lines.push('');
 
@@ -77,7 +79,6 @@ export const GET: APIRoute = (context) => {
   lines.push('## Optional');
   lines.push('');
   lines.push(`- [学院首页](${base}/): 一句话定位与整体导航`);
-  lines.push(`- [路径指南](${base}/paths): 按目标筛选学习路径`);
   lines.push(`- [学习总览](${base}/courses): M0–M6 × L1/L2/L3 完整矩阵`);
 
   lines.push(`- [关于学院](${base}/about): 生态背景与定位`);
