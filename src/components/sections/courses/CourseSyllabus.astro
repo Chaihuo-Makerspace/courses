@@ -1,0 +1,245 @@
+---
+import { Icon } from 'astro-icon/components';
+import SectionHeader from '../../SectionHeader.astro';
+import type { Coverage, Module } from '../../../data/modules';
+import { dt } from '../../../i18n/data-translations';
+import { t } from '../../../i18n/translations';
+import type { Locale } from '../../../i18n';
+
+// 大纲与排课：排课形态常显；逐模块大纲全表与各形态的日程默认折叠（渐进分层）。
+interface Props {
+  module: Module;
+  locale: Locale;
+}
+
+const { module, locale } = Astro.props as Props;
+const curriculum = module.curriculum;
+const formats = module.formats;
+
+const coverageMark: Record<Coverage, string> = { full: '●', part: '◐', none: '—', plus: '●＋' };
+const coverageLabel: Record<Coverage, string> = {
+  full: dt(locale, 'course.curriculumCoverageLabels.full'),
+  part: dt(locale, 'course.curriculumCoverageLabels.part'),
+  none: dt(locale, 'course.curriculumCoverageLabels.none'),
+  plus: dt(locale, 'course.curriculumCoverageLabels.plus'),
+};
+const coverageClass: Record<Coverage, string> = {
+  full: 'text-brand-black',
+  part: 'text-neutral-6',
+  none: 'text-neutral-4',
+  plus: 'text-brand-red font-bold',
+};
+
+// 数据里个别说明以 schema 注释或模板句开头，不该渲染给访客：只剥已知开头。
+const SCHEMA_PREFIX =
+  /^(?:coverage 键对应|The coverage key maps|coverageキーは|La clave coverage|A chave coverage)[^。.]*[。.]\s*/;
+const TASTER_TEMPLATE =
+  /^(?:体验课目标是「看得懂、能讲解、能演示」，|The taster session goal is|体験講座の目標は|El objetivo de la clase de experiencia es|O objetivo da aula experimental e)[^。.]*[。.]\s*/;
+const callout = curriculum?.callout?.replace(SCHEMA_PREFIX, '');
+const count = String(curriculum?.items.length ?? 0);
+---
+
+{
+  curriculum && formats && (
+    <section id="syllabus" class="section scroll-mt-24 bg-neutral-1 border-y border-neutral-3">
+      <div class="container-page" data-reveal>
+        <SectionHeader
+          title={t(locale, 'course.syllabusTitle')}
+          subtitle={t(locale, 'course.syllabusSubtitle', { n: count })}
+        />
+
+        <ul
+          class:list={[
+            'grid gap-px overflow-hidden rounded-lg border border-neutral-3 bg-neutral-3',
+            formats.tiers.length >= 3 ? 'md:grid-cols-3' : 'md:grid-cols-2',
+          ]}
+        >
+          {formats.tiers.map((tier) => (
+            <li class="bg-background p-5">
+              <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                <h3 class="text-base font-bold text-brand-black">{tier.title}</h3>
+                <span
+                  class:list={[
+                    'text-xs font-semibold',
+                    tier.finalProject.included ? 'text-brand-red' : 'text-neutral-6',
+                  ]}
+                >
+                  {tier.finalProject.label}
+                </span>
+              </div>
+              <p class="mt-1.5 text-sm leading-relaxed text-neutral-8">{tier.summary}</p>
+            </li>
+          ))}
+        </ul>
+
+        {formats.warnings && formats.warnings.length > 0 && (
+          <div class="mt-5 flex gap-3 rounded-lg border border-brand-red/30 bg-brand-red-light p-4">
+            <Icon name="lucide:triangle-alert" class="mt-0.5 h-5 w-5 shrink-0 text-brand-red" />
+            <div class="space-y-2">
+              {formats.warnings.map((w) => (
+                <p class="text-sm leading-relaxed text-neutral-9">{w}</p>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <details class="group mt-6">
+          <summary class="focus-ring inline-flex cursor-pointer list-none items-center gap-2 text-sm font-semibold text-brand-black hover:text-brand-red transition-colors [&::-webkit-details-marker]:hidden">
+            <Icon name="lucide:chevron-right" class="h-4 w-4 transition-transform group-open:rotate-90" />
+            {t(locale, 'course.syllabusDetails', { n: count })}
+          </summary>
+
+          <div
+            class="mt-5 flex flex-wrap gap-2"
+            role="group"
+            aria-label={dt(locale, 'course.curriculumChooseFormat')}
+            data-fmt-bar
+          >
+            {formats.items.map((f, i) => (
+              <button
+                type="button"
+                class="focus-ring rounded-md border border-neutral-3 bg-background px-3.5 py-2 text-left text-brand-black transition-colors hover:border-neutral-5 aria-pressed:border-brand-black aria-pressed:bg-brand-black aria-pressed:text-white"
+                data-fmt={f.id}
+                aria-pressed={i === 0 ? 'true' : 'false'}
+              >
+                <span class="block text-sm font-bold leading-tight">{f.name}</span>
+                <span class="mt-0.5 block text-xs opacity-70">{f.meta}</span>
+              </button>
+            ))}
+          </div>
+
+          <div class="mt-4 overflow-x-auto rounded-lg border border-neutral-3 bg-background">
+            <table class="w-full min-w-[52rem] border-collapse text-left" data-fmt-table>
+              <caption class="sr-only">
+                {count} {dt(locale, 'course.curriculumCoverage')}
+              </caption>
+              <thead>
+                <tr class="border-b border-neutral-3">
+                  <th scope="col" colspan="3" class="label p-3">
+                    {dt(locale, 'course.curriculumModuleOutput')}
+                  </th>
+                  {formats.items.map((f) => (
+                    <th
+                      scope="col"
+                      class="border-l border-neutral-3 p-3 text-center data-[on]:bg-neutral-1"
+                      data-fmt-col={f.id}
+                    >
+                      <span class="block text-xs font-bold text-brand-black">{f.shortName}</span>
+                      <span class="block text-[11px] text-neutral-6">{f.shortMeta}</span>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {curriculum.items.map((item) => (
+                  <tr
+                    class:list={[
+                      'border-b border-neutral-3 last:border-b-0',
+                      item.hinge && 'bg-brand-yellow-light',
+                    ]}
+                  >
+                    <td class="w-10 p-3 align-top font-mono text-xs text-neutral-6">{item.no}</td>
+                    <td class="p-3 align-top">
+                      <b class="block text-sm font-bold leading-snug text-brand-black">{item.title}</b>
+                      <span class="mt-0.5 block text-xs leading-relaxed text-neutral-7">
+                        {item.detail}
+                      </span>
+                    </td>
+                    <td class="whitespace-nowrap p-3 align-top font-mono text-xs text-neutral-7">
+                      {item.tool}
+                    </td>
+                    {formats.items.map((f) => {
+                      const cov = item.coverage[f.id] ?? 'none';
+                      return (
+                        <td
+                          class:list={[
+                            'border-l border-neutral-3 p-3 text-center data-[on]:bg-neutral-1',
+                            coverageClass[cov],
+                          ]}
+                          data-fmt-col={f.id}
+                        >
+                          <span aria-hidden="true">{coverageMark[cov]}</span>
+                          <span class="sr-only">{coverageLabel[cov]}</span>
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p class="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-xs text-neutral-7">
+            {(Object.keys(coverageMark) as Coverage[]).map((c) => (
+              <span>
+                <span class:list={['font-mono', coverageClass[c]]}>{coverageMark[c]}</span>{' '}
+                {coverageLabel[c]}
+              </span>
+            ))}
+          </p>
+          {callout && <p class="mt-4 max-w-3xl text-sm leading-relaxed text-neutral-8">{callout}</p>}
+
+          <ul
+            class:list={[
+              'mt-8 grid gap-x-10 gap-y-6',
+              formats.tiers.length >= 3 ? 'md:grid-cols-3' : 'md:grid-cols-2',
+            ]}
+          >
+            {formats.tiers.map((tier) => (
+              <li>
+                <h3 class="text-sm font-bold text-brand-black">{tier.title}</h3>
+                <ul class="mt-2 border-t border-neutral-3">
+                  {tier.rows.map((row) => (
+                    <li class="border-b border-neutral-3 py-2.5">
+                      <div class="flex flex-wrap items-baseline justify-between gap-x-2">
+                        <b class="text-sm font-semibold text-brand-black">{row.title}</b>
+                        <span class="text-xs text-neutral-6">{row.meta}</span>
+                      </div>
+                      <p class="mt-1 text-xs leading-relaxed text-neutral-7">{row.body}</p>
+                    </li>
+                  ))}
+                </ul>
+                <p class="mt-2 text-xs leading-relaxed text-neutral-7">
+                  {tier.footnote.replace(TASTER_TEMPLATE, '')}
+                </p>
+              </li>
+            ))}
+          </ul>
+
+          {formats.callouts?.map((c) => (
+            <p class="mt-4 max-w-3xl text-sm leading-relaxed text-neutral-8">{c}</p>
+          ))}
+        </details>
+      </div>
+    </section>
+  )
+}
+
+<script>
+  function initFormatMatrix() {
+    const bar = document.querySelector<HTMLElement>('[data-fmt-bar]');
+    const table = document.querySelector<HTMLElement>('[data-fmt-table]');
+    if (!bar || !table) return;
+
+    const buttons = Array.from(bar.querySelectorAll<HTMLButtonElement>('[data-fmt]'));
+
+    function select(id: string) {
+      for (const b of buttons) {
+        b.setAttribute('aria-pressed', String(b.dataset.fmt === id));
+      }
+      for (const cell of Array.from(table!.querySelectorAll<HTMLElement>('[data-fmt-col]'))) {
+        if (cell.dataset.fmtCol === id) cell.setAttribute('data-on', '');
+        else cell.removeAttribute('data-on');
+      }
+    }
+
+    for (const b of buttons) {
+      b.addEventListener('click', () => select(b.dataset.fmt ?? ''));
+    }
+
+    const initial = buttons.find((b) => b.getAttribute('aria-pressed') === 'true') ?? buttons[0];
+    if (initial?.dataset.fmt) select(initial.dataset.fmt);
+  }
+
+  document.addEventListener('astro:page-load', initFormatMatrix);
+</script>

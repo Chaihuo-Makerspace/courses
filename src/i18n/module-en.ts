@@ -144,7 +144,7 @@ export const enDict: Record<string, string> = {
   视觉体验课: 'Vision Taster Session',
   视觉: 'Vision',
   完整版: 'Full Version',
-  'FP 完整': 'Full FP',
+  含结课项目: 'Includes final project',
   '16–20h · M0-A + B + C + 备料池': '16–20h · M0-A + B + C + Parts Pool',
   周课排: 'Weekly Schedule',
   '10 次 × 2 小时 · 20h': '10 Sessions × 2 hours · 20h',
@@ -158,7 +158,7 @@ export const enDict: Record<string, string> = {
   '寒暑假冬夏令营、驻校集训周': 'Winter/Summer Camps, On-Campus Bootcamp Weeks',
   'Codecraft + aily-blockly + SenseCraft AI · 10 个模块全覆盖':
     'Codecraft + aily-blockly + SenseCraft AI · Full coverage of 10 modules',
-  'FP 精简': 'Lite FP',
+  结课项目精简版: 'Shortened final project',
   '2 天 · 12–14h · 仅 M0-A + 备料池': '2 Days · 12–14h · M0-A + Parts Pool only',
   'Day 1 上午': 'Day 1 Morning',
   '模块 1 + 2': 'Module 1 + 2',
@@ -176,7 +176,7 @@ export const enDict: Record<string, string> = {
   '单一硬件平台是刻意的：把全部时间押在创意、原型、文档上。助教配比建议 1:5–6。':
     'Single hardware platform is intentional: invest all time in creativity, prototyping, and documentation. Recommended TA ratio: 1:5–6.',
   体验课: 'Taster Session',
-  '无 FP': 'No FP',
+  不含结课项目: 'No final project',
   '半天 2h · 零安装 · 单一硬件': 'Half Day 2h · Zero Install · Single Hardware',
   '卖「AI 能帮我做事」——2 小时做出智能番茄钟，走一遍 BMAD。方法可迁移。':
     'Sell "AI can do things for me" — build a Smart Pomodoro Timer in 2 hours, walk through BMAD. Transferable methodology.',

@@ -393,15 +393,16 @@
     transform: translateY(0);
   }
 
-  /* Yellow marker-highlight on a key phrase — low band, underline-like */
+  /* 关键词的黄色记号笔底（低位色带） */
   .highlight {
     background: linear-gradient(
       to top,
-      var(--color-brand-yellow-light) 0,
-      var(--color-brand-yellow-light) 40%,
-      transparent 40%
+      var(--color-brand-yellow) 0,
+      var(--color-brand-yellow) 36%,
+      transparent 36%
     );
-    padding: 0 0.15em;
+    padding: 0 0.1em;
+    font-style: normal;
   }
 
   /* Nav link — sliding underline on hover / active (tech-editorial) */

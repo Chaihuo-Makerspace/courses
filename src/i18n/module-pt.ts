@@ -146,7 +146,7 @@ export const ptDict: Record<string, string> = {
   视觉体验课: 'Sessão Experimental de Visão',
   视觉: 'Visão',
   完整版: 'Versão Completa',
-  'FP 完整': 'FP completo',
+  含结课项目: 'Com projeto final',
   '16–20h · M0-A + B + C + 备料池': '16–20h · M0-A + B + C + pool de componentes',
   周课排: 'Horário Semanal',
   '10 次 × 2 小时 · 20h': '10 sessões × 2 horas · 20h',
@@ -161,7 +161,7 @@ export const ptDict: Record<string, string> = {
   '寒暑假冬夏令营、驻校集训周': 'Acampamentos de Férias, Semanas Intensivas no Campus',
   'Codecraft + aily-blockly + SenseCraft AI · 10 个模块全覆盖':
     'Codecraft + aily-blockly + SenseCraft AI · cobertura completa dos 10 módulos',
-  'FP 精简': 'FP compacto',
+  结课项目精简版: 'Projeto final resumido',
   '2 天 · 12–14h · 仅 M0-A + 备料池': '2 dias · 12–14h · apenas M0-A + pool de componentes',
   'Day 1 上午': 'Dia 1 manhã',
   '模块 1 + 2': 'Módulo 1 + 2',
@@ -179,7 +179,7 @@ export const ptDict: Record<string, string> = {
   '单一硬件平台是刻意的：把全部时间押在创意、原型、文档上。助教配比建议 1:5–6。':
     'Plataforma de hardware único é intencional: invista todo o tempo em criatividade, prototipagem e documentação. Proporção recomendada de TA: 1:5–6.',
   体验课: 'Sessão Experimental',
-  '无 FP': 'Sem FP',
+  不含结课项目: 'Sem projeto final',
   '半天 2h · 零安装 · 单一硬件': 'Meio Período 2h · Zero Instalação · Hardware Único',
   '卖「AI 能帮我做事」——2 小时做出智能番茄钟，走一遍 BMAD。方法可迁移。':
     'Venda "IA pode fazer coisas para mim" — construa um Temporizador Pomodoro Inteligente em 2 horas, percorra o BMAD. Metodologia transferível.',

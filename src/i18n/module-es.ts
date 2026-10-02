@@ -146,7 +146,7 @@ export const esDict: Record<string, string> = {
   视觉体验课: 'Sesión de Iniciación a la Visión',
   视觉: 'Visión',
   完整版: 'Versión Completa',
-  'FP 完整': 'FP completo',
+  含结课项目: 'Con proyecto final',
   '16–20h · M0-A + B + C + 备料池': '16–20h · M0-A + B + C + kit de componentes',
   周课排: 'Horario Semanal',
   '10 次 × 2 小时 · 20h': '10 sesiones × 2 horas · 20h',
@@ -161,7 +161,7 @@ export const esDict: Record<string, string> = {
   '寒暑假冬夏令营、驻校集训周': 'Campamentos de Invierno/Verano, Semanas Intensivas en Campus',
   'Codecraft + aily-blockly + SenseCraft AI · 10 个模块全覆盖':
     'Codecraft + aily-blockly + SenseCraft AI · Cobertura completa de 10 módulos',
-  'FP 精简': 'FP reducido',
+  结课项目精简版: 'Proyecto final abreviado',
   '2 天 · 12–14h · 仅 M0-A + 备料池': '2 días · 12–14h · Solo M0-A + kit de componentes',
   'Day 1 上午': 'Día 1 mañana',
   '模块 1 + 2': 'Módulo 1 + 2',
@@ -179,7 +179,7 @@ export const esDict: Record<string, string> = {
   '单一硬件平台是刻意的：把全部时间押在创意、原型、文档上。助教配比建议 1:5–6。':
     'Plataforma de hardware única es intencional: invertir todo el tiempo en creatividad, prototipado y documentación. Proporción recomendada de asistentes: 1:5–6.',
   体验课: 'Sesión de Iniciación',
-  '无 FP': 'Sin FP',
+  不含结课项目: 'Sin proyecto final',
   '半天 2h · 零安装 · 单一硬件': 'Medio Día 2h · Sin Instalación · Hardware Único',
   '卖「AI 能帮我做事」——2 小时做出智能番茄钟，走一遍 BMAD。方法可迁移。':
     'Vender "la IA puede hacer cosas por mí" — construir un Temporizador Pomodoro Inteligente en 2 horas, recorriendo BMAD. Metodología transferible.',

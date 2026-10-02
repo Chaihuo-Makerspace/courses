@@ -205,8 +205,8 @@ const zh: Record<string, string> = {
 
   'course.backToMatrix': '返回学习矩阵',
   'course.coreHardware': '核心硬件',
-  'course.keyCapabilities': '关键能力',
-  'course.whatProblem': '这个模块解决什么',
+  'course.keyCapabilities': '学完能做的事',
+  'course.whatProblem': '这门课解决什么问题',
   'course.difficulty': '难度',
   'course.audienceCount': '类受众群体',
   'course.typicalScenarios': '典型应用场景',
@@ -265,7 +265,7 @@ const zh: Record<string, string> = {
   'course.hardwareIntroSubtitle': '本学习模块配套的教具清单，均为开箱即用的真实硬件。',
 
   'course.ladderTitleM0': '三套硬件平台：A 感知 · B 交互 · C 视觉',
-  'course.ladderTitle': '三阶递进：展示层 → 顾问层 → 设计层',
+  'course.ladderTitle': '三档深度，各学到哪一步',
   'course.ladderSubtitleM0':
     'M0 按硬件平台分层（A: Grove · B: Wio Terminal · C: XIAO ESP32S3 Sense），不是 L1/L2/L3 掌握深度。',
   'course.matrixTitle': 'M0–M6 × L1/L2/L3 全景',
@@ -375,6 +375,7 @@ const zh: Record<string, string> = {
   'home.matrix.note':
     '格内数字是该档的课时天数（d = 天）。点模块名，看这门课的设备、大纲和验收标准。',
   'course.overseasOnly': '仅海外交付',
+  'course.day': '天',
 };
 
 const en: Record<string, string> = {
@@ -588,8 +589,8 @@ const en: Record<string, string> = {
 
   'course.backToMatrix': 'Back to Learning Matrix',
   'course.coreHardware': 'Core Hardware',
-  'course.keyCapabilities': 'Key Capabilities',
-  'course.whatProblem': 'What This Module Solves',
+  'course.keyCapabilities': 'What learners can do afterwards',
+  'course.whatProblem': 'The problem this course addresses',
   'course.difficulty': 'Difficulty',
   'course.audienceCount': 'audience groups',
   'course.typicalScenarios': 'Typical Scenarios',
@@ -649,7 +650,7 @@ const en: Record<string, string> = {
   'course.hardwareIntroSubtitle':
     'The teaching kit list for this course — real hardware, ready to use out of the box.',
   'course.ladderTitleM0': 'Three Hardware Platforms: A Sensing · B Interaction · C Vision',
-  'course.ladderTitle': 'Three-tier Progression: Demo → Consultant → Design',
+  'course.ladderTitle': 'Three depths and where each one gets you',
   'course.ladderSubtitleM0':
     'M0 layered by hardware platform (A: Grove · B: Wio Terminal · C: XIAO ESP32S3 Sense).',
   'course.matrixTitle': 'M0–M6 × L1/L2/L3 Panorama',
@@ -764,6 +765,10 @@ const en: Record<string, string> = {
   'outcome.forms.label': 'Four ways to buy',
   'outcome.forms.desc':
     'Hardware only, the standard teaching kit, a Chaihuo instructor teaching on site, or training your own instructors first.',
+  'course.day': 'day',
+  'cta.module.title': 'Put {code} on your timetable',
+  'cta.module.desc':
+    'Pricing depends on class format and size. Email us the number of learners and the depth you want, and we will send a proposal within 3 working days.',
 };
 
 const ja: Record<string, string> = {
@@ -973,8 +978,8 @@ const ja: Record<string, string> = {
     'メールの際は関心のある方向をお知らせください。コミュニティマネージャーが担当者へおつなぎします。',
   'course.backToMatrix': '学習マトリックスに戻る',
   'course.coreHardware': 'コアハードウェア',
-  'course.keyCapabilities': 'キー能力',
-  'course.whatProblem': 'このモジュールが解決すること',
+  'course.keyCapabilities': '修了後にできること',
+  'course.whatProblem': 'この講座が解決する課題',
   'course.difficulty': '難易度',
   'course.audienceCount': 'つの対象者グループ',
   'course.typicalScenarios': '典型的な応用シーン',
@@ -1036,7 +1041,7 @@ const ja: Record<string, string> = {
     'このコースに付属する教材キット一式——開封してすぐ使える本物のハードウェアです。',
   'course.ladderTitleM0':
     '3つのハードウェアプラットフォーム：A センシング · B インタラクション · C ビジョン',
-  'course.ladderTitle': '3段階ステップアップ：デモ層 → コンサルタント層 → 設計層',
+  'course.ladderTitle': '3段階の深さと、それぞれの到達点',
   'course.ladderSubtitleM0':
     'M0はハードウェアプラットフォーム別に階層化（A: Grove · B: Wio Terminal · C: XIAO ESP32S3 Sense）、L1/L2/L3の習熟深度ではありません。',
   'course.matrixTitle': 'M0–M6 × L1/L2/L3 パノラマ',
@@ -1145,6 +1150,10 @@ const ja: Record<string, string> = {
   'outcome.forms.label': '4つの購入形態',
   'outcome.forms.desc':
     'ハードウェアのみ、標準教育キット、柴火講師による現地授業、または自社講師の育成から。',
+  'course.day': '日間',
+  'cta.module.title': '{code}を時間割に組み込む',
+  'cta.module.desc':
+    'お見積りはクラス形態と規模に応じます。受講人数と希望する深さをメールでお知らせいただければ、3営業日以内にご提案をお送りします。',
 };
 
 const es: Record<string, string> = {
@@ -1364,8 +1373,8 @@ const es: Record<string, string> = {
     'Indica tu área de interés en tu correo y el community manager te pondrá en contacto con la persona adecuada.',
   'course.backToMatrix': 'Volver a la matriz de aprendizaje',
   'course.coreHardware': 'Hardware principal',
-  'course.keyCapabilities': 'Capacidades clave',
-  'course.whatProblem': 'Qué resuelve este módulo',
+  'course.keyCapabilities': 'Lo que sabrán hacer al terminar',
+  'course.whatProblem': 'El problema que aborda este curso',
   'course.difficulty': 'Dificultad',
   'course.audienceCount': 'tipos de público objetivo',
   'course.typicalScenarios': 'Escenarios típicos de aplicación',
@@ -1434,7 +1443,7 @@ const es: Record<string, string> = {
   'course.hardwareIntroSubtitle':
     'La lista de material didáctico de este curso: hardware real, listo para usar nada más abrirlo.',
   'course.ladderTitleM0': 'Tres plataformas de hardware: A Percepción · B Interacción · C Visión',
-  'course.ladderTitle': 'Progresión en tres niveles: Demostración → Consultor → Diseño',
+  'course.ladderTitle': 'Tres niveles y hasta dónde llega cada uno',
   'course.ladderSubtitleM0':
     'M0 se estratifica por plataforma de hardware (A: Grove · B: Wio Terminal · C: XIAO ESP32S3 Sense), no por profundidad de dominio L1/L2/L3.',
   'course.matrixTitle': 'Panorama completo M0–M6 × L1/L2/L3',
@@ -1546,6 +1555,10 @@ const es: Record<string, string> = {
   'outcome.forms.label': 'Cuatro modalidades de compra',
   'outcome.forms.desc':
     'Solo hardware, el kit didáctico estándar, un instructor de Chaihuo en sus instalaciones o formar primero a sus propios instructores.',
+  'course.day': 'día',
+  'cta.module.title': 'Incorpore {code} a su programación',
+  'cta.module.desc':
+    'El presupuesto depende del formato y del tamaño de la clase. Indíquenos por correo el número de participantes y el nivel deseado y enviaremos una propuesta en 3 días hábiles.',
 };
 
 const ptBR: Record<string, string> = {
@@ -1760,8 +1773,8 @@ const ptBR: Record<string, string> = {
     'Informe sua área de interesse no e-mail; o community manager vai encaminhar você à pessoa certa.',
   'course.backToMatrix': 'Voltar à matriz de aprendizado',
   'course.coreHardware': 'Hardware principal',
-  'course.keyCapabilities': 'Competências-chave',
-  'course.whatProblem': 'O que este módulo resolve',
+  'course.keyCapabilities': 'O que saberão fazer ao concluir',
+  'course.whatProblem': 'O problema que este curso resolve',
   'course.difficulty': 'Dificuldade',
   'course.audienceCount': 'perfis de público-alvo',
   'course.typicalScenarios': 'Cenários típicos de aplicação',
@@ -1825,7 +1838,7 @@ const ptBR: Record<string, string> = {
   'course.hardwareIntroSubtitle':
     'A lista de material didático deste curso — hardware real, pronto para usar ao abrir a caixa.',
   'course.ladderTitleM0': 'Três plataformas de hardware: A Sensoriamento · B Interação · C Visão',
-  'course.ladderTitle': 'Progressão em três níveis: Demonstração → Consultoria → Design',
+  'course.ladderTitle': 'Três níveis e até onde cada um leva',
   'course.ladderSubtitleM0':
     'O M0 é dividido por plataforma de hardware (A: Grove · B: Wio Terminal · C: XIAO ESP32S3 Sense), não por profundidade de domínio L1/L2/L3.',
   'course.matrixTitle': 'Panorama M0–M6 × L1/L2/L3',
@@ -1936,6 +1949,10 @@ const ptBR: Record<string, string> = {
   'outcome.forms.label': 'Quatro formas de contratar',
   'outcome.forms.desc':
     'Apenas hardware, o kit didático padrão, um instrutor da Chaihuo no local ou treinar primeiro os seus próprios instrutores.',
+  'course.day': 'dia',
+  'cta.module.title': 'Inclua o {code} na sua grade',
+  'cta.module.desc':
+    'O orçamento depende do formato e do tamanho da turma. Informe por e-mail o número de participantes e o nível desejado e enviaremos uma proposta em até 3 dias úteis.',
 };
 
 export const dataTranslations: Record<Locale, Record<string, string>> = {

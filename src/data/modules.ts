@@ -406,7 +406,7 @@ export const modules: Module[] = [
       tiers: [
         {
           title: '完整版',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '16–20h · M0-A + B + C + 备料池',
           rows: [
             {
@@ -429,7 +429,7 @@ export const modules: Module[] = [
         },
         {
           title: '马拉松版',
-          finalProject: { label: 'FP 精简', included: true },
+          finalProject: { label: '结课项目精简版', included: true },
           summary: '2 天 · 12–14h · 仅 M0-A + 备料池',
           rows: [
             {
@@ -449,7 +449,7 @@ export const modules: Module[] = [
         },
         {
           title: '体验课',
-          finalProject: { label: '无 FP', included: false },
+          finalProject: { label: '不含结课项目', included: false },
           summary: '半天 2h · 零安装 · 单一硬件',
           rows: [
             {
@@ -997,7 +997,7 @@ export const modules: Module[] = [
       tiers: [
         {
           title: '体验课',
-          finalProject: { label: '无 FP', included: false },
+          finalProject: { label: '不含结课项目', included: false },
           summary: '1 天 · 6–8h · L1 展示层 · 聚焦平台接入与传感器节点',
           rows: [
             {
@@ -1016,7 +1016,7 @@ export const modules: Module[] = [
         },
         {
           title: '实战课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '2–3 天 · 14–20h · L1+L2 · 工业总线对接 + 能耗看板 + 自动化联动',
           rows: [
             {
@@ -1040,7 +1040,7 @@ export const modules: Module[] = [
         },
         {
           title: '交付课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含跨系统集成与灾难恢复',
           rows: [
             {
@@ -1497,7 +1497,7 @@ export const modules: Module[] = [
       tiers: [
         {
           title: '体验课',
-          finalProject: { label: '无 FP', included: false },
+          finalProject: { label: '不含结课项目', included: false },
           summary: '1 天 · 6–8h · L1 展示层 · 聚焦端侧体验与MCP工具调用演示',
           rows: [
             {
@@ -1516,7 +1516,7 @@ export const modules: Module[] = [
         },
         {
           title: '实战课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '2–3 天 · 14–20h · L1+L2 · Watcher配置 + 本地WMS部署 + MCP桥接 + 自动化联动',
           rows: [
             {
@@ -1540,7 +1540,7 @@ export const modules: Module[] = [
         },
         {
           title: '交付课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含Jetson离线语音管线部署与断网验证',
           rows: [
             {
@@ -1985,7 +1985,7 @@ export const modules: Module[] = [
       tiers: [
         {
           title: '体验课',
-          finalProject: { label: '无 FP', included: false },
+          finalProject: { label: '不含结课项目', included: false },
           summary: '1 天 · 6–8h · L1 展示层 · 聚焦 Meshtastic 组网与离线通信',
           rows: [
             {
@@ -2004,7 +2004,7 @@ export const modules: Module[] = [
         },
         {
           title: '实战课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '2–3 天 · 14–20h · L1+L2 · Mesh 组网 + MQTT 桥接 + 态势监控',
           rows: [
             {
@@ -2028,7 +2028,7 @@ export const modules: Module[] = [
         },
         {
           title: '交付课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含固件定制与传感集成',
           rows: [
             {
@@ -2517,7 +2517,7 @@ export const modules: Module[] = [
       tiers: [
         {
           title: '体验课',
-          finalProject: { label: '无 FP', included: false },
+          finalProject: { label: '不含结课项目', included: false },
           summary: '1 天 · 6–8h · L1 展示层 · 聚焦reCamera单点配置与双主线架构认知',
           rows: [
             {
@@ -2536,7 +2536,7 @@ export const modules: Module[] = [
         },
         {
           title: '实战课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary:
             '2–3 天 · 14–20h · L1+L2 · Node-RED告警联动 + Frigate多路汇聚 + HA自动化 + 误报调优',
           rows: [
@@ -2561,7 +2561,7 @@ export const modules: Module[] = [
         },
         {
           title: '交付课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含自定义模型训练与边缘部署优化',
           rows: [
             {
@@ -3030,7 +3030,7 @@ export const modules: Module[] = [
       tiers: [
         {
           title: '体验课',
-          finalProject: { label: '无 FP', included: false },
+          finalProject: { label: '不含结课项目', included: false },
           summary: '1 天 · 6–8h · L1 展示层 · 聚焦双通信架构认知与云端数据监视',
           rows: [
             {
@@ -3049,7 +3049,7 @@ export const modules: Module[] = [
         },
         {
           title: '实战课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '2–3 天 · 14–20h · L1+L2 · 传感器接线 + Modbus配置 + 多级告警编排',
           rows: [
             {
@@ -3073,7 +3073,7 @@ export const modules: Module[] = [
         },
         {
           title: '交付课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含SenseCAP Open API对接与Node-RED本地自动化',
           rows: [
             {
@@ -3557,7 +3557,7 @@ export const modules: Module[] = [
       tiers: [
         {
           title: '体验课',
-          finalProject: { label: '无 FP', included: false },
+          finalProject: { label: '不含结课项目', included: false },
           summary: '1 天 · 6–8h · L1 展示层 · 聚焦选型认知、安全规范与SenseCraft开箱遥操',
           rows: [
             {
@@ -3576,7 +3576,7 @@ export const modules: Module[] = [
         },
         {
           title: '实战课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '2–3 天 · 14–20h · L1+L2 · 场景剖析 + 动作编排 + 工位视觉事件触发联动',
           rows: [
             {
@@ -3600,7 +3600,7 @@ export const modules: Module[] = [
         },
         {
           title: '交付课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含确定性3D空间抓取闭环与具身智能前沿探索',
           rows: [
             {

@@ -1,128 +1,119 @@
 ---
 import { Icon } from 'astro-icon/components';
 import type { Module } from '../../../data/modules';
+import type { Track } from '../../../data/tracks';
 import { dt } from '../../../i18n/data-translations';
+import { ctaLink } from '../../../i18n/helpers';
 import { t } from '../../../i18n/translations';
 import type { Locale } from '../../../i18n';
 import { localizePath } from '../../../i18n';
 
+// 首屏回答四件事：这门课是什么、几天、用什么协议/平台、属于哪个方向。
 interface Props {
   module: Module;
-  totalDays: number;
+  tracks: Track[];
   locale: Locale;
 }
 
-const { module, locale } = Astro.props as Props;
-const isM0 = module.id === 'm0';
-const illoBg = isM0 ? 'bg-brand-yellow/15' : 'bg-brand-yellow-light';
+const { module, tracks, locale } = Astro.props as Props;
+const contact = ctaLink('contact', locale);
 
-// oneLiner 的黄色下划线强调：拆成「前 / 强调 / 后」三段。
-// emphasis 缺席或不是 oneLiner 子串时整句原样渲染。
-const emphasisAt = module.oneLinerEmphasis
-  ? module.oneLiner.indexOf(module.oneLinerEmphasis)
-  : -1;
-const oneLinerParts =
-  module.oneLinerEmphasis && emphasisAt >= 0
+// oneLiner 的强调片段：拆成「前 / 强调 / 后」。emphasis 不是子串时整句原样渲染。
+const at = module.oneLinerEmphasis ? module.oneLiner.indexOf(module.oneLinerEmphasis) : -1;
+const parts =
+  module.oneLinerEmphasis && at >= 0
     ? {
-        before: module.oneLiner.slice(0, emphasisAt),
+        before: module.oneLiner.slice(0, at),
         mark: module.oneLinerEmphasis,
-        after: module.oneLiner.slice(emphasisAt + module.oneLinerEmphasis.length),
+        after: module.oneLiner.slice(at + module.oneLinerEmphasis.length),
       }
     : null;
 ---
 
-<section class="bg-neutral-1 border-b border-neutral-3 py-16 md:py-24">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" data-reveal>
+<section class="bg-background">
+  <div class="container-page pt-8 pb-10 md:pt-10 md:pb-12">
     <a
       href={localizePath(locale, '/courses')}
-      class="focus-ring inline-flex items-center gap-1.5 text-sm font-semibold text-brand-black hover:text-brand-red transition-colors mb-8"
-      aria-label={dt(locale, 'course.backToMatrix')}
+      class="focus-ring inline-flex items-center gap-1.5 text-sm font-semibold text-neutral-7 hover:text-brand-red transition-colors"
     >
       <Icon name="lucide:arrow-left" class="w-4 h-4" />
       {dt(locale, 'course.backToMatrix')}
     </a>
 
-    <div class="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-16 items-center">
-      <div>
-        <div class="flex items-center gap-3.5 mb-6">
-          <span class:list={[
-            'module-tile module-tile--lg font-mono',
-            isM0 ? 'module-tile--red' : 'module-tile--dark',
-          ]}>
+    <div class="mt-6 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14">
+      <div data-reveal>
+        <div class="flex flex-wrap items-center gap-3">
+          <span
+            class:list={[
+              'module-tile module-tile--lg font-mono',
+              module.id === 'm0' ? 'module-tile--red' : 'module-tile--dark',
+            ]}
+          >
             {module.code}
           </span>
-          <span class="text-sm font-bold tracking-widest uppercase text-brand-black/60 font-mono">
-            {module.subtitle}
-          </span>
+          {
+            module.overseasOnly && (
+              <span class="rounded-sm border border-brand-red/40 px-2 py-1 text-xs font-semibold leading-none text-brand-red">
+                {dt(locale, 'course.overseasOnly')}
+              </span>
+            )
+          }
         </div>
 
-        <h1 class="text-[clamp(2.25rem,4vw+1rem,3.75rem)] font-black leading-tight text-brand-black tracking-tight">
+        <h1
+          class="mt-5 font-display text-[clamp(2.25rem,4vw+1rem,3.5rem)] leading-[1.15] tracking-tight text-brand-black"
+        >
           {module.title}
         </h1>
-        <p class="mt-6 text-lg md:text-xl leading-relaxed text-neutral-8 max-w-2xl">
-          {oneLinerParts ? (
-            <>
-              {oneLinerParts.before}
-              <em class="not-italic font-bold text-brand-black bg-linear-to-b from-transparent from-60% to-brand-yellow to-60%">
-                {oneLinerParts.mark}
-              </em>
-              {oneLinerParts.after}
-            </>
-          ) : (
-            module.oneLiner
-          )}
+        <p class="mt-5 text-lg leading-relaxed text-neutral-8">
+          {
+            parts ? (
+              <>
+                {parts.before}<em class="highlight font-semibold text-brand-black">{parts.mark}</em>{parts.after}
+              </>
+            ) : (
+              module.oneLiner
+            )
+          }
         </p>
-      </div>
 
-      <div>
-        <div
-          class:list={[
-            'aspect-[4/3] w-full max-w-md mx-auto rounded-lg flex items-center justify-center overflow-hidden border border-neutral-3 relative shadow-sm-soft z-10',
-            illoBg,
-          ]}
-        >
-          <img
-            src={module.illustration}
-            alt={`${module.title} ${t(locale, 'course.illustration')}`}
-            width="1024"
-            height="768"
-            class="w-full h-full object-cover relative z-10"
-            loading="eager"
-            fetchpriority="high"
-            onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden')"
-          />
-          <div class="absolute inset-0 hidden flex flex-col items-center justify-center text-center p-4 bg-brand-black/5 z-0">
-            <Icon name="lucide:cpu" class="w-12 h-12 mb-2 text-brand-black opacity-30" />
-            <span class="text-4xl font-mono font-black tracking-wider text-brand-black opacity-30">
-              {module.code}
-            </span>
-            <span class="text-[10px] font-mono tracking-widest text-brand-black opacity-45 uppercase mt-1">
-              WORKBENCH IMAGE
-            </span>
-          </div>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href={contact.href} class="btn btn-primary focus-ring">
+            {contact.label}
+            <Icon name="lucide:arrow-right" class="w-4 h-4" />
+          </a>
+          <a href="#syllabus" class="btn btn-secondary focus-ring">
+            {t(locale, 'course.viewSyllabus')}
+          </a>
         </div>
-
-        {module.hardwareList && (
-          <div class="mt-5 max-w-md mx-auto border border-neutral-3 rounded-lg bg-card p-5">
-            <h2 class="text-[10px] font-mono font-bold uppercase tracking-widest text-neutral-6">
-              {t(locale, 'course.coreHardwareHeading')}
-            </h2>
-            <ul class="mt-3.5">
-              {module.hardwareList.map((hw) => (
-                <li class="flex gap-3 py-2 border-b border-dashed border-neutral-3 last:border-b-0">
-                  <span class="font-mono text-xs text-neutral-6 pt-0.5 min-w-4 shrink-0">
-                    {hw.key}
-                  </span>
-                  <span>
-                    <b class="block text-sm font-bold text-brand-black">{hw.name}</b>
-                    <small class="block text-xs text-neutral-6 mt-0.5">{hw.note}</small>
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
+
+      <dl class="self-start border-t border-neutral-3" data-reveal style="--reveal-delay: 120ms">
+        {
+          module.facts?.map((fact) => (
+            <div class="grid grid-cols-[6.5rem_1fr] gap-x-4 border-b border-neutral-3 py-2.5">
+              <dt class="label pt-0.5">{fact.label}</dt>
+              <dd class="text-sm font-semibold leading-snug text-brand-black">{fact.value}</dd>
+            </div>
+          ))
+        }
+        {
+          tracks.map((track) => (
+            <div class="grid grid-cols-[6.5rem_1fr] gap-x-4 border-b border-neutral-3 py-2.5">
+              <dt class="label pt-0.5">{t(locale, 'course.direction')}</dt>
+              <dd class="text-sm font-semibold leading-snug">
+                <a
+                  href={localizePath(locale, `/courses#track-${track.id}`)}
+                  class="focus-ring text-brand-black underline decoration-neutral-4 underline-offset-4 hover:text-brand-red hover:decoration-brand-red transition-colors"
+                >
+                  {track.name}
+                </a>
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
     </div>
   </div>
+  <div class="flame-rule" aria-hidden="true"></div>
 </section>

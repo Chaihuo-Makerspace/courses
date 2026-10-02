@@ -213,6 +213,15 @@ const zh: TranslationDict = {
   'cta.contact': '合作咨询',
   'cta.courses': '查看学习体系',
   'cta.about': '关于学院',
+  'course.viewSyllabus': '看大纲与排课',
+  'course.direction': '所属方向',
+  'course.prerequisite': '学员基础',
+  'course.equipmentTitle': '设备与工具链',
+  'course.hardwareDetails': '展开 {n} 件设备的图文清单',
+  'course.kitsDetails': '展开 {n} 套子套件与备料池',
+  'course.syllabusTitle': '大纲与排课',
+  'course.syllabusSubtitle': '共 {n} 个教学模块。先看有哪几种排课形态，完整大纲在下面展开。',
+  'course.syllabusDetails': '展开 {n} 个教学模块的完整大纲与各形态日程',
 };
 
 const en: TranslationDict = {
@@ -424,6 +433,16 @@ const en: TranslationDict = {
   'cta.contact': 'Partnership Inquiry',
   'cta.courses': 'View Courses',
   'cta.about': 'About the Academy',
+  'course.viewSyllabus': 'View syllabus & formats',
+  'course.direction': 'Direction',
+  'course.prerequisite': 'Prerequisites',
+  'course.equipmentTitle': 'Hardware and toolchain',
+  'course.hardwareDetails': 'Show the illustrated list of {n} devices',
+  'course.kitsDetails': 'Show the {n} sub-kits and the parts pool',
+  'course.syllabusTitle': 'Syllabus and formats',
+  'course.syllabusSubtitle':
+    '{n} teaching units in total. The delivery formats come first; the full syllabus expands below.',
+  'course.syllabusDetails': 'Show the full syllabus of {n} units and the schedule for each format',
 };
 
 const ja: TranslationDict = {
@@ -627,6 +646,16 @@ const ja: TranslationDict = {
   'cta.contact': '協業のご相談',
   'cta.courses': '学習体系を見る',
   'cta.about': '学院について',
+  'course.viewSyllabus': 'シラバスと開講形態を見る',
+  'course.direction': '方向',
+  'course.prerequisite': '受講の前提',
+  'course.equipmentTitle': '機器とツールチェーン',
+  'course.hardwareDetails': '機器{n}点の写真付きリストを表示',
+  'course.kitsDetails': 'サブキット{n}種と部品プールを表示',
+  'course.syllabusTitle': 'シラバスと開講形態',
+  'course.syllabusSubtitle':
+    '教育ユニットは全{n}個。まず開講形態を示し、シラバス全体は下で展開できます。',
+  'course.syllabusDetails': '全{n}ユニットのシラバスと形態別の日程を表示',
 };
 
 const es: TranslationDict = {
@@ -841,6 +870,17 @@ const es: TranslationDict = {
   'cta.contact': 'Consultar colaboración',
   'cta.courses': 'Ver sistema curricular',
   'cta.about': 'Sobre la academia',
+  'course.viewSyllabus': 'Ver temario y formatos',
+  'course.direction': 'Orientación',
+  'course.prerequisite': 'Requisitos previos',
+  'course.equipmentTitle': 'Hardware y cadena de herramientas',
+  'course.hardwareDetails': 'Ver la lista ilustrada de {n} dispositivos',
+  'course.kitsDetails': 'Ver los {n} subkits y el fondo de componentes',
+  'course.syllabusTitle': 'Temario y formatos',
+  'course.syllabusSubtitle':
+    '{n} unidades didácticas en total. Primero, los formatos de impartición; el temario completo se despliega abajo.',
+  'course.syllabusDetails':
+    'Ver el temario completo de {n} unidades y el calendario de cada formato',
 };
 
 const ptBR: TranslationDict = {
@@ -1053,6 +1093,17 @@ const ptBR: TranslationDict = {
   'cta.contact': 'Consultar parceria',
   'cta.courses': 'Ver grade curricular',
   'cta.about': 'Sobre a Academia',
+  'course.viewSyllabus': 'Ver programa e formatos',
+  'course.direction': 'Direção',
+  'course.prerequisite': 'Pré-requisitos',
+  'course.equipmentTitle': 'Hardware e cadeia de ferramentas',
+  'course.hardwareDetails': 'Ver a lista ilustrada de {n} dispositivos',
+  'course.kitsDetails': 'Ver os {n} subkits e o conjunto de peças',
+  'course.syllabusTitle': 'Programa e formatos',
+  'course.syllabusSubtitle':
+    '{n} unidades de ensino no total. Primeiro, os formatos de oferta; o programa completo se expande abaixo.',
+  'course.syllabusDetails':
+    'Ver o programa completo de {n} unidades e o cronograma de cada formato',
 };
 
 const dictionaries: Record<Locale, TranslationDict> = {
