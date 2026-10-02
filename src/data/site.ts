@@ -59,7 +59,7 @@ export const homeOutcomes: OutcomeItem[] = [
   {
     id: 'kit',
     label: '硬件套件与课程资源',
-    description: 'Seeed 硬件，加上教材、实验手册、教师材料和学员任务。',
+    description: '体系内在售的硬件，加上教材、实验手册、教师材料和学员任务。',
   },
   {
     id: 'docs',
@@ -108,7 +108,7 @@ export const moduleFinalCta: SiteCta = {
  * 学院的来历。出处：
  * - 2011 年深圳成立、中国最早的创客空间之一：公开事实，owner 2026-10-02 确认
  *   「创客空间的历史就是学院的历史」。
- * - 硬件来自 Seeed Studio：各模块设备清单的 SKU。
+ * - 硬件来自 Seeed 创办的产品体系：各模块设备清单的 SKU。
  * - 深圳、成都两处校区：页脚地址（owner 确认为实际联系通道）。
  */
 export const aboutHistory: HistoryItem[] = [
@@ -122,8 +122,8 @@ export const aboutHistory: HistoryItem[] = [
   {
     id: 'seeed',
     when: '硬件',
-    title: '课上用的是 Seeed Studio 在售的产品',
-    description: '开发板、传感器、边缘计算设备都能按 SKU 买到，不是专供教学的道具。',
+    title: '课上用的是体系内在售的同款硬件',
+    description: '开发板、传感器、边缘计算设备按 SKU 就能买到，不是专供教学的道具。',
     link: 'https://www.seeedstudio.com',
   },
   {
@@ -180,9 +180,9 @@ export const contactFaqs: FaqItem[] = [
   },
   {
     key: 'q2',
-    question: '课程硬件套件必须从 Seeed 采购吗？',
+    question: '课程硬件套件必须从原厂采购吗？',
     answer:
-      '裸硬件套件与标准教学套件使用 Seeed 原厂硬件，保证课程实验与教材一致。合作伙伴也可以在自己的硬件平台上做适配，但实验手册和课程素材以原厂硬件为准。',
+      '裸硬件套件与标准教学套件使用原厂硬件，保证课程实验与教材一致。原厂硬件就是柴火创客空间所属产品体系内在售的产品（空间由 Seeed 创办），按 SKU 可购。合作伙伴也可以在自己的硬件平台上做适配，但实验手册和课程素材以原厂硬件为准。',
   },
   {
     key: 'q3',

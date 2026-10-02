@@ -45,7 +45,7 @@ const zh: TranslationDict = {
   // Home Hero
   'home.hero.title': '七门智能硬件课，\n套件、教案、讲师一次配齐',
   'home.hero.description':
-    'M0 到 M6，每门课都配 Seeed 真实硬件、逐课时教案和验收标准。学校拿去开课，集成商拿去练交付团队。M0 零基础可进，其余六门按方向独立选学。',
+    'M0 到 M6，每门课都配真实在售硬件、逐课时教案和验收标准。学校拿去开课，集成商拿去练交付团队。M0 零基础可进，其余六门按方向独立选学。',
 
   // Courses
   'courses.title': '学习体系',
@@ -61,7 +61,7 @@ const zh: TranslationDict = {
   'about.title': '关于学院',
   'about.hero.title': '柴火创客学院',
   'about.hero.description':
-    '我们培养人掌握新技术整合能力，不提供解决方案。课程用 Seeed Studio 在售的硬件，从柴火创客空间十多年的项目和社区经验里整理出来，面向院校、集成商和企业。',
+    '我们培养人掌握新技术整合能力，不提供解决方案。课程从柴火创客空间十多年的项目和社区经验里整理出来，面向院校、集成商和企业。学院隶属于柴火创客空间，空间由 Seeed 创办——课上用的硬件就是这个体系自己在售的产品，按 SKU 就能买到。',
 
   // Contact
   'contact.title': '合作咨询',
@@ -139,7 +139,7 @@ const en: TranslationDict = {
   'home.hero.title':
     'Seven smart-hardware courses,\neach with its kit, lesson plans and instructors',
   'home.hero.description':
-    'From M0 to M6, every course comes with real Seeed hardware, lesson-by-lesson teaching plans and acceptance criteria. Schools use them to run classes; integrators use them to train delivery teams. M0 needs no prior experience, and the other six can be taken independently by direction.',
+    'From M0 to M6, every course comes with real, commercially available hardware, lesson-by-lesson teaching plans and acceptance criteria. Schools use them to run classes; integrators use them to train delivery teams. M0 needs no prior experience, and the other six can be taken independently by direction.',
 
   'courses.title': 'Learning System',
   'courses.description':
@@ -152,7 +152,7 @@ const en: TranslationDict = {
   'about.title': 'About the Academy',
   'about.hero.title': 'Chaihuo Maker Academy',
   'about.hero.description':
-    "We train people to integrate new technology; we do not sell solutions. The courses use hardware from Seeed Studio's current catalogue and are distilled from more than a decade of projects and community work at Chaihuo Makerspace. They are offered to schools, integrators and enterprises.",
+    'We train people to integrate new technology; we do not sell solutions. The courses are distilled from more than a decade of projects and community work at Chaihuo Makerspace and are offered to schools, integrators and enterprises. The Academy is part of Chaihuo Makerspace, which was founded by Seeed — the hardware used in class is that ecosystem\u2019s own product line, orderable by SKU.',
 
   'contact.title': 'Partnership',
   'contact.hero.title': 'Three kinds of organisation, four ways to work together',
@@ -226,7 +226,7 @@ const ja: TranslationDict = {
 
   'home.hero.title': 'スマートハードウェア7講座。\nキット・教案・講師をまとめて提供',
   'home.hero.description':
-    'M0からM6まで、どの講座にもSeeedの実機ハードウェア、授業ごとの教案、検収基準が付きます。学校は授業の開講に、インテグレーターは納品チームの育成に使えます。M0は未経験から受講でき、残り6講座は分野ごとに単独で選べます。',
+    'M0からM6まで、どの講座にも現行販売中の実機ハードウェア、授業ごとの教案、検収基準が付きます。学校は授業の開講に、インテグレーターは納品チームの育成に使えます。M0は未経験から受講でき、残り6講座は分野ごとに単独で選べます。',
 
   'courses.title': '学習体系',
   'courses.description':
@@ -239,7 +239,7 @@ const ja: TranslationDict = {
   'about.title': '学院について',
   'about.hero.title': '柴火創客学院',
   'about.hero.description':
-    '私たちは新しい技術を統合する力を持つ人材を育てます。ソリューションを提供する事業ではありません。講座にはSeeed Studioの現行製品を使い、柴火創客空間が10年以上積み重ねてきたプロジェクトとコミュニティの経験を整理して作りました。学校、インテグレーター、企業向けに提供しています。',
+    '私たちは新しい技術を統合する力を持つ人材を育てます。ソリューションを提供する事業ではありません。講座は柴火創客空間が10年以上積み重ねてきたプロジェクトとコミュニティの経験を整理して作り、学校、インテグレーター、企業向けに提供しています。学院は柴火創客空間に属し、空間はSeeedによって設立されました。授業で使うハードウェアはその製品体系の現行製品で、SKUで購入できます。',
 
   'contact.title': 'パートナーシップ',
   'contact.hero.title': '3種類の機関、4つの協業形態',
@@ -315,7 +315,7 @@ const es: TranslationDict = {
   'home.hero.title':
     'Siete cursos de hardware inteligente,\ncon kit, planes de clase e instructores',
   'home.hero.description':
-    'De M0 a M6, cada curso incluye hardware real de Seeed, planes de clase sesión por sesión y criterios de aceptación. Los centros educativos los usan para impartir clases; los integradores, para formar a sus equipos de entrega. M0 no requiere experiencia previa y los otros seis se pueden cursar por separado según la orientación.',
+    'De M0 a M6, cada curso incluye hardware real en catálogo, planes de clase sesión por sesión y criterios de aceptación. Los centros educativos los usan para impartir clases; los integradores, para formar a sus equipos de entrega. M0 no requiere experiencia previa y los otros seis se pueden cursar por separado según la orientación.',
 
   'courses.title': 'Sistema de Aprendizaje',
   'courses.description':
@@ -328,7 +328,7 @@ const es: TranslationDict = {
   'about.title': 'Acerca de la Academia',
   'about.hero.title': 'Academia Chaihuo Maker',
   'about.hero.description':
-    'Formamos a personas para que sepan integrar nuevas tecnologías; no vendemos soluciones. Los cursos emplean hardware del catálogo actual de Seeed Studio y recogen más de una década de proyectos y trabajo comunitario en Chaihuo Makerspace. Están dirigidos a centros educativos, integradores y empresas.',
+    'Formamos a personas para que sepan integrar nuevas tecnologías; no vendemos soluciones. Los cursos recogen más de una década de proyectos y trabajo comunitario en Chaihuo Makerspace y están dirigidos a centros educativos, integradores y empresas. La Academia forma parte de Chaihuo Makerspace, fundado por Seeed: el hardware que se usa en clase pertenece a la propia línea de productos de ese ecosistema y se puede pedir por SKU.',
 
   'contact.title': 'Colaboración',
   'contact.hero.title': 'Tres tipos de organización, cuatro formas de colaborar',
@@ -404,7 +404,7 @@ const ptBR: TranslationDict = {
 
   'home.hero.title': 'Sete cursos de hardware inteligente,\ncom kit, planos de aula e instrutores',
   'home.hero.description':
-    'De M0 a M6, cada curso vem com hardware real da Seeed, planos de aula sessão por sessão e critérios de aceitação. Escolas usam para abrir turmas; integradores, para treinar equipes de entrega. O M0 não exige experiência prévia e os outros seis podem ser feitos separadamente, conforme a direção.',
+    'De M0 a M6, cada curso vem com hardware real em catálogo, planos de aula sessão por sessão e critérios de aceitação. Escolas usam para abrir turmas; integradores, para treinar equipes de entrega. O M0 não exige experiência prévia e os outros seis podem ser feitos separadamente, conforme a direção.',
 
   'courses.title': 'Sistema de Aprendizagem',
   'courses.description':
@@ -417,7 +417,7 @@ const ptBR: TranslationDict = {
   'about.title': 'Sobre a Academia',
   'about.hero.title': 'Academia Chaihuo Maker',
   'about.hero.description':
-    'Formamos pessoas para integrar novas tecnologias; não vendemos soluções. Os cursos usam hardware do catálogo atual da Seeed Studio e reúnem mais de uma década de projetos e trabalho comunitário no Chaihuo Makerspace. São oferecidos a escolas, integradores e empresas.',
+    'Formamos pessoas para integrar novas tecnologias; não vendemos soluções. Os cursos reúnem mais de uma década de projetos e trabalho comunitário no Chaihuo Makerspace e são oferecidos a escolas, integradores e empresas. A Academia faz parte do Chaihuo Makerspace, fundado pela Seeed — o hardware usado em aula é da própria linha de produtos desse ecossistema e pode ser pedido por SKU.',
 
   'contact.title': 'Parceria',
   'contact.hero.title': 'Três tipos de organização, quatro formas de parceria',
