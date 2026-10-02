@@ -1,5 +1,3 @@
-import type { IconName } from './icons';
-
 export type ScenarioId = 'university' | 'integrator' | 'enterprise';
 export type FormCode = 'A' | 'B' | 'C' | 'D';
 
@@ -7,7 +5,6 @@ export interface Scenario {
   id: ScenarioId;
   title: string;
   subtitle: string;
-  icon: IconName;
   features: string[];
   outcomes: string[];
   applicableForms: FormCode[];
@@ -17,7 +14,6 @@ export interface PartnershipForm {
   code: FormCode;
   title: string;
   subtitle: string;
-  icon: IconName;
   features: string[];
   deliverables: string[];
   suitableScenarios: ScenarioId[];
@@ -28,7 +24,6 @@ export const scenarios: Scenario[] = [
     id: 'university',
     title: '高校 · 职业院校',
     subtitle: '课程共建 / 师资培训',
-    icon: 'lucide:graduation-cap',
     features: [
       '有自研课程能力可选裸硬件套件',
       '标准教学套件到货就能开课',
@@ -41,7 +36,6 @@ export const scenarios: Scenario[] = [
     id: 'integrator',
     title: '集成商 · 方案商',
     subtitle: '团队技能补齐 / 承接新品类',
-    icon: 'lucide:network',
     features: [
       '裸硬件套件灵活组合自有方案',
       '标准教学套件补齐团队能力',
@@ -54,7 +48,6 @@ export const scenarios: Scenario[] = [
     id: 'enterprise',
     title: '企业 · 产业端',
     subtitle: '内训 / 定制交付',
-    icon: 'lucide:building-2',
     features: [
       '首次采购可选全托交付套件',
       '标准教学套件用于内训',
@@ -71,7 +64,6 @@ export const partnershipForms: PartnershipForm[] = [
     code: 'A',
     title: '裸硬件套件',
     subtitle: 'Bare Hardware Kit',
-    icon: 'lucide:cpu',
     features: ['仅含硬件与配件，不含课程资源', '适配自研课程，灵活组合', '按 M0–M6 模块自由选配'],
     deliverables: ['Seeed 原厂硬件与配件', '模块选型清单', '硬件保修与供货支持'],
     suitableScenarios: ['university', 'integrator'],
@@ -80,7 +72,6 @@ export const partnershipForms: PartnershipForm[] = [
     code: 'B',
     title: '标准教学套件',
     subtitle: 'Standard Teaching Kit',
-    icon: 'lucide:package',
     features: ['硬件 + 完整课程资源包', '含教材、课件与实验手册', '套件到货就能开课'],
     deliverables: ['对应模块硬件套件', '完整课程资源包', '持续课程内容更新'],
     suitableScenarios: ['university', 'integrator', 'enterprise'],
@@ -89,7 +80,6 @@ export const partnershipForms: PartnershipForm[] = [
     code: 'C',
     title: '全托交付套件',
     subtitle: 'Full-Delivery Kit',
-    icon: 'lucide:hand-helping',
     features: [
       '硬件 + 课程 + 柴火讲师到场授课',
       '适合首次采购、没有讲师的客户',
@@ -102,15 +92,8 @@ export const partnershipForms: PartnershipForm[] = [
     code: 'D',
     title: '师资培训套件',
     subtitle: 'Train-the-Trainer Kit',
-    icon: 'lucide:graduation-cap',
     features: ['硬件 + 课程 + Train-the-Trainer 师训', '培养机构自有讲师', '可持续自主开课'],
     deliverables: ['硬件与课程资源', 'Train-the-Trainer 师资培训', '讲师认证与复训'],
     suitableScenarios: ['university', 'integrator'],
   },
 ];
-
-export const getFormsForScenario = (id: ScenarioId): PartnershipForm[] =>
-  partnershipForms.filter((f) => f.suitableScenarios.includes(id));
-
-export const getScenariosForForm = (code: FormCode): Scenario[] =>
-  scenarios.filter((s) => s.applicableForms.includes(code));

@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { levelMeta, levels, modules } from '../data/modules';
 import { partnershipForms, scenarios } from '../data/partnerships';
+import { contactEmail } from '../data/site';
 import { tracks } from '../data/tracks';
 
 export const prerender = true;
@@ -14,17 +15,17 @@ export const GET: APIRoute = (context) => {
   lines.push('# 柴火创客学院');
   lines.push('');
   lines.push(
-    '> 柴火创客学院是柴火创客生态（Seeed Studio + 柴火创客空间）旗下的技术赋能平台。' +
-      '依托 Seeed 的全球硬件供应链与柴火创客空间（2011 年成立）的社区基底，' +
-      '把生态中已被验证的技术能力转化为可学习、可交付、可复用的学习体系。' +
-      '核心定位：培养学员掌握"新技术整合"能力，而不是提供解决方案。',
+    '> 柴火创客学院隶属于柴火创客空间（2011 年在深圳成立，中国最早的创客空间之一），课程使用 Seeed Studio 在售的硬件。' +
+      '我们培养人掌握新技术整合能力，不提供解决方案：提供的是课程、硬件套件和讲师培训，教会机构自己的团队做交付。',
   );
   lines.push('');
   lines.push(
-    '学习体系为 M0–M6 × L1/L2/L3 二维矩阵：七个模块（横轴，M0 为零基础旗舰入口，M1–M6 为六大行业方向）' +
-      '× 三个掌握深度（纵轴：L1 展示层 / L2 顾问层 / L3 设计层），配三大学习方向（用 AI 造物 / 造 AI 的物 / 解决方案）。' +
-      '销售矩阵为 3 类对象（高校/集成商/企业）× 4 种销售形态（A 裸硬件 / B 标准教学 / C 全托交付 / D 师资培训）。' +
-      '合作意向通过邮件 business@chaihuo.org 联系，本站不提供内嵌表单。',
+    '学习体系是 M0–M6 × L1/L2/L3 的矩阵：七个模块（M0 为零基础入门，M1–M6 各对应一类现场问题，可单独开课）' +
+      '× 三档深度（L1 展示层 / L2 顾问层 / L3 设计层），按目标分为三个方向（用 AI 造物 / 造 AI 的物 / 解决方案）。' +
+      '合作对象有三类（高校 / 集成商 / 企业），合作形态有四种（A 裸硬件 / B 标准教学 / C 全托交付 / D 师资培训）。' +
+      '按班型与规模报价，不设统一标价；合作意向通过邮件 ' +
+      contactEmail +
+      ' 联系，本站不提供内嵌表单。',
   );
   lines.push('');
   lines.push(
@@ -38,7 +39,7 @@ export const GET: APIRoute = (context) => {
   lines.push('');
   for (const m of modules) {
     lines.push(
-      `- [${m.code} · ${m.title}](${base}/courses/${m.slug}): ${m.oneLiner}（难度 ${m.difficulty}，时长 ${m.duration}；技术栈 ${m.techStack.join(' / ')}；典型场景 ${m.scenarios.join(' / ')}）`,
+      `- [${m.code} · ${m.title}](${base}/courses/${m.slug}): ${m.oneLiner}${m.overseasOnly ? '（仅海外交付）' : ''}（难度 ${m.difficulty}，时长 ${m.duration}；技术栈 ${m.techStack.join(' / ')}；典型场景 ${m.scenarios.join(' / ')}）`,
     );
   }
   lines.push('');
@@ -51,7 +52,7 @@ export const GET: APIRoute = (context) => {
   }
   lines.push('');
 
-  lines.push('## 三大学习方向（目标导向学习组合）');
+  lines.push('## 三个方向（按目标分组，不是固定顺序）');
   lines.push('');
   for (const t of tracks) {
     lines.push(
@@ -78,15 +79,17 @@ export const GET: APIRoute = (context) => {
 
   lines.push('## Optional');
   lines.push('');
-  lines.push(`- [学院首页](${base}/): 一句话定位与整体导航`);
-  lines.push(`- [学习总览](${base}/courses): M0–M6 × L1/L2/L3 完整矩阵`);
+  lines.push(`- [学院首页](${base}/): 课程矩阵总览与入口`);
+  lines.push(`- [学习体系](${base}/courses): M0–M6 × L1/L2/L3 完整矩阵与三个方向`);
 
-  lines.push(`- [关于学院](${base}/about): 生态背景与定位`);
+  lines.push(`- [关于学院](${base}/about): 学院来历与负责人`);
   lines.push(
-    `- [合作咨询](${base}/contact): 三类合作对象与四种销售形态，邮件 business@chaihuo.org 联系`,
+    `- [合作咨询](${base}/contact): 三类合作对象与四种合作形态，邮件 ${contactEmail} 联系`,
   );
-  lines.push(`- [先锋官计划](${base}/pioneer): 技术型 / 链接型个人加入计划，注册跳转 map.seeed.cc`);
-  lines.push(`- [基地计划](${base}/base): 城市级实体空间节点申请，注册跳转 map.seeed.cc`);
+  lines.push(
+    `- [先锋官计划](${base}/pioneer): 招募个人渠道伙伴：先学会课程，再在本地开课、推广；注册跳转 map.seeed.cc`,
+  );
+  lines.push(`- [基地计划](${base}/base): 招募有固定场地的渠道伙伴；注册跳转 map.seeed.cc`);
   lines.push(`- [创客生态分布图](https://map.seeed.cc): 全球柴火生态节点地图与注册入口`);
   lines.push('');
 

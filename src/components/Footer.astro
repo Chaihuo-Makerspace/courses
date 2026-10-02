@@ -59,12 +59,12 @@ const footerLinks = {
 };
 ---
 
-<footer class="bg-brand-graphite text-white noise-overlay">
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<footer class="bg-brand-graphite text-white">
+  <div class="container-page">
     <div
-      class="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-12 gap-x-8 lg:gap-x-12"
+      class="py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-10 gap-x-8 border-t border-white/10"
     >
-      <div class="lg:col-span-4">
+      <div class="lg:col-span-3">
         <a
           href={localizePath(locale, '/')}
           class="inline-flex items-center gap-3 focus-ring rounded-md"
@@ -99,7 +99,7 @@ const footerLinks = {
         </p>
       </div>
 
-      <div class="md:col-span-2 lg:col-span-5">
+      <div class="lg:col-span-5">
         <h4 class="text-base font-bold text-brand-yellow mb-4">{t(locale, 'footer.contact')}</h4>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {
@@ -112,7 +112,7 @@ const footerLinks = {
                   />
                   <span class="font-medium text-white">{loc.city} <span class="text-white/50 text-xs font-normal">({loc.cityEn})</span></span>
                   {loc.tag && (
-                    <span class="text-[10px] font-mono font-bold bg-brand-yellow text-brand-black px-1.5 py-0.5 rounded">
+                    <span class="text-[10px] font-bold bg-brand-yellow text-brand-black px-1.5 py-0.5 rounded-sm">
                       {loc.tag}
                     </span>
                   )}
@@ -131,7 +131,7 @@ const footerLinks = {
         </div>
       </div>
 
-      <div class="md:col-span-2 lg:col-span-3 grid grid-cols-3 gap-8">
+      <div class="md:col-span-2 lg:col-span-4 grid grid-cols-3 gap-6">
         <div>
           <h4 class="text-base font-bold text-brand-yellow mb-4">
             {footerLinks.about.title}
@@ -199,7 +199,7 @@ const footerLinks = {
     </div>
 
     <div class="py-6 border-t border-white/10">
-      <p class="text-sm text-white/50 text-center font-mono">
+      <p class="text-sm text-white/50">
         {t(locale, 'footer.copyright', { year: String(currentYear) })}
       </p>
     </div>

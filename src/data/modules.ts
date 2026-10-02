@@ -3715,11 +3715,6 @@ export const modules: Module[] = [
   },
 ];
 
-export const getModule = (id: ModuleId): Module | undefined => modules.find((m) => m.id === id);
-
-export const getModuleBySlug = (slug: string): Module | undefined =>
-  modules.find((m) => m.slug === slug);
-
 export const levels: LevelId[] = ['L1', 'L2', 'L3'];
 
 export const levelMeta: Record<LevelId, { label: string; description: string }> = {

@@ -12,51 +12,20 @@ import { type Locale, localizePath } from './types';
 
 const zhToEn: Record<string, string> = {
   // 首页 · 创客生态分布图（模块 A）
-  柴火生态: 'Chaihuo Ecosystem',
-  柴火全球创客生态分布图: 'Chaihuo Global Maker Ecosystem Map',
-  '先锋官与基地正在全国及全球铺开。':
-    'Pioneers and bases are spreading across China and the world.',
-  '在地图上找到你身边的柴火节点，': 'Find the Chaihuo node near you on the map,',
-  '或者——成为下一个。': 'or become the next one.',
   查看分布图: 'View the Map',
-  我要加入: 'I Want to Join',
 
   // 首页 · 先锋官 · 基地 双栏卡片（模块 B）
-  先锋官与基地计划: 'Pioneer & Base Program',
-  '把 AI 创客教育带到你的城市——柴火给你课程、教具和认证，你做本地的那根火柴。':
-    'Bring AI maker education to your city — Chaihuo provides courses, kits, and certification; you light the local spark.',
   先锋官: 'Pioneer',
   基地: 'Base',
-  '在你的城市，做 AI 时代的点火人。': 'In your city, be the spark of the AI era.',
-  '5 套 M0 教具赠送': '5 free M0 kits',
-  '学费 100% 归你': '100% of tuition is yours',
-  官方认证登上地图: 'Official certification on the map',
-  了解先锋官: 'Learn About Pioneers',
-  '城市里看得见的柴火。': 'Chaihuo you can see in the city.',
-  '10 套教具共用': '10 shared kits',
-  承接总部派单: 'Receive HQ work orders',
-  区域优先权: 'Regional priority',
-  了解基地: 'Learn About Bases',
 
   // 先锋官 Hero
   先锋官计划: 'Pioneer Program',
-  点火人: 'the Spark',
   基地计划: 'Base Program',
-  看得见的柴火: 'Chaihuo You Can See',
-  '在你的城市，做 AI 时代的点火人': 'In your city, be the spark of the AI era',
-  '懂技术、能教技术，或者不懂技术但能链接本地网络——柴火给你课程、教具和认证，你把 AI 创客教育带到你的城市。':
-    'Tech-savvy or not — if you can teach, or connect your local network, Chaihuo gives you courses, kits, and certification to bring AI maker education to your city.',
   立即申请: 'Apply Now',
   先了解基地: 'Learn About Bases First',
   先了解先锋官: 'Learn About Pioneers First',
-  '有固定场地、有持续运营意愿——柴火给你教具、课程、品牌背书和派单流量，你做城市里 AI 创客教育的锚点。':
-    'With a fixed venue and commitment to ongoing operation, Chaihuo provides kits, courses, brand backing, and work-order flow — you become your city\u2019s anchor for AI maker education.',
 
   // 先锋官 · 什么是先锋官
-  什么是先锋官: 'What Is a Pioneer',
-  '先锋官是柴火认证的在地的技术传播者 + 技术服务商。':
-    'A Pioneer is a Chaihuo-certified local technology evangelist and service provider.',
-  两类人都可以: 'Two Profiles Both Work',
   技术型: 'Technical',
   '有技术背景，想用创客技能开展教育 / 服务':
     'Has a technical background and wants to run education / services with maker skills',
@@ -67,15 +36,11 @@ const zhToEn: Record<string, string> = {
     'Every base must first have a Pioneer; a Pioneer can also operate independently without affiliating with a base.',
 
   // 先锋官 · 你能得到什么
-  你能得到什么: 'What You Get',
-  '从教具、账号到课程包与认证，起步所需全都配齐':
-    'From kits, accounts, and course packs to certification — everything you need to start',
   'M0 教具 5 套': '5 × M0 Kits',
   '赠送，不回收': 'Free, never taken back',
   'Codecraft 账号 5 个': '5 Codecraft Accounts',
   '365 天 / 5 席位': '365 days / 5 seats',
   课程包: 'Course Pack',
-  'PPT + md 格式，可魔改、可二次创作': 'PPT + MD formats — remixable and re-editable',
   官方认证: 'Official Certification',
   '通过认证后登上 map.seeed.cc 全球分布图':
     'Get certified and appear on the map.seeed.cc global map',
@@ -85,8 +50,6 @@ const zhToEn: Record<string, string> = {
   '保证金租赁制，退出全退': 'Deposit-based rental, fully refundable on exit',
 
   // 先锋官 · 怎么赚钱
-  怎么赚钱: 'How You Earn',
-  '三条盈利线，对应三种身份': 'Three revenue lines for three roles',
   开课收费: 'Course Fees',
   '用 M0 课程在当地开班，学费 100% 归你。课程包现成、教具到位，你只需招生和上课。':
     'Run M0 courses locally — 100% of tuition is yours. The course pack is ready and kits are in place; you only handle enrollment and teaching.',
@@ -100,8 +63,6 @@ const zhToEn: Record<string, string> = {
     'Refer kits to local schools / institutions and earn commission on closed deals.',
 
   // 先锋官 · 四步走
-  四步走: 'Four Steps',
-  '从一场体验活动，到一座城市的锚点': 'From one hands-on event to your city\u2019s anchor point',
   体验活动: 'Hands-On Event',
   '在你的城市 / 场地办一场 AI 编程体验': 'Run an AI coding experience in your city / venue',
   培训认证: 'Training & Certification',
@@ -142,19 +103,12 @@ const zhToEn: Record<string, string> = {
     'Every base must first have a Pioneer. A Pioneer can be a base employee or an independent partner and can affiliate with multiple bases. Base benefits are shared by all Pioneers at that base.',
 
   // 先锋官 · CTA
-  '把这个计划，带回你的城市': 'Bring This Program to Your City',
   '第一阶段 10 基地 + 20 先锋官，先到先评估。填写申请表，社区经理将在 3 个工作日内联系你。':
     'Phase 1 covers 10 bases + 20 pioneers — first come, first evaluated. Fill in the application and a community manager will contact you within 3 working days.',
   联系我们: 'Contact Us',
-  '或联系社区经理（会后分配专属对接人）':
-    'Or reach your community manager (a dedicated contact is assigned after the session)',
 
   // 基地 · 什么是基地
-  什么是基地: 'What Is a Base',
-  '基地是柴火认证的城市级实体空间节点。':
-    'A Base is a Chaihuo-certified city-level physical space node.',
   '准入标准（2 项核心）': 'Admission Criteria (2 Core Requirements)',
-  城市里看得见的柴火: 'Chaihuo you can see in the city',
   固定场地: 'Fixed Venue',
   可承接活动与课程: 'Able to host events and courses',
   持续运营: 'Ongoing Operation',
@@ -163,12 +117,9 @@ const zhToEn: Record<string, string> = {
   '科技馆 / 高校 Fab Lab 等公共教育空间':
     'Public education spaces like science museums / university Fab Labs',
   '已有创客 / STEAM 教育基础': 'Existing maker / STEAM education foundation',
-  '柴火基地车巡游已触达、双方已建立信任':
-    'Already reached by the Chaihuo Mobile Base Vehicle tour, with mutual trust established',
 
   // 基地 · 权益对比
   基地权益: 'Base Benefits',
-  '同一套支持体系，个人与空间各取所需': 'One support system, tailored for individuals and spaces',
   权益: 'Benefit',
   '先锋官（个人）': 'Pioneer (Individual)',
   '基地（空间）': 'Base (Space)',
@@ -192,8 +143,6 @@ const zhToEn: Record<string, string> = {
   '→ 区域代理枢纽': '→ Regional Hub',
 
   // 基地 · 怎么赚钱
-  基地怎么赚钱: 'How a Base Earns',
-  '四条盈利线，把场地变成营收来源': 'Four revenue lines that turn a venue into income',
   '基地内开班，学费归基地运营方。': 'Run classes at the base — tuition goes to the operator.',
   '柴火接到的当地培训 / 工作坊需求，派给基地执行，直接收服务费。':
     'Chaihuo routes local training / workshop demand to your base — you execute and collect service fees directly.',
@@ -206,8 +155,6 @@ const zhToEn: Record<string, string> = {
   基地与先锋官关系: 'How Bases and Pioneers Relate',
   '没有先锋官，就没有基地；有了基地，先锋官才有自己的主场。':
     'No Pioneers, no base; with a base, Pioneers have their home turf.',
-  必须先有: 'Requires First',
-  互为支撑: 'Mutually Supporting',
   个人: 'Individual',
   '可挂靠多个基地，也可独立运营': 'Can affiliate with multiple bases or operate independently',
   空间: 'Space',
@@ -237,7 +184,6 @@ const zhToEn: Record<string, string> = {
     'Yes. The core criteria are a fixed venue + commitment to ongoing operation. Chaihuo provides courses, kits, and training to help you complete your first cohort.',
 
   // 基地 · CTA
-  '把城市的锚点，和柴火一起建': 'Build Your City\u2019s Anchor Together with Chaihuo',
   '核心标准只有两条：固定场地 + 持续运营意愿。填写申请表，社区经理将在 3 个工作日内联系你。':
     'Only two core criteria: fixed venue + commitment to ongoing operation. Fill in the application and a community manager will contact you within 3 working days.',
   招募渠道伙伴: 'Channel partners wanted',
@@ -269,44 +215,14 @@ const zhToEn: Record<string, string> = {
 };
 
 const zhToJa: Record<string, string> = {
-  柴火生态: '柴火エコシステム',
-  柴火全球创客生态分布图: '柴火グローバルメーカーエコシステム分布図',
-  '先锋官与基地正在全国及全球铺开。': 'パイオニアと拠点は全国・全世界に広がっています。',
-  '在地图上找到你身边的柴火节点，': '地図でお近くの柴火ノードを見つけて、',
-  '或者——成为下一个。': 'あるいは——次の一員に。',
   查看分布图: '分布図を見る',
-  我要加入: '参加する',
-  先锋官与基地计划: 'パイオニア＆拠点計画',
-  '把 AI 创客教育带到你的城市——柴火给你课程、教具和认证，你做本地的那根火柴。':
-    'AI メーカー教育をあなたの街へ——柴火がコース・キット・認証を提供し、あなたが地域の火種になります。',
   先锋官: 'パイオニア',
   基地: '拠点',
-  '在你的城市，做 AI 时代的点火人。': 'あなたの街で、AI 時代の火付け人に。',
-  '5 套 M0 教具赠送': 'M0 キット 5 セット贈呈',
-  '学费 100% 归你': '受講料は 100% あなたのもの',
-  官方认证登上地图: '公式認証で地図に掲載',
-  了解先锋官: 'パイオニアを知る',
-  '城市里看得见的柴火。': '街で見える柴火。',
-  '10 套教具共用': 'キット 10 セット共用',
-  承接总部派单: '本部からの案件配信',
-  区域优先权: 'エリア優先権',
-  了解基地: '拠点を知る',
   先锋官计划: 'パイオニア計画',
-  点火人: '火付け人',
   基地计划: '拠点計画',
-  看得见的柴火: '見える柴火',
-  '在你的城市，做 AI 时代的点火人': 'あなたの街で、AI 時代の火付け人に',
-  '懂技术、能教技术，或者不懂技术但能链接本地网络——柴火给你课程、教具和认证，你把 AI 创客教育带到你的城市。':
-    '技術に詳しい方、教えるのが得意な方、あるいは技術は分からなくても地域ネットワークを持っている方——柴火がコース・キット・認証を提供し、あなたが AI メーカー教育を自分の街に届けます。',
   立即申请: '今すぐ申し込む',
   先了解基地: 'まず拠点を知る',
   先了解先锋官: 'まずパイオニアを知る',
-  '有固定场地、有持续运营意愿——柴火给你教具、课程、品牌背书和派单流量，你做城市里 AI 创客教育的锚点。':
-    '固定の場と継続運営への意志がある方——柴火がキット・コース・ブランドと案件配信を提供し、あなたが街の AI メーカー教育のアンカーになります。',
-  什么是先锋官: 'パイオニアとは',
-  '先锋官是柴火认证的在地的技术传播者 + 技术服务商。':
-    'パイオニアは柴火認証の地域密着型テクノロジー伝道師であり、技術サービス提供者です。',
-  两类人都可以: 'どちらのタイプも歓迎',
   技术型: 'テクニカル型',
   '有技术背景，想用创客技能开展教育 / 服务':
     '技術バックグラウンドを持ち、メーカースキルで教育 / サービスを展開したい方',
@@ -315,23 +231,17 @@ const zhToJa: Record<string, string> = {
     '教育 / コミュニティ資源を持ち、メーカーコースを導入したいが自ら教えるとは限らない方',
   '每个基地必须先有先锋官；先锋官也可独立运营，不挂靠基地。':
     '各拠点には必ず先にパイオニアが必要です。パイオニアは拠点に属さず独立運営も可能です。',
-  你能得到什么: '得られるもの',
-  '从教具、账号到课程包与认证，起步所需全都配齐':
-    'キット・アカウントからコースパック・認証まで、スタートに必要なものがすべて揃います',
   'M0 教具 5 套': 'M0 キット 5 セット',
   '赠送，不回收': '贈呈・回収なし',
   'Codecraft 账号 5 个': 'Codecraft アカウント 5 つ',
   '365 天 / 5 席位': '365 日 / 5 席',
   课程包: 'コースパック',
-  'PPT + md 格式，可魔改、可二次创作': 'PPT + md 形式、自由にカスタマイズ・二次創作可能',
   官方认证: '公式認証',
   '通过认证后登上 map.seeed.cc 全球分布图': '認証を通過すると map.seeed.cc の全世界分布図に掲載',
   总部支持: '本部サポート',
   '社区经理对接、技术答疑、课程更新': 'コミュニティマネージャー対応、技術サポート、コース更新',
   'M1–M6 升级路径': 'M1–M6 アップグレードパス',
   '保证金租赁制，退出全退': '保証金レンタル制、退会時は全額返金',
-  怎么赚钱: '収益の仕組み',
-  '三条盈利线，对应三种身份': '3 つの収益ライン、3 つの役割に対応',
   开课收费: '講座開催で収益',
   '用 M0 课程在当地开班，学费 100% 归你。课程包现成、教具到位，你只需招生和上课。':
     'M0 コースで地元に講座を開き、受講料は 100% あなたのもの。コースパックもキットも準備済み、生徒募集と授業に集中できます。',
@@ -343,8 +253,6 @@ const zhToJa: Record<string, string> = {
     '地元の学校 / 機関に柴火キットを紹介し、成約後にコミッションを獲得。',
   '向当地学校 / 机构推荐教具，成交后拿佣金。':
     '地元の学校 / 機関にキットを紹介し、成約後にコミッションを獲得。',
-  四步走: '4 ステップ',
-  '从一场体验活动，到一座城市的锚点': 'ひとつの体験イベントから、街のアンカーへ',
   体验活动: '体験イベント',
   '在你的城市 / 场地办一场 AI 编程体验': 'あなたの街 / 会場で AI プログラミング体験を開催',
   培训认证: '研修・認証',
@@ -379,17 +287,10 @@ const zhToJa: Record<string, string> = {
   '先锋官和基地什么关系？': 'パイオニアと拠点の関係は？',
   '每个基地必须先有先锋官。先锋官可以是基地员工，也可以是合作制。先锋官可挂靠多个基地，基地权益是基地内先锋官共用的。':
     '各拠点には必ず先にパイオニアが必要です。パイオニアは拠点スタッフでも提携パートナーでも構いません。複数の拠点に所属でき、拠点の特典はその拠点内のパイオニア全員で共有されます。',
-  '把这个计划，带回你的城市': 'この計画を、あなたの街へ',
   '第一阶段 10 基地 + 20 先锋官，先到先评估。填写申请表，社区经理将在 3 个工作日内联系你。':
     '第 1 期は拠点 10 か所 + パイオニア 20 名、先着順で評価。申込フォームにご記入いただければ、コミュニティマネージャーが 3 営業日以内にご連絡します。',
   联系我们: 'お問い合わせ',
-  '或联系社区经理（会后分配专属对接人）':
-    'またはコミュニティマネージャーへ（説明会後に専属担当者を割り当てます）',
-  什么是基地: '拠点とは',
-  '基地是柴火认证的城市级实体空间节点。':
-    '拠点とは、柴火認証を受けた都市レベルの実体スペースノードです。',
   '准入标准（2 项核心）': '参入基準（コア 2 項目）',
-  城市里看得见的柴火: '街で見える柴火',
   固定场地: '固定会場',
   可承接活动与课程: 'イベントと講座を開催可能',
   持续运营: '継続運営',
@@ -397,10 +298,7 @@ const zhToJa: Record<string, string> = {
   加分项: '加点項目',
   '科技馆 / 高校 Fab Lab 等公共教育空间': '科学館 / 大学の Fab Lab などの公共教育スペース',
   '已有创客 / STEAM 教育基础': 'すでにメーカー / STEAM 教育の基盤がある',
-  '柴火基地车巡游已触达、双方已建立信任':
-    '柴火基地車キャラバンで訪問済み、相互の信頼関係が構築されている',
   基地权益: '拠点の特典',
-  '同一套支持体系，个人与空间各取所需': '同じサポート体制で、個人もスペースも必要なものを選択',
   权益: '特典',
   '先锋官（个人）': 'パイオニア（個人）',
   '基地（空间）': '拠点（スペース）',
@@ -421,8 +319,6 @@ const zhToJa: Record<string, string> = {
   升级路径: 'アップグレードパス',
   '→ 基地': '→ 拠点',
   '→ 区域代理枢纽': '→ エリア代理ハブ',
-  基地怎么赚钱: '拠点の収益の仕組み',
-  '四条盈利线，把场地变成营收来源': '4 つの収益ラインで、会場を収益源に変える',
   '基地内开班，学费归基地运营方。': '拠点内で講座を開き、受講料は拠点運営側の収益に。',
   '柴火接到的当地培训 / 工作坊需求，派给基地执行，直接收服务费。':
     '柴火に寄せられた地元の研修 / ワークショップ依頼を拠点が実施し、サービス料を直接受け取れます。',
@@ -432,8 +328,6 @@ const zhToJa: Record<string, string> = {
   基地与先锋官关系: '拠点とパイオニアの関係',
   '没有先锋官，就没有基地；有了基地，先锋官才有自己的主场。':
     'パイオニアがいなければ拠点はなく、拠点があってこそパイオニアは自分のホームを持てます。',
-  必须先有: 'まず必要',
-  互为支撑: '相互サポート',
   个人: '個人',
   '可挂靠多个基地，也可独立运营': '複数の拠点に所属可能、独立運営も可能',
   空间: 'スペース',
@@ -457,7 +351,6 @@ const zhToJa: Record<string, string> = {
     'スペースはあるがメーカー教育の経験がない場合、拠点に応募できますか？',
   '可以。核心标准是固定场地 + 持续运营意愿。柴火提供课程、教具和培训，帮你跑通第一期。':
     'できます。コア基準は固定会場 + 継続運営の意志です。柴火がコース・キット・研修を提供し、第 1 期の完走をサポートします。',
-  '把城市的锚点，和柴火一起建': '街のアンカーを、柴火と一緒に築こう',
   '核心标准只有两条：固定场地 + 持续运营意愿。填写申请表，社区经理将在 3 个工作日内联系你。':
     'コア基準はたった 2 つ：固定会場 + 継続運営の意志。申込フォームにご記入いただければ、コミュニティマネージャーが 3 営業日以内にご連絡します。',
   招募渠道伙伴: 'チャネルパートナー募集',
@@ -489,45 +382,14 @@ const zhToJa: Record<string, string> = {
 };
 
 const zhToEs: Record<string, string> = {
-  柴火生态: 'Ecosistema Chaihuo',
-  柴火全球创客生态分布图: 'Mapa global del ecosistema maker de Chaihuo',
-  '先锋官与基地正在全国及全球铺开。':
-    'Los Pioneros y las Bases se están expandiendo por todo el país y el mundo.',
-  '在地图上找到你身边的柴火节点，': 'Encuentra en el mapa el nodo de Chaihuo más cercano a ti,',
-  '或者——成为下一个。': 'o conviértete en el siguiente.',
   查看分布图: 'Ver el Mapa',
-  我要加入: 'Quiero Unirme',
-  先锋官与基地计划: 'Programa de Pioneros y Bases',
-  '把 AI 创客教育带到你的城市——柴火给你课程、教具和认证，你做本地的那根火柴。':
-    'Lleva la educación maker con IA a tu ciudad: Chaihuo te da cursos, kits y certificación; tú eres la chispa local.',
   先锋官: 'Pionero',
   基地: 'Base',
-  '在你的城市，做 AI 时代的点火人。': 'En tu ciudad, sé la chispa de la era de la IA.',
-  '5 套 M0 教具赠送': '5 kits M0 gratis',
-  '学费 100% 归你': 'El 100% de la matrícula es tuyo',
-  官方认证登上地图: 'Certificación oficial en el mapa',
-  了解先锋官: 'Conoce a los Pioneros',
-  '城市里看得见的柴火。': 'Chaihuo visible en tu ciudad.',
-  '10 套教具共用': '10 kits compartidos',
-  承接总部派单: 'Recibe pedidos de la sede',
-  区域优先权: 'Prioridad regional',
-  了解基地: 'Conoce las Bases',
   先锋官计划: 'Programa de Pioneros',
-  点火人: 'la chispa',
   基地计划: 'Programa de Bases',
-  看得见的柴火: 'Chaihuo que se ve',
-  '在你的城市，做 AI 时代的点火人': 'En tu ciudad, sé la chispa de la era de la IA',
-  '懂技术、能教技术，或者不懂技术但能链接本地网络——柴火给你课程、教具和认证，你把 AI 创客教育带到你的城市。':
-    'Domines o no la tecnología, si enseñas o conectas tu red local, Chaihuo te da cursos, kits y certificación para llevar la educación maker con IA a tu ciudad.',
   立即申请: 'Solicitar ahora',
   先了解基地: 'Conoce las Bases primero',
   先了解先锋官: 'Conoce a los Pioneros primero',
-  '有固定场地、有持续运营意愿——柴火给你教具、课程、品牌背书和派单流量，你做城市里 AI 创客教育的锚点。':
-    'Con un espacio fijo y ganas de operar a largo plazo, Chaihuo te da kits, cursos, marca y flujo de pedidos: tú eres el ancla maker de IA de tu ciudad.',
-  什么是先锋官: '¿Qué es un Pionero?',
-  '先锋官是柴火认证的在地的技术传播者 + 技术服务商。':
-    'Un Pionero es un divulgador tecnológico y proveedor de servicios certificado por Chaihuo.',
-  两类人都可以: 'Dos perfiles funcionan',
   技术型: 'Perfil técnico',
   '有技术背景，想用创客技能开展教育 / 服务':
     'Con perfil técnico: impartir educación / servicios con habilidades maker',
@@ -536,15 +398,11 @@ const zhToEs: Record<string, string> = {
     'Con recursos educativos / comunitarios: traer cursos maker sin enseñar personalmente',
   '每个基地必须先有先锋官；先锋官也可独立运营，不挂靠基地。':
     'Toda Base debe tener primero un Pionero; el Pionero puede operar solo, sin adscribirse a una Base.',
-  你能得到什么: 'Qué obtienes',
-  '从教具、账号到课程包与认证，起步所需全都配齐':
-    'De kits y cuentas a paquetes de cursos y certificación: todo para empezar',
   'M0 教具 5 套': '5 kits M0',
   '赠送，不回收': 'Regalo, no se recuperan',
   'Codecraft 账号 5 个': '5 cuentas de Codecraft',
   '365 天 / 5 席位': '365 días / 5 plazas',
   课程包: 'Paquete de cursos',
-  'PPT + md 格式，可魔改、可二次创作': 'En formato PPT + md: personalizable y editable',
   官方认证: 'Certificación oficial',
   '通过认证后登上 map.seeed.cc 全球分布图':
     'Certifícate y aparece en el mapa global de map.seeed.cc',
@@ -553,8 +411,6 @@ const zhToEs: Record<string, string> = {
     'Community manager, soporte técnico y actualización de cursos',
   'M1–M6 升级路径': 'Ruta de ascenso M1–M6',
   '保证金租赁制，退出全退': 'Alquiler con depósito; reembolso total al salir',
-  怎么赚钱: 'Cómo ganar dinero',
-  '三条盈利线，对应三种身份': 'Tres líneas de ingresos para tres roles',
   开课收费: 'Ingresos por cursos',
   '用 M0 课程在当地开班，学费 100% 归你。课程包现成、教具到位，你只需招生和上课。':
     'Imparte cursos M0 en tu ciudad: el 100% de la matrícula es tuyo. Paquete listo y kits a mano; solo capta alumnos y enseña.',
@@ -566,8 +422,6 @@ const zhToEs: Record<string, string> = {
     'Recomienda kits de Chaihuo a escuelas e instituciones locales y gana comisión por venta.',
   '向当地学校 / 机构推荐教具，成交后拿佣金。':
     'Recomienda kits a escuelas e instituciones locales y gana comisión por venta.',
-  四步走: 'Cuatro pasos',
-  '从一场体验活动，到一座城市的锚点': 'De un evento de experiencia al ancla de una ciudad',
   体验活动: 'Evento de experiencia',
   '在你的城市 / 场地办一场 AI 编程体验':
     'Organiza una experiencia de programación con IA en tu ciudad / espacio',
@@ -603,17 +457,10 @@ const zhToEs: Record<string, string> = {
   '先锋官和基地什么关系？': '¿Qué relación hay entre Pioneros y Bases?',
   '每个基地必须先有先锋官。先锋官可以是基地员工，也可以是合作制。先锋官可挂靠多个基地，基地权益是基地内先锋官共用的。':
     'Toda Base debe tener primero un Pionero: empleado o socio independiente, adscrito a varias Bases. Los beneficios de la Base se comparten entre sus Pioneros.',
-  '把这个计划，带回你的城市': 'Lleva este programa a tu ciudad',
   '第一阶段 10 基地 + 20 先锋官，先到先评估。填写申请表，社区经理将在 3 个工作日内联系你。':
     'La fase 1 cubre 10 bases + 20 pioneros: primero en llegar, primero en evaluarse. Completa la solicitud y un community manager te contactará en 3 días hábiles.',
   联系我们: 'Contáctanos',
-  '或联系社区经理（会后分配专属对接人）':
-    'O contacta a tu community manager (te asignan un enlace exclusivo tras la reunión)',
-  什么是基地: '¿Qué es una Base?',
-  '基地是柴火认证的城市级实体空间节点。':
-    'Una Base es un nodo físico a nivel ciudad certificado por Chaihuo.',
   '准入标准（2 项核心）': 'Criterios de admisión (2 requisitos clave)',
-  城市里看得见的柴火: 'Chaihuo visible en la ciudad',
   固定场地: 'Espacio fijo',
   可承接活动与课程: 'Capaz de albergar eventos y cursos',
   持续运营: 'Operación continua',
@@ -622,11 +469,7 @@ const zhToEs: Record<string, string> = {
   '科技馆 / 高校 Fab Lab 等公共教育空间':
     'Espacios públicos como museos de ciencia / Fab Labs universitarios',
   '已有创客 / STEAM 教育基础': 'Con base previa en educación maker / STEAM',
-  '柴火基地车巡游已触达、双方已建立信任':
-    'Alcanzados por la gira del Vehículo Base Móvil Chaihuo, con confianza mutua establecida',
   基地权益: 'Beneficios de la Base',
-  '同一套支持体系，个人与空间各取所需':
-    'Un mismo sistema de apoyo, a medida para personas y espacios',
   权益: 'Beneficios',
   '先锋官（个人）': 'Pionero (individual)',
   '基地（空间）': 'Base (espacio)',
@@ -647,9 +490,6 @@ const zhToEs: Record<string, string> = {
   升级路径: 'Ruta de ascenso',
   '→ 基地': '→ Base',
   '→ 区域代理枢纽': '→ Hub regional',
-  基地怎么赚钱: 'Cómo gana dinero una Base',
-  '四条盈利线，把场地变成营收来源':
-    'Cuatro líneas de ingresos que convierten tu espacio en ganancias',
   '基地内开班，学费归基地运营方。': 'Imparte clases en la Base: la matrícula es del operador.',
   '柴火接到的当地培训 / 工作坊需求，派给基地执行，直接收服务费。':
     'Chaihuo deriva a la Base las demandas locales de formación / talleres; ejecuta y cobra directo.',
@@ -660,8 +500,6 @@ const zhToEs: Record<string, string> = {
   基地与先锋官关系: 'Relación entre Bases y Pioneros',
   '没有先锋官，就没有基地；有了基地，先锋官才有自己的主场。':
     'Sin Pioneros no hay Base; con una, los Pioneros tienen su propio terreno.',
-  必须先有: 'Se requiere primero',
-  互为支撑: 'Se apoyan mutuamente',
   个人: 'Individual',
   '可挂靠多个基地，也可独立运营':
     'Puede adscribirse a varias Bases u operar de forma independiente',
@@ -686,7 +524,6 @@ const zhToEs: Record<string, string> = {
     '¿Puedo solicitar ser Base si tengo un espacio pero no experiencia en educación maker?',
   '可以。核心标准是固定场地 + 持续运营意愿。柴火提供课程、教具和培训，帮你跑通第一期。':
     'Sí. Clave: un espacio fijo + voluntad de operar a largo plazo. Chaihuo aporta cursos, kits y formación para tu primera cohorte.',
-  '把城市的锚点，和柴火一起建': 'Construye el ancla de tu ciudad junto a Chaihuo',
   '核心标准只有两条：固定场地 + 持续运营意愿。填写申请表，社区经理将在 3 个工作日内联系你。':
     'Solo dos criterios: espacio fijo + voluntad de operar a largo plazo. Completa la solicitud y un community manager te contactará en 3 días hábiles.',
   招募渠道伙伴: 'Buscamos socios de canal',
@@ -718,48 +555,17 @@ const zhToEs: Record<string, string> = {
 };
 
 const zhToPt: Record<string, string> = {
-  柴火生态: 'Ecossistema Chaihuo',
-  柴火全球创客生态分布图: 'Mapa Global do Ecossistema Maker Chaihuo',
-  '先锋官与基地正在全国及全球铺开。':
-    'Pioneiros e bases estão se espalhando pelo país e pelo mundo.',
-  '在地图上找到你身边的柴火节点，': 'Encontre no mapa o nó Chaihuo mais próximo de você,',
-  '或者——成为下一个。': 'ou torne-se o próximo.',
   查看分布图: 'Ver o Mapa',
-  我要加入: 'Quero Entrar',
 
-  先锋官与基地计划: 'Programa de Pioneiros e Bases',
-  '把 AI 创客教育带到你的城市——柴火给你课程、教具和认证，你做本地的那根火柴。':
-    'Leve a educação maker com IA para a sua cidade — a Chaihuo fornece cursos, kits e certificação; você acende a faísca local.',
   先锋官: 'Pioneiro',
   基地: 'Base',
-  '在你的城市，做 AI 时代的点火人。': 'Na sua cidade, seja quem acende a faísca da era da IA.',
-  '5 套 M0 教具赠送': '5 kits M0 grátis',
-  '学费 100% 归你': '100% da mensalidade é sua',
-  官方认证登上地图: 'Certificação oficial no mapa',
-  了解先锋官: 'Conhecer os Pioneiros',
-  '城市里看得见的柴火。': 'A Chaihuo que se vê na cidade.',
-  '10 套教具共用': '10 kits compartilhados',
-  承接总部派单: 'Recebe demandas da central',
-  区域优先权: 'Prioridade regional',
-  了解基地: 'Conhecer as Bases',
 
   先锋官计划: 'Programa de Pioneiros',
-  点火人: 'a faísca',
   基地计划: 'Programa de Bases',
-  看得见的柴火: 'A Chaihuo Que Você Vê',
-  '在你的城市，做 AI 时代的点火人': 'Na sua cidade, seja quem acende a faísca da era da IA',
-  '懂技术、能教技术，或者不懂技术但能链接本地网络——柴火给你课程、教具和认证，你把 AI 创客教育带到你的城市。':
-    'Entenda de tecnologia, saiba ensinar ou apenas conecte redes locais — a Chaihuo fornece cursos, kits e certificação; você leva a educação maker com IA para a sua cidade.',
   立即申请: 'Inscreva-se Agora',
   先了解基地: 'Conheça as Bases Primeiro',
   先了解先锋官: 'Conheça os Pioneiros Primeiro',
-  '有固定场地、有持续运营意愿——柴火给你教具、课程、品牌背书和派单流量，你做城市里 AI 创客教育的锚点。':
-    'Com espaço fixo e vontade de operação contínua — a Chaihuo oferece kits, cursos, respaldo da marca e fluxo de demandas; você se torna a âncora da educação maker com IA na cidade.',
 
-  什么是先锋官: 'O Que É um Pioneiro',
-  '先锋官是柴火认证的在地的技术传播者 + 技术服务商。':
-    'Um Pioneiro é um divulgador de tecnologia e provedor de serviços certificado pela Chaihuo.',
-  两类人都可以: 'Os Dois Perfis Funcionam',
   技术型: 'Técnico',
   '有技术背景，想用创客技能开展教育 / 服务':
     'Tem formação técnica e quer atuar com educação / serviços usando habilidades maker',
@@ -769,15 +575,11 @@ const zhToPt: Record<string, string> = {
   '每个基地必须先有先锋官；先锋官也可独立运营，不挂靠基地。':
     'Toda base precisa primeiro ter um Pioneiro; um Pioneiro também pode operar de forma independente, sem vínculo com uma base.',
 
-  你能得到什么: 'O Que Você Recebe',
-  '从教具、账号到课程包与认证，起步所需全都配齐':
-    'De kits e contas a pacotes de cursos e certificação — tudo o que você precisa para começar',
   'M0 教具 5 套': '5 kits M0',
   '赠送，不回收': 'Grátis, sem devolução',
   'Codecraft 账号 5 个': '5 contas Codecraft',
   '365 天 / 5 席位': '365 dias / 5 vagas',
   课程包: 'Pacote de Cursos',
-  'PPT + md 格式，可魔改、可二次创作': 'Formatos PPT + md — fáceis de adaptar e remixar',
   官方认证: 'Certificação Oficial',
   '通过认证后登上 map.seeed.cc 全球分布图':
     'Após a certificação, apareça no mapa global do map.seeed.cc',
@@ -787,8 +589,6 @@ const zhToPt: Record<string, string> = {
   'M1–M6 升级路径': 'Trilha de upgrade M1–M6',
   '保证金租赁制，退出全退': 'Locação com caução, reembolso total ao sair',
 
-  怎么赚钱: 'Como Você Ganha',
-  '三条盈利线，对应三种身份': 'Três linhas de receita para três papéis',
   开课收费: 'Mensalidades de Cursos',
   '用 M0 课程在当地开班，学费 100% 归你。课程包现成、教具到位，你只需招生和上课。':
     'Use os cursos M0 para abrir turmas locais — 100% da mensalidade é sua. O pacote de cursos está pronto e os kits entregues; você só cuida das matrículas e das aulas.',
@@ -801,8 +601,6 @@ const zhToPt: Record<string, string> = {
   '向当地学校 / 机构推荐教具，成交后拿佣金。':
     'Indique kits a escolas / instituições locais e ganhe comissão em cada venda fechada.',
 
-  四步走: 'Quatro Passos',
-  '从一场体验活动，到一座城市的锚点': 'De um evento de experiência a uma âncora na cidade',
   体验活动: 'Evento de Experiência',
   '在你的城市 / 场地办一场 AI 编程体验':
     'Realize uma experiência de programação com IA na sua cidade / espaço',
@@ -840,18 +638,11 @@ const zhToPt: Record<string, string> = {
   '先锋官和基地什么关系？': 'Qual é a relação entre Pioneiros e Bases?',
   '每个基地必须先有先锋官。先锋官可以是基地员工，也可以是合作制。先锋官可挂靠多个基地，基地权益是基地内先锋官共用的。':
     'Toda base precisa primeiro ter um Pioneiro. O Pioneiro pode ser funcionário da base ou parceiro e pode se vincular a várias bases. Os benefícios da base são compartilhados por todos os Pioneiros dela.',
-  '把这个计划，带回你的城市': 'Leve Este Programa para a Sua Cidade',
   '第一阶段 10 基地 + 20 先锋官，先到先评估。填写申请表，社区经理将在 3 个工作日内联系你。':
     'A fase 1 tem 10 bases + 20 pioneiros — quem chega primeiro é avaliado primeiro. Preencha o formulário e um gerente de comunidade entrará em contato em até 3 dias úteis.',
   联系我们: 'Fale Conosco',
-  '或联系社区经理（会后分配专属对接人）':
-    'Ou fale com o gerente de comunidade (um contato dedicado é designado após a reunião)',
 
-  什么是基地: 'O Que É uma Base',
-  '基地是柴火认证的城市级实体空间节点。':
-    'Uma Base é um nó de espaço físico certificado pela Chaihuo em nível de cidade.',
   '准入标准（2 项核心）': 'Critérios de Admissão (2 Requisitos Essenciais)',
-  城市里看得见的柴火: 'A Chaihuo que se vê na cidade',
   固定场地: 'Espaço Fixo',
   可承接活动与课程: 'Pode sediar eventos e cursos',
   持续运营: 'Operação Contínua',
@@ -860,12 +651,8 @@ const zhToPt: Record<string, string> = {
   '科技馆 / 高校 Fab Lab 等公共教育空间':
     'Espaços públicos de educação, como museus de ciência / Fab Labs universitários',
   '已有创客 / STEAM 教育基础': 'Com base em educação maker / STEAM',
-  '柴火基地车巡游已触达、双方已建立信任':
-    'Já alcançado pela turnê do Veículo Base Móvel Chaihuo, com confiança mútua estabelecida',
 
   基地权益: 'Benefícios da Base',
-  '同一套支持体系，个人与空间各取所需':
-    'Um mesmo sistema de apoio, adaptado para pessoas e espaços',
   权益: 'Benefício',
   '先锋官（个人）': 'Pioneiro (Pessoa)',
   '基地（空间）': 'Base (Espaço)',
@@ -888,9 +675,6 @@ const zhToPt: Record<string, string> = {
   '→ 基地': '→ Base',
   '→ 区域代理枢纽': '→ Hub Regional',
 
-  基地怎么赚钱: 'Como uma Base Ganha',
-  '四条盈利线，把场地变成营收来源':
-    'Quatro linhas de receita que transformam o espaço em fonte de renda',
   '基地内开班，学费归基地运营方。':
     'Abra turmas na base — a mensalidade vai para quem opera a base.',
   '柴火接到的当地培训 / 工作坊需求，派给基地执行，直接收服务费。':
@@ -904,8 +688,6 @@ const zhToPt: Record<string, string> = {
   基地与先锋官关系: 'Como Bases e Pioneiros Se Relacionam',
   '没有先锋官，就没有基地；有了基地，先锋官才有自己的主场。':
     'Sem Pioneiros, não há base; com uma base, os Pioneiros têm seu próprio território.',
-  必须先有: 'Exige Primeiro',
-  互为支撑: 'Apoio Mútuo',
   个人: 'Pessoa',
   '可挂靠多个基地，也可独立运营': 'Pode se vincular a várias bases ou operar de forma independente',
   空间: 'Espaço',
@@ -932,7 +714,6 @@ const zhToPt: Record<string, string> = {
   '可以。核心标准是固定场地 + 持续运营意愿。柴火提供课程、教具和培训，帮你跑通第一期。':
     'Sim. Os critérios essenciais são espaço fixo + vontade de operação contínua. A Chaihuo fornece cursos, kits e treinamento para você concluir sua primeira turma.',
 
-  '把城市的锚点，和柴火一起建': 'Construa a Âncora da Cidade Junto com a Chaihuo',
   '核心标准只有两条：固定场地 + 持续运营意愿。填写申请表，社区经理将在 3 个工作日内联系你。':
     'Apenas dois critérios essenciais: espaço fixo + vontade de operação contínua. Preencha o formulário e um gerente de comunidade entrará em contato em até 3 dias úteis.',
   招募渠道伙伴: 'Buscamos parceiros de canal',

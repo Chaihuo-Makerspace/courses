@@ -1,7 +1,3 @@
-import type { IconName } from './icons';
-
-export type { IconName } from './icons';
-
 /**
  * 先锋官 / 基地 / 创客生态 —— 数据层单一事实源。
  *
@@ -24,13 +20,11 @@ export interface ChipLink {
 }
 
 export interface IconBullet {
-  icon: IconName;
   title: string;
   description: string;
 }
 
 export interface RevenueLine {
-  icon: IconName;
   number: string;
   title: string;
   description: string;
@@ -109,7 +103,6 @@ export interface ChipComparisonData {
 }
 
 export interface ChipRelationCard {
-  icon: IconName;
   label: string;
   tag: string;
   description: string;
@@ -193,12 +186,10 @@ export const pioneer: PioneerProgram = {
     coreTitle: '谁可以申请',
     core: [
       {
-        icon: 'lucide:cpu',
         title: '技术型',
         description: '有技术背景，想用创客技能开展教育 / 服务',
       },
       {
-        icon: 'lucide:network',
         title: '链接型',
         description: '有教育 / 社区资源，想引入创客课程但不一定亲自教',
       },
@@ -208,44 +199,38 @@ export const pioneer: PioneerProgram = {
   benefits: {
     title: '柴火提供什么',
     items: [
-      { icon: 'lucide:package', title: 'M0 教具 5 套', description: '赠送，不回收' },
-      { icon: 'lucide:layers', title: 'Codecraft 账号 5 个', description: '365 天 / 5 席位' },
+      { title: 'M0 教具 5 套', description: '赠送，不回收' },
+      { title: 'Codecraft 账号 5 个', description: '365 天 / 5 席位' },
       {
-        icon: 'lucide:book-open',
         title: '课程包',
         description: 'PPT + md 格式，可以自行修改和二次创作',
       },
       {
-        icon: 'lucide:badge-check',
         title: '官方认证',
         description: '通过认证后登上 map.seeed.cc 全球分布图',
       },
       {
-        icon: 'lucide:handshake',
         title: '总部支持',
         description: '社区经理对接、技术答疑、课程更新',
       },
-      { icon: 'lucide:route', title: 'M1–M6 升级路径', description: '保证金租赁制，退出全退' },
+      { title: 'M1–M6 升级路径', description: '保证金租赁制，退出全退' },
     ],
   },
   revenue: {
     title: '收益来自哪里',
     lines: [
       {
-        icon: 'lucide:graduation-cap',
         number: '01',
         title: '开课收费',
         description:
           '用 M0 课程在当地开班，学费 100% 归你。课程包现成、教具到位，你只需招生和上课。',
       },
       {
-        icon: 'lucide:send',
         number: '02',
         title: '总部派单',
         description: '柴火接到的培训 / 工作坊需求，派给当地先锋官执行。你出人出力，直接收服务费。',
       },
       {
-        icon: 'lucide:coins',
         number: '03',
         title: '教具销售佣金',
         description: '向当地学校 / 机构推荐柴火教具，成交后拿佣金。',
@@ -327,8 +312,8 @@ export const base: BaseProgram = {
     intro: '基地是柴火认证的、有固定场地的本地授课点。',
     coreTitle: '准入标准（2 项核心）',
     core: [
-      { icon: 'lucide:building-2', title: '固定场地', description: '可承接活动与课程' },
-      { icon: 'lucide:users', title: '持续运营', description: '有专人负责、有运营计划' },
+      { title: '固定场地', description: '可承接活动与课程' },
+      { title: '持续运营', description: '有专人负责、有运营计划' },
     ],
     plusTitle: '加分项',
     plus: [
@@ -357,25 +342,21 @@ export const base: BaseProgram = {
     title: '收益来自哪里',
     lines: [
       {
-        icon: 'lucide:graduation-cap',
         number: '01',
         title: '开课收费',
         description: '基地内开班，学费归基地运营方。',
       },
       {
-        icon: 'lucide:send',
         number: '02',
         title: '总部派单',
         description: '柴火接到的当地培训 / 工作坊需求，派给基地执行，直接收服务费。',
       },
       {
-        icon: 'lucide:coins',
         number: '03',
         title: '教具销售佣金',
         description: '向当地学校 / 机构推荐教具，成交后拿佣金。',
       },
       {
-        icon: 'lucide:network',
         number: '04',
         title: '跨基地分佣',
         description: '多基地协作项目，按贡献分佣。',
@@ -388,13 +369,11 @@ export const base: BaseProgram = {
     intro: '没有先锋官，就没有基地；有了基地，先锋官才有自己的主场。',
     cards: {
       pioneer: {
-        icon: 'lucide:zap',
         label: '先锋官',
         tag: '个人',
         description: '可挂靠多个基地，也可独立运营',
       },
       base: {
-        icon: 'lucide:home',
         label: '基地',
         tag: '空间',
         description: '权益基地内共用，可有多个先锋官',

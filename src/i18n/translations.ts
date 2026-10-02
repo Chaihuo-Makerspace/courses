@@ -11,11 +11,9 @@ const zh: TranslationDict = {
   // Nav
   'nav.home': '首页',
   'nav.courses': '学习体系',
-  'nav.paths': '路径指南',
   'nav.contact': '合作咨询',
   'nav.about': '关于学院',
   'nav.chaihuo': '柴火创客空间',
-  'nav.pioneer': '先锋官·基地',
   'nav.toggle': '打开或关闭导航菜单',
   'nav.brand': '柴火',
   'nav.homeAria': '柴火创客学院首页',
@@ -23,7 +21,6 @@ const zh: TranslationDict = {
   'footer.tagline':
     '柴火创客学院把真实硬件、场景项目和交付经验整理成 M0–M6 学习体系，帮助学习者从动手基础走向可交付系统。',
   'nav.pioneerBase': '先锋官 · 基地',
-  'nav.map': '创客生态',
   'nav.ecosystem': '柴火生态',
   'nav.mcv': '柴火基地车',
   'chip.tabsAria': '在先锋官计划与基地计划之间切换',
@@ -32,9 +29,7 @@ const zh: TranslationDict = {
   'footer.social': '关注我们',
   'footer.social.wechat': '微信公众号',
   'footer.social.xiaohongshu': '小红书',
-  'footer.copyright': '© {year} Chaihuo Makerspace Academy. All rights reserved.',
-  'footer.chaihuo': '柴火创客空间',
-  'footer.mcv': '柴火基地车',
+  'footer.copyright': '© {year} Chaihuo Maker Academy. All rights reserved.',
   'footer.ecosystem': '柴火生态',
   'footer.ecosystemMap': '创客生态分布图',
   'footer.pioneer': '先锋官计划',
@@ -48,166 +43,41 @@ const zh: TranslationDict = {
     '基地是有固定场地的渠道伙伴：柴火提供教具、课程和总部派单，基地在本地开课，并为先锋官提供授课场地。',
 
   // Home Hero
-  'home.hero.eyebrow': '柴火创客学院',
   'home.hero.title': '七门智能硬件课，\n套件、教案、讲师一次配齐',
-  'home.hero.titleHighlight': '系统学习',
-  'home.hero.subtitle': '柴火创客学院',
   'home.hero.description':
     'M0 到 M6，每门课都配 Seeed 真实硬件、逐课时教案和验收标准。学校拿去开课，集成商拿去练交付团队。M0 零基础可进，其余六门按方向独立选学。',
-
-  'home.hero.ctaPrimary': '查看学习体系',
-  'home.hero.ctaSecondary': '申请合作咨询',
-
-  // Home sections
-  'home.familiarObjects.title': '你能从这里做出来的东西',
-  'home.familiarObjects.subtitle': '从第一天开始，用真实硬件做出看得见摸得着的作品',
-  'home.outcomes.title': '从这里，你将获得什么',
-  'home.outcomes.subtitle': '不只是技术，更是交付能力',
-  'home.goalPaths.title': '三大学习方向',
-  'home.goalPaths.subtitle': '无论你想用 AI 造物、造 AI 的物，还是交付解决方案，都能找到起点',
-  'home.mapPreview.title': '学习矩阵预览',
-  'home.mapPreview.subtitle': 'M0–M6 七大模块 × L1/L2/L3 三阶递进',
-
-  // Home CTA
-  'home.cta.eyebrow': '开启学习之旅',
-  'home.cta.title': '准备好动手了吗？',
-  'home.cta.description': '从零基础到独立交付，选择你的起点，立即开始。',
-  'home.cta.primary': '查看学习体系',
-  'home.cta.secondary': '联系我们',
 
   // Courses
   'courses.title': '学习体系',
   'courses.description':
     '七个模块（M0–M6），每个模块分 L1 / L2 / L3 三档深度。每行是一个模块，每列是一档深度；格子里写的是这一档的课名、天数和学完的产出。',
-  'courses.hero.eyebrow': 'M0–M6 × L1/L2/L3',
-
-  'courses.overview': '学习总览',
-  'courses.matrix': '学习矩阵',
-  'courses.tracks': '学习路径',
-  'courses.cta.eyebrow': '找到你的方向',
-  'courses.cta.title': '不确定从哪里开始？',
-  'courses.cta.description': '查看三大学习方向，找到最适合你的学习路径',
-  'courses.cta.primary': '查看路径指南',
-  'courses.cta.secondary': '咨询学习顾问',
 
   // Course detail
-  'course.audience': '适合人群',
-  'course.capabilities': '你将获得的能力',
-  'course.deliverables': '学习交付物',
-  'course.formats': '学习形式',
-  'course.kits': '硬件套件',
-  'course.toolchain': '技术栈',
-  'course.curriculum': '学习大纲',
-  'course.teacherNotes': '讲师须知',
   'course.complianceBoundary': '能力边界与合规约束',
-  'course.compliance.principles': '核心原则',
   'course.compliance.applicable': '适用范围',
   'course.compliance.notApplicable': '不适用范围',
-  'course.relatedTracks': '相关学习路径',
-  'course.levels': '学习层级',
-  'course.level.l1': '入门',
-  'course.level.l2': '进阶',
-  'course.level.l3': '实战',
-  'course.backToCourses': '返回学习体系',
-  'course.cta.primary': '咨询合作',
-  'course.cta.secondary': '查看其他模块',
-
-  // Paths
-  'paths.title': '路径指南',
-  'paths.description': '根据你的目标选择最适合的学习路径',
-  'paths.cta.eyebrow': '选择你的方向',
-  'paths.cta.title': '准备好开始了吗？',
-  'paths.cta.description': '选择一条学习路径，开始你的 AIoT 实战之旅',
-  'paths.cta.primary': '查看学习体系',
-  'paths.cta.secondary': '合作咨询',
 
   // About
   'about.title': '关于学院',
-  'about.description': '柴火创客学院是柴火创客生态的技术赋能平台',
-  'about.hero.eyebrow': '关于我们',
   'about.hero.title': '柴火创客学院',
-  'about.hero.titleHighlight': '学院',
-  'about.hero.subtitle': 'Chaihuo Makerspace Academy',
   'about.hero.description':
     '我们培养人掌握新技术整合能力，不提供解决方案。课程用 Seeed Studio 在售的硬件，从柴火创客空间十多年的项目和社区经验里整理出来，面向院校、集成商和企业。',
-  'about.ecosystem.title': '柴火创客生态',
-  'about.ecosystem.subtitle': '三大支柱支撑创客教育体系',
-  'about.values.title': '我们的理念',
-  'about.values.subtitle': '做对的事，做难的事，做需要时间积累的事',
-  'about.stats.title': '数据说',
-  'about.stats.subtitle': '用数字说话',
-  'about.cta.eyebrow': '加入我们',
-  'about.cta.title': '想了解更多？',
-  'about.cta.description': '联系我们，了解柴火创客学院的学习与合作机会',
-
-  'about.cta.primary': '查看学习体系',
-  'about.cta.secondary': '联系我们',
 
   // Contact
   'contact.title': '合作咨询',
-  'contact.description': '高校、集成商、企业 —— 找到适合你的合作方式',
-  'contact.hero.eyebrow': '合作咨询',
   'contact.hero.title': '三类机构，四种合作形态',
-  'contact.hero.titleHighlight': '合作方式',
   'contact.hero.description':
     '按班型与规模报价，不设统一标价。发邮件说明你是哪类机构、想上哪个模块，3 个工作日内给方案。',
-  'contact.scenarios.title': '合作场景',
-  'contact.scenarios.subtitle': '选择你的角色，找到最适合的合作方式',
-  'contact.forms.title': '合作形态',
-  'contact.forms.subtitle': '四种销售形态，从裸硬件到全托交付',
-  'contact.faq.title': '常见问题',
-  'contact.faq.subtitle': '关于合作的常见问题',
-  'contact.cta.eyebrow': '开始合作',
-  'contact.cta.title': '准备好合作了吗？',
-  'contact.cta.description': '发送邮件至 business@chaihuo.org，找到最适合你的合作方式',
-  'contact.cta.primary': '联系我们',
-  'contact.cta.secondary': '查看学习体系',
 
   // 404
   '404.title': '页面未找到',
-  '404.description': '您访问的页面不存在或已被移动',
   '404.heading': '404',
   '404.message': '页面未找到',
   '404.submessage': '您访问的页面不存在或已被移动',
   '404.backHome': '返回首页',
 
-  // Styleguide
-  'styleguide.title': '设计系统',
-
   // Language switcher
   'lang.switcher': '切换语言',
-
-  // Hero
-  'hero.courseMap': '学习地图 · M0–M6',
-
-  'hero.levels': 'L1 · L2 · L3',
-
-  // Home
-  'home.mapPreview.eyebrow': '学习结构',
-
-  // About
-  'about.ecosystem.eyebrow': '生态系统',
-
-  // Courses
-  'course.illustration': '插画',
-  'course.coreHardwareHeading': 'Core Hardware / 核心硬件',
-  'course.keyCapabilitiesHeading': 'KEY CAPABILITIES /',
-  'courses.matrix.eyebrow': '学习矩阵',
-
-  // Paths
-  'paths.tracks.eyebrow': '学习组合',
-
-  // Contact
-  'contact.faq.eyebrow': 'FAQ',
-  'contact.forms.eyebrow': '合作咨询',
-  'contact.forms.qrAlt': '合作咨询二维码',
-
-  // Scenario
-  'scenario.formAria': '合作形态',
-
-  // 404
-  '404.offline': 'Offline',
-  '404.terminal': 'ERROR_CODE: 0x404_ROUTER_LOST · CHAIHUO ACADEMY OS',
 
   // Footer
   'footer.since': 'since 2011',
@@ -235,16 +105,13 @@ const en: TranslationDict = {
 
   'nav.home': 'Home',
   'nav.courses': 'Courses',
-  'nav.paths': 'Learning Paths',
   'nav.contact': 'Partnership',
   'nav.about': 'About',
   'nav.chaihuo': 'Chaihuo Makerspace',
-  'nav.pioneer': 'Pioneer · Base',
   'nav.toggle': 'Toggle navigation menu',
   'nav.brand': 'Chaihuo',
   'nav.homeAria': 'Chaihuo Maker Academy Home',
   'nav.pioneerBase': 'Pioneer · Base',
-  'nav.map': 'Maker Ecosystem',
   'nav.ecosystem': 'Chaihuo Ecosystem',
   'nav.mcv': 'Chaihuo Mobile Base Vehicle',
   'chip.tabsAria': 'Switch between the Pioneer and Base programs',
@@ -256,9 +123,7 @@ const en: TranslationDict = {
   'footer.social': 'Follow Us',
   'footer.social.wechat': 'WeChat',
   'footer.social.xiaohongshu': 'Xiaohongshu',
-  'footer.copyright': '© {year} Chaihuo Makerspace Academy. All rights reserved.',
-  'footer.chaihuo': 'Chaihuo Makerspace',
-  'footer.mcv': 'Chaihuo Mobile Base Vehicle',
+  'footer.copyright': '© {year} Chaihuo Maker Academy. All rights reserved.',
   'footer.ecosystem': 'Chaihuo Ecosystem',
   'footer.ecosystemMap': 'Maker Ecosystem Map',
   'footer.pioneer': 'Pioneer Program',
@@ -271,165 +136,36 @@ const en: TranslationDict = {
   'page.base.description':
     'Bases are channel partners with a permanent venue: Chaihuo provides teaching kits, courses and dispatched work; the Base runs classes locally and gives Pioneers a place to teach.',
 
-  'home.hero.eyebrow': 'Chaihuo Maker Academy',
   'home.hero.title':
     'Seven smart-hardware courses,\neach with its kit, lesson plans and instructors',
-  'home.hero.titleHighlight': 'Systematic Learning',
-  'home.hero.subtitle': 'Chaihuo Maker Academy',
   'home.hero.description':
     'From M0 to M6, every course comes with real Seeed hardware, lesson-by-lesson teaching plans and acceptance criteria. Schools use them to run classes; integrators use them to train delivery teams. M0 needs no prior experience, and the other six can be taken independently by direction.',
-  'home.hero.ctaPrimary': 'Explore Courses',
-  'home.hero.ctaSecondary': 'Partner With Us',
-
-  'home.familiarObjects.title': 'What You Can Build Here',
-  'home.familiarObjects.subtitle': 'From day one, create tangible projects with real hardware',
-  'home.outcomes.title': 'What You Will Gain',
-  'home.outcomes.subtitle': 'Beyond technology — real delivery capability',
-  'home.goalPaths.title': 'Three Learning Tracks',
-  'home.goalPaths.subtitle':
-    'Whether you want to build with AI, build AI products, or deliver solutions — find your starting point',
-  'home.mapPreview.title': 'Learning Matrix Preview',
-  'home.mapPreview.subtitle': '7 Modules (M0–M6) × 3 Levels (L1/L2/L3)',
-
-  'home.cta.eyebrow': 'Start Your Journey',
-  'home.cta.title': 'Ready to get hands-on?',
-  'home.cta.description':
-    'From zero to independent delivery — choose your starting point and begin now.',
-  'home.cta.primary': 'Explore Courses',
-  'home.cta.secondary': 'Contact Us',
 
   'courses.title': 'Learning System',
-  'courses.hero.eyebrow': 'M0–M6 × L1/L2/L3',
   'courses.description':
     "Seven modules (M0–M6), each offered at three depths: L1, L2 and L3. Each row is a module and each column a depth; a cell gives that level's course title, length in days and what learners produce.",
-  'courses.overview': 'Learning Overview',
-  'courses.matrix': 'Learning Matrix',
-  'courses.tracks': 'Learning Paths',
-  'courses.cta.eyebrow': 'Find Your Direction',
-  'courses.cta.title': 'Not sure where to start?',
-  'courses.cta.description': 'Explore the three learning tracks and find the best path for you',
-  'courses.cta.primary': 'View Learning Paths',
-  'courses.cta.secondary': 'Consult an Advisor',
 
-  'course.audience': 'Target Audience',
-  'course.capabilities': 'Capabilities You Will Gain',
-  'course.deliverables': 'Course Deliverables',
-  'course.formats': 'Learning Formats',
-  'course.kits': 'Hardware Kits',
-  'course.toolchain': 'Tech Stack',
-  'course.curriculum': 'Curriculum',
-  'course.teacherNotes': 'Instructor Notes',
   'course.complianceBoundary': 'Scope Boundaries & Compliance',
-  'course.compliance.principles': 'Core Principles',
   'course.compliance.applicable': 'In Scope',
   'course.compliance.notApplicable': 'Out of Scope',
-  'course.relatedTracks': 'Related Learning Paths',
-  'course.levels': 'Course Levels',
-  'course.level.l1': 'Beginner',
-  'course.level.l2': 'Intermediate',
-  'course.level.l3': 'Advanced',
-  'course.backToCourses': 'Back to Courses',
-  'course.cta.primary': 'Partner With Us',
-  'course.cta.secondary': 'View Other Courses',
-
-  'paths.title': 'Learning Paths',
-  'paths.description': 'Find the best learning path based on your goals',
-  'paths.cta.eyebrow': 'Choose Your Path',
-  'paths.cta.title': 'Ready to start?',
-  'paths.cta.description': 'Choose a learning path and begin your AIoT hands-on journey',
-  'paths.cta.primary': 'Explore Courses',
-  'paths.cta.secondary': 'Partner With Us',
 
   'about.title': 'About the Academy',
-  'about.description':
-    'Chaihuo Maker Academy is the technology empowerment platform of the Chaihuo Maker ecosystem',
-  'about.hero.eyebrow': 'About Us',
   'about.hero.title': 'Chaihuo Maker Academy',
-  'about.hero.titleHighlight': 'Academy',
-  'about.hero.subtitle': 'Chaihuo Makerspace Academy',
   'about.hero.description':
     "We train people to integrate new technology; we do not sell solutions. The courses use hardware from Seeed Studio's current catalogue and are distilled from more than a decade of projects and community work at Chaihuo Makerspace. They are offered to schools, integrators and enterprises.",
-  'about.ecosystem.title': 'Chaihuo Maker Ecosystem',
-  'about.ecosystem.subtitle': 'Three pillars supporting maker education',
-  'about.values.title': 'Our Philosophy',
-  'about.values.subtitle': 'Do the right thing, do the hard thing, do what takes time to build',
-  'about.stats.title': 'By the Numbers',
-  'about.stats.subtitle': 'Let the numbers speak',
-  'about.cta.eyebrow': 'Join Us',
-  'about.cta.title': 'Want to learn more?',
-  'about.cta.description':
-    'Contact us to learn about Chaihuo Maker Academy courses and partnership opportunities',
-  'about.cta.primary': 'Explore Courses',
-  'about.cta.secondary': 'Contact Us',
 
   'contact.title': 'Partnership',
-  'contact.description':
-    'Universities, integrators, enterprises — find the right collaboration model for you',
-  'contact.hero.eyebrow': 'Partnership Inquiry',
   'contact.hero.title': 'Three kinds of organisation, four ways to work together',
-  'contact.hero.titleHighlight': 'Collaboration Model',
   'contact.hero.description':
     'Pricing depends on class format and size, so there is no list price. Email us what kind of organisation you are and which module you want, and we will send a proposal within 3 working days.',
-  'contact.scenarios.title': 'Partnership Scenarios',
-  'contact.scenarios.subtitle': 'Choose your role and find the best collaboration approach',
-  'contact.forms.title': 'Collaboration Formats',
-  'contact.forms.subtitle':
-    'Four course delivery formats, from bare hardware to full-service delivery',
-  'contact.faq.title': 'FAQ',
-  'contact.faq.subtitle': 'Common questions about course partnerships',
-  'contact.cta.eyebrow': 'Start Collaborating',
-  'contact.cta.title': 'Ready to partner?',
-  'contact.cta.description':
-    'Email us at business@chaihuo.org to find the best collaboration model for you',
-  'contact.cta.primary': 'Contact Us',
-  'contact.cta.secondary': 'Explore Courses',
 
   '404.title': 'Page Not Found',
-  '404.description': 'The page you are looking for does not exist or has been moved',
   '404.heading': '404',
   '404.message': 'Page Not Found',
   '404.submessage': 'The page you are looking for does not exist or has been moved',
   '404.backHome': 'Back to Home',
 
-  'styleguide.title': 'Design System',
-
   'lang.switcher': 'Switch Language',
-
-  // Hero
-  'hero.courseMap': 'Learning Map · M0–M6',
-  'hero.levels': 'L1 · L2 · L3',
-
-  // Home
-  'home.mapPreview.eyebrow': 'Learning Structure',
-
-  // About
-  'about.ecosystem.eyebrow': 'Ecosystem',
-
-  // Courses
-  'course.illustration': 'Illustration',
-  'course.coreHardwareHeading': 'Core Hardware',
-  'course.keyCapabilitiesHeading': 'Key Capabilities',
-  'courses.matrix.eyebrow': 'Learning Matrix',
-
-  // Paths
-  'paths.tracks.eyebrow': 'Course Packages',
-
-  // Contact
-  'contact.faq.eyebrow': 'FAQ',
-  'contact.forms.eyebrow': 'Partnership Inquiry',
-  'contact.forms.qrAlt': 'Learning Partnership QR Code',
-  'contact.forms.interestsHeading': "I'm Interested In",
-  'contact.forms.interestLearning': 'Learning Adoption',
-  'contact.forms.interestPioneer': 'Pioneer Base',
-  'contact.forms.qrHint':
-    'When scanning to register, please indicate your area of interest. Our community manager will connect you with the right person.',
-
-  // Scenario
-  'scenario.formAria': 'Partnership Format',
-
-  // 404
-  '404.offline': 'Offline',
-  '404.terminal': 'ERROR_CODE: 0x404_ROUTER_LOST · CHAIHUO ACADEMY OS',
 
   // Footer
   'footer.since': 'since 2011',
@@ -457,16 +193,13 @@ const ja: TranslationDict = {
 
   'nav.home': 'ホーム',
   'nav.courses': '学習体系',
-  'nav.paths': 'パスガイド',
   'nav.contact': 'パートナーシップ',
   'nav.about': '学院概要',
   'nav.chaihuo': '柴火創客空間',
-  'nav.pioneer': 'パイオニア・拠点',
   'nav.toggle': 'ナビゲーションメニューを切り替え',
   'nav.brand': '柴火',
   'nav.homeAria': '柴火創客学院ホーム',
   'nav.pioneerBase': 'パイオニア · 拠点',
-  'nav.map': 'メーカーエコシステム',
   'nav.ecosystem': '柴火エコシステム',
   'nav.mcv': '柴火基地車',
   'chip.tabsAria': 'パイオニア計画と拠点計画を切り替え',
@@ -478,9 +211,7 @@ const ja: TranslationDict = {
   'footer.social': 'フォローする',
   'footer.social.wechat': 'WeChat',
   'footer.social.xiaohongshu': '小紅書',
-  'footer.copyright': '© {year} Chaihuo Makerspace Academy. All rights reserved.',
-  'footer.chaihuo': '柴火創客空間',
-  'footer.mcv': '柴火基地車',
+  'footer.copyright': '© {year} Chaihuo Maker Academy. All rights reserved.',
   'footer.ecosystem': '柴火エコシステム',
   'footer.ecosystemMap': 'メーカーエコシステムマップ',
   'footer.pioneer': 'パイオニア計画',
@@ -493,159 +224,35 @@ const ja: TranslationDict = {
   'page.base.description':
     '拠点は常設会場を持つチャネルパートナーです。柴火は教具、講座、本部からの案件紹介を提供し、拠点は地域で開講するとともに、パイオニアに授業の場を提供します。',
 
-  'home.hero.eyebrow': '柴火創客学院',
   'home.hero.title': 'スマートハードウェア7講座。\nキット・教案・講師をまとめて提供',
-  'home.hero.titleHighlight': '体系的な学習',
-  'home.hero.subtitle': '柴火創客学院',
   'home.hero.description':
     'M0からM6まで、どの講座にもSeeedの実機ハードウェア、授業ごとの教案、検収基準が付きます。学校は授業の開講に、インテグレーターは納品チームの育成に使えます。M0は未経験から受講でき、残り6講座は分野ごとに単独で選べます。',
-  'home.hero.ctaPrimary': 'コースを見る',
-  'home.hero.ctaSecondary': 'パートナーシップを申し込む',
-
-  'home.familiarObjects.title': 'ここで作れるもの',
-  'home.familiarObjects.subtitle': '初日から実際のハードウェアで形のある作品を作る',
-  'home.outcomes.title': 'ここで得られるもの',
-  'home.outcomes.subtitle': '技術だけでなく、真の納品力を',
-  'home.goalPaths.title': '3つの学習トラック',
-  'home.goalPaths.subtitle':
-    'AIで創る、AIを創る、ソリューションを納品する — あなたの目標に合った道を見つけよう',
-  'home.mapPreview.title': '学習マトリックス',
-  'home.mapPreview.subtitle': '7モジュール（M0〜M6）× 3レベル（L1/L2/L3）',
-
-  'home.cta.eyebrow': '学習の旅を始めよう',
-  'home.cta.title': '準備はいいですか？',
-  'home.cta.description': 'ゼロから独立納品まで、あなたの出発点を選んで今すぐ始めましょう。',
-  'home.cta.primary': 'コースを見る',
-  'home.cta.secondary': 'お問い合わせ',
 
   'courses.title': '学習体系',
-  'courses.hero.eyebrow': 'M0–M6 × L1/L2/L3',
   'courses.description':
     '7つのモジュール（M0〜M6）を、それぞれL1・L2・L3の3段階の深さで提供します。行がモジュール、列が深さで、各セルにはそのレベルの講座名、日数、修了時の成果物を記載しています。',
-  'courses.overview': '学習概要',
-  'courses.matrix': '学習マトリックス',
-  'courses.tracks': '学習パス',
-  'courses.cta.eyebrow': '方向性を見つける',
-  'courses.cta.title': 'どこから始めればいいか分からない？',
-  'courses.cta.description': '3つの学習トラックを探索して、最適なパスを見つけましょう',
-  'courses.cta.primary': 'パスガイドを見る',
-  'courses.cta.secondary': 'アドバイザーに相談',
 
-  'course.audience': '対象者',
-  'course.capabilities': '習得できる能力',
-  'course.deliverables': 'コース納品物',
-  'course.formats': '学習形式',
-  'course.kits': 'ハードウェアキット',
-  'course.toolchain': '技術スタック',
-  'course.curriculum': 'カリキュラム',
-  'course.teacherNotes': '講師向けノート',
   'course.complianceBoundary': '能力範囲とコンプライアンス',
-  'course.compliance.principles': '基本原則',
   'course.compliance.applicable': '適用範囲',
   'course.compliance.notApplicable': '不適用範囲',
-  'course.relatedTracks': '関連学習パス',
-  'course.levels': 'コースレベル',
-  'course.level.l1': '初級',
-  'course.level.l2': '中級',
-  'course.level.l3': '実践',
-  'course.backToCourses': 'コース一覧に戻る',
-  'course.cta.primary': 'パートナーシップ',
-  'course.cta.secondary': '他のコースを見る',
-
-  'paths.title': 'パスガイド',
-  'paths.description': 'あなたの目標に基づいて最適な学習パスを見つける',
-  'paths.cta.eyebrow': 'パスを選択',
-  'paths.cta.title': '始める準備はいいですか？',
-  'paths.cta.description': '学習パスを選んで、AIoT実践の旅を始めましょう',
-  'paths.cta.primary': 'コースを見る',
-  'paths.cta.secondary': 'パートナーシップ',
 
   'about.title': '学院について',
-  'about.description': '柴火創客学院は柴火創客エコシステムの技術力強化プラットフォームです',
-  'about.hero.eyebrow': '私たちについて',
   'about.hero.title': '柴火創客学院',
-  'about.hero.titleHighlight': '学院',
-  'about.hero.subtitle': 'Chaihuo Makerspace Academy',
   'about.hero.description':
     '私たちは新しい技術を統合する力を持つ人材を育てます。ソリューションを提供する事業ではありません。講座にはSeeed Studioの現行製品を使い、柴火創客空間が10年以上積み重ねてきたプロジェクトとコミュニティの経験を整理して作りました。学校、インテグレーター、企業向けに提供しています。',
-  'about.ecosystem.title': '柴火創客エコシステム',
-  'about.ecosystem.subtitle': '創客教育を支える3つの柱',
-  'about.values.title': '私たちの理念',
-  'about.values.subtitle': '正しいことを、難しいことを、時間をかけて積み上げることを',
-  'about.stats.title': '数字で見る',
-  'about.stats.subtitle': '数字が物語る',
-  'about.cta.eyebrow': '参加する',
-  'about.cta.title': 'もっと詳しく知りたいですか？',
-  'about.cta.description':
-    '柴火創客学院のコースとパートナーシップの機会についてお問い合わせください',
-  'about.cta.primary': 'コースを見る',
-  'about.cta.secondary': 'お問い合わせ',
 
   'contact.title': 'パートナーシップ',
-  'contact.description': '大学、インテグレーター、企業 — あなたに合った連携モデルを見つける',
-  'contact.hero.eyebrow': 'パートナーシップ inquiry',
   'contact.hero.title': '3種類の機関、4つの協業形態',
-  'contact.hero.titleHighlight': '連携モデル',
   'contact.hero.description':
     '料金はクラス形態と規模に応じてお見積りするため、定価は設けていません。機関の種類と希望するモジュールをメールでお知らせいただければ、3営業日以内にご提案をお送りします。',
-  'contact.scenarios.title': '連携シナリオ',
-  'contact.scenarios.subtitle': 'あなたの役割を選び、最適な連携方法を見つける',
-  'contact.forms.title': '連携形態',
-  'contact.forms.subtitle': 'ベアハードウェアからフルサービス納品までの4つのコース提供形態',
-  'contact.faq.title': 'よくある質問',
-  'contact.faq.subtitle': 'コースパートナーシップに関するよくある質問',
-  'contact.cta.eyebrow': '連携を始める',
-  'contact.cta.title': 'パートナーシップの準備はできましたか？',
-  'contact.cta.description': 'business@chaihuo.org までメールでお問い合わせください',
-  'contact.cta.primary': 'お問い合わせ',
-  'contact.cta.secondary': 'コースを見る',
 
   '404.title': 'ページが見つかりません',
-  '404.description': 'お探しのページは存在しないか、移動されました',
   '404.heading': '404',
   '404.message': 'ページが見つかりません',
   '404.submessage': 'お探しのページは存在しないか、移動されました',
   '404.backHome': 'ホームに戻る',
 
-  'styleguide.title': 'デザインシステム',
-
   'lang.switcher': '言語切替',
-
-  // Hero
-  'hero.courseMap': '学習マップ · M0–M6',
-  'hero.levels': 'L1 · L2 · L3',
-
-  // Home
-  'home.mapPreview.eyebrow': '学習構成',
-
-  // About
-  'about.ecosystem.eyebrow': 'エコシステム',
-
-  // Courses
-  'course.illustration': 'イラスト',
-  'course.coreHardwareHeading': 'コアハードウェア',
-  'course.keyCapabilitiesHeading': 'キーケイパビリティ',
-  'courses.matrix.eyebrow': '学習マトリックス',
-
-  // Paths
-  'paths.tracks.eyebrow': 'コースパッケージ',
-
-  // Contact
-  'contact.faq.eyebrow': 'FAQ',
-  'contact.forms.eyebrow': 'パートナーシップ inquiry',
-  'contact.forms.qrAlt': '学習パートナーシップQRコード',
-  'contact.forms.interestsHeading': '興味のある分野',
-  'contact.forms.interestLearning': '学習導入',
-  'contact.forms.interestPioneer': 'パイオニア拠点',
-  'contact.forms.qrHint':
-    'QRコードから登録する際は、興味のある分野をお知らせください。コミュニティマネージャーが担当者におつなぎします。',
-
-  // Scenario
-  'scenario.formAria': 'パートナーシップ形態',
-
-  // 404
-  '404.offline': 'Offline',
-  '404.terminal': 'ERROR_CODE: 0x404_ROUTER_LOST · CHAIHUO ACADEMY OS',
 
   // Footer
   'footer.since': 'since 2011',
@@ -674,16 +281,13 @@ const es: TranslationDict = {
 
   'nav.home': 'Inicio',
   'nav.courses': 'Cursos',
-  'nav.paths': 'Rutas de Aprendizaje',
   'nav.contact': 'Colaboración',
   'nav.about': 'Acerca de',
   'nav.chaihuo': 'Chaihuo Makerspace',
-  'nav.pioneer': 'Pionero · Base',
   'nav.toggle': 'Alternar menú de navegación',
   'nav.brand': 'Chaihuo',
   'nav.homeAria': 'Inicio de Academia Chaihuo Maker',
   'nav.pioneerBase': 'Pioneros · Bases',
-  'nav.map': 'Ecosistema Maker',
   'nav.ecosystem': 'Ecosistema Chaihuo',
   'nav.mcv': 'Vehículo Base Móvil Chaihuo',
   'chip.tabsAria': 'Alternar entre el programa de Pioneros y el de Bases',
@@ -695,9 +299,7 @@ const es: TranslationDict = {
   'footer.social': 'Síguenos',
   'footer.social.wechat': 'WeChat',
   'footer.social.xiaohongshu': 'Xiaohongshu',
-  'footer.copyright': '© {year} Chaihuo Makerspace Academy. Todos los derechos reservados.',
-  'footer.chaihuo': 'Chaihuo Makerspace',
-  'footer.mcv': 'Vehículo Base Móvil Chaihuo',
+  'footer.copyright': '© {year} Chaihuo Maker Academy. Todos los derechos reservados.',
   'footer.ecosystem': 'Ecosistema Chaihuo',
   'footer.ecosystemMap': 'Mapa del Ecosistema Maker',
   'footer.pioneer': 'Programa de Pioneros',
@@ -710,168 +312,36 @@ const es: TranslationDict = {
   'page.base.description':
     'Las Bases son socios de canal con un espacio fijo: Chaihuo aporta kits didácticos, cursos y encargos derivados; la Base imparte clases en su zona y ofrece a los Pioneros un lugar donde enseñar.',
 
-  'home.hero.eyebrow': 'Academia Chaihuo Maker',
   'home.hero.title':
     'Siete cursos de hardware inteligente,\ncon kit, planes de clase e instructores',
-  'home.hero.titleHighlight': 'Aprendizaje Sistemático',
-  'home.hero.subtitle': 'Academia Chaihuo Maker',
   'home.hero.description':
     'De M0 a M6, cada curso incluye hardware real de Seeed, planes de clase sesión por sesión y criterios de aceptación. Los centros educativos los usan para impartir clases; los integradores, para formar a sus equipos de entrega. M0 no requiere experiencia previa y los otros seis se pueden cursar por separado según la orientación.',
-  'home.hero.ctaPrimary': 'Explorar Cursos',
-  'home.hero.ctaSecondary': 'Colabora con Nosotros',
-
-  'home.familiarObjects.title': 'Lo Que Puedes Construir Aquí',
-  'home.familiarObjects.subtitle':
-    'Desde el primer día, crea proyectos tangibles con hardware real',
-  'home.outcomes.title': 'Lo Que Obtendrás',
-  'home.outcomes.subtitle': 'Más allá de la tecnología — capacidad real de entrega',
-  'home.goalPaths.title': 'Tres Rutas de Aprendizaje',
-  'home.goalPaths.subtitle':
-    'Ya sea que quieras construir con IA, construir productos de IA o entregar soluciones — encuentra tu punto de partida',
-  'home.mapPreview.title': 'Vista Previa de la Matriz de Aprendizaje',
-  'home.mapPreview.subtitle': '7 Módulos (M0–M6) × 3 Niveles (L1/L2/L3)',
-
-  'home.cta.eyebrow': 'Comienza tu Viaje',
-  'home.cta.title': '¿Listo para empezar?',
-  'home.cta.description':
-    'Desde cero hasta la entrega independiente — elige tu punto de partida y comienza ahora.',
-  'home.cta.primary': 'Explorar Cursos',
-  'home.cta.secondary': 'Contáctanos',
 
   'courses.title': 'Sistema de Aprendizaje',
-  'courses.hero.eyebrow': 'M0–M6 × L1/L2/L3',
   'courses.description':
     'Siete módulos (M0–M6), cada uno en tres niveles de profundidad: L1, L2 y L3. Cada fila es un módulo y cada columna un nivel; la celda indica el título del curso, su duración en días y lo que produce el alumnado.',
-  'courses.overview': 'Resumen de Aprendizaje',
-  'courses.matrix': 'Matriz de Aprendizaje',
-  'courses.tracks': 'Rutas de Aprendizaje',
-  'courses.cta.eyebrow': 'Encuentra tu Dirección',
-  'courses.cta.title': '¿No sabes por dónde empezar?',
-  'courses.cta.description':
-    'Explora las tres rutas de aprendizaje y encuentra el mejor camino para ti',
-  'courses.cta.primary': 'Ver Rutas de Aprendizaje',
-  'courses.cta.secondary': 'Consultar a un Asesor',
 
-  'course.audience': 'Público Objetivo',
-  'course.capabilities': 'Capacidades que Obtendrás',
-  'course.deliverables': 'Entregables del Curso',
-  'course.formats': 'Formatos de Aprendizaje',
-  'course.kits': 'Kits de Hardware',
-  'course.toolchain': 'Stack Tecnológico',
-  'course.curriculum': 'Plan de Estudios',
-  'course.teacherNotes': 'Notas para Instructores',
   'course.complianceBoundary': 'Límites de Alcance y Cumplimiento',
-  'course.compliance.principles': 'Principios Fundamentales',
   'course.compliance.applicable': 'Alcance',
   'course.compliance.notApplicable': 'Fuera de Alcance',
-  'course.relatedTracks': 'Rutas de Aprendizaje Relacionadas',
-  'course.levels': 'Niveles del Curso',
-  'course.level.l1': 'Principiante',
-  'course.level.l2': 'Intermedio',
-  'course.level.l3': 'Avanzado',
-  'course.backToCourses': 'Volver a Cursos',
-  'course.cta.primary': 'Colabora con Nosotros',
-  'course.cta.secondary': 'Ver Otros Cursos',
-
-  'paths.title': 'Rutas de Aprendizaje',
-  'paths.description': 'Encuentra la mejor ruta de aprendizaje según tus objetivos',
-  'paths.cta.eyebrow': 'Elige tu Ruta',
-  'paths.cta.title': '¿Listo para comenzar?',
-  'paths.cta.description': 'Elige una ruta de aprendizaje y comienza tu viaje práctico en AIoT',
-  'paths.cta.primary': 'Explorar Cursos',
-  'paths.cta.secondary': 'Colabora con Nosotros',
 
   'about.title': 'Acerca de la Academia',
-  'about.description':
-    'La Academia Chaihuo Maker es la plataforma de empoderamiento tecnológico del ecosistema Chaihuo Maker',
-  'about.hero.eyebrow': 'Sobre Nosotros',
   'about.hero.title': 'Academia Chaihuo Maker',
-  'about.hero.titleHighlight': 'Academy',
-  'about.hero.subtitle': 'Chaihuo Makerspace Academy',
   'about.hero.description':
     'Formamos a personas para que sepan integrar nuevas tecnologías; no vendemos soluciones. Los cursos emplean hardware del catálogo actual de Seeed Studio y recogen más de una década de proyectos y trabajo comunitario en Chaihuo Makerspace. Están dirigidos a centros educativos, integradores y empresas.',
-  'about.ecosystem.title': 'Ecosistema Chaihuo Maker',
-  'about.ecosystem.subtitle': 'Tres pilares que sostienen la educación maker',
-  'about.values.title': 'Nuestra Filosofía',
-  'about.values.subtitle':
-    'Hacer lo correcto, hacer lo difícil, hacer lo que requiere tiempo para construir',
-  'about.stats.title': 'En Números',
-  'about.stats.subtitle': 'Deja que los números hablen',
-  'about.cta.eyebrow': 'Únete',
-  'about.cta.title': '¿Quieres saber más?',
-  'about.cta.description':
-    'Contáctanos para conocer los cursos y oportunidades de colaboración de la Academia Chaihuo Maker',
-  'about.cta.primary': 'Explorar Cursos',
-  'about.cta.secondary': 'Contáctanos',
 
   'contact.title': 'Colaboración',
-  'contact.description':
-    'Universidades, integradores, empresas — encuentra el modelo de colaboración adecuado para ti',
-  'contact.hero.eyebrow': 'Consulta de Colaboración',
   'contact.hero.title': 'Tres tipos de organización, cuatro formas de colaborar',
-  'contact.hero.titleHighlight': 'Modelo de Colaboración',
   'contact.hero.description':
     'El precio depende del formato y del tamaño de la clase, por lo que no hay tarifa fija. Escríbanos indicando qué tipo de organización es y qué módulo le interesa, y le enviaremos una propuesta en 3 días hábiles.',
-  'contact.scenarios.title': 'Escenarios de Colaboración',
-  'contact.scenarios.subtitle': 'Elige tu rol y encuentra el mejor enfoque de colaboración',
-  'contact.forms.title': 'Formatos de Colaboración',
-  'contact.forms.subtitle':
-    'Cuatro formatos de entrega de cursos, desde hardware básico hasta entrega de servicio completo',
-  'contact.faq.title': 'Preguntas Frecuentes',
-  'contact.faq.subtitle': 'Preguntas comunes sobre colaboraciones de cursos',
-  'contact.cta.eyebrow': 'Comienza a Colaborar',
-  'contact.cta.title': '¿Listo para colaborar?',
-  'contact.cta.description':
-    'Escríbenos a business@chaihuo.org para encontrar el mejor modelo de colaboración para ti',
-  'contact.cta.primary': 'Contáctanos',
-  'contact.cta.secondary': 'Explorar Cursos',
 
   '404.title': 'Página No Encontrada',
-  '404.description': 'La página que buscas no existe o ha sido movida',
   '404.heading': '404',
   '404.message': 'Página No Encontrada',
   '404.submessage': 'La página que buscas no existe o ha sido movida',
   '404.backHome': 'Volver al Inicio',
 
-  'styleguide.title': 'Sistema de Diseño',
-
   'lang.switcher': 'Cambiar Idioma',
-
-  // Hero
-  'hero.courseMap': 'Mapa de Aprendizaje · M0–M6',
-  'hero.levels': 'L1 · L2 · L3',
-
-  // Home
-  'home.mapPreview.eyebrow': 'Estructura del Aprendizaje',
-
-  // About
-  'about.ecosystem.eyebrow': 'Ecosistema',
-
-  // Courses
-  'course.illustration': 'Ilustración',
-  'course.coreHardwareHeading': 'Hardware Principal',
-  'course.keyCapabilitiesHeading': 'Capacidades Clave',
-  'courses.matrix.eyebrow': 'Matriz de Aprendizaje',
-
-  // Paths
-  'paths.tracks.eyebrow': 'Paquetes de Cursos',
-
-  // Contact
-  'contact.faq.eyebrow': 'FAQ',
-  'contact.forms.eyebrow': 'Consulta de Colaboración',
-  'contact.forms.qrAlt': 'Código QR de Colaboración',
-  'contact.forms.interestsHeading': 'Áreas de Interés',
-  'contact.forms.interestLearning': 'Adopción de Aprendizaje',
-  'contact.forms.interestPioneer': 'Base de Pioneros',
-  'contact.forms.qrHint':
-    'Al escanear para registrarte, indica tu área de interés. Nuestro community manager te conectará con la persona adecuada.',
-
-  // Scenario
-  'scenario.formAria': 'Formato de Colaboración',
-
-  // 404
-  '404.offline': 'Offline',
-  '404.terminal': 'ERROR_CODE: 0x404_ROUTER_LOST · CHAIHUO ACADEMY OS',
 
   // Footer
   'footer.since': 'since 2011',
@@ -901,16 +371,13 @@ const ptBR: TranslationDict = {
 
   'nav.home': 'Início',
   'nav.courses': 'Cursos',
-  'nav.paths': 'Trilhas de Aprendizado',
   'nav.contact': 'Parceria',
   'nav.about': 'Sobre',
   'nav.chaihuo': 'Chaihuo Makerspace',
-  'nav.pioneer': 'Pioneiro · Base',
   'nav.toggle': 'Alternar menu de navegação',
   'nav.brand': 'Chaihuo',
   'nav.homeAria': 'Início da Academia Chaihuo Maker',
   'nav.pioneerBase': 'Pioneiros · Bases',
-  'nav.map': 'Ecossistema Maker',
   'nav.ecosystem': 'Ecossistema Chaihuo',
   'nav.mcv': 'Veículo Base Móvel Chaihuo',
   'chip.tabsAria': 'Alternar entre o Programa de Pioneiros e o de Bases',
@@ -922,9 +389,7 @@ const ptBR: TranslationDict = {
   'footer.social': 'Siga-nos',
   'footer.social.wechat': 'WeChat',
   'footer.social.xiaohongshu': 'Xiaohongshu',
-  'footer.copyright': '© {year} Chaihuo Makerspace Academy. Todos os direitos reservados.',
-  'footer.chaihuo': 'Chaihuo Makerspace',
-  'footer.mcv': 'Veículo Base Móvel Chaihuo',
+  'footer.copyright': '© {year} Chaihuo Maker Academy. Todos os direitos reservados.',
   'footer.ecosystem': 'Ecossistema Chaihuo',
   'footer.ecosystemMap': 'Mapa do Ecossistema Maker',
   'footer.pioneer': 'Programa de Pioneiros',
@@ -937,166 +402,35 @@ const ptBR: TranslationDict = {
   'page.base.description':
     'As Bases são parceiros de canal com espaço fixo: a Chaihuo fornece kits didáticos, cursos e demandas encaminhadas; a Base ministra aulas na região e oferece aos Pioneiros um lugar para ensinar.',
 
-  'home.hero.eyebrow': 'Academia Chaihuo Maker',
   'home.hero.title': 'Sete cursos de hardware inteligente,\ncom kit, planos de aula e instrutores',
-  'home.hero.titleHighlight': 'Aprendizado Sistemático',
-  'home.hero.subtitle': 'Academia Chaihuo Maker',
   'home.hero.description':
     'De M0 a M6, cada curso vem com hardware real da Seeed, planos de aula sessão por sessão e critérios de aceitação. Escolas usam para abrir turmas; integradores, para treinar equipes de entrega. O M0 não exige experiência prévia e os outros seis podem ser feitos separadamente, conforme a direção.',
-  'home.hero.ctaPrimary': 'Explorar Cursos',
-  'home.hero.ctaSecondary': 'Seja Nosso Parceiro',
-
-  'home.familiarObjects.title': 'O Que Você Pode Construir Aqui',
-  'home.familiarObjects.subtitle':
-    'Desde o primeiro dia, crie projetos tangíveis com hardware real',
-  'home.outcomes.title': 'O Que Você Vai Ganhar',
-  'home.outcomes.subtitle': 'Além da tecnologia — capacidade real de entrega',
-  'home.goalPaths.title': 'Três Trilhas de Aprendizado',
-  'home.goalPaths.subtitle':
-    'Seja para construir com IA, construir produtos de IA ou entregar soluções — encontre seu ponto de partida',
-  'home.mapPreview.title': 'Prévia da Matriz de Aprendizado',
-  'home.mapPreview.subtitle': '7 Módulos (M0–M6) × 3 Níveis (L1/L2/L3)',
-
-  'home.cta.eyebrow': 'Comece Sua Jornada',
-  'home.cta.title': 'Pronto para colocar a mão na massa?',
-  'home.cta.description':
-    'Do zero à entrega independente — escolha seu ponto de partida e comece agora.',
-  'home.cta.primary': 'Explorar Cursos',
-  'home.cta.secondary': 'Contate-nos',
 
   'courses.title': 'Sistema de Aprendizagem',
-  'courses.hero.eyebrow': 'M0–M6 × L1/L2/L3',
   'courses.description':
     'Sete módulos (M0–M6), cada um em três níveis de profundidade: L1, L2 e L3. Cada linha é um módulo e cada coluna um nível; a célula traz o título do curso, a duração em dias e o que os alunos produzem.',
-  'courses.overview': 'Visão Geral de Aprendizado',
-  'courses.matrix': 'Matriz de Aprendizado',
-  'courses.tracks': 'Trilhas de Aprendizado',
-  'courses.cta.eyebrow': 'Encontre Sua Direção',
-  'courses.cta.title': 'Não sabe por onde começar?',
-  'courses.cta.description':
-    'Explore as três trilhas de aprendizado e encontre o melhor caminho para você',
-  'courses.cta.primary': 'Ver Trilhas de Aprendizado',
-  'courses.cta.secondary': 'Consultar um Orientador',
 
-  'course.audience': 'Público-Alvo',
-  'course.capabilities': 'Capacidades que Você Vai Adquirir',
-  'course.deliverables': 'Entregáveis do Curso',
-  'course.formats': 'Formatos de Aprendizado',
-  'course.kits': 'Kits de Hardware',
-  'course.toolchain': 'Stack Tecnológica',
-  'course.curriculum': 'Currículo',
-  'course.teacherNotes': 'Notas para Instrutores',
   'course.complianceBoundary': 'Limites de Escopo e Conformidade',
-  'course.compliance.principles': 'Princípios Fundamentais',
   'course.compliance.applicable': 'No Escopo',
   'course.compliance.notApplicable': 'Fora do Escopo',
-  'course.relatedTracks': 'Trilhas de Aprendizado Relacionadas',
-  'course.levels': 'Níveis do Curso',
-  'course.level.l1': 'Iniciante',
-  'course.level.l2': 'Intermediário',
-  'course.level.l3': 'Avançado',
-  'course.backToCourses': 'Voltar para Cursos',
-  'course.cta.primary': 'Seja Nosso Parceiro',
-  'course.cta.secondary': 'Ver Outros Cursos',
-
-  'paths.title': 'Trilhas de Aprendizado',
-  'paths.description': 'Encontre a melhor trilha de aprendizado com base nos seus objetivos',
-  'paths.cta.eyebrow': 'Escolha Sua Trilha',
-  'paths.cta.title': 'Pronto para começar?',
-  'paths.cta.description': 'Escolha uma trilha de aprendizado e comece sua jornada prática em AIoT',
-  'paths.cta.primary': 'Explorar Cursos',
-  'paths.cta.secondary': 'Seja Nosso Parceiro',
 
   'about.title': 'Sobre a Academia',
-  'about.description':
-    'A Academia Chaihuo Maker é a plataforma de capacitação tecnológica do ecossistema Chaihuo Maker',
-  'about.hero.eyebrow': 'Sobre Nós',
   'about.hero.title': 'Academia Chaihuo Maker',
-  'about.hero.titleHighlight': 'Academy',
-  'about.hero.subtitle': 'Chaihuo Makerspace Academy',
   'about.hero.description':
     'Formamos pessoas para integrar novas tecnologias; não vendemos soluções. Os cursos usam hardware do catálogo atual da Seeed Studio e reúnem mais de uma década de projetos e trabalho comunitário no Chaihuo Makerspace. São oferecidos a escolas, integradores e empresas.',
-  'about.ecosystem.title': 'Ecossistema Chaihuo Maker',
-  'about.ecosystem.subtitle': 'Três pilares que sustentam a educação maker',
-  'about.values.title': 'Nossa Filosofia',
-  'about.values.subtitle': 'Fazer o certo, fazer o difícil, fazer o que leva tempo para construir',
-  'about.stats.title': 'Em Números',
-  'about.stats.subtitle': 'Deixe os números falarem',
-  'about.cta.eyebrow': 'Junte-se a Nós',
-  'about.cta.title': 'Quer saber mais?',
-  'about.cta.description':
-    'Entre em contato para conhecer os cursos e oportunidades de parceria da Academia Chaihuo Maker',
-  'about.cta.primary': 'Explorar Cursos',
-  'about.cta.secondary': 'Contate-nos',
 
   'contact.title': 'Parceria',
-  'contact.description':
-    'Universidades, integradores, empresas — encontre o modelo de colaboração ideal para você',
-  'contact.hero.eyebrow': 'Consulta de Parceria',
   'contact.hero.title': 'Três tipos de organização, quatro formas de parceria',
-  'contact.hero.titleHighlight': 'Modelo de Colaboração',
   'contact.hero.description':
     'O preço depende do formato e do tamanho da turma, por isso não há tabela fixa. Envie um e-mail dizendo que tipo de organização você é e qual módulo deseja, e enviaremos uma proposta em até 3 dias úteis.',
-  'contact.scenarios.title': 'Cenários de Parceria',
-  'contact.scenarios.subtitle': 'Escolha seu papel e encontre a melhor abordagem de colaboração',
-  'contact.forms.title': 'Formatos de Colaboração',
-  'contact.forms.subtitle':
-    'Quatro formatos de entrega de cursos, do hardware básico à entrega de serviço completo',
-  'contact.faq.title': 'Perguntas Frequentes',
-  'contact.faq.subtitle': 'Perguntas comuns sobre parcerias de cursos',
-  'contact.cta.eyebrow': 'Comece a Colaborar',
-  'contact.cta.title': 'Pronto para fazer parceria?',
-  'contact.cta.description':
-    'Envie um e-mail para business@chaihuo.org para encontrar o melhor modelo de colaboração para você',
-  'contact.cta.primary': 'Contate-nos',
-  'contact.cta.secondary': 'Explorar Cursos',
 
   '404.title': 'Página Não Encontrada',
-  '404.description': 'A página que você procura não existe ou foi movida',
   '404.heading': '404',
   '404.message': 'Página Não Encontrada',
   '404.submessage': 'A página que você procura não existe ou foi movida',
   '404.backHome': 'Voltar ao Início',
 
-  'styleguide.title': 'Sistema de Design',
-
   'lang.switcher': 'Mudar Idioma',
-
-  // Hero
-  'hero.courseMap': 'Mapa de Aprendizado · M0–M6',
-  'hero.levels': 'L1 · L2 · L3',
-
-  // Home
-  'home.mapPreview.eyebrow': 'Estrutura do Aprendizado',
-
-  // About
-  'about.ecosystem.eyebrow': 'Ecossistema',
-
-  // Courses
-  'course.illustration': 'Ilustração',
-  'course.coreHardwareHeading': 'Hardware Principal',
-  'course.keyCapabilitiesHeading': 'Competências-Chave',
-  'courses.matrix.eyebrow': 'Matriz de Aprendizado',
-
-  // Paths
-  'paths.tracks.eyebrow': 'Pacotes de Cursos',
-
-  // Contact
-  'contact.faq.eyebrow': 'FAQ',
-  'contact.forms.eyebrow': 'Consulta de Parceria',
-  'contact.forms.qrAlt': 'QR Code de Parceria',
-  'contact.forms.interestsHeading': 'Áreas de Interesse',
-  'contact.forms.interestLearning': 'Adoção de Aprendizado',
-  'contact.forms.interestPioneer': 'Base de Pioneiros',
-  'contact.forms.qrHint':
-    'Ao escanear para se registrar, indique sua área de interesse. Nosso community manager irá conectá-lo à pessoa certa.',
-
-  // Scenario
-  'scenario.formAria': 'Formato de Parceria',
-
-  // 404
-  '404.offline': 'Offline',
-  '404.terminal': 'ERROR_CODE: 0x404_ROUTER_LOST · CHAIHUO ACADEMY OS',
 
   // Footer
   'footer.since': 'since 2011',

@@ -17,11 +17,16 @@ const toolchain = module.toolchain;
 const intro = module.hardwareIntro;
 const kits = module.kits;
 
-// 每个模块讲自己的工具链：`course.toolchain{Title,Subtitle}.<id>`，M0 用基础 key。
-const own = (key: string) => {
-  const value = dt(locale, `${key}.${module.id}`);
-  return value === `${key}.${module.id}` ? dt(locale, key) : value;
+// 每个模块讲自己的工具链：`course.toolchain{Title,Subtitle}.<id>`；M0 用不带后缀的基础 key。
+const orBase = (key: string, baseKey: string) => {
+  const value = dt(locale, key);
+  return value === key ? dt(locale, baseKey) : value;
 };
+const toolchainTitle = orBase(`course.toolchainTitle.${module.id}`, 'course.toolchainTitle');
+const toolchainSubtitle = orBase(
+  `course.toolchainSubtitle.${module.id}`,
+  'course.toolchainSubtitle',
+);
 const subtitle = intro?.subtitle ?? (kits ? dt(locale, 'course.kitsSubtitle') : undefined);
 const photoCount = intro ? intro.items.length : (kits?.items.length ?? 0);
 ---
@@ -117,9 +122,9 @@ const photoCount = intro ? intro.items.length : (kits?.items.length ?? 0);
     {
       toolchain && (
         <div class="mt-10 border-t border-neutral-3 pt-8">
-          <h3 class="text-xl font-bold text-brand-black">{own('course.toolchainTitle')}</h3>
+          <h3 class="text-xl font-bold text-brand-black">{toolchainTitle}</h3>
           <p class="mt-2 max-w-3xl text-sm leading-relaxed text-neutral-7">
-            {own('course.toolchainSubtitle')}
+            {toolchainSubtitle}
           </p>
 
           <ol
