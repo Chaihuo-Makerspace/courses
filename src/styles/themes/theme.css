@@ -63,16 +63,6 @@
   --color-accent: var(--color-brand-yellow);
   --color-accent-hover: var(--color-brand-yellow-hover);
 
-  /* Legacy text aliases — 组件迁移期保留，后续映射至 neutral-* */
-  --color-text-primary: var(--color-neutral-10);
-  --color-text-secondary: var(--color-neutral-8);
-  --color-text-muted: var(--color-neutral-6);
-  --color-text-disabled: var(--color-neutral-4);
-
-  --color-bg-primary: var(--color-background);
-  --color-bg-secondary: var(--color-neutral-1);
-  --color-border: var(--color-neutral-3);
-
   /* ============================================
    * Radius scale（v3.0：default lg = 8px；禁默认 16px+）
    * ============================================ */
@@ -307,7 +297,7 @@
   /* Nav link — sliding underline on hover / active (tech-editorial) */
   .nav-link {
     position: relative;
-    color: var(--color-text-muted);
+    color: var(--color-neutral-6);
     transition: color var(--dur-fast) var(--ease-standard);
   }
   .nav-link::after {
@@ -467,8 +457,8 @@
 
   body {
     font-family: var(--font-sans);
-    color: var(--color-text-primary);
-    background-color: var(--color-bg-primary);
+    color: var(--color-neutral-10);
+    background-color: var(--color-background);
   }
 
   /* 中文排版最佳实践 — 见 docs/DESIGN.md §3 */
