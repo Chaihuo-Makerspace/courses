@@ -3,10 +3,12 @@ import type { PartnershipForm, Scenario } from '../data/partnerships';
 import type {
   AboutEcosystemItem,
   AboutValueItem,
+  CtaLink,
   FamiliarObject,
   FaqItem,
   FinalCta,
   OutcomeItem,
+  SiteCta,
   StatItem,
 } from '../data/site';
 import type { Track } from '../data/tracks';
@@ -94,69 +96,23 @@ export function translateOutcomes(outcomes: OutcomeItem[], locale: Locale): Outc
   return outcomes.map((o, i) => translateOutcome(o, locale, i));
 }
 
-export function translateCta(cta: FinalCta, locale: Locale): FinalCta {
-  const ctaKey =
-    cta.title.includes('把学习体系引入') || cta.title.includes('Bring the course')
-      ? 'home'
-      : cta.title.includes('选好组合') || cta.title.includes('After selecting')
-        ? 'paths'
-        : cta.title.includes('把学习模块引入') ||
-            cta.title.includes('Bring learning modules') ||
-            cta.title.includes('Bring course modules')
-          ? 'courses'
-          : 'about';
+export function translateCta(cta: SiteCta, locale: Locale): FinalCta {
+  // 按 id / intent 取 key；key 缺失时 dt() 会原样返回 key，这里回落到数据层文案。
+  const byKey = (key: string, fallback: string) => {
+    const value = dt(locale, key);
+    return value === key ? fallback : value;
+  };
+  const link = (l: CtaLink): CtaLink => ({
+    ...l,
+    href: localizePath(locale, l.href),
+    label: byKey(`cta.${l.intent}`, l.label),
+  });
   return {
     ...cta,
-    title: dt(locale, `cta.${ctaKey}.title`) || cta.title,
-    description: dt(locale, `cta.${ctaKey}.desc`) || cta.description,
-    primary: {
-      ...cta.primary,
-      href: localizePath(locale, cta.primary.href),
-      label:
-        cta.primary.label.includes('申请合作') || cta.primary.label.includes('Apply for')
-          ? dt(locale, 'cta.apply')
-          : cta.primary.label.includes('查看课程') ||
-              cta.primary.label.includes('查看学习') ||
-              cta.primary.label.includes('查看学习体系') ||
-              cta.primary.label.includes('View Course') ||
-              cta.primary.label.includes('View Learning')
-            ? dt(locale, 'cta.viewCourses')
-            : cta.primary.label.includes('选课') ||
-                cta.primary.label.includes('查看路径指南') ||
-                cta.primary.label.includes('路径') ||
-                cta.primary.label.includes('Learning Path')
-              ? dt(locale, 'cta.viewPaths')
-              : cta.primary.label.includes('了解学院') ||
-                  cta.primary.label.includes('关于学院') ||
-                  cta.primary.label.includes('Learn About')
-                ? dt(locale, 'cta.aboutOrg')
-                : cta.primary.label,
-    },
-    secondary: cta.secondary
-      ? {
-          ...cta.secondary,
-          href: localizePath(locale, cta.secondary.href),
-          label:
-            cta.secondary.label.includes('申请合作') || cta.secondary.label.includes('Apply for')
-              ? dt(locale, 'cta.apply')
-              : cta.secondary.label.includes('查看课程') ||
-                  cta.secondary.label.includes('查看学习') ||
-                  cta.secondary.label.includes('查看学习体系') ||
-                  cta.secondary.label.includes('View Course') ||
-                  cta.secondary.label.includes('View Learning')
-                ? dt(locale, 'cta.viewCourses')
-                : cta.secondary.label.includes('选课') ||
-                    cta.secondary.label.includes('查看路径指南') ||
-                    cta.secondary.label.includes('路径') ||
-                    cta.secondary.label.includes('Learning Path')
-                  ? dt(locale, 'cta.viewPaths')
-                  : cta.secondary.label.includes('了解学院') ||
-                      cta.secondary.label.includes('关于学院') ||
-                      cta.secondary.label.includes('Learn About')
-                    ? dt(locale, 'cta.aboutOrg')
-                    : cta.secondary.label,
-        }
-      : undefined,
+    title: byKey(`cta.${cta.id}.title`, cta.title),
+    description: byKey(`cta.${cta.id}.desc`, cta.description),
+    primary: link(cta.primary),
+    secondary: cta.secondary ? link(cta.secondary) : undefined,
   };
 }
 

@@ -13,6 +13,20 @@ export interface FinalCta {
   secondary?: LinkItem;
 }
 
+/** CTA 按钮的意图，对应翻译 key `cta.<intent>`。翻译按它取词，不按 label 文本匹配。 */
+export type CtaIntent = 'apply' | 'viewCourses' | 'viewPaths' | 'aboutOrg';
+
+export interface CtaLink extends LinkItem {
+  intent: CtaIntent;
+}
+
+/** 页尾 CTA 的数据形态：`id` 对应翻译 key `cta.<id>.title` / `cta.<id>.desc`。 */
+export interface SiteCta extends FinalCta {
+  id: 'home' | 'paths' | 'courses' | 'about';
+  primary: CtaLink;
+  secondary?: CtaLink;
+}
+
 export interface AboutEcosystemItem {
   name: string;
   role: string;
@@ -63,30 +77,33 @@ export interface OutcomeItem {
   description: string;
 }
 
-export const homeFinalCta: FinalCta = {
+export const homeFinalCta: SiteCta = {
+  id: 'home',
   title: '把学习体系引入你的教学、培训或项目现场',
   description:
     '可以先引入单个模块，也可以按目标组合方案包；销售形态包括裸硬件套件、标准实训套件、全托交付与师资培训。',
 
-  primary: { label: '申请合作咨询', href: '/contact' },
-  secondary: { label: '查看学习体系', href: '/courses' },
+  primary: { label: '申请合作咨询', href: '/contact', intent: 'apply' },
+  secondary: { label: '查看学习体系', href: '/courses', intent: 'viewCourses' },
 };
 
-export const pathsFinalCta: FinalCta = {
+export const pathsFinalCta: SiteCta = {
+  id: 'paths',
   title: '选好组合后，回到学习体系确认模块与级别',
   description:
     '路径指南只帮助你缩小范围。真正落地时，还要看模块内容、课堂实验、硬件清单、交付材料和销售形态。',
-  primary: { label: '查看学习体系', href: '/courses' },
-  secondary: { label: '申请合作咨询', href: '/contact' },
+  primary: { label: '查看学习体系', href: '/courses', intent: 'viewCourses' },
+  secondary: { label: '申请合作咨询', href: '/contact', intent: 'apply' },
 };
 
-export const coursesFinalCta: FinalCta = {
+export const coursesFinalCta: SiteCta = {
+  id: 'courses',
   title: '把学习模块引入你的团队或项目现场',
 
   description:
     '如果你已经有明确方向，可以继续讨论裸硬件套件、标准教学套件、全托交付或师资培训。我们会根据目标推荐模块组合与实践深度。',
-  primary: { label: '申请合作咨询', href: '/contact' },
-  secondary: { label: '关于学院', href: '/about' },
+  primary: { label: '申请合作咨询', href: '/contact', intent: 'apply' },
+  secondary: { label: '关于学院', href: '/about', intent: 'aboutOrg' },
 };
 
 export const aboutEcosystem: AboutEcosystemItem[] = [
@@ -137,12 +154,13 @@ export const aboutStats: StatItem[] = [
   { number: '4000+', label: '累计赋能人次' },
 ];
 
-export const aboutFinalCta: FinalCta = {
+export const aboutFinalCta: SiteCta = {
+  id: 'about',
   title: '想把这份生态能力带到你的组织？',
   description:
     '从裸硬件套件到全托交付，可以按你的目标选择销售形态。请留下意向信息，我们 3 个工作日内提供合作建议。',
-  primary: { label: '申请合作咨询', href: '/contact' },
-  secondary: { label: '查看路径指南', href: '/paths' },
+  primary: { label: '申请合作咨询', href: '/contact', intent: 'apply' },
+  secondary: { label: '查看路径指南', href: '/paths', intent: 'viewPaths' },
 };
 
 export const contactFaqs: FaqItem[] = [
