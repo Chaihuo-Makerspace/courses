@@ -1,13 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HeroBanner from '../components/HeroBanner.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import FaqSection from '../components/sections/FaqSection.astro';
+import FinalCtaSection from '../components/sections/FinalCtaSection.astro';
+import ChipChain from '../components/sections/chip/ChipChain.astro';
+import ChipLedger from '../components/sections/chip/ChipLedger.astro';
 import ChipTabs from '../components/sections/chip/ChipTabs.astro';
-import ChipWhatSection from '../components/sections/chip/ChipWhatSection.astro';
-import ChipBenefitsSection from '../components/sections/chip/ChipBenefitsSection.astro';
-import ChipRevenueSection from '../components/sections/chip/ChipRevenueSection.astro';
-import ChipFlowSection from '../components/sections/chip/ChipFlowSection.astro';
-import ChipFaqSection from '../components/sections/chip/ChipFaqSection.astro';
-import ChipCtaSection from '../components/sections/chip/ChipCtaSection.astro';
 import { pioneer } from '../data/ecosystem';
 import { t, defaultLocale } from '../i18n';
 import type { Locale } from '../i18n';
@@ -16,39 +15,61 @@ import { dt } from '../i18n/data-translations';
 
 const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
 const data = translateEcosystem(pioneer, locale);
-const hero = data.hero;
-const certificationSteps = data.certification.chain.map((label, i) => ({ step: String(i + 1), title: label }));
+const link = (l: { label: string; href: string }) => ({
+  label: l.label,
+  href: chipHref(locale, l.href),
+  external: isExternalHref(l.href),
+});
+const cta = {
+  ...data.cta,
+  primary: link(data.cta.primary),
+  secondary: data.cta.secondary ? link(data.cta.secondary) : undefined,
+};
 ---
 
 <Layout title={t(locale, 'page.pioneer.title')} description={t(locale, 'page.pioneer.description')}>
   <ChipTabs active="pioneer" locale={locale} />
 
   <HeroBanner
-    eyebrow={hero.eyebrow}
-    title={hero.title}
-    subtitle={hero.subtitle}
-    description={hero.description}
-    ctas={hero.ctas.map((cta) => ({
-      label: cta.label,
-      href: chipHref(locale, cta.href),
-      variant: cta.variant,
-      external: isExternalHref(cta.href),
-    }))}
-  >
-    <Fragment slot="title">
-      {hero.title}<span class="highlight">{hero.titleHighlight}</span>
-    </Fragment>
-  </HeroBanner>
-
-  <ChipWhatSection section={data.what} />
-  <ChipBenefitsSection section={data.benefits} />
-  <ChipRevenueSection section={data.revenue} />
-  <ChipFlowSection layout="vertical" section={data.steps} />
-  <ChipFlowSection
-    layout="chain"
-    tone="yellow"
-    section={{ title: data.certification.title, steps: certificationSteps, footnote: data.certification.note }}
+    title={data.hero.title}
+    description={data.hero.description}
+    ctas={data.hero.ctas.map((c) => ({ ...link(c), variant: c.variant }))}
   />
-  <ChipFaqSection title={dt(locale, 'section.faqTitle')} faqs={data.faqs} />
-  <ChipCtaSection cta={data.cta} locale={locale} />
+
+  <section class="section bg-background">
+    <div class="container-page" data-reveal>
+      <SectionHeader title={data.what.title} subtitle={data.what.intro} />
+      <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
+        <div>
+          <ChipLedger title={data.what.coreTitle} items={data.what.core} />
+          {data.what.note && (
+            <p class="mt-4 border-l-2 border-brand-red pl-4 text-sm leading-relaxed text-neutral-8">
+              {data.what.note}
+            </p>
+          )}
+        </div>
+        <ChipLedger title={data.benefits.title} items={data.benefits.items} columns={2} />
+      </div>
+      <div class="mt-10">
+        <ChipLedger title={data.revenue.title} items={data.revenue.lines} columns={3} numbered />
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-neutral-1 border-y border-neutral-3">
+    <div class="container-page" data-reveal>
+      <SectionHeader title={data.steps.title} />
+      <ChipLedger items={data.steps.steps} columns={4} numbered />
+      <div class="mt-8">
+        <ChipChain
+          title={data.certification.title}
+          steps={data.certification.chain}
+          note={data.certification.note}
+        />
+      </div>
+    </div>
+  </section>
+
+  <FaqSection title={dt(locale, 'section.faqTitle')} faqs={data.faqs} />
+  <FinalCtaSection cta={cta} />
 </Layout>

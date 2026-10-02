@@ -114,14 +114,13 @@ export interface Tier {
   footnote: string;
 }
 
-/** 「写给老师」：底座 + 可改写的口子 + 作者引言。 */
+/** 「写给老师」：底座 + 可改写的口子。 */
 export interface TeacherNotes {
   heading: string;
   /** heading 中需要黄色下划线强调的片段，必须是 heading 的子串。 */
   emphasis?: string;
   intro: string;
   openings: { no: string; title: string; body: string }[];
-  quote: { text: string; cite: string };
 }
 
 export interface Module {
@@ -145,7 +144,8 @@ export interface Module {
   capabilities: string[];
   audience: string[];
   deliverables: string[];
-  accent: 'red' | 'yellow';
+  /** 仅面向海外交付（M3：套件只有海外无线频段）。矩阵与模块列表据此打标。 */
+  overseasOnly?: boolean;
   cells: Record<LevelId, ModuleCell>;
 
   // ── 以下为可选深度内容 ─────────────────────────────────────────
@@ -190,7 +190,8 @@ export const modules: Module[] = [
     slug: 'm0',
     code: 'M0',
     title: '零基础智能硬件入门',
-    subtitle: '告别编程门槛，用中文告诉 AI 做什么，零基础也能做出智能硬件作品',
+    subtitle:
+      '零基础入门课。三套硬件由浅入深：Grove 做感知，Wio Terminal 做交互，XIAO 做图像识别。',
     oneLiner:
       '用中文告诉 AI 你想做什么，AI 写代码、编译、烧录。零编程基础，也能做出属于自己的智能硬件作品。',
     oneLinerEmphasis: '零编程基础',
@@ -210,7 +211,7 @@ export const modules: Module[] = [
       '柴火基地车巡游',
     ],
     painPoints: ['学生不会写代码', '合格师资极少', '创意到原型断层'],
-    techStack: ['Codecraft', 'aily-blockly', 'Grove · Wio Terminal · XIAO', 'BMAD', 'NLHD 教材'],
+    techStack: ['Codecraft', 'aily-blockly', 'Grove · Wio Terminal · XIAO', 'BMAD'],
     coreHardware: ['Grove 套件', 'Wio Terminal', 'XIAO ESP32S3 Sense'],
     capabilities: [
       'AI 辅助编程 5 大法则',
@@ -224,7 +225,6 @@ export const modules: Module[] = [
       '一个有结构的完整项目（如智能番茄钟）',
       '边缘 AI 图像分类 demo',
     ],
-    accent: 'red',
     // M0 按硬件平台分层（A: Grove / B: Wio Terminal / C: XIAO），映射到矩阵的 L1/L2/L3 三行。
     cells: {
       L1: {
@@ -322,7 +322,7 @@ export const modules: Module[] = [
         title: '关键转折点 · 模块 8',
         body: 'Codecraft 的作品在服务器上，关掉浏览器就带不走；aily-blockly 让学生第一次从"租户"变成项目的"主人"。',
       },
-      note: '另需 SenseCraft AI（无代码部署与训练视觉模型，用于模块 5 与视觉体验课，需外网）、NLHD 15 章中文教材（开源免费，结课后可长期自学）。',
+      note: '另需 SenseCraft AI（无代码部署与训练视觉模型，用于模块 5 与视觉体验课，需外网），以及一套 15 章的中文开源教材（免费，结课后可长期自学）。',
     },
 
     kits: {
@@ -406,7 +406,7 @@ export const modules: Module[] = [
       tiers: [
         {
           title: '完整版',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '16–20h · M0-A + B + C + 备料池',
           rows: [
             {
@@ -429,7 +429,7 @@ export const modules: Module[] = [
         },
         {
           title: '马拉松版',
-          finalProject: { label: 'FP 精简', included: true },
+          finalProject: { label: '结课项目精简版', included: true },
           summary: '2 天 · 12–14h · 仅 M0-A + 备料池',
           rows: [
             {
@@ -449,7 +449,7 @@ export const modules: Module[] = [
         },
         {
           title: '体验课',
-          finalProject: { label: '无 FP', included: false },
+          finalProject: { label: '不含结课项目', included: false },
           summary: '半天 2h · 零安装 · 单一硬件',
           rows: [
             {
@@ -468,7 +468,7 @@ export const modules: Module[] = [
         },
       ],
       callouts: [
-        '编程体验课是柴火基地车全国巡游的标配工作坊。零安装、单一硬件、2 小时闭环、断网只是慢不会废场——这四条正是「车到人到、当天开课」最需要的性质。柴火基地车上的分工：快闪一站 → 编程体验课；驻校两天 → 马拉松版；有网络且做 AI 主题 → 视觉体验课。',
+        '编程体验课是柴火基地车全国巡游的标配工作坊。零安装、单一硬件、2 小时做完一个作品、断网只是慢不会废场——这四条正是「车到人到、当天开课」最需要的性质。柴火基地车上的分工：快闪一站 → 编程体验课；驻校两天 → 马拉松版；有网络且做 AI 主题 → 视觉体验课。',
       ],
       warnings: [
         '选课后排（16×1h）前请注意：16 × 1h = 16 小时，比周课排的 20 小时少 4 小时；每节固定开销（开机、发设备、连线、收纳）约 10 分钟，节数越多损耗越大——实际动手时间约 13h vs 18h。取舍是真实的：FP 迭代从两轮压到一轮，发布会 1 小时偏紧，建议争取双节连堂。',
@@ -660,7 +660,7 @@ export const modules: Module[] = [
       heading: '我们希望你把它改成我们认不出来的样子',
       emphasis: '我们认不出来的样子',
       intro:
-        '这份课程不是一个封闭的产品，是一个底座。柴火是一家创客空间，开源是我们的底色——M0 交付的从来不只是「一次上课」，而是一整套可以被拆开、改写、重新组装的东西：10 模块骨架、教师教案与 PPT、学生手册、Codecraft 云端项目、NLHD 开源教材、40 合一备料池。',
+        '这份课程不是一个封闭的产品，是一个底座。柴火是一家创客空间，开源是我们的底色——M0 交付的从来不只是「一次上课」，而是一整套可以被拆开、改写、重新组装的东西：10 模块骨架、教师教案与 PPT、学生手册、Codecraft 云端项目、开源教材、40 合一备料池。',
       openings: [
         {
           no: '口子 01',
@@ -678,10 +678,6 @@ export const modules: Module[] = [
           body: '你教了很多年书攒下的那些：讲法、比喻、能让学生眼睛亮起来的那一下——那正是我们没有、也给不了的部分。',
         },
       ],
-      quote: {
-        text: '一门课最好的归宿，不是被完整地执行一遍，而是被一位老师改到面目全非，然后变成只有他能上的那门课。',
-        cite: '—— 冯磊，本系列课程作者',
-      },
     },
   },
   {
@@ -689,7 +685,7 @@ export const modules: Module[] = [
     slug: 'm1',
     code: 'M1',
     title: '设备互联与智能管控',
-    subtitle: '摆脱昂贵商业软件授权，在本地统一纳管各品牌老旧设备',
+    subtitle: '把不同品牌的空调、照明、电表接进一个本地平台，看清每条回路用了多少电。',
     oneLiner:
       '基于Home Assistant与ESPHome，在局域网内统一接入多协议设备，实现能耗监控与自动化联动。',
     oneLinerEmphasis: '统一接入多协议设备',
@@ -697,7 +693,7 @@ export const modules: Module[] = [
       '商业楼宇、老旧设施、酒店公寓与工厂辅助车间中，空调、照明、安防等多套子系统独立运行，运维人员需多平台切换且数据互不相通。缺乏回路级能耗计量，仅能查看总表账单，无法精确定位高耗能设备与浪费时段。传统BA系统采用专有封闭协议，设备扩展与更换依赖原厂，改造成本高且周期长。',
     illustration: '/illustrations/m1.svg',
     difficulty: '入门',
-    duration: '2 天',
+    duration: 'L1 1 天 / L2 2–3 天 / L3 3–5 天',
     prerequisite: '无',
     scenarios: [
       '商业楼宇与办公园区智能化增量改造',
@@ -746,11 +742,10 @@ export const modules: Module[] = [
       '能耗看板与自动化YAML/Node-RED流程配置文件',
       '系统备份恢复与日常运维指南',
     ],
-    accent: 'yellow',
     cells: {
       L1: {
         title: '平台初识与基础设备接入',
-        subtitle: '在一个面板统一纳管各品牌设备，摆脱昂贵的商业软件授权',
+        subtitle: '在一个面板里看到各品牌设备的状态',
         durationDays: 1,
         outcomes: [
           '理解Home Assistant基础架构与核心概念（实体、服务、状态、自动化）',
@@ -761,7 +756,7 @@ export const modules: Module[] = [
       },
       L2: {
         title: '工业总线对接与场景联动',
-        subtitle: '打通存量工业设备，直接查看实时数据并实现跨设备联动',
+        subtitle: '接入 Modbus 电表与变送器，做出能耗看板和跨设备联动',
         durationDays: 3,
         outcomes: [
           '掌握Modbus RTU协议接线、调试与YAML寄存器配置',
@@ -772,7 +767,7 @@ export const modules: Module[] = [
       },
       L3: {
         title: '业务集成与系统运维',
-        subtitle: '拥有专属的智慧楼宇监控看板，核心数据完全留在本地',
+        subtitle: '对接外部系统，做好备份与运维，数据留在本地',
         durationDays: 5,
         outcomes: [
           '掌握HA与外部管理系统的数据集成方法（REST API/MQTT/Webhook）',
@@ -785,7 +780,7 @@ export const modules: Module[] = [
 
     facts: [
       { label: '难度', value: '入门' },
-      { label: '时长', value: '2 天' },
+      { label: '时长', value: 'L1 1 天 / L2 2–3 天 / L3 3–5 天' },
       { label: '最短形态', value: '1 天（体验课 · L1）' },
       { label: '排课形态', value: '3 层：体验 / 实战 / 交付' },
       { label: '核心协议', value: 'Modbus RTU / MQTT / Wi-Fi / Zigbee' },
@@ -972,7 +967,7 @@ export const modules: Module[] = [
         },
       ],
       callout:
-        'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 平台接入与传感器节点，不含工业总线与业务集成；实战课（workshop）覆盖 L1+L2 完整工业总线与能耗看板；交付课（bootcamp）全覆盖 L1+L2+L3。',
+        '体验课（taster）聚焦 L1 平台接入与传感器节点，不含工业总线与业务集成；实战课（workshop）覆盖 L1+L2 完整工业总线与能耗看板；交付课（bootcamp）全覆盖 L1+L2+L3。',
     },
 
     formats: {
@@ -1002,7 +997,7 @@ export const modules: Module[] = [
       tiers: [
         {
           title: '体验课',
-          finalProject: { label: '无 FP', included: false },
+          finalProject: { label: '不含结课项目', included: false },
           summary: '1 天 · 6–8h · L1 展示层 · 聚焦平台接入与传感器节点',
           rows: [
             {
@@ -1016,12 +1011,11 @@ export const modules: Module[] = [
               body: 'XIAO传感器节点 → 能耗看板初识 → 总结复盘',
             },
           ],
-          footnote:
-            '体验课目标是「看得懂、能讲解、能演示」，3分钟跑出设备接入与状态监控的演示效果。不含工业总线与业务集成。',
+          footnote: '不含工业总线与业务集成。',
         },
         {
           title: '实战课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '2–3 天 · 14–20h · L1+L2 · 工业总线对接 + 能耗看板 + 自动化联动',
           rows: [
             {
@@ -1045,7 +1039,7 @@ export const modules: Module[] = [
         },
         {
           title: '交付课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含跨系统集成与灾难恢复',
           rows: [
             {
@@ -1074,7 +1068,7 @@ export const modules: Module[] = [
         },
       ],
       callouts: [
-        '体验课是方案演示与客户沟通的标配形态：零工业接线门槛、1天闭环、聚焦「设备能接入、数据能看见」。适合展会、技术开放日与客户初次接触场景。',
+        '体验课 1 天上完，不用做工业接线，做到「设备能接入、数据能看见」为止。适合展会、技术开放日和第一次接触的客户。',
         '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并备份与复盘）；若需更多自动化调优时间则用满 3 天。',
       ],
       warnings: [
@@ -1135,10 +1129,6 @@ export const modules: Module[] = [
           body: '你在行业里攒下的那些：接线经验、踩过的坑、能让学员瞬间理解 Modbus 的那个比喻、客户现场最常问的三个问题——那正是我们没有、也给不了的部分。',
         },
       ],
-      quote: {
-        text: '一门集成课最好的归宿，不是被完整地执行一遍，而是被一位工程师改到面目全非，然后变成只有他能交付的那个方案。',
-        cite: '—— 冯磊，本系列课程作者',
-      },
     },
 
     complianceBoundary: {
@@ -1165,14 +1155,14 @@ export const modules: Module[] = [
     slug: 'm2',
     code: 'M2',
     title: '多模态 AI 交互',
-    subtitle: '告别繁琐系统界面与复杂操作，说话就能查数据、办业务、控设备',
+    subtitle: '对着终端说话就能查库存、录出入库、控设备；也可以整套跑在本地，断网可用。',
     oneLiner: '基于物理AI终端，融合边缘视觉、语音与业务系统API，实现多模态空间交互。',
     oneLinerEmphasis: '多模态空间交互',
     realProblem:
       '仓储管理、展厅导览、智能前台等场景中，现场人员需停下手工操作，通过键盘或手机手动检索业务数据，效率低下。传统交互终端缺乏视觉上下文，无法主动感知人员靠近或异常动作。智能终端多为封闭生态，难以与存量WMS/ERP/CRM系统对接；部分工业与政企场景禁止音频与业务数据上传公网。',
     illustration: '/illustrations/m2.svg',
     difficulty: '进阶',
-    duration: 'L1 1天 / L2 2–3天 / L3 3–5天',
+    duration: 'L1 1 天 / L2 2–3 天 / L3 3–5 天',
     prerequisite:
       'L1零基础或首次接触边缘AI交互设备；L2需具备Docker基础与REST API调用经验；L3需具备Linux、PyTorch/Jetson基础与shell操作能力',
     scenarios: [
@@ -1227,11 +1217,10 @@ export const modules: Module[] = [
       'OpenClaw自动化工具配置脚本',
       '本地离线语音AI管线部署与调优手册（L3）',
     ],
-    accent: 'red',
     cells: {
       L1: {
         title: '多模态交互能力体验',
-        subtitle: '拥有专属的 AI 语音助手，通过日常说话直接查询数据与控制设备',
+        subtitle: '用语音向 Watcher 查询数据、控制设备',
         durationDays: 1,
         outcomes: [
           '理解边缘视觉与大模型Agent结合的技术架构',
@@ -1242,7 +1231,7 @@ export const modules: Module[] = [
       },
       L2: {
         title: '业务系统集成与联动配置',
-        subtitle: '打通内部业务系统，让语音交互直接流转工单、简化繁琐操作',
+        subtitle: '通过 MCP 把语音接到仓储等业务系统',
         durationDays: 3,
         outcomes: [
           '独立配置Watcher视觉与语音Agent参数',
@@ -1253,7 +1242,7 @@ export const modules: Module[] = [
       },
       L3: {
         title: '端到端本地离线语音AI管线部署',
-        subtitle: '实现纯本地离线部署，断网可用且核心业务数据绝不出内网',
+        subtitle: '语音管线全部跑在本地，断网可用，数据不出内网',
         durationDays: 5,
         outcomes: [
           '掌握VAD→ASR→LLM→TTS完整本地端到端语音管线架构',
@@ -1266,7 +1255,7 @@ export const modules: Module[] = [
 
     facts: [
       { label: '难度', value: '进阶' },
-      { label: '时长', value: 'L1 1天 / L2 2–3天 / L3 3–5天' },
+      { label: '时长', value: 'L1 1 天 / L2 2–3 天 / L3 3–5 天' },
       { label: '最短形态', value: '1 天（体验课 · L1）' },
       { label: '排课形态', value: '3 层：体验 / 实战 / 交付' },
       { label: '核心协议', value: 'MCP / REST API / Wi-Fi' },
@@ -1348,7 +1337,7 @@ export const modules: Module[] = [
       ],
       hinge: {
         title: '关键转折点 · 从云端协同到本地离线私有化部署',
-        body: 'SenseCraft AI云端方案解决「快速验证与开箱即用」；MCP桥接让业务数据第一次在局域网内闭环，核心库存与业务数据不出域；Jetson离线管线则彻底切断公网依赖，在强隐私与工业隔离网环境下实现零外网语音交互。',
+        body: 'SenseCraft AI云端方案解决「快速验证、到手就能用」；MCP桥接让业务数据第一次在局域网内闭环，核心库存与业务数据不出域；Jetson离线管线则彻底切断公网依赖，在强隐私与工业隔离网环境下实现零外网语音交互。',
       },
       note: 'L1/L2依赖互联网连接大模型服务；L3需100 TOPS级别边缘算力（Jetson Orin NX 16GB），RK3588-40（6 TOPS）无法承载本地大模型推理。',
     },
@@ -1477,7 +1466,7 @@ export const modules: Module[] = [
         },
       ],
       callout:
-        'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 端侧体验与MCP工具调用演示，不含本地业务系统部署与离线管线；实战课（workshop）覆盖 L1+L2 完整Watcher配置、WMS部署与MCP桥接；交付课（bootcamp）全覆盖 L1+L2+L3，含Jetson离线语音管线部署。',
+        '体验课（taster）聚焦 L1 端侧体验与MCP工具调用演示，不含本地业务系统部署与离线管线；实战课（workshop）覆盖 L1+L2 完整Watcher配置、WMS部署与MCP桥接；交付课（bootcamp）全覆盖 L1+L2+L3，含Jetson离线语音管线部署。',
     },
 
     formats: {
@@ -1507,7 +1496,7 @@ export const modules: Module[] = [
       tiers: [
         {
           title: '体验课',
-          finalProject: { label: '无 FP', included: false },
+          finalProject: { label: '不含结课项目', included: false },
           summary: '1 天 · 6–8h · L1 展示层 · 聚焦端侧体验与MCP工具调用演示',
           rows: [
             {
@@ -1521,12 +1510,11 @@ export const modules: Module[] = [
               body: '语音问答与Agent机制 → MCP工具调用与业务集成演示 → 总结复盘',
             },
           ],
-          footnote:
-            '体验课目标是「看得懂、能讲解、能演示」，3分钟跑通语音查询与视觉触发联动的演示效果。不含本地业务系统部署与离线语音管线。',
+          footnote: '不含本地业务系统部署与离线语音管线。',
         },
         {
           title: '实战课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '2–3 天 · 14–20h · L1+L2 · Watcher配置 + 本地WMS部署 + MCP桥接 + 自动化联动',
           rows: [
             {
@@ -1550,7 +1538,7 @@ export const modules: Module[] = [
         },
         {
           title: '交付课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含Jetson离线语音管线部署与断网验证',
           rows: [
             {
@@ -1579,7 +1567,7 @@ export const modules: Module[] = [
         },
       ],
       callouts: [
-        '体验课是方案演示与客户沟通的标配形态：零部署门槛、1天闭环、聚焦「语音能查询、视觉能触发」。适合展会、技术开放日与客户初次接触场景。',
+        '体验课 1 天上完，不用部署业务系统，做到「语音能查询、视觉能触发」为止。适合展会、技术开放日和第一次接触的客户。',
         '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并 OpenClaw 与全链路联调）；若需更多 MCP 桥接调优时间则用满 3 天。',
       ],
       warnings: [
@@ -1637,10 +1625,6 @@ export const modules: Module[] = [
           body: '你在行业里攒下的那些：Agent提示词调优经验、踩过的MCP鉴权坑、能让学员瞬间理解语音管线延迟的那个比喻、客户现场最常问的三个隐私问题——那正是我们没有、也给不了的部分。',
         },
       ],
-      quote: {
-        text: '一门AI交互课最好的归宿，不是被完整地执行一遍，而是被一位工程师改到面目全非，然后变成只有他能交付的那个方案。',
-        cite: '—— 冯磊，本系列课程作者',
-      },
     },
 
     complianceBoundary: {
@@ -1669,8 +1653,9 @@ export const modules: Module[] = [
     id: 'm3',
     slug: 'm3',
     code: 'M3',
+    overseasOnly: true,
     title: '自组网与韧性通信',
-    subtitle: '没网没信号也能联通，支持信号中继，快速拉起可查位置、能发消息的应急专网',
+    subtitle: '在没有公网的地方，用 LoRa Mesh 发消息、报位置、回传传感数据。套件仅面向海外频段。',
     oneLiner:
       '基于 LoRa Mesh 自组网协议，构建无公网依赖、多跳中继的离网应急通信与传感数据回传网络。',
     oneLinerEmphasis: '无公网依赖、多跳中继',
@@ -1727,11 +1712,10 @@ export const modules: Module[] = [
       'LoRa-MQTT 网关固件配置与 Node-RED 监控流程文件',
       '离网传感定制固件源码与编译工程（L3）',
     ],
-    accent: 'yellow',
     cells: {
       L1: {
         title: '基础组网与离线通信',
-        subtitle: '拥有自己的应急通信网，在无网环境下互发消息并共享位置',
+        subtitle: '3 个以上节点组网，无公网互发消息、共享位置',
         durationDays: 1,
         outcomes: [
           '理解 LoRa 物理特性与 Meshtastic 路由拓扑原理',
@@ -1743,19 +1727,19 @@ export const modules: Module[] = [
       },
       L2: {
         title: '状态监控与 MQTT 桥接',
-        subtitle: '实现野外离网传感监控，自动采集环境数据与异常告警',
+        subtitle: '把 Mesh 数据桥接到 MQTT，在看板上看节点位置与电量',
         durationDays: 3,
         outcomes: [
           '掌握 LoRa Mesh 与局域网/公网的 MQTT 桥接方法',
           '掌握基于 Node-RED 的 Mesh 遥测数据解析与自动化流编排',
-          '具备搭建全域通信态势监控看板的能力',
+          '具备搭建全网通信态势监控看板的能力',
           '完成 1 套 LoRa-MQTT 网关上线，看板实时显示节点坐标与电量状态',
         ],
         comingSoon: false,
       },
       L3: {
         title: '离网传感集成与固件定制',
-        subtitle: '打通离网专网与物联生态，让无网专网也能与现场设备联动',
+        subtitle: '改 Meshtastic 固件，给节点接上环境传感器',
         durationDays: 5,
         outcomes: [
           '掌握 Meshtastic 开源固件架构与 C++ 源码定制流程',
@@ -1969,7 +1953,7 @@ export const modules: Module[] = [
         },
       ],
       callout:
-        'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 基础组网与离线通信，不含 MQTT 桥接与固件定制；实战课（workshop）覆盖 L1+L2 完整网关搭建与态势监控；交付课（bootcamp）全覆盖 L1+L2+L3。',
+        '体验课（taster）聚焦 L1 基础组网与离线通信，不含 MQTT 桥接与固件定制；实战课（workshop）覆盖 L1+L2 完整网关搭建与态势监控；交付课（bootcamp）全覆盖 L1+L2+L3。',
     },
 
     formats: {
@@ -1999,7 +1983,7 @@ export const modules: Module[] = [
       tiers: [
         {
           title: '体验课',
-          finalProject: { label: '无 FP', included: false },
+          finalProject: { label: '不含结课项目', included: false },
           summary: '1 天 · 6–8h · L1 展示层 · 聚焦 Meshtastic 组网与离线通信',
           rows: [
             {
@@ -2013,12 +1997,11 @@ export const modules: Module[] = [
               body: '信道加密 → 离线通信与定位实测 → 总结复盘',
             },
           ],
-          footnote:
-            '体验课目标是「看得懂、能讲解、能演示」，完成 3 节点现场组网与离线消息/位置共享。不含 MQTT 桥接与固件定制。',
+          footnote: '不含 MQTT 桥接与固件定制。',
         },
         {
           title: '实战课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '2–3 天 · 14–20h · L1+L2 · Mesh 组网 + MQTT 桥接 + 态势监控',
           rows: [
             {
@@ -2042,7 +2025,7 @@ export const modules: Module[] = [
         },
         {
           title: '交付课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含固件定制与传感集成',
           rows: [
             {
@@ -2071,7 +2054,7 @@ export const modules: Module[] = [
         },
       ],
       callouts: [
-        '体验课是方案演示与客户沟通的标配形态：零开发门槛、1 天闭环、聚焦「设备能组网、消息能送达」。适合展会、技术开放日与客户初次接触场景。',
+        '体验课 1 天上完，不用写代码，做到「设备能组网、消息能送达」为止。适合展会、技术开放日和第一次接触的客户。',
         '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并复盘）；若需更多 Node-RED 调优与看板定制时间则用满 3 天。',
       ],
       warnings: [
@@ -2132,10 +2115,6 @@ export const modules: Module[] = [
           body: '你在行业里攒下的那些：野外部署经验、踩过的坑、能让学员瞬间理解 LoRa 跳数的那个比喻、客户现场最常问的三个问题——那正是我们没有、也给不了的部分。',
         },
       ],
-      quote: {
-        text: '一门通信课最好的归宿，不是被完整地执行一遍，而是被一位工程师改到面目全非，然后变成只有他能交付的那个方案。',
-        cite: '—— 冯磊，本系列课程作者',
-      },
     },
 
     complianceBoundary: {
@@ -2163,7 +2142,7 @@ export const modules: Module[] = [
     slug: 'm4',
     code: 'M4',
     title: '边缘视觉 AI',
-    subtitle: '告别事后翻查监控录像，把老旧摄像头升级为实时抓拍、可联动的智能视觉防线',
+    subtitle: '让摄像头在事件发生时就告警：目标检测、区域入侵、联动声光。不做人脸识别。',
     oneLiner:
       '基于轻量边缘摄像头与工业级多路 AI 计算主机，构建目标检测、区域入侵告警与自动化联动的边缘视觉方案。',
     oneLinerEmphasis: '目标检测、区域入侵告警与自动化联动',
@@ -2231,11 +2210,10 @@ export const modules: Module[] = [
       '误报率调优前后测试对比记录表',
       '自定义数据集、训练配置与量化后模型文件（L3）',
     ],
-    accent: 'red',
     cells: {
       L1: {
         title: '双线体验与基础配置',
-        subtitle: '拥有自己的智能视觉哨兵，划定警戒区域并自动抓拍留证',
+        subtitle: '配好一台 reCamera，划定区域并识别目标',
         durationDays: 1,
         outcomes: [
           '理解帧率、分辨率、置信度阈值与 IoU 等视觉核心概念',
@@ -2247,7 +2225,7 @@ export const modules: Module[] = [
       },
       L2: {
         title: '双线场景联动与多路汇聚',
-        subtitle: '把既有老旧摄像头升级为智能监控网，过滤误报并联动现场声光报警',
+        subtitle: '多路摄像头接入 Frigate，调低误报并联动声光告警',
         durationDays: 3,
         outcomes: [
           '掌握在 reCamera 上使用 Node-RED 实现边缘事件的本地联动',
@@ -2259,10 +2237,10 @@ export const modules: Module[] = [
       },
       L3: {
         title: '模型定制与边缘部署优化',
-        subtitle: '定制专属视觉识别模型，实时大屏业务数据',
+        subtitle: '训练自己的检测模型并部署到边缘硬件',
         durationDays: 5,
         outcomes: [
-          '掌握视觉 AI 从数据标注、模型训练到边缘部署的完整工程闭环',
+          '掌握视觉 AI 从数据标注、模型训练到边缘部署的完整工程流程',
           '掌握 TensorRT 与嵌入式模型量化转换的关键工具链',
           '具备独立设计和交付垂直行业视觉识别方案的能力',
           '交付 1 套自定义训练的目标检测模型，并在硬件上完成实跑验证',
@@ -2273,7 +2251,7 @@ export const modules: Module[] = [
 
     facts: [
       { label: '难度', value: '高级' },
-      { label: '时长', value: 'L1 1天 / L2 2–3天 / L3 3–5天' },
+      { label: '时长', value: 'L1 1 天 / L2 2–3 天 / L3 3–5 天' },
       { label: '最短形态', value: '1 天（体验课 · L1）' },
       { label: '排课形态', value: '3 层：体验 / 实战 / 交付' },
       { label: '双硬件主线', value: 'reCamera（轻节点）+ Jetson Orin NX（强节点）' },
@@ -2297,7 +2275,8 @@ export const modules: Module[] = [
     ],
 
     hardwareIntro: {
-      subtitle: '本课程以「开源 AI 相机 + 边缘推理盒子」为核心教具，覆盖采集、推理到告警全链路。',
+      subtitle:
+        '本课程以「开源 AI 相机 + 边缘推理盒子」为核心教具，覆盖从采集、推理到告警的整条流程。',
       items: [
         {
           name: 'reComputer RK3576-30 (100052518)',
@@ -2505,7 +2484,7 @@ export const modules: Module[] = [
         },
       ],
       callout:
-        'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 双线体验与基础配置，Jetson NVR为演示观摩不含实操；实战课（workshop）覆盖 L1+L2 完整Node-RED联动与Frigate多路汇聚；交付课（bootcamp）全覆盖 L1+L2+L3 含自定义模型训练与边缘部署。',
+        '体验课（taster）聚焦 L1 双线体验与基础配置，Jetson NVR为演示观摩不含实操；实战课（workshop）覆盖 L1+L2 完整Node-RED联动与Frigate多路汇聚；交付课（bootcamp）全覆盖 L1+L2+L3 含自定义模型训练与边缘部署。',
     },
 
     formats: {
@@ -2535,7 +2514,7 @@ export const modules: Module[] = [
       tiers: [
         {
           title: '体验课',
-          finalProject: { label: '无 FP', included: false },
+          finalProject: { label: '不含结课项目', included: false },
           summary: '1 天 · 6–8h · L1 展示层 · 聚焦reCamera单点配置与双主线架构认知',
           rows: [
             {
@@ -2549,12 +2528,11 @@ export const modules: Module[] = [
               body: '基础入侵检测 → Jetson NVR架构演示 → 总结复盘',
             },
           ],
-          footnote:
-            '体验课目标是「看得懂、能讲解、能演示」，3分钟跑出reCamera目标检测与入侵告警的演示效果。Jetson多路NVR为观摩演示，不含实操。',
+          footnote: 'Jetson多路NVR为观摩演示，不含实操。',
         },
         {
           title: '实战课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary:
             '2–3 天 · 14–20h · L1+L2 · Node-RED告警联动 + Frigate多路汇聚 + HA自动化 + 误报调优',
           rows: [
@@ -2579,7 +2557,7 @@ export const modules: Module[] = [
         },
         {
           title: '交付课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含自定义模型训练与边缘部署优化',
           rows: [
             {
@@ -2608,7 +2586,7 @@ export const modules: Module[] = [
         },
       ],
       callouts: [
-        '体验课是方案演示与客户沟通的标配形态：零算法门槛、1天闭环、聚焦「摄像头能出流、目标能检测、告警能触发」。适合展会、技术开放日与客户初次接触场景。',
+        '体验课 1 天上完，不涉及模型训练，做到「摄像头能出流、目标能检测、告警能触发」为止。适合展会、技术开放日和第一次接触的客户。',
         '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并 HA 集成与误报调优）；若需更多 Frigate 配置调优时间则用满 3 天。',
       ],
       warnings: [
@@ -2670,10 +2648,6 @@ export const modules: Module[] = [
           body: '你在行业里攒下的那些：现场踩过的坑、能让学员瞬间理解置信度阈值的那个比喻、客户现场最常问的三个问题、误报调优的独门经验——那正是我们没有、也给不了的部分。',
         },
       ],
-      quote: {
-        text: '一门视觉AI课最好的归宿，不是被完整地执行一遍，而是被一位工程师改到面目全非，然后变成只有他能交付的那个方案。',
-        cite: '—— 冯磊，本系列课程作者',
-      },
     },
 
     complianceBoundary: {
@@ -2701,14 +2675,15 @@ export const modules: Module[] = [
     slug: 'm5',
     code: 'M5',
     title: '环境感知与数据采集',
-    subtitle: '无需复杂拉线施工，搭建广域传感网络，轻松实现产业数字化升级',
+    subtitle:
+      '在温室、河道、库房里装上工业传感器，数据直接进手机。4G 或 LoRaWAN 两种接法，不用布线。',
     oneLiner: '工业级传感器与4G/LoRaWAN双链路，实现广域场景低功耗环境监测与数据采集。',
     oneLinerEmphasis: '工业级传感器与4G/LoRaWAN双链路',
     realProblem:
       '面向连栋温室大棚、设施园艺、河道水质监测、城市内涝点与工业仓储等广域分散场景，偏远点位布线取电成本高，野外山地与河流断面上百米至数公里铺设线缆工程量巨大。现场多厂商传感器各自定义私有协议，二次开发与协议适配周期长；霜冻、水质恶化、土壤干旱等异常依赖人工定期巡检，故障发现晚且耗费人力；采集到的环境数据停留在云端大屏或手机App，无法与既有灌溉/风机等执行机构联动，也无法对接第三方业务系统。',
     illustration: '/illustrations/m5.svg',
     difficulty: '入门',
-    duration: '2 天',
+    duration: 'L1 1 天 / L2 2–3 天 / L3 3–5 天',
     prerequisite: '无',
     scenarios: [
       '智慧农业与设施园艺：土壤温湿度/EC监测、温室CO2浓度调控、精准水肥灌溉联动',
@@ -2763,11 +2738,10 @@ export const modules: Module[] = [
       'Node-RED自动化流程文件（.json）与API集成调用示例代码（L3）',
       'Grafana监控大屏配置文件（L3）',
     ],
-    accent: 'yellow',
     cells: {
       L1: {
         title: '环境感知网络架构与数据监视',
-        subtitle: '实现免拉线广域传感监测，设备上电即刻查看环境数据',
+        subtitle: '设备上电后，在网页和 App 上看到环境数据',
         durationDays: 1,
         outcomes: [
           '理解4G DTU与LoRaWAN网关在物联网数据采集中的不同拓扑结构与适用条件',
@@ -2778,7 +2752,7 @@ export const modules: Module[] = [
       },
       L2: {
         title: '传感器接线、Modbus配置与规则告警',
-        subtitle: '拥有个性化传感数据统一看板，异常自动告警',
+        subtitle: '接好 RS485 传感器，配置轮询与三类以上告警',
         durationDays: 3,
         outcomes: [
           '掌握RS485差分接线、5V/12V电源分配与Modbus RTU寄存器寻址配置',
@@ -2789,7 +2763,7 @@ export const modules: Module[] = [
       },
       L3: {
         title: 'API数据集成与本地边缘自动化',
-        subtitle: '打通数据接口，将现场监测数据无缝集成至自有系统',
+        subtitle: '用 Open API 取数，接入 Grafana 与本地自动化',
         durationDays: 5,
         outcomes: [
           '掌握SenseCAP Open API鉴权（Access ID / Access Key，HTTP Basic Auth）与遥测数据提取接口调用',
@@ -2802,7 +2776,7 @@ export const modules: Module[] = [
 
     facts: [
       { label: '难度', value: '入门' },
-      { label: '时长', value: '2 天' },
+      { label: '时长', value: 'L1 1 天 / L2 2–3 天 / L3 3–5 天' },
       { label: '最短形态', value: '1 天（体验课 · L1）' },
       { label: '排课形态', value: '3 层：体验 / 实战 / 交付' },
       { label: '核心协议', value: 'Modbus RTU / RS485 / LoRaWAN / 4G 全网通' },
@@ -3022,7 +2996,7 @@ export const modules: Module[] = [
         },
       ],
       callout:
-        'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 平台架构认知与云端数据监视，不含RS485接线与API集成；实战课（workshop）覆盖 L1+L2 完整传感器接线、Modbus配置与告警编排；交付课（bootcamp）全覆盖 L1+L2+L3，含SenseCAP Open API对接与Node-RED本地自动化。',
+        '体验课（taster）聚焦 L1 平台架构认知与云端数据监视，不含RS485接线与API集成；实战课（workshop）覆盖 L1+L2 完整传感器接线、Modbus配置与告警编排；交付课（bootcamp）全覆盖 L1+L2+L3，含SenseCAP Open API对接与Node-RED本地自动化。',
     },
 
     formats: {
@@ -3052,7 +3026,7 @@ export const modules: Module[] = [
       tiers: [
         {
           title: '体验课',
-          finalProject: { label: '无 FP', included: false },
+          finalProject: { label: '不含结课项目', included: false },
           summary: '1 天 · 6–8h · L1 展示层 · 聚焦双通信架构认知与云端数据监视',
           rows: [
             {
@@ -3066,12 +3040,11 @@ export const modules: Module[] = [
               body: 'SenseCraft Data平台监控 → 报表导出与移动端操作 → 总结复盘',
             },
           ],
-          footnote:
-            '体验课目标是「看得懂、能讲解、能演示」，3分钟跑出多节点传感器数据上云与实时看板的演示效果。不含RS485接线、Modbus配置与API集成。',
+          footnote: '不含RS485接线、Modbus配置与API集成。',
         },
         {
           title: '实战课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '2–3 天 · 14–20h · L1+L2 · 传感器接线 + Modbus配置 + 多级告警编排',
           rows: [
             {
@@ -3095,7 +3068,7 @@ export const modules: Module[] = [
         },
         {
           title: '交付课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含SenseCAP Open API对接与Node-RED本地自动化',
           rows: [
             {
@@ -3124,7 +3097,7 @@ export const modules: Module[] = [
         },
       ],
       callouts: [
-        '体验课是方案演示与客户沟通的标配形态：零接线门槛、1天闭环、聚焦「传感器能接入、数据能上云、看板能看见」。适合展会、技术开放日与客户初次接触场景。',
+        '体验课 1 天上完，不用接线，做到「传感器能接入、数据能上云、看板能看见」为止。适合展会、技术开放日和第一次接触的客户。',
         '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并复盘与交付总结）；若需更多告警策略调优与接线排障时间则用满 3 天。',
       ],
       warnings: [
@@ -3186,10 +3159,6 @@ export const modules: Module[] = [
           body: '你在行业里攒下的那些：野外布设经验、踩过的坑、能让学员瞬间理解LoRaWAN视距覆盖的那个比喻、客户现场最常问的三个问题——那正是我们没有、也给不了的部分。',
         },
       ],
-      quote: {
-        text: '一门环境监测课最好的归宿，不是被完整地执行一遍，而是被一位工程师改到面目全非，然后变成只有他能交付的那个方案。',
-        cite: '—— 冯磊，本系列课程作者',
-      },
     },
 
     complianceBoundary: {
@@ -3222,14 +3191,14 @@ export const modules: Module[] = [
     slug: 'm6',
     code: 'M6',
     title: '机器人控制与具身智能',
-    subtitle: '告别繁琐的传统机器人编程，轻松掌控多自由度动作，快速响应现场作业需求',
+    subtitle: '在六轴桌面机械臂上，从主从遥操作一路做到按 3D 视觉结果抓取。',
     oneLiner: '六轴桌面机械臂加多模态感知，实现主从遥操到3D空间精准抓取与具身智能开发。',
     oneLinerEmphasis: '主从遥操到3D空间精准抓取',
     realProblem:
       '面向农产品外观分拣、轻量自动化产线辅助上下料、展厅展位迎宾演示与辅助作业工位等场景，传统机械臂教学从运动学推导与电机控制讲起，应用侧人员上手周期长。大语言模型多局限于文本生成，缺乏接入物理执行机构的标准路径；从零搭建分拣/搬运演示需联调视觉识别、运动规划与抓取时序，多系统集成难度大；新手操作带动力机械臂，存在碰撞、误入工作空间等物理安全风险。',
     illustration: '/illustrations/m6.png',
     difficulty: '入门',
-    duration: 'L1 1天 / L2 2–3天 / L3 3–5天',
+    duration: 'L1 1 天 / L2 2–3 天 / L3 3–5 天',
     prerequisite:
       'L1无（零基础，具备基本电脑操作技能）；L2掌握基础网络配置与系统联动概念；L3具备基础Python编程与Linux技能',
     scenarios: [
@@ -3289,7 +3258,6 @@ export const modules: Module[] = [
       '3D空间自动抓取Python工程源码（深度相机 + Pinocchio + Motorbridge）',
       '遥操动作数据集样本与方案设计交付文档',
     ],
-    accent: 'red',
     cells: {
       L1: {
         title: '选型认知、安全规范与开箱上手',
@@ -3304,7 +3272,7 @@ export const modules: Module[] = [
       },
       L2: {
         title: '场景剖析、空间直觉与多模态编排',
-        subtitle: '自主识别目标并执行抓取，灵活应对位置变化',
+        subtitle: '编排多步动作，按视觉事件触发抓取',
         durationDays: 3,
         outcomes: [
           '能向客户清晰阐述3D场景为什么需要六轴机械臂及其选型边界',
@@ -3315,7 +3283,7 @@ export const modules: Module[] = [
       },
       L3: {
         title: '3D空间抓取闭环与具身智能前瞻',
-        subtitle: '定制专属场景应用，快速适配特定作业流程',
+        subtitle: '用深度相机取 3D 坐标，Python 驱动真机抓取',
         durationDays: 5,
         outcomes: [
           '使用RGB-D深度相机获取目标3D物理坐标，通过Python调用Pinocchio完成电机角度自动换算，利用Motorbridge驱动真机完成空间抓取与异常处理',
@@ -3328,7 +3296,7 @@ export const modules: Module[] = [
 
     facts: [
       { label: '难度', value: '入门' },
-      { label: '时长', value: 'L1 1天 / L2 2–3天 / L3 3–5天' },
+      { label: '时长', value: 'L1 1 天 / L2 2–3 天 / L3 3–5 天' },
       { label: '最短形态', value: '1 天（体验课 · L1）' },
       { label: '排课形态', value: '3 层：体验 / 实战 / 交付' },
       { label: '核心执行器', value: 'reBot DevArm B601-RS 六轴机械臂' },
@@ -3349,7 +3317,7 @@ export const modules: Module[] = [
 
     hardwareIntro: {
       subtitle:
-        '本课程以「六轴桌面机械臂 + 多模态感知 + 边缘算力」为核心教具，覆盖遥操到3D抓取全链路。',
+        '本课程以「六轴桌面机械臂 + 多模态感知 + 边缘算力」为核心教具，覆盖从遥操到 3D 抓取的整条流程。',
       items: [
         {
           name: 'reBot DevArm B601-RS机械臂（100019336）',
@@ -3554,7 +3522,7 @@ export const modules: Module[] = [
         },
       ],
       callout:
-        'coverage 键对应排课形态 ID（taster / workshop / bootcamp），值为 full（完整覆盖）/ part（精简覆盖）/ none（不含）/ plus（比完整版更深）。体验课（taster）聚焦 L1 选型认知、安全规范与SenseCraft开箱遥操，不含视觉联动与3D抓取开发；实战课（workshop）覆盖 L1+L2 完整场景剖析、动作编排与工位视觉事件触发；交付课（bootcamp）全覆盖 L1+L2+L3，含确定性3D空间抓取闭环与具身智能前沿探索。',
+        '体验课（taster）聚焦 L1 选型认知、安全规范与SenseCraft开箱遥操，不含视觉联动与3D抓取开发；实战课（workshop）覆盖 L1+L2 完整场景剖析、动作编排与工位视觉事件触发；交付课（bootcamp）全覆盖 L1+L2+L3，含确定性3D空间抓取闭环与具身智能前沿探索。',
     },
 
     formats: {
@@ -3584,7 +3552,7 @@ export const modules: Module[] = [
       tiers: [
         {
           title: '体验课',
-          finalProject: { label: '无 FP', included: false },
+          finalProject: { label: '不含结课项目', included: false },
           summary: '1 天 · 6–8h · L1 展示层 · 聚焦选型认知、安全规范与SenseCraft开箱遥操',
           rows: [
             {
@@ -3598,12 +3566,11 @@ export const modules: Module[] = [
               body: 'SenseCraft开箱与主从遥操 → 语音指令夹取首验 → 总结复盘',
             },
           ],
-          footnote:
-            '体验课目标是「看得懂、能讲解、能演示」，跑出主从遥操与语音指令抓取的演示效果。不含工位视觉联动与3D空间抓取开发。',
+          footnote: '不含工位视觉联动与3D空间抓取开发。',
         },
         {
           title: '实战课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '2–3 天 · 14–20h · L1+L2 · 场景剖析 + 动作编排 + 工位视觉事件触发联动',
           rows: [
             {
@@ -3627,7 +3594,7 @@ export const modules: Module[] = [
         },
         {
           title: '交付课',
-          finalProject: { label: 'FP 完整', included: true },
+          finalProject: { label: '含结课项目', included: true },
           summary: '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含确定性3D空间抓取闭环与具身智能前沿探索',
           rows: [
             {
@@ -3656,7 +3623,7 @@ export const modules: Module[] = [
         },
       ],
       callouts: [
-        '体验课是方案演示与客户沟通的标配形态：零代码门槛、1天闭环、聚焦「机械臂能动、语音能控」。适合展会、技术开放日与客户初次接触场景。',
+        '体验课 1 天上完，不用写代码，做到「机械臂能动、语音能控」为止。适合展会、技术开放日和第一次接触的客户。',
         '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并复盘）；若需更多微场景联调时间则用满 3 天。',
       ],
       warnings: [
@@ -3718,10 +3685,6 @@ export const modules: Module[] = [
           body: '你在行业里攒下的那些：机械臂选型踩过的坑、能让学员瞬间理解逆运动学的那个比喻、客户现场最常问的三个安全问题——那正是我们没有、也给不了的部分。',
         },
       ],
-      quote: {
-        text: '一门机器人课最好的归宿，不是被完整地执行一遍，而是被一位工程师改到面目全非，然后变成只有他能交付的那个方案。',
-        cite: '—— 冯磊，本系列课程作者',
-      },
     },
 
     complianceBoundary: {
@@ -3746,15 +3709,10 @@ export const modules: Module[] = [
   },
 ];
 
-export const getModule = (id: ModuleId): Module | undefined => modules.find((m) => m.id === id);
-
-export const getModuleBySlug = (slug: string): Module | undefined =>
-  modules.find((m) => m.slug === slug);
-
 export const levels: LevelId[] = ['L1', 'L2', 'L3'];
 
 export const levelMeta: Record<LevelId, { label: string; description: string }> = {
-  L1: { label: 'L1 · 展示层', description: '看得懂、能讲解、能演示——3 分钟跑出「魔法时刻」' },
-  L2: { label: 'L2 · 顾问层', description: '独立配置可用系统，交付体验工作坊' },
-  L3: { label: 'L3 · 设计层', description: '商业闭环与深度定制：API 对接 / 模型训练 / 私有化部署' },
+  L1: { label: 'L1 · 展示层', description: '看得懂、讲得清、能当场演示' },
+  L2: { label: 'L2 · 顾问层', description: '能独立配出一套可用系统' },
+  L3: { label: 'L3 · 设计层', description: '能做业务集成与定制：API 对接、模型训练、私有化部署' },
 };

@@ -1,14 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HeroBanner from '../components/HeroBanner.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import FaqSection from '../components/sections/FaqSection.astro';
+import FinalCtaSection from '../components/sections/FinalCtaSection.astro';
+import ChipChain from '../components/sections/chip/ChipChain.astro';
+import ChipLedger from '../components/sections/chip/ChipLedger.astro';
 import ChipTabs from '../components/sections/chip/ChipTabs.astro';
-import ChipWhatSection from '../components/sections/chip/ChipWhatSection.astro';
-import ChipComparisonSection from '../components/sections/chip/ChipComparisonSection.astro';
-import ChipRevenueSection from '../components/sections/chip/ChipRevenueSection.astro';
-import ChipRelationSection from '../components/sections/chip/ChipRelationSection.astro';
-import ChipFlowSection from '../components/sections/chip/ChipFlowSection.astro';
-import ChipFaqSection from '../components/sections/chip/ChipFaqSection.astro';
-import ChipCtaSection from '../components/sections/chip/ChipCtaSection.astro';
 import { base } from '../data/ecosystem';
 import { t, defaultLocale } from '../i18n';
 import type { Locale } from '../i18n';
@@ -17,38 +15,103 @@ import { dt } from '../i18n/data-translations';
 
 const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
 const data = translateEcosystem(base, locale);
-const hero = data.hero;
-const upgradeSteps = data.upgrade.chain.map((label) => ({ title: label }));
+const link = (l: { label: string; href: string }) => ({
+  label: l.label,
+  href: chipHref(locale, l.href),
+  external: isExternalHref(l.href),
+});
+const cta = {
+  ...data.cta,
+  primary: link(data.cta.primary),
+  secondary: data.cta.secondary ? link(data.cta.secondary) : undefined,
+};
+const relationRows = [data.relation.cards.pioneer, data.relation.cards.base].map((c) => ({
+  title: `${c.label}（${c.tag}）`,
+  description: c.description,
+}));
 ---
 
 <Layout title={t(locale, 'page.base.title')} description={t(locale, 'page.base.description')}>
   <ChipTabs active="base" locale={locale} />
 
   <HeroBanner
-    eyebrow={hero.eyebrow}
-    title={hero.title}
-    subtitle={hero.subtitle}
-    description={hero.description}
-    ctas={hero.ctas.map((cta) => ({
-      label: cta.label,
-      href: chipHref(locale, cta.href),
-      variant: cta.variant,
-      external: isExternalHref(cta.href),
-    }))}
-  >
-    <Fragment slot="title">
-      {hero.title}<span class="highlight">{hero.titleHighlight}</span>
-    </Fragment>
-  </HeroBanner>
-
-  <ChipWhatSection section={data.what} />
-  <ChipComparisonSection section={data.comparison} />
-  <ChipRevenueSection section={data.revenue} />
-  <ChipRelationSection section={data.relation} />
-  <ChipFlowSection
-    layout="chain"
-    section={{ title: data.upgrade.title, steps: upgradeSteps, footnote: data.upgrade.description }}
+    title={data.hero.title}
+    description={data.hero.description}
+    ctas={data.hero.ctas.map((c) => ({ ...link(c), variant: c.variant }))}
   />
-  <ChipFaqSection title={dt(locale, 'section.faqTitle')} faqs={data.faqs} />
-  <ChipCtaSection cta={data.cta} locale={locale} />
+
+  <section class="section bg-background">
+    <div class="container-page" data-reveal>
+      <SectionHeader title={data.what.title} subtitle={data.what.intro} />
+      <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
+        <div class="space-y-8">
+          <ChipLedger title={data.what.coreTitle} items={data.what.core} />
+          {
+            data.what.plus && data.what.plusTitle && (
+              <ChipLedger
+                title={data.what.plusTitle}
+                items={data.what.plus.map((p) => ({ title: p }))}
+              />
+            )
+          }
+        </div>
+
+        <div>
+          <h3 class="text-base font-bold text-brand-black">{data.comparison.title}</h3>
+          <div class="mt-3 overflow-x-auto border-t border-neutral-3">
+            <table class="w-full min-w-[32rem] text-left text-sm">
+              <caption class="sr-only">{data.comparison.title}</caption>
+              <thead>
+                <tr class="border-b border-neutral-3">
+                  <th scope="col" class="label py-2.5 pr-4">{data.comparison.header.first}</th>
+                  <th scope="col" class="label px-4 py-2.5">{data.comparison.header.pioneer}</th>
+                  <th scope="col" class="px-4 py-2.5 text-xs font-bold text-brand-red">
+                    {data.comparison.header.base}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  data.comparison.rows.map((row) => (
+                    <tr class="border-b border-neutral-3 align-top">
+                      <th scope="row" class="py-2.5 pr-4 font-bold text-brand-black">
+                        {row.label}
+                      </th>
+                      <td class="px-4 py-2.5 text-neutral-8">{row.pioneer}</td>
+                      <td class="bg-brand-yellow-light px-4 py-2.5 font-medium text-brand-black">
+                        {row.base}
+                      </td>
+                    </tr>
+                  ))
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10">
+        <ChipLedger title={data.revenue.title} items={data.revenue.lines} columns={4} numbered />
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-neutral-1 border-y border-neutral-3">
+    <div class="container-page" data-reveal>
+      <SectionHeader title={data.relation.title} subtitle={data.relation.intro} />
+      <div class="grid gap-10 lg:grid-cols-2 lg:gap-14">
+        <ChipLedger items={relationRows} />
+        <ChipLedger items={data.relation.bullets.map((b) => ({ title: b }))} />
+      </div>
+      <div class="mt-8">
+        <ChipChain
+          title={data.upgrade.title}
+          steps={data.upgrade.chain}
+          note={data.upgrade.description}
+        />
+      </div>
+    </div>
+  </section>
+
+  <FaqSection title={dt(locale, 'section.faqTitle')} faqs={data.faqs} />
+  <FinalCtaSection cta={cta} />
 </Layout>

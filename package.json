@@ -12,7 +12,6 @@
     "lint": "biome check src",
     "lint:fix": "biome check --write src",
     "format": "biome format --write src",
-    "qr": "bash scripts/gen-qr.sh",
     "deslop": "node scripts/deslop-scan.mjs",
     "prepare": "simple-git-hooks || true"
   },

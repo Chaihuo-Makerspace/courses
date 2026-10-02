@@ -1,0 +1,59 @@
+---
+import { Icon } from 'astro-icon/components';
+import SectionHeader from '../../SectionHeader.astro';
+import type { HistoryItem } from '../../../data/site';
+import { t } from '../../../i18n/translations';
+import type { Locale } from '../../../i18n';
+
+// /about 的正文只有一段：真实来历（可核实的事实）+ 一位具名负责人。
+interface Props {
+  history: HistoryItem[];
+  person: { name: string; role: string; quote: string };
+  locale: Locale;
+}
+
+const { history, person, locale } = Astro.props as Props;
+---
+
+<section class="section bg-background">
+  <div class="container-page" data-reveal>
+    <SectionHeader title={t(locale, 'about.history.title')} />
+
+    <div class="grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:gap-14">
+      <ol class="border-t border-neutral-3">
+        {
+          history.map((item) => (
+            <li class="grid gap-x-6 gap-y-1 border-b border-neutral-3 py-5 sm:grid-cols-[5.5rem_1fr]">
+              <span class="font-display text-2xl leading-tight text-brand-red">{item.when}</span>
+              <div>
+                <h3 class="text-base font-bold text-brand-black">{item.title}</h3>
+                <p class="mt-1.5 text-sm leading-relaxed text-neutral-8">{item.description}</p>
+                {item.link && (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="focus-ring mt-2 inline-flex items-center gap-1 text-sm font-semibold text-brand-black hover:text-brand-red transition-colors"
+                  >
+                    {item.link.replace(/^https?:\/\/(www\.)?/, '')}
+                    <Icon name="lucide:arrow-up-right" class="h-3.5 w-3.5" />
+                  </a>
+                )}
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+
+      <figure class="self-start border-l-2 border-brand-red pl-6">
+        <blockquote class="text-lg font-semibold leading-relaxed text-brand-black">
+          {person.quote}
+        </blockquote>
+        <figcaption class="mt-5 text-sm leading-relaxed">
+          <span class="block font-bold text-brand-black">{person.name}</span>
+          <span class="block text-neutral-7">{person.role}</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>

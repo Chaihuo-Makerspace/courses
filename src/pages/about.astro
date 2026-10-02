@@ -1,44 +1,30 @@
 ---
 import HeroBanner from '../components/HeroBanner.astro';
 import Layout from '../layouts/Layout.astro';
-import AboutEcosystemSection from '../components/sections/about/AboutEcosystemSection.astro';
-import AboutStatsSection from '../components/sections/about/AboutStatsSection.astro';
-import AboutValuesSection from '../components/sections/about/AboutValuesSection.astro';
+import AboutStory from '../components/sections/about/AboutStory.astro';
 import FinalCtaSection from '../components/sections/FinalCtaSection.astro';
-import {
-  aboutEcosystem,
-  aboutFinalCta,
-  aboutStats,
-  aboutValues,
-} from '../data/site';
-import { t, defaultLocale, localizePath } from '../i18n';
+import { aboutFinalCta, aboutHistory } from '../data/site';
+import { t, defaultLocale } from '../i18n';
 import type { Locale } from '../i18n';
-import { translateEcosystems, translateValues, translateStats, translateCta } from '../i18n/helpers';
+import { ctaLink, translateCta, translateHistory, translatePerson } from '../i18n/helpers';
 
 const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
-const translatedEcosystem = translateEcosystems(aboutEcosystem, locale);
-const translatedValues = translateValues(aboutValues, locale);
-const translatedStats = translateStats(aboutStats, locale);
-const translatedCta = translateCta(aboutFinalCta, locale);
 ---
 
 <Layout title={t(locale, 'about.title')}>
   <HeroBanner
-    eyebrow={t(locale, 'about.hero.eyebrow')}
     title={t(locale, 'about.hero.title')}
     description={t(locale, 'about.hero.description')}
     ctas={[
-      { label: t(locale, 'about.cta.primary'), href: localizePath(locale, '/courses'), variant: 'primary' },
-      { label: t(locale, 'about.cta.secondary'), href: localizePath(locale, '/paths'), variant: 'secondary' },
+      { ...ctaLink('courses', locale), variant: 'primary' },
+      { ...ctaLink('contact', locale), variant: 'secondary' },
     ]}
-  >
-    <Fragment slot="title">
-      {t(locale, 'about.hero.title')}<span class="highlight">{t(locale, 'about.hero.titleHighlight')}</span>
-    </Fragment>
-  </HeroBanner>
+  />
 
-  <AboutEcosystemSection ecosystem={translatedEcosystem} locale={locale} />
-  <AboutValuesSection values={translatedValues} locale={locale} />
-  <AboutStatsSection stats={translatedStats} locale={locale} />
-  <FinalCtaSection cta={translatedCta} bordered />
+  <AboutStory
+    history={translateHistory(aboutHistory, locale)}
+    person={translatePerson(locale)}
+    locale={locale}
+  />
+  <FinalCtaSection cta={translateCta(aboutFinalCta, locale)} />
 </Layout>

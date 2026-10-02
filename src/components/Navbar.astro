@@ -12,7 +12,6 @@ const { currentPath = "/", locale } = Astro.props as Props;
 
 const navItems = [
   { label: t(locale, 'nav.courses'), href: "/courses" },
-  { label: t(locale, 'nav.paths'), href: "/paths" },
   { label: t(locale, 'nav.pioneerBase'), href: "/pioneer" },
   { label: t(locale, 'nav.contact'), href: "/contact" },
   { label: t(locale, 'nav.about'), href: "/about" },
@@ -39,7 +38,7 @@ function localizeHref(href: string): string {
 <header
   class="sticky top-0 z-50 w-full bg-background border-b border-neutral-3"
 >
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <nav class="container-page">
     <div class="flex items-center justify-between h-16">
       <div class="flex-shrink-0">
         <a
@@ -189,7 +188,7 @@ function localizeHref(href: string): string {
           ))
         }
         <div class="border-t border-neutral-3 my-1"></div>
-        <p class="px-4 pt-2 pb-1 text-xs font-mono font-semibold uppercase tracking-widest text-neutral-6">
+        <p class="label px-4 pt-2 pb-1">
           {t(locale, 'nav.ecosystem')}
         </p>
         {

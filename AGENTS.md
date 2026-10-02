@@ -19,10 +19,16 @@ work demands.
   (`src/data/*.ts`) and the page layer (`src/pages/`).
 - Edit marketing copy by changing `src/data/*.ts` only — `/llms.txt` and
   Course JSON-LD auto-sync on next `pnpm build`. See
-  `.claude/rules/llm-surfaces.md`.
-- Follow `docs/DESIGN.md` (authoritative design system, v4.0 "Warm Maker
-  Signal") for the design dial (VARIANCE/MOTION/DENSITY), the flame-gradient
-  color system, the panel system, and button/card usage.
+  `.claude/rules/llm-surfaces.md`. zh-CN is read from the data files; never
+  re-enter zh copy in an i18n dictionary.
+- Add or change interface strings in all five locales in the same commit.
+- Look at the rendered pages in a browser, in zh and en, before calling a
+  visual or copy change done. Escaped-quote leaks, a heading borrowed from
+  another module and characters missing from the display-font subset all
+  pass check, lint and build.
+- Follow `docs/DESIGN.md` (authoritative design system, v5.0) for the page
+  contracts, the per-page dial, where the flame gradient may appear, the
+  two-tier section rhythm, typography and button usage.
   `.claude/rules/styling.md` only points to it.
 - Register new lucide icons in `src/data/icons.ts` before referencing them.
   See `.claude/rules/astro.md`.
@@ -44,8 +50,13 @@ work demands.
 - Do not commit AI process artifacts (`docs/` except `docs/DESIGN.md`,
   `.claude/` except `.claude/rules/`, `.superpowers/`). They are gitignored
   intentionally. `docs/DESIGN.md` is the one committed design-system doc.
-- Do not put inline web forms anywhere — partnership intake is QR → external
-  page, per project convention.
+- Do not put inline web forms anywhere — partnership intake is a `mailto:`
+  link to business@chaihuo.org on `/contact`.
+- Do not publish prices, unsourced numbers or placeholder trust signals.
+- Do not branch on display copy (`label.includes('…')`). Give the data item
+  a stable `id` and branch on that.
+- Do not render the same information twice. The matrix, the three
+  directions, the closing CTA and the FAQ each have exactly one component.
 
 ## Commands
 
@@ -58,8 +69,15 @@ pnpm format    # biome format --write src
 pnpm build     # server output + prerendered /llms.txt (course pages are SSR)
 ```
 
-Design system: `docs/DESIGN.md` is authoritative; `/styleguide` renders all
-tokens + components (run `pnpm dev`, open `/styleguide`).
+```bash
+pnpm deslop    # report-only scan for zh clichés, bg-white, naked hex
+python3 scripts/subset-display-font.py <SmileySans-Oblique.ttf>
+               # regenerate the display-font subset after heading copy changes
+```
+
+Design system: `docs/DESIGN.md` is authoritative; `/styleguide` shows the
+tokens and component classes live pages actually use (run `pnpm dev`, open
+`/styleguide`).
 
 ## Tests
 
@@ -80,8 +98,7 @@ tokens + components (run `pnpm dev`, open `/styleguide`).
 - `.claude/rules/data-layer.md` — editing `src/data/*.ts`
 - `.claude/rules/llm-surfaces.md` — `/llms.txt` + Course JSON-LD operational
   rules
-- `docs/DESIGN.md` — **authoritative design system**: color tokens, ratio,
-  panel/card/button usage, composition patterns, component shelf, motion,
-  banned patterns
+- `docs/DESIGN.md` — **authoritative design system**: page contracts, color
+  tokens, layout rhythm, typography, components, copy voice, banned patterns
 - `.claude/rules/styling.md` — thin pointer to `docs/DESIGN.md`
 - `.claude/rules/i18n-text.md` — Chinese quote handling and punctuation

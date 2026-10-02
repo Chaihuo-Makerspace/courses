@@ -1,0 +1,48 @@
+---
+import { Icon } from 'astro-icon/components';
+import SectionHeader from '../SectionHeader.astro';
+
+// 全站唯一的 FAQ 区块（原 ContactFaqSection 与 ChipFaqSection 合并）。
+interface Props {
+  title: string;
+  faqs: { question: string; answer: string }[];
+}
+
+const { title, faqs } = Astro.props as Props;
+---
+
+<section class="section bg-background border-t border-neutral-3">
+  <div class="container-page" data-reveal>
+    <SectionHeader title={title} />
+    <div class="max-w-3xl border-t border-neutral-3">
+      {
+        faqs.map((faq, index) => (
+          <div class="hs-accordion border-b border-neutral-3" id={`faq-${index}`}>
+            <button
+              id={`faq-trigger-${index}`}
+              class="hs-accordion-toggle hs-accordion-active:text-brand-red focus-ring py-4 inline-flex items-center justify-between gap-x-3 w-full font-semibold text-left text-brand-black transition-colors hover:text-brand-red cursor-pointer"
+              aria-expanded="false"
+              aria-controls={`faq-content-${index}`}
+            >
+              {faq.question}
+              <Icon
+                name="lucide:chevron-down"
+                class="hs-accordion-active:rotate-180 w-4 h-4 text-neutral-6 shrink-0 transition-transform"
+              />
+            </button>
+            <div
+              id={`faq-content-${index}`}
+              class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+              role="region"
+              aria-labelledby={`faq-trigger-${index}`}
+            >
+              <p class="pb-5 text-sm leading-relaxed text-neutral-8 whitespace-pre-line">
+                {faq.answer}
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,7 +1,3 @@
-import type { IconName } from './icons';
-
-export type { IconName } from './icons';
-
 /**
  * 先锋官 / 基地 / 创客生态 —— 数据层单一事实源。
  *
@@ -24,13 +20,11 @@ export interface ChipLink {
 }
 
 export interface IconBullet {
-  icon: IconName;
   title: string;
   description: string;
 }
 
 export interface RevenueLine {
-  icon: IconName;
   number: string;
   title: string;
   description: string;
@@ -65,10 +59,7 @@ export interface ChipCta {
 
 /** Hero 区块（先锋官 / 基地 通用）。 */
 export interface ChipHeroData {
-  eyebrow: string;
   title: string;
-  titleHighlight: string;
-  subtitle: string;
   description: string;
   ctas: ChipLink[];
 }
@@ -86,19 +77,16 @@ export interface ChipWhatData {
 
 export interface ChipBenefitsData {
   title: string;
-  subtitle: string;
   items: IconBullet[];
 }
 
 export interface ChipRevenueData {
   title: string;
-  subtitle: string;
   lines: RevenueLine[];
 }
 
 export interface ChipStepsData {
   title: string;
-  subtitle?: string;
   steps: FlowStep[];
 }
 
@@ -110,13 +98,11 @@ export interface ChipCertificationData {
 
 export interface ChipComparisonData {
   title: string;
-  subtitle: string;
   header: { first: string; pioneer: string; base: string };
   rows: ComparisonRow[];
 }
 
 export interface ChipRelationCard {
-  icon: IconName;
   label: string;
   tag: string;
   description: string;
@@ -125,8 +111,6 @@ export interface ChipRelationCard {
 export interface ChipRelationData {
   title: string;
   intro: string;
-  arrowLabel: string;
-  mutual: string;
   cards: { pioneer: ChipRelationCard; base: ChipRelationCard };
   bullets: string[];
 }
@@ -135,13 +119,6 @@ export interface ChipUpgradeData {
   title: string;
   chain: string[];
   description: string;
-}
-
-export interface HomeEcosystemMapData {
-  eyebrow: string;
-  title: string;
-  description: string[];
-  ctas: ChipLink[];
 }
 
 export interface PioneerProgram {
@@ -167,58 +144,26 @@ export interface BaseProgram {
 }
 
 /* ------------------------------------------------------------------ */
-/* 首页模块 A —— 创客生态分布图卡片                                     */
+/* 首页 —— 渠道伙伴入口（先锋官 / 基地 / 生态分布图）                   */
 /* ------------------------------------------------------------------ */
 
-export const homeEcosystemMap: HomeEcosystemMapData = {
-  eyebrow: '柴火生态',
-  title: '柴火全球创客生态分布图',
-  description: [
-    '先锋官与基地正在全国及全球铺开。',
-    '在地图上找到你身边的柴火节点，',
-    '或者——成为下一个。',
-  ],
-  ctas: [
-    { label: '查看分布图', href: ecosystemMapUrl, variant: 'primary' },
-    { label: '我要加入', href: '/pioneer', variant: 'secondary' },
-  ],
-};
-
-/* ------------------------------------------------------------------ */
-/* 首页模块 B —— 先锋官 · 基地 双栏卡片                                */
-/* ------------------------------------------------------------------ */
-
-export interface PioneerBaseCard {
-  icon: IconName;
-  label: string;
-  headline: string;
-  points: string[];
-  cta: ChipLink;
-}
-
-export const homePioneerBase: {
-  pioneer: PioneerBaseCard;
-  base: PioneerBaseCard;
-  section: { title: string; subtitle: string };
+/**
+ * owner 2026-10-02：站点第一受众是机构；先锋官是我们招募的渠道伙伴
+ * （先学会课程，再去本地开课、推广），不是终端客户。首页只留一条入口带。
+ */
+export const homeChannel: {
+  title: string;
+  description: string;
+  links: (ChipLink & { note: string })[];
 } = {
-  section: {
-    title: '先锋官与基地计划',
-    subtitle: '把 AI 创客教育带到你的城市——柴火给你课程、教具和认证，你做本地的那根火柴。',
-  },
-  pioneer: {
-    icon: 'lucide:zap',
-    label: '先锋官',
-    headline: '在你的城市，做 AI 时代的点火人。',
-    points: ['5 套 M0 教具赠送', '学费 100% 归你', '官方认证登上地图'],
-    cta: { label: '了解先锋官', href: '/pioneer' },
-  },
-  base: {
-    icon: 'lucide:home',
-    label: '基地',
-    headline: '城市里看得见的柴火。',
-    points: ['10 套教具共用', '承接总部派单', '区域优先权'],
-    cta: { label: '了解基地', href: '/base' },
-  },
+  title: '招募渠道伙伴',
+  description:
+    '先锋官是我们招募的渠道伙伴：先学会柴火的课，再在自己的城市开课、推广。有固定场地的，可以申请挂牌基地。',
+  links: [
+    { label: '先锋官计划', note: '个人申请', href: '/pioneer' },
+    { label: '基地计划', note: '有固定场地的机构申请', href: '/base' },
+    { label: '查看分布图', note: 'map.seeed.cc', href: ecosystemMapUrl },
+  ],
 };
 
 /* ------------------------------------------------------------------ */
@@ -227,29 +172,24 @@ export const homePioneerBase: {
 
 export const pioneer: PioneerProgram = {
   hero: {
-    eyebrow: '先锋官计划',
-    title: '先锋官',
-    titleHighlight: '点火人',
-    subtitle: '在你的城市，做 AI 时代的点火人',
+    title: '先锋官：柴火招募的渠道伙伴',
     description:
-      '懂技术、能教技术，或者不懂技术但能链接本地网络——柴火给你课程、教具和认证，你把 AI 创客教育带到你的城市。',
+      '先学会柴火的课，再在自己的城市开课、推广。柴火提供课程包、教具和认证；你负责招生、授课和本地推广。',
     ctas: [
       { label: '立即申请', href: ecosystemApplyUrl, variant: 'primary' },
       { label: '先了解基地', href: '/base', variant: 'secondary' },
     ],
   },
   what: {
-    title: '什么是先锋官',
-    intro: '先锋官是柴火认证的在地的技术传播者 + 技术服务商。',
-    coreTitle: '两类人都可以',
+    title: '条件与条款',
+    intro: '先锋官是柴火认证的本地渠道伙伴：学会课程，在当地开课，并向学校和机构推广。',
+    coreTitle: '谁可以申请',
     core: [
       {
-        icon: 'lucide:cpu',
         title: '技术型',
         description: '有技术背景，想用创客技能开展教育 / 服务',
       },
       {
-        icon: 'lucide:network',
         title: '链接型',
         description: '有教育 / 社区资源，想引入创客课程但不一定亲自教',
       },
@@ -257,48 +197,40 @@ export const pioneer: PioneerProgram = {
     note: '每个基地必须先有先锋官；先锋官也可独立运营，不挂靠基地。',
   },
   benefits: {
-    title: '你能得到什么',
-    subtitle: '从教具、账号到课程包与认证，起步所需全都配齐',
+    title: '柴火提供什么',
     items: [
-      { icon: 'lucide:package', title: 'M0 教具 5 套', description: '赠送，不回收' },
-      { icon: 'lucide:layers', title: 'Codecraft 账号 5 个', description: '365 天 / 5 席位' },
+      { title: 'M0 教具 5 套', description: '赠送，不回收' },
+      { title: 'Codecraft 账号 5 个', description: '365 天 / 5 席位' },
       {
-        icon: 'lucide:book-open',
         title: '课程包',
-        description: 'PPT + md 格式，可魔改、可二次创作',
+        description: 'PPT + md 格式，可以自行修改和二次创作',
       },
       {
-        icon: 'lucide:badge-check',
         title: '官方认证',
         description: '通过认证后登上 map.seeed.cc 全球分布图',
       },
       {
-        icon: 'lucide:handshake',
         title: '总部支持',
         description: '社区经理对接、技术答疑、课程更新',
       },
-      { icon: 'lucide:route', title: 'M1–M6 升级路径', description: '保证金租赁制，退出全退' },
+      { title: 'M1–M6 升级路径', description: '保证金租赁制，退出全退' },
     ],
   },
   revenue: {
-    title: '怎么赚钱',
-    subtitle: '三条盈利线，对应三种身份',
+    title: '收益来自哪里',
     lines: [
       {
-        icon: 'lucide:graduation-cap',
         number: '01',
         title: '开课收费',
         description:
           '用 M0 课程在当地开班，学费 100% 归你。课程包现成、教具到位，你只需招生和上课。',
       },
       {
-        icon: 'lucide:send',
         number: '02',
         title: '总部派单',
         description: '柴火接到的培训 / 工作坊需求，派给当地先锋官执行。你出人出力，直接收服务费。',
       },
       {
-        icon: 'lucide:coins',
         number: '03',
         title: '教具销售佣金',
         description: '向当地学校 / 机构推荐柴火教具，成交后拿佣金。',
@@ -306,8 +238,7 @@ export const pioneer: PioneerProgram = {
     ],
   },
   steps: {
-    title: '四步走',
-    subtitle: '从一场体验活动，到一座城市的锚点',
+    title: '从申请到开课',
     steps: [
       { step: 'Step 1', title: '体验活动', description: '在你的城市 / 场地办一场 AI 编程体验' },
       { step: 'Step 2', title: '培训认证', description: '参加总部讲师培训与认证（线上即可开始）' },
@@ -354,12 +285,11 @@ export const pioneer: PioneerProgram = {
     },
   ],
   cta: {
-    title: '把这个计划，带回你的城市',
+    title: '申请成为先锋官',
     description:
       '第一阶段 10 基地 + 20 先锋官，先到先评估。填写申请表，社区经理将在 3 个工作日内联系你。',
     primary: { label: '立即申请', href: ecosystemApplyUrl },
     secondary: { label: '联系我们', href: '/contact' },
-    note: '或联系社区经理（会后分配专属对接人）',
   },
 };
 
@@ -369,35 +299,31 @@ export const pioneer: PioneerProgram = {
 
 export const base: BaseProgram = {
   hero: {
-    eyebrow: '基地计划',
-    title: '基地',
-    titleHighlight: '看得见的柴火',
-    subtitle: '城市里看得见的柴火',
+    title: '基地：有固定场地的渠道伙伴',
     description:
-      '有固定场地、有持续运营意愿——柴火给你教具、课程、品牌背书和派单流量，你做城市里 AI 创客教育的锚点。',
+      '有固定场地、有专人持续运营的机构可以申请挂牌基地。柴火提供教具、课程和总部派单；基地在本地开课，并为先锋官提供授课场地。',
     ctas: [
       { label: '立即申请', href: ecosystemApplyUrl, variant: 'primary' },
       { label: '先了解先锋官', href: '/pioneer', variant: 'secondary' },
     ],
   },
   what: {
-    title: '什么是基地',
-    intro: '基地是柴火认证的城市级实体空间节点。',
+    title: '条件与权益',
+    intro: '基地是柴火认证的、有固定场地的本地授课点。',
     coreTitle: '准入标准（2 项核心）',
     core: [
-      { icon: 'lucide:building-2', title: '固定场地', description: '可承接活动与课程' },
-      { icon: 'lucide:users', title: '持续运营', description: '有专人负责、有运营计划' },
+      { title: '固定场地', description: '可承接活动与课程' },
+      { title: '持续运营', description: '有专人负责、有运营计划' },
     ],
     plusTitle: '加分项',
     plus: [
       '科技馆 / 高校 Fab Lab 等公共教育空间',
       '已有创客 / STEAM 教育基础',
-      '柴火基地车巡游已触达、双方已建立信任',
+      '柴火基地车巡游到过、双方已有合作基础',
     ],
   },
   comparison: {
     title: '基地权益',
-    subtitle: '同一套支持体系，个人与空间各取所需',
     header: { first: '权益', pioneer: '先锋官（个人）', base: '基地（空间）' },
     rows: [
       { label: 'M0 教具', pioneer: '5 套（赠送不回收）', base: '10 套（基地内共用）' },
@@ -413,29 +339,24 @@ export const base: BaseProgram = {
     ],
   },
   revenue: {
-    title: '基地怎么赚钱',
-    subtitle: '四条盈利线，把场地变成营收来源',
+    title: '收益来自哪里',
     lines: [
       {
-        icon: 'lucide:graduation-cap',
         number: '01',
         title: '开课收费',
         description: '基地内开班，学费归基地运营方。',
       },
       {
-        icon: 'lucide:send',
         number: '02',
         title: '总部派单',
         description: '柴火接到的当地培训 / 工作坊需求，派给基地执行，直接收服务费。',
       },
       {
-        icon: 'lucide:coins',
         number: '03',
         title: '教具销售佣金',
         description: '向当地学校 / 机构推荐教具，成交后拿佣金。',
       },
       {
-        icon: 'lucide:network',
         number: '04',
         title: '跨基地分佣',
         description: '多基地协作项目，按贡献分佣。',
@@ -446,17 +367,13 @@ export const base: BaseProgram = {
   relation: {
     title: '基地与先锋官关系',
     intro: '没有先锋官，就没有基地；有了基地，先锋官才有自己的主场。',
-    arrowLabel: '必须先有',
-    mutual: '互为支撑',
     cards: {
       pioneer: {
-        icon: 'lucide:zap',
         label: '先锋官',
         tag: '个人',
         description: '可挂靠多个基地，也可独立运营',
       },
       base: {
-        icon: 'lucide:home',
         label: '基地',
         tag: '空间',
         description: '权益基地内共用，可有多个先锋官',
@@ -490,7 +407,7 @@ export const base: BaseProgram = {
     },
   ],
   cta: {
-    title: '把城市的锚点，和柴火一起建',
+    title: '申请挂牌基地',
     description:
       '核心标准只有两条：固定场地 + 持续运营意愿。填写申请表，社区经理将在 3 个工作日内联系你。',
     primary: { label: '立即申请', href: ecosystemApplyUrl },

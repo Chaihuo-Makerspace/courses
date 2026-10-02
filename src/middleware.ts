@@ -3,6 +3,9 @@ import { defaultLocale, type Locale, localePathMap, locales } from './i18n/types
 
 const LANG_COOKIE = 'chaihuo-lang';
 
+// 已退休的页面 → 永久跳转（owner 2026-10-02：/paths 并入 /courses）。带语种前缀的地址同样跳转。
+const RETIRED: Record<string, string> = { '/paths': '/courses' };
+
 function parseAcceptLanguage(header: string | null): string | null {
   if (!header) return null;
   try {
@@ -51,9 +54,14 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
   const localeInfo = getLocaleFromPath(pathname);
 
+  const prefix = localeInfo ? `/${localeInfo.pathKey}` : '';
+  const bare = (pathname.slice(prefix.length) || '/').replace(/(.)\/$/, '$1');
+  if (RETIRED[bare]) {
+    return new Response(null, { status: 301, headers: { Location: `${prefix}${RETIRED[bare]}` } });
+  }
+
   if (localeInfo) {
     // Strip locale prefix and rewrite
-    const prefix = `/${localeInfo.pathKey}`;
     let newPath = pathname.slice(prefix.length) || '/';
     if (newPath !== '/' && !newPath.startsWith('/')) {
       newPath = `/${newPath}`;

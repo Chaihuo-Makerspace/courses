@@ -40,6 +40,22 @@ The brand word is **学院**, not 学园. 学园 is the Japanese word 学園
 proper noun in its original form (柴火創客学院) instead of localising it to
 学園.
 
+## Borrowed-register words (日语腔 / 翻译腔 / 黑话)
+
+Treat these as copy defects in zh text, the same way the brand name was:
+
+- Japanese-flavoured: 学园、物语、匠心、匠人、职人、臻选、严选、极致
+- English calques: 魔法时刻 (magic moment)、之旅 (journey)、解锁 (unlock)、
+  拥抱 (embrace)、无缝 (seamless)、旗舰入口 (flagship)
+- Consulting jargon: 赋能、打造、一站式、助力、抓手、轻松实现；闭环 in a
+  marketing sense (control loops and grasp loops are fine)
+- Template devices: 「零…门槛」 used as a refrain, one quote or footnote
+  reused across modules
+
+Say the plain thing instead: what the learner does, on which hardware, in
+how long. The full voice spec is in `docs/DESIGN.md` §5; `pnpm deslop`
+reports the mechanical subset.
+
 ## Core narrative
 
 > 我们培养人掌握新技术整合能力，不是提供解决方案。

@@ -4,9 +4,11 @@ A small Chinese-language marketing site for 柴火创客学院 (Chaihuo Maker
 Academy). Built on Astro 6 with a strict TypeScript data layer
 driving every page.
 
-**Ecosystem context** — Chaihuo Maker Academy is the technical-enablement arm of the
-柴火创客 ecosystem (Seeed Studio + 柴火创客空间, founded 2011). Core
-positioning: **培养人掌握新技术整合能力**, not "提供解决方案".
+**Context** — the Academy belongs to 柴火创客空间 (founded in Shenzhen in
+2011) and teaches on Seeed Studio hardware. Core positioning: **培养人掌握
+新技术整合能力**, not "提供解决方案". The audience is institutions (schools,
+integrators, enterprises); Pioneers and Bases are channel partners we
+recruit, not consumers.
 
 ## System Surfaces
 
@@ -14,38 +16,43 @@ positioning: **培养人掌握新技术整合能力**, not "提供解决方案".
   with `/llms.txt` prerendered and everything else rendered per request
   (`/courses/[slug]` is SSR so it can respect the request locale).
 - `src/components/` — reusable Astro components (chrome + composite cards).
-- `src/components/sections/` — page-level sections introduced in the 2026
-  redesign (home, paths, courses, courses/[slug], contact, about).
+- `src/components/sections/` — page-level sections (home, courses,
+  courses/[slug], about, contact, pioneer/base). Shared pieces live one level
+  up: `CourseMatrix` (the only matrix and the only L1–L3 legend),
+  `SectionHeader`, `HeroBanner`, `sections/FinalCtaSection`,
+  `sections/FaqSection`.
 - `src/layouts/Layout.astro` — HTML shell + Preline init + Google Fonts +
   `<slot name="head" />` for per-page extras (JSON-LD, extra meta).
 - `src/data/*.ts` — typed data layer; **single source of truth for all
   marketing content**.
-- `src/content/partners/` — only remaining Astro content collection
-  (homepage logo grid). `src/content.config.ts` declares its schema via the
-  `glob` loader per Astro 6.
 - `src/styles/` — Tailwind v4 + brand tokens (`themes/theme.css`).
 
 ## Course Matrix (Two-Dimensional)
 
 The product is an **M0–M6 × L1/L2/L3** matrix:
 
-- **Horizontal**: 7 modules — M0 zero-base flagship entry, M1–M6 six
-  industry directions
+- **Rows**: 7 modules — M0 is the entry course for beginners, M1–M6 each
+  address one kind of on-site problem
   - M0 零基础智能硬件入门 — Smart Hardware Fundamentals (AI-assisted coding;
     layered A/B/C by hardware platform, mapped onto the L1/L2/L3 rows)
   - M1 设备互联与智能管控 — Device Interconnection and Intelligent Management
   - M2 多模态 AI 交互 — Multimodal AI Interaction
-  - M3 自组网与韧性通信 — Self-organizing Mesh & Resilient Communication (Overseas Only)
+  - M3 自组网与韧性通信 — Self-organizing Mesh & Resilient Communication
+    (`overseasOnly: true` — marked on the matrix, the module list, the detail
+    hero and in `llms.txt`)
   - M4 边缘视觉 AI — Edge Vision AI
   - M5 环境感知与数据采集 — Environmental Sensing & Data Acquisition
   - M6 机器人控制与具身智能 — Robotic Control & Embodied Intelligence
-- **Vertical**: 3 learning depths — L1 展示层 / L2 顾问层 / L3 设计层
+- **Columns**: 3 learning depths — L1 展示层 / L2 顾问层 / L3 设计层
 - **3 goal-oriented directions** (`src/data/tracks.ts`):
   `make-with-ai` 用 AI 造物 (M0), `build-ai-products` 造 AI 的物 (M2 · M4 · M6),
   `solutions` 解决方案 (M1 · M3 · M5).
 
-M0 is the recommended zero-base entry; M1–M6 are independently readable.
-Tracks group modules by goal, not by a fixed `M0 → … → M6` sequence.
+M0 is the recommended entry; M1–M6 can each be run on their own. Tracks
+group modules by goal, not by a fixed `M0 → … → M6` sequence. They are
+rendered once, on `/courses` (`CourseDirections`, anchors `#track-<id>`).
+`/paths` was retired; the middleware answers `/paths` and `/<locale>/paths`
+with a 301 to the matching `/courses`.
 
 ## Partnership IA (3 × 4)
 
@@ -57,8 +64,8 @@ Tracks group modules by goal, not by a fixed `M0 → … → M6` sequence.
 - Each scenario cross-links to applicable forms via `applicableForms`
   (anchor `#form-{code}` on `/contact`); forms cross-link back via
   `suitableScenarios` (anchor `#scenario-{id}`).
-- Intake is **QR code → external page** per project convention. No inline
-  web forms anywhere.
+- Intake is a **`mailto:` link** to business@chaihuo.org on `/contact`. No
+  inline web forms anywhere.
 
 ## Data Flow
 
@@ -69,8 +76,7 @@ src/data/{modules,tracks,partnerships,site,icons}.ts   (source of truth)
         │
         ├──► src/pages/courses/[slug].astro      (SSR HTML + Course JSON-LD)
         ├──► src/pages/courses/index.astro       (SSR overview)
-        ├──► src/pages/paths.astro               (SSR — track flow)
-        ├──► src/pages/contact.astro             (SSR — 3 × 4 partnership grid)
+        ├──► src/pages/contact.astro             (SSR — scenarios × formats ledger)
         ├──► src/pages/index.astro               (SSR homepage)
         ├──► src/pages/about.astro               (SSR)
         └──► src/pages/llms.txt.ts               (prerendered AI surface)
@@ -78,6 +84,13 @@ src/data/{modules,tracks,partnerships,site,icons}.ts   (source of truth)
 
 `/llms.txt` and per-module Course JSON-LD auto-sync from this data layer.
 Operational rules live in `.claude/rules/llm-surfaces.md`.
+
+**zh-CN is read straight from `src/data/*.ts`.** The i18n dictionaries hold
+the other four locales, keyed by each data item's stable `id` (site, tracks,
+partnerships) or by the Chinese source string (modules, pioneer/base). The
+zh block of `data-translations.ts` only carries interface strings that have
+no data file behind them. Never re-enter zh copy in a dictionary — that fork
+has lost content before.
 
 ## Prerender Boundary
 
@@ -88,7 +101,8 @@ is opt-in per page (`export const prerender = true`):
 |---|---|---|
 | `/courses/m0..m6` | SSR (per request, locale-aware) | server entrypoint (no `dist/client/courses/*`) |
 | `/llms.txt` | Prerendered | `dist/client/llms.txt` |
-| `/` `/courses` `/paths` `/contact` `/about` `/404` | SSR | server entrypoint |
+| `/` `/courses` `/contact` `/about` `/pioneer` `/base` `/404` | SSR | server entrypoint |
+| `/paths` | 301 → `/courses` (middleware) | — |
 
 Course detail pages are **not** prerendered: they render on demand so the
 request locale is respected, and they still emit Course JSON-LD on every

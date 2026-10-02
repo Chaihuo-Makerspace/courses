@@ -1,0 +1,128 @@
+---
+import { Icon } from 'astro-icon/components';
+import SectionHeader from '../../SectionHeader.astro';
+import type { PartnershipForm, Scenario } from '../../../data/partnerships';
+import { contactEmail } from '../../../data/site';
+import { dt } from '../../../i18n/data-translations';
+import type { Locale } from '../../../i18n';
+
+// 合作对象 × 合作形态，一个区块讲完。锚点 #scenario-<id> 与 #form-<code> 保持不变。
+interface Props {
+  scenarios: Scenario[];
+  forms: PartnershipForm[];
+  locale: Locale;
+}
+
+const { scenarios, forms, locale } = Astro.props as Props;
+const scenarioTitle = (id: string) => scenarios.find((s) => s.id === id)?.title ?? id;
+const mailto = (f: PartnershipForm) =>
+  `mailto:${contactEmail}?subject=${encodeURIComponent(`${f.code} · ${f.title}`)}`;
+---
+
+<section class="section bg-background">
+  <div class="container-page" data-reveal>
+    <SectionHeader
+      title={dt(locale, 'section.scenariosTitle')}
+      subtitle={dt(locale, 'section.scenariosSubtitle')}
+    />
+
+    <ul class="grid gap-x-10 md:grid-cols-3">
+      {
+        scenarios.map((s) => (
+          <li id={`scenario-${s.id}`} class="scroll-mt-24 border-t border-neutral-3 py-5">
+            <h3 class="text-lg font-bold text-brand-black">{s.title}</h3>
+            <p class="mt-0.5 text-sm font-semibold text-brand-red">{s.subtitle}</p>
+
+            <p class="label mt-5">{dt(locale, 'scenario.features')}</p>
+            <ul class="mt-1.5 space-y-1 text-sm leading-relaxed text-neutral-8">
+              {s.features.map((f) => (
+                <li>{f}</li>
+              ))}
+            </ul>
+
+            <p class="label mt-4">{dt(locale, 'scenario.outcomes')}</p>
+            <ul class="mt-1.5 space-y-1 text-sm leading-relaxed text-neutral-8">
+              {s.outcomes.map((o) => (
+                <li>{o}</li>
+              ))}
+            </ul>
+
+            <p class="label mt-4">{dt(locale, 'scenario.applicable')}</p>
+            <p class="mt-1.5 flex flex-wrap gap-1.5">
+              {s.applicableForms.map((code) => (
+                <a
+                  href={`#form-${code}`}
+                  class="focus-ring inline-flex h-7 w-7 items-center justify-center rounded-sm border border-neutral-4 font-mono text-xs font-bold text-brand-black hover:border-brand-red hover:text-brand-red transition-colors"
+                >
+                  {code}
+                </a>
+              ))}
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="mt-12 md:mt-14">
+      <SectionHeader
+        title={dt(locale, 'section.formsTitle')}
+        subtitle={dt(locale, 'section.formsSubtitle')}
+      />
+
+      <ol class="border-t border-neutral-3">
+        {
+          forms.map((f) => (
+            <li
+              id={`form-${f.code}`}
+              class="scroll-mt-24 grid gap-x-8 gap-y-4 border-b border-neutral-3 py-6 lg:grid-cols-[13rem_1fr_1fr_11rem]"
+            >
+              <div class="flex items-start gap-3">
+                <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-brand-black font-mono text-sm font-bold text-brand-yellow">
+                  {f.code}
+                </span>
+                <div>
+                  <h3 class="text-base font-bold leading-tight text-brand-black">{f.title}</h3>
+                  {f.subtitle !== f.title && (
+                    <p class="mt-0.5 text-xs text-neutral-6">{f.subtitle}</p>
+                  )}
+                </div>
+              </div>
+
+              <div>
+                <p class="label">{dt(locale, 'partnership.features')}</p>
+                <ul class="mt-1.5 space-y-1 text-sm leading-relaxed text-neutral-8">
+                  {f.features.map((x) => (
+                    <li>{x}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <p class="label">{dt(locale, 'partnership.deliverables')}</p>
+                <ul class="mt-1.5 space-y-1 text-sm leading-relaxed text-neutral-8">
+                  {f.deliverables.map((x) => (
+                    <li>{x}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <p class="label">{dt(locale, 'partnership.suitable')}</p>
+                <p class="mt-1.5 text-sm leading-relaxed text-neutral-8">
+                  {f.suitableScenarios.map(scenarioTitle).join(' / ')}
+                </p>
+                <a
+                  href={mailto(f)}
+                  class="focus-ring mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-black hover:text-brand-red transition-colors"
+                >
+                  <Icon name="lucide:mail" class="h-4 w-4" />
+                  {dt(locale, 'partnership.scanForm')}
+                </a>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </div>
+</section>

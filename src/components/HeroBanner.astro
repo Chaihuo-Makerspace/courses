@@ -1,135 +1,69 @@
 ---
 import { Icon } from 'astro-icon/components';
+import type { IconName } from '../data/icons';
 
 interface CTA {
   label: string;
   href: string;
   variant?: 'primary' | 'secondary';
   external?: boolean;
+  icon?: IconName;
 }
 
-type Panel = 'white' | 'yellow-soft' | 'dark' | 'photo';
-
+// 内页 hero：文本元素 ≤3（标题、描述、CTA 组）。首页用 HomeHero。见 docs/DESIGN.md §4.3。
 interface Props {
-  eyebrow?: string;
+  id?: string;
   title: string;
-  subtitle?: string;
   description?: string;
   ctas?: CTA[];
-  panel?: Panel;
-  bgImage?: string;
 }
 
-const {
-  eyebrow,
-  title,
-  subtitle,
-  description,
-  ctas = [],
-  panel = 'white',
-  bgImage,
-} = Astro.props as Props;
+const { id, title, description, ctas = [] } = Astro.props as Props;
 
 const hasTitleSlot = Astro.slots.has('title');
-const hasAnchor = Astro.slots.has('anchor');
-
-const panelBgClass = {
-  white: 'bg-background border-b border-neutral-3',
-  'yellow-soft': 'bg-brand-yellow-light border-b border-neutral-3',
-  dark: 'bg-brand-graphite',
-  photo: 'bg-brand-graphite',
-}[panel];
-
-const isDark = panel === 'dark' || panel === 'photo';
-
-const eyebrowColor = isDark ? 'text-brand-yellow' : 'text-brand-red';
-const titleColor = isDark ? 'text-white' : 'text-brand-black';
-const subtitleColor = isDark ? 'text-white/80' : 'text-neutral-7';
-const descriptionColor = isDark ? 'text-white/70' : 'text-neutral-8';
-
-const ctaClass = (variant: CTA['variant']) => {
-  if (variant === 'secondary') {
-    return isDark
-      ? 'border border-white/30 text-white hover:bg-white/10'
-      : 'border border-neutral-3 text-brand-black hover:border-brand-black/30 bg-background';
-  }
-  return 'bg-brand-red text-white hover:bg-brand-red-hover';
-};
 ---
 
-<section
-  class:list={['relative overflow-hidden', panelBgClass]}
-  style={panel === 'photo' && bgImage
-    ? `background-image:url(${bgImage});background-size:cover;background-position:center;`
-    : undefined}
->
-  <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-24">
-    <div class:list={[hasAnchor && 'grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14']}>
-      <div class:list={[hasAnchor ? 'max-w-xl' : 'max-w-3xl']} data-reveal>
-      {
-        eyebrow && (
-          <p class:list={['text-xs md:text-sm font-mono font-semibold uppercase tracking-widest mb-4', eyebrowColor]}>
-            {eyebrow}
-          </p>
-        )
-      }
-
+<section id={id} class="scroll-mt-24 bg-background">
+  <div class="container-page pt-12 pb-10 md:pt-16 md:pb-12">
+    <div class="max-w-3xl" data-reveal>
       <h1
-        class:list={[
-          'font-display text-[clamp(2.25rem,4vw+1rem,3.75rem)] font-bold leading-[1.15] tracking-tight',
-          titleColor,
-        ]}
+        class="font-display text-[clamp(2.25rem,4vw+1rem,3.5rem)] leading-[1.15] tracking-tight text-brand-black"
       >
         {hasTitleSlot ? <slot name="title" /> : title}
       </h1>
 
       {
-        subtitle && (
-          <p class:list={['mt-5 text-base md:text-lg font-medium', subtitleColor]}>
-            {subtitle}
-          </p>
-        )
-      }
-
-      {
         description && (
-          <p
-            class:list={[
-              'mt-4 text-sm md:text-base leading-relaxed max-w-2xl',
-              descriptionColor,
-            ]}
-          >
-            {description}
-          </p>
+          <p class="mt-5 text-base md:text-lg leading-relaxed text-neutral-8">{description}</p>
         )
       }
 
       {
         ctas.length > 0 && (
-          <div class="mt-8 flex flex-wrap gap-3">
+          <div class="mt-7 flex flex-wrap gap-3">
             {ctas.map((cta) => (
               <a
                 href={cta.href}
                 target={cta.external ? '_blank' : undefined}
                 rel={cta.external ? 'noopener noreferrer' : undefined}
                 class:list={[
-                  'focus-ring inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md text-sm font-semibold transition-colors duration-150',
-                  ctaClass(cta.variant),
+                  'btn focus-ring',
+                  cta.variant === 'secondary' ? 'btn-secondary' : 'btn-primary',
                 ]}
               >
                 {cta.label}
-                <Icon name="lucide:arrow-right" class="w-4 h-4" />
+                <Icon
+                  name={
+                    cta.icon ?? (cta.external ? 'lucide:arrow-up-right' : 'lucide:arrow-right')
+                  }
+                  class="w-4 h-4"
+                />
               </a>
             ))}
           </div>
         )
       }
-      </div>
-      {hasAnchor && (
-        <div data-reveal style="--reveal-delay: 120ms">
-          <slot name="anchor" />
-        </div>
-      )}
     </div>
   </div>
+  <div class="flame-rule" aria-hidden="true"></div>
 </section>

@@ -1,288 +1,205 @@
-import type { IconName } from './icons';
-
 export interface LinkItem {
   label: string;
   href: string;
 }
 
-export interface FinalCta {
-  eyebrow?: string;
-  title: string;
-  description: string;
-  primary: LinkItem;
-  secondary?: LinkItem;
-}
+/**
+ * 站内三个常用去向。同一去向全站只有一种按钮措辞：
+ * 文案在 `src/i18n/translations.ts` 的 `cta.<intent>`，这里只定义去向。
+ */
+export const ctaTargets = {
+  contact: '/contact',
+  courses: '/courses',
+  about: '/about',
+} as const;
 
-/** CTA 按钮的意图，对应翻译 key `cta.<intent>`。翻译按它取词，不按 label 文本匹配。 */
-export type CtaIntent = 'apply' | 'viewCourses' | 'viewPaths' | 'aboutOrg';
-
-export interface CtaLink extends LinkItem {
-  intent: CtaIntent;
-}
+export type CtaIntent = keyof typeof ctaTargets;
 
 /** 页尾 CTA 的数据形态：`id` 对应翻译 key `cta.<id>.title` / `cta.<id>.desc`。 */
-export interface SiteCta extends FinalCta {
-  id: 'home' | 'paths' | 'courses' | 'about';
-  primary: CtaLink;
-  secondary?: CtaLink;
-}
-
-export interface AboutEcosystemItem {
-  /** 稳定 id，对应翻译 key `eco.<id>.*`。翻译按 id 取词，不按展示名匹配。 */
-  id: 'seeed' | 'chaihuo' | 'opc';
-  name: string;
-  role: string;
-  description: string;
-  link: string | null;
-  tag: string;
-}
-
-export interface AboutValueItem {
-  /** 稳定 id，对应翻译 key `value.<id>.*`。 */
-  id: 'realHardware' | 'realScenario' | 'realConnection';
+export interface SiteCta {
+  id: 'home' | 'courses' | 'about' | 'module';
   title: string;
   description: string;
-  icon: IconName;
+  primary: CtaIntent;
+  secondary?: CtaIntent;
 }
 
-export interface StatItem {
-  number: string;
+export interface OutcomeItem {
+  /** 翻译 key 前缀 `outcome.<id>.*`。 */
+  id: 'lab' | 'kit' | 'docs' | 'forms';
   label: string;
+  description: string;
+}
+
+export interface HistoryItem {
+  /** 翻译 key 前缀 `history.<id>.*`。 */
+  id: 'founded' | 'seeed' | 'academy' | 'sites';
+  when: string;
+  title: string;
+  description: string;
+  link?: string;
 }
 
 export interface FaqItem {
+  /** 翻译 key `faq.<key>.q` / `faq.<key>.a`。 */
+  key: 'q1' | 'q2' | 'q3' | 'q4' | 'q5' | 'q6';
   question: string;
   answer: string;
 }
 
-export interface FamiliarObject {
-  /** 稳定 id，对应翻译 key `object.<id>.*`。翻译按 id 取词，不按 href 推断。 */
-  id: 'led' | 'gateway' | 'sensor' | 'camera' | 'speaker' | 'docs';
-  icon: IconName;
-  label: string;
-  hint: string;
-  moduleHint: string;
-  href: string;
-}
+// ── 首页 ────────────────────────────────────────────────────────────
 
-export interface AxisDef {
-  label: string;
-  description: string;
-}
-
-export interface MapLegend {
-  axisX: AxisDef;
-  axisY: AxisDef;
-  anchors: { code: string; role: string }[];
-  note: string;
-}
-
-export interface OutcomeItem {
-  icon: IconName;
-  label: string;
-  description: string;
-}
-
-export const homeFinalCta: SiteCta = {
-  id: 'home',
-  title: '把学习体系引入你的教学、培训或项目现场',
-  description:
-    '可以先引入单个模块，也可以按目标组合方案包；销售形态包括裸硬件套件、标准实训套件、全托交付与师资培训。',
-
-  primary: { label: '申请合作咨询', href: '/contact', intent: 'apply' },
-  secondary: { label: '查看学习体系', href: '/courses', intent: 'viewCourses' },
-};
-
-export const pathsFinalCta: SiteCta = {
-  id: 'paths',
-  title: '选好组合后，回到学习体系确认模块与级别',
-  description:
-    '路径指南只帮助你缩小范围。真正落地时，还要看模块内容、课堂实验、硬件清单、交付材料和销售形态。',
-  primary: { label: '查看学习体系', href: '/courses', intent: 'viewCourses' },
-  secondary: { label: '申请合作咨询', href: '/contact', intent: 'apply' },
-};
-
-export const coursesFinalCta: SiteCta = {
-  id: 'courses',
-  title: '把学习模块引入你的团队或项目现场',
-
-  description:
-    '如果你已经有明确方向，可以继续讨论裸硬件套件、标准教学套件、全托交付或师资培训。我们会根据目标推荐模块组合与实践深度。',
-  primary: { label: '申请合作咨询', href: '/contact', intent: 'apply' },
-  secondary: { label: '关于学院', href: '/about', intent: 'aboutOrg' },
-};
-
-export const aboutEcosystem: AboutEcosystemItem[] = [
+/** 引入一门课时机构实际拿到的四样东西；每条都能在模块页或 /contact 找到明细。 */
+export const homeOutcomes: OutcomeItem[] = [
   {
-    id: 'seeed',
-    name: 'Seeed Studio',
-    role: '全球硬件产品与供应链平台',
-    description: '为全球创客和企业提供硬件产品与解决方案，产品覆盖物联网、边缘计算、AI 等领域。',
-    link: 'https://www.seeedstudio.com',
-    tag: '硬件产品',
+    id: 'lab',
+    label: '能当场跑起来的实验',
+    description: '每个模块都围绕真实硬件，课堂上搭建、联调、演示。',
   },
   {
-    id: 'chaihuo',
-    name: '柴火创客空间',
-    role: '中国创客运动先驱',
-    description: '2011 年成立，中国最早的创客空间之一。提供物理空间、社区活动、项目孵化等服务。',
-    link: 'https://www.chaihuo.org',
-    tag: '创客空间',
-  },
-  {
-    id: 'opc',
-    name: '柴火创客学院',
-    role: '技术赋能平台',
-    description: '将生态中的技术能力转化为可学习的课程，帮助个人和企业掌握新技术整合能力。',
-    link: null,
-    tag: '技术学习',
-  },
-];
-
-export const aboutValues: AboutValueItem[] = [
-  {
-    id: 'realHardware',
-    title: '真硬件',
-    description: '课程使用的工具和设备，就是 Seeed Studio 的真实产品，不是教学道具。',
-    icon: 'lucide:cpu',
-  },
-  {
-    id: 'realScenario',
-    title: '真场景',
-    description: '案例来自柴火生态中的真实项目，学的是已经被验证过的解决方案。',
-    icon: 'lucide:map',
-  },
-  {
-    id: 'realConnection',
-    title: '真连接',
-    description: '学完不是结束，而是进入生态的开始——对接项目机会、加入人才库、持续成长。',
-    icon: 'lucide:network',
-  },
-];
-
-// 数据出处：柴火创客空间 2011 年成立于深圳（公开事实）。
-// Phase 0 已删除无出处的合作机构数与累计人次两项统计。
-export const aboutStats: StatItem[] = [{ number: '2011', label: '柴火创客空间成立' }];
-
-export const aboutFinalCta: SiteCta = {
-  id: 'about',
-  title: '想把这份生态能力带到你的组织？',
-  description:
-    '从裸硬件套件到全托交付，可以按你的目标选择销售形态。请留下意向信息，我们 3 个工作日内提供合作建议。',
-  primary: { label: '申请合作咨询', href: '/contact', intent: 'apply' },
-  secondary: { label: '查看路径指南', href: '/paths', intent: 'viewPaths' },
-};
-
-export const contactFaqs: FaqItem[] = [
-  {
-    question: '合作从提交表单到启动一般需要多久？',
-    answer:
-      '首次对齐通常 3 个工作日内安排会议；标准教学套件可快速发货开课；全托交付与师资培训从需求确认到开课一般 2–4 周。',
-  },
-  {
-    question: '课程是否可以只引入某个模块或层级？',
-    answer:
-      '可以。M0–M6 每个模块都是独立设计的，L1/L2/L3 也可以单独引入。我们会根据你的目标推荐最小有效组合。',
-  },
-  {
-    question: '四种销售形态有什么区别？',
-    answer:
-      'A 裸硬件套件仅含硬件，适合有自研课程能力的机构；B 标准教学套件含完整学习资源包，开箱即可开课；C 全托交付套件由柴火讲师到场授课，适合首次采购；D 师资培训套件帮你培养自有讲师，可持续自主开课。',
-  },
-  {
-    question: '是否接受海外合作？',
-    answer: '接受。柴火创客空间依托 Seeed 全球供应链，支持英文交付和海外师资外派。',
-  },
-];
-
-export const homeFamiliarObjects: FamiliarObject[] = [
-  {
-    id: 'led',
-    icon: 'lucide:sparkles',
-    label: 'AI 辅助编程',
-    hint: '用自然语言让 AI 写代码',
-    moduleHint: 'M0',
-    href: '/courses/m0',
-  },
-  {
-    id: 'gateway',
-    icon: 'lucide:network',
-    label: '设备互联中枢',
-    hint: '跨品牌设备统一管控',
-    moduleHint: 'M1',
-    href: '/courses/m1',
-  },
-  {
-    id: 'sensor',
-    icon: 'lucide:message-square',
-    label: '多模态 AI 交互',
-    hint: '能听懂、能看见的交互终端',
-    moduleHint: 'M0',
-    href: '/courses/m0',
-  },
-  {
-    id: 'camera',
-    icon: 'lucide:wifi',
-    label: '自组网通信',
-    hint: '无公网也能全连通',
-    moduleHint: 'M4',
-    href: '/courses/m4',
-  },
-  {
-    id: 'speaker',
-    icon: 'lucide:camera',
-    label: '边缘视觉 AI',
-    hint: '从事后追溯到事前阻断',
-    moduleHint: 'M2',
-    href: '/courses/m2',
+    id: 'kit',
+    label: '硬件套件与课程资源',
+    description: 'Seeed 硬件，加上教材、实验手册、教师材料和学员任务。',
   },
   {
     id: 'docs',
-    icon: 'lucide:thermometer',
-    label: '环境感知',
-    hint: '城市到野外的全域感知',
-    moduleHint: 'M5',
-    href: '/courses/m5',
+    label: '可归档的项目材料',
+    description: '部署拓扑、配置文件、运维与验收文档，各模块页逐项列出。',
+  },
+  {
+    id: 'forms',
+    label: '四种采购形态',
+    description: '只买硬件，买标准教学套件，请柴火讲师到场授课，或者先培训你的讲师。',
   },
 ];
 
-export const homeMapLegend: MapLegend = {
-  axisX: {
-    label: '横轴 · M0–M6',
-    description:
-      '学习方向。M0 是零基础旗舰入口（智能硬件入门），M1–M6 是六大行业方向，按目标可独立选学。',
-  },
-  axisY: {
-    label: '纵轴 · L1 / L2 / L3',
-    description:
-      '掌握深度。L1 展示层看得懂能演示，L2 顾问层独立配置可用系统，L3 设计层做到业务集成与深度定制。',
-  },
-  anchors: [
-    { code: 'M0', role: '零基础旗舰入口' },
-    { code: 'M1–M6', role: '六大行业方向' },
-  ],
-  note: '可以按方向、深度或目标组合课程——不必从头到尾线性学习。这是当前版本的学习体系，未来会随技术发展继续扩展。',
+export const homeFinalCta: SiteCta = {
+  id: 'home',
+  title: '先从一门课开始。',
+  description:
+    '选一个模块试排一期课：硬件套件、教案、学员任务配齐；用得顺，再谈整体系引入。发邮件联系，3 个工作日内给合作建议。',
+  primary: 'contact',
+  secondary: 'courses',
 };
 
-export const homeOutcomes: OutcomeItem[] = [
+// ── /courses ────────────────────────────────────────────────────────
+
+export const coursesFinalCta: SiteCta = {
+  id: 'courses',
+  title: '定了模块和深度，就可以谈怎么开课。',
+  description:
+    '告诉我们模块、深度（L1 / L2 / L3）和班级规模。按班型与规模报价，邮件后 3 个工作日内给方案。',
+  primary: 'contact',
+  secondary: 'about',
+};
+
+/** 课程详情页页尾。标题里的 {code} 由页面替换为模块代号。 */
+export const moduleFinalCta: SiteCta = {
+  id: 'module',
+  title: '把 {code} 排进你的课表',
+  description: '按班型与规模报价。发邮件说明人数和想上的深度，3 个工作日内给方案。',
+  primary: 'contact',
+  secondary: 'courses',
+};
+
+// ── /about ──────────────────────────────────────────────────────────
+
+/**
+ * 学院的来历。出处：
+ * - 2011 年深圳成立、中国最早的创客空间之一：公开事实，owner 2026-10-02 确认
+ *   「创客空间的历史就是学院的历史」。
+ * - 硬件来自 Seeed Studio：各模块设备清单的 SKU。
+ * - 深圳、成都两处校区：页脚地址（owner 确认为实际联系通道）。
+ */
+export const aboutHistory: HistoryItem[] = [
   {
-    icon: 'lucide:rocket',
-    label: '课堂实验与系统 demo',
-    description: '每个模块围绕真实硬件展开，课程现场能搭建、能联调、能演示。',
+    id: 'founded',
+    when: '2011',
+    title: '柴火创客空间在深圳成立',
+    description: '中国最早的创客空间之一。学院隶属于柴火创客空间，空间的历史就是学院的历史。',
+    link: 'https://www.chaihuo.org',
   },
   {
-    icon: 'lucide:package',
-    label: '硬件套件与学习资源包',
-    description: '课程可配套 Seeed 硬件、NLHD 教材、实验说明、教师材料和学员任务。',
+    id: 'seeed',
+    when: '硬件',
+    title: '课上用的是 Seeed Studio 在售的产品',
+    description: '开发板、传感器、边缘计算设备都能按 SKU 买到，不是专供教学的道具。',
+    link: 'https://www.seeedstudio.com',
   },
   {
-    icon: 'lucide:file-text',
-    label: '项目材料与 SOP',
-    description: '从需求拆解、部署记录到验收材料，帮助课程走向项目训练。',
+    id: 'academy',
+    when: '课程',
+    title: '七个模块，每个分三档深度',
+    description:
+      'M0 零基础入门，M1–M6 各对应一类现场问题：楼宇能耗、语音与视觉交互、离网通信、视觉告警、环境监测、机械臂抓取。',
   },
   {
-    icon: 'lucide:hand-helping',
-    label: '四种销售形态可选',
-    description: '可按机构目标选择裸硬件套件、标准教学套件、全托交付或师资培训。',
+    id: 'sites',
+    when: '两地',
+    title: '深圳、成都各有一个校区',
+    description: '深圳在南山区万科云城设计社区，成都在青羊区狮马路 92 号。',
+  },
+];
+
+/**
+ * 具名负责人。出处：owner 2026-10-02 确认冯磊为学院总协调负责人，可具名。
+ * 引言原为 M0「写给老师」一节的署名引言，全站只在 /about 出现这一次。
+ */
+export const aboutPerson = {
+  name: '冯磊',
+  role: '柴火创客学院总协调负责人',
+  quote:
+    '一门课最好的归宿，不是被完整地执行一遍，而是被一位老师改到面目全非，然后变成只有他能上的那门课。',
+};
+
+export const aboutFinalCta: SiteCta = {
+  id: 'about',
+  title: '想把柴火的课带进你的学校或团队？',
+  description: '发邮件说明对象和目标，我们 3 个工作日内回复合作建议。',
+  primary: 'contact',
+  secondary: 'courses',
+};
+
+// ── /contact ────────────────────────────────────────────────────────
+
+/** 合作邮箱。全站唯一的合作收口（owner 决定：mailto，不做站内表单）。 */
+export const contactEmail = 'business@chaihuo.org';
+
+export const contactFaqs: FaqItem[] = [
+  {
+    key: 'q1',
+    question: '从发邮件到开课一般要多久？',
+    answer:
+      '通常 3 个工作日内安排第一次沟通。标准教学套件发货后即可开课；全托交付和师资培训从确认需求到开课一般 2–4 周。',
+  },
+  {
+    key: 'q5',
+    question: '可以只引入某一个模块或某一档深度吗？',
+    answer:
+      '可以。M0–M6 每个模块都能单独开课，L1 / L2 / L3 也可以只上其中一档。我们会按你的目标建议最小的组合。',
+  },
+  {
+    key: 'q2',
+    question: '课程硬件套件必须从 Seeed 采购吗？',
+    answer:
+      '裸硬件套件与标准教学套件使用 Seeed 原厂硬件，保证课程实验与教材一致。合作伙伴也可以在自己的硬件平台上做适配，但实验手册和课程素材以原厂硬件为准。',
+  },
+  {
+    key: 'q3',
+    question: '师资培训套件具体包含什么内容？',
+    answer:
+      '包含对应模块的硬件套件、完整课程资源包以及 Train-the-Trainer 师训。师训通常由柴火讲师现场授课，时间 2–3 天，培养机构自有讲师。',
+  },
+  {
+    key: 'q4',
+    question: '全托交付套件可以按需定制吗？',
+    answer:
+      '可以。全托交付套件可按模块、级别、学员人数和目标场景定制，硬件、课程和讲师由柴火配齐，从备料到结课都由柴火负责。',
+  },
+  {
+    key: 'q6',
+    question: '接受海外合作吗？',
+    answer:
+      '接受。M3 自组网模块只在海外交付；其他模块的海外开课安排（授课语言、讲师外派）发邮件沟通。',
   },
 ];
