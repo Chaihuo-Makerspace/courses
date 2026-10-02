@@ -125,11 +125,11 @@ const zh: TranslationDict = {
   'about.title': '关于学院',
   'about.description': '柴火创客学院是柴火创客生态的技术赋能平台',
   'about.hero.eyebrow': '关于我们',
-  'about.hero.title': '柴火创客',
+  'about.hero.title': '柴火创客学院',
   'about.hero.titleHighlight': '学院',
   'about.hero.subtitle': 'Chaihuo Makerspace Academy',
   'about.hero.description':
-    '背靠 Seeed Studio 与柴火创客空间，我们相信每个人都应该有能力"一个人也能上场"——把想法变成可交付的智能系统。柴火创客学院面向机构提供可引入、可授课、可共建的学习体系。',
+    '我们培养人掌握新技术整合能力，不提供解决方案。课程用 Seeed Studio 在售的硬件，从柴火创客空间十多年的项目和社区经验里整理出来，面向院校、集成商和企业。',
   'about.ecosystem.title': '柴火创客生态',
   'about.ecosystem.subtitle': '三大支柱支撑创客教育体系',
   'about.values.title': '我们的理念',
@@ -222,6 +222,7 @@ const zh: TranslationDict = {
   'course.syllabusTitle': '大纲与排课',
   'course.syllabusSubtitle': '共 {n} 个教学模块。先看有哪几种排课形态，完整大纲在下面展开。',
   'course.syllabusDetails': '展开 {n} 个教学模块的完整大纲与各形态日程',
+  'about.history.title': '从一间创客空间到七门课',
 };
 
 const en: TranslationDict = {
@@ -341,11 +342,11 @@ const en: TranslationDict = {
   'about.description':
     'Chaihuo Maker Academy is the technology empowerment platform of the Chaihuo Maker ecosystem',
   'about.hero.eyebrow': 'About Us',
-  'about.hero.title': 'Chaihuo Maker',
+  'about.hero.title': 'Chaihuo Maker Academy',
   'about.hero.titleHighlight': 'Academy',
   'about.hero.subtitle': 'Chaihuo Makerspace Academy',
   'about.hero.description':
-    'Backed by Seeed Studio and Chaihuo Makerspace, we believe everyone should have the ability to "go solo" — turning ideas into deliverable intelligent systems.',
+    "We train people to integrate new technology; we do not sell solutions. The courses use hardware from Seeed Studio's current catalogue and are distilled from more than a decade of projects and community work at Chaihuo Makerspace. They are offered to schools, integrators and enterprises.",
   'about.ecosystem.title': 'Chaihuo Maker Ecosystem',
   'about.ecosystem.subtitle': 'Three pillars supporting maker education',
   'about.values.title': 'Our Philosophy',
@@ -443,6 +444,7 @@ const en: TranslationDict = {
   'course.syllabusSubtitle':
     '{n} teaching units in total. The delivery formats come first; the full syllabus expands below.',
   'course.syllabusDetails': 'Show the full syllabus of {n} units and the schedule for each format',
+  'about.history.title': 'From a makerspace to seven courses',
 };
 
 const ja: TranslationDict = {
@@ -558,11 +560,11 @@ const ja: TranslationDict = {
   'about.title': '学院について',
   'about.description': '柴火創客学院は柴火創客エコシステムの技術力強化プラットフォームです',
   'about.hero.eyebrow': '私たちについて',
-  'about.hero.title': '柴火創客',
+  'about.hero.title': '柴火創客学院',
   'about.hero.titleHighlight': '学院',
   'about.hero.subtitle': 'Chaihuo Makerspace Academy',
   'about.hero.description':
-    'Seeed Studioと柴火創客空間を背景に、私たちは誰もが「一人で現場に立てる」能力を持つべきだと信じています — アイデアを納品可能なインテリジェントシステムに変える力を。',
+    '私たちは新しい技術を統合する力を持つ人材を育てます。ソリューションを提供する事業ではありません。講座にはSeeed Studioの現行製品を使い、柴火創客空間が10年以上積み重ねてきたプロジェクトとコミュニティの経験を整理して作りました。学校、インテグレーター、企業向けに提供しています。',
   'about.ecosystem.title': '柴火創客エコシステム',
   'about.ecosystem.subtitle': '創客教育を支える3つの柱',
   'about.values.title': '私たちの理念',
@@ -656,6 +658,7 @@ const ja: TranslationDict = {
   'course.syllabusSubtitle':
     '教育ユニットは全{n}個。まず開講形態を示し、シラバス全体は下で展開できます。',
   'course.syllabusDetails': '全{n}ユニットのシラバスと形態別の日程を表示',
+  'about.history.title': '一つのメイカースペースから7つの講座へ',
 };
 
 const es: TranslationDict = {
@@ -777,11 +780,11 @@ const es: TranslationDict = {
   'about.description':
     'La Academia Chaihuo Maker es la plataforma de empoderamiento tecnológico del ecosistema Chaihuo Maker',
   'about.hero.eyebrow': 'Sobre Nosotros',
-  'about.hero.title': 'Chaihuo Maker',
+  'about.hero.title': 'Academia Chaihuo Maker',
   'about.hero.titleHighlight': 'Academy',
   'about.hero.subtitle': 'Chaihuo Makerspace Academy',
   'about.hero.description':
-    'Respaldados por Seeed Studio y Chaihuo Makerspace, creemos que todos deberían tener la capacidad de "ir en solitario" — convirtiendo ideas en sistemas inteligentes entregables.',
+    'Formamos a personas para que sepan integrar nuevas tecnologías; no vendemos soluciones. Los cursos emplean hardware del catálogo actual de Seeed Studio y recogen más de una década de proyectos y trabajo comunitario en Chaihuo Makerspace. Están dirigidos a centros educativos, integradores y empresas.',
   'about.ecosystem.title': 'Ecosistema Chaihuo Maker',
   'about.ecosystem.subtitle': 'Tres pilares que sostienen la educación maker',
   'about.values.title': 'Nuestra Filosofía',
@@ -881,6 +884,7 @@ const es: TranslationDict = {
     '{n} unidades didácticas en total. Primero, los formatos de impartición; el temario completo se despliega abajo.',
   'course.syllabusDetails':
     'Ver el temario completo de {n} unidades y el calendario de cada formato',
+  'about.history.title': 'De un makerspace a siete cursos',
 };
 
 const ptBR: TranslationDict = {
@@ -1001,11 +1005,11 @@ const ptBR: TranslationDict = {
   'about.description':
     'A Academia Chaihuo Maker é a plataforma de capacitação tecnológica do ecossistema Chaihuo Maker',
   'about.hero.eyebrow': 'Sobre Nós',
-  'about.hero.title': 'Chaihuo Maker',
+  'about.hero.title': 'Academia Chaihuo Maker',
   'about.hero.titleHighlight': 'Academy',
   'about.hero.subtitle': 'Chaihuo Makerspace Academy',
   'about.hero.description':
-    'Apoiados pela Seeed Studio e pelo Chaihuo Makerspace, acreditamos que todos devem ter a capacidade de "ir sozinho" — transformando ideias em sistemas inteligentes entregáveis.',
+    'Formamos pessoas para integrar novas tecnologias; não vendemos soluções. Os cursos usam hardware do catálogo atual da Seeed Studio e reúnem mais de uma década de projetos e trabalho comunitário no Chaihuo Makerspace. São oferecidos a escolas, integradores e empresas.',
   'about.ecosystem.title': 'Ecossistema Chaihuo Maker',
   'about.ecosystem.subtitle': 'Três pilares que sustentam a educação maker',
   'about.values.title': 'Nossa Filosofia',
@@ -1104,6 +1108,7 @@ const ptBR: TranslationDict = {
     '{n} unidades de ensino no total. Primeiro, os formatos de oferta; o programa completo se expande abaixo.',
   'course.syllabusDetails':
     'Ver o programa completo de {n} unidades e o cronograma de cada formato',
+  'about.history.title': 'De um makerspace a sete cursos',
 };
 
 const dictionaries: Record<Locale, TranslationDict> = {

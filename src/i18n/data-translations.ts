@@ -743,9 +743,9 @@ const en: Record<string, string> = {
   'cta.courses.title': 'Once the module and depth are chosen, we can talk about running it.',
   'cta.courses.desc':
     'Tell us the module, the depth (L1 / L2 / L3) and the class size. Pricing depends on class format and size; we send a proposal within 3 working days of your email.',
-  'cta.about.title': 'Want to bring this ecosystem capability to your organization?',
+  'cta.about.title': 'Want to bring Chaihuo courses to your school or team?',
   'cta.about.desc':
-    'From Bare Hardware Kit to Full-Delivery, you can choose the delivery format based on your goals. Leave your contact information and we will provide partnership recommendations within 3 business days.',
+    'Email us about who the learners are and what you want them to achieve. We reply with a partnership proposal within 3 working days.',
   'cta.apply': 'Apply for Partnership',
   'cta.viewCourses': 'View Courses',
   'cta.viewPaths': 'View Learning Paths',
@@ -769,6 +769,26 @@ const en: Record<string, string> = {
   'cta.module.title': 'Put {code} on your timetable',
   'cta.module.desc':
     'Pricing depends on class format and size. Email us the number of learners and the depth you want, and we will send a proposal within 3 working days.',
+  'history.founded.when': '2011',
+  'history.founded.title': 'Chaihuo Makerspace opens in Shenzhen',
+  'history.founded.desc':
+    "One of the earliest makerspaces in China. The Academy is part of Chaihuo Makerspace, so the makerspace's history is the Academy's history.",
+  'history.seeed.when': 'Hardware',
+  'history.seeed.title': 'Classes use products Seeed Studio sells today',
+  'history.seeed.desc':
+    'Development boards, sensors and edge-computing devices can all be ordered by SKU. None of it is a teaching prop.',
+  'history.academy.when': 'Courses',
+  'history.academy.title': 'Seven modules, each at three depths',
+  'history.academy.desc':
+    'M0 is the entry course for beginners. M1–M6 each address one kind of on-site problem: building energy use, voice and vision interaction, off-grid communication, vision alerts, environmental monitoring and robotic grasping.',
+  'history.sites.when': 'Sites',
+  'history.sites.title': 'Campuses in Shenzhen and Chengdu',
+  'history.sites.desc':
+    'Shenzhen: Vanke Cloud City Design Community, Nanshan District. Chengdu: No. 92 Shima Road, Qingyang District.',
+  'person.name': 'Feng Lei',
+  'person.role': 'General Coordinator, Chaihuo Maker Academy',
+  'person.quote':
+    'The best fate of a course is not being executed perfectly once, but being transformed beyond recognition by a teacher, becoming a course that only they can teach.',
 };
 
 const ja: Record<string, string> = {
@@ -1128,9 +1148,9 @@ const ja: Record<string, string> = {
   'cta.courses.title': 'モジュールと深さが決まれば、開講の相談ができます。',
   'cta.courses.desc':
     'モジュール、深さ（L1 / L2 / L3）、クラス規模をお知らせください。お見積りはクラス形態と規模に応じて行い、メール受領後3営業日以内にご提案をお送りします。',
-  'cta.about.title': 'このエコシステムの力をあなたの組織に導入しませんか？',
+  'cta.about.title': '柴火の講座を学校やチームに導入しませんか？',
   'cta.about.desc':
-    'Bare Hardware KitからFull-Deliveryまで、あなたの目標に応じて販売形態を選択できます。ご意向をお知らせいただければ、3営業日以内に協業のご提案をいたします。',
+    '対象者と目標をメールでお知らせください。3営業日以内に協業のご提案を返信します。',
   'cta.apply': '協業相談を申し込む',
   'cta.viewCourses': '学習体系を見る',
   'cta.viewPaths': 'パスガイドを見る',
@@ -1154,6 +1174,26 @@ const ja: Record<string, string> = {
   'cta.module.title': '{code}を時間割に組み込む',
   'cta.module.desc':
     'お見積りはクラス形態と規模に応じます。受講人数と希望する深さをメールでお知らせいただければ、3営業日以内にご提案をお送りします。',
+  'history.founded.when': '2011',
+  'history.founded.title': '柴火創客空間が深圳で設立',
+  'history.founded.desc':
+    '中国で最も早い時期のメイカースペースの一つです。学院は柴火創客空間に属しており、空間の歴史がそのまま学院の歴史です。',
+  'history.seeed.when': '機器',
+  'history.seeed.title': '授業で使うのはSeeed Studioの現行製品',
+  'history.seeed.desc':
+    '開発ボード、センサー、エッジコンピューティング機器はすべてSKUで購入できます。教育専用の模型ではありません。',
+  'history.academy.when': '講座',
+  'history.academy.title': '7つのモジュール、それぞれ3段階の深さ',
+  'history.academy.desc':
+    'M0は未経験者向けの入門講座です。M1〜M6はそれぞれ現場の課題に対応します：ビルのエネルギー使用、音声・視覚インタラクション、オフグリッド通信、映像によるアラート、環境モニタリング、ロボットアームによる把持。',
+  'history.sites.when': '拠点',
+  'history.sites.title': '深圳と成都にキャンパス',
+  'history.sites.desc':
+    '深圳は南山区の万科雲城設計コミュニティ、成都は青羊区獅馬路92号にあります。',
+  'person.name': '馮磊',
+  'person.role': '柴火創客学院 総括コーディネーター',
+  'person.quote':
+    '一つの講座の最良の行き先は、完璧に実施されることではなく、ある教師によって見分けがつかないほどに作り変えられ、その人にしか教えられない講座になることです。',
 };
 
 const es: Record<string, string> = {
@@ -1533,9 +1573,9 @@ const es: Record<string, string> = {
   'cta.courses.title': 'Con el módulo y el nivel elegidos, podemos hablar de cómo impartirlo.',
   'cta.courses.desc':
     'Indíquenos el módulo, el nivel (L1 / L2 / L3) y el tamaño del grupo. El presupuesto depende del formato y del tamaño de la clase; enviamos una propuesta en 3 días hábiles tras su correo.',
-  'cta.about.title': '¿Quiere llevar esta capacidad del ecosistema a su organización?',
+  'cta.about.title': '¿Quiere llevar los cursos de Chaihuo a su centro o a su equipo?',
   'cta.about.desc':
-    'Desde el kit de hardware básico hasta la entrega integral, puede elegir la modalidad según sus objetivos. Deje sus datos de interés y le proporcionaremos una propuesta de colaboración en un plazo de 3 días hábiles.',
+    'Escríbanos indicando a quién va dirigido y qué objetivo persigue. Respondemos con una propuesta de colaboración en 3 días hábiles.',
   'cta.apply': 'Solicitar consultoría de colaboración',
   'cta.viewCourses': 'Ver sistema curricular',
   'cta.viewPaths': 'Ver rutas de aprendizaje',
@@ -1559,6 +1599,26 @@ const es: Record<string, string> = {
   'cta.module.title': 'Incorpore {code} a su programación',
   'cta.module.desc':
     'El presupuesto depende del formato y del tamaño de la clase. Indíquenos por correo el número de participantes y el nivel deseado y enviaremos una propuesta en 3 días hábiles.',
+  'history.founded.when': '2011',
+  'history.founded.title': 'Chaihuo Makerspace abre en Shenzhen',
+  'history.founded.desc':
+    'Uno de los primeros makerspaces de China. La Academia forma parte de Chaihuo Makerspace, de modo que la historia del makerspace es la de la Academia.',
+  'history.seeed.when': 'Hardware',
+  'history.seeed.title': 'En clase se usan productos que Seeed Studio vende hoy',
+  'history.seeed.desc':
+    'Placas de desarrollo, sensores y equipos de computación en el borde se pueden pedir por SKU. Nada es material de utilería.',
+  'history.academy.when': 'Cursos',
+  'history.academy.title': 'Siete módulos, cada uno en tres niveles',
+  'history.academy.desc':
+    'M0 es el curso de entrada para principiantes. M1–M6 abordan cada uno un tipo de problema sobre el terreno: consumo energético en edificios, interacción por voz y visión, comunicación sin red, alertas por visión, monitorización ambiental y agarre robótico.',
+  'history.sites.when': 'Sedes',
+  'history.sites.title': 'Sedes en Shenzhen y Chengdu',
+  'history.sites.desc':
+    'Shenzhen: Vanke Cloud City Design Community, distrito de Nanshan. Chengdu: n.º 92 de Shima Road, distrito de Qingyang.',
+  'person.name': 'Feng Lei',
+  'person.role': 'Coordinador general, Academia Chaihuo Maker',
+  'person.quote':
+    'El mejor destino de un curso no es ser ejecutado perfectamente una vez, sino ser transformado más allá del reconocimiento por un profesor, convirtiéndose en un curso que solo él puede impartir.',
 };
 
 const ptBR: Record<string, string> = {
@@ -1927,9 +1987,9 @@ const ptBR: Record<string, string> = {
   'cta.courses.title': 'Com o módulo e o nível definidos, podemos conversar sobre como oferecê-lo.',
   'cta.courses.desc':
     'Informe o módulo, o nível (L1 / L2 / L3) e o tamanho da turma. O orçamento depende do formato e do tamanho da turma; enviamos uma proposta em até 3 dias úteis após o seu e-mail.',
-  'cta.about.title': 'Quer levar esta capacidade do ecossistema para sua organização?',
+  'cta.about.title': 'Quer levar os cursos da Chaihuo para a sua escola ou equipe?',
   'cta.about.desc':
-    'Do Bare Hardware Kit à entrega completa, você pode escolher o formato comercial de acordo com seus objetivos. Deixe suas informações de interesse e forneceremos recomendações de parceria em até 3 dias úteis.',
+    'Envie um e-mail dizendo quem são os participantes e qual é o objetivo. Respondemos com uma proposta de parceria em até 3 dias úteis.',
   'cta.apply': 'Solicitar consultoria de parceria',
   'cta.viewCourses': 'Ver grade curricular',
   'cta.viewPaths': 'Ver trilhas de aprendizado',
@@ -1953,6 +2013,26 @@ const ptBR: Record<string, string> = {
   'cta.module.title': 'Inclua o {code} na sua grade',
   'cta.module.desc':
     'O orçamento depende do formato e do tamanho da turma. Informe por e-mail o número de participantes e o nível desejado e enviaremos uma proposta em até 3 dias úteis.',
+  'history.founded.when': '2011',
+  'history.founded.title': 'O Chaihuo Makerspace é fundado em Shenzhen',
+  'history.founded.desc':
+    'Um dos primeiros makerspaces da China. A Academia faz parte do Chaihuo Makerspace, portanto a história do makerspace é a da Academia.',
+  'history.seeed.when': 'Hardware',
+  'history.seeed.title': 'As aulas usam produtos que a Seeed Studio vende hoje',
+  'history.seeed.desc':
+    'Placas de desenvolvimento, sensores e equipamentos de computação de borda podem ser pedidos por SKU. Nada é material cenográfico.',
+  'history.academy.when': 'Cursos',
+  'history.academy.title': 'Sete módulos, cada um em três níveis',
+  'history.academy.desc':
+    'O M0 é o curso de entrada para iniciantes. M1–M6 tratam cada um de um tipo de problema em campo: consumo de energia em edifícios, interação por voz e visão, comunicação fora da rede, alertas por visão, monitoramento ambiental e preensão robótica.',
+  'history.sites.when': 'Sedes',
+  'history.sites.title': 'Unidades em Shenzhen e Chengdu',
+  'history.sites.desc':
+    'Shenzhen: Vanke Cloud City Design Community, distrito de Nanshan. Chengdu: nº 92 da Shima Road, distrito de Qingyang.',
+  'person.name': 'Feng Lei',
+  'person.role': 'Coordenador-geral, Academia Chaihuo Maker',
+  'person.quote':
+    'O melhor destino de um curso não é ser executado perfeitamente uma vez, mas ser transformado por um professor até ficar irreconhecível, tornando-se um curso que só ele pode ministrar.',
 };
 
 export const dataTranslations: Record<Locale, Record<string, string>> = {
