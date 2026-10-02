@@ -32,8 +32,7 @@ export function translateTracks(tracks: Track[], locale: Locale): Track[] {
 
 export function translateModule(m: Module, locale: Locale): Module {
   if (locale === 'zh-CN') return m;
-  // 模块文案以 deep translation 字典为准（module-translations.ts 及 *-new 覆盖文件）。
-  // 早期放在 data-translations.ts 里的 module.* 字段是旧学习体系残留，已不再作为来源。
+  // 模块文案按中文原文逐字查表（module-{en,ja,es,pt}.ts）。
   return deepTranslateObj(m, locale);
 }
 
