@@ -28,6 +28,7 @@ const subtitle = intro?.subtitle ?? dt(locale, 'course.hardwareIntroSubtitle');
               data-reveal
               style={`--reveal-delay: ${(i % 3) * 70}ms`}
             >
+              {/* bg-white is intentional: product-photo backdrop behind object-contain images (DESIGN.md §1.5). */}
               <div class="aspect-[4/3] w-full bg-white border-b border-neutral-3 overflow-hidden">
                 <img
                   src={item.image}

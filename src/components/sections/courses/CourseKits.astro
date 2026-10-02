@@ -25,6 +25,7 @@ const kits = module.kits;
         <ul class="grid md:grid-cols-3 gap-5">
           {kits.items.map((kit) => (
             <li class="flex flex-col bg-card border border-neutral-3 rounded-lg overflow-hidden shadow-sm-soft">
+              {/* bg-white is intentional: product-photo backdrop behind object-contain images (DESIGN.md §1.5). */}
               <div class="aspect-[4/3] w-full bg-white border-b border-neutral-3 overflow-hidden">
                 <img
                   src={kit.image}
