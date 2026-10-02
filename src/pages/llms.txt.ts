@@ -87,9 +87,11 @@ export const GET: APIRoute = (context) => {
     `- [合作咨询](${base}/contact): 三类合作对象与四种合作形态，邮件 ${contactEmail} 联系`,
   );
   lines.push(
-    `- [先锋官计划](${base}/pioneer): 招募个人渠道伙伴：先学会课程，再在本地开课、推广；注册跳转 map.seeed.cc`,
+    `- [先锋官计划](${base}/pioneer): 招募点火人：先学会课程，再在自己的城市开课、推广，把创客教育的火点到更多地方；注册跳转 map.seeed.cc`,
   );
-  lines.push(`- [基地计划](${base}/base): 招募有固定场地的渠道伙伴；注册跳转 map.seeed.cc`);
+  lines.push(
+    `- [基地计划](${base}/base): 招募有固定场地的机构，挂牌柴火认证的本地授课点；注册跳转 map.seeed.cc`,
+  );
   lines.push(`- [创客生态分布图](https://map.seeed.cc): 全球柴火生态节点地图与注册入口`);
   lines.push('');
 

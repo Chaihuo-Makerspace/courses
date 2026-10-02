@@ -186,24 +186,24 @@ const zhToEn: Record<string, string> = {
   // 基地 · CTA
   '核心标准只有两条：固定场地 + 持续运营意愿。填写申请表，社区经理将在 3 个工作日内联系你。':
     'Only two core criteria: fixed venue + commitment to ongoing operation. Fill in the application and a community manager will contact you within 3 working days.',
-  招募渠道伙伴: 'Channel partners wanted',
-  '先锋官是我们招募的渠道伙伴：先学会柴火的课，再在自己的城市开课、推广。有固定场地的，可以申请挂牌基地。':
-    'Pioneers are channel partners we recruit: they learn Chaihuo courses first, then teach and promote them in their own city. Organisations with a permanent venue can apply to become a certified Base.',
+  招募点火人与基地: 'Igniters and Bases wanted',
+  '先锋官是柴火招募的点火人：先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。有固定场地的，可以申请挂牌基地。':
+    'Pioneers are Igniters recruited by Chaihuo: learn the courses first, then teach and promote them in your own city, carrying the maker-education flame to more places. Organisations with a permanent venue can apply to become a certified Base.',
   个人申请: 'For individuals',
   有固定场地的机构申请: 'For organisations with a permanent venue',
-  '先锋官：柴火招募的渠道伙伴': 'Pioneers: the channel partners Chaihuo recruits',
-  '先学会柴火的课，再在自己的城市开课、推广。柴火提供课程包、教具和认证；你负责招生、授课和本地推广。':
-    'Learn Chaihuo courses first, then teach and promote them in your own city. Chaihuo provides the course pack, teaching kits and certification; you handle enrolment, teaching and local promotion.',
+  '先锋官：柴火招募的点火人': 'Pioneers: the Igniters Chaihuo recruits',
+  '先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。柴火提供课程包、教具和认证；你负责招生、授课和本地推广。':
+    'Learn Chaihuo courses first, then teach and promote them in your own city, carrying the maker-education flame to more places. Chaihuo provides the course pack, teaching kits and certification; you handle enrolment, teaching and local promotion.',
   条件与条款: 'Requirements and terms',
-  '先锋官是柴火认证的本地渠道伙伴：学会课程，在当地开课，并向学校和机构推广。':
-    'A Pioneer is a local channel partner certified by Chaihuo: they learn the courses, run classes locally and promote them to schools and organisations.',
+  '先锋官是柴火认证的点火人：学会课程，在当地开课，并向学校和机构推广。':
+    'A Pioneer is an Igniter certified by Chaihuo: they learn the courses, run classes locally and promote them to schools and organisations.',
   谁可以申请: 'Who can apply',
   柴火提供什么: 'What Chaihuo provides',
   'PPT + md 格式，可以自行修改和二次创作': 'PPT + md format; you may modify and rework it',
   收益来自哪里: 'Where the income comes from',
   从申请到开课: 'From application to first class',
   申请成为先锋官: 'Apply to become a Pioneer',
-  '基地：有固定场地的渠道伙伴': 'Bases: channel partners with a permanent venue',
+  '基地：柴火认证的本地授课点': 'Bases: Chaihuo-certified local teaching sites',
   '有固定场地、有专人持续运营的机构可以申请挂牌基地。柴火提供教具、课程和总部派单；基地在本地开课，并为先锋官提供授课场地。':
     'Organisations with a permanent venue and someone to run it on an ongoing basis can apply to become a certified Base. Chaihuo provides teaching kits, courses and work dispatched from headquarters; the Base runs classes locally and gives Pioneers a place to teach.',
   条件与权益: 'Requirements and benefits',
@@ -353,24 +353,24 @@ const zhToJa: Record<string, string> = {
     'できます。コア基準は固定会場 + 継続運営の意志です。柴火がコース・キット・研修を提供し、第 1 期の完走をサポートします。',
   '核心标准只有两条：固定场地 + 持续运营意愿。填写申请表，社区经理将在 3 个工作日内联系你。':
     'コア基準はたった 2 つ：固定会場 + 継続運営の意志。申込フォームにご記入いただければ、コミュニティマネージャーが 3 営業日以内にご連絡します。',
-  招募渠道伙伴: 'チャネルパートナー募集',
-  '先锋官是我们招募的渠道伙伴：先学会柴火的课，再在自己的城市开课、推广。有固定场地的，可以申请挂牌基地。':
-    'パイオニアは当学院が募集するチャネルパートナーです。まず柴火の講座を学び、その後自分の都市で開講・普及を行います。常設の会場をお持ちの場合は、認定拠点に申請できます。',
+  招募点火人与基地: '点火人・拠点募集',
+  '先锋官是柴火招募的点火人：先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。有固定场地的，可以申请挂牌基地。':
+    'パイオニアは柴火が募集する点火人です。まず柴火の講座を学び、その後自分の都市で開講・普及を行い、メーカー教育の火をより多くの場所へ届けます。常設の会場をお持ちの場合は、認定拠点に申請できます。',
   个人申请: '個人向け',
   有固定场地的机构申请: '常設会場を持つ団体向け',
-  '先锋官：柴火招募的渠道伙伴': 'パイオニア：柴火が募集するチャネルパートナー',
-  '先学会柴火的课，再在自己的城市开课、推广。柴火提供课程包、教具和认证；你负责招生、授课和本地推广。':
-    'まず柴火の講座を学び、その後自分の都市で開講・普及を行います。柴火は講座パック、教具、認定を提供し、受講者募集・授業・地域での普及はパートナーが担います。',
+  '先锋官：柴火招募的点火人': 'パイオニア：柴火が募集する点火人',
+  '先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。柴火提供课程包、教具和认证；你负责招生、授课和本地推广。':
+    'まず柴火の講座を学び、その後自分の都市で開講・普及を行い、メーカー教育の火をより多くの場所へ届けます。柴火は講座パック、教具、認定を提供し、受講者募集・授業・地域での普及はパイオニアが担います。',
   条件与条款: '条件と規約',
-  '先锋官是柴火认证的本地渠道伙伴：学会课程，在当地开课，并向学校和机构推广。':
-    'パイオニアは柴火が認定する地域のチャネルパートナーです。講座を習得し、地元で開講し、学校や団体に普及します。',
+  '先锋官是柴火认证的点火人：学会课程，在当地开课，并向学校和机构推广。':
+    'パイオニアは柴火が認定する点火人です。講座を習得し、地元で開講し、学校や団体に普及します。',
   谁可以申请: '応募できる人',
   柴火提供什么: '柴火が提供するもの',
   'PPT + md 格式，可以自行修改和二次创作': 'PPT＋md形式。自由に改変・再構成できます',
   收益来自哪里: '収益の出どころ',
   从申请到开课: '応募から開講まで',
   申请成为先锋官: 'パイオニアに応募する',
-  '基地：有固定场地的渠道伙伴': '拠点：常設会場を持つチャネルパートナー',
+  '基地：柴火认证的本地授课点': '拠点：柴火が認定する地域の授業拠点',
   '有固定场地、有专人持续运营的机构可以申请挂牌基地。柴火提供教具、课程和总部派单；基地在本地开课，并为先锋官提供授课场地。':
     '常設の会場があり、専任の担当者が継続して運営できる団体は、認定拠点に申請できます。柴火は教具、講座、本部からの案件紹介を提供し、拠点は地域で開講するとともに、パイオニアに授業の場を提供します。',
   条件与权益: '条件と特典',
@@ -526,24 +526,24 @@ const zhToEs: Record<string, string> = {
     'Sí. Clave: un espacio fijo + voluntad de operar a largo plazo. Chaihuo aporta cursos, kits y formación para tu primera cohorte.',
   '核心标准只有两条：固定场地 + 持续运营意愿。填写申请表，社区经理将在 3 个工作日内联系你。':
     'Solo dos criterios: espacio fijo + voluntad de operar a largo plazo. Completa la solicitud y un community manager te contactará en 3 días hábiles.',
-  招募渠道伙伴: 'Buscamos socios de canal',
-  '先锋官是我们招募的渠道伙伴：先学会柴火的课，再在自己的城市开课、推广。有固定场地的，可以申请挂牌基地。':
-    'Los Pioneros son socios de canal que reclutamos: primero aprenden los cursos de Chaihuo y después los imparten y promueven en su ciudad. Quien disponga de un espacio fijo puede solicitar ser Base certificada.',
+  招募点火人与基地: 'Buscamos Ignitores y Bases',
+  '先锋官是柴火招募的点火人：先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。有固定场地的，可以申请挂牌基地。':
+    'Los Pioneros son Ignitores que recluta Chaihuo: primero aprenden los cursos y después los imparten y promueven en su ciudad, llevando la llama de la educación maker a más lugares. Quien disponga de un espacio fijo puede solicitar ser Base certificada.',
   个人申请: 'Para particulares',
   有固定场地的机构申请: 'Para organizaciones con espacio fijo',
-  '先锋官：柴火招募的渠道伙伴': 'Pioneros: los socios de canal que recluta Chaihuo',
-  '先学会柴火的课，再在自己的城市开课、推广。柴火提供课程包、教具和认证；你负责招生、授课和本地推广。':
-    'Primero aprenda los cursos de Chaihuo y después impártalos y promuévalos en su ciudad. Chaihuo aporta el paquete de cursos, los kits didácticos y la certificación; usted se ocupa de la captación, la docencia y la promoción local.',
+  '先锋官：柴火招募的点火人': 'Pioneros: los Ignitores que recluta Chaihuo',
+  '先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。柴火提供课程包、教具和认证；你负责招生、授课和本地推广。':
+    'Primero aprenda los cursos de Chaihuo y después impártalos y promuévalos en su ciudad, llevando la llama de la educación maker a más lugares. Chaihuo aporta el paquete de cursos, los kits didácticos y la certificación; usted se ocupa de la captación, la docencia y la promoción local.',
   条件与条款: 'Requisitos y condiciones',
-  '先锋官是柴火认证的本地渠道伙伴：学会课程，在当地开课，并向学校和机构推广。':
-    'Un Pionero es un socio de canal local certificado por Chaihuo: aprende los cursos, imparte clases en su zona y los promueve entre centros educativos y organizaciones.',
+  '先锋官是柴火认证的点火人：学会课程，在当地开课，并向学校和机构推广。':
+    'Un Pionero es un Ignitor certificado por Chaihuo: aprende los cursos, imparte clases en su zona y los promueve entre centros educativos y organizaciones.',
   谁可以申请: 'Quién puede solicitarlo',
   柴火提供什么: 'Qué aporta Chaihuo',
   'PPT + md 格式，可以自行修改和二次创作': 'Formato PPT + md; puede modificarlo y reelaborarlo',
   收益来自哪里: 'De dónde vienen los ingresos',
   从申请到开课: 'De la solicitud a la primera clase',
   申请成为先锋官: 'Solicite ser Pionero',
-  '基地：有固定场地的渠道伙伴': 'Bases: socios de canal con un espacio fijo',
+  '基地：柴火认证的本地授课点': 'Bases: puntos de enseñanza locales certificados por Chaihuo',
   '有固定场地、有专人持续运营的机构可以申请挂牌基地。柴火提供教具、课程和总部派单；基地在本地开课，并为先锋官提供授课场地。':
     'Las organizaciones con un espacio fijo y una persona que lo gestione de forma continuada pueden solicitar ser Base certificada. Chaihuo aporta kits didácticos, cursos y encargos derivados desde la sede; la Base imparte clases en su zona y ofrece a los Pioneros un lugar donde enseñar.',
   条件与权益: 'Requisitos y ventajas',
@@ -716,24 +716,24 @@ const zhToPt: Record<string, string> = {
 
   '核心标准只有两条：固定场地 + 持续运营意愿。填写申请表，社区经理将在 3 个工作日内联系你。':
     'Apenas dois critérios essenciais: espaço fixo + vontade de operação contínua. Preencha o formulário e um gerente de comunidade entrará em contato em até 3 dias úteis.',
-  招募渠道伙伴: 'Buscamos parceiros de canal',
-  '先锋官是我们招募的渠道伙伴：先学会柴火的课，再在自己的城市开课、推广。有固定场地的，可以申请挂牌基地。':
-    'Os Pioneiros são parceiros de canal que recrutamos: primeiro aprendem os cursos da Chaihuo e depois os ministram e divulgam na própria cidade. Quem tem um espaço fixo pode se candidatar a Base certificada.',
+  招募点火人与基地: 'Buscamos Ignitores e Bases',
+  '先锋官是柴火招募的点火人：先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。有固定场地的，可以申请挂牌基地。':
+    'Os Pioneiros são Ignitores recrutados pela Chaihuo: primeiro aprendem os cursos e depois os ministram e divulgam na própria cidade, levando a chama da educação maker a mais lugares. Quem tem um espaço fixo pode se candidatar a Base certificada.',
   个人申请: 'Para pessoas físicas',
   有固定场地的机构申请: 'Para organizações com espaço fixo',
-  '先锋官：柴火招募的渠道伙伴': 'Pioneiros: os parceiros de canal que a Chaihuo recruta',
-  '先学会柴火的课，再在自己的城市开课、推广。柴火提供课程包、教具和认证；你负责招生、授课和本地推广。':
-    'Primeiro aprenda os cursos da Chaihuo e depois ministre e divulgue-os na sua cidade. A Chaihuo fornece o pacote de cursos, os kits didáticos e a certificação; você cuida das matrículas, das aulas e da divulgação local.',
+  '先锋官：柴火招募的点火人': 'Pioneiros: os Ignitores que a Chaihuo recruta',
+  '先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。柴火提供课程包、教具和认证；你负责招生、授课和本地推广。':
+    'Primeiro aprenda os cursos da Chaihuo e depois ministre e divulgue-os na sua cidade, levando a chama da educação maker a mais lugares. A Chaihuo fornece o pacote de cursos, os kits didáticos e a certificação; você cuida das matrículas, das aulas e da divulgação local.',
   条件与条款: 'Requisitos e condições',
-  '先锋官是柴火认证的本地渠道伙伴：学会课程，在当地开课，并向学校和机构推广。':
-    'Um Pioneiro é um parceiro de canal local certificado pela Chaihuo: aprende os cursos, ministra aulas na sua região e os divulga a escolas e organizações.',
+  '先锋官是柴火认证的点火人：学会课程，在当地开课，并向学校和机构推广。':
+    'Um Pioneiro é um Ignitor certificado pela Chaihuo: aprende os cursos, ministra aulas na sua região e os divulga a escolas e organizações.',
   谁可以申请: 'Quem pode se candidatar',
   柴火提供什么: 'O que a Chaihuo fornece',
   'PPT + md 格式，可以自行修改和二次创作': 'Formato PPT + md; você pode modificar e reelaborar',
   收益来自哪里: 'De onde vem a receita',
   从申请到开课: 'Da candidatura à primeira aula',
   申请成为先锋官: 'Candidate-se a Pioneiro',
-  '基地：有固定场地的渠道伙伴': 'Bases: parceiros de canal com espaço fixo',
+  '基地：柴火认证的本地授课点': 'Bases: pontos de ensino locais certificados pela Chaihuo',
   '有固定场地、有专人持续运营的机构可以申请挂牌基地。柴火提供教具、课程和总部派单；基地在本地开课，并为先锋官提供授课场地。':
     'Organizações com espaço fixo e alguém para operá-lo de forma contínua podem se candidatar a Base certificada. A Chaihuo fornece kits didáticos, cursos e demandas encaminhadas pela sede; a Base ministra aulas na região e oferece aos Pioneiros um lugar para ensinar.',
   条件与权益: 'Requisitos e benefícios',
