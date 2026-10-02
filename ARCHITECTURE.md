@@ -1,17 +1,18 @@
-# OPC Academy Architecture Map
+# Chaihuo Maker Academy Architecture Map
 
-A small Chinese-language marketing site for 柴火创客 OPC 学院 (Chaihuo Maker
-Academy OPC Academy). Built on Astro 6 with a strict TypeScript data layer
+A small Chinese-language marketing site for 柴火创客学院 (Chaihuo Maker
+Academy). Built on Astro 6 with a strict TypeScript data layer
 driving every page.
 
-**Ecosystem context** — OPC Academy is the technical-enablement arm of the
+**Ecosystem context** — Chaihuo Maker Academy is the technical-enablement arm of the
 柴火创客 ecosystem (Seeed Studio + 柴火创客空间, founded 2011). Core
 positioning: **培养人掌握新技术整合能力**, not "提供解决方案".
 
 ## System Surfaces
 
-- `src/pages/` — route entrypoints. Mostly SSR (per `output: 'server'`), with
-  `/courses/[slug]` and `/llms.txt` prerendered.
+- `src/pages/` — route entrypoints. Mostly SSR (per `output: 'server'`),
+  with `/llms.txt` prerendered and everything else rendered per request
+  (`/courses/[slug]` is SSR so it can respect the request locale).
 - `src/components/` — reusable Astro components (chrome + composite cards).
 - `src/components/sections/` — page-level sections introduced in the 2026
   redesign (home, paths, courses, courses/[slug], contact, about).
@@ -66,7 +67,7 @@ Edits flow in exactly one direction:
 ```
 src/data/{modules,tracks,partnerships,site,icons}.ts   (source of truth)
         │
-        ├──► src/pages/courses/[slug].astro      (prerendered HTML + Course JSON-LD)
+        ├──► src/pages/courses/[slug].astro      (SSR HTML + Course JSON-LD)
         ├──► src/pages/courses/index.astro       (SSR overview)
         ├──► src/pages/paths.astro               (SSR — track flow)
         ├──► src/pages/contact.astro             (SSR — 3 × 4 partnership grid)
@@ -85,9 +86,14 @@ is opt-in per page (`export const prerender = true`):
 
 | Route | Mode | Build artifact |
 |---|---|---|
-| `/courses/m0..m6` | Prerendered | `dist/client/courses/m*/index.html` |
+| `/courses/m0..m6` | SSR (per request, locale-aware) | server entrypoint (no `dist/client/courses/*`) |
 | `/llms.txt` | Prerendered | `dist/client/llms.txt` |
 | `/` `/courses` `/paths` `/contact` `/about` `/404` | SSR | server entrypoint |
+
+Course detail pages are **not** prerendered: they render on demand so the
+request locale is respected, and they still emit Course JSON-LD on every
+request. Acceptance therefore means starting the built server and curling a
+course page — see `.claude/rules/llm-surfaces.md`.
 
 ## Tech Stack
 

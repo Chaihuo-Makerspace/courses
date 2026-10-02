@@ -34,6 +34,13 @@ const coverageClass: Record<Coverage, string> = {
   none: 'text-neutral-4',
   plus: 'text-brand-red font-bold',
 };
+
+// `curriculum.callout` 以数据 schema 说明句开头（“coverage 键对应排课形态 ID…”）。
+// 那是给开发者的注释，不该渲染成用户文案：剥掉该句，保留后面的排课形态说明。
+// 仅命中已知 schema 开头才剥离。
+const SCHEMA_CALLOUT_PREFIX =
+  /^(?:coverage 键对应|The coverage key maps|coverageキーは|La clave coverage|A chave coverage)[^。.]*[。.]\s*/;
+const cleanCallout = (callout: string) => callout.replace(SCHEMA_CALLOUT_PREFIX, '');
 ---
 
 {
@@ -140,7 +147,7 @@ const coverageClass: Record<Coverage, string> = {
         {curriculum.callout && (
           <div class="mt-6 flex gap-3 border border-neutral-3 rounded-lg bg-surface p-5">
             <Icon name="lucide:info" class="w-5 h-5 text-brand-red shrink-0 mt-0.5" />
-            <p class="text-sm text-neutral-8 leading-relaxed">{curriculum.callout}</p>
+            <p class="text-sm text-neutral-8 leading-relaxed">{cleanCallout(curriculum.callout)}</p>
           </div>
         )}
       </div>

@@ -19,8 +19,8 @@ export const ptDict: Record<string, string> = {
   本地告警与设备控制自动化: 'Alertas Locais & Automação de Controle de Dispositivos',
   本地化部署大语言模型: 'Implantar LLM Localmente',
   编程体验课: 'Sessão Experimental de Programação',
-  '编程体验课是柴火基地车（MCV）全国巡游的标配工作坊。零安装、单一硬件、2 小时闭环、断网只是慢不会废场——这四条正是「车到人到、当天开课」最需要的性质。基地车上的分工：快闪一站 → 编程体验课；驻校两天 → 马拉松版；有网络且做 AI 主题 → 视觉体验课。':
-    'A Sessão Experimental de Programação é o workshop padrão da turnê nacional do Veículo Base Móvel (MCV) da Chaihuo. Zero instalação, hardware único, ciclo fechado de 2 horas, offline apenas desacelera mas não cancela — essas quatro propriedades são exatamente o que "chegar e ensinar no mesmo dia" exige. Divisão de trabalho no MCV: parada pop-up → Sessão de Programação; estadia de dois dias no campus → Maratona; com internet e tema de IA → Sessão de Visão.',
+  '编程体验课是柴火基地车全国巡游的标配工作坊。零安装、单一硬件、2 小时闭环、断网只是慢不会废场——这四条正是「车到人到、当天开课」最需要的性质。柴火基地车上的分工：快闪一站 → 编程体验课；驻校两天 → 马拉松版；有网络且做 AI 主题 → 视觉体验课。':
+    'A Sessão Experimental de Programação é o workshop padrão da turnê nacional do Veículo Base Móvel Chaihuo. Zero instalação, hardware único, ciclo fechado de 2 horas, offline apenas desacelera mas não cancela — essas quatro propriedades são exatamente o que "chegar e ensinar no mesmo dia" exige. Divisão de trabalho no Veículo Base Móvel Chaihuo: parada pop-up → Sessão de Programação; estadia de dois dias no campus → Maratona; com internet e tema de IA → Sessão de Visão.',
   边缘计算: 'Computação de Borda',
   '边缘 AI 图像分类 demo': 'Demo de Classificação de Imagem com IA de Borda',
   '边缘 AI 主机': 'Host de IA de Borda',

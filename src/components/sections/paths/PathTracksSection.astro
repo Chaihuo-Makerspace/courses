@@ -50,7 +50,7 @@ function getModuleFn(id: string): Module | undefined {
               </p>
               <div class="mt-6 flex flex-wrap gap-2">
                 <a
-                  href={localizePath(locale, `/courses#track-${tracks[0].id}`)}
+                  href={localizePath(locale, `/courses#learning-tracks`)}
                   class="focus-ring inline-flex items-center justify-center gap-2 rounded-md bg-brand-red px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-red-hover"
                 >
                   {dt(locale, 'pathTracks.locate')}
@@ -146,7 +146,7 @@ const module = getModuleFn(id);
 
                 <div class="mt-auto pt-6 flex flex-col gap-2">
                   <a
-                    href={localizePath(locale, `/courses#track-${track.id}`)}
+                    href={localizePath(locale, `/courses#learning-tracks`)}
                     class="focus-ring inline-flex items-center justify-center gap-2 rounded-md bg-brand-red px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-red-hover"
                   >
                     {dt(locale, 'pathTracks.locate')}

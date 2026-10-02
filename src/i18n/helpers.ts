@@ -56,22 +56,12 @@ export function translateModules(modules: Module[], locale: Locale): Module[] {
 }
 
 export function translateFamiliarObject(obj: FamiliarObject, locale: Locale): FamiliarObject {
-  const key = obj.href.includes('m0')
-    ? 'led'
-    : obj.href.includes('m1')
-      ? 'gateway'
-      : obj.href.includes('m3')
-        ? 'camera'
-        : obj.href.includes('m4')
-          ? 'speaker'
-          : obj.href.includes('m5')
-            ? 'docs'
-            : 'sensor';
+  // 按稳定 id 取词，不再从 href 推断（href 是可改的导航目标，不是身份）。
   return {
     ...obj,
-    label: dt(locale, `object.${key}.label`) || obj.label,
-    hint: dt(locale, `object.${key}.hint`) || obj.hint,
-    moduleHint: dt(locale, `object.${key}.module`) || obj.moduleHint,
+    label: dt(locale, `object.${obj.id}.label`) || obj.label,
+    hint: dt(locale, `object.${obj.id}.hint`) || obj.hint,
+    moduleHint: dt(locale, `object.${obj.id}.module`) || obj.moduleHint,
   };
 }
 
@@ -117,17 +107,13 @@ export function translateCta(cta: SiteCta, locale: Locale): FinalCta {
 }
 
 export function translateEcosystem(item: AboutEcosystemItem, locale: Locale): AboutEcosystemItem {
-  const key = item.name.includes('Seeed')
-    ? 'seeed'
-    : item.name.includes('柴火创客空间') || item.name.includes('Chaihuo Makerspace')
-      ? 'chaihuo'
-      : 'opc';
+  // 按稳定 id 取词，不再按展示名匹配。
   return {
     ...item,
-    name: dt(locale, `eco.${key}.name`) || item.name,
-    role: dt(locale, `eco.${key}.role`) || item.role,
-    description: dt(locale, `eco.${key}.desc`) || item.description,
-    tag: dt(locale, `eco.${key}.tag`) || item.tag,
+    name: dt(locale, `eco.${item.id}.name`) || item.name,
+    role: dt(locale, `eco.${item.id}.role`) || item.role,
+    description: dt(locale, `eco.${item.id}.desc`) || item.description,
+    tag: dt(locale, `eco.${item.id}.tag`) || item.tag,
   };
 }
 
@@ -139,16 +125,11 @@ export function translateEcosystems(
 }
 
 export function translateValue(item: AboutValueItem, locale: Locale): AboutValueItem {
-  const key =
-    item.title.includes('真硬件') || item.title.includes('Real Hardware')
-      ? 'realHardware'
-      : item.title.includes('真场景') || item.title.includes('Real Scenario')
-        ? 'realScenario'
-        : 'realConnection';
+  // 按稳定 id 取词，不再按标题文本匹配。
   return {
     ...item,
-    title: dt(locale, `value.${key}.title`) || item.title,
-    description: dt(locale, `value.${key}.desc`) || item.description,
+    title: dt(locale, `value.${item.id}.title`) || item.title,
+    description: dt(locale, `value.${item.id}.desc`) || item.description,
   };
 }
 

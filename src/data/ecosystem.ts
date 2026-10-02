@@ -261,7 +261,7 @@ export const pioneer: PioneerProgram = {
     subtitle: '从教具、账号到课程包与认证，起步所需全都配齐',
     items: [
       { icon: 'lucide:package', title: 'M0 教具 5 套', description: '赠送，不回收' },
-      { icon: 'lucide:layers', title: 'CodeCraft 账号 5 个', description: '365 天 / 5 席位' },
+      { icon: 'lucide:layers', title: 'Codecraft 账号 5 个', description: '365 天 / 5 席位' },
       {
         icon: 'lucide:book-open',
         title: '课程包',
@@ -331,7 +331,7 @@ export const pioneer: PioneerProgram = {
   faqs: [
     {
       question: '第一批名额多少？',
-      answer: '第一阶段 10 基地 + 20 先锋官，已有约 70 人意向报名，先到先评估。',
+      answer: '第一阶段 10 基地 + 20 先锋官，先到先评估。',
     },
     {
       question: '没选上怎么办？',
@@ -340,7 +340,7 @@ export const pioneer: PioneerProgram = {
     },
     {
       question: '需要交钱吗？',
-      answer: 'M0 教具赠送不回收；M1–M6 教具保证金租赁制，退出全退。具体金额以协议 v2.5 为准。',
+      answer: 'M0 教具赠送不回收；M1–M6 教具保证金租赁制，退出全退。',
     },
     {
       question: '不懂编程能当先锋官吗？',
@@ -392,7 +392,7 @@ export const base: BaseProgram = {
     plus: [
       '科技馆 / 高校 Fab Lab 等公共教育空间',
       '已有创客 / STEAM 教育基础',
-      '基地车巡游已触达、双方已建立信任',
+      '柴火基地车巡游已触达、双方已建立信任',
     ],
   },
   comparison: {
@@ -401,7 +401,7 @@ export const base: BaseProgram = {
     header: { first: '权益', pioneer: '先锋官（个人）', base: '基地（空间）' },
     rows: [
       { label: 'M0 教具', pioneer: '5 套（赠送不回收）', base: '10 套（基地内共用）' },
-      { label: 'CodeCraft 账号', pioneer: '5 个（365 天 / 5 席位）', base: '10 个' },
+      { label: 'Codecraft 账号', pioneer: '5 个（365 天 / 5 席位）', base: '10 个' },
       { label: '官方认证', pioneer: '登上地图', base: '牌匾 + 区域优先权' },
       { label: '开课获利', pioneer: '学费 100% 归个人', base: '同 + 派单服务费' },
       {

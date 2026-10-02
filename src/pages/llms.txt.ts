@@ -11,7 +11,7 @@ export const GET: APIRoute = (context) => {
   const base = (context.site?.toString() ?? FALLBACK_SITE).replace(/\/$/, '');
   const lines: string[] = [];
 
-  lines.push('# 柴火创客学院（柴火创客 OPC 学院）');
+  lines.push('# 柴火创客学院');
   lines.push('');
   lines.push(
     '> 柴火创客学院是柴火创客生态（Seeed Studio + 柴火创客空间）旗下的技术赋能平台。' +

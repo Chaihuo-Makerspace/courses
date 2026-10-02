@@ -59,10 +59,10 @@ const zh: Record<string, string> = {
   'object.gateway.module': 'M1',
   'object.camera.label': 'AI 摄像头',
   'object.camera.hint': '边缘视觉识别与推理',
-  'object.camera.module': 'M3',
+  'object.camera.module': 'M4',
   'object.speaker.label': '空间设备',
   'object.speaker.hint': '麦克风阵列与语音交互',
-  'object.speaker.module': 'M4',
+  'object.speaker.module': 'M2',
   'object.docs.label': '交付文档',
   'object.docs.hint': '课件、实验手册与项目模板',
   'object.docs.module': 'M5',
@@ -76,7 +76,7 @@ const zh: Record<string, string> = {
   'eco.chaihuo.desc':
     '2011 年成立，中国最早的创客空间之一。提供物理空间、社区活动、项目孵化等服务。',
   'eco.chaihuo.tag': '创客空间',
-  'eco.opc.name': '柴火创客 OPC 学院',
+  'eco.opc.name': '柴火创客学院',
   'eco.opc.role': '技术赋能平台',
   'eco.opc.desc': '将生态中的技术能力转化为可学习的课程，帮助个人和企业掌握新技术整合能力。',
   'eco.opc.tag': '技术学习',
@@ -240,6 +240,24 @@ const zh: Record<string, string> = {
   'course.toolchainTitle': 'Codecraft 帮你"敢做"，aily-blockly 帮你"做完"',
   'course.toolchainSubtitle':
     'M0 不用 Arduino IDE 手写 C++，而是采用矽递自研的双平台接力工具链。前半程零安装、5 分钟见效；后半程把作品搬回自己的电脑，变成能带走、能继续演进的工程。',
+  'course.toolchainTitle.m1': 'ESPHome 把设备接进来，Node-RED 把业务串起来',
+  'course.toolchainSubtitle.m1':
+    '先用 ESPHome + HA OS 完成设备固件烧录与统一接入，再用 Node-RED 做跨系统业务编排——从单平台联动走向业务集成。',
+  'course.toolchainTitle.m2': '从云端多模态配置到本地离线部署',
+  'course.toolchainSubtitle.m2':
+    'SenseCraft AI 负责快速配置与验证，MCP 桥接把业务数据留在局域网，Jetson 离线管线彻底切断公网依赖。',
+  'course.toolchainTitle.m3': 'Meshtastic 组网，Node-RED 上云，PlatformIO 定制',
+  'course.toolchainSubtitle.m3':
+    '先用 Meshtastic 打通离网通信，再经 Node-RED 接入公网与监控大屏，最后用 PlatformIO 裁剪自己的终端固件。',
+  'course.toolchainTitle.m4': 'reCamera 端侧推理，Frigate 多路汇聚，YOLO 自训模型',
+  'course.toolchainSubtitle.m4':
+    '从单点位即插即用的端侧检测，到多路 NVR 集中分析与自定义模型量化部署，覆盖视觉方案的三级深度。',
+  'course.toolchainTitle.m5': 'SenseCAP 上云，Modbus 接线，Open API 私有化',
+  'course.toolchainSubtitle.m5':
+    '工业传感器开箱接入云端看板，RS485 总线并联多传感器，再用 Open API 与 Grafana 搭私有化数据看板。',
+  'course.toolchainTitle.m6': '从零代码遥操到确定性工程抓取',
+  'course.toolchainSubtitle.m6':
+    'SenseCraft Robotics 完成开箱遥操演示，Python + Pinocchio + Motorbridge 实现真机空间抓取，LeRobot 与 Isaac Sim 补齐具身智能与仿真验证。',
   'course.kitsTitle': '感知 · 交互 · 视觉，三级能力递进',
   'course.kitsSubtitle':
     '完整版人手一套三件；短形态只发对应的那一件。子套件按硬件平台划分，不代表 L1／L2／L3 的掌握深度。',
@@ -418,10 +436,10 @@ const en: Record<string, string> = {
   'object.gateway.module': 'M1',
   'object.camera.label': 'AI Camera',
   'object.camera.hint': 'Edge vision recognition & inference',
-  'object.camera.module': 'M3',
+  'object.camera.module': 'M4',
   'object.speaker.label': 'Spatial Devices',
   'object.speaker.hint': 'Microphone arrays & voice interaction',
-  'object.speaker.module': 'M4',
+  'object.speaker.module': 'M2',
   'object.docs.label': 'Delivery Docs',
   'object.docs.hint': 'Courseware, lab manuals & project templates',
   'object.docs.module': 'M5',
@@ -436,7 +454,7 @@ const en: Record<string, string> = {
   'eco.chaihuo.desc':
     "Founded in 2011, one of China's earliest makerspaces. Provides physical space, community events, project incubation, and more.",
   'eco.chaihuo.tag': 'Makerspace',
-  'eco.opc.name': 'Chaihuo Maker OPC Academy',
+  'eco.opc.name': 'Chaihuo Maker Academy',
   'eco.opc.role': 'Technology Empowerment Platform',
   'eco.opc.desc':
     'Transforms ecosystem technical capabilities into learnable courses, helping individuals and enterprises master new technology integration skills.',
@@ -601,6 +619,26 @@ const en: Record<string, string> = {
   'course.toolchainTitle': 'Codecraft helps you dare to make, aily-blockly helps you finish it',
   'course.toolchainSubtitle':
     'M0 adopts dual-platform relay toolchain for zero-install, 5-minute results.',
+  'course.toolchainTitle.m1': 'ESPHome Brings Devices In, Node-RED Wires Up the Business',
+  'course.toolchainSubtitle.m1':
+    'Start with ESPHome + HA OS for firmware flashing and unified access, then use Node-RED for cross-system orchestration — from single-platform automation to business integration.',
+  'course.toolchainTitle.m2': 'From Cloud Multimodal Setup to Local Offline Deployment',
+  'course.toolchainSubtitle.m2':
+    'SenseCraft AI handles fast configuration and validation, the MCP bridge keeps business data on the LAN, and the Jetson offline pipeline removes public-internet dependency entirely.',
+  'course.toolchainTitle.m3':
+    'Meshtastic Meshes, Node-RED Bridges to the Cloud, PlatformIO Customizes',
+  'course.toolchainSubtitle.m3':
+    'Use Meshtastic for off-grid communication, bridge mesh data to the public network and monitoring dashboards via Node-RED, then tailor your own device firmware with PlatformIO.',
+  'course.toolchainTitle.m4':
+    'reCamera Edge Inference, Frigate Multi-Channel Aggregation, YOLO Custom Models',
+  'course.toolchainSubtitle.m4':
+    'From plug-and-play single-point edge detection to multi-channel NVR analysis and quantized custom-model deployment — three depths of a vision solution.',
+  'course.toolchainTitle.m5': 'SenseCAP to the Cloud, Modbus Wiring, Open API On-Prem',
+  'course.toolchainSubtitle.m5':
+    'Industrial sensors connect out of the box to cloud dashboards, RS485 buses parallel multiple sensors, and the Open API plus Grafana builds an on-prem data loop.',
+  'course.toolchainTitle.m6': 'From No-Code Teleoperation to Deterministic Engineering Grasping',
+  'course.toolchainSubtitle.m6':
+    'SenseCraft Robotics delivers out-of-the-box teleoperation demos, Python + Pinocchio + Motorbridge enables real-machine spatial grasping, and LeRobot with Isaac Sim covers embodied intelligence and simulation validation.',
   'course.kitsTitle': 'Sensing · Interaction · Vision, three-tier capability progression',
   'course.kitsSubtitle': 'Sub-kits divided by hardware platform, not L1/L2/L3 mastery depth.',
   'course.hardwareIntroTitle': 'Course Hardware',
@@ -770,10 +808,10 @@ const ja: Record<string, string> = {
   'object.gateway.module': 'M1',
   'object.camera.label': 'AIカメラ',
   'object.camera.hint': 'エッジビジョン認識と推論',
-  'object.camera.module': 'M3',
+  'object.camera.module': 'M4',
   'object.speaker.label': '空間デバイス',
   'object.speaker.hint': 'マイクアレイと音声インタラクション',
-  'object.speaker.module': 'M4',
+  'object.speaker.module': 'M2',
   'object.docs.label': '納品ドキュメント',
   'object.docs.hint': 'コースウェア、実験マニュアル、プロジェクトテンプレート',
   'object.docs.module': 'M5',
@@ -787,7 +825,7 @@ const ja: Record<string, string> = {
   'eco.chaihuo.desc':
     '2011年設立、中国最古のメイカースペースの一つ。物理スペース、コミュニティイベント、プロジェクトインキュベーションなどのサービスを提供しています。',
   'eco.chaihuo.tag': 'メイカースペース',
-  'eco.opc.name': '柴火創客 OPC 学院',
+  'eco.opc.name': '柴火創客学院',
   'eco.opc.role': '技術エンパワーメントプラットフォーム',
   'eco.opc.desc':
     'エコシステムの技術力を学習可能なコースに変換し、個人や企業が新技術の統合力を習得できるよう支援します。',
@@ -953,6 +991,24 @@ const ja: Record<string, string> = {
     'Codecraftが「やってみよう」を支え、aily-blocklyが「やり遂げる」を支える',
   'course.toolchainSubtitle':
     'M0はArduino IDEでC++を手書きするのではなく、Seeed自社開発のデュアルプラットフォームリレーツールチェーンを採用しています。前半はゼロインストールで5分で効果を実感、後半は作品を自分のPCに移し、持ち帰って進化させ続けられるエンジニアリングにします。',
+  'course.toolchainTitle.m1': 'ESPHomeで設備をつなぎ、Node-REDで業務を編む',
+  'course.toolchainSubtitle.m1':
+    'ESPHome + HA OSでファームウェア書き込みと統合接続を済ませ、Node-REDでシステム横断の業務オーケストレーションへ——単一プラットフォームの連動から業務統合へ。',
+  'course.toolchainTitle.m2': 'クラウドのマルチモーダル設定からローカル・オフライン展開へ',
+  'course.toolchainSubtitle.m2':
+    'SenseCraft AIが素早い設定と検証を担い、MCPブリッジが業務データをLAN内に留め、Jetsonオフラインパイプラインが公網依存を完全に断ちます。',
+  'course.toolchainTitle.m3': 'Meshtasticで組網、Node-REDでクラウド接続、PlatformIOでカスタム',
+  'course.toolchainSubtitle.m3':
+    'Meshtasticでオフグリッド通信を確立し、Node-REDでメッシュデータを公網と監視ダッシュボードへ橋渡し、最後にPlatformIOで端末ファームウェアを自作します。',
+  'course.toolchainTitle.m4': 'reCameraのエッジ推論、Frigateの多路集約、YOLOの自前モデル',
+  'course.toolchainSubtitle.m4':
+    '単点で即時使えるエッジ検出から、多路NVRの集中分析、カスタムモデルの量子化展開まで、ビジョン方案の三段階の深さをカバーします。',
+  'course.toolchainTitle.m5': 'SenseCAPでクラウドへ、Modbusで配線、Open APIでオンプレ化',
+  'course.toolchainSubtitle.m5':
+    '産業用センサーは開箱でクラウドダッシュボードに接続し、RS485バスで複数センサーを並列、Open APIとGrafanaでオンプレのデータループを構築します。',
+  'course.toolchainTitle.m6': 'ノーコード遠隔操作から決定論的な工程グラスピングへ',
+  'course.toolchainSubtitle.m6':
+    'SenseCraft Roboticsが開箱の遠隔操作デモを担い、Python + Pinocchio + Motorbridgeが実機の空間グラスピングを実現、LeRobotとIsaac Simが身体化知能とシミュレーション検証を補完します。',
   'course.kitsTitle': 'センシング · インタラクション · ビジョン、3段階の能力ステップアップ',
   'course.kitsSubtitle':
     '完全版は1人1セットの3点キット、短縮形態は該当する1点のみ配布。サブキットはハードウェアプラットフォーム別に区分され、L1/L2/L3の習熟深度を表すものではありません。',
@@ -1120,10 +1176,10 @@ const es: Record<string, string> = {
   'object.gateway.module': 'M1',
   'object.camera.label': 'Cámara AI',
   'object.camera.hint': 'Reconocimiento visual e inferencia en el borde',
-  'object.camera.module': 'M3',
+  'object.camera.module': 'M4',
   'object.speaker.label': 'Dispositivo espacial',
   'object.speaker.hint': 'Array de micrófonos e interacción por voz',
-  'object.speaker.module': 'M4',
+  'object.speaker.module': 'M2',
   'object.docs.label': 'Documentación de entrega',
   'object.docs.hint': 'Presentaciones, manuales de laboratorio y plantillas de proyecto',
   'object.docs.module': 'M5',
@@ -1314,6 +1370,28 @@ const es: Record<string, string> = {
   'course.toolchainTitle': 'Codecraft le ayuda a "atreverse", aily-blockly le ayuda a "terminar"',
   'course.toolchainSubtitle':
     'M0 no utiliza Arduino IDE para escribir C++ manualmente, sino que emplea una cadena de herramientas de doble plataforma desarrollada por Seeed. La primera mitad: cero instalación, resultados en 5 minutos; la segunda mitad: traslade el proyecto a su propio ordenador, convirtiéndolo en un proyecto portable y evolutivo.',
+  'course.toolchainTitle.m1': 'ESPHome conecta los dispositivos, Node-RED teje el negocio',
+  'course.toolchainSubtitle.m1':
+    'Primero ESPHome + HA OS para grabar firmware y unificar el acceso; después Node-RED para orquestar procesos entre sistemas: de la automatización de una sola plataforma a la integración de negocio.',
+  'course.toolchainTitle.m2':
+    'De la configuración multimodal en la nube al despliegue local sin conexión',
+  'course.toolchainSubtitle.m2':
+    'SenseCraft AI se encarga de la configuración y validación rápidas, el puente MCP mantiene los datos de negocio en la LAN y el pipeline offline de Jetson elimina por completo la dependencia de internet.',
+  'course.toolchainTitle.m3':
+    'Meshtastic crea la malla, Node-RED la sube a la nube, PlatformIO personaliza',
+  'course.toolchainSubtitle.m3':
+    'Meshtastic resuelve la comunicación fuera de red, Node-RED conecta los datos de malla a la red pública y a los paneles de monitoreo, y PlatformIO permite adaptar el firmware del terminal.',
+  'course.toolchainTitle.m4':
+    'Inferencia en el borde con reCamera, agregación multicanal con Frigate, modelos YOLO propios',
+  'course.toolchainSubtitle.m4':
+    'De la detección en el borde plug-and-play en un punto, al análisis centralizado multicanal con NVR y al despliegue cuantizado de modelos propios: tres niveles de profundidad de una solución de visión.',
+  'course.toolchainTitle.m5': 'SenseCAP a la nube, cableado Modbus, Open API on-premise',
+  'course.toolchainSubtitle.m5':
+    'Los sensores industriales se conectan listos para usar a paneles en la nube, el bus RS485 pone en paralelo varios sensores y la Open API con Grafana construye un circuito de datos on-premise.',
+  'course.toolchainTitle.m6':
+    'De la teleoperación sin código a la captura de ingeniería determinista',
+  'course.toolchainSubtitle.m6':
+    'SenseCraft Robotics ofrece demostraciones de teleoperación listas para usar, Python + Pinocchio + Motorbridge logra la captura espacial en máquina real, y LeRobot con Isaac Sim cubre la inteligencia corporizada y la validación por simulación.',
   'course.kitsTitle':
     'Percepción · Interacción · Visión, progresión de capacidades en tres niveles',
   'course.kitsSubtitle':
@@ -1482,10 +1560,10 @@ const ptBR: Record<string, string> = {
   'object.gateway.module': 'M1',
   'object.camera.label': 'Câmera IA',
   'object.camera.hint': 'Reconhecimento visual e inferência na borda',
-  'object.camera.module': 'M3',
+  'object.camera.module': 'M4',
   'object.speaker.label': 'Dispositivo espacial',
   'object.speaker.hint': 'Array de microfones e interação por voz',
-  'object.speaker.module': 'M4',
+  'object.speaker.module': 'M2',
   'object.docs.label': 'Documentação de entrega',
   'object.docs.hint': 'Slides, manuais de experimentos e modelos de projeto',
   'object.docs.module': 'M5',
@@ -1670,6 +1748,26 @@ const ptBR: Record<string, string> = {
     'Codecraft ajuda você a "ousar fazer", aily-blockly ajuda você a "concluir"',
   'course.toolchainSubtitle':
     'O M0 não usa o Arduino IDE para escrever C++ manualmente, mas adota a cadeia de ferramentas em dois estágios desenvolvida pela Seeed. A primeira metade: zero instalação, resultados em 5 minutos; a segunda metade: traga o projeto para seu próprio computador, transformando-o em uma engenharia que pode ser levada e continuamente evoluída.',
+  'course.toolchainTitle.m1': 'ESPHome conecta os dispositivos, Node-RED costura o negócio',
+  'course.toolchainSubtitle.m1':
+    'Comece com ESPHome + HA OS para gravar firmware e unificar o acesso; depois use Node-RED para orquestrar processos entre sistemas — da automação de uma plataforma à integração de negócio.',
+  'course.toolchainTitle.m2': 'Da configuração multimodal na nuvem à implantação local offline',
+  'course.toolchainSubtitle.m2':
+    'O SenseCraft AI cuida da configuração e validação rápidas, a ponte MCP mantém os dados de negócio na LAN e o pipeline offline do Jetson elimina totalmente a dependência da internet pública.',
+  'course.toolchainTitle.m3':
+    'Meshtastic forma a malha, Node-RED leva à nuvem, PlatformIO personaliza',
+  'course.toolchainSubtitle.m3':
+    'O Meshtastic resolve a comunicação fora da rede, o Node-RED conecta os dados da malha à rede pública e aos painéis de monitoramento, e o PlatformIO permite adaptar o firmware do terminal.',
+  'course.toolchainTitle.m4':
+    'Inferência na borda com reCamera, agregação multicanal com Frigate, modelos YOLO próprios',
+  'course.toolchainSubtitle.m4':
+    'Da detecção plug-and-play em um ponto ao NVR multicanal com análise centralizada e à implantação quantizada de modelos próprios — três níveis de profundidade de uma solução de visão.',
+  'course.toolchainTitle.m5': 'SenseCAP na nuvem, cabeamento Modbus, Open API on-premise',
+  'course.toolchainSubtitle.m5':
+    'Os sensores industriais conectam prontos para uso a painéis na nuvem, o barramento RS485 coloca vários sensores em paralelo e a Open API com Grafana monta um ciclo de dados on-premise.',
+  'course.toolchainTitle.m6': 'Da teleoperação no-code à captura de engenharia determinística',
+  'course.toolchainSubtitle.m6':
+    'O SenseCraft Robotics entrega demonstrações de teleoperação prontas para uso, Python + Pinocchio + Motorbridge realiza a captura espacial na máquina real, e LeRobot com Isaac Sim cobre a inteligência corporificada e a validação por simulação.',
   'course.kitsTitle': 'Sensoriamento · Interação · Visão, progressão em três níveis',
   'course.kitsSubtitle':
     'Na versão completa, cada aluno recebe o conjunto de três peças; nos formatos reduzidos, apenas o kit correspondente. Os subkits são divididos por plataforma de hardware, não representando profundidade de domínio L1/L2/L3.',

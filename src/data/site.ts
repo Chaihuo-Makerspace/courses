@@ -28,6 +28,8 @@ export interface SiteCta extends FinalCta {
 }
 
 export interface AboutEcosystemItem {
+  /** 稳定 id，对应翻译 key `eco.<id>.*`。翻译按 id 取词，不按展示名匹配。 */
+  id: 'seeed' | 'chaihuo' | 'opc';
   name: string;
   role: string;
   description: string;
@@ -36,6 +38,8 @@ export interface AboutEcosystemItem {
 }
 
 export interface AboutValueItem {
+  /** 稳定 id，对应翻译 key `value.<id>.*`。 */
+  id: 'realHardware' | 'realScenario' | 'realConnection';
   title: string;
   description: string;
   icon: IconName;
@@ -52,6 +56,8 @@ export interface FaqItem {
 }
 
 export interface FamiliarObject {
+  /** 稳定 id，对应翻译 key `object.<id>.*`。翻译按 id 取词，不按 href 推断。 */
+  id: 'led' | 'gateway' | 'sensor' | 'camera' | 'speaker' | 'docs';
   icon: IconName;
   label: string;
   hint: string;
@@ -108,6 +114,7 @@ export const coursesFinalCta: SiteCta = {
 
 export const aboutEcosystem: AboutEcosystemItem[] = [
   {
+    id: 'seeed',
     name: 'Seeed Studio',
     role: '全球硬件产品与供应链平台',
     description: '为全球创客和企业提供硬件产品与解决方案，产品覆盖物联网、边缘计算、AI 等领域。',
@@ -115,6 +122,7 @@ export const aboutEcosystem: AboutEcosystemItem[] = [
     tag: '硬件产品',
   },
   {
+    id: 'chaihuo',
     name: '柴火创客空间',
     role: '中国创客运动先驱',
     description: '2011 年成立，中国最早的创客空间之一。提供物理空间、社区活动、项目孵化等服务。',
@@ -122,7 +130,8 @@ export const aboutEcosystem: AboutEcosystemItem[] = [
     tag: '创客空间',
   },
   {
-    name: '柴火创客 OPC 学院',
+    id: 'opc',
+    name: '柴火创客学院',
     role: '技术赋能平台',
     description: '将生态中的技术能力转化为可学习的课程，帮助个人和企业掌握新技术整合能力。',
     link: null,
@@ -132,27 +141,28 @@ export const aboutEcosystem: AboutEcosystemItem[] = [
 
 export const aboutValues: AboutValueItem[] = [
   {
+    id: 'realHardware',
     title: '真硬件',
     description: '课程使用的工具和设备，就是 Seeed Studio 的真实产品，不是教学道具。',
     icon: 'lucide:cpu',
   },
   {
+    id: 'realScenario',
     title: '真场景',
     description: '案例来自柴火生态中的真实项目，学的是已经被验证过的解决方案。',
     icon: 'lucide:map',
   },
   {
+    id: 'realConnection',
     title: '真连接',
     description: '学完不是结束，而是进入生态的开始——对接项目机会、加入人才库、持续成长。',
     icon: 'lucide:network',
   },
 ];
 
-export const aboutStats: StatItem[] = [
-  { number: '2011', label: '柴火创客空间成立' },
-  { number: '20+', label: '全国授权合作机构' },
-  { number: '4000+', label: '累计赋能人次' },
-];
+// 数据出处：柴火创客空间 2011 年成立于深圳（公开事实）。
+// Phase 0 已删除无出处的合作机构数与累计人次两项统计。
+export const aboutStats: StatItem[] = [{ number: '2011', label: '柴火创客空间成立' }];
 
 export const aboutFinalCta: SiteCta = {
   id: 'about',
@@ -187,6 +197,7 @@ export const contactFaqs: FaqItem[] = [
 
 export const homeFamiliarObjects: FamiliarObject[] = [
   {
+    id: 'led',
     icon: 'lucide:sparkles',
     label: 'AI 辅助编程',
     hint: '用自然语言让 AI 写代码',
@@ -194,6 +205,7 @@ export const homeFamiliarObjects: FamiliarObject[] = [
     href: '/courses/m0',
   },
   {
+    id: 'gateway',
     icon: 'lucide:network',
     label: '设备互联中枢',
     hint: '跨品牌设备统一管控',
@@ -201,27 +213,31 @@ export const homeFamiliarObjects: FamiliarObject[] = [
     href: '/courses/m1',
   },
   {
+    id: 'sensor',
     icon: 'lucide:message-square',
     label: '多模态 AI 交互',
     hint: '能听懂、能看见的交互终端',
-    moduleHint: 'M2',
-    href: '/courses/m2',
+    moduleHint: 'M0',
+    href: '/courses/m0',
   },
   {
+    id: 'camera',
     icon: 'lucide:wifi',
     label: '自组网通信',
     hint: '无公网也能全连通',
-    moduleHint: 'M3',
-    href: '/courses/m3',
-  },
-  {
-    icon: 'lucide:camera',
-    label: '边缘视觉 AI',
-    hint: '从事后追溯到事前阻断',
     moduleHint: 'M4',
     href: '/courses/m4',
   },
   {
+    id: 'speaker',
+    icon: 'lucide:camera',
+    label: '边缘视觉 AI',
+    hint: '从事后追溯到事前阻断',
+    moduleHint: 'M2',
+    href: '/courses/m2',
+  },
+  {
+    id: 'docs',
     icon: 'lucide:thermometer',
     label: '环境感知',
     hint: '城市到野外的全域感知',

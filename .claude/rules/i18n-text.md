@@ -30,7 +30,7 @@ expressions inside `.astro` templates.
 | Surface | Use |
 |---|---|
 | Chrome (Navbar / Footer / `<title>`) | 柴火创客学院 |
-| Formal copy (about, hero subtitles, llms.txt heading) | 柴火创客 OPC 学院 |
+| Formal copy (about, hero subtitles, llms.txt heading) | 柴火创客学院 |
 | Ecosystem reference | 柴火创客生态（Seeed Studio + 柴火创客空间） |
 | English | Chaihuo Maker Academy |
 | Japanese | 柴火創客学院 |

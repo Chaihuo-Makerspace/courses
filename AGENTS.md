@@ -6,7 +6,7 @@ work demands.
 
 ## Scope
 
-- Project is 柴火创客 OPC 学院 (Chaihuo Maker Academy) — a Chinese-language
+- Project is 柴火创客学院 (Chaihuo Maker Academy) — a Chinese-language
   marketing / 招生 / 招商 site. **Not** a docs platform, **not** a CMS-backed
   blog.
 - Source-of-truth files in this repo: `ARCHITECTURE.md` (repo map),
@@ -55,7 +55,7 @@ pnpm dev       # :3001
 pnpm check     # astro check — TypeScript / Astro validation
 pnpm lint      # biome check src — TS/JS/JSON lint + format check
 pnpm format    # biome format --write src
-pnpm build     # server output + prerendered /courses/m0..m5 + /llms.txt
+pnpm build     # server output + prerendered /llms.txt (course pages are SSR)
 ```
 
 Design system: `docs/DESIGN.md` is authoritative; `/styleguide` renders all
@@ -66,8 +66,11 @@ tokens + components (run `pnpm dev`, open `/styleguide`).
 - No test runner exists. `pnpm check` (TypeScript) and `pnpm lint` (Biome)
   must pass before considering work done.
 - After content edits, also run `pnpm build` and verify
-  `dist/client/llms.txt` reflects the change and one
-  `dist/client/courses/m*/index.html` still contains `application/ld+json`.
+  `dist/client/llms.txt` reflects the change.
+- Course detail pages are **SSR** — there is no `dist/client/courses/*`
+  artifact. Verify Course JSON-LD by starting the built server and checking
+  `curl -s localhost:<port>/courses/m0 | grep -c 'application/ld+json'`
+  returns ≥ 1.
 
 ## Related Rules
 

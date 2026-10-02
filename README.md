@@ -36,7 +36,7 @@
 
 ## 🚀 开发与部署
 
-本站基于 **Astro 6 + Tailwind CSS v4 + Preline UI v4** 构建，服务端输出模式（`@astrojs/node` standalone），课程详情页静态预渲染。
+本站基于 **Astro 6 + Tailwind CSS v4 + Preline UI v4** 构建，服务端输出模式（`@astrojs/node` standalone），课程详情页按请求渲染（SSR，以适配请求语言）。
 
 ### 本地开发
 

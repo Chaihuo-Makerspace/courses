@@ -12,7 +12,7 @@ Two surfaces exist specifically for AI consumers:
 | Surface | Source file | Pulled from | Auto-syncs when |
 |---|---|---|---|
 | `/llms.txt` | `src/pages/llms.txt.ts` (prerendered) | `modules.ts` + `tracks.ts` + `partnerships.ts` + `levelMeta` | Any field change in those data files |
-| `Course` JSON-LD in `/courses/m0..m5` `<head>` | `src/pages/courses/[slug].astro` | `Module` object (incl. `cells`, `capabilities`, `audience`) | Any module field change |
+| `Course` JSON-LD in `/courses/m0..m6` `<head>` (SSR, rendered per request) | `src/pages/courses/[slug].astro` | `Module` object (incl. `cells`, `capabilities`, `audience`) | Any module field change |
 
 ## Content edit rule
 
@@ -48,8 +48,11 @@ construction.
 ```bash
 pnpm build
 head -30 dist/client/llms.txt
-grep -l 'application/ld+json' dist/client/courses/m0/index.html
+# Course detail pages are SSR: start the built server, then curl a course page.
+node dist/server/entry.mjs &   # or: pnpm start
+curl -s localhost:3001/courses/m0 | grep -c 'application/ld+json'
 ```
 
-The first should show the updated content; the second should print the
-file path (proving the JSON-LD script tag is present).
+The first should show the updated content; the last should print a count ≥ 1
+(proving the JSON-LD script tag is present on the on-demand course page).
+There is no `dist/client/courses/*` artifact.

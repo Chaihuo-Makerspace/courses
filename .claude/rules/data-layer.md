@@ -54,7 +54,8 @@ import {
 Edits to `modules.ts` / `tracks.ts` / `partnerships.ts` also propagate to:
 
 - `/llms.txt` (auto-regenerated on `pnpm build`)
-- Course JSON-LD on `/courses/m0..m5` `<head>`
+- Course JSON-LD on `/courses/m0..m6` `<head>` (SSR — rendered on demand,
+  no `dist/client/courses/*` artifact)
 
 See `.claude/rules/llm-surfaces.md` for the full mapping and the rule on
 when to hand-edit the endpoint vs. let it auto-sync.
@@ -63,5 +64,5 @@ when to hand-edit the endpoint vs. let it auto-sync.
 
 ```bash
 pnpm check          # TypeScript validation
-pnpm build          # confirms prerender + llms.txt regeneration
+pnpm build          # confirms llms.txt regeneration (course pages are SSR)
 ```

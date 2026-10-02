@@ -19,8 +19,8 @@ export const esDict: Record<string, string> = {
   本地告警与设备控制自动化: 'Alertas Locales y Automatización de Control de Dispositivos',
   本地化部署大语言模型: 'Desplegar LLM Localmente',
   编程体验课: 'Sesión de Iniciación a la Programación',
-  '编程体验课是柴火基地车（MCV）全国巡游的标配工作坊。零安装、单一硬件、2 小时闭环、断网只是慢不会废场——这四条正是「车到人到、当天开课」最需要的性质。基地车上的分工：快闪一站 → 编程体验课；驻校两天 → 马拉松版；有网络且做 AI 主题 → 视觉体验课。':
-    'La Sesión de Iniciación a la Programación es el taller estándar de la gira nacional del Vehículo Base Móvil (MCV) de Chaihuo. Sin instalación, hardware único, ciclo de 2 horas, sin conexión solo se ralentiza pero no se cancela — estas cuatro propiedades son exactamente lo que requiere "llegar y enseñar el mismo día". División de trabajo del MCV: parada rápida → Sesión de Iniciación a la Programación; estancia de dos días en campus → Maratón; con internet y tema de IA → Sesión de Iniciación a la Visión.',
+  '编程体验课是柴火基地车全国巡游的标配工作坊。零安装、单一硬件、2 小时闭环、断网只是慢不会废场——这四条正是「车到人到、当天开课」最需要的性质。柴火基地车上的分工：快闪一站 → 编程体验课；驻校两天 → 马拉松版；有网络且做 AI 主题 → 视觉体验课。':
+    'La Sesión de Iniciación a la Programación es el taller estándar de la gira nacional del Vehículo Base Móvil Chaihuo. Sin instalación, hardware único, ciclo de 2 horas, sin conexión solo se ralentiza pero no se cancela — estas cuatro propiedades son exactamente lo que requiere "llegar y enseñar el mismo día". División de trabajo en el Vehículo Base Móvil Chaihuo: parada rápida → Sesión de Iniciación a la Programación; estancia de dos días en campus → Maratón; con internet y tema de IA → Sesión de Iniciación a la Visión.',
   '边缘 AI 图像分类 demo': 'Demo de Clasificación de Imágenes con IA en el Borde',
   '边缘 AI 主机': 'Host de IA en el Borde',
   '边缘视觉 AI': 'IA de Visión en el Borde',
@@ -32,7 +32,7 @@ export const esDict: Record<string, string> = {
   仓库管理: 'Gestión de Almacenes',
   '柴火创客学院 M0 结业认证（体验课为参与证明）。':
     'Certificado de Finalización M0 de Academia Chaihuo Maker (Certificado de Participación para Sesiones de Iniciación).',
-  柴火基地车巡游: 'Gira del Vehículo Base Móvil de Chaihuo',
+  柴火基地车巡游: 'Gira del Vehículo Base Móvil Chaihuo',
   '超声波测距、水位、土壤湿度、震动、舵机、继电器、MP3、RGB 灯带…… 做自己的项目时自由取用，不受「套件里只有这几个模块」的限制。':
     'Medición ultrasónica, nivel de agua, humedad del suelo, vibración, servomotor, relé, MP3, tira LED RGB... acceso libre al construir tu propio proyecto, sin la limitación de "solo estos módulos en el kit".',
   车库门防夹: 'Antipinzamiento de Puerta de Garaje',
