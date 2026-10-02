@@ -70,6 +70,8 @@ export interface ChipWhatData {
   intro: string;
   coreTitle: string;
   core: IconBullet[];
+  /** 准入条件的醒目注释（如「两类满足其一即可申请」），渲染在强调面板内。 */
+  coreNote?: string;
   note?: string;
   plusTitle?: string;
   plus?: string[];
@@ -144,11 +146,11 @@ export interface BaseProgram {
 }
 
 /* ------------------------------------------------------------------ */
-/* 首页 —— 渠道伙伴入口（先锋官 / 基地 / 生态分布图）                   */
+/* 首页 —— 点火人招募入口（先锋官 / 基地 / 生态分布图）                 */
 /* ------------------------------------------------------------------ */
 
 /**
- * owner 2026-10-02：站点第一受众是机构；先锋官是我们招募的渠道伙伴
+ * owner 2026-10-02：站点第一受众是机构；先锋官是柴火招募的「点火人」
  * （先学会课程，再去本地开课、推广），不是终端客户。首页只留一条入口带。
  */
 export const homeChannel: {
@@ -156,9 +158,9 @@ export const homeChannel: {
   description: string;
   links: (ChipLink & { note: string })[];
 } = {
-  title: '招募渠道伙伴',
+  title: '招募点火人与基地',
   description:
-    '先锋官是我们招募的渠道伙伴：先学会柴火的课，再在自己的城市开课、推广。有固定场地的，可以申请挂牌基地。',
+    '先锋官是柴火招募的点火人：先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。有固定场地的，可以申请挂牌基地。',
   links: [
     { label: '先锋官计划', note: '个人申请', href: '/pioneer' },
     { label: '基地计划', note: '有固定场地的机构申请', href: '/base' },
@@ -172,9 +174,9 @@ export const homeChannel: {
 
 export const pioneer: PioneerProgram = {
   hero: {
-    title: '先锋官：柴火招募的渠道伙伴',
+    title: '先锋官：柴火招募的点火人',
     description:
-      '先学会柴火的课，再在自己的城市开课、推广。柴火提供课程包、教具和认证；你负责招生、授课和本地推广。',
+      '先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。柴火提供课程包、教具和认证；你负责招生、授课和本地推广。',
     ctas: [
       { label: '立即申请', href: ecosystemApplyUrl, variant: 'primary' },
       { label: '先了解基地', href: '/base', variant: 'secondary' },
@@ -182,7 +184,7 @@ export const pioneer: PioneerProgram = {
   },
   what: {
     title: '条件与条款',
-    intro: '先锋官是柴火认证的本地渠道伙伴：学会课程，在当地开课，并向学校和机构推广。',
+    intro: '先锋官是柴火认证的点火人：学会课程，在当地开课，并向学校和机构推广。',
     coreTitle: '谁可以申请',
     core: [
       {
@@ -194,6 +196,7 @@ export const pioneer: PioneerProgram = {
         description: '有教育 / 社区资源，想引入创客课程但不一定亲自教',
       },
     ],
+    coreNote: '两类满足其一即可申请',
     note: '每个基地必须先有先锋官；先锋官也可独立运营，不挂靠基地。',
   },
   benefits: {
@@ -299,7 +302,7 @@ export const pioneer: PioneerProgram = {
 
 export const base: BaseProgram = {
   hero: {
-    title: '基地：有固定场地的渠道伙伴',
+    title: '基地：柴火认证的本地授课点',
     description:
       '有固定场地、有专人持续运营的机构可以申请挂牌基地。柴火提供教具、课程和总部派单；基地在本地开课，并为先锋官提供授课场地。',
     ctas: [
@@ -315,6 +318,7 @@ export const base: BaseProgram = {
       { title: '固定场地', description: '可承接活动与课程' },
       { title: '持续运营', description: '有专人负责、有运营计划' },
     ],
+    coreNote: '两项均需满足',
     plusTitle: '加分项',
     plus: [
       '科技馆 / 高校 Fab Lab 等公共教育空间',

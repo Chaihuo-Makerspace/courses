@@ -5,6 +5,7 @@ import SectionHeader from '../components/SectionHeader.astro';
 import FaqSection from '../components/sections/FaqSection.astro';
 import FinalCtaSection from '../components/sections/FinalCtaSection.astro';
 import ChipChain from '../components/sections/chip/ChipChain.astro';
+import ChipCriteria from '../components/sections/chip/ChipCriteria.astro';
 import ChipLedger from '../components/sections/chip/ChipLedger.astro';
 import ChipTabs from '../components/sections/chip/ChipTabs.astro';
 import { base } from '../data/ecosystem';
@@ -45,7 +46,11 @@ const relationRows = [data.relation.cards.pioneer, data.relation.cards.base].map
       <SectionHeader title={data.what.title} subtitle={data.what.intro} />
       <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
         <div class="space-y-8">
-          <ChipLedger title={data.what.coreTitle} items={data.what.core} />
+          <ChipCriteria
+            title={data.what.coreTitle}
+            items={data.what.core}
+            note={data.what.coreNote}
+          />
           {
             data.what.plus && data.what.plusTitle && (
               <ChipLedger

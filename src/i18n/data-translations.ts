@@ -6,7 +6,7 @@ import type { Locale } from './types';
 const zh: Record<string, string> = {
   'home.outcomes.title': '引入一门课，到手这四样',
   'home.outcomes.subtitle':
-    '柴火创客空间 2011 年在深圳成立，是中国最早的创客空间之一。课上用的硬件全部是 Seeed Studio 在售的产品，按 SKU 就能买到。',
+    '柴火创客空间 2011 年在深圳成立，是中国最早的创客空间之一，由 Seeed 创办。课上用的硬件就是这个产品体系自己在售的同款，按 SKU 就能买到。',
 
   'section.faqTitle': '常见问题',
   'section.scenariosTitle': '你是哪一类机构',
@@ -99,7 +99,7 @@ const en: Record<string, string> = {
 
   'home.outcomes.title': 'What you receive when you bring in one course',
   'home.outcomes.subtitle':
-    "Chaihuo Makerspace was founded in Shenzhen in 2011, one of the earliest makerspaces in China. All hardware used in class is from Seeed Studio's current catalogue and can be ordered by SKU.",
+    'Chaihuo Makerspace was founded in Shenzhen in 2011 by Seeed, one of the earliest makerspaces in China. The hardware used in class is that product ecosystem\u2019s own catalogue and can be ordered by SKU.',
 
   'outcome.hardware.label': 'Real Hardware',
   'outcome.hardware.desc': 'Each module has a reusable hardware procurement list.',
@@ -114,9 +114,9 @@ const en: Record<string, string> = {
   'faq.q1.q': 'How long from the first email to the first class?',
   'faq.q1.a':
     'Initial alignment within 3 business days; Standard Kits ship quickly; Full-Delivery and Train-the-Trainer take 2-4 weeks.',
-  'faq.q2.q': 'Must hardware kits be purchased from Seeed?',
+  'faq.q2.q': 'Must hardware kits be purchased from the original manufacturer?',
   'faq.q2.a':
-    'Bare Hardware and Standard Kits use Seeed original hardware. Partners can adapt on their own platforms.',
+    'Bare Hardware and Standard Kits use factory-original hardware, so course experiments stay consistent with the materials. That original hardware is the product line sold by the ecosystem Chaihuo Makerspace belongs to — the makerspace was founded by Seeed — and can be ordered by SKU. Partners can also adapt courses to their own hardware platforms, but lab manuals and course materials follow the original hardware.',
   'faq.q3.q': 'What does the Train-the-Trainer Kit include?',
   'faq.q3.a':
     'Hardware kit, complete course resources, and Train-the-Trainer instruction over 2-3 days.',
@@ -155,7 +155,7 @@ const en: Record<string, string> = {
   'form.A.f1': 'Hardware only, no course resources',
   'form.A.f2': 'Adaptable for in-house curriculum',
   'form.A.f3': 'Freely select M0-M6 modules',
-  'form.A.d1': 'Seeed original hardware',
+  'form.A.d1': 'Factory-original hardware and accessories',
   'form.A.d2': 'Module selection checklist',
   'form.A.d3': 'Hardware warranty and supply support',
   'form.B.title': 'Standard Teaching Kit',
@@ -275,7 +275,7 @@ const en: Record<string, string> = {
     'Every module is built around real hardware: learners assemble it, debug it and demo it in class.',
   'outcome.kit.label': 'Hardware kit and course materials',
   'outcome.kit.desc':
-    'Seeed hardware plus textbook, lab manual, teacher materials and learner assignments.',
+    "Hardware from the ecosystem's own catalogue, plus textbook, lab manual, teacher materials and learner assignments.",
   'outcome.docs.label': 'Project documents you can file',
   'outcome.docs.desc':
     'Deployment topology, configuration files, operations and acceptance documents, itemised on each module page.',
@@ -291,7 +291,7 @@ const en: Record<string, string> = {
   'history.founded.desc':
     "One of the earliest makerspaces in China. The Academy is part of Chaihuo Makerspace, so the makerspace's history is the Academy's history.",
   'history.seeed.when': 'Hardware',
-  'history.seeed.title': 'Classes use products Seeed Studio sells today',
+  'history.seeed.title': 'Classes use the same hardware the ecosystem sells',
   'history.seeed.desc':
     'Development boards, sensors and edge-computing devices can all be ordered by SKU. None of it is a teaching prop.',
   'history.academy.when': 'Courses',
@@ -330,7 +330,7 @@ const ja: Record<string, string> = {
     'M1は複数ブランドの機器を一つのローカルプラットフォームに接続し、M3は公衆網のない場所でネットワークを構築し、M5は屋外センサーのデータを回収します。ビル、防災、農業、環境分野の案件を手がけるインテグレーションチームに向いています。',
   'home.outcomes.title': '1講座を導入すると手元に届く4つのもの',
   'home.outcomes.subtitle':
-    '柴火創客空間は2011年に深圳で設立された、中国で最も早い時期のメイカースペースの一つです。授業で使うハードウェアはすべてSeeed Studioの現行製品で、SKUで購入できます。',
+    '柴火創客空間はSeeedによって2011年に深圳で設立された、中国で最も早い時期のメイカースペースの一つです。授業で使うハードウェアはその製品体系の現行製品で、SKUで購入できます。',
   'outcome.hardware.label': '本物のハードウェア',
   'outcome.hardware.desc':
     '各モジュールには再利用可能なハードウェア調達リストがあり、標準キット、自社開発ボード、アクセサリを含みます。',
@@ -346,9 +346,9 @@ const ja: Record<string, string> = {
   'faq.q1.q': '最初のメールから開講までどのくらいかかりますか？',
   'faq.q1.a':
     '初回の調整は通常3営業日以内にミーティングを設定します。標準教学キットは迅速に発送・開講可能です。フルデリバリーと講師トレーニングは、要件確認から開講まで通常2〜4週間です。',
-  'faq.q2.q': 'コースのハードウェアキットは必ずSeeedから購入する必要がありますか？',
+  'faq.q2.q': 'コースのハードウェアキットは必ず純正ハードウェアを購入する必要がありますか？',
   'faq.q2.a':
-    'Bare Hardware KitとStandard Teaching KitはSeeed純正ハードウェアを使用し、コース実験と教材の一貫性を保証します。パートナーは自社のハードウェアプラットフォームで適合させることも可能ですが、実験マニュアルとコース教材は純正ハードウェアを基準としています。',
+    'Bare Hardware KitとStandard Teaching Kitは純正ハードウェアを使用し、コース実験と教材の一貫性を保証します。その純正ハードウェアは柴火創客空間の所属する製品体系の現行製品（空間はSeeedによって設立）で、SKUで購入できます。パートナーは自社のハードウェアプラットフォームで適合させることも可能ですが、実験マニュアルとコース教材は純正ハードウェアを基準としています。',
   'faq.q3.q': 'Train-the-Trainer Kitには具体的に何が含まれていますか？',
   'faq.q3.a':
     '対応モジュールのハードウェアキット、完全なコースリソースパック、およびTrain-the-Trainer講師研修が含まれます。講師研修は通常、柴火の講師が現場で2〜3日間実施し、機関独自の講師を育成します。',
@@ -384,7 +384,7 @@ const ja: Record<string, string> = {
   'form.A.f1': 'ハードウェアとアクセサリのみ、コースリソースは含まれません',
   'form.A.f2': '自社開発コースに適合、柔軟な組み合わせが可能',
   'form.A.f3': 'M0〜M7モジュールから自由に選択',
-  'form.A.d1': 'Seeed純正ハードウェアとアクセサリ',
+  'form.A.d1': '純正ハードウェアとアクセサリ',
   'form.A.d2': 'モジュール選定リスト',
   'form.A.d3': 'ハードウェア保証と供給サポート',
   'form.B.title': 'Standard Teaching Kit',
@@ -498,7 +498,7 @@ const ja: Record<string, string> = {
     'どのモジュールも実機ハードウェアを中心に構成され、授業内で組み立て・結合調整・デモまで行います。',
   'outcome.kit.label': 'ハードウェアキットと講座資料',
   'outcome.kit.desc':
-    'Seeed製ハードウェアに加え、教材、実験マニュアル、講師用資料、受講者課題が付きます。',
+    'その製品体系の現行製品ハードウェアに加え、教材、実験マニュアル、講師用資料、受講者課題が付きます。',
   'outcome.docs.label': '保管できるプロジェクト資料',
   'outcome.docs.desc':
     '構成図、設定ファイル、運用・検収ドキュメント。各モジュールページに項目ごとに記載しています。',
@@ -514,7 +514,7 @@ const ja: Record<string, string> = {
   'history.founded.desc':
     '中国で最も早い時期のメイカースペースの一つです。学院は柴火創客空間に属しており、空間の歴史がそのまま学院の歴史です。',
   'history.seeed.when': '機器',
-  'history.seeed.title': '授業で使うのはSeeed Studioの現行製品',
+  'history.seeed.title': '授業で使うのはその製品体系の現行製品と同じハードウェア',
   'history.seeed.desc':
     '開発ボード、センサー、エッジコンピューティング機器はすべてSKUで購入できます。教育専用の模型ではありません。',
   'history.academy.when': '講座',
@@ -554,7 +554,7 @@ const es: Record<string, string> = {
     'M1 conecta dispositivos de distintas marcas a una plataforma local; M3 monta una red donde no hay conexión pública; M5 trae de vuelta los datos de sensores en campo. Indicado para equipos de integración en proyectos de edificios, emergencias, agricultura y medio ambiente.',
   'home.outcomes.title': 'Lo que recibe al incorporar un curso',
   'home.outcomes.subtitle':
-    'Chaihuo Makerspace se fundó en Shenzhen en 2011 y es uno de los primeros makerspaces de China. Todo el hardware que se usa en clase pertenece al catálogo actual de Seeed Studio y se puede pedir por SKU.',
+    'Chaihuo Makerspace fue fundado en Shenzhen en 2011 por Seeed y es uno de los primeros makerspaces de China. El hardware que se usa en clase pertenece a la propia línea de productos de ese ecosistema y se puede pedir por SKU.',
   'outcome.hardware.label': 'Hardware real',
   'outcome.hardware.desc':
     'Cada módulo incluye una lista de compra de hardware reutilizable, con kits originales, placas propias y accesorios.',
@@ -570,9 +570,9 @@ const es: Record<string, string> = {
   'faq.q1.q': '¿Cuánto se tarda desde el primer correo hasta la primera clase?',
   'faq.q1.a':
     'La primera reunión de alineación suele programarse en un plazo de 3 días hábiles; el kit de enseñanza estándar puede enviarse rápidamente para comenzar las clases; la entrega integral y la capacitación de instructores, desde la confirmación de requisitos hasta el inicio del curso, generalmente toma de 2 a 4 semanas.',
-  'faq.q2.q': '¿Es obligatorio adquirir los kits de hardware de Seeed?',
+  'faq.q2.q': '¿Es obligatorio adquirir los kits con hardware original?',
   'faq.q2.a':
-    'El kit de hardware básico y el kit de enseñanza estándar utilizan hardware original de Seeed, garantizando que los experimentos del curso coincidan con los materiales didácticos. Los socios también pueden adaptar los cursos a sus propias plataformas de hardware, pero los manuales de laboratorio y los materiales del curso se basan en el hardware original.',
+    'El kit de hardware básico y el kit de enseñanza estándar utilizan hardware original, garantizando que los experimentos del curso coincidan con los materiales didácticos. Ese hardware original es la línea de productos que vende el ecosistema al que pertenece Chaihuo Makerspace —fundado por Seeed— y se puede pedir por SKU. Los socios también pueden adaptar los cursos a sus propias plataformas de hardware, pero los manuales de laboratorio y los materiales del curso se basan en el hardware original.',
   'faq.q3.q': '¿Qué incluye exactamente el kit de capacitación de instructores?',
   'faq.q3.a':
     'Incluye el kit de hardware del módulo correspondiente, el paquete completo de recursos del curso y la capacitación Train-the-Trainer. La capacitación suele ser impartida presencialmente por instructores de Chaihuo durante 2 a 3 días, formando a los instructores propios de la institución.',
@@ -612,7 +612,7 @@ const es: Record<string, string> = {
   'form.A.f1': 'Solo hardware y accesorios, sin recursos curriculares',
   'form.A.f2': 'Adaptable a cursos propios, combinación flexible',
   'form.A.f3': 'Selección libre por módulos M0–M6',
-  'form.A.d1': 'Hardware y accesorios originales de Seeed',
+  'form.A.d1': 'Hardware y accesorios originales',
   'form.A.d2': 'Lista de selección de módulos',
   'form.A.d3': 'Garantía de hardware y soporte de suministro',
   'form.B.title': 'Kit de enseñanza estándar',
@@ -733,7 +733,7 @@ const es: Record<string, string> = {
     'Cada módulo gira en torno a hardware real: se monta, se ajusta y se demuestra en clase.',
   'outcome.kit.label': 'Kit de hardware y materiales del curso',
   'outcome.kit.desc':
-    'Hardware de Seeed más libro de texto, manual de prácticas, materiales para el docente y tareas para el alumnado.',
+    'Hardware de la propia línea de productos del ecosistema, más libro de texto, manual de prácticas, materiales para el docente y tareas para el alumnado.',
   'outcome.docs.label': 'Documentación de proyecto archivable',
   'outcome.docs.desc':
     'Topología de despliegue, archivos de configuración y documentos de operación y aceptación, detallados en la página de cada módulo.',
@@ -749,7 +749,7 @@ const es: Record<string, string> = {
   'history.founded.desc':
     'Uno de los primeros makerspaces de China. La Academia forma parte de Chaihuo Makerspace, de modo que la historia del makerspace es la de la Academia.',
   'history.seeed.when': 'Hardware',
-  'history.seeed.title': 'En clase se usan productos que Seeed Studio vende hoy',
+  'history.seeed.title': 'En clase se usa el mismo hardware que vende el ecosistema',
   'history.seeed.desc':
     'Placas de desarrollo, sensores y equipos de computación en el borde se pueden pedir por SKU. Nada es material de utilería.',
   'history.academy.when': 'Cursos',
@@ -789,7 +789,7 @@ const ptBR: Record<string, string> = {
     'O M1 conecta dispositivos de marcas diferentes a uma plataforma local; o M3 monta uma rede onde não há conexão pública; o M5 traz de volta os dados de sensores em campo. Indicado para equipes de integração em projetos de edifícios, emergências, agricultura e meio ambiente.',
   'home.outcomes.title': 'O que você recebe ao adotar um curso',
   'home.outcomes.subtitle':
-    'O Chaihuo Makerspace foi fundado em Shenzhen em 2011 e é um dos primeiros makerspaces da China. Todo o hardware usado em aula faz parte do catálogo atual da Seeed Studio e pode ser pedido por SKU.',
+    'O Chaihuo Makerspace foi fundado em Shenzhen em 2011 pela Seeed e é um dos primeiros makerspaces da China. O hardware usado em aula faz parte da própria linha de produtos desse ecossistema e pode ser pedido por SKU.',
   'outcome.hardware.label': 'Hardware real',
   'outcome.hardware.desc':
     'Cada módulo possui uma lista reutilizável de aquisição de hardware, incluindo kits originais, placas proprietárias e acessórios.',
@@ -805,9 +805,9 @@ const ptBR: Record<string, string> = {
   'faq.q1.q': 'Quanto tempo leva do primeiro e-mail até a primeira aula?',
   'faq.q1.a':
     'O alinhamento inicial geralmente é agendado em até 3 dias úteis. O Kit de Ensino Padrão pode ser enviado rapidamente para início das aulas. A entrega completa e o treinamento de instrutores levam geralmente de 2 a 4 semanas, desde a confirmação dos requisitos até o início das aulas.',
-  'faq.q2.q': 'Os kits de hardware do curso precisam ser adquiridos da Seeed?',
+  'faq.q2.q': 'Os kits de hardware do curso precisam ser adquiridos com hardware original?',
   'faq.q2.a':
-    'O Bare Hardware Kit e o Standard Teaching Kit utilizam hardware original Seeed, garantindo consistência entre os experimentos do curso e os materiais didáticos. Parceiros também podem adaptar em suas próprias plataformas de hardware, mas os manuais de experimentos e materiais do curso tomam como referência o hardware original.',
+    'O Bare Hardware Kit e o Standard Teaching Kit utilizam hardware original, garantindo consistência entre os experimentos do curso e os materiais didáticos. Esse hardware original é a linha de produtos do ecossistema ao qual o Chaihuo Makerspace pertence — fundado pela Seeed — e pode ser pedido por SKU. Parceiros também podem adaptar em suas próprias plataformas de hardware, mas os manuais de experimentos e materiais do curso tomam como referência o hardware original.',
   'faq.q3.q': 'O que o Train-the-Trainer Kit inclui especificamente?',
   'faq.q3.a':
     'Inclui o kit de hardware do módulo correspondente, o pacote completo de recursos do curso e o treinamento Train-the-Trainer. O treinamento geralmente é ministrado presencialmente por instrutores Chaihuo, com duração de 2 a 3 dias, para formar instrutores próprios da instituição.',
@@ -846,7 +846,7 @@ const ptBR: Record<string, string> = {
   'form.A.f1': 'Apenas hardware e acessórios, sem recursos de curso',
   'form.A.f2': 'Adaptável a currículos próprios, combinação flexível',
   'form.A.f3': 'Seleção livre por módulos M0–M6',
-  'form.A.d1': 'Hardware e acessórios originais Seeed',
+  'form.A.d1': 'Hardware e acessórios originais',
   'form.A.d2': 'Lista de seleção de módulos',
   'form.A.d3': 'Garantia de hardware e suporte ao fornecimento',
   'form.B.title': 'Standard Teaching Kit',
@@ -964,7 +964,7 @@ const ptBR: Record<string, string> = {
     'Cada módulo gira em torno de hardware real: montagem, ajuste e demonstração acontecem em aula.',
   'outcome.kit.label': 'Kit de hardware e materiais do curso',
   'outcome.kit.desc':
-    'Hardware da Seeed mais apostila, manual de experimentos, materiais do professor e tarefas dos alunos.',
+    'Hardware da própria linha de produtos do ecossistema, mais apostila, manual de experimentos, materiais do professor e tarefas dos alunos.',
   'outcome.docs.label': 'Documentação de projeto arquivável',
   'outcome.docs.desc':
     'Topologia de implantação, arquivos de configuração e documentos de operação e aceitação, detalhados na página de cada módulo.',
@@ -980,7 +980,7 @@ const ptBR: Record<string, string> = {
   'history.founded.desc':
     'Um dos primeiros makerspaces da China. A Academia faz parte do Chaihuo Makerspace, portanto a história do makerspace é a da Academia.',
   'history.seeed.when': 'Hardware',
-  'history.seeed.title': 'As aulas usam produtos que a Seeed Studio vende hoje',
+  'history.seeed.title': 'Em aula, usa-se o mesmo hardware que o ecossistema vende',
   'history.seeed.desc':
     'Placas de desenvolvimento, sensores e equipamentos de computação de borda podem ser pedidos por SKU. Nada é material cenográfico.',
   'history.academy.when': 'Cursos',

@@ -15,7 +15,7 @@ export const GET: APIRoute = (context) => {
   lines.push('# 柴火创客学院');
   lines.push('');
   lines.push(
-    '> 柴火创客学院隶属于柴火创客空间（2011 年在深圳成立，中国最早的创客空间之一），课程使用 Seeed Studio 在售的硬件。' +
+    '> 柴火创客学院隶属于柴火创客空间（2011 年在深圳成立，中国最早的创客空间之一）；柴火创客空间由 Seeed 创办，课程用的硬件就是这个体系自己在售的产品（按 SKU 可购）。' +
       '我们培养人掌握新技术整合能力，不提供解决方案：提供的是课程、硬件套件和讲师培训，教会机构自己的团队做交付。',
   );
   lines.push('');
@@ -87,9 +87,11 @@ export const GET: APIRoute = (context) => {
     `- [合作咨询](${base}/contact): 三类合作对象与四种合作形态，邮件 ${contactEmail} 联系`,
   );
   lines.push(
-    `- [先锋官计划](${base}/pioneer): 招募个人渠道伙伴：先学会课程，再在本地开课、推广；注册跳转 map.seeed.cc`,
+    `- [先锋官计划](${base}/pioneer): 招募点火人：先学会课程，再在自己的城市开课、推广，把创客教育的火点到更多地方；注册跳转 map.seeed.cc`,
   );
-  lines.push(`- [基地计划](${base}/base): 招募有固定场地的渠道伙伴；注册跳转 map.seeed.cc`);
+  lines.push(
+    `- [基地计划](${base}/base): 招募有固定场地的机构，挂牌柴火认证的本地授课点；注册跳转 map.seeed.cc`,
+  );
   lines.push(`- [创客生态分布图](https://map.seeed.cc): 全球柴火生态节点地图与注册入口`);
   lines.push('');
 
