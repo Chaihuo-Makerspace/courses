@@ -5,6 +5,7 @@ import SectionHeader from '../components/SectionHeader.astro';
 import FaqSection from '../components/sections/FaqSection.astro';
 import FinalCtaSection from '../components/sections/FinalCtaSection.astro';
 import ChipChain from '../components/sections/chip/ChipChain.astro';
+import ChipCriteria from '../components/sections/chip/ChipCriteria.astro';
 import ChipLedger from '../components/sections/chip/ChipLedger.astro';
 import ChipTabs from '../components/sections/chip/ChipTabs.astro';
 import { pioneer } from '../data/ecosystem';
@@ -41,7 +42,11 @@ const cta = {
       <SectionHeader title={data.what.title} subtitle={data.what.intro} />
       <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
         <div>
-          <ChipLedger title={data.what.coreTitle} items={data.what.core} />
+          <ChipCriteria
+            title={data.what.coreTitle}
+            items={data.what.core}
+            note={data.what.coreNote}
+          />
           {data.what.note && (
             <p class="mt-4 border-l-2 border-brand-red pl-4 text-sm leading-relaxed text-neutral-8">
               {data.what.note}

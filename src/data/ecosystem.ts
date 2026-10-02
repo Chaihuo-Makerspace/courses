@@ -70,6 +70,8 @@ export interface ChipWhatData {
   intro: string;
   coreTitle: string;
   core: IconBullet[];
+  /** 准入条件的醒目注释（如「两类满足其一即可申请」），渲染在强调面板内。 */
+  coreNote?: string;
   note?: string;
   plusTitle?: string;
   plus?: string[];
@@ -194,6 +196,7 @@ export const pioneer: PioneerProgram = {
         description: '有教育 / 社区资源，想引入创客课程但不一定亲自教',
       },
     ],
+    coreNote: '两类满足其一即可申请',
     note: '每个基地必须先有先锋官；先锋官也可独立运营，不挂靠基地。',
   },
   benefits: {
@@ -315,6 +318,7 @@ export const base: BaseProgram = {
       { title: '固定场地', description: '可承接活动与课程' },
       { title: '持续运营', description: '有专人负责、有运营计划' },
     ],
+    coreNote: '两项均需满足',
     plusTitle: '加分项',
     plus: [
       '科技馆 / 高校 Fab Lab 等公共教育空间',

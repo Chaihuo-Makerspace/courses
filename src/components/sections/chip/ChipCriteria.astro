@@ -1,0 +1,33 @@
+---
+// 准入条件的强调面板：/pioneer「谁可以申请」与 /base「准入标准」。
+// 柔黄面板 + 双卡片 + 底部醒目注释；黄面板是全站通用强调面（见课程详情页高亮区块）。
+interface Props {
+  title: string;
+  items: { title: string; description?: string }[];
+  /** 醒目注释（如「两类满足其一即可申请」），渲染在面板底部。 */
+  note?: string;
+}
+
+const { title, items, note } = Astro.props as Props;
+---
+
+<div class="rounded-lg border border-neutral-3 bg-brand-yellow-light p-5 sm:p-6">
+  <h3 class="text-base font-bold text-brand-black">{title}</h3>
+  <ul class="mt-4 grid gap-px overflow-hidden rounded-md border border-neutral-3 bg-neutral-3 sm:grid-cols-2">
+    {
+      items.map((item) => (
+        <li class="bg-background p-4">
+          <p class="text-sm font-bold text-brand-black">{item.title}</p>
+          {item.description && (
+            <p class="mt-1 text-sm leading-relaxed text-neutral-8">{item.description}</p>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+  {
+    note && (
+      <p class="mt-4 border-t border-neutral-3 pt-3.5 text-sm font-bold text-brand-black">{note}</p>
+    )
+  }
+</div>

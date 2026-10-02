@@ -109,6 +109,7 @@ const zhToEn: Record<string, string> = {
 
   // 基地 · 什么是基地
   '准入标准（2 项核心）': 'Admission Criteria (2 Core Requirements)',
+  两项均需满足: 'Both requirements must be met',
   固定场地: 'Fixed Venue',
   可承接活动与课程: 'Able to host events and courses',
   持续运营: 'Ongoing Operation',
@@ -198,6 +199,7 @@ const zhToEn: Record<string, string> = {
   '先锋官是柴火认证的点火人：学会课程，在当地开课，并向学校和机构推广。':
     'A Pioneer is an Igniter certified by Chaihuo: they learn the courses, run classes locally and promote them to schools and organisations.',
   谁可以申请: 'Who can apply',
+  两类满足其一即可申请: 'Meeting either profile qualifies you to apply',
   柴火提供什么: 'What Chaihuo provides',
   'PPT + md 格式，可以自行修改和二次创作': 'PPT + md format; you may modify and rework it',
   收益来自哪里: 'Where the income comes from',
@@ -291,6 +293,7 @@ const zhToJa: Record<string, string> = {
     '第 1 期は拠点 10 か所 + パイオニア 20 名、先着順で評価。申込フォームにご記入いただければ、コミュニティマネージャーが 3 営業日以内にご連絡します。',
   联系我们: 'お問い合わせ',
   '准入标准（2 项核心）': '参入基準（コア 2 項目）',
+  两项均需满足: '両方の条件を満たす必要があります',
   固定场地: '固定会場',
   可承接活动与课程: 'イベントと講座を開催可能',
   持续运营: '継続運営',
@@ -365,6 +368,7 @@ const zhToJa: Record<string, string> = {
   '先锋官是柴火认证的点火人：学会课程，在当地开课，并向学校和机构推广。':
     'パイオニアは柴火が認定する点火人です。講座を習得し、地元で開講し、学校や団体に普及します。',
   谁可以申请: '応募できる人',
+  两类满足其一即可申请: 'どちらか一方のタイプに該当すれば応募できます',
   柴火提供什么: '柴火が提供するもの',
   'PPT + md 格式，可以自行修改和二次创作': 'PPT＋md形式。自由に改変・再構成できます',
   收益来自哪里: '収益の出どころ',
@@ -461,6 +465,7 @@ const zhToEs: Record<string, string> = {
     'La fase 1 cubre 10 bases + 20 pioneros: primero en llegar, primero en evaluarse. Completa la solicitud y un community manager te contactará en 3 días hábiles.',
   联系我们: 'Contáctanos',
   '准入标准（2 项核心）': 'Criterios de admisión (2 requisitos clave)',
+  两项均需满足: 'Se deben cumplir ambos requisitos',
   固定场地: 'Espacio fijo',
   可承接活动与课程: 'Capaz de albergar eventos y cursos',
   持续运营: 'Operación continua',
@@ -538,6 +543,7 @@ const zhToEs: Record<string, string> = {
   '先锋官是柴火认证的点火人：学会课程，在当地开课，并向学校和机构推广。':
     'Un Pionero es un Ignitor certificado por Chaihuo: aprende los cursos, imparte clases en su zona y los promueve entre centros educativos y organizaciones.',
   谁可以申请: 'Quién puede solicitarlo',
+  两类满足其一即可申请: 'Basta con cumplir uno de los dos perfiles para solicitarlo',
   柴火提供什么: 'Qué aporta Chaihuo',
   'PPT + md 格式，可以自行修改和二次创作': 'Formato PPT + md; puede modificarlo y reelaborarlo',
   收益来自哪里: 'De dónde vienen los ingresos',
@@ -643,6 +649,7 @@ const zhToPt: Record<string, string> = {
   联系我们: 'Fale Conosco',
 
   '准入标准（2 项核心）': 'Critérios de Admissão (2 Requisitos Essenciais)',
+  两项均需满足: 'Os dois requisitos devem ser atendidos',
   固定场地: 'Espaço Fixo',
   可承接活动与课程: 'Pode sediar eventos e cursos',
   持续运营: 'Operação Contínua',
@@ -728,6 +735,7 @@ const zhToPt: Record<string, string> = {
   '先锋官是柴火认证的点火人：学会课程，在当地开课，并向学校和机构推广。':
     'Um Pioneiro é um Ignitor certificado pela Chaihuo: aprende os cursos, ministra aulas na sua região e os divulga a escolas e organizações.',
   谁可以申请: 'Quem pode se candidatar',
+  两类满足其一即可申请: 'Basta atender a um dos dois perfis para se candidatar',
   柴火提供什么: 'O que a Chaihuo fornece',
   'PPT + md 格式，可以自行修改和二次创作': 'Formato PPT + md; você pode modificar e reelaborar',
   收益来自哪里: 'De onde vem a receita',
