@@ -12,6 +12,12 @@ interface Props {
 
 const { module, locale } = Astro.props as Props;
 const formats = module.formats;
+
+// 「体验课」tier 的 footnote 以模板句开头（重复 L1 定义、与模块无关）。
+// 渲染时剥掉模板句，只保留模块专属的「不含…」边界说明。仅命中已知模板开头才剥离。
+const TASTER_FOOTNOTE_TEMPLATE =
+  /^(?:体验课目标是「看得懂、能讲解、能演示」，|The taster session goal is|体験講座の目標は|El objetivo de la clase de experiencia es|O objetivo da aula experimental e)[^。.]*[。.]\s*/;
+const cleanFootnote = (footnote: string) => footnote.replace(TASTER_FOOTNOTE_TEMPLATE, '');
 ---
 
 {
@@ -56,7 +62,7 @@ const formats = module.formats;
               </ul>
 
               <p class="px-5 py-3.5 border-t border-neutral-3 text-xs text-neutral-7 leading-relaxed">
-                {tier.footnote}
+                {cleanFootnote(tier.footnote)}
               </p>
             </li>
           ))}

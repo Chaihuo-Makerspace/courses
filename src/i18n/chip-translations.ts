@@ -72,7 +72,7 @@ const zhToEn: Record<string, string> = {
     'From kits, accounts, and course packs to certification — everything you need to start',
   'M0 教具 5 套': '5 × M0 Kits',
   '赠送，不回收': 'Free, never taken back',
-  'CodeCraft 账号 5 个': '5 CodeCraft Accounts',
+  'Codecraft 账号 5 个': '5 Codecraft Accounts',
   '365 天 / 5 席位': '365 days / 5 seats',
   课程包: 'Course Pack',
   'PPT + md 格式，可魔改、可二次创作': 'PPT + MD formats — remixable and re-editable',
@@ -126,14 +126,14 @@ const zhToEn: Record<string, string> = {
 
   // 先锋官 · FAQ
   '第一批名额多少？': 'How many spots are in the first batch?',
-  '第一阶段 10 基地 + 20 先锋官，已有约 70 人意向报名，先到先评估。':
-    'Phase 1 covers 10 bases + 20 pioneers; about 70 people have already registered interest — first come, first evaluated.',
+  '第一阶段 10 基地 + 20 先锋官，先到先评估。':
+    'Phase 1 covers 10 bases + 20 pioneers; first come, first evaluated.',
   '没选上怎么办？': "What if I'm not selected?",
   '第二期、第三期陆续开放；也可选择交保证金提前参与作为预备。第一批报名者优先纳入后续筛选。':
     'Phase 2 and 3 will open later; you can also join early as a reserve with a deposit. First-batch applicants get priority in later rounds.',
   '需要交钱吗？': 'Is there a fee?',
-  'M0 教具赠送不回收；M1–M6 教具保证金租赁制，退出全退。具体金额以协议 v2.5 为准。':
-    'M0 kits are free and never taken back; M1–M6 kits use a deposit-based rental system, fully refundable on exit. Exact amounts follow agreement v2.5.',
+  'M0 教具赠送不回收；M1–M6 教具保证金租赁制，退出全退。':
+    'M0 kits are free and never taken back; M1–M6 kits use a deposit-based rental system, fully refundable on exit.',
   '不懂编程能当先锋官吗？': 'Can I be a Pioneer without coding skills?',
   '可以。Codecraft 沙盒零安装、浏览器即用，AI 帮你写代码。任何有上课经验的老师，跑一遍流程就能上课。':
     'Yes. The Codecraft sandbox needs zero installation — it runs in the browser and AI writes the code. Any teacher with classroom experience can run the flow and start teaching.',
@@ -175,7 +175,7 @@ const zhToEn: Record<string, string> = {
   'M0 教具': 'M0 Kits',
   '5 套（赠送不回收）': '5 (free, not taken back)',
   '10 套（基地内共用）': '10 (shared within the base)',
-  'CodeCraft 账号': 'CodeCraft Accounts',
+  'Codecraft 账号': 'Codecraft Accounts',
   '5 个（365 天 / 5 席位）': '5 (365 days / 5 seats)',
   '10 个': '10',
   登上地图: 'On the map',
@@ -294,7 +294,7 @@ const zhToJa: Record<string, string> = {
     'キット・アカウントからコースパック・認証まで、スタートに必要なものがすべて揃います',
   'M0 教具 5 套': 'M0 キット 5 セット',
   '赠送，不回收': '贈呈・回収なし',
-  'CodeCraft 账号 5 个': 'CodeCraft アカウント 5 つ',
+  'Codecraft 账号 5 个': 'Codecraft アカウント 5 つ',
   '365 天 / 5 席位': '365 日 / 5 席',
   课程包: 'コースパック',
   'PPT + md 格式，可魔改、可二次创作': 'PPT + md 形式、自由にカスタマイズ・二次創作可能',
@@ -339,14 +339,14 @@ const zhToJa: Record<string, string> = {
   '参照校园大使机制：每人定一个教具，做项目 + 录课，审核通过才发证。不是给了教具就是先锋官——要做出来、讲出来。':
     'キャンパスアンバサダー制度と同じ：各自キットを 1 つ選び、プロジェクト + 録画、審査通過で認証発行。キットをもらっただけでパイオニアにはなれません——作り、教えることが必要です。',
   '第一批名额多少？': '第 1 期の募集人数は？',
-  '第一阶段 10 基地 + 20 先锋官，已有约 70 人意向报名，先到先评估。':
-    '第 1 期は拠点 10 か所 + パイオニア 20 名、すでに約 70 名が参加意向、先着順で評価します。',
+  '第一阶段 10 基地 + 20 先锋官，先到先评估。':
+    '第 1 期は拠点 10 か所 + パイオニア 20 名、先着順で評価します。',
   '没选上怎么办？': '選ばれなかったら？',
   '第二期、第三期陆续开放；也可选择交保证金提前参与作为预备。第一批报名者优先纳入后续筛选。':
     '第 2 期・第 3 期は順次開放。保証金を納めれば予備として先行参加も可能。第 1 期の申込者はその後の選考で優先されます。',
   '需要交钱吗？': '費用はかかりますか？',
-  'M0 教具赠送不回收；M1–M6 教具保证金租赁制，退出全退。具体金额以协议 v2.5 为准。':
-    'M0 キットは贈呈で回収なし。M1–M6 キットは保証金レンタル制で、退会時は全額返金。金額の詳細は契約書 v2.5 に準じます。',
+  'M0 教具赠送不回收；M1–M6 教具保证金租赁制，退出全退。':
+    'M0 キットは贈呈で回収なし。M1–M6 キットは保証金レンタル制で、退会時は全額返金。',
   '不懂编程能当先锋官吗？': 'プログラミングが分からなくてもパイオニアになれますか？',
   '可以。Codecraft 沙盒零安装、浏览器即用，AI 帮你写代码。任何有上课经验的老师，跑一遍流程就能上课。':
     'なれます。Codecraft サンドボックスはインストール不要、ブラウザですぐ使え、AI がコードを書きます。授業経験のある先生なら、流れを一度試せばそのまま授業ができます。',
@@ -380,7 +380,7 @@ const zhToJa: Record<string, string> = {
   'M0 教具': 'M0 キット',
   '5 套（赠送不回收）': '5 セット（贈呈・回収なし）',
   '10 套（基地内共用）': '10 セット（拠点内で共用）',
-  'CodeCraft 账号': 'CodeCraft アカウント',
+  'Codecraft 账号': 'Codecraft アカウント',
   '5 个（365 天 / 5 席位）': '5 つ（365 日 / 5 席）',
   '10 个': '10 つ',
   登上地图: '地図に掲載',
@@ -488,7 +488,7 @@ const zhToEs: Record<string, string> = {
     'De kits y cuentas a paquetes de cursos y certificación: todo para empezar',
   'M0 教具 5 套': '5 kits M0',
   '赠送，不回收': 'Regalo, no se recuperan',
-  'CodeCraft 账号 5 个': '5 cuentas de CodeCraft',
+  'Codecraft 账号 5 个': '5 cuentas de Codecraft',
   '365 天 / 5 席位': '365 días / 5 plazas',
   课程包: 'Paquete de cursos',
   'PPT + md 格式，可魔改、可二次创作': 'En formato PPT + md: personalizable y editable',
@@ -536,14 +536,14 @@ const zhToEs: Record<string, string> = {
   '参照校园大使机制：每人定一个教具，做项目 + 录课，审核通过才发证。不是给了教具就是先锋官——要做出来、讲出来。':
     'Como los embajadores de campus: cada uno elige un kit, hace un proyecto y graba una clase; la certificación llega tras la revisión. Los kits no te hacen Pionero: hay que crearlo y enseñarlo.',
   '第一批名额多少？': '¿Cuántas plazas hay en el primer grupo?',
-  '第一阶段 10 基地 + 20 先锋官，已有约 70 人意向报名，先到先评估。':
-    'La fase 1 incluye 10 bases + 20 pioneros; unas 70 personas ya mostraron interés: primero en llegar, primero en evaluarse.',
+  '第一阶段 10 基地 + 20 先锋官，先到先评估。':
+    'La fase 1 incluye 10 bases + 20 pioneros; primero en llegar, primero en evaluarse.',
   '没选上怎么办？': '¿Y si no me seleccionan?',
   '第二期、第三期陆续开放；也可选择交保证金提前参与作为预备。第一批报名者优先纳入后续筛选。':
     'Las fases 2 y 3 se abrirán luego; también puedes adelantarte como reserva con un depósito. El primer grupo tiene prioridad en las siguientes rondas.',
   '需要交钱吗？': '¿Hay que pagar?',
-  'M0 教具赠送不回收；M1–M6 教具保证金租赁制，退出全退。具体金额以协议 v2.5 为准。':
-    'Los kits M0 son un regalo; los M1–M6 se alquilan con depósito, reembolsable al salir. Los montos siguen el acuerdo v2.5.',
+  'M0 教具赠送不回收；M1–M6 教具保证金租赁制，退出全退。':
+    'Los kits M0 son un regalo; los M1–M6 se alquilan con depósito, reembolsable al salir.',
   '不懂编程能当先锋官吗？': '¿Puedo ser Pionero sin saber programar?',
   '可以。Codecraft 沙盒零安装、浏览器即用，AI 帮你写代码。任何有上课经验的老师，跑一遍流程就能上课。':
     'Sí. El sandbox de Codecraft no requiere instalación: corre en el navegador y la IA escribe el código. Cualquier docente puede empezar a enseñar tras probar el flujo.',
@@ -580,7 +580,7 @@ const zhToEs: Record<string, string> = {
   'M0 教具': 'Kits M0',
   '5 套（赠送不回收）': '5 (regalo, no se recuperan)',
   '10 套（基地内共用）': '10 (compartidos en la Base)',
-  'CodeCraft 账号': 'Cuentas de CodeCraft',
+  'Codecraft 账号': 'Cuentas de Codecraft',
   '5 个（365 天 / 5 席位）': '5 (365 días / 5 plazas)',
   '10 个': '10',
   登上地图: 'En el mapa',
@@ -695,7 +695,7 @@ const zhToPt: Record<string, string> = {
     'De kits e contas a pacotes de cursos e certificação — tudo o que você precisa para começar',
   'M0 教具 5 套': '5 kits M0',
   '赠送，不回收': 'Grátis, sem devolução',
-  'CodeCraft 账号 5 个': '5 contas CodeCraft',
+  'Codecraft 账号 5 个': '5 contas Codecraft',
   '365 天 / 5 席位': '365 dias / 5 vagas',
   课程包: 'Pacote de Cursos',
   'PPT + md 格式，可魔改、可二次创作': 'Formatos PPT + md — fáceis de adaptar e remixar',
@@ -747,14 +747,14 @@ const zhToPt: Record<string, string> = {
     'Inspirado no mecanismo de embaixadores de campus: cada pessoa escolhe um kit, faz um projeto e grava uma aula — a certificação sai só após a revisão. Ter kits não torna você um Pioneiro — é preciso construir e ensinar.',
 
   '第一批名额多少？': 'Quantas vagas há na primeira turma?',
-  '第一阶段 10 基地 + 20 先锋官，已有约 70 人意向报名，先到先评估。':
-    'A fase 1 tem 10 bases + 20 pioneiros; cerca de 70 pessoas já demonstraram interesse — quem chega primeiro é avaliado primeiro.',
+  '第一阶段 10 基地 + 20 先锋官，先到先评估。':
+    'A fase 1 tem 10 bases + 20 pioneiros; quem chega primeiro é avaliado primeiro.',
   '没选上怎么办？': 'E se eu não for selecionado?',
   '第二期、第三期陆续开放；也可选择交保证金提前参与作为预备。第一批报名者优先纳入后续筛选。':
     'As fases 2 e 3 serão abertas em breve; você também pode participar antes como reserva com caução. Quem se inscreveu no primeiro lote tem prioridade nas seleções seguintes.',
   '需要交钱吗？': 'Preciso pagar alguma coisa?',
-  'M0 教具赠送不回收；M1–M6 教具保证金租赁制，退出全退。具体金额以协议 v2.5 为准。':
-    'Os kits M0 são grátis e não são devolvidos; os kits M1–M6 usam locação com caução, com reembolso total ao sair. Os valores exatos seguem o acordo v2.5.',
+  'M0 教具赠送不回收；M1–M6 教具保证金租赁制，退出全退。':
+    'Os kits M0 são grátis e não são devolvidos; os kits M1–M6 usam locação com caução, com reembolso total ao sair.',
   '不懂编程能当先锋官吗？': 'Posso ser Pioneiro sem saber programar?',
   '可以。Codecraft 沙盒零安装、浏览器即用，AI 帮你写代码。任何有上课经验的老师，跑一遍流程就能上课。':
     'Sim. O sandbox Codecraft não exige instalação — roda no navegador e a IA escreve o código. Qualquer professor com experiência em sala de aula segue o fluxo e começa a ensinar.',
@@ -793,7 +793,7 @@ const zhToPt: Record<string, string> = {
   'M0 教具': 'Kits M0',
   '5 套（赠送不回收）': '5 (grátis, sem devolução)',
   '10 套（基地内共用）': '10 (compartilhados na base)',
-  'CodeCraft 账号': 'Contas CodeCraft',
+  'Codecraft 账号': 'Contas Codecraft',
   '5 个（365 天 / 5 席位）': '5 (365 dias / 5 vagas)',
   '10 个': '10',
   登上地图: 'No mapa',
