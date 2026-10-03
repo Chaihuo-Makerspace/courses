@@ -88,7 +88,7 @@ export const coursesFinalCta: SiteCta = {
   id: 'courses',
   title: '定了模块和深度，就可以谈怎么开课。',
   description:
-    '告诉我们模块、深度（L1 / L2 / L3）和班级规模。按班型与规模报价，邮件后 3 个工作日内给方案。',
+    '课程根据开课人数、模块深度与所需硬件套件核算预算。发邮件说明你的机构类型、选定模块与计划排期，教研团队在 3 个工作日内回复合作建议与清单。',
   primary: 'contact',
   secondary: 'about',
 };
@@ -97,7 +97,8 @@ export const coursesFinalCta: SiteCta = {
 export const moduleFinalCta: SiteCta = {
   id: 'module',
   title: '把 {code} 排进你的课表',
-  description: '按班型与规模报价。发邮件说明人数和想上的深度，3 个工作日内给方案。',
+  description:
+    '开课预算根据学员规模与硬件套件核算。发邮件说明预期人数与目标深度，我们在 3 个工作日内提供详细排课与配置方案。',
   primary: 'contact',
   secondary: 'courses',
 };
