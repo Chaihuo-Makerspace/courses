@@ -61,7 +61,7 @@ const zh: TranslationDict = {
   'about.title': '关于学院',
   'about.hero.title': '柴火创客学院',
   'about.hero.description':
-    '我们培养人掌握新技术整合能力，让团队自己能把解决方案部署落地。课程从柴火创客空间十多年的项目和社区经验里整理出来，面向院校、集成商和企业。学院隶属于柴火创客空间，空间由 Seeed 创办，课上用的都是其在售的量产硬件。',
+    '我们培养人掌握新技术整合能力，让团队自己能把解决方案部署落地。课程面向院校、集成商和企业。',
 
   // Contact
   'contact.title': '合作咨询',
@@ -165,7 +165,7 @@ const en: TranslationDict = {
   'about.title': 'About the Academy',
   'about.hero.title': 'Chaihuo Maker Academy',
   'about.hero.description':
-    'We train people to integrate new technology, so their own teams can deploy solutions themselves. The courses are distilled from more than a decade of projects and community work at Chaihuo Makerspace and are offered to schools, integrators and enterprises. The Academy is part of Chaihuo Makerspace, founded by Seeed, and teaches with its commercial production hardware.',
+    'We train people to integrate new technology, so their own teams can deploy solutions themselves. The courses are offered to schools, integrators and enterprises.',
 
   'contact.title': 'Partnership',
   'contact.hero.title': 'Three kinds of organisation, four ways to work together',
@@ -265,7 +265,7 @@ const ja: TranslationDict = {
   'about.title': '学院について',
   'about.hero.title': '柴火創客学院',
   'about.hero.description':
-    '私たちは新しい技術を統合する力を持つ人材を育て、チームが自らソリューションを導入・展開できるようにします。講座は柴火創客空間が10年以上積み重ねてきたプロジェクトとコミュニティの経験を整理して作り、学校、インテグレーター、企業向けに提供しています。学院はSeeedによって設立された柴火創客空間に属し、その現行量産ハードウェアを用いて授業を行います。',
+    '私たちは新しい技術を統合する力を持つ人材を育て、チームが自らソリューションを導入・展開できるようにします。講座は学校、インテグレーター、企業向けに提供しています。',
 
   'contact.title': 'パートナーシップ',
   'contact.hero.title': '3種類の機関、4つの協業形態',
@@ -367,7 +367,7 @@ const es: TranslationDict = {
   'about.title': 'Acerca de la Academia',
   'about.hero.title': 'Academia Chaihuo Maker',
   'about.hero.description':
-    'Formamos a personas para que sepan integrar nuevas tecnologías, de modo que su propio equipo pueda desplegar soluciones. Los cursos recogen más de una década de proyectos y trabajo comunitario en Chaihuo Makerspace y están dirigidos a centros educativos, integradores y empresas. La Academia forma parte de Chaihuo Makerspace, fundado por Seeed, y enseña con su hardware estándar de producción.',
+    'Formamos a personas para que sepan integrar nuevas tecnologías, de modo que su propio equipo pueda desplegar soluciones. Los cursos están dirigidos a centros educativos, integradores y empresas.',
 
   'contact.title': 'Colaboración',
   'contact.hero.title': 'Tres tipos de organización, cuatro formas de colaborar',
@@ -469,7 +469,7 @@ const ptBR: TranslationDict = {
   'about.title': 'Sobre a Academia',
   'about.hero.title': 'Academia Chaihuo Maker',
   'about.hero.description':
-    'Formamos pessoas para integrar novas tecnologias, para que a própria equipe consiga implantar soluções. Os cursos reúnem mais de uma década de projetos e trabalho comunitário no Chaihuo Makerspace e são oferecidos a escolas, integradores e empresas. A Academia integra o Chaihuo Makerspace, fundado pela Seeed, e utiliza seu hardware comercial de produção no ensino.',
+    'Formamos pessoas para integrar novas tecnologias, para que a própria equipe consiga implantar soluções. Os cursos são oferecidos a escolas, integradores e empresas.',
 
   'contact.title': 'Parceria',
   'contact.hero.title': 'Três tipos de organização, quatro formas de parceria',
