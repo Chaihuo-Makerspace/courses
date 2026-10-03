@@ -6,7 +6,7 @@ import { dt } from '../../../i18n/data-translations';
 import { t } from '../../../i18n/translations';
 import type { Locale } from '../../../i18n';
 
-// 设备与工具链：核心硬件清单和工具链常显；带图的逐件设备清单默认折叠（渐进分层）。
+// 设备与工具链：核心硬件清单、工具链和带图的逐件设备清单都默认可见；图文清单可以收起。
 interface Props {
   module: Module;
   locale: Locale;
@@ -55,7 +55,7 @@ const photoCount = intro ? intro.items.length : (kits?.items.length ?? 0);
 
     {
       photoCount > 0 && (
-        <details class="group mt-5">
+        <details class="group mt-5" open>
           <summary class="focus-ring inline-flex cursor-pointer list-none items-center gap-2 text-sm font-semibold text-foreground hover:text-primary-ink transition-colors [&::-webkit-details-marker]:hidden">
             <Icon name="lucide:chevron-right" class="h-4 w-4 transition-transform group-open:rotate-90" />
             {t(locale, kits ? 'course.kitsDetails' : 'course.hardwareDetails', { n: String(photoCount) })}
