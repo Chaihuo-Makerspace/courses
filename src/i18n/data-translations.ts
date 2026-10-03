@@ -107,9 +107,9 @@ const en: Record<string, string> = {
   'faq.q1.q': 'How long from the first email to the first class?',
   'faq.q1.a':
     'Initial alignment within 3 business days; Standard Kits ship quickly; Full-Delivery and Train-the-Trainer take 2-4 weeks.',
-  'faq.q2.q': 'Must hardware kits be purchased from the original manufacturer?',
+  'faq.q2.q': 'Must courses use the specified hardware kits?',
   'faq.q2.a':
-    'Bare Hardware and Standard Kits use factory-original hardware, so course experiments stay consistent with the materials. That original hardware consists of standard production products sold by the ecosystem Chaihuo Makerspace belongs to — founded by Seeed. Partners can also adapt courses to their own hardware platforms, but lab manuals and course materials follow the original hardware.',
+    'The Bare Hardware Kit and Standard Teaching Kit use the matching standard hardware to ensure classroom experiments match the course materials. Partners can also adapt the course to their own hardware platforms, but the lab manuals and course materials are all based on this standard hardware.',
   'faq.q3.q': 'What does the Train-the-Trainer Kit include?',
   'faq.q3.a':
     'Hardware kit, complete course resources, and Train-the-Trainer instruction over 2-3 days.',
@@ -148,7 +148,7 @@ const en: Record<string, string> = {
   'form.A.f1': 'Hardware only, no course resources',
   'form.A.f2': 'Adaptable for in-house curriculum',
   'form.A.f3': 'Freely select M0-M6 modules',
-  'form.A.d1': 'Factory-original hardware and accessories',
+  'form.A.d1': 'Standard hardware and accessories',
   'form.A.d2': 'Module selection checklist',
   'form.A.d3': 'Hardware warranty and supply support',
   'form.B.title': 'Standard Teaching Kit',
@@ -330,9 +330,9 @@ const ja: Record<string, string> = {
   'faq.q1.q': '最初のメールから開講までどのくらいかかりますか？',
   'faq.q1.a':
     '初回の調整は通常3営業日以内にミーティングを設定します。標準教学キットは迅速に発送・開講可能です。フルデリバリーと講師トレーニングは、要件確認から開講まで通常2〜4週間です。',
-  'faq.q2.q': 'コースのハードウェアキットは必ず純正ハードウェアを購入する必要がありますか？',
+  'faq.q2.q': 'コースのハードウェアキットは指定されたハードウェアを購入する必要がありますか？',
   'faq.q2.a':
-    'Bare Hardware KitとStandard Teaching Kitは純正標準ハードウェアを使用し、コース実験と教材の一贯性を保証します。そのハードウェアは柴火創客空間が属するSeeed製品体系の量産現行製品です。パートナーは自社のハードウェアプラットフォームで適合させることも可能ですが、実験マニュアルとコース教材は純正ハードウェアを基準としています。',
+    '単体ハードウェアキットと標準教育キットは配套の標準ハードウェアを使用し、実験と教材の一致を保証しています。パートナーが自前のハードウェアプラットフォームで適合させることも可能ですが、実験マニュアルや教材はすべてこの標準ハードウェアを基準にしています。',
   'faq.q3.q': 'Train-the-Trainer Kitには具体的に何が含まれていますか？',
   'faq.q3.a':
     '対応モジュールのハードウェアキット、完全なコースリソースパック、およびTrain-the-Trainer講師研修が含まれます。講師研修は通常、柴火の講師が現場で2〜3日間実施し、機関独自の講師を育成します。',
@@ -367,8 +367,8 @@ const ja: Record<string, string> = {
   'form.A.subtitle': 'Bare Hardware Kit',
   'form.A.f1': 'ハードウェアとアクセサリのみ、コースリソースは含まれません',
   'form.A.f2': '自社開発コースに適合、柔軟な組み合わせが可能',
-  'form.A.f3': 'M0〜M7モジュールから自由に選択',
-  'form.A.d1': '純正ハードウェアとアクセサリ',
+  'form.A.f3': 'M0〜M6モジュールから自由に選択',
+  'form.A.d1': '標準ハードウェアとアクセサリ',
   'form.A.d2': 'モジュール選定リスト',
   'form.A.d3': 'ハードウェア保証と供給サポート',
   'form.B.title': 'Standard Teaching Kit',
@@ -543,9 +543,9 @@ const es: Record<string, string> = {
   'faq.q1.q': '¿Cuánto se tarda desde el primer correo hasta la primera clase?',
   'faq.q1.a':
     'La primera reunión de alineación suele programarse en un plazo de 3 días hábiles; el kit de enseñanza estándar puede enviarse rápidamente para comenzar las clases; la entrega integral y la capacitación de instructores, desde la confirmación de requisitos hasta el inicio del curso, generalmente toma de 2 a 4 semanas.',
-  'faq.q2.q': '¿Es obligatorio adquirir los kits con hardware original?',
+  'faq.q2.q': '¿Es obligatorio adquirir el hardware especificado para los kits del curso?',
   'faq.q2.a':
-    'El kit de hardware básico y el kit de enseñanza estándar utilizan hardware original estándar, garantizando que los experimentos del curso coincidan con los materiales didácticos. Ese hardware pertenece a la línea de productos de producción en catálogo del ecosistema de Seeed. Los socios también pueden adaptar los cursos a sus propias plataformas de hardware, pero los manuales de laboratorio y los materiales del curso se basan en el hardware original.',
+    'El kit de hardware básico y el kit didáctico estándar utilizan el hardware estándar correspondiente para garantizar que las prácticas coincidan con el material del curso. Los colaboradores también pueden realizar adaptaciones en sus propias plataformas, aunque los manuales de laboratorio y los recursos didácticos se basan en este hardware estándar.',
   'faq.q3.q': '¿Qué incluye exactamente el kit de capacitación de instructores?',
   'faq.q3.a':
     'Incluye el kit de hardware del módulo correspondiente, el paquete completo de recursos del curso y la capacitación Train-the-Trainer. La capacitación suele ser impartida presencialmente por instructores de Chaihuo durante 2 a 3 días, formando a los instructores propios de la institución.',
@@ -585,7 +585,7 @@ const es: Record<string, string> = {
   'form.A.f1': 'Solo hardware y accesorios, sin recursos curriculares',
   'form.A.f2': 'Adaptable a cursos propios, combinación flexible',
   'form.A.f3': 'Selección libre por módulos M0–M6',
-  'form.A.d1': 'Hardware y accesorios originales',
+  'form.A.d1': 'Hardware estándar y accesorios',
   'form.A.d2': 'Lista de selección de módulos',
   'form.A.d3': 'Garantía de hardware y soporte de suministro',
   'form.B.title': 'Kit de enseñanza estándar',
@@ -769,9 +769,9 @@ const ptBR: Record<string, string> = {
   'faq.q1.q': 'Quanto tempo leva do primeiro e-mail até a primeira aula?',
   'faq.q1.a':
     'O alinhamento inicial geralmente é agendado em até 3 dias úteis. O Kit de Ensino Padrão pode ser enviado rapidamente para início das aulas. A entrega completa e o treinamento de instrutores levam geralmente de 2 a 4 semanas, desde a confirmação dos requisitos até o início das aulas.',
-  'faq.q2.q': 'Os kits de hardware do curso precisam ser adquiridos com hardware original?',
+  'faq.q2.q': 'É obrigatório adquirir o hardware especificado para os kits do curso?',
   'faq.q2.a':
-    'O Bare Hardware Kit e o Standard Teaching Kit utilizam hardware original padrão, garantindo consistência entre os experimentos do curso e os materiais didáticos. Esse hardware é a linha de produtos de produção do catálogo do ecossistema Seeed. Parceiros também podem adaptar em suas próprias plataformas de hardware, mas os manuais de experimentos e materiais do curso tomam como referência o hardware original.',
+    'O kit de hardware avulso e o kit didático padrão utilizam o hardware padrão correspondente para garantir que os experimentos coincidam com o material do curso. Parceiros também podem realizar adaptações em suas próprias plataformas, mas os manuais de laboratório e recursos didáticos são todos baseados nesse hardware padrão.',
   'faq.q3.q': 'O que o Train-the-Trainer Kit inclui especificamente?',
   'faq.q3.a':
     'Inclui o kit de hardware do módulo correspondente, o pacote completo de recursos do curso e o treinamento Train-the-Trainer. O treinamento geralmente é ministrado presencialmente por instrutores Chaihuo, com duração de 2 a 3 dias, para formar instrutores próprios da instituição.',
@@ -810,7 +810,7 @@ const ptBR: Record<string, string> = {
   'form.A.f1': 'Apenas hardware e acessórios, sem recursos de curso',
   'form.A.f2': 'Adaptável a currículos próprios, combinação flexível',
   'form.A.f3': 'Seleção livre por módulos M0–M6',
-  'form.A.d1': 'Hardware e acessórios originais',
+  'form.A.d1': 'Hardware padrão e acessórios',
   'form.A.d2': 'Lista de seleção de módulos',
   'form.A.d3': 'Garantia de hardware e suporte ao fornecimento',
   'form.B.title': 'Standard Teaching Kit',
@@ -923,7 +923,7 @@ const ptBR: Record<string, string> = {
     'Cada módulo gira em torno de hardware real: montagem, ajuste e demonstração acontecem em aula.',
   'outcome.kit.label': 'Kit de hardware e materiais do curso',
   'outcome.kit.desc':
-    'Hardware da própria linha de produtos do ecossistema, mais apostila, manual de experimentos, materiais do professor e tarefas dos alunos.',
+    'Hardware necessário para ministrar o curso, mais apostila, manual de experimentos, materiais do professor e tarefas dos alunos.',
   'outcome.docs.label': 'Documentação de projeto arquivável',
   'outcome.docs.desc':
     'Topologia de implantação, arquivos de configuração e documentos de operação e aceitação, detalhados na página de cada módulo.',

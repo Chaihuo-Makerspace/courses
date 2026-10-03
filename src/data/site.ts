@@ -48,7 +48,7 @@ export interface FaqItem {
   answer: string;
 }
 
-// ── 首页 ──────────────────────────────────────────────────────────
+// ── 首页 ────────────────────────────────────────────────────────────
 
 /** 引入一门课时机构实际拿到的四样东西；每条都能在模块页或 /contact 找到明细。 */
 export const homeOutcomes: OutcomeItem[] = [
@@ -60,7 +60,7 @@ export const homeOutcomes: OutcomeItem[] = [
   {
     id: 'kit',
     label: '硬件套件与课程资源',
-    description: '体系内在售的硬件，加上教材、实验手册、教师材料和学员任务。',
+    description: '开课所需的硬件，加上教材、实验手册、教师材料和学员任务。',
   },
   {
     id: 'docs',
@@ -83,7 +83,7 @@ export const homeFinalCta: SiteCta = {
   secondary: 'courses',
 };
 
-// ── /courses ──────────────────────────────────────────────────────
+// ── /courses ────────────────────────────────────────────────────────
 
 export const coursesFinalCta: SiteCta = {
   id: 'courses',
@@ -104,7 +104,7 @@ export const moduleFinalCta: SiteCta = {
   secondary: 'courses',
 };
 
-// ── /about ────────────────────────────────────────────────────────
+// ── /about ──────────────────────────────────────────────────────────
 
 /**
  * 学院概况：四个数，每个一句话。出处：
@@ -163,7 +163,7 @@ export const aboutFinalCta: SiteCta = {
   secondary: 'courses',
 };
 
-// ── /contact ──────────────────────────────────────────────────────
+// ── /contact ────────────────────────────────────────────────────────
 
 /** 合作邮箱。全站唯一的合作收口（owner 决定：mailto，不做站内表单）。 */
 export const contactEmail = 'business@chaihuo.org';
@@ -183,9 +183,9 @@ export const contactFaqs: FaqItem[] = [
   },
   {
     key: 'q2',
-    question: '课程硬件套件必须从原厂采购吗？',
+    question: '课程硬件套件必须采购指定硬件吗？',
     answer:
-      '裸硬件套件与标准教学套件使用原厂标准硬件，保证课程实验与教材一致。这些硬件来自柴火所属的 Seeed 产品体系，都是量产在售的标准模块。合作伙伴也可以在自己的硬件平台上做适配，但实验手册和课程素材以原厂硬件为准。',
+      '裸硬件套件与标准教学套件使用配套的标准硬件，保证课程实验与教材一致。合作伙伴也可以在自己的硬件平台上做适配，但实验手册和课程素材均以这套标准硬件为准。',
   },
   {
     key: 'q3',

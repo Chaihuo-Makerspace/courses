@@ -45,7 +45,7 @@ const zh: TranslationDict = {
   // Home Hero
   'home.hero.title': '七门智能硬件课，\n套件、教案、讲师一次配齐',
   'home.hero.description':
-    'M0 到 M6，每门课都配真实在售硬件、逐课时教案和验收标准。学校拿去开课，集成商拿去练交付团队。M0 零基础可进，其余六门按方向独立选学。',
+    'M0 到 M6，每门课都配真实硬件、逐课时教案和验收标准。学校拿去开课，集成商拿去练交付团队。M0 零基础可进，其余六门按方向独立选学。',
 
   // Courses
   'courses.title': '学习体系',
@@ -129,7 +129,7 @@ const en: TranslationDict = {
   'chip.tabsAria': 'Switch between the Pioneer and Base programs',
 
   'footer.tagline':
-    'Chaihuo Maker Academy organizes real hardware, real-world projects, and delivery experience into the M0–M6 learning system, helping learners progress from hands-on fundamentals to deliverable systems.',
+    'Chaihuo Maker Academy organizes real hardware, practical projects, and delivery experience into the M0–M6 learning system, helping learners progress from hands-on fundamentals to deliverable systems.',
   'footer.contact': 'Contact Us',
   'footer.nav': 'Site Navigation',
   'footer.social': 'Follow Us',
@@ -143,15 +143,15 @@ const en: TranslationDict = {
   'footer.seeed': 'Seeed Studio',
   'page.pioneer.title': 'Pioneer Program',
   'page.pioneer.description':
-    'Pioneers are Igniters recruited by Chaihuo: they learn the courses, then teach and promote them in their own city, carrying the maker-education flame to more places. Chaihuo provides the course pack, teaching kits and certification.',
+    'Pioneers are Chaihuo’s local teaching partners: once trained on Chaihuo courses, they run classes, deliver workshops, and build local partnerships. Chaihuo provides kits, lesson-by-lesson lecture notes, and certification support. Applications are open year-round.',
   'page.base.title': 'Base Program',
   'page.base.description':
-    'Bases are Chaihuo-certified local teaching sites: Chaihuo provides teaching kits, courses and dispatched work; the Base runs classes locally and gives Pioneers a place to teach.',
+    'For institutions with dedicated teaching spaces and ongoing operations. Applications for new Bases are open year-round. Chaihuo provides teaching kits, complete lecture notes, and dispatched workshop opportunities; Bases run regular courses locally.',
 
   'home.hero.title':
     'Seven smart-hardware courses,\neach with its kit, lesson plans and instructors',
   'home.hero.description':
-    'From M0 to M6, every course comes with real, commercially available hardware, lesson-by-lesson teaching plans and acceptance criteria. Schools use them to run classes; integrators use them to train delivery teams. M0 needs no prior experience, and the other six can be taken independently by direction.',
+    'From M0 to M6, every course comes with real hardware, lesson-by-lesson teaching plans and acceptance criteria. Schools use them to run classes; integrators use them to train delivery teams. M0 needs no prior experience, and the other six can be taken independently by track.',
 
   'courses.title': 'Learning System',
   'courses.description':
@@ -169,7 +169,7 @@ const en: TranslationDict = {
   'contact.title': 'Partnership',
   'contact.hero.title': 'Three kinds of organisation, four ways to work together',
   'contact.hero.description':
-    'Pricing depends on class format and size, so there is no list price. Email us what kind of organisation you are and which module you want, and we will send a proposal within 3 working days.',
+    'Pricing depends on class format, module choice, and kit requirements, so there is no single list price. Email us what kind of organisation you are and which modules you plan to run; our team will reply with a detailed proposal within 3 working days.',
 
   '404.title': 'Page Not Found',
   '404.heading': '404',
@@ -184,7 +184,7 @@ const en: TranslationDict = {
   'cta.contact': 'Partnership Inquiry',
   'cta.courses': 'View Courses',
   'cta.about': 'About the Academy',
-  'course.direction': 'Direction',
+  'course.direction': 'Track',
   'course.nav.aria': 'On this page',
   'course.nav.levels': 'Levels',
   'course.nav.outcomes': 'Outcomes',
@@ -243,14 +243,14 @@ const ja: TranslationDict = {
   'footer.seeed': 'Seeed Studio',
   'page.pioneer.title': 'パイオニア計画',
   'page.pioneer.description':
-    'パイオニアは柴火が募集する点火人です。講座を学び、自分の都市で開講・普及を行い、メーカー教育の火をより多くの場所へ届けます。柴火は講座パック、教具、認定を提供します。',
+    'パイオニアは各地における柴火の教育パートナーです。カリキュラムを習得後、現地での授業やワークショップの開催、連携先の開拓を担います。柴火は実習キット、授業ごとの講義ノート、認定制度でサポートし、通年で募集しています。',
   'page.base.title': '拠点計画',
   'page.base.description':
-    '拠点は柴火が認定する地域の授業拠点です。柴火は教具、講座、本部からの案件紹介を提供し、拠点は地域で開講するとともに、パイオニアに授業の場を提供します。',
+    '専用の教育スペースを持ち日常的な運営体制がある教育機関・施設を対象に、提携拠点を随時募集しています。柴火が実習キットや講義資料の提供、案件の委託を行い、拠点は地域での継続開講やパイオニアへの実習スペース提供を担います。',
 
   'home.hero.title': 'スマートハードウェア7講座。\nキット・教案・講師をまとめて提供',
   'home.hero.description':
-    'M0からM6まで、どの講座にも現行販売中の実機ハードウェア、授業ごとの教案、検収基準が付きます。学校は授業の開講に、インテグレーターは納品チームの育成に使えます。M0は未経験から受講でき、残り6講座は分野ごとに単独で選べます。',
+    'M0からM6まで、どの講座にも実機ハードウェア、授業ごとの教案、検収基準が付きます。学校は授業の開講に、インテグレーターは納品チームの育成に使えます。M0は未経験から受講でき、残り6講座は分野ごとに単独で選べます。',
 
   'courses.title': '学習体系',
   'courses.description':
@@ -268,7 +268,7 @@ const ja: TranslationDict = {
   'contact.title': 'パートナーシップ',
   'contact.hero.title': '3種類の機関、4つの協業形態',
   'contact.hero.description':
-    '料金はクラス形態と規模に応じてお見積りするため、定価は設けていません。機関の種類と希望するモジュールをメールでお知らせいただければ、3営業日以内にご提案をお送りします。',
+    '料金はクラス形態と規模に応じてお見積もりするため、定価は設けていません。機関の種類と希望するモジュールをメールでお知らせいただければ、3営業日以内にご提案をお送りします。',
 
   '404.title': 'ページが見つかりません',
   '404.heading': '404',
@@ -329,7 +329,7 @@ const es: TranslationDict = {
   'chip.tabsAria': 'Alternar entre el programa de Pioneros y el de Bases',
 
   'footer.tagline':
-    'La Academia Chaihuo Maker organiza hardware real, proyectos del mundo real y experiencia de entrega en el sistema de aprendizaje M0–M6, ayudando a los estudiantes a progresar desde fundamentos prácticos hasta sistemas entregables.',
+    'La Academia Chaihuo Maker organiza hardware real, proyectos de campo y experiencia de entrega en el sistema de aprendizaje M0–M6, ayudando al alumnado a progresar desde los fundamentos prácticos hasta sistemas entregables.',
   'footer.contact': 'Contáctanos',
   'footer.nav': 'Navegación del Sitio',
   'footer.social': 'Síguenos',
@@ -343,15 +343,15 @@ const es: TranslationDict = {
   'footer.seeed': 'Seeed Studio',
   'page.pioneer.title': 'Programa de Pioneros',
   'page.pioneer.description':
-    'Los Pioneros son Ignitores que recluta Chaihuo: aprenden los cursos y después los imparten y promueven en su ciudad, llevando la llama de la educación maker a más lugares. Chaihuo aporta el paquete de cursos, los kits didácticos y la certificación.',
+    'Los Pioneros son socios docentes de Chaihuo en distintas regiones: tras formarse en los cursos, organizan clases, imparten talleres y abren colaboraciones locales. Chaihuo proporciona kits, temarios sesión por sesión y soporte de certificación. Convocatoria abierta todo el año.',
   'page.base.title': 'Programa de Bases',
   'page.base.description':
-    'Las Bases son puntos de enseñanza locales certificados por Chaihuo: Chaihuo aporta kits didácticos, cursos y encargos derivados; la Base imparte clases en su zona y ofrece a los Pioneros un lugar donde enseñar.',
+    'Dirigido a instituciones con espacio docente fijo y capacidad de gestión continua. La solicitud de nuevas Bases está abierta todo el año. Chaihuo aporta kits didácticos, guías de clase completas y derivación de proyectos; las Bases imparten cursos regulares a nivel local.',
 
   'home.hero.title':
     'Siete cursos de hardware inteligente,\ncon kit, planes de clase e instructores',
   'home.hero.description':
-    'De M0 a M6, cada curso incluye hardware real en catálogo, planes de clase sesión por sesión y criterios de aceptación. Los centros educativos los usan para impartir clases; los integradores, para formar a sus equipos de entrega. M0 no requiere experiencia previa y los otros seis se pueden cursar por separado según la orientación.',
+    'De M0 a M6, cada curso incluye hardware real, planes de clase sesión por sesión y criterios de aceptación. Los centros educativos los usan para impartir clases; los integradores, para formar a sus equipos de entrega. M0 no requiere experiencia previa y los otros seis se pueden cursar por separado según el itinerario.',
 
   'courses.title': 'Sistema de Aprendizaje',
   'courses.description':
@@ -369,7 +369,7 @@ const es: TranslationDict = {
   'contact.title': 'Colaboración',
   'contact.hero.title': 'Tres tipos de organización, cuatro formas de colaborar',
   'contact.hero.description':
-    'El precio depende del formato y del tamaño de la clase, por lo que no hay tarifa fija. Escríbanos indicando qué tipo de organización es y qué módulo le interesa, y le enviaremos una propuesta en 3 días hábiles.',
+    'El presupuesto se calcula según el número de alumnos, los módulos elegidos y el hardware requerido, sin una tarifa fija única. Escríbanos indicando qué tipo de organización es y sus fechas estimadas; nuestro equipo responderá con una propuesta y lista detallada en 3 días hábiles.',
 
   '404.title': 'Página No Encontrada',
   '404.heading': '404',
@@ -384,7 +384,7 @@ const es: TranslationDict = {
   'cta.contact': 'Consultar colaboración',
   'cta.courses': 'Ver sistema curricular',
   'cta.about': 'Sobre la academia',
-  'course.direction': 'Orientación',
+  'course.direction': 'Itinerario',
   'course.nav.aria': 'En esta página',
   'course.nav.levels': 'Niveles',
   'course.nav.outcomes': 'Resultados',
@@ -431,7 +431,7 @@ const ptBR: TranslationDict = {
   'chip.tabsAria': 'Alternar entre o Programa de Pioneiros e o de Bases',
 
   'footer.tagline':
-    'A Academia Chaihuo Maker organiza hardware real, projetos do mundo real e experiência de entrega no sistema de aprendizagem M0–M6, ajudando os alunos a progredir dos fundamentos práticos até sistemas entregáveis.',
+    'A Academia Chaihuo Maker organiza hardware real, projetos de campo e experiência de entrega no sistema de aprendizagem M0–M6, ajudando os alunos a progredir dos fundamentos práticos até sistemas entregáveis.',
   'footer.contact': 'Contate-nos',
   'footer.nav': 'Navegação do Site',
   'footer.social': 'Siga-nos',
@@ -445,14 +445,14 @@ const ptBR: TranslationDict = {
   'footer.seeed': 'Seeed Studio',
   'page.pioneer.title': 'Programa de Pioneiros',
   'page.pioneer.description':
-    'Os Pioneiros são Ignitores recrutados pela Chaihuo: aprendem os cursos e depois os ministram e divulgam na própria cidade, levando a chama da educação maker a mais lugares. A Chaihuo fornece o pacote de cursos, os kits didáticos e a certificação.',
+    'Os Pioneiros são parceiros docentes da Chaihuo em diversas regiões: após dominar os cursos, organizam turmas, ministram oficinas e ampliam parcerias locais. A Chaihuo fornece kits, apostilas aula a aula e suporte à certificação. Inscrições abertas o ano todo.',
   'page.base.title': 'Programa de Bases',
   'page.base.description':
-    'As Bases são pontos de ensino locais certificados pela Chaihuo: a Chaihuo fornece kits didáticos, cursos e demandas encaminhadas; a Base ministra aulas na região e oferece aos Pioneiros um lugar para ensinar.',
+    'Voltado a instituições com espaço físico fixo e capacidade de operação contínua. Inscrições para novas Bases abertas o ano todo. A Chaihuo fornece kits didáticos, apostilas completas e oportunidades de oficinas; as Bases ministram cursos regulares localmente.',
 
   'home.hero.title': 'Sete cursos de hardware inteligente,\ncom kit, planos de aula e instrutores',
   'home.hero.description':
-    'De M0 a M6, cada curso vem com hardware real em catálogo, planos de aula sessão por sessão e critérios de aceitação. Escolas usam para abrir turmas; integradores, para treinar equipes de entrega. O M0 não exige experiência prévia e os outros seis podem ser feitos separadamente, conforme a direção.',
+    'De M0 a M6, cada curso vem com hardware real, planos de aula sessão por sessão e critérios de aceitação. Escolas usam para abrir turmas; integradores, para treinar equipes de entrega. O M0 não exige experiência prévia e os outros seis podem ser feitos separadamente, conforme a trilha.',
 
   'courses.title': 'Sistema de Aprendizagem',
   'courses.description':
@@ -470,7 +470,7 @@ const ptBR: TranslationDict = {
   'contact.title': 'Parceria',
   'contact.hero.title': 'Três tipos de organização, quatro formas de parceria',
   'contact.hero.description':
-    'O preço depende do formato e do tamanho da turma, por isso não há tabela fixa. Envie um e-mail dizendo que tipo de organização você é e qual módulo deseja, e enviaremos uma proposta em até 3 dias úteis.',
+    'O orçamento varia conforme o número de alunos, os módulos escolhidos e os kits necessários, sem um valor fixo único. Envie um e-mail descrevendo sua instituição e o cronograma desejado; nossa equipe responderá com proposta e plano em até 3 dias úteis.',
 
   '404.title': 'Página Não Encontrada',
   '404.heading': '404',
@@ -485,7 +485,7 @@ const ptBR: TranslationDict = {
   'cta.contact': 'Consultar parceria',
   'cta.courses': 'Ver grade curricular',
   'cta.about': 'Sobre a Academia',
-  'course.direction': 'Direção',
+  'course.direction': 'Trilha',
   'course.nav.aria': 'Nesta página',
   'course.nav.levels': 'Níveis',
   'course.nav.outcomes': 'Resultados',

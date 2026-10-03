@@ -169,7 +169,7 @@ export const homeChannel: {
 
 export const pioneer: PioneerProgram = {
   hero: {
-    title: '先锋官：柴火教学点火人',
+    title: '先锋官：柴火在各地的教学合作者',
     description:
       '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课。',
     ctas: [{ label: '申请成为先锋官', href: ecosystemApplyUrl, variant: 'primary' }],
