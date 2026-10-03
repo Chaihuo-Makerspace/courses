@@ -31,11 +31,14 @@ export interface OutcomeItem {
   description: string;
 }
 
-export interface OriginItem {
-  /** 翻译 key 前缀 `origin.<id>.*`。 */
-  id: 'projects' | 'kit' | 'teachers';
-  title: string;
+export interface FactItem {
+  /** 翻译 key 前缀 `fact.<id>.*`。 */
+  id: 'founded' | 'courses' | 'pioneers' | 'campuses';
+  /** 大字。`{modules}` 取课程门数，`{pioneers}` 等取 `stats.ts`。 */
+  value: string;
+  unit: string;
   description: string;
+  link?: string;
 }
 
 export interface FaqItem {
@@ -104,28 +107,39 @@ export const moduleFinalCta: SiteCta = {
 // ── /about ────────────────────────────────────────────────────────
 
 /**
- * 这些课的底子，写成访客开课时会碰到的事，不写机构关系和供应商名字。出处：
- * - 课程从柴火创客空间十多年的项目和社区经验整理而来：owner 2026-10-02 确认。
- * - 套件、教材、实验手册成套：各模块设备清单与交付物清单。
- * - 先锋官人数与国家数：`stats.ts`，描述里的占位符由 `fillStats` 填入。
+ * 学院概况：四个数，每个一句话。出处：
+ * - 2011 年深圳成立、中国最早的创客空间之一：公开事实，owner 2026-10-02 确认
+ *   「创客空间的历史就是学院的历史」。
+ * - 课程门数取 `modules.length`；先锋官、国家、基地取 `stats.ts`。
+ * - 两个校区：页脚地址（owner 确认为实际联系通道）。
  */
-export const aboutOrigins: OriginItem[] = [
+export const aboutFacts: FactItem[] = [
   {
-    id: 'projects',
-    title: '先有项目，后有课',
-    description:
-      '柴火创客空间十多年里做过的项目、办过的工作坊，挑出能教的，一节一节拆开，就是现在这七门课。',
+    id: 'founded',
+    value: '2011',
+    unit: '年',
+    description: '柴火创客空间在深圳成立，中国最早的创客空间之一。',
+    link: 'https://www.chaihuo.org',
   },
   {
-    id: 'kit',
-    title: '设备和教材是一套',
+    id: 'courses',
+    value: '{modules}',
+    unit: '门课',
     description:
-      '每门课的套件、教材和实验手册是照着同一批设备写的，手册上的每一步都能在手里的设备上照着做，开课前不用另外凑硬件。',
+      'M0 零基础入门，M1–M6 各对应一类现场问题。每门课分三档深度，套件、教材和实验手册随课配齐。',
   },
   {
-    id: 'teachers',
-    title: '各地有人在开这些课',
-    description: '目前已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课。',
+    id: 'pioneers',
+    value: '{pioneers}',
+    unit: '位先锋官',
+    description:
+      '柴火在各地的教学合作者，在 {countries} 个国家持续开课；首批 {bases} 家基地已签约。',
+  },
+  {
+    id: 'campuses',
+    value: '2',
+    unit: '个校区',
+    description: '深圳在南山区万科云城设计社区，成都在青羊区狮马路 92 号。',
   },
 ];
 

@@ -1,35 +1,51 @@
 ---
-import SectionHeader from '../../SectionHeader.astro';
-import type { OriginItem } from '../../../data/site';
+import { Icon } from 'astro-icon/components';
+import type { FactItem } from '../../../data/site';
 import { t } from '../../../i18n/translations';
 import type { Locale } from '../../../i18n';
 
-// /about 的正文：这些课怎么来的（一句话一行，左边是说法，右边是解释），再加一位具名导师。
+// /about 的正文：四个数字交代学院的概况，再加一位具名导师。不设小标题，页面标题就是标题。
 interface Props {
-  origins: OriginItem[];
+  facts: FactItem[];
   person: { name: string; role: string; quote: string };
   locale: Locale;
 }
 
-const { origins, person, locale } = Astro.props as Props;
+const { facts, person, locale } = Astro.props as Props;
 ---
 
-<section class="section bg-background">
+<section class="section bg-background" aria-label={t(locale, 'about.title')}>
   <div class="container-page" data-reveal>
-    <SectionHeader title={t(locale, 'about.origins.title')} />
-
-    <dl class="border-t border-neutral-3">
+    <dl class="grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
       {
-        origins.map((item) => (
-          <div class="grid gap-x-12 gap-y-2 border-b border-neutral-3 py-6 md:items-baseline md:grid-cols-[minmax(0,18rem)_minmax(0,1fr)] md:py-7">
-            <dt class="text-lg font-bold leading-snug text-foreground">{item.title}</dt>
-            <dd class="max-w-2xl text-base leading-relaxed text-neutral-8">{item.description}</dd>
+        facts.map((fact) => (
+          <div class="border-t border-neutral-3 pt-6">
+            <dt class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+              <span class="font-display text-5xl leading-none text-primary-ink md:text-6xl">
+                {fact.value}
+              </span>
+              {fact.unit && <span class="text-base font-bold text-foreground">{fact.unit}</span>}
+            </dt>
+            <dd class="mt-4 text-sm leading-relaxed text-neutral-8">
+              {fact.description}
+              {fact.link && (
+                <a
+                  href={fact.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="focus-ring mt-2 flex w-fit items-center gap-1 font-semibold text-foreground transition-colors hover:text-primary-ink"
+                >
+                  {fact.link.replace(/^https?:\/\/(www\.)?/, '')}
+                  <Icon name="lucide:arrow-up-right" class="h-3.5 w-3.5" />
+                </a>
+              )}
+            </dd>
           </div>
         ))
       }
     </dl>
 
-    <figure class="mt-12 max-w-3xl border-l-2 border-primary pl-6 md:mt-16">
+    <figure class="mt-14 max-w-3xl border-l-2 border-primary pl-6 md:mt-20">
       <blockquote class="text-lg font-semibold leading-relaxed text-foreground">
         {person.quote}
       </blockquote>

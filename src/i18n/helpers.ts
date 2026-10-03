@@ -1,12 +1,12 @@
-import type { Module } from '../data/modules';
+import { type Module, modules } from '../data/modules';
 import type { PartnershipForm, Scenario } from '../data/partnerships';
 import {
   aboutPerson,
   type CtaIntent,
   ctaTargets,
+  type FactItem,
   type FaqItem,
   type LinkItem,
-  type OriginItem,
   type OutcomeItem,
   type SiteCta,
 } from '../data/site';
@@ -84,11 +84,13 @@ export function translateCta(cta: SiteCta, locale: Locale, params?: Record<strin
   };
 }
 
-export function translateOrigins(items: OriginItem[], locale: Locale): OriginItem[] {
+export function translateFacts(items: FactItem[], locale: Locale): FactItem[] {
+  const fill = (text: string) => fillStats(text.replace('{modules}', String(modules.length)));
   return items.map((item) => ({
     ...item,
-    title: tr(locale, `origin.${item.id}.title`, item.title),
-    description: fillStats(tr(locale, `origin.${item.id}.desc`, item.description)),
+    value: fill(item.value),
+    unit: tr(locale, `fact.${item.id}.unit`, item.unit),
+    description: fill(tr(locale, `fact.${item.id}.desc`, item.description)),
   }));
 }
 

@@ -274,15 +274,18 @@ const en: Record<string, string> = {
   'cta.module.title': 'Put {code} on your timetable',
   'cta.module.desc':
     'Budgets are based on participant count and hardware requirements. Email us your expected group size and target depth to receive a detailed syllabus and kit plan within 3 business days.',
-  'origin.projects.title': 'Projects first, courses second',
-  'origin.projects.desc':
-    'Over more than a decade, Chaihuo Makerspace built projects and ran workshops. We picked the ones that can be taught and broke them into lessons: those are the seven courses today.',
-  'origin.kit.title': 'The kit and the teaching materials are one set',
-  'origin.kit.desc':
-    'The kit, textbook and lab manual for each course are written against the same hardware, so every step in the manual can be followed on the device in front of you. There is nothing extra to source before a class starts.',
-  'origin.teachers.title': 'They are being taught in many places',
-  'origin.teachers.desc':
-    '{pioneers} Pioneers in China and abroad are currently teaching in {countries} countries.',
+  'fact.founded.unit': '',
+  'fact.founded.desc':
+    'Chaihuo Makerspace opens in Shenzhen, one of the earliest makerspaces in China.',
+  'fact.courses.unit': 'courses',
+  'fact.courses.desc':
+    'M0 is the entry course for beginners; M1–M6 each address one kind of on-site problem. Every course comes at three depths, with its kit, textbook and lab manual.',
+  'fact.pioneers.unit': 'Pioneers',
+  'fact.pioneers.desc':
+    "Chaihuo's local teaching partners, running classes in {countries} countries. The first {bases} partner bases have signed.",
+  'fact.campuses.unit': 'campuses',
+  'fact.campuses.desc':
+    'Shenzhen: Vanke Cloud City Design Community, Nanshan District. Chengdu: No. 92 Shima Road, Qingyang District.',
   'person.name': 'Feng Lei',
   'person.role': 'Mentor, Chaihuo Maker Academy',
   'person.quote':
@@ -485,15 +488,17 @@ const ja: Record<string, string> = {
   'cta.module.title': '{code}を時間割に組み込む',
   'cta.module.desc':
     'お見積りはクラス形態と規模に応じます。受講人数と希望する深さをメールでお知らせいただければ、3営業日以内にご提案をお送りします。',
-  'origin.projects.title': 'まずプロジェクトがあり、そこから講座が生まれた',
-  'origin.projects.desc':
-    '柴火創客空間が10年以上かけて手がけてきたプロジェクトやワークショップから、教えられるものを選び、1コマずつに分けたものが現在の7講座です。',
-  'origin.kit.title': '機材と教材はひとそろい',
-  'origin.kit.desc':
-    '各講座のキット、教材、実験手順書は同じ機材に合わせて書かれており、手順書のどの手順も手元の機材でそのまま試せます。開講前に機材を別途そろえる必要はありません。',
-  'origin.teachers.title': '各地で開講が続いています',
-  'origin.teachers.desc':
-    '現在、国内外で{pioneers}名のパイオニアが{countries}カ国で開講を続けています。',
+  'fact.founded.unit': '年',
+  'fact.founded.desc': '柴火創客空間が深圳で設立。中国で最も早い時期のメイカースペースの一つです。',
+  'fact.courses.unit': '講座',
+  'fact.courses.desc':
+    'M0は未経験者向けの入門講座、M1〜M6はそれぞれ現場の課題に対応します。各講座は3段階の深さがあり、キット、教材、実験手順書がそろっています。',
+  'fact.pioneers.unit': '名のパイオニア',
+  'fact.pioneers.desc':
+    '各地で活動する柴火の教育パートナーで、{countries}カ国で開講を続けています。第1期{bases}拠点が契約済みです。',
+  'fact.campuses.unit': 'キャンパス',
+  'fact.campuses.desc':
+    '深圳は南山区の万科雲城設計コミュニティ、成都は青羊区獅馬路92号にあります。',
   'person.name': '馮磊',
   'person.role': '柴火創客学院 メンター',
   'person.quote':
@@ -708,15 +713,18 @@ const es: Record<string, string> = {
   'cta.module.title': 'Incorpore {code} a su programación',
   'cta.module.desc':
     'El presupuesto depende del formato y del tamaño de la clase. Indíquenos por correo el número de participantes y el nivel deseado y enviaremos una propuesta en 3 días hábiles.',
-  'origin.projects.title': 'Primero los proyectos, después los cursos',
-  'origin.projects.desc':
-    'Durante más de una década, Chaihuo Makerspace ha hecho proyectos y talleres. Elegimos los que se pueden enseñar y los dividimos en sesiones: son los siete cursos de hoy.',
-  'origin.kit.title': 'El equipo y el material didáctico forman un solo conjunto',
-  'origin.kit.desc':
-    'El kit, el manual y la guía de prácticas de cada curso están escritos para el mismo equipo, así que cada paso de la guía se puede seguir con el dispositivo que se tiene delante. No hay que conseguir hardware aparte antes de empezar.',
-  'origin.teachers.title': 'Se imparten en muchos lugares',
-  'origin.teachers.desc':
-    'Actualmente, {pioneers} Pioneros dentro y fuera de China imparten cursos en {countries} países.',
+  'fact.founded.unit': '',
+  'fact.founded.desc':
+    'Chaihuo Makerspace abre en Shenzhen, uno de los primeros makerspaces de China.',
+  'fact.courses.unit': 'cursos',
+  'fact.courses.desc':
+    'M0 es el curso de entrada para principiantes; M1–M6 abordan cada uno un tipo de problema sobre el terreno. Cada curso se ofrece en tres niveles, con su kit, manual y guía de prácticas.',
+  'fact.pioneers.unit': 'Pioneros',
+  'fact.pioneers.desc':
+    'Socios docentes locales de Chaihuo, que imparten cursos en {countries} países. Las primeras {bases} bases ya han firmado.',
+  'fact.campuses.unit': 'sedes',
+  'fact.campuses.desc':
+    'Shenzhen: Vanke Cloud City Design Community, distrito de Nanshan. Chengdu: n.º 92 de Shima Road, distrito de Qingyang.',
   'person.name': 'Feng Lei',
   'person.role': 'Mentor, Academia Chaihuo Maker',
   'person.quote':
@@ -927,15 +935,18 @@ const ptBR: Record<string, string> = {
   'cta.module.title': 'Inclua o {code} na sua grade',
   'cta.module.desc':
     'O orçamento depende do formato e do tamanho da turma. Informe por e-mail o número de participantes e o nível desejado e enviaremos uma proposta em até 3 dias úteis.',
-  'origin.projects.title': 'Primeiro os projetos, depois os cursos',
-  'origin.projects.desc':
-    'Ao longo de mais de uma década, o Chaihuo Makerspace fez projetos e oficinas. Escolhemos os que podem ser ensinados e os dividimos em aulas: são os sete cursos de hoje.',
-  'origin.kit.title': 'O equipamento e o material didático formam um só conjunto',
-  'origin.kit.desc':
-    'O kit, a apostila e o guia de práticas de cada curso foram escritos para o mesmo equipamento, então cada passo do guia pode ser seguido no dispositivo que está à sua frente. Não é preciso procurar hardware à parte antes de começar.',
-  'origin.teachers.title': 'São ministrados em muitos lugares',
-  'origin.teachers.desc':
-    'Atualmente, {pioneers} Pioneiros na China e no exterior dão aulas em {countries} países.',
+  'fact.founded.unit': '',
+  'fact.founded.desc':
+    'O Chaihuo Makerspace é fundado em Shenzhen, um dos primeiros makerspaces da China.',
+  'fact.courses.unit': 'cursos',
+  'fact.courses.desc':
+    'O M0 é o curso de entrada para iniciantes; M1–M6 tratam cada um de um tipo de problema em campo. Cada curso é oferecido em três níveis, com kit, apostila e guia de práticas.',
+  'fact.pioneers.unit': 'Pioneiros',
+  'fact.pioneers.desc':
+    'Parceiros locais de ensino da Chaihuo, que dão aulas em {countries} países. As primeiras {bases} bases já assinaram.',
+  'fact.campuses.unit': 'unidades',
+  'fact.campuses.desc':
+    'Shenzhen: Vanke Cloud City Design Community, distrito de Nanshan. Chengdu: nº 92 da Shima Road, distrito de Qingyang.',
   'person.name': 'Feng Lei',
   'person.role': 'Mentor, Academia Chaihuo Maker',
   'person.quote':

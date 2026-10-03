@@ -3,10 +3,10 @@ import HeroBanner from '../components/HeroBanner.astro';
 import Layout from '../layouts/Layout.astro';
 import AboutStory from '../components/sections/about/AboutStory.astro';
 import FinalCtaSection from '../components/sections/FinalCtaSection.astro';
-import { aboutFinalCta, aboutOrigins } from '../data/site';
+import { aboutFinalCta, aboutFacts } from '../data/site';
 import { t, defaultLocale } from '../i18n';
 import type { Locale } from '../i18n';
-import { translateCta, translateOrigins, translatePerson } from '../i18n/helpers';
+import { translateCta, translateFacts, translatePerson } from '../i18n/helpers';
 
 const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
 ---
@@ -18,7 +18,7 @@ const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
   />
 
   <AboutStory
-    origins={translateOrigins(aboutOrigins, locale)}
+    facts={translateFacts(aboutFacts, locale)}
     person={translatePerson(locale)}
     locale={locale}
   />
