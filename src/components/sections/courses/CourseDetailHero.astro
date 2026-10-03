@@ -18,6 +18,11 @@ interface Props {
 const { module, tracks, locale } = Astro.props as Props;
 const contact = ctaLink('contact', locale);
 
+// 首屏实物图：从设备清单里按路径找到对应的一项，沿用它已有的各语种 alt。
+const heroItem = [...(module.hardwareIntro?.items ?? []), ...(module.kits?.items ?? [])].find(
+  (item) => item.image === module.heroImage,
+);
+
 // oneLiner 的强调片段：拆成「前 / 强调 / 后」。emphasis 不是子串时整句原样渲染。
 const at = module.oneLinerEmphasis ? module.oneLiner.indexOf(module.oneLinerEmphasis) : -1;
 const parts =
@@ -86,7 +91,21 @@ const parts =
         </div>
       </div>
 
-      <dl class="self-start border-t border-neutral-3" data-reveal style="--reveal-delay: 120ms">
+      <div class="self-start" data-reveal style="--reveal-delay: 120ms">
+        {
+          heroItem && (
+            <div class="mb-6 aspect-[16/10] overflow-hidden rounded-lg border border-neutral-3 bg-brand-white">
+              <img
+                src={heroItem.image}
+                alt={heroItem.imageAlt}
+                width="800"
+                height="500"
+                class="h-full w-full object-contain"
+              />
+            </div>
+          )
+        }
+      <dl class="border-t border-neutral-3">
         {
           module.facts?.map((fact) => (
             <div class="grid grid-cols-[6.5rem_1fr] gap-x-4 border-b border-neutral-3 py-2.5">
@@ -123,6 +142,7 @@ const parts =
           )
         }
       </dl>
+      </div>
     </div>
 
     <div class="mt-10" data-reveal>

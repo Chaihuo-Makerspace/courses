@@ -134,6 +134,8 @@ export interface Module {
   oneLinerEmphasis?: string;
   realProblem: string;
   illustration: string;
+  /** 详情页首屏的硬件实物图；必须是本模块设备清单（hardwareIntro / kits）里某一项的 image，alt 从该项取。 */
+  heroImage?: string;
   difficulty: string;
   duration: string;
   prerequisite?: string;
@@ -198,6 +200,7 @@ export const modules: Module[] = [
     realProblem:
       '学生不会写代码、合格师资极少、从创意到原型总是断层——硬件启蒙卡在"先学会编程"这道伪门槛上。M0 把门槛拆掉，让想象力重新成为真正的难题。',
     illustration: '/illustrations/m0.png',
+    heroImage: '/illustrations/m0-kit-a.png',
     difficulty: '入门',
     duration: '半天起 · 完整版 16–20 小时',
     prerequisite: '无',
@@ -693,6 +696,7 @@ export const modules: Module[] = [
     realProblem:
       '商业楼宇、老旧设施、酒店公寓与工厂辅助车间中，空调、照明、安防等多套子系统独立运行，运维人员需多平台切换且数据互不相通。缺乏回路级能耗计量，仅能查看总表账单，无法精确定位高耗能设备与浪费时段。传统BA系统采用专有封闭协议，设备扩展与更换依赖原厂，改造成本高且周期长。',
     illustration: '/illustrations/m1.svg',
+    heroImage: '/illustrations/m1-indicator-d1s.png',
     difficulty: '入门',
     duration: 'L1 1 天 / L2 2–3 天 / L3 3–5 天',
     prerequisite: '无',
@@ -1162,6 +1166,7 @@ export const modules: Module[] = [
     realProblem:
       '仓储管理、展厅导览、智能前台等场景中，现场人员需停下手工操作，通过键盘或手机手动检索业务数据，效率低下。传统交互终端缺乏视觉上下文，无法主动感知人员靠近或异常动作。智能终端多为封闭生态，难以与存量WMS/ERP/CRM系统对接；部分工业与政企场景禁止音频与业务数据上传公网。',
     illustration: '/illustrations/m2.svg',
+    heroImage: '/illustrations/m2-sensecap-watcher.png',
     difficulty: '进阶',
     duration: 'L1 1 天 / L2 2–3 天 / L3 3–5 天',
     prerequisite:
@@ -1663,6 +1668,7 @@ export const modules: Module[] = [
     realProblem:
       '野外勘探、隧道施工、应急搜救等场景缺乏蜂窝基站覆盖，传统对讲机视距受限且无法回传坐标与传感数据。单点中继台依赖市电与高位节点，一旦受损整网中断；卫星电话终端昂贵且存在遮挡盲区，临时专网架设周期长、成本高。',
     illustration: '/illustrations/m3.svg',
+    heroImage: '/illustrations/m3-mission-pack.png',
     difficulty: '进阶',
     duration: 'L1 1 天 / L2 2–3 天 / L3 3–5 天',
     prerequisite:
@@ -2150,6 +2156,7 @@ export const modules: Module[] = [
     realProblem:
       '传统监控仅能事后录像回溯，无法在风险发生瞬间产生结构化告警；移动侦测受光线变化、雨雪晃动干扰严重，误报率高。视觉 AI 定制开发周期长、需专门算法工程师与专用服务机架，方案商难以权衡单点嵌入式设备与多路集中服务器的性能与成本。',
     illustration: '/illustrations/m4.svg',
+    heroImage: '/illustrations/m4-recamera-poe.png',
     difficulty: '高级',
     duration: 'L1 1 天 / L2 2–3 天 / L3 3–5 天',
     prerequisite:
@@ -2683,6 +2690,7 @@ export const modules: Module[] = [
     realProblem:
       '面向连栋温室大棚、设施园艺、河道水质监测、城市内涝点与工业仓储等广域分散场景，偏远点位布线取电成本高，野外山地与河流断面上百米至数公里铺设线缆工程量巨大。现场多厂商传感器各自定义私有协议，二次开发与协议适配周期长；霜冻、水质恶化、土壤干旱等异常依赖人工定期巡检，故障发现晚且耗费人力；采集到的环境数据停留在云端大屏或手机App，无法与既有灌溉/风机等执行机构联动，也无法对接第三方业务系统。',
     illustration: '/illustrations/m5.svg',
+    heroImage: '/illustrations/m5-4g-soil-moisture.png',
     difficulty: '入门',
     duration: 'L1 1 天 / L2 2–3 天 / L3 3–5 天',
     prerequisite: '无',
@@ -3198,6 +3206,7 @@ export const modules: Module[] = [
     realProblem:
       '面向农产品外观分拣、轻量自动化产线辅助上下料、展厅展位迎宾演示与辅助作业工位等场景，传统机械臂教学从运动学推导与电机控制讲起，应用侧人员上手周期长。大语言模型多局限于文本生成，缺乏接入物理执行机构的标准路径；从零搭建分拣/搬运演示需联调视觉识别、运动规划与抓取时序，多系统集成难度大；新手操作带动力机械臂，存在碰撞、误入工作空间等物理安全风险。',
     illustration: '/illustrations/m6.png',
+    heroImage: '/illustrations/m6-rebot-devarm-b601.png',
     difficulty: '入门',
     duration: 'L1 1 天 / L2 2–3 天 / L3 3–5 天',
     prerequisite:
