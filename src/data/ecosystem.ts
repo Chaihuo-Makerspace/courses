@@ -153,9 +153,9 @@ export const homeChannel: {
   description: string;
   links: (ChipLink & { note: string })[];
 } = {
-  title: '教学合作网络与基地',
+  title: '招募点火人与基地',
   description:
-    '已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课，首批 {bases} 家基地已签约。常年开放申请，支持个人讲师开课与机构空间挂牌。',
+    '先锋官是柴火招募的点火人：先学会柴火的课，再在自己的城市开课，把创客教育的火点到更多地方。目前已有海内外 {pioneers} 位，分布在 {countries} 个国家。有固定场地的机构，可以申请挂牌基地。',
   links: [
     { label: '先锋官计划', note: '个人讲师申请', href: '/pioneer' },
     { label: '基地计划', note: '实体空间合作', href: '/base' },
@@ -169,15 +169,14 @@ export const homeChannel: {
 
 export const pioneer: PioneerProgram = {
   hero: {
-    title: '先锋官：柴火在各地的教学合作者',
+    title: '先锋官：柴火招募的点火人',
     description:
-      '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课。',
+      '先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。柴火提供套件、逐课时讲义和认证；你负责招生、授课和本地推广。',
     ctas: [{ label: '申请成为先锋官', href: ecosystemApplyUrl, variant: 'primary' }],
   },
   what: {
     title: '准入条件与合作机制',
-    intro:
-      '先锋官是柴火认证的本地讲师与合作者：掌握课程体系，在当地开课交付，并对接学校与机构培训需求。',
+    intro: '先锋官是柴火认证的点火人：学会课程，在当地开课，并对接学校和机构的培训需求。',
     coreTitle: '申请条件（满足其一即可）',
     core: [
       {
@@ -306,9 +305,9 @@ export const pioneer: PioneerProgram = {
 
 export const base: BaseProgram = {
   hero: {
-    title: '基地：柴火认证的本地授课中心',
+    title: '基地：柴火认证的本地授课点',
     description:
-      '面向拥有固定教学场地与日常运营能力的机构。首批 {bases} 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。',
+      '有固定场地、有专人持续运营的机构可以申请挂牌基地。柴火提供教学套件、成套讲义和总部派单；基地在本地常态开课，并为先锋官提供授课场地。首批 {bases} 家已签约。',
     ctas: [{ label: '申请设立基地', href: ecosystemApplyUrl, variant: 'primary' }],
   },
   what: {
@@ -379,7 +378,7 @@ export const base: BaseProgram = {
   },
   relation: {
     title: '基地与先锋官的协作关系',
-    intro: '先锋官提供教学实操能力，基地提供工坊硬件承载，两者互为支撑、协同运转。',
+    intro: '没有先锋官，就没有基地；有了基地，先锋官才有自己的主场。',
     cards: {
       pioneer: {
         label: '先锋官',

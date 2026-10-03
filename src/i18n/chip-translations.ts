@@ -51,18 +51,18 @@ const zhToEn: Record<string, string> = {
   '基地教具和先锋官教具是一回事吗？': 'Are base kits and Pioneer kits the same?',
   'PPT + md 格式，可以自行修改和二次创作': 'PPT + md format; you may modify and rework it',
   '基地：柴火认证的本地授课点': 'Bases: Chaihuo-certified local teaching sites',
-  教学合作网络与基地: 'Teaching Network & Bases',
-  '已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课，首批 {bases} 家基地已签约。常年开放申请，支持个人讲师开课与机构空间挂牌。':
-    '{pioneers} Pioneers are teaching in {countries} countries, and the first {bases} partner bases have signed. Applications are open year-round for independent instructors and educational spaces.',
+  招募点火人与基地: 'Igniters and Bases wanted',
+  '先锋官是柴火招募的点火人：先学会柴火的课，再在自己的城市开课，把创客教育的火点到更多地方。目前已有海内外 {pioneers} 位，分布在 {countries} 个国家。有固定场地的机构，可以申请挂牌基地。':
+    'Pioneers are the Igniters Chaihuo recruits: learn the courses first, then teach them in your own city and carry the maker-education flame to more places. There are {pioneers} of them so far, in {countries} countries. Organisations with a permanent venue can apply to become a certified Base.',
   个人讲师申请: 'Instructor Application',
   实体空间合作: 'Physical Space Partnership',
-  '先锋官：柴火在各地的教学合作者': 'Pioneers: Local Teaching Partners',
-  '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课。':
-    "Pioneers are Chaihuo's local teaching partners: mastering the curriculum to run classes, workshops, and educational projects locally. Chaihuo provides kits, lesson plans, and certification. Applications are open year-round; {pioneers} Pioneers are currently teaching in {countries} countries.",
+  '先锋官：柴火招募的点火人': 'Pioneers: the Igniters Chaihuo recruits',
+  '先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。柴火提供套件、逐课时讲义和认证；你负责招生、授课和本地推广。':
+    'Learn Chaihuo courses first, then teach and promote them in your own city, carrying the maker-education flame to more places. Chaihuo provides kits, lesson-by-lesson notes and certification; you handle enrolment, teaching and local promotion.',
   申请成为先锋官: 'Apply as a Pioneer',
   准入条件与合作机制: 'Eligibility & Collaboration Mechanism',
-  '先锋官是柴火认证的本地讲师与合作者：掌握课程体系，在当地开课交付，并对接学校与机构培训需求。':
-    'Pioneers are certified local instructors and partners: delivering the curriculum locally while connecting with schools and institutional training needs.',
+  '先锋官是柴火认证的点火人：学会课程，在当地开课，并对接学校和机构的培训需求。':
+    'A Pioneer is an Igniter certified by Chaihuo: they learn the courses, run classes locally and take on training requests from schools and organisations.',
   '申请条件（满足其一即可）': 'Eligibility (Meet Either Condition)',
   '有硬件或编程背景，希望用柴火课程与套件在本地开课':
     'Technical background in hardware or coding, wanting to teach using Chaihuo kits and courses',
@@ -133,9 +133,8 @@ const zhToEn: Record<string, string> = {
     'Open year-round for independent instructors and makers. Submit your background and teaching plan, and our team will get in touch within 3 business days.',
   提交申请: 'Submit Application',
   邮件咨询: 'Email Inquiry',
-  '基地：柴火认证的本地授课中心': 'Bases: Certified Local Learning Hubs',
-  '面向拥有固定教学场地与日常运营能力的机构。首批 {bases} 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。':
-    'For institutions with permanent teaching spaces and ongoing operational capability. {bases} bases have signed and received kits; new base applications are open year-round. Chaihuo provides kits, lesson packages, and workshop dispatches; bases run ongoing classes and host Pioneers with dedicated maker benches.',
+  '有固定场地、有专人持续运营的机构可以申请挂牌基地。柴火提供教学套件、成套讲义和总部派单；基地在本地常态开课，并为先锋官提供授课场地。首批 {bases} 家已签约。':
+    'Organisations with a permanent venue and someone to run it on an ongoing basis can apply to become a certified Base. Chaihuo provides teaching kits, full lesson packs and work dispatched from headquarters; the Base runs regular classes locally and gives Pioneers a place to teach. The first {bases} have signed.',
   申请设立基地: 'Apply for a Base',
   准入条件与权益: 'Eligibility & Benefits',
   '基地是柴火官方认证的实体教学中心，具备承接实训与常态化开课的场地条件。':
@@ -182,8 +181,8 @@ const zhToEn: Record<string, string> = {
   '另：支持对接地方公共科教专项与公益项目。':
     'Note: Also supports local public science education grants and community initiatives.',
   基地与先锋官的协作关系: 'Relationship Between Bases and Pioneers',
-  '先锋官提供教学实操能力，基地提供工坊硬件承载，两者互为支撑、协同运转。':
-    'Pioneers provide hands-on instructional capacity; Bases provide physical maker facilities. Both reinforce each other.',
+  '没有先锋官，就没有基地；有了基地，先锋官才有自己的主场。':
+    'No Pioneers, no Base; with a Base, Pioneers have their home turf.',
   讲师与个人: 'Instructor / Individual',
   实体工坊: 'Physical Workshop',
   '可入驻签约多家基地，也可独立组织教学': 'Can partner with multiple bases or teach independently',
@@ -280,18 +279,18 @@ const zhToJa: Record<string, string> = {
   '基地教具和先锋官教具是一回事吗？': '拠点のキットとパイオニアのキットは同じものですか？',
   'PPT + md 格式，可以自行修改和二次创作': 'PPT＋md形式。自由に改変・再構成できます',
   '基地：柴火认证的本地授课点': '拠点：柴火が認定する地域の授業拠点',
-  教学合作网络与基地: '教育連携ネットワークと拠点',
-  '已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课，首批 {bases} 家基地已签约。常年开放申请，支持个人讲师开课与机构空间挂牌。':
-    '{pioneers}名のパイオニアが{countries}カ国で開講を続け、第1期{bases}拠点が契約済みです。個人講師の開講や教育拠点の設立申請を通年で受け付けています。',
+  招募点火人与基地: '火付け役と拠点を募集',
+  '先锋官是柴火招募的点火人：先学会柴火的课，再在自己的城市开课，把创客教育的火点到更多地方。目前已有海内外 {pioneers} 位，分布在 {countries} 个国家。有固定场地的机构，可以申请挂牌基地。':
+    'パイオニアは柴火が募る火付け役です。まず柴火の講座を学び、自分の街で開講して、メイカー教育の火をより多くの場所へ届けます。現在、国内外に{pioneers}名、{countries}カ国に広がっています。常設の会場を持つ団体は、認定拠点に申請できます。',
   个人讲师申请: '個人講師の応募',
   实体空间合作: '実体拠点の連携',
-  '先锋官：柴火在各地的教学合作者': 'パイオニア：各地で広げる教育パートナー',
-  '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课。':
-    'パイオニアは各地で活動する教育パートナーです。カリキュラムを習得し、地元で授業やワークショップを展開します。柴火がキット、指導案、認定を提供し、通年で募集しています。現在{pioneers}名が{countries}カ国で開講を続けています。',
+  '先锋官：柴火招募的点火人': 'パイオニア：柴火が募る火付け役',
+  '先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。柴火提供套件、逐课时讲义和认证；你负责招生、授课和本地推广。':
+    'まず柴火の講座を学び、自分の街で開講・普及して、メイカー教育の火をより多くの場所へ届けます。柴火はキット、授業ごとの講義ノート、認定を提供し、受講者の募集・授業・地域での普及はあなたが担います。',
   申请成为先锋官: 'パイオニアに応募する',
   准入条件与合作机制: '参加条件と連携の仕組み',
-  '先锋官是柴火认证的本地讲师与合作者：掌握课程体系，在当地开课交付，并对接学校与机构培训需求。':
-    'パイオニアは公認の地域講師・パートナーです。体系を習得して授業を提供し、教育機関のニーズに応えます。',
+  '先锋官是柴火认证的点火人：学会课程，在当地开课，并对接学校和机构的培训需求。':
+    'パイオニアは柴火が認定する火付け役です。講座を習得し、地元で開講し、学校や団体の研修ニーズに応えます。',
   '申请条件（满足其一即可）': '応募要件（いずれか1つに該当）',
   '有硬件或编程背景，希望用柴火课程与套件在本地开课':
     'ハードウェアやプログラミングの知見を持ち、柴火の教材で教育サービスを展開したい方',
@@ -361,9 +360,8 @@ const zhToJa: Record<string, string> = {
     '個人講師やメイカー向けに随時受付中。ご経歴と開講プランをお知らせいただければ、3営業日以内にご連絡いたします。',
   提交申请: '申請を送信',
   邮件咨询: 'メールで問い合わせ',
-  '基地：柴火认证的本地授课中心': '拠点：柴火認定の地域教育拠点',
-  '面向拥有固定教学场地与日常运营能力的机构。首批 {bases} 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。':
-    '常設スペースと継続的な運営体制を持つ教育施設向け。すでに{bases}拠点が締結し教材を導入済みで、新規拠点の申請を通年で受け付けています。柴火がキット、指導案、案件委託を提供し、拠点は日常授業の実施とパイオニアへの実習スペース提供を担います。',
+  '有固定场地、有专人持续运营的机构可以申请挂牌基地。柴火提供教学套件、成套讲义和总部派单；基地在本地常态开课，并为先锋官提供授课场地。首批 {bases} 家已签约。':
+    '常設の会場があり、専任の担当者が継続して運営できる団体は、認定拠点に申請できます。柴火は教育キット、講義資料一式、本部からの案件紹介を提供し、拠点は地域で継続的に開講するとともに、パイオニアに授業の場を提供します。第1期として{bases}拠点が契約済みです。',
   申请设立基地: '拠点の設立を申請',
   准入条件与权益: '認定条件と特典',
   '基地是柴火官方认证的实体教学中心，具备承接实训与常态化开课的场地条件。':
@@ -410,8 +408,8 @@ const zhToJa: Record<string, string> = {
   '另：支持对接地方公共科教专项与公益项目。':
     '注：自治体の科学教育助成金やCSRプログラムとの連携も支援します。',
   基地与先锋官的协作关系: '拠点とパイオニアの協力体制',
-  '先锋官提供教学实操能力，基地提供工坊硬件承载，两者互为支撑、协同运转。':
-    'パイオニアが指導力を担い、拠点がハードウェアと空間を提供することで相互に補完し合います。',
+  '没有先锋官，就没有基地；有了基地，先锋官才有自己的主场。':
+    'パイオニアがいなければ拠点はなく、拠点があってこそパイオニアは自分のホームを持てます。',
   讲师与个人: '講師 / 個人',
   实体工坊: '実体工房',
   '可入驻签约多家基地，也可独立组织教学': '複数拠点と提携することも、単独で教えることも可能',
@@ -502,18 +500,18 @@ const zhToEs: Record<string, string> = {
   '基地教具和先锋官教具是一回事吗？': '¿Los kits de la Base y del Pionero son lo mismo?',
   'PPT + md 格式，可以自行修改和二次创作': 'Formato PPT + md; puede modificarlo y reelaborarlo',
   '基地：柴火认证的本地授课点': 'Bases: puntos de enseñanza locales certificados por Chaihuo',
-  教学合作网络与基地: 'Red de Enseñanza y Bases',
-  '已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课，首批 {bases} 家基地已签约。常年开放申请，支持个人讲师开课与机构空间挂牌。':
-    '{pioneers} Pioneros imparten cursos en {countries} países y las primeras {bases} bases ya han firmado. Solicitudes abiertas todo el año para instructores independientes y espacios educativos.',
+  招募点火人与基地: 'Buscamos Pioneros y Bases',
+  '先锋官是柴火招募的点火人：先学会柴火的课，再在自己的城市开课，把创客教育的火点到更多地方。目前已有海内外 {pioneers} 位，分布在 {countries} 个国家。有固定场地的机构，可以申请挂牌基地。':
+    'Los Pioneros son quienes llevan la llama de Chaihuo a su ciudad: primero aprenden los cursos y después los imparten allí, acercando la educación maker a más lugares. Ya son {pioneers}, en {countries} países. Las organizaciones con un espacio fijo pueden solicitar ser Base certificada.',
   个人讲师申请: 'Solicitud de instructor',
   实体空间合作: 'Colaboración de espacio físico',
-  '先锋官：柴火在各地的教学合作者': 'Pioneros: Socios docentes en distintas regiones',
-  '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课。':
-    'Los Pioneros son socios docentes locales de Chaihuo: dominan los cursos para impartir clases y talleres en su comunidad. Chaihuo aporta kits, temarios y certificación con convocatoria continua. Actualmente {pioneers} Pioneros imparten cursos en {countries} países.',
+  '先锋官：柴火招募的点火人': 'Pioneros: quienes llevan la llama de Chaihuo',
+  '先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。柴火提供套件、逐课时讲义和认证；你负责招生、授课和本地推广。':
+    'Primero aprenda los cursos de Chaihuo y después impártalos y promuévalos en su ciudad, llevando la llama de la educación maker a más lugares. Chaihuo aporta los kits, los temarios sesión por sesión y la certificación; usted se ocupa de la captación, la docencia y la promoción local.',
   申请成为先锋官: 'Solicitar ser Pionero',
   准入条件与合作机制: 'Criterios de Admisión y Modelo de Trabajo',
-  '先锋官是柴火认证的本地讲师与合作者：掌握课程体系，在当地开课交付，并对接学校与机构培训需求。':
-    'Los Pioneros son formadores certificados que imparten los cursos localmente y canalizan la demanda formativa de escuelas e instituciones.',
+  '先锋官是柴火认证的点火人：学会课程，在当地开课，并对接学校和机构的培训需求。':
+    'Un Pionero lleva la llama de Chaihuo con su certificación: aprende los cursos, imparte clases en su zona y atiende las necesidades de formación de centros educativos y organizaciones.',
   '申请条件（满足其一即可）': 'Requisitos de Admisión (Cumplir al menos uno)',
   '有硬件或编程背景，希望用柴火课程与套件在本地开课':
     'Con experiencia en hardware o programación, con interés en enseñar con los kits de Chaihuo',
@@ -585,9 +583,8 @@ const zhToEs: Record<string, string> = {
     'Convocatoria continua para instructores y creadores. Envíanos tu perfil y plan formativo; te responderemos en 3 días laborables.',
   提交申请: 'Enviar Solicitud',
   邮件咨询: 'Consulta por Correo',
-  '基地：柴火认证的本地授课中心': 'Bases: Centros Locales de Formación Certificados',
-  '面向拥有固定教学场地与日常运营能力的机构。首批 {bases} 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。':
-    'Dirigido a centros con espacio permanente y gestión activa. {bases} bases ya han firmado y recibido material; nuevas solicitudes abiertas todo el año. Chaihuo provee kits, temarios y proyectos; las bases imparten cursos y albergan a los Pioneros en sus talleres.',
+  '有固定场地、有专人持续运营的机构可以申请挂牌基地。柴火提供教学套件、成套讲义和总部派单；基地在本地常态开课，并为先锋官提供授课场地。首批 {bases} 家已签约。':
+    'Las organizaciones con un espacio fijo y una persona que lo gestione de forma continuada pueden solicitar ser Base certificada. Chaihuo aporta kits didácticos, guías de clase completas y encargos derivados desde la sede; la Base imparte clases regulares en su zona y ofrece a los Pioneros un lugar donde enseñar. Las primeras {bases} ya han firmado.',
   申请设立基地: 'Solicitar una Base',
   准入条件与权益: 'Requisitos y Beneficios',
   '基地是柴火官方认证的实体教学中心，具备承接实训与常态化开课的场地条件。':
@@ -635,8 +632,8 @@ const zhToEs: Record<string, string> = {
   '另：支持对接地方公共科教专项与公益项目。':
     'Nota: Compatible con convocatorias públicas de divulgación y proyectos comunitarios.',
   基地与先锋官的协作关系: 'Relación entre Bases y Pioneros',
-  '先锋官提供教学实操能力，基地提供工坊硬件承载，两者互为支撑、协同运转。':
-    'Los Pioneros aportan la docencia práctica; las Bases facilitan el taller físico y su equipamiento.',
+  '没有先锋官，就没有基地；有了基地，先锋官才有自己的主场。':
+    'Sin Pioneros no hay Base; con una Base, los Pioneros tienen su propio terreno.',
   讲师与个人: 'Instructor / Individual',
   实体工坊: 'Taller Físico',
   '可入驻签约多家基地，也可独立组织教学':
@@ -727,18 +724,18 @@ const zhToPt: Record<string, string> = {
   '基地教具和先锋官教具是一回事吗？': 'Os kits da base e os kits do Pioneiro são os mesmos?',
   'PPT + md 格式，可以自行修改和二次创作': 'Formato PPT + md; você pode modificar e reelaborar',
   '基地：柴火认证的本地授课点': 'Bases: pontos de ensino locais certificados pela Chaihuo',
-  教学合作网络与基地: 'Rede de Ensino e Bases',
-  '已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课，首批 {bases} 家基地已签约。常年开放申请，支持个人讲师开课与机构空间挂牌。':
-    '{pioneers} Pioneiros dão aulas em {countries} países e as primeiras {bases} bases já assinaram. Inscrições abertas o ano todo para instrutores e espaços educacionais.',
+  招募点火人与基地: 'Buscamos Pioneiros e Bases',
+  '先锋官是柴火招募的点火人：先学会柴火的课，再在自己的城市开课，把创客教育的火点到更多地方。目前已有海内外 {pioneers} 位，分布在 {countries} 个国家。有固定场地的机构，可以申请挂牌基地。':
+    'Os Pioneiros são quem leva a chama da Chaihuo à própria cidade: primeiro aprendem os cursos e depois os ministram ali, levando a educação maker a mais lugares. Já são {pioneers}, em {countries} países. Organizações com espaço fixo podem se candidatar a Base certificada.',
   个人讲师申请: 'Inscrição para instrutores',
   实体空间合作: 'Parceria para espaços físicos',
-  '先锋官：柴火在各地的教学合作者': 'Pioneiros: Parceiros docentes em diversas regiões',
-  '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课。':
-    'Os Pioneiros são parceiros locais de ensino da Chaihuo: dominam o currículo para ministrar aulas e oficinas em suas regiões. A Chaihuo fornece kits, planos de aula e certificação contínua. Atualmente, {pioneers} Pioneiros dão aulas em {countries} países.',
+  '先锋官：柴火招募的点火人': 'Pioneiros: quem leva a chama da Chaihuo',
+  '先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。柴火提供套件、逐课时讲义和认证；你负责招生、授课和本地推广。':
+    'Primeiro aprenda os cursos da Chaihuo e depois ministre e divulgue-os na sua cidade, levando a chama da educação maker a mais lugares. A Chaihuo fornece os kits, as apostilas aula a aula e a certificação; você cuida das matrículas, das aulas e da divulgação local.',
   申请成为先锋官: 'Inscreva-se como Pioneiro',
   准入条件与合作机制: 'Critérios de Admissão e Modelo de Parceria',
-  '先锋官是柴火认证的本地讲师与合作者：掌握课程体系，在当地开课交付，并对接学校与机构培训需求。':
-    'Os Pioneiros são instrutores certificados que ministram o currículo localmente e atendem à demanda de instituições de ensino.',
+  '先锋官是柴火认证的点火人：学会课程，在当地开课，并对接学校和机构的培训需求。':
+    'Um Pioneiro leva a chama da Chaihuo com sua certificação: aprende os cursos, ministra aulas na sua região e atende às demandas de formação de escolas e organizações.',
   '申请条件（满足其一即可）': 'Requisitos de Admissão (Cumprir pelo menos um)',
   '有硬件或编程背景，希望用柴火课程与套件在本地开课':
     'Com experiência em hardware ou programação, com interesse em ensinar usando os kits da Chaihuo',
@@ -810,9 +807,8 @@ const zhToPt: Record<string, string> = {
     'Inscrições abertas o ano todo para instrutores e makers. Envie seu histórico e plano de aulas; entraremos em contato em até 3 dias úteis.',
   提交申请: 'Enviar Inscrição',
   邮件咨询: 'Contato por E-mail',
-  '基地：柴火认证的本地授课中心': 'Bases: Centros Locais de Ensino Certificados',
-  '面向拥有固定教学场地与日常运营能力的机构。首批 {bases} 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。':
-    'Para instituições com espaço fixo e operação ativa. {bases} bases já assinaram e receberam materiais; novas inscrições abertas o ano todo. A Chaihuo fornece kits, apostilas e projetos; as bases realizam aulas regulares e acolhem Pioneiros em suas oficinas.',
+  '有固定场地、有专人持续运营的机构可以申请挂牌基地。柴火提供教学套件、成套讲义和总部派单；基地在本地常态开课，并为先锋官提供授课场地。首批 {bases} 家已签约。':
+    'Organizações com espaço fixo e alguém para operá-lo de forma contínua podem se candidatar a Base certificada. A Chaihuo fornece kits didáticos, apostilas completas e demandas encaminhadas pela sede; a Base ministra aulas regulares na região e oferece aos Pioneiros um lugar para ensinar. As primeiras {bases} já assinaram.',
   申请设立基地: 'Solicitar uma Base',
   准入条件与权益: 'Requisitos e Benefícios',
   '基地是柴火官方认证的实体教学中心，具备承接实训与常态化开课的场地条件。':
@@ -860,8 +856,8 @@ const zhToPt: Record<string, string> = {
   '另：支持对接地方公共科教专项与公益项目。':
     'Nota: Compatível com editais de fomento à educação e projetos sociais.',
   基地与先锋官的协作关系: 'Relação entre Bases e Pioneiros',
-  '先锋官提供教学实操能力，基地提供工坊硬件承载，两者互为支撑、协同运转。':
-    'Os Pioneiros trazem a capacidade didática; as Bases oferecem o laboratório físico e os equipamentos.',
+  '没有先锋官，就没有基地；有了基地，先锋官才有自己的主场。':
+    'Sem Pioneiros não há Base; com uma Base, os Pioneiros têm seu próprio território.',
   讲师与个人: 'Instrutor / Pessoa Física',
   实体工坊: 'Espaço Físico',
   '可入驻签约多家基地，也可独立组织教学':

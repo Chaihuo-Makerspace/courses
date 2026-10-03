@@ -57,6 +57,20 @@ Say the plain thing instead: what the learner does, on which hardware, in
 how long. The full voice spec is in `docs/DESIGN.md` §5; `pnpm deslop`
 reports the mechanical subset.
 
+## Brand phrases — keep, do not "plain-language" them
+
+These are the owner's wording for the Pioneer / Base programme. A copy pass
+must not replace them with neutral terms such as 教学合作者 or 本地讲师:
+
+- 先锋官是柴火招募的**点火人**
+- 把创客教育的火点到更多地方
+- 没有先锋官，就没有基地；有了基地，先锋官才有自己的主场。
+
+The last one is a paired slogan, not a negation-built self-description, so
+the rule above does not apply to it. Translations: en *Igniters*, ja
+火付け役; es / pt use a phrase (quienes llevan la llama / quem leva a
+chama), not a coined noun.
+
 ## Core narrative
 
 > 我们培养人掌握新技术整合能力，让团队自己能把解决方案部署落地。

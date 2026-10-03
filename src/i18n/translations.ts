@@ -37,10 +37,10 @@ const zh: TranslationDict = {
   'footer.seeed': 'Seeed Studio',
   'page.pioneer.title': '先锋官计划',
   'page.pioneer.description':
-    '先锋官是柴火在各地的教学合作者：掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。',
+    '先锋官是柴火招募的点火人：先学会柴火的课，再在自己的城市开课、推广，把创客教育的火点到更多地方。柴火提供套件、逐课时讲义和认证。',
   'page.base.title': '基地计划',
   'page.base.description':
-    '面向拥有固定教学场地与日常运营能力的机构，常年开放新基地申请。柴火提供教学套件、成套讲义与委托派单，基地在本地常态开课。',
+    '基地是柴火认证的本地授课点：柴火提供教学套件、成套讲义和总部派单，基地在本地常态开课，并为先锋官提供授课场地。',
 
   // Home Hero
   'home.hero.title': '七门智能硬件课，\n套件、教案、讲师一次配齐',
@@ -143,10 +143,10 @@ const en: TranslationDict = {
   'footer.seeed': 'Seeed Studio',
   'page.pioneer.title': 'Pioneer Program',
   'page.pioneer.description':
-    'Pioneers are Chaihuo’s local teaching partners: once trained on Chaihuo courses, they run classes, deliver workshops, and build local partnerships. Chaihuo provides kits, lesson-by-lesson lecture notes, and certification support. Applications are open year-round.',
+    'Pioneers are the Igniters Chaihuo recruits: learn the courses first, then teach and promote them in your own city, carrying the maker-education flame to more places. Chaihuo provides kits, lesson-by-lesson notes and certification.',
   'page.base.title': 'Base Program',
   'page.base.description':
-    'For institutions with dedicated teaching spaces and ongoing operations. Applications for new Bases are open year-round. Chaihuo provides teaching kits, complete lecture notes, and dispatched workshop opportunities; Bases run regular courses locally.',
+    'Bases are Chaihuo-certified local teaching sites: Chaihuo provides teaching kits, full lesson packs and work dispatched from headquarters; the Base runs regular classes locally and gives Pioneers a place to teach.',
 
   'home.hero.title':
     'Seven smart-hardware courses,\neach with its kit, lesson plans and instructors',
@@ -243,10 +243,10 @@ const ja: TranslationDict = {
   'footer.seeed': 'Seeed Studio',
   'page.pioneer.title': 'パイオニア計画',
   'page.pioneer.description':
-    'パイオニアは各地における柴火の教育パートナーです。カリキュラムを習得後、現地での授業やワークショップの開催、連携先の開拓を担います。柴火は実習キット、授業ごとの講義ノート、認定制度でサポートし、通年で募集しています。',
+    'パイオニアは柴火が募る火付け役です。まず柴火の講座を学び、自分の街で開講・普及して、メイカー教育の火をより多くの場所へ届けます。柴火はキット、授業ごとの講義ノート、認定を提供します。',
   'page.base.title': '拠点計画',
   'page.base.description':
-    '専用の教育スペースを持ち日常的な運営体制がある教育機関・施設を対象に、提携拠点を随時募集しています。柴火が実習キットや講義資料の提供、案件の委託を行い、拠点は地域での継続開講やパイオニアへの実習スペース提供を担います。',
+    '拠点は柴火が認定する地域の授業拠点です。柴火は教育キット、講義資料一式、本部からの案件紹介を提供し、拠点は地域で継続的に開講するとともに、パイオニアに授業の場を提供します。',
 
   'home.hero.title': 'スマートハードウェア7講座。\nキット・教案・講師をまとめて提供',
   'home.hero.description':
@@ -343,10 +343,10 @@ const es: TranslationDict = {
   'footer.seeed': 'Seeed Studio',
   'page.pioneer.title': 'Programa de Pioneros',
   'page.pioneer.description':
-    'Los Pioneros son socios docentes de Chaihuo en distintas regiones: tras formarse en los cursos, organizan clases, imparten talleres y abren colaboraciones locales. Chaihuo proporciona kits, temarios sesión por sesión y soporte de certificación. Convocatoria abierta todo el año.',
+    'Los Pioneros son quienes llevan la llama de Chaihuo a su ciudad: primero aprenden los cursos y después los imparten y promueven allí, acercando la educación maker a más lugares. Chaihuo aporta los kits, los temarios sesión por sesión y la certificación.',
   'page.base.title': 'Programa de Bases',
   'page.base.description':
-    'Dirigido a instituciones con espacio docente fijo y capacidad de gestión continua. La solicitud de nuevas Bases está abierta todo el año. Chaihuo aporta kits didácticos, guías de clase completas y derivación de proyectos; las Bases imparten cursos regulares a nivel local.',
+    'Las Bases son puntos de enseñanza locales certificados por Chaihuo: Chaihuo aporta kits didácticos, guías de clase completas y encargos derivados desde la sede; la Base imparte clases regulares en su zona y ofrece a los Pioneros un lugar donde enseñar.',
 
   'home.hero.title':
     'Siete cursos de hardware inteligente,\ncon kit, planes de clase e instructores',
@@ -445,10 +445,10 @@ const ptBR: TranslationDict = {
   'footer.seeed': 'Seeed Studio',
   'page.pioneer.title': 'Programa de Pioneiros',
   'page.pioneer.description':
-    'Os Pioneiros são parceiros docentes da Chaihuo em diversas regiões: após dominar os cursos, organizam turmas, ministram oficinas e ampliam parcerias locais. A Chaihuo fornece kits, apostilas aula a aula e suporte à certificação. Inscrições abertas o ano todo.',
+    'Os Pioneiros são quem leva a chama da Chaihuo à própria cidade: primeiro aprendem os cursos e depois os ministram e divulgam ali, levando a educação maker a mais lugares. A Chaihuo fornece os kits, as apostilas aula a aula e a certificação.',
   'page.base.title': 'Programa de Bases',
   'page.base.description':
-    'Voltado a instituições com espaço físico fixo e capacidade de operação contínua. Inscrições para novas Bases abertas o ano todo. A Chaihuo fornece kits didáticos, apostilas completas e oportunidades de oficinas; as Bases ministram cursos regulares localmente.',
+    'As Bases são pontos de ensino locais certificados pela Chaihuo: a Chaihuo fornece kits didáticos, apostilas completas e demandas encaminhadas pela sede; a Base ministra aulas regulares na região e oferece aos Pioneiros um lugar para ensinar.',
 
   'home.hero.title': 'Sete cursos de hardware inteligente,\ncom kit, planos de aula e instrutores',
   'home.hero.description':
