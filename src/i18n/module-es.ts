@@ -1130,8 +1130,8 @@ export const esDict: Record<string, string> = {
   '传统监控大多只能事后调录像回溯，风险发生的当下给不出结构化告警；普通移动侦测又受光线变化、雨雪晃动干扰严重，误报率高。视觉 AI 定制开发周期长，往往需要专门算法工程师与专用服务机架，方案商很难在单点嵌入式设备与多路集中服务器之间权衡性能与成本。':
     'La videovigilancia tradicional suele limitarse a la reproducción forense y no genera alertas estructuradas en tiempo real; la detección de movimiento convencional genera falsas alarmas por cambios de luz o lluvia. Desarrollar IA visual a medida implica ciclos largos, ingenieros especializados y racks dedicados, dificultando equilibrar rendimiento y costes entre nodos embebidos y servidores centralizados.',
   高级: 'Avanzado',
-  'L1 适合具备基础网络与浏览器操作经验、能连接 Wi-Fi 与访问 Web 界面的学员；L2 需理解 IP 网络、Docker 与 MQTT 基础，能编辑 YAML 配置文件；L3 需具备 Python 与 Linux 命令行基础，了解目标检测基本原理':
-    'L1 adecuado para quienes tienen manejo básico de redes y navegadores (conectar Wi-Fi y acceder a interfaces web); L2 requiere entender redes IP, Docker y MQTT, y editar archivos YAML; L3 exige conocimientos de Python, terminal Linux y fundamentos de detección de objetos',
+  'L1 具备基础网络与浏览器操作经验，能连接 Wi-Fi 与访问 Web 界面；L2 理解 IP 网络、Docker 与 MQTT 基础，能编辑 YAML 配置文件；L3 具备 Python 与 Linux 命令行基础，了解目标检测基本原理':
+    'L1 requiere experiencia básica de red y navegador (conexión Wi-Fi y acceso web); L2 requiere conocimientos básicos de redes IP, Docker y MQTT, y edición de YAML; L3 requiere bases de Python, consola Linux y nociones de detección de objetos.',
   '物业与园区安防：周界防范、人员越界告警、夜间异常驻留检测':
     'Seguridad de propiedades y campus: protección perimetral, alertas de cruce de límites por personas, detección de permanencia anómala nocturna',
   '工业制造与安全生产：未佩戴安全帽/反光衣检测、危险区域人员闯入、输送带状态监控':
@@ -1282,8 +1282,8 @@ export const esDict: Record<string, string> = {
   边缘端实跑: 'Ejecucion real en el borde',
   '关键转折点 · 从单点端侧推理到多路集中 NVR 汇聚':
     'Punto de inflexión clave · De inferencia en el borde local a agregación NVR multicanal centralizada',
-  'reCamera 负责单点位即插即用的端侧检测与就地联动；Frigate 与 Jetson 则提供多路视频流汇聚、统一区域规则设定与跨系统告警输出，实现多机位的集中分析。':
-    'reCamera resuelve la detección plug-and-play y la vinculación local en puntos aislados; Frigate y Jetson aportan agregación de múltiples flujos de vídeo, reglas de zona unificadas y alertas entre sistemas para un análisis centralizado.',
+  'reCamera 负责单点位即插即用的端侧检测与就地联动；Frigate 与 Jetson 则提供多路视频流汇聚、统一区域规则设定与跨系统告警输出，从单点感知走向多路集中分析。':
+    'reCamera resuelve la detección local plug-and-play y la vinculación en el propio punto; Frigate y Jetson aportan la agregación de múltiples transmisiones de vídeo, reglas de zona unificadas y emisión de alertas entre sistemas, pasando de la detección puntual al análisis centralizado de múltiples flujos.',
   '另需 Mosquitto MQTT Broker（承载结构化告警事件，1883 端口）、InfluxDB + Grafana（L3 检测统计与时序看板）、CVAT / Roboflow（L3 数据集标注平台）。':
     'Requiere además Mosquitto MQTT Broker (eventos de alerta estructurados, puerto 1883), InfluxDB + Grafana (estadísticas y panel temporal de L3) y CVAT / Roboflow (plataforma de etiquetado en L3).',
   '硬件台架清点、网络环境配置、reCamera固件预置与Node-RED/SSCMA插件验证、Frigate容器部署与GPU直通配置、教学资料下发':
@@ -1396,15 +1396,15 @@ export const esDict: Record<string, string> = {
     'Llevar los modelos de visión más allá del laboratorio para afrontar la luz real y las falsas alarmas',
   把视觉AI从演示台架搬到客户现场:
     'Lleva la IA visual del banco de demostración al sitio del cliente',
-  'M4 不走纯算法跑分和实验室评测的路线，而是带学员做实地摄像头部署、端侧 NPU 推理、多路视频流汇聚以及工程现场的误报调优。实操台架按模块化设计，讲师可以根据课时在单机轻量方案和多路集中分析架构之间灵活组合。':
-    'M4 deja a un lado las métricas de laboratorio para centrarse en el despliegue físico de cámaras, inferencia en NPU local, agregación multicanal y ajuste de falsas alarmas en campo. Con bancos modulares, el profesorado puede combinar ágilmente soluciones ligeras autónomas o arquitecturas centralizadas de análisis según las horas de formación.',
+  'M4 围绕边缘摄像头部署、端侧 NPU 推理、多路视频流汇聚以及工程现场的误报调优展开，带学员走通交付全流程。课程提供由浅入深的实操台架，讲师可依据实训时长在轻量端侧方案与多路集中分析架构间灵活选型。':
+    'M4 se centra en el despliegue de cámaras en el borde, inferencia en NPU local, agregación de múltiples flujos de vídeo y ajuste de falsas alarmas, guiando a los alumnos por todo el ciclo de entrega. Con bancos de trabajo progresivos, los instructores pueden adaptar la formación desde esquemas ligeros hasta arquitecturas centralizadas según la duración.',
   '模块 04 与 08 支持学员自选周界防范区域，例如实训室后门、特定危险工位或设备隔离带，根据物理环境标定报警边界。':
     'Las unidades 04 y 08 permiten a los estudiantes marcar zonas perimetrales personalizadas, como accesos al taller o áreas de seguridad en maquinaria, calibrando los límites según el entorno físico.',
   接相机: 'Conectar cámaras',
   '支持引入实训室或园区现有的标准 RTSP 监控摄像头，完成多路汇聚分析，验证异构视频源接入能力。':
     'Permite integrar cámaras de seguridad RTSP ya instaladas en el centro para análisis concurrente, validando la interoperabilidad con fuentes de vídeo heterogéneas.',
-  '把现场常见的光照突变、树影晃动、反光干扰等真实工况引入实训，带着学员调试置信度阈值和遮罩区域（Masks），掌握排除误报的工程方法。':
-    'Introduce condiciones reales como cambios bruscos de iluminación, movimiento de vegetación o reflejos, guiando en el calibrado de umbrales y máscaras (Masks) para dominar la eliminación de falsos positivos.',
+  '把现场常见的光照突变、树枝晃动、反光干扰等真实工况引入实训，带着学员调试置信度阈值与遮罩区域，掌握排除误报的工程方法。':
+    'Lleva al aula condiciones reales como cambios bruscos de iluminación, ramas oscilantes y reflejos, guiando a los alumnos en el ajuste de umbrales y máscaras de exclusión para mitigar falsas alarmas.',
   '仅做物体/行为/区域检测与事件告警，严禁人脸身份识别与生物特征追踪。':
     'Solo se realiza detección de objetos/comportamientos/zonas y alertas de eventos; queda estrictamente prohibido el reconocimiento facial de identidad y el rastreo de características biométricas.',
   '通用与特定目标检测（人/车/安全帽/反光衣/工件等物体类别）':
@@ -1576,8 +1576,8 @@ export const esDict: Record<string, string> = {
   'InfluxDB+Grafana私有化大屏': 'Panel grande privatizado InfluxDB+Grafana',
   '关键转折点 · 从云端数据监视到本地边缘联动控制':
     'Punto de inflexión clave · del monitoreo de datos en nube al control de ciclo cerrado en el borde local',
-  'SenseCraft Data 云端打通了数据监视与告警推送；SenseCAP Open API 为系统提供跨平台数据提取能力，配合 reComputer 边缘端运行的 Node-RED，实现本地阈值判断与执行机构联动，从环境监测走向自动化控制。':
-    'SenseCraft Data en la nube resuelve la visibilidad de datos y el envío de alertas; SenseCAP Open API aporta extracción entre plataformas para que Node-RED en el reComputer local ejecute lógica de umbrales y accione actuadores, cerrando el ciclo desde la monitorización pasiva hasta el control automatizado.',
+  'SenseCraft Data 云端打通了数据监视与告警推送；SenseCAP Open API 为系统提供跨平台数据提取能力，配合 reComputer 边缘端运行的 Node-RED，实现本地阈值判断与执行机构联动，从环境监测走向数据集成与自动化控制。':
+    'SenseCraft Data en la nube resuelve la visibilidad de datos y el envío de alertas; SenseCAP Open API aporta extracción entre plataformas para que Node-RED en el reComputer local ejecute lógica de umbrales y accione actuadores, pasando de la monitorización ambiental a la integración de datos y el control automatizado.',
   '另需 4G 物联网 SIM 卡（承载蜂窝数据回传）、SenseCraft App（移动端设备绑定与告警推送）、InfluxDB 时序数据库（L3 私有化数据存储）。':
     'Requiere además tarjeta SIM IoT 4G (retorno de telemetría móvil), SenseCraft App (vinculación móvil y alertas) y base de datos InfluxDB (almacenamiento privado en L3).',
   '硬件台架清点（4G采集器/传感器/R1025）、物联网SIM卡激活、SenseCraft Data账号初始化、教学资料下发':
@@ -1680,15 +1680,15 @@ export const esDict: Record<string, string> = {
   把分散在田间和管网的传感器稳稳接进看板:
     'Integrar con fiabilidad los sensores dispersos en campos y redes en el panel de control',
   把广域分散的环境数据接进来: 'Conectar los datos ambientales dispersos de área amplia',
-  'M5 针对农业、水务与市政管网等野外布线困难的场景，带着学员做工业变送器接线、4G / LoRaWAN 选型评估以及数据看板搭建。课程提供完整的寄存器映射表和接线图纸，讲师可以结合实训现场的具体工况灵活组织教学。':
-    'M5 responde a entornos donde el cableado resulta complejo (agricultura, aguas y redes municipales), guiando el cableado de transmisores industriales, la evaluación entre 4G y LoRaWAN y la creación de paneles de control. Incluye tablas completas de registros y esquemas de conexión para adaptar las clases a las condiciones de campo.',
+  'M5 针对农业、水务与市政管网等无公网布线条件的严苛场景，带着学员做工业变送器接线、4G / LoRaWAN 双路线选型评估以及云端私有化数据看板的搭建。课程提供完整的寄存器映射表与标准化接线图，讲师可以结合实训现场的具体工况灵活组织教学。':
+    'M5 responde a entornos rigurosos sin infraestructura de red ni cableado (agricultura, aguas y redes municipales), guiando el cableado de transmisores industriales, la evaluación de doble ruta 4G / LoRaWAN y la creación de paneles en la nube o privados. Incluye tablas completas de registros y esquemas estandarizados para adaptar las clases a las condiciones de campo.',
   '模块 09 的多级告警规则完全开放。讲师可结合大棚霜冻预警、仓库温湿度恒定或水质监测等课题，设定符合真实环境标准的阈值。':
     'Las reglas de alerta de la unidad 09 son flexibles. El docente puede enfocar los ejercicios en prevención de heladas agrícolas, control de almacenes o calidad del agua en piscifactorías.',
   接传感器: 'Conectar sensores',
   '在模块 06 之后，学员可尝试接入自有工业 RS485 传感器，演练通过寄存器手册完成新设备点位适配与数据解析。':
     'Tras la unidad 06, los alumnos pueden conectar sensores RS485 industriales propios, practicando el mapeo de direcciones y el análisis de datos a partir de manuales de registros.',
-  '讲师把野外防雷防水、太阳能供电功耗平衡以及通信保活心跳等施工经验带进课堂，能让学员掌握野外环境下保障设备长期稳定运行的工程技能。':
-    'La experiencia docente en protección contra rayos, estanqueidad, balance energético solar y latidos de comunicación transmite a los alumnos los criterios necesarios para garantizar operaciones fiables en exteriores a largo plazo.',
+  '讲师把野外防雷防水、供电功耗平衡以及长期通信心跳保障等施工经验带进课堂，能让学员掌握野外环境下保障设备稳定运行的工程技能。':
+    'La experiencia docente en protección contra rayos, estanqueidad, balance de consumo eléctrico y latidos de comunicación transmite a los alumnos los criterios necesarios para garantizar operaciones fiables en exteriores.',
   '4G与LoRaWAN为两条独立交付路线，硬件不混用；环境数据属低频物联监测，不做毫秒级实时控制。':
     '4G y LoRaWAN son dos rutas de entrega independientes, el hardware no se mezcla; los datos ambientales pertenecen a monitoreo IoT de baja frecuencia, no se realiza control de ciclo cerrado de nivel de milisegundos.',
   '多环境要素采集（土壤温湿度/EC、气象七参数、CO2、叶面温湿度、水质pH等）与广域分散点位监测':
@@ -1881,8 +1881,8 @@ export const esDict: Record<string, string> = {
   'Isaac Sim仿真验证': 'Validación por simulación con Isaac Sim',
   '关键转折点 · 从零代码遥操演示到确定性工程抓取':
     'Punto de inflexión clave · de la demostración de teleoperación sin código a la captura de ingeniería determinista',
-  'SenseCraft 降低了上手门槛，让学员在第一天就能跑通主从遥操与语音指令夹取；而 Python、Pinocchio 与 Motorbridge 的组合，则让系统具备确定性的 3D 空间抓取与异常处理能力，从舞台演示走向实际工程交付。':
-    'SenseCraft rebaja la curva inicial permitiendo validar la teleoperación y el agarre por voz desde el primer día; la integración con Python, Pinocchio y Motorbridge aporta capacidades de agarre espacial 3D determinista y gestión de fallos, pasando de demostraciones de escaparate a proyectos de ingeniería entregables.',
+  'SenseCraft 降低了上手门槛，让学员在第一天就能跑通主从遥操与语音指令夹取；而 Python、Pinocchio 与 Motorbridge 的组合，则让系统具备确定性 3D 空间抓取的工程能力，从舞台演示走向实际工程交付。':
+    'SenseCraft rebaja la curva inicial permitiendo validar la teleoperación y el agarre por voz desde el primer día; la integración con Python, Pinocchio y Motorbridge aporta capacidades de ingeniería para el agarre espacial 3D determinista, pasando de demostraciones de escaparate a proyectos de ingeniería entregables.',
   '另需HTTP / MQTT消息通知（工位视觉事件触发与跨系统联动）、reSpeaker Flex语音套件（自然语言指令采集与播报）。':
     'Se requieren además notificaciones de mensajes HTTP / MQTT (activación de eventos visuales de estación de trabajo y vinculación entre sistemas) y el kit de voz reSpeaker Flex (captura y reproducción de comandos en lenguaje natural).',
   '硬件台架清点、机械臂物理固定与上电自检、安全隔离区布置、控制中枢与网络预置、视觉采集套件与光控箱就绪':
@@ -2001,8 +2001,8 @@ export const esDict: Record<string, string> = {
   '把视觉引导与运动学算法，落实到机械臂的每次抓取':
     'Trasladar el guiado visual y la cinemática a cada agarre real del brazo robótico',
   把物理执行接进数字系统: 'Conectar la ejecución física al sistema digital',
-  'M6 不做脱离算法的单纯示教，而是把视觉引导、运动学计算与物理机械臂串联起来。课程从零代码主从遥操切入，逐步过渡到 Python 逆运动学编程与具身智能动作采集，并为讲师配套了完整的安全操作规程与参考工程代码。':
-    'M6 va más allá del simple aprendizaje por repetición, enlazando la visión artificial y el cálculo cinemático con manipuladores robóticos reales. El temario progresa desde la teleoperación sin código hasta la programación en Python de cinemática inversa y la captura de datos para IA física, con estrictos protocolos de seguridad y código fuente verificado.',
+  'M6 围绕视觉引导、运动学算法与机械臂执行机构之间的联动展开，课程从零代码主从遥操切入，逐步过渡到 Python 逆运动学编程与具身智能数据集采集，并为讲师配套了完整的安全操作规程与参考工程代码。':
+    'M6 se articula en torno a la sincronización entre visión artificial, cinemática y actuadores robóticos. El temario progresa desde la teleoperación sin código hasta la programación en Python de cinemática inversa y la captura de datasets para IA física, con estrictos protocolos de seguridad y código de referencia.',
   '模块 09 支持自定义抓取工况。可将分拣对象替换为电子器件、农产品模型或异形零件，引导学员针对不同材质与姿态设计抓取策略。':
     'La unidad 09 permite personalizar las tareas de manipulación. Es posible sustituir los objetos por componentes electrónicos, piezas agrícolas o piezas irregulares, adaptando la estrategia de agarre según forma y material.',
   '台架可灵活联动上游光电传感器或 M4 中的目标检测事件，让机械臂根据外部传感器信号自主启动抓取流程。':
