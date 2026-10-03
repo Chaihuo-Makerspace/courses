@@ -2704,7 +2704,7 @@ export const modules: Module[] = [
     oneLiner: '工业级传感器与4G/LoRaWAN双链路，实现广域场景低功耗环境监测与数据采集。',
     oneLinerEmphasis: '工业级传感器与4G/LoRaWAN双链路',
     realProblem:
-      '面向连栋温室大棚、设施园艺、河道水质监测、城市内涝点与工业仓储等广域分散场景，偏远点位布线取电成本高，野外山地与河流断面上百米至数公里铺设线缆工程量巨大。现场多厂商传感器各自定义私有协议，二次开发与协议适配周期长；霜冻、水质恶化、土壤干旱等异常依赖人工定期巡检，故障发现晚且耗费人力；采集到的环境数据停留在云端大屏或手机App，无法与既有灌溉/风机等执行机构联动，也无法对接第三方业务系统。',
+      '面向连栋温室大棚、设施园艺、河道水质监测、城市内涝点与工业仓储等广域分散场景，偏远点位布线取电成本高，野外山地与河流断面上百米至数公里铺设线缆工程量巨大。现场多厂商传感器各自定义私有协议，二次开发与协议适配周期长；霜冻、水质恶化、土壤干旱等异常依赖人工定期巡检，故障发现晚且耗费人力；采集到的环境数据停留在云端大屏或手机 App，无法与既有灌溉、风机等执行机构联动，也无法对接第三方业务系统。',
     illustration: '/illustrations/m5.svg',
     heroImage: '/illustrations/m5-4g-soil-moisture.png',
     difficulty: '入门',
@@ -2743,12 +2743,12 @@ export const modules: Module[] = [
       'reComputer R1025-10（113991274）',
     ],
     capabilities: [
-      '多环境要素采集（土壤/气象/气体/水质）',
-      '无线广域传输（4G蜂窝直连 / LoRaWAN）',
+      '多环境要素采集（土壤 / 气象 / 气体 / 水质）',
+      '无线广域传输（4G 蜂窝直连 / LoRaWAN）',
       '云端报表与多条件告警配置',
-      'SenseCAP Open API数据对接与提取',
-      'Node-RED本地阈值联动控制编排',
-      '时序数据库存储与Grafana私有化看板',
+      'SenseCAP Open API 数据对接与提取',
+      'Node-RED 本地阈值联动控制编排',
+      '时序数据库存储与 Grafana 私有化看板',
     ],
     audience: [
       '方案顾问与商务销售',
@@ -2758,10 +2758,10 @@ export const modules: Module[] = [
     ],
     deliverables: [
       '传感器网络部署图与电气接线定义表',
-      'Modbus RTU从机地址与寄存器映射字典',
+      'Modbus RTU 从机地址与寄存器映射字典',
       'SenseCraft Data告警策略配置清单',
-      'Node-RED自动化流程文件（.json）与API集成调用示例代码（L3）',
-      'Grafana监控大屏配置文件（L3）',
+      'Node-RED 自动化流程文件（.json）与 API 集成调用示例代码（L3）',
+      'Grafana 监控大屏配置文件（L3）',
     ],
     cells: {
       L1: {
@@ -2769,8 +2769,8 @@ export const modules: Module[] = [
         subtitle: '设备上电后，在网页和 App 上看到环境数据',
         durationDays: 1,
         outcomes: [
-          '理解4G DTU与LoRaWAN网关在物联网数据采集中的不同拓扑结构与适用条件',
-          '熟练使用SenseCraft Data网页端与移动端App查看多维度环境参数与历史趋势曲线',
+          '理解 4G DTU 与 LoRaWAN 网关在物联网数据采集中的不同拓扑结构与适用条件',
+          '熟练使用 SenseCraft Data 网页端与移动端 App 查看多维度环境参数与历史趋势曲线',
           '了解土壤、水质、气象等典型工业传感器的测量原理与部署注意事项',
         ],
         comingSoon: false,
@@ -2780,9 +2780,9 @@ export const modules: Module[] = [
         subtitle: '接好 RS485 传感器，配置轮询与三类以上告警',
         durationDays: 3,
         outcomes: [
-          '掌握RS485差分接线、5V/12V电源分配与Modbus RTU寄存器寻址配置',
-          '熟练完成4G数据采集器（或LoRaWAN网关）的设备绑定与轮询周期设置',
-          '配置3类以上业务告警策略（温度上限报警、土壤水分过低告警、设备离线通知）',
+          '掌握 RS485 差分接线、5V / 12V 电源分配与 Modbus RTU 寄存器寻址配置',
+          '熟练完成 4G 数据采集器（或 LoRaWAN 网关）的设备绑定与轮询周期设置',
+          '配置 3 类以上业务告警策略（温度上限报警、土壤水分过低告警、设备离线通知）',
         ],
         comingSoon: false,
       },
@@ -2791,9 +2791,9 @@ export const modules: Module[] = [
         subtitle: '用 Open API 取数，接入 Grafana 与本地自动化',
         durationDays: 5,
         outcomes: [
-          '掌握SenseCAP Open API鉴权（Access ID / Access Key，HTTP Basic Auth）与遥测数据提取接口调用',
-          '在reComputer R1025上部署Node-RED编排本地自动化控制流，根据传感器数值触发执行机构',
-          '将环境时序数据接入InfluxDB与Grafana，设计私有化数据监控大屏',
+          '掌握 SenseCAP Open API 鉴权（Access ID / Access Key，HTTP Basic Auth）与遥测数据提取接口调用',
+          '在 reComputer R1025 上部署 Node-RED 编排本地自动化控制流，根据传感器数值触发执行机构',
+          '将环境时序数据接入 InfluxDB 与 Grafana，设计私有化数据监控大屏',
         ],
         comingSoon: false,
       },
@@ -2909,9 +2909,9 @@ export const modules: Module[] = [
       ],
       hinge: {
         title: '关键转折点 · 从云端数据监视到本地边缘联动控制',
-        body: 'SenseCraft Data云端解决「数据能看见、告警能推送」的监视问题；SenseCAP Open API让系统第一次具备跨平台数据提取能力，Node-RED在reComputer边缘端实现「感知→阈值判断→执行机构联动」的就地控制，从「环境监测」走向「数据集成与自动化控制」。',
+        body: 'SenseCraft Data 云端打通了数据监视与告警推送；SenseCAP Open API 为系统提供跨平台数据提取能力，配合 reComputer 边缘端运行的 Node-RED，实现本地阈值判断与执行机构联动，从环境监测走向自动化控制。',
       },
-      note: '另需4G物联网SIM卡（承载蜂窝数据回传）、SenseCraft App（移动端设备绑定与告警推送）、InfluxDB时序数据库（L3私有化数据存储）。',
+      note: '另需 4G 物联网 SIM 卡（承载蜂窝数据回传）、SenseCraft App（移动端设备绑定与告警推送）、InfluxDB 时序数据库（L3 私有化数据存储）。',
     },
 
     curriculum: {
@@ -3141,7 +3141,7 @@ export const modules: Module[] = [
         body: '含现场传感器布点拓扑图、RS485总线接线图、航空插头引脚定义表（VCC/GND/RS485-A/RS485-B）、电源分配方案与从机地址（Slave ID）分配表。',
       },
       {
-        title: 'Modbus RTU从机地址与寄存器映射字典',
+        title: 'Modbus RTU 从机地址与寄存器映射字典',
         body: '含所有接入传感器型号、从机地址、寄存器起始地址、读取长度、数据类型、缩放系数与物理量换算公式。',
       },
       {
@@ -3153,11 +3153,11 @@ export const modules: Module[] = [
         body: '含SenseCraft Data网页端与移动端App操作指南、数据报表导出流程（CSV/Excel）、历史数据归档方法与设备绑定步骤。',
       },
       {
-        title: 'Node-RED自动化流程文件（.json）与API集成调用示例代码（L3）',
+        title: 'Node-RED 自动化流程文件（.json）与 API 集成调用示例代码（L3）',
         body: '含SenseCAP Open API鉴权配置（Access ID/Access Key，HTTP Basic Auth）、遥测数据提取HTTP请求示例、Node-RED阈值联动控制流JSON文件与RS485控制指令下发逻辑。',
       },
       {
-        title: 'Grafana监控大屏配置文件（L3）',
+        title: 'Grafana 监控大屏配置文件（L3）',
         body: '含InfluxDB时序数据库写入配置、Grafana数据源连接设置、多区域环境对比大屏仪表盘模板（JSON）与私有化部署说明。',
       },
     ],
@@ -3166,7 +3166,7 @@ export const modules: Module[] = [
       heading: '把分散在田间和管网的传感器稳稳接进看板',
       emphasis: '稳稳接进看板',
       intro:
-        'M5 针对农业、水务与市政管网等无公网布线条件的严苛场景，系统讲解工业变送器接线、4G / LoRaWAN 双路线选型及云端私有化数据看板的搭建。配套全套寄存器映射表与标准化接线图，方便讲师按实际环境组织授课。',
+        'M5 针对农业、水务与市政管网等野外布线困难的场景，带着学员做工业变送器接线、4G / LoRaWAN 选型评估以及数据看板搭建。课程提供完整的寄存器映射表和接线图纸，讲师可以结合实训现场的具体工况灵活组织教学。',
       openings: [
         {
           no: '切入点 01',
@@ -3181,7 +3181,7 @@ export const modules: Module[] = [
         {
           no: '切入点 03',
           title: '融入工程经验',
-          body: '讲师在野外防雷防水、供电功耗平衡、长期通信心跳保障等现场交付细节上的传授，是形成实用工程能力的核心。',
+          body: '讲师把野外防雷防水、太阳能供电功耗平衡以及通信保活心跳等施工经验带进课堂，能让学员掌握野外环境下保障设备长期稳定运行的工程技能。',
         },
       ],
     },

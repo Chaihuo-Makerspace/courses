@@ -1375,9 +1375,9 @@ export const enDict: Record<string, string> = {
     'Install industrial sensors in greenhouses, rivers and warehouses and read the data on a phone. Connect over 4G or LoRaWAN, with no cabling.',
   '工业级传感器与4G/LoRaWAN双链路，实现广域场景低功耗环境监测与数据采集。':
     'Industrial-grade sensors with dual 4G/LoRaWAN links enable low-power environmental monitoring and data acquisition in wide-area scenarios.',
-  '工业级传感器与4G/LoRaWAN双链路': 'Industrial-Grade Sensors with Dual 4G/LoRaWAN Links',
-  '面向连栋温室大棚、设施园艺、河道水质监测、城市内涝点与工业仓储等广域分散场景，偏远点位布线取电成本高，野外山地与河流断面上百米至数公里铺设线缆工程量巨大。现场多厂商传感器各自定义私有协议，二次开发与协议适配周期长；霜冻、水质恶化、土壤干旱等异常依赖人工定期巡检，故障发现晚且耗费人力；采集到的环境数据停留在云端大屏或手机App，无法与既有灌溉/风机等执行机构联动，也无法对接第三方业务系统。':
-    'For widely dispersed scenarios such as multi-span greenhouses, protected horticulture, river water-quality monitoring, urban flood-prone points, and industrial warehouses, remote sites incur high wiring and power-supply costs, and laying cables across hundreds of meters to several kilometers in mountainous terrain or river cross-sections is a massive undertaking. On-site multi-vendor sensors each define proprietary protocols, leading to long secondary-development and protocol-adaptation cycles. Anomalies such as frost, water-quality deterioration, and soil drought rely on manual periodic inspection, resulting in late fault detection and high labor costs. Collected environmental data remains on cloud dashboards or mobile apps, unable to link with existing actuators such as irrigation/fans, nor integrate with third-party business systems.',
+  '工业级传感器与4G/LoRaWAN双链路': 'Industrial-grade sensors with dual 4G/LoRaWAN links',
+  '面向连栋温室大棚、设施园艺、河道水质监测、城市内涝点与工业仓储等广域分散场景，偏远点位布线取电成本高，野外山地与河流断面上百米至数公里铺设线缆工程量巨大。现场多厂商传感器各自定义私有协议，二次开发与协议适配周期长；霜冻、水质恶化、土壤干旱等异常依赖人工定期巡检，故障发现晚且耗费人力；采集到的环境数据停留在云端大屏或手机 App，无法与既有灌溉、风机等执行机构联动，也无法对接第三方业务系统。':
+    'In wide-area scenarios such as multi-span greenhouses, horticultural facilities, river water quality monitoring, urban waterlogging points, and industrial warehouses, power and wired network deployment is cost-prohibitive across hundreds of meters to kilometers of rugged terrain. On-site sensors from multiple vendors often use proprietary protocols, causing long integration cycles. Abnormalities like frost, water degradation, or soil drought rely on manual inspections, resulting in delayed detection. Furthermore, collected environmental data stays isolated on cloud dashboards or mobile apps, unable to trigger on-site actuators (such as irrigation valves or ventilation fans) or integrate into third-party business systems.',
   '智慧农业与设施园艺：土壤温湿度/EC监测、温室CO2浓度调控、精准水肥灌溉联动':
     'Smart agriculture and protected horticulture: soil temperature/humidity/EC monitoring, greenhouse CO2 concentration regulation, precision fertigation linkage',
   '水质与生态环境监测：河道断面与养殖水体pH值监测、户外微型气象站':
@@ -1400,52 +1400,53 @@ export const enDict: Record<string, string> = {
     'Yunxiaoguo Multi-Parameter Agricultural Monitor (114993122)',
   '4G土壤墒情监测仪（114993646）': '4G Soil Moisture Monitor (114993646)',
   '叶面温湿度传感器（314990737）': 'Leaf Wetness & Temperature Sensor (314990737)',
-  '多环境要素采集（土壤/气象/气体/水质）':
-    'Multi-environmental-parameter acquisition (soil/weather/gas/water quality)',
-  '无线广域传输（4G蜂窝直连 / LoRaWAN）':
-    'Wireless wide-area transmission (4G cellular direct / LoRaWAN)',
+  '多环境要素采集（土壤 / 气象 / 气体 / 水质）':
+    'Multi-environmental parameter acquisition (soil / weather / gas / water quality)',
+  '无线广域传输（4G 蜂窝直连 / LoRaWAN）':
+    'Wide-area wireless transmission (4G cellular direct / LoRaWAN)',
   云端报表与多条件告警配置: 'Cloud reporting and multi-condition alert configuration',
-  'SenseCAP Open API数据对接与提取': 'SenseCAP Open API data integration and extraction',
-  'Node-RED本地阈值联动控制编排': 'Node-RED local threshold linkage control orchestration',
-  时序数据库存储与Grafana私有化看板: 'Time-series database storage and Grafana private dashboard',
+  'SenseCAP Open API 数据对接与提取': 'SenseCAP Open API data integration and retrieval',
+  'Node-RED 本地阈值联动控制编排': 'Node-RED local threshold automation orchestration',
+  '时序数据库存储与 Grafana 私有化看板':
+    'Time-series database storage and Grafana private dashboard',
   教研团队与实训讲师: 'Curriculum development teams and hands-on instructors',
   '农业、环保、市政工程技术人员':
     'Agriculture, environmental protection, and municipal engineering technicians',
   合作院校与政企实训学员: 'Partner institution and government/enterprise training students',
   传感器网络部署图与电气接线定义表:
     'Sensor network deployment diagram and electrical wiring definition table',
-  'Modbus RTU从机地址与寄存器映射字典': 'Modbus RTU slave address and register mapping dictionary',
+  'Modbus RTU 从机地址与寄存器映射字典': 'Modbus RTU slave address and register mapping dictionary',
   'SenseCraft Data告警策略配置清单': 'SenseCraft Data alert strategy configuration checklist',
-  'Node-RED自动化流程文件（.json）与API集成调用示例代码（L3）':
-    'Node-RED automation flow files (.json) and API integration call sample code (L3)',
-  'Grafana监控大屏配置文件（L3）': 'Grafana monitoring dashboard configuration files (L3)',
+  'Node-RED 自动化流程文件（.json）与 API 集成调用示例代码（L3）':
+    'Node-RED automation flow file (.json) and API integration sample code (L3)',
+  'Grafana 监控大屏配置文件（L3）': 'Grafana monitoring dashboard configuration file (L3)',
   环境感知网络架构与数据监视: 'Environmental Sensing Network Architecture and Data Monitoring',
   '设备上电后，在网页和 App 上看到环境数据':
     'Power up the devices and see environmental data on the web and in the app',
-  '理解4G DTU与LoRaWAN网关在物联网数据采集中的不同拓扑结构与适用条件':
-    'Understand the different topologies and applicable conditions of 4G DTU and LoRaWAN gateways in IoT data acquisition',
-  '熟练使用SenseCraft Data网页端与移动端App查看多维度环境参数与历史趋势曲线':
-    'Proficiently use the SenseCraft Data web and mobile apps to view multi-dimensional environmental parameters and historical trend curves',
+  '理解 4G DTU 与 LoRaWAN 网关在物联网数据采集中的不同拓扑结构与适用条件':
+    'Understand distinct topologies and applicable conditions of 4G DTUs and LoRaWAN gateways in IoT data acquisition',
+  '熟练使用 SenseCraft Data 网页端与移动端 App 查看多维度环境参数与历史趋势曲线':
+    'Proficiently use SenseCraft Data web portal and mobile app to inspect multidimensional environmental telemetry and historical trends',
   '了解土壤、水质、气象等典型工业传感器的测量原理与部署注意事项':
     'Understand the measurement principles and deployment considerations of typical industrial sensors for soil, water quality, and weather',
   '传感器接线、Modbus配置与规则告警': 'Sensor Wiring, Modbus Configuration, and Rule-Based Alerts',
   '接好 RS485 传感器，配置轮询与三类以上告警':
     'Wire up RS485 sensors and configure polling and three or more alert rules',
-  '掌握RS485差分接线、5V/12V电源分配与Modbus RTU寄存器寻址配置':
-    'Master RS485 differential wiring, 5V/12V power distribution, and Modbus RTU register addressing configuration',
-  '熟练完成4G数据采集器（或LoRaWAN网关）的设备绑定与轮询周期设置':
-    'Proficiently complete device binding and polling interval setup for the 4G data logger (or LoRaWAN gateway)',
-  '配置3类以上业务告警策略（温度上限报警、土壤水分过低告警、设备离线通知）':
-    'Configure 3+ types of business alert strategies (temperature upper-limit alarm, low soil moisture alert, device offline notification)',
+  '掌握 RS485 差分接线、5V / 12V 电源分配与 Modbus RTU 寄存器寻址配置':
+    'Master RS485 differential wiring, 5V / 12V power distribution, and Modbus RTU register addressing',
+  '熟练完成 4G 数据采集器（或 LoRaWAN 网关）的设备绑定与轮询周期设置':
+    'Proficiently bind 4G data loggers (or LoRaWAN gateways) and configure polling intervals',
+  '配置 3 类以上业务告警策略（温度上限报警、土壤水分过低告警、设备离线通知）':
+    'Configure 3+ business alert strategies (high temperature threshold, low soil moisture alarm, device offline notification)',
   API数据集成与本地边缘自动化: 'API Data Integration and Local Edge Automation',
   '用 Open API 取数，接入 Grafana 与本地自动化':
     'Pull data through the Open API into Grafana and local automations',
-  '掌握SenseCAP Open API鉴权（Access ID / Access Key，HTTP Basic Auth）与遥测数据提取接口调用':
-    'Master SenseCAP Open API authentication (Access ID / Access Key, HTTP Basic Auth) and telemetry data extraction API calls',
-  '在reComputer R1025上部署Node-RED编排本地自动化控制流，根据传感器数值触发执行机构':
-    'Deploy Node-RED on reComputer R1025 to orchestrate local automation control flows, triggering actuators based on sensor values',
-  '将环境时序数据接入InfluxDB与Grafana，设计私有化数据监控大屏':
-    'Ingest environmental time-series data into InfluxDB and Grafana, design a private data monitoring dashboard',
+  '掌握 SenseCAP Open API 鉴权（Access ID / Access Key，HTTP Basic Auth）与遥测数据提取接口调用':
+    'Master SenseCAP Open API authentication (Access ID / Access Key, HTTP Basic Auth) and telemetry data retrieval endpoints',
+  '在 reComputer R1025 上部署 Node-RED 编排本地自动化控制流，根据传感器数值触发执行机构':
+    'Deploy Node-RED on reComputer R1025 to orchestrate local automation flows triggering actuators based on sensor readings',
+  '将环境时序数据接入 InfluxDB 与 Grafana，设计私有化数据监控大屏':
+    'Ingest environmental time-series data into InfluxDB and Grafana to design a private monitoring dashboard',
   'Modbus RTU / RS485 / LoRaWAN / 4G 全网通': 'Modbus RTU / RS485 / LoRaWAN / 4G Full-Network',
   双通信路线: 'Dual Communication Routes',
   '4G 蜂窝直连版（国内）/ LoRaWAN 广域版（海外免布线）':
@@ -1506,10 +1507,10 @@ export const enDict: Record<string, string> = {
   'InfluxDB+Grafana私有化大屏': 'InfluxDB+Grafana Private Dashboard',
   '关键转折点 · 从云端数据监视到本地边缘联动控制':
     'Key Turning Point · From Cloud Data Monitoring to Local Edge Closed-Loop Control',
-  'SenseCraft Data云端解决「数据能看见、告警能推送」的监视问题；SenseCAP Open API让系统第一次具备跨平台数据提取能力，Node-RED在reComputer边缘端实现「感知→阈值判断→执行机构联动」的就地控制，从「环境监测」走向「数据集成与自动化控制」。':
-    'SenseCraft Data cloud addresses the monitoring problem of "data can be seen, alerts can be pushed"; SenseCAP Open API gives the system cross-platform data extraction capability for the first time; Node-RED implements the local closed loop of "perception → threshold judgment → actuator linkage" on the reComputer edge, moving from "environmental monitoring" to "data integration and automation control."',
-  '另需4G物联网SIM卡（承载蜂窝数据回传）、SenseCraft App（移动端设备绑定与告警推送）、InfluxDB时序数据库（L3私有化数据存储）。':
-    'Additionally requires 4G IoT SIM card (carrying cellular data backhaul), SenseCraft App (mobile device binding and alert push), InfluxDB time-series database (L3 private data storage).',
+  'SenseCraft Data 云端打通了数据监视与告警推送；SenseCAP Open API 为系统提供跨平台数据提取能力，配合 reComputer 边缘端运行的 Node-RED，实现本地阈值判断与执行机构联动，从环境监测走向自动化控制。':
+    'SenseCraft Data cloud handles data visibility and alert notifications; SenseCAP Open API introduces cross-platform data extraction, which pairs with Node-RED running on edge reComputer to enable local threshold logic and actuator triggers, closing the loop from basic monitoring to automated control.',
+  '另需 4G 物联网 SIM 卡（承载蜂窝数据回传）、SenseCraft App（移动端设备绑定与告警推送）、InfluxDB 时序数据库（L3 私有化数据存储）。':
+    'Additionally requires 4G IoT SIM card (cellular telemetry backhaul), SenseCraft App (mobile device onboarding and alert notifications), and InfluxDB time-series database (L3 private telemetry storage).',
   '硬件台架清点（4G采集器/传感器/R1025）、物联网SIM卡激活、SenseCraft Data账号初始化、教学资料下发':
     'Hardware bench inventory (4G data logger/sensor/R1025), IoT SIM card activation, SenseCraft Data account initialization, teaching material distribution',
   环境感知网络架构解析: 'Environmental Sensing Network Architecture Analysis',
@@ -1610,15 +1611,15 @@ export const enDict: Record<string, string> = {
   把分散在田间和管网的传感器稳稳接进看板:
     'Bring distributed field and utility sensors reliably into your dashboard',
   把广域分散的环境数据接进来: 'Integrate Wide-Area Dispersed Environmental Data',
-  'M5 针对农业、水务与市政管网等无公网布线条件的严苛场景，系统讲解工业变送器接线、4G / LoRaWAN 双路线选型及云端私有化数据看板的搭建。配套全套寄存器映射表与标准化接线图，方便讲师按实际环境组织授课。':
-    'M5 addresses harsh agricultural, hydrological and municipal environments lacking power and cellular coverage, covering industrial transmitter wiring, 4G / LoRaWAN route selection, and custom Grafana telemetry dashboards.',
+  'M5 针对农业、水务与市政管网等野外布线困难的场景，带着学员做工业变送器接线、4G / LoRaWAN 选型评估以及数据看板搭建。课程提供完整的寄存器映射表和接线图纸，讲师可以结合实训现场的具体工况灵活组织教学。':
+    'M5 addresses scenarios where wired cabling is challenging, such as agriculture, water utilities, and municipal pipelines, guiding learners through industrial transmitter wiring, 4G / LoRaWAN technology evaluation, and dashboard deployment. With complete register mapping tables and wiring schematics, instructors can flexibly adapt labs to on-site conditions.',
   '模块 09 的多级告警规则完全开放。讲师可结合大棚霜冻预警、仓库温湿度恒定或水质监测等课题，设定符合真实环境标准的阈值。':
     'Alert trigger policies in Unit 09 are fully adaptable. Instructors can align threshold exercises with greenhouse freeze alerts, warehouse climate control, or aquaculture water quality targets.',
   接传感器: 'Connect Sensors',
   '在模块 06 之后，学员可尝试接入自有工业 RS485 传感器，演练通过寄存器手册完成新设备点位适配与数据解析。':
     'Following Unit 06, students can wire external RS485 sensors, referencing register manuals to practice address mapping and raw telemetry parsing on new hardware.',
-  '讲师在野外防雷防水、供电功耗平衡、长期通信心跳保障等现场交付细节上的传授，是形成实用工程能力的核心。':
-    'Instructor insight into outdoor lightning protection, solar/battery power budgeting, and keep-alive stability under harsh climates is what transforms lab circuits into robust field infrastructure.',
+  '讲师把野外防雷防水、太阳能供电功耗平衡以及通信保活心跳等施工经验带进课堂，能让学员掌握野外环境下保障设备长期稳定运行的工程技能。':
+    'Instructors bring practical experience in lightning protection, waterproofing, solar power budgeting, and telemetry keepalive heartbeats into the classroom, equipping learners with the engineering skills needed for long-term outdoor reliability.',
   '4G与LoRaWAN为两条独立交付路线，硬件不混用；环境数据属低频物联监测，不做毫秒级实时控制。':
     '4G and LoRaWAN are two independent delivery routes, hardware is not mixed; environmental data belongs to low-frequency IoT monitoring, not millisecond-level closed-loop control.',
   '多环境要素采集（土壤温湿度/EC、气象七参数、CO2、叶面温湿度、水质pH等）与广域分散点位监测':
@@ -1651,8 +1652,6 @@ export const enDict: Record<string, string> = {
     'Control scenarios are limited to low-voltage DC actuators issued via RS485 (relay modules, irrigation valve solenoids, etc.); directly controlling AC 220V and above high-voltage loads through this system is strictly prohibited',
   '传感器测量精度受安装深度、土壤紧实度、电极表面洁净度等物理环境影响，需定期维护与校准，不承诺特定场景下的绝对测量精度':
     'Sensor measurement accuracy is affected by physical environment such as installation depth, soil compaction, and electrode surface cleanliness; regular maintenance and calibration are required, absolute measurement accuracy in specific scenarios is not promised',
-
-  // ── M6 ──
   机器人控制与具身智能: 'Robotic Control & Embodied Intelligence',
   '在六轴桌面机械臂上，从主从遥操作一路做到按 3D 视觉结果抓取。':
     'On a six-axis desktop robotic arm, go from leader–follower teleoperation to grasping driven by 3D vision.',
