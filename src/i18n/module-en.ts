@@ -1656,10 +1656,10 @@ export const enDict: Record<string, string> = {
   '在六轴桌面机械臂上，从主从遥操作一路做到按 3D 视觉结果抓取。':
     'On a six-axis desktop robotic arm, go from leader–follower teleoperation to grasping driven by 3D vision.',
   '六轴桌面机械臂加多模态感知，实现主从遥操到3D空间精准抓取与具身智能开发。':
-    'A six-axis desktop robotic arm combined with multimodal perception, enabling master-slave teleoperation, precise 3D spatial grasping, and embodied intelligence development.',
-  主从遥操到3D空间精准抓取: 'From Master-Slave Teleoperation to Precise 3D Spatial Grasping',
-  '面向农产品外观分拣、轻量自动化产线辅助上下料、展厅展位迎宾演示与辅助作业工位等场景，传统机械臂教学从运动学推导与电机控制讲起，应用侧人员上手周期长。大语言模型多局限于文本生成，缺乏接入物理执行机构的标准路径；从零搭建分拣/搬运演示需联调视觉识别、运动规划与抓取时序，多系统集成难度大；新手操作带动力机械臂，存在碰撞、误入工作空间等物理安全风险。':
-    'For scenarios such as agricultural product appearance sorting, lightweight automated production-line auxiliary loading/unloading, exhibition booth welcome demonstrations, and auxiliary workstations, traditional robotic-arm teaching starts with kinematics derivation and motor control, resulting in long ramp-up for application-side personnel. LLMs are mostly limited to text generation and lack a standard path to physical actuators; building a sorting/handling demo from scratch requires integrating vision recognition, motion planning, and grasping sequencing, making multi-system integration difficult. Novices operating powered robotic arms face physical safety risks such as collisions and unintended workspace entry.',
+    'A six-axis desktop robotic arm with multimodal perception, enabling master-slave teleoperation to precise 3D spatial grasping and embodied intelligence development.',
+  主从遥操到3D空间精准抓取: 'master-slave teleoperation to precise 3D spatial grasping',
+  '面向农产品外观分拣、轻量自动化产线辅助上下料、展厅展位迎宾演示与辅助作业工位等场景，传统机械臂教学多从运动学推导与电机控制讲起，应用侧人员上手周期长。大语言模型多局限于文本生成，缺乏接入物理执行机构的标准路径；从零搭建分拣与搬运演示需联调视觉识别、运动规划与抓取时序，多系统集成难度大；新手操作带动力机械臂，存在碰撞、误入工作空间等物理安全风险。':
+    'For scenarios such as agricultural sorting, light-assembly loading/unloading, booth interactive demonstrations, and auxiliary workstations, traditional robotic arm instruction starts with mathematical kinematics and low-level motor drivers, resulting in long learning curves for application engineers. Large language models remain largely restricted to text generation without standardized pathways to physical actuators; building sorting and pick-and-place demos from scratch requires co-debugging visual recognition, motion planning, and gripping sequences across disparate systems; novices operating motorized robotic arms also face physical collision hazards and workspace intrusion risks.',
   'L1无（零基础，具备基本电脑操作技能）；L2掌握基础网络配置与系统联动概念；L3具备基础Python编程与Linux技能':
     'L1: none (zero baseline, basic computer operation skills). L2: basic network configuration and system linkage concepts. L3: basic Python programming and Linux skills.',
   '农产品与工业件外观分拣：合格品、瑕疵品与疑似品分类抓取':
@@ -1698,49 +1698,48 @@ export const enDict: Record<string, string> = {
     'Multi-action flow orchestration and safety-confirmation mechanism configuration',
   工位视觉事件触发与微场景联调:
     'Workstation vision event triggering and micro-scenario integration testing',
-  'RGB-D深度相机3D定位与手眼对齐': 'RGB-D depth camera 3D positioning and hand-eye calibration',
+  'RGB-D 深度相机 3D 定位与手眼对齐': 'RGB-D depth camera 3D localization and hand-eye calibration',
   Pinocchio逆运动学求解与异常处理: 'Pinocchio inverse kinematics solving and exception handling',
-  Motorbridge驱动真机空间抓取流程: 'Motorbridge-driven real-machine spatial grasping closed loop',
-  '遥操动作数据集采集（LeRobot标准）': 'Teleoperation action dataset collection (LeRobot standard)',
-  'VLA具身大模型与Isaac Sim数字孪生初探':
-    'VLA embodied LLM and Isaac Sim digital twin introduction',
+  'Motorbridge 驱动真机空间抓取流程': 'Motorbridge driver hardware spatial pick-and-place workflow',
+  '遥操动作数据集采集（LeRobot 标准）': 'Teleoperation motion dataset collection (LeRobot format)',
+  'VLA 具身大模型与 Isaac Sim 数字孪生初探':
+    'VLA embodied foundation models and Isaac Sim digital twin exploration',
   机器人与自动化工程技术人员: 'Robotics and automation engineering technicians',
   机械臂工作空间布置与安全操作记录: 'Robotic-arm workspace layout and safety operation records',
-  SenseCraft动作流程配置与工位视觉联动演示系统:
-    'SenseCraft action flow configuration and workstation vision-linked demonstration system',
-  '3D空间自动抓取Python工程源码（深度相机 + Pinocchio + Motorbridge）':
-    '3D spatial auto-grasping Python project source code (depth camera + Pinocchio + Motorbridge)',
+  'SenseCraft 动作流程配置与工位视觉联动演示系统':
+    'SenseCraft action workflow configuration and workstation vision-triggered demo system',
+  '3D 空间自动抓取 Python 工程源码（深度相机 + Pinocchio + Motorbridge）':
+    '3D automated grasping Python source project (depth camera + Pinocchio + Motorbridge)',
   遥操动作数据集样本与方案设计交付文档:
     'Teleoperation action dataset samples and solution design delivery document',
   '选型认知、安全规范与开箱上手': 'Selection Awareness, Safety Standards, and Out-of-Box Setup',
   '遥操六轴机械臂，实时同步多自由度动作':
     'Teleoperate Six-Axis Robotic Arm, Real-Time Sync Multi-DOF Motions',
-  '理解工业机械臂分类（直角坐标滑台、SCARA、Delta、六轴关节）与速度/精度/负载/安全/成本的商业选型权衡':
-    'Understand industrial robotic-arm categories (Cartesian gantry, SCARA, Delta, six-axis articulated) and the commercial selection trade-offs of speed/precision/load/safety/cost',
+  '理解工业机械臂分类（直角坐标滑台、SCARA、Delta、六轴关节）与速度 / 精度 / 负载 / 安全 / 成本的商业选型权衡':
+    'Understand industrial manipulator categories (Cartesian, SCARA, Delta, 6-axis articulated) and trade-offs among speed, accuracy, payload, safety, and unit cost',
   '掌握机械臂物理工作空间边界、硬件急停使用与安全操作规程':
     'Master robotic-arm physical workspace boundaries, hardware emergency stop usage, and safety operation procedures',
-  '掌握SenseCraft平台开箱连接，跑通主从遥操与语音指令夹取':
-    'Master SenseCraft platform out-of-box connection, run through master-slave teleoperation and voice-command grasping',
+  '掌握 SenseCraft 平台开箱连接，跑通主从遥操与语音指令夹取':
+    'Master out-of-the-box connectivity on SenseCraft, completing master-slave teleoperation and voice-command pick-and-place',
   '场景剖析、空间直觉与多模态编排':
     'Scenario Analysis, Spatial Intuition, and Multimodal Orchestration',
   '编排多步动作，按视觉事件触发抓取':
     'Sequence multi-step motions and trigger grasps from vision events',
-  能向客户清晰阐述3D场景为什么需要六轴机械臂及其选型边界:
-    'Clearly explain to clients why 3D scenarios require six-axis robotic arms and their selection boundaries',
-  '掌握SenseCraft多动作流程编排与"生成 → 3D预览 → 人工确认 → 真机执行"安全确认机制':
-    'Master SenseCraft multi-action flow orchestration and the "Generate → 3D Preview → Human Confirm → Real-Machine Execute" safety-confirmation mechanism',
-  '掌握基于工位视觉的事件触发与微场景搭建，连续3次稳定运行':
-    'Master workstation-vision-based event triggering and micro-scenario setup, achieving 3 consecutive stable runs',
-  '3D空间抓取全流程与具身智能前瞻':
-    '3D Spatial Grasping Closed Loop and Embodied Intelligence Outlook',
+  '能向客户清晰阐述 3D 场景为什么需要六轴机械臂及其选型边界':
+    'Clearly articulate to clients why 3D spatial tasks require 6-axis arms and define commercial selection boundaries',
+  '掌握 SenseCraft 多动作流程编排与「生成 → 3D 预览 → 人工确认 → 真机执行」安全确认机制':
+    'Master SenseCraft multi-action workflow sequencing and the "Generate → 3D Preview → Human Confirm → Physical Execute" safety gate',
+  '掌握基于工位视觉的事件触发与微场景搭建，连续 3 次稳定运行':
+    'Master workstation vision-based event triggers and mini-workcell assembly, achieving 3 consecutive stable cycles',
+  '3D 空间抓取全流程与具身智能前瞻': 'End-to-End 3D Spatial Grasping and Embodied AI Outlook',
   '用深度相机取 3D 坐标，Python 驱动真机抓取':
     'Get 3D coordinates from a depth camera and drive the real arm from Python',
-  '使用RGB-D深度相机获取目标3D物理坐标，通过Python调用Pinocchio完成电机角度自动换算，利用Motorbridge驱动真机完成空间抓取与异常处理':
-    'Use an RGB-D depth camera to obtain target 3D physical coordinates, call Pinocchio via Python for automatic motor-angle conversion, and use Motorbridge to drive the real machine for spatial grasping and exception handling',
-  '掌握主从遥操动作数据集采集流程（LeRobot标准格式），理解VLA具身大模型与Isaac Sim数字孪生仿真基本原理':
-    'Master the master-slave teleoperation action dataset collection workflow (LeRobot standard format), understand the basic principles of VLA embodied LLMs and Isaac Sim digital twin simulation',
-  '交付完整Python抓取工程源码、遥操数据集与方案设计文档':
-    'Deliver complete Python grasping project source code, teleoperation dataset, and solution design document',
+  '使用 RGB-D 深度相机获取目标 3D 物理坐标，通过 Python 调用 Pinocchio 完成电机角度自动换算，利用 Motorbridge 驱动真机完成空间抓取与异常处理':
+    'Acquire target 3D world coordinates with an RGB-D depth camera, compute joint angles via Pinocchio in Python, and drive hardware pick-and-place with error recovery using Motorbridge',
+  '掌握主从遥操动作数据集采集流程（LeRobot 标准格式），理解 VLA 具身大模型与 Isaac Sim 数字孪生仿真基本原理':
+    'Master master-slave teleoperation demonstration dataset recording (LeRobot format) and grasp core principles of VLA embodied foundation models and Isaac Sim simulation',
+  '交付完整 Python 抓取工程源码、遥操数据集与方案设计文档':
+    'Deliver turnkey Python pick-and-place source code, teleoperation datasets, and architecture design documentation',
   核心执行器: 'Core Actuator',
   'reBot DevArm B601-RS 六轴机械臂': 'reBot DevArm B601-RS Six-Axis Robotic Arm',
   核心工具链: 'Core Toolchain',
@@ -1800,8 +1799,8 @@ export const enDict: Record<string, string> = {
   'Isaac Sim仿真验证': 'Isaac Sim simulation verification',
   '关键转折点 · 从零代码遥操演示到确定性工程抓取':
     'Key turning point · from zero-code teleoperation demo to deterministic engineering grasping',
-  'SenseCraft解决「看得见、能演示」的展示层需求，让学员第一天就能跑通主从遥操与语音夹取；Python + Pinocchio + Motorbridge让系统第一次具备确定性3D空间抓取的工程能力，从「演示可用」走向「可交付工程」。':
-    'SenseCraft addresses the presentation-layer need of "visible and demonstrable," enabling students to run master-slave teleoperation and voice grasping on day one; Python + Pinocchio + Motorbridge give the system deterministic 3D spatial grasping engineering capability for the first time, moving from "demo-usable" to "deliverable engineering."',
+  'SenseCraft 降低了上手门槛，让学员在第一天就能跑通主从遥操与语音指令夹取；而 Python、Pinocchio 与 Motorbridge 的组合，则让系统具备确定性的 3D 空间抓取与异常处理能力，从舞台演示走向实际工程交付。':
+    'SenseCraft lowers the barrier to entry, letting students test teleoperation and voice-command gripping on day one; combining Python, Pinocchio, and Motorbridge equips the system with deterministic 3D spatial grasping and error handling, turning stage demos into deliverable engineering projects.',
   '另需HTTP / MQTT消息通知（工位视觉事件触发与跨系统联动）、reSpeaker Flex语音套件（自然语言指令采集与播报）。':
     'Additionally requires HTTP / MQTT message notifications (workstation vision event triggering and cross-system integration) and reSpeaker Flex voice kit (natural-language command capture and announcement).',
   '硬件台架清点、机械臂物理固定与上电自检、安全隔离区布置、控制中枢与网络预置、视觉采集套件与光控箱就绪':
@@ -1914,14 +1913,14 @@ export const enDict: Record<string, string> = {
   '把视觉引导与运动学算法，落实到机械臂的每次抓取':
     'Translate vision guidance and kinematics into reliable robotic grasping',
   把物理执行接进数字系统: 'Connecting physical execution to digital systems',
-  'M6 摒弃单纯脱机示教的局限，专注实现视觉引导、运动学算法与机械臂执行机构之间的联动。课程覆盖从零代码遥操验证、Python 逆运动学编程到具身智能数据集采集，为讲师提供完备的安全规范与工程源码。':
-    'M6 moves beyond offline playback to integrate visual guidance, kinematic algorithms, and robotic actuation. The course spans no-code teleoperation, Python kinematics, and embodied AI dataset collection with robust safety standards.',
+  'M6 不做脱离算法的单纯示教，而是把视觉引导、运动学计算与物理机械臂串联起来。课程从零代码主从遥操切入，逐步过渡到 Python 逆运动学编程与具身智能动作采集，并为讲师配套了完整的安全操作规程与参考工程代码。':
+    'M6 moves beyond isolated offline playback to bridge vision guidance, kinematic computing, and physical robotic manipulators. The curriculum progresses from codeless master-slave teleoperation to Python inverse kinematics and embodied dataset curation, supported by comprehensive safety protocols and verified source code.',
   '模块 09 支持自定义抓取工况。可将分拣对象替换为电子器件、农产品模型或异形零件，引导学员针对不同材质与姿态设计抓取策略。':
     'Unit 09 accommodates custom manipulation tasks. Sorting targets can be replaced with electronic components, produce models, or irregular parts, prompting students to tailor grasp strategies to diverse materials and poses.',
   '台架可灵活联动上游光电传感器或 M4 中的目标检测事件，让机械臂根据外部传感器信号自主启动抓取流程。':
     'The robotic workcell can easily link with upstream photoelectric sensors or M4 object detection events, triggering pick-and-place routines autonomously based on external signals.',
-  '讲师在急停回路部署、零点标定偏差修正及电机负载保护等安全操作规范上的严谨教学，是学员上机操作不可或缺的保障。':
-    'Rigorous instruction on emergency-stop circuitry, zero-point calibration offsets, and motor overload protection ensures essential safety discipline during physical arm operations.',
+  '讲师在急停回路接线、零点标定偏差修正以及电机负载保护等安全规范上的严格把关，是学员安全开展真机实操的基础保障。':
+    'Strict instructional oversight on emergency stop circuit wiring, zero-point calibration offset correction, and motor overload protection forms the indispensable baseline for safe real-hardware labs.',
   '低速监督控制 + 独立硬件急停，不做安全关键系统替代。':
     'Low-speed supervised control + independent hardware emergency stop, not a replacement for safety-critical systems.',
   '轻量分拣演示、展位互动、教学实训与低速监督控制场景':

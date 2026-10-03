@@ -1725,11 +1725,10 @@ export const esDict: Record<string, string> = {
   '在六轴桌面机械臂上，从主从遥操作一路做到按 3D 视觉结果抓取。':
     'En un brazo robótico de sobremesa de seis ejes, pase de la teleoperación líder-seguidor al agarre guiado por visión 3D.',
   '六轴桌面机械臂加多模态感知，实现主从遥操到3D空间精准抓取与具身智能开发。':
-    'Brazo robótico de escritorio de seis ejes combinado con percepción multimodal, para lograr la teleoperación maestro-esclavo hasta la captura precisa en espacio 3D y el desarrollo de inteligencia corporizada.',
-  主从遥操到3D空间精准抓取:
-    'De la teleoperación maestro-esclavo a la captura precisa en espacio 3D',
-  '面向农产品外观分拣、轻量自动化产线辅助上下料、展厅展位迎宾演示与辅助作业工位等场景，传统机械臂教学从运动学推导与电机控制讲起，应用侧人员上手周期长。大语言模型多局限于文本生成，缺乏接入物理执行机构的标准路径；从零搭建分拣/搬运演示需联调视觉识别、运动规划与抓取时序，多系统集成难度大；新手操作带动力机械臂，存在碰撞、误入工作空间等物理安全风险。':
-    'Para escenarios como clasificación por apariencia de productos agrícolas, asistencia de carga/descarga en líneas de producción automatizadas ligeras, demostraciones de recepción en stands de exposición y estaciones de trabajo asistidas, la enseñanza tradicional de brazos robóticos comienza con derivación cinemática y control de motores, con ciclos de aprendizaje largos para el personal del lado de aplicaciones. Los grandes modelos de lenguaje se limitan mayoritariamente a la generación de texto, careciendo de una ruta estándar para conectarse a actuadores físicos; construir desde cero una demostración de clasificación/transporte requiere la depuración conjunta de reconocimiento visual, planificación de movimiento y secuenciación de captura, con gran dificultad de integración de múltiples sistemas; los principiantes que operan brazos robóticos con motores enfrentan riesgos de seguridad física como colisiones e entrada accidental al espacio de trabajo.',
+    'Brazo robótico de escritorio de seis ejes con percepción multimodal, para llevar la teleoperación maestro-esclavo al agarre preciso en espacio 3D y el desarrollo de inteligencia corporizada.',
+  主从遥操到3D空间精准抓取: 'la teleoperación maestro-esclavo al agarre preciso en espacio 3D',
+  '面向农产品外观分拣、轻量自动化产线辅助上下料、展厅展位迎宾演示与辅助作业工位等场景，传统机械臂教学多从运动学推导与电机控制讲起，应用侧人员上手周期长。大语言模型多局限于文本生成，缺乏接入物理执行机构的标准路径；从零搭建分拣与搬运演示需联调视觉识别、运动规划与抓取时序，多系统集成难度大；新手操作带动力机械臂，存在碰撞、误入工作空间等物理安全风险。':
+    'En aplicaciones como el triaje visual de cosechas, carga y descarga en líneas ligeras, demostraciones interactivas en ferias y puestos auxiliares, la enseñanza tradicional de brazos robóticos arranca con cinemática y control de motores, retrasando la puesta en marcha de los ingenieros de aplicación. Los modelos lingüísticos suelen limitarse a generar texto sin vías estandarizadas hacia actuadores físicos; montar demostraciones de clasificación y traslado desde cero requiere sincronizar visión artificial, trayectoria y agarre entre sistemas heterogéneos; además, operar un brazo motorizado sin experiencia conlleva riesgos de colisión e intrusión en la zona de trabajo.',
   'L1无（零基础，具备基本电脑操作技能）；L2掌握基础网络配置与系统联动概念；L3具备基础Python编程与Linux技能':
     'L1 sin requisitos (sin base, con habilidades básicas de operación de computadora); L2 domina conceptos básicos de configuración de red y vinculación de sistemas; L3 tiene base en programación Python y habilidades Linux',
   '农产品与工业件外观分拣：合格品、瑕疵品与疑似品分类抓取':
@@ -1772,55 +1771,54 @@ export const esDict: Record<string, string> = {
     'Orquestación de flujos de múltiples acciones y configuración de mecanismos de confirmación de seguridad',
   工位视觉事件触发与微场景联调:
     'Activación de eventos visuales en estación de trabajo y depuración conjunta de microescenarios',
-  'RGB-D深度相机3D定位与手眼对齐':
-    'Localización 3D con cámara de profundidad RGB-D y alineación ojo-mano',
+  'RGB-D 深度相机 3D 定位与手眼对齐':
+    'Posicionamiento 3D con cámara de profundidad RGB-D y calibración mano-ojo',
   Pinocchio逆运动学求解与异常处理:
-    'Resolución de cinemática inversa con Pinocchio y manejo de anomalías',
-  Motorbridge驱动真机空间抓取流程:
-    'Ciclo cerrado de captura espacial en robot real conducido por Motorbridge',
-  '遥操动作数据集采集（LeRobot标准）':
-    'Recolección de conjuntos de datos de acciones de teleoperación (estándar LeRobot)',
-  'VLA具身大模型与Isaac Sim数字孪生初探':
-    'Introducción a grandes modelos corporizados VLA y gemelos digitales Isaac Sim',
+    'Cálculo de cinemática inversa con Pinocchio y control de excepciones',
+  'Motorbridge 驱动真机空间抓取流程':
+    'Secuencia de agarre espacial en máquina real con Motorbridge',
+  '遥操动作数据集采集（LeRobot 标准）': 'Captura de dataset de teleoperación (estándar LeRobot)',
+  'VLA 具身大模型与 Isaac Sim 数字孪生初探':
+    'Iniciación en modelos fundacionales VLA y gemelo digital con Isaac Sim',
   机器人与自动化工程技术人员: 'Personal técnico de ingeniería robótica y de automatización',
   机械臂工作空间布置与安全操作记录:
     'Distribución del espacio de trabajo del brazo robótico y registro de operaciones seguras',
-  SenseCraft动作流程配置与工位视觉联动演示系统:
-    'Sistema de demostración de configuración de flujos de acciones SenseCraft y vinculación visual en estación de trabajo',
-  '3D空间自动抓取Python工程源码（深度相机 + Pinocchio + Motorbridge）':
-    'Código fuente de proyecto Python de captura automática en espacio 3D (cámara de profundidad + Pinocchio + Motorbridge)',
+  'SenseCraft 动作流程配置与工位视觉联动演示系统':
+    'Configuración de secuencias en SenseCraft y sistema interactivo con visión artificial',
+  '3D 空间自动抓取 Python 工程源码（深度相机 + Pinocchio + Motorbridge）':
+    'Código fuente en Python para agarre automático 3D (cámara de profundidad + Pinocchio + Motorbridge)',
   遥操动作数据集样本与方案设计交付文档:
     'Muestras de conjuntos de datos de acciones de teleoperación y documento de entrega de diseño de solución',
   '选型认知、安全规范与开箱上手':
     'Conocimiento de selección, normativas de seguridad y puesta en marcha',
   '遥操六轴机械臂，实时同步多自由度动作':
     'Teleoperacion de brazo robotico de seis ejes, sincronizacion en tiempo real de movimientos de multiples grados de libertad',
-  '理解工业机械臂分类（直角坐标滑台、SCARA、Delta、六轴关节）与速度/精度/负载/安全/成本的商业选型权衡':
-    'Comprender la clasificación de brazos robóticos industriales (mesa cartesiana, SCARA, Delta, articulado de seis ejes) y las compensaciones comerciales de velocidad/precisión/carga útil/seguridad/costo',
+  '理解工业机械臂分类（直角坐标滑台、SCARA、Delta、六轴关节）与速度 / 精度 / 负载 / 安全 / 成本的商业选型权衡':
+    'Comprender las familias de manipuladores industriales (cartesiano, SCARA, Delta, 6 ejes articulados) y evaluar compromisos de velocidad, precisión, carga, seguridad y coste',
   '掌握机械臂物理工作空间边界、硬件急停使用与安全操作规程':
     'Dominar los límites del espacio de trabajo físico del brazo robótico, el uso de la parada de emergencia de hardware y los procedimientos de operación segura',
-  '掌握SenseCraft平台开箱连接，跑通主从遥操与语音指令夹取':
-    'Dominar la conexión inicial de la plataforma SenseCraft, ejecutar la teleoperación maestro-esclavo y la captura por comando de voz',
+  '掌握 SenseCraft 平台开箱连接，跑通主从遥操与语音指令夹取':
+    'Dominar la conexión inicial en SenseCraft, completando la teleoperación maestro-esclavo y el agarre guiado por voz',
   '场景剖析、空间直觉与多模态编排':
     'Análisis de escenarios, intuición espacial y orquestación multimodal',
   '编排多步动作，按视觉事件触发抓取':
     'Encadene movimientos de varios pasos y active el agarre con eventos de visión',
-  能向客户清晰阐述3D场景为什么需要六轴机械臂及其选型边界:
-    'Capacidad para explicar claramente a los clientes por qué los escenarios 3D requieren brazos robóticos de seis ejes y sus límites de selección',
-  '掌握SenseCraft多动作流程编排与"生成 → 3D预览 → 人工确认 → 真机执行"安全确认机制':
-    'Dominar la orquestación de flujos de múltiples acciones SenseCraft y el mecanismo de confirmación de seguridad «generar → vista previa 3D → confirmación humana → ejecución en robot real»',
-  '掌握基于工位视觉的事件触发与微场景搭建，连续3次稳定运行':
-    'Dominar la activación de eventos basada en visión de estación de trabajo y la construcción de microescenarios, con ejecución estable durante 3 veces consecutivas',
-  '3D空间抓取全流程与具身智能前瞻':
-    'Ciclo cerrado de captura en espacio 3D y perspectivas de inteligencia corporizada',
+  '能向客户清晰阐述 3D 场景为什么需要六轴机械臂及其选型边界':
+    'Explicar con claridad a clientes por qué las tareas espaciales 3D demandan un brazo de 6 ejes y delimitar su rango de aplicación',
+  '掌握 SenseCraft 多动作流程编排与「生成 → 3D 预览 → 人工确认 → 真机执行」安全确认机制':
+    'Dominar la creación de secuencias en SenseCraft y el protocolo de seguridad "Generar → Vista previa 3D → Validación humana → Ejecutar"',
+  '掌握基于工位视觉的事件触发与微场景搭建，连续 3 次稳定运行':
+    'Configurar disparadores basados en visión artificial en el puesto de trabajo y lograr 3 ciclos continuos estables',
+  '3D 空间抓取全流程与具身智能前瞻':
+    'Flujo completo de agarre espacial 3D y visión de IA física corporizada',
   '用深度相机取 3D 坐标，Python 驱动真机抓取':
     'Obtenga coordenadas 3D con una cámara de profundidad y mueva el brazo real desde Python',
-  '使用RGB-D深度相机获取目标3D物理坐标，通过Python调用Pinocchio完成电机角度自动换算，利用Motorbridge驱动真机完成空间抓取与异常处理':
-    'Usar cámara de profundidad RGB-D para obtener coordenadas físicas 3D del objetivo, llamar a Pinocchio mediante Python para completar la conversión automática de ángulos de motores, y usar Motorbridge para conducir el robot real en la captura espacial y el manejo de anomalías',
-  '掌握主从遥操动作数据集采集流程（LeRobot标准格式），理解VLA具身大模型与Isaac Sim数字孪生仿真基本原理':
-    'Dominar el flujo de recolección de conjuntos de datos de acciones de teleoperación maestro-esclavo (formato estándar LeRobot), comprender los principios básicos de los grandes modelos corporizados VLA y la simulación de gemelos digitales Isaac Sim',
-  '交付完整Python抓取工程源码、遥操数据集与方案设计文档':
-    'Entregar el código fuente completo del proyecto de captura Python, el conjunto de datos de teleoperación y el documento de diseño de solución',
+  '使用 RGB-D 深度相机获取目标 3D 物理坐标，通过 Python 调用 Pinocchio 完成电机角度自动换算，利用 Motorbridge 驱动真机完成空间抓取与异常处理':
+    'Obtener coordenadas físicas 3D con cámara RGB-D, calcular ángulos articulares mediante Pinocchio en Python y accionar el brazo real con gestión de excepciones vía Motorbridge',
+  '掌握主从遥操动作数据集采集流程（LeRobot 标准格式），理解 VLA 具身大模型与 Isaac Sim 数字孪生仿真基本原理':
+    'Dominar la captura de datasets por teleoperación (formato estándar LeRobot) y asimilar los conceptos de modelos VLA corporizados y simulación con Isaac Sim',
+  '交付完整 Python 抓取工程源码、遥操数据集与方案设计文档':
+    'Entregar código fuente completo en Python para agarre, dataset de teleoperación y memoria de diseño',
   核心执行器: 'Actuador principal',
   'reBot DevArm B601-RS 六轴机械臂': 'Brazo robótico de seis ejes reBot DevArm B601-RS',
   核心工具链: 'Cadena de herramientas principal',
@@ -1883,8 +1881,8 @@ export const esDict: Record<string, string> = {
   'Isaac Sim仿真验证': 'Validación por simulación con Isaac Sim',
   '关键转折点 · 从零代码遥操演示到确定性工程抓取':
     'Punto de inflexión clave · de la demostración de teleoperación sin código a la captura de ingeniería determinista',
-  'SenseCraft解决「看得见、能演示」的展示层需求，让学员第一天就能跑通主从遥操与语音夹取；Python + Pinocchio + Motorbridge让系统第一次具备确定性3D空间抓取的工程能力，从「演示可用」走向「可交付工程」。':
-    'SenseCraft resuelve las necesidades de la capa de demostración «visible y presentable», permitiendo que los estudiantes logren la teleoperación maestro-esclavo y la captura por voz desde el primer día; Python + Pinocchio + Motorbridge dotan al sistema por primera vez de la capacidad de ingeniería para la captura determinista en espacio 3D, pasando de «demostración funcional» a «ingeniería entregable».',
+  'SenseCraft 降低了上手门槛，让学员在第一天就能跑通主从遥操与语音指令夹取；而 Python、Pinocchio 与 Motorbridge 的组合，则让系统具备确定性的 3D 空间抓取与异常处理能力，从舞台演示走向实际工程交付。':
+    'SenseCraft rebaja la curva inicial permitiendo validar la teleoperación y el agarre por voz desde el primer día; la integración con Python, Pinocchio y Motorbridge aporta capacidades de agarre espacial 3D determinista y gestión de fallos, pasando de demostraciones de escaparate a proyectos de ingeniería entregables.',
   '另需HTTP / MQTT消息通知（工位视觉事件触发与跨系统联动）、reSpeaker Flex语音套件（自然语言指令采集与播报）。':
     'Se requieren además notificaciones de mensajes HTTP / MQTT (activación de eventos visuales de estación de trabajo y vinculación entre sistemas) y el kit de voz reSpeaker Flex (captura y reproducción de comandos en lenguaje natural).',
   '硬件台架清点、机械臂物理固定与上电自检、安全隔离区布置、控制中枢与网络预置、视觉采集套件与光控箱就绪':
@@ -2003,14 +2001,14 @@ export const esDict: Record<string, string> = {
   '把视觉引导与运动学算法，落实到机械臂的每次抓取':
     'Trasladar el guiado visual y la cinemática a cada agarre real del brazo robótico',
   把物理执行接进数字系统: 'Conectar la ejecución física al sistema digital',
-  'M6 摒弃单纯脱机示教的局限，专注实现视觉引导、运动学算法与机械臂执行机构之间的联动。课程覆盖从零代码遥操验证、Python 逆运动学编程到具身智能数据集采集，为讲师提供完备的安全规范与工程源码。':
-    'M6 supera el simple aprendizaje por repetición desconectada, integrando guiado visual, algoritmos cinemáticos y actuación robótica. Abarca teleoperación sin código, cinemática inversa en Python y captura de datos para IA encarnada.',
+  'M6 不做脱离算法的单纯示教，而是把视觉引导、运动学计算与物理机械臂串联起来。课程从零代码主从遥操切入，逐步过渡到 Python 逆运动学编程与具身智能动作采集，并为讲师配套了完整的安全操作规程与参考工程代码。':
+    'M6 va más allá del simple aprendizaje por repetición, enlazando la visión artificial y el cálculo cinemático con manipuladores robóticos reales. El temario progresa desde la teleoperación sin código hasta la programación en Python de cinemática inversa y la captura de datos para IA física, con estrictos protocolos de seguridad y código fuente verificado.',
   '模块 09 支持自定义抓取工况。可将分拣对象替换为电子器件、农产品模型或异形零件，引导学员针对不同材质与姿态设计抓取策略。':
     'La unidad 09 permite personalizar las tareas de manipulación. Es posible sustituir los objetos por componentes electrónicos, piezas agrícolas o piezas irregulares, adaptando la estrategia de agarre según forma y material.',
   '台架可灵活联动上游光电传感器或 M4 中的目标检测事件，让机械臂根据外部传感器信号自主启动抓取流程。':
     'La celda robótica puede conectarse con sensores fotoeléctricos o eventos de visión del módulo M4, activando ciclos de agarre de forma autónoma según señales externas.',
-  '讲师在急停回路部署、零点标定偏差修正及电机负载保护等安全操作规范上的严谨教学，是学员上机操作不可或缺的保障。':
-    'La enseñanza rigurosa sobre circuitos de parada de emergencia, calibración de puntos cero y protección de sobrecarga del motor es imprescindible para operar brazos mecánicos con seguridad.',
+  '讲师在急停回路接线、零点标定偏差修正以及电机负载保护等安全规范上的严格把关，是学员安全开展真机实操的基础保障。':
+    'La supervisión rigurosa de los instructores en el cableado de parada de emergencia, la corrección de desfases en el calibrado cero y la protección contra sobrecarga de motores constituye la garantía para realizar prácticas reales seguras.',
   '低速监督控制 + 独立硬件急停，不做安全关键系统替代。':
     'Control supervisado de baja velocidad + parada de emergencia de hardware independiente, no sustituye sistemas críticos de seguridad.',
   '轻量分拣演示、展位互动、教学实训与低速监督控制场景':
