@@ -178,6 +178,8 @@ export interface Module {
   deliverablesIntro?: string;
   /** 写给老师。 */
   teacherNotes?: TeacherNotes;
+  /** 上课现场的真实照片。图片放在文件服务器上，不进仓库；每张的说明只陈述时间、地点和事件。 */
+  fieldPhotos?: { src: string; caption: string }[];
   /** 能力边界与合规约束。 */
   complianceBoundary?: {
     principles?: string[];
@@ -660,6 +662,18 @@ export const modules: Module[] = [
       { title: '结课证书', body: '柴火创客学院 M0 结业认证（体验课为参与证明）。' },
     ],
 
+    // 出处：飞书《基地车出差纪要｜2026.05.05–05.07 贵阳三日》。两场都是基地车带 M0 内容做的体验课 / 工作坊，
+    // 不是完整版课程。owner 2026-10-03 同意先放，有肖像或授权问题时移除。
+    fieldPhotos: [
+      {
+        src: 'https://files.seeedstudio.com/wiki/solution/images/chaihuo-m0-workshop-guiyang-no8-middle-school-202605.jpg',
+        caption: '2026 年 5 月，贵阳第八中学，AI 编程硬件体验课。',
+      },
+      {
+        src: 'https://files.seeedstudio.com/wiki/solution/images/chaihuo-m0-workshop-guizhou-education-university-202605.jpg',
+        caption: '2026 年 5 月，贵州师范学院，研究生工作坊结束后合影。',
+      },
+    ],
     teacherNotes: {
       heading: '我们希望你把它改成我们认不出来的样子',
       emphasis: '我们认不出来的样子',

@@ -2050,4 +2050,8 @@ export const esDict: Record<string, string> = {
     'No se garantiza una tasa de éxito de captura específica para escenarios determinados (sujeta a condiciones de iluminación, reflectancia del material de los objetos y orientación de colocación; los indicadores de aceptación se basan en registros de medición en sitio)',
   '机械臂含精密减速器，转场与收纳须使用定制减震箱固定位姿，避免运输冲击损坏关节齿轮':
     'El brazo robótico contiene reductores de precisión; para el traslado y almacenamiento se debe utilizar una caja de amortiguación personalizada para fijar la pose, evitando que los impactos durante el transporte dañen los engranajes de las articulaciones',
+  '2026 年 5 月，贵阳第八中学，AI 编程硬件体验课。':
+    'Mayo de 2026, Escuela Secundaria n.º 8 de Guiyang: sesión de iniciación a hardware con programación asistida por IA.',
+  '2026 年 5 月，贵州师范学院，研究生工作坊结束后合影。':
+    'Mayo de 2026, Universidad de Educación de Guizhou: foto de grupo tras un taller para estudiantes de posgrado.',
 };

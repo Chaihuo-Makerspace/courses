@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import CourseComplianceBoundary from '../../components/sections/courses/CourseComplianceBoundary.astro';
 import CourseDeliverables from '../../components/sections/courses/CourseDeliverables.astro';
 import CourseDetailHero from '../../components/sections/courses/CourseDetailHero.astro';
+import CourseFieldPhotos from '../../components/sections/courses/CourseFieldPhotos.astro';
 import CourseEquipment from '../../components/sections/courses/CourseEquipment.astro';
 import CourseLevels from '../../components/sections/courses/CourseLevels.astro';
 import CourseProjects from '../../components/sections/courses/CourseProjects.astro';
@@ -84,6 +85,7 @@ const courseJsonLdSafe = JSON.stringify(courseJsonLd).replace(/</g, '\\u003c');
   <CourseDetailHero module={module} tracks={relatedTracks} locale={locale} />
   <CourseSectionNav module={module} locale={locale} />
   <CourseLevels module={module} locale={locale} />
+  <CourseFieldPhotos module={module} locale={locale} />
   <CourseEquipment module={module} locale={locale} />
   <CourseSyllabus module={module} locale={locale} />
   <CourseDeliverables module={module} locale={locale} />

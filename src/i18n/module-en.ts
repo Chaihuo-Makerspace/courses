@@ -1958,4 +1958,8 @@ export const enDict: Record<string, string> = {
     'Does not promise specific grasping success rates for particular scenarios (affected by lighting conditions, object material reflectivity, and placement pose; acceptance criteria are based on on-site measured records)',
   '机械臂含精密减速器，转场与收纳须使用定制减震箱固定位姿，避免运输冲击损坏关节齿轮':
     'The robotic arm contains precision reducers; during transition and storage, a custom shock-absorbing case must be used to fix the pose, avoiding transport impact damage to joint gears',
+  '2026 年 5 月，贵阳第八中学，AI 编程硬件体验课。':
+    'May 2026, Guiyang No. 8 Middle School: an AI-coding hardware taster session.',
+  '2026 年 5 月，贵州师范学院，研究生工作坊结束后合影。':
+    'May 2026, Guizhou Education University: group photo after a workshop for graduate students.',
 };
