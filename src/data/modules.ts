@@ -705,10 +705,10 @@ export const modules: Module[] = [
     title: '设备互联与智能管控',
     subtitle: '把不同品牌的空调、照明、电表接进一个本地平台，看清每条回路用了多少电。',
     oneLiner:
-      '基于Home Assistant与ESPHome，在局域网内统一接入多协议设备，实现能耗监控与自动化联动。',
+      '基于 Home Assistant 与 ESPHome，在局域网内统一接入多协议设备，实现能耗监控与自动化联动。',
     oneLinerEmphasis: '统一接入多协议设备',
     realProblem:
-      '商业楼宇、老旧设施、酒店公寓与工厂辅助车间中，空调、照明、安防等多套子系统独立运行，运维人员需多平台切换且数据互不相通。缺乏回路级能耗计量，仅能查看总表账单，无法精确定位高耗能设备与浪费时段。传统BA系统采用专有封闭协议，设备扩展与更换依赖原厂，改造成本高且周期长。',
+      '商业楼宇、老旧设施、酒店公寓与工厂辅助车间里，空调、照明、安防常年各跑各的，运维人员要在不同平台间来回切换，数据互不相通。没有回路级计量，通常只能看到总表账单，查不出哪台设备在耗电、哪个时段在空跑。传统 BA 系统采用封闭协议，后期增改设备全依赖原厂，改造成本高且周期长。',
     illustration: '/illustrations/m1.svg',
     heroImage: '/illustrations/m1-indicator-d1s.png',
     difficulty: '入门',
@@ -745,8 +745,8 @@ export const modules: Module[] = [
     capabilities: [
       '多协议设备统一接入与管理',
       '回路级能耗计量与监控看板搭建',
-      '基于YAML与Node-RED的跨设备自动化编排',
-      '第三方系统API/MQTT对接',
+      '基于 YAML 与 Node-RED 的跨设备自动化编排',
+      '第三方系统 API / MQTT 对接',
       '系统备份与灾难恢复',
     ],
     audience: [
@@ -757,8 +757,8 @@ export const modules: Module[] = [
     ],
     deliverables: [
       '系统部署拓扑与网络配置说明',
-      '接入设备清单与Modbus寄存器映射表',
-      '能耗看板与自动化YAML/Node-RED流程配置文件',
+      '接入设备清单与 Modbus 寄存器映射表',
+      '能耗看板与自动化 YAML / Node-RED 流程配置文件',
       '系统备份恢复与日常运维指南',
     ],
     cells: {
@@ -767,7 +767,7 @@ export const modules: Module[] = [
         subtitle: '在一个面板里看到各品牌设备的状态',
         durationDays: 1,
         outcomes: [
-          '理解Home Assistant基础架构与核心概念（实体、服务、状态、自动化）',
+          '理解 Home Assistant 基础架构与核心概念（实体、服务、状态、自动化）',
           '掌握ESPHome固件配置与XIAO ESP32-C6传感器接入流程',
           '能在Lovelace仪表盘中配置卡片并监控设备状态',
         ],
@@ -778,7 +778,7 @@ export const modules: Module[] = [
         subtitle: '接入 Modbus 电表与变送器，做出能耗看板和跨设备联动',
         durationDays: 3,
         outcomes: [
-          '掌握Modbus RTU协议接线、调试与YAML寄存器配置',
+          '掌握 Modbus RTU 协议接线、调试与 YAML 寄存器配置',
           '独立搭建完整的能耗计量与监控看板',
           '掌握多条件自动化编排与异常告警配置',
         ],
@@ -789,8 +789,8 @@ export const modules: Module[] = [
         subtitle: '对接外部系统，做好备份与运维，数据留在本地',
         durationDays: 5,
         outcomes: [
-          '掌握HA与外部管理系统的数据集成方法（REST API/MQTT/Webhook）',
-          '能够使用Node-RED编排复杂业务流',
+          '掌握 HA 与外部管理系统的数据集成方法（REST API / MQTT / Webhook）',
+          '能够使用 Node-RED 编排复杂业务流',
           '具备独立交付可维护系统与实施灾难备份的能力',
         ],
         comingSoon: false,
@@ -820,7 +820,7 @@ export const modules: Module[] = [
           name: 'reComputer R1125 / R1225 工业物联网网关',
           note: '现场中枢主机，运行Home Assistant平台与能耗看板',
           description:
-            '国内版R1125，海外带LoRa版R1225。作为局域网边缘中枢，统一纳管多协议设备并承载能耗监控与自动化逻辑。',
+            '国内版为 R1125，海外带 LoRa 版为 R1225。作为局域网边缘中枢，统一接入多协议设备，运行能耗监控与自动化联动。',
           image: '/illustrations/m1-recomputer-r1225.png',
           imageAlt: 'reComputer R1125 / R1225 工业物联网网关',
         },
@@ -836,7 +836,7 @@ export const modules: Module[] = [
           name: 'XIAO RS485 扩展板',
           note: '为XIAO开发板扩展工业RS485接口',
           description:
-            '连接温湿度变送器与电表，支持Modbus RTU寄存器读取，是消费级主控与工业总线之间的桥接硬件。',
+            '连接温湿度变送器与电表，支持 Modbus RTU 寄存器读取，是消费级主控连接工业总线的桥接硬件。',
           image: '/illustrations/m1-rs485-breakout.png',
           imageAlt: 'XIAO RS485 扩展板',
         },
@@ -844,7 +844,7 @@ export const modules: Module[] = [
           name: 'XIAO W5500 以太网开发套件（PoE 蓝牙代理网关）',
           note: '免布线蓝牙网关，接收BLE设备广播并接入平台',
           description:
-            '基于PoE供电的有线网络蓝牙代理网关，捕获米家蓝牙温湿度计等BLE广播设备的数据，通过有线网络回传至Home Assistant，解决蓝牙信号覆盖范围有限的问题。',
+            '基于 PoE 供电的有线网络蓝牙网关，采集米家蓝牙温湿度计等 BLE 广播设备数据，通过有线网络回传给 Home Assistant，解决蓝牙信号覆盖受限的问题。',
           image: '/illustrations/m1-xiao-ethernet-adapter.png',
           imageAlt: 'XIAO W5500 以太网开发套件',
         },
@@ -860,7 +860,7 @@ export const modules: Module[] = [
           name: '60GHz 毫米波人体存在与跌倒检测模块',
           note: '人体微动感知与跌倒监测，联动报警自动化',
           description:
-            '60GHz毫米波雷达模块（MR60FDA2），可检测人体存在、微动与跌倒姿态，隐私友好（不采集图像），通过ESPHome接入HA后触发人员在位联动与异常告警。',
+            '60GHz 毫米波雷达模块（MR60FDA2），可检测人体存在、微动与跌倒姿态，不采集图像保护隐私，通过 ESPHome 接入 HA 后触发人员在位联动与异常告警。',
           image: '/illustrations/m1-60ghz-mmwave-fall.png',
           imageAlt: '60GHz 毫米波人体存在与跌倒检测模块',
         },
@@ -884,9 +884,9 @@ export const modules: Module[] = [
       ],
       hinge: {
         title: '关键转折点 · 从平台内自动化到跨系统业务编排',
-        body: 'HA内的自动化解决「如果…就…」的单平台联动；Node-RED让系统第一次具备跨系统、多分支、定时轮询的业务编排能力，从「设备管控」走向「业务集成」。',
+        body: 'HA 内置的自动化适合处理「条件满足即触发」的单平台联动；Node-RED 则带来跨系统、多分支和定时轮询的复杂编排能力，让联动真正贴合现场的实际业务流程。',
       },
-      note: '另需EMQX/Mosquitto MQTT Broker（承载多节点异步报文）、HACS（社区集成与前端主题扩展）。',
+      note: '另需 EMQX / Mosquitto MQTT Broker（承载多节点异步报文）、HACS（社区集成与前端主题扩展）。',
     },
 
     curriculum: {
@@ -901,34 +901,35 @@ export const modules: Module[] = [
         {
           no: '02',
           title: 'HA平台架构与核心概念',
-          detail: '实体Entity、服务Service、状态State、自动化Automation、Lovelace仪表盘基础配置',
+          detail:
+            '实体（Entity）、服务（Service）、状态（State）、自动化（Automation）与 Lovelace 仪表盘基础配置',
           tool: 'Home Assistant OS',
           coverage: { taster: 'full', workshop: 'full', bootcamp: 'full' },
         },
         {
           no: '03',
           title: '消费级智能硬件接入',
-          detail: '标准Wi-Fi/Zigbee智能插座与照明设备接入流程，设备状态同步与手动控制',
+          detail: '标准 Wi-Fi / Zigbee 智能插座与照明设备接入流程，设备状态同步与手动控制',
           tool: 'Home Assistant',
           coverage: { taster: 'full', workshop: 'full', bootcamp: 'full' },
         },
         {
           no: '04',
           title: 'XIAO ESP32 + ESPHome传感器节点',
-          detail: 'ESPHome编写温湿度采集配置、固件在线编译与烧录、HA自动发现与实体映射',
+          detail: '用 ESPHome 编写温湿度采集配置、在线编译与烧录固件，完成 HA 自动发现与实体映射',
           tool: 'ESPHome',
           coverage: { taster: 'full', workshop: 'full', bootcamp: 'full' },
         },
         {
           no: '05',
-          title: 'HA Energy能耗看板初识',
+          title: 'HA Energy 能耗看板初识',
           detail: '能源看板配置结构与数据流向，了解能耗监控的基本框架',
           tool: 'HA Energy',
           coverage: { taster: 'part', workshop: 'full', bootcamp: 'full' },
         },
         {
           no: '06',
-          title: 'Modbus RTU协议与RS485接线',
+          title: 'Modbus RTU 协议与 RS485 接线',
           detail: 'RS485差分总线接线规范、波特率/数据位/校验位/从机地址配置、寄存器类型与数据解析',
           tool: 'ESPHome Modbus',
           coverage: { taster: 'none', workshop: 'full', bootcamp: 'full' },
@@ -937,14 +938,14 @@ export const modules: Module[] = [
           no: '07',
           title: '工业传感器与电表接入',
           detail:
-            'XIAO RS485扩展板读取XY-MD02温湿度变送器，接入DDSU666电表读取电压/电流/功率/累计电量',
+            '使用 XIAO RS485 扩展板读取 XY-MD02 温湿度变送器，接入 DDSU666 电表读取电压、电流、功率与累计电量',
           tool: 'ESPHome + RS485',
           coverage: { taster: 'none', workshop: 'full', bootcamp: 'full' },
         },
         {
           no: '08',
           title: '能源监控看板搭建',
-          detail: '配置HA Energy模块绑定电表累计电量实体，实现实时功率曲线与分时能耗统计',
+          detail: '在 HA Energy 模块中绑定电表累计电量实体，生成实时功率曲线与分时能耗统计',
           tool: 'HA Energy',
           coverage: { taster: 'none', workshop: 'full', bootcamp: 'full' },
         },
@@ -957,16 +958,16 @@ export const modules: Module[] = [
         },
         {
           no: '10',
-          title: '第三方系统API/MQTT对接',
+          title: '第三方系统 API / MQTT 对接',
           detail:
-            'HA REST API/WebSocket鉴权（Long-Lived Access Token）、MQTT发布订阅（EMQX Broker）、Webhook外部触发',
+            'HA REST API 与 WebSocket 鉴权（Long-Lived Access Token）、MQTT 发布订阅（EMQX Broker）与 Webhook 外部触发',
           tool: 'REST API / MQTT',
           coverage: { taster: 'none', workshop: 'none', bootcamp: 'full' },
         },
         {
           no: '11',
-          title: 'Node-RED业务逻辑开发',
-          detail: '安装配置Node-RED Add-on，编排复杂分支逻辑、定时轮询与外部系统数据转发',
+          title: 'Node-RED 业务逻辑开发',
+          detail: '安装配置 Node-RED Add-on，编排复杂分支逻辑、定时轮询与外部系统数据转发',
           tool: 'Node-RED',
           coverage: { taster: 'none', workshop: 'none', bootcamp: 'full' },
         },
@@ -1130,7 +1131,7 @@ export const modules: Module[] = [
       heading: '以标准化方法打通多品牌、多协议存量设备的统一接入',
       emphasis: '存量设备的统一接入',
       intro:
-        'M1 并非让学员重复配置智能家居，而是针对楼宇与工业辅助车间中多品牌、多协议设备割裂的现实痛点，建立跨协议本地管控的工程能力。整套方案提供从台架接线、协议转换到看板搭建的完整技术栈，讲师可根据实际教学目标灵活剪裁与扩展。',
+        'M1 并不是让学员重复配置智能家居，而是针对楼宇与辅助车间中多品牌、多协议设备相互割裂的实际情况，建立跨协议本地管控的工程能力。课程提供从台架接线、协议转换到看板搭建的完整技术链路，讲师可根据实际教学目标灵活剪裁与扩展。',
       openings: [
         {
           no: '切入点 01',
@@ -1145,7 +1146,7 @@ export const modules: Module[] = [
         {
           no: '切入点 03',
           title: '融入工程经验',
-          body: '讲师在强弱电隔离、总线拓扑布线、常见通信丢包排查等现场交付经验上的补充，是帮助学员跨过理论与工程实践鸿沟的关键。',
+          body: '讲师在强弱电隔离、总线拓扑布线、常见通信丢包排查等现场交付经验上的补充，能帮学员避开很多实际施工中才会踩到的坑。',
         },
       ],
     },
@@ -1165,7 +1166,7 @@ export const modules: Module[] = [
         '不替代法定消防系统与电梯安全保护系统',
         '不承诺特定场景的具体节电百分比（节能效果受现场设备、使用习惯与气候条件影响）',
         '不包含长周期驻场代运维服务',
-        '控制类场景仅限低压直流执行器（LED灯带、5V/12V继电器模块等），严禁通过本系统控制 AC 220V 及以上强电负载',
+        '控制类场景仅限低压直流执行器（LED 灯带、5V / 12V 继电器模块等），严禁通过本系统控制 AC 220V 及以上强电负载',
       ],
     },
   },

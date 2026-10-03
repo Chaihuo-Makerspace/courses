@@ -273,11 +273,11 @@ export const ptDict: Record<string, string> = {
   设备互联与智能管控: 'Conectividade de Dispositivos & Controle Inteligente',
   '把不同品牌的空调、照明、电表接进一个本地平台，看清每条回路用了多少电。':
     'Conecte ar-condicionado, iluminação e medidores de energia de marcas diferentes a uma plataforma local e veja quanto cada circuito consome.',
-  '基于Home Assistant与ESPHome，在局域网内统一接入多协议设备，实现能耗监控与自动化联动。':
-    'Com base em Home Assistant e ESPHome, integre dispositivos multiprotocolo de forma unificada na rede local, implementando monitoramento de consumo de energia e automação vinculada.',
-  统一接入多协议设备: 'Integracao unificada de dispositivos multiprotocolo',
-  '商业楼宇、老旧设施、酒店公寓与工厂辅助车间中，空调、照明、安防等多套子系统独立运行，运维人员需多平台切换且数据互不相通。缺乏回路级能耗计量，仅能查看总表账单，无法精确定位高耗能设备与浪费时段。传统BA系统采用专有封闭协议，设备扩展与更换依赖原厂，改造成本高且周期长。':
-    'Em edifícios comerciais, instalações antigas, hotéis, apartamentos e oficinas auxiliares de fábricas, subsistemas como ar-condicionado, iluminação e segurança operam independentemente; a equipe de manutenção precisa alternar entre múltiplas plataformas e os dados não se comunicam. Falta medição de consumo em nível de circuito, sendo possível ver apenas a conta do medidor geral, sem localizar com precisão equipamentos de alto consumo e períodos de desperdício. Os sistemas BA tradicionais usam protocolos proprietários fechados, e a expansão e substituição de equipamentos dependem do fabricante original, com custos de reforma altos e ciclos longos.',
+  '基于 Home Assistant 与 ESPHome，在局域网内统一接入多协议设备，实现能耗监控与自动化联动。':
+    'Com Home Assistant e ESPHome, integre dispositivos multiprotocolo na rede local para monitorar o consumo de energia e automatizar controles.',
+  统一接入多协议设备: 'integre dispositivos multiprotocolo na rede local',
+  '商业楼宇、老旧设施、酒店公寓与工厂辅助车间里，空调、照明、安防常年各跑各的，运维人员要在不同平台间来回切换，数据互不相通。没有回路级计量，通常只能看到总表账单，查不出哪台设备在耗电、哪个时段在空跑。传统 BA 系统采用封闭协议，后期增改设备全依赖原厂，改造成本高且周期长。':
+    'Em edifícios comerciais, instalações antigas, hotéis e oficinas auxiliares, ar-condicionado, iluminação e segurança costumam funcionar de forma isolada; a equipe técnica precisa alternar sistemas e os dados não se integram. Sem medição por circuitos, só se enxerga a conta geral, sem identificar onde há desperdício ou equipamentos ligados sem necessidade. Sistemas prediais tradicionais usam protocolos proprietários, tornando reformas caras e lentas devido à dependência do fabricante.',
   'L1 1 天 / L2 2–3 天 / L3 3–5 天': 'L1 1 dia / L2 2–3 dias / L3 3–5 dias',
   商业楼宇与办公园区智能化增量改造:
     'Reforma incremental de inteligência em edifícios comerciais e parques de escritórios',
@@ -302,9 +302,9 @@ export const ptDict: Record<string, string> = {
   多协议设备统一接入与管理: 'Integração e gerenciamento unificado de dispositivos multiprotocolo',
   回路级能耗计量与监控看板搭建:
     'Medição de consumo em nível de circuito e construção de painel de monitoramento',
-  '基于YAML与Node-RED的跨设备自动化编排':
-    'Orquestração de automação entre dispositivos baseada em YAML e Node-RED',
-  '第三方系统API/MQTT对接': 'Integração com API/MQTT de sistemas de terceiros',
+  '基于 YAML 与 Node-RED 的跨设备自动化编排':
+    'Orquestração de automações entre dispositivos com YAML e Node-RED',
+  '第三方系统 API / MQTT 对接': 'Integração com sistemas de terceiros via API / MQTT',
   系统备份与灾难恢复: 'Backup de sistema e recuperação de desastres',
   方案顾问与商务销售: 'Consultores de solução e vendas comerciais',
   实训讲师与教研团队: 'Instrutores de treinamento prático e equipe pedagógica',
@@ -312,16 +312,16 @@ export const ptDict: Record<string, string> = {
   企业运维与智能化改造工程师: 'Engenheiros de operações empresariais e reforma inteligente',
   系统部署拓扑与网络配置说明:
     'Topologia de implantação do sistema e manual de configuração de rede',
-  接入设备清单与Modbus寄存器映射表:
+  '接入设备清单与 Modbus 寄存器映射表':
     'Lista de dispositivos integrados e tabela de mapeamento de registradores Modbus',
-  '能耗看板与自动化YAML/Node-RED流程配置文件':
-    'Arquivos de configuração de painel de consumo e fluxos de automação YAML/Node-RED',
+  '能耗看板与自动化 YAML / Node-RED 流程配置文件':
+    'Arquivos de configuração do painel de energia e fluxos de automação YAML / Node-RED',
   系统备份恢复与日常运维指南: 'Guia de recuperação de backup e operações diárias do sistema',
   平台初识与基础设备接入: 'Introdução à plataforma e integração básica de dispositivos',
   在一个面板里看到各品牌设备的状态:
     'Veja em um único painel o estado dos dispositivos de todas as marcas',
-  '理解Home Assistant基础架构与核心概念（实体、服务、状态、自动化）':
-    'Compreender a arquitetura básica e conceitos centrais do Home Assistant (entidades, serviços, estados, automação)',
+  '理解 Home Assistant 基础架构与核心概念（实体、服务、状态、自动化）':
+    'Compreender a arquitetura básica e os conceitos essenciais do Home Assistant (entidades, serviços, estados, automações)',
   '掌握ESPHome固件配置与XIAO ESP32-C6传感器接入流程':
     'Dominar a configuração de firmware ESPHome e o fluxo de integração de sensores XIAO ESP32-C6',
   能在Lovelace仪表盘中配置卡片并监控设备状态:
@@ -329,8 +329,8 @@ export const ptDict: Record<string, string> = {
   工业总线对接与场景联动: 'Integração de barramento industrial e vinculação de cenários',
   '接入 Modbus 电表与变送器，做出能耗看板和跨设备联动':
     'Conecte medidores e transmissores Modbus e monte um painel de energia e automações entre dispositivos',
-  '掌握Modbus RTU协议接线、调试与YAML寄存器配置':
-    'Dominar a fiação, depuração do protocolo Modbus RTU e configuração de registradores YAML',
+  '掌握 Modbus RTU 协议接线、调试与 YAML 寄存器配置':
+    'Dominar fiação, depuração e configuração de registradores YAML com Modbus RTU',
   独立搭建完整的能耗计量与监控看板:
     'Construir independentemente um painel completo de medição e monitoramento de consumo',
   掌握多条件自动化编排与异常告警配置:
@@ -338,10 +338,10 @@ export const ptDict: Record<string, string> = {
   业务集成与系统运维: 'Integração de negócios e operações do sistema',
   '对接外部系统，做好备份与运维，数据留在本地':
     'Integre sistemas externos e organize backup e operação, com os dados no local',
-  '掌握HA与外部管理系统的数据集成方法（REST API/MQTT/Webhook）':
-    'Dominar métodos de integração de dados entre HA e sistemas de gerenciamento externos (REST API/MQTT/Webhook)',
-  '能够使用Node-RED编排复杂业务流':
-    'Capacidade de orquestrar fluxos de negócios complexos usando Node-RED',
+  '掌握 HA 与外部管理系统的数据集成方法（REST API / MQTT / Webhook）':
+    'Dominar métodos de integração de dados entre HA e sistemas externos (REST API / MQTT / Webhook)',
+  '能够使用 Node-RED 编排复杂业务流':
+    'Capacidade de orquestrar fluxos operacionais complexos com Node-RED',
   具备独立交付可维护系统与实施灾难备份的能力:
     'Capacidade de entregar independentemente sistemas manteníveis e implementar backup de desastres',
   '1 天（体验课 · L1）': '1 dia (aula experimental · L1)',
@@ -360,20 +360,20 @@ export const ptDict: Record<string, string> = {
     'O hardware central do curso, construído em torno de uma "central unificada de controle + acesso multi-protocolo".',
   '现场中枢主机，运行Home Assistant平台与能耗看板':
     'Host central local, executa a plataforma Home Assistant e o painel de consumo de energia',
-  '国内版R1125，海外带LoRa版R1225。作为局域网边缘中枢，统一纳管多协议设备并承载能耗监控与自动化逻辑。':
-    'Versão doméstica R1125, versão internacional com LoRa R1225. Como hub de borda na rede local, gerencia unificadamente dispositivos multiprotocolo e hospeda o monitoramento de consumo e a lógica de automação.',
+  '国内版为 R1125，海外带 LoRa 版为 R1225。作为局域网边缘中枢，统一接入多协议设备，运行能耗监控与自动化联动。':
+    'Versão doméstica R1125 ou versão global R1225 com LoRa. Atua como gateway de borda local, integrando dispositivos multiprotocolo e executando monitoramento e automações.',
   '双频Wi-Fi 6 + BLE 5微控制器主控': 'Microcontrolador principal com Wi-Fi 6 dual-band + BLE 5',
   '分别用于灯带控制节点、RS485通信节点与备用节点。通过ESPHome固件配置实现传感器采集与执行器控制，支持OTA管理。':
     'Usado respectivamente como nó de controle de faixa de LED, nó de comunicação RS485 e nó reserva. A configuração do firmware ESPHome realiza aquisição de sensores e controle de atuadores, com suporte a gerenciamento OTA.',
   为XIAO开发板扩展工业RS485接口: 'Expande a interface industrial RS485 para a placa XIAO',
-  '连接温湿度变送器与电表，支持Modbus RTU寄存器读取，是消费级主控与工业总线之间的桥接硬件。':
-    'Conecta transmissores de temperatura/umidade e medidores de energia, suporta leitura de registradores Modbus RTU — é o hardware de ponte entre controladores de nível consumidor e barramentos industriais.',
+  '连接温湿度变送器与电表，支持 Modbus RTU 寄存器读取，是消费级主控连接工业总线的桥接硬件。':
+    'Conecta transmissores de temperatura/umidade e medidores de energia via Modbus RTU, fazendo a ponte entre microcontroladores e barramentos industriais.',
   'XIAO W5500 以太网开发套件（PoE 蓝牙代理网关）':
     'Kit de Desenvolvimento Ethernet XIAO W5500 (Gateway Proxy Bluetooth PoE)',
   '免布线蓝牙网关，接收BLE设备广播并接入平台':
     'Gateway Bluetooth sem fiação, recebe broadcasts de dispositivos BLE e os conecta à plataforma',
-  '基于PoE供电的有线网络蓝牙代理网关，捕获米家蓝牙温湿度计等BLE广播设备的数据，通过有线网络回传至Home Assistant，解决蓝牙信号覆盖范围有限的问题。':
-    'Gateway proxy Bluetooth com rede com fio alimentado por PoE, captura dados de dispositivos com broadcast BLE como higrômetros Bluetooth Mi Home, e os retorna ao Home Assistant via rede com fio, resolvendo o problema de alcance limitado do sinal Bluetooth.',
+  '基于 PoE 供电的有线网络蓝牙网关，采集米家蓝牙温湿度计等 BLE 广播设备数据，通过有线网络回传给 Home Assistant，解决蓝牙信号覆盖受限的问题。':
+    'Gateway Bluetooth com PoE e conexão cabeada que coleta transmissões BLE e as repassa ao Home Assistant pela rede cabeada, contornando limitações de alcance do Bluetooth.',
   'XIAO W5500 以太网开发套件': 'Kit de Desenvolvimento Ethernet XIAO W5500',
   'SenseCAP Indicator 4英寸 RGB 触控屏': 'Tela Touchscreen RGB SenseCAP Indicator de 4 Polegadas',
   '桌面触控中枢，展示环境参数与设备快捷控制':
@@ -384,8 +384,8 @@ export const ptDict: Record<string, string> = {
     'Módulo de Detecção de Presença Humana e Quedas por Onda Milimétrica de 60GHz',
   '人体微动感知与跌倒监测，联动报警自动化':
     'Percepção de micro movimentos humanos e monitoramento de quedas, com automação de alarme vinculada',
-  '60GHz毫米波雷达模块（MR60FDA2），可检测人体存在、微动与跌倒姿态，隐私友好（不采集图像），通过ESPHome接入HA后触发人员在位联动与异常告警。':
-    'Módulo de radar de onda milimétrica de 60GHz (MR60FDA2) que detecta presença humana, micro movimentos e postura de queda; com foco em privacidade (não captura imagens); ao conectar-se ao HA via ESPHome, aciona automação de presença e alertas de anomalia.',
+  '60GHz 毫米波雷达模块（MR60FDA2），可检测人体存在、微动与跌倒姿态，不采集图像保护隐私，通过 ESPHome 接入 HA 后触发人员在位联动与异常告警。':
+    'Módulo de radar de ondas milimétricas de 60 GHz (MR60FDA2) para detecção de presença, micromovimentos e quedas sem câmeras, disparando automações e alertas no HA via ESPHome.',
   '另配 DDSU666 单相导轨式智能电表、XY-MD02 工业温湿度变送器、屏幕、整体电源箱与工业路由器等实训配件。':
     'Também inclui medidor inteligente monofásico para trilho DIN DDSU666, transmissor industrial de temperatura e umidade XY-MD02, tela, caixa de alimentação integrada e roteador industrial.',
   '固件配置 + 统一平台 · YAML 驱动':
@@ -400,42 +400,42 @@ export const ptDict: Record<string, string> = {
   备份与灾难恢复: 'Backup e recuperacao de desastres',
   '关键转折点 · 从平台内自动化到跨系统业务编排':
     'Ponto de virada critico · da automacao dentro da plataforma para a orquestracao de negocios entre sistemas',
-  'HA内的自动化解决「如果…就…」的单平台联动；Node-RED让系统第一次具备跨系统、多分支、定时轮询的业务编排能力，从「设备管控」走向「业务集成」。':
-    'A automação dentro do HA resolve a vinculação de plataforma única do tipo "se… então…"; o Node-RED dá ao sistema, pela primeira vez, capacidade de orquestração de negócios entre sistemas, com múltiplos ramos e polling agendado, evoluindo de "gerenciamento de dispositivos" para "integração de negócios".',
-  '另需EMQX/Mosquitto MQTT Broker（承载多节点异步报文）、HACS（社区集成与前端主题扩展）。':
-    'Requer adicionalmente EMQX/Mosquitto MQTT Broker (para mensagens assincronas de multiplos nos), HACS (integracao da comunidade e extensao de temas de front-end).',
+  'HA 内置的自动化适合处理「条件满足即触发」的单平台联动；Node-RED 则带来跨系统、多分支和定时轮询的复杂编排能力，让联动真正贴合现场的实际业务流程。':
+    'As automações nativas do HA resolvem disparos diretos de plataforma única; o Node-RED traz orquestração entre sistemas, ramificações e polling agendado alinhados à rotina de campo.',
+  '另需 EMQX / Mosquitto MQTT Broker（承载多节点异步报文）、HACS（社区集成与前端主题扩展）。':
+    'Requer adicionalmente um broker MQTT (EMQX / Mosquitto para mensagens assíncronas) e HACS para integrações e temas comunitários.',
   课前准备与环境预检: 'Preparação pré-aula e verificação prévia de ambiente',
   '硬件台架清点、网络环境配置、网关固件预置、教学资料下发':
     'Inventario de bancada de hardware, configuracao de ambiente de rede, pre-instalacao de firmware de gateway, distribuicao de materiais didaticos',
   HA平台架构与核心概念: 'Arquitetura da plataforma HA e conceitos centrais',
-  '实体Entity、服务Service、状态State、自动化Automation、Lovelace仪表盘基础配置':
-    'Configuracao basica de Entity, Service, State, Automation, painel Lovelace',
+  '实体（Entity）、服务（Service）、状态（State）、自动化（Automation）与 Lovelace 仪表盘基础配置':
+    'Entidades (Entity), serviços (Service), estados (State), automações (Automation) e configuração básica do painel Lovelace',
   消费级智能硬件接入: 'Integracao de hardware inteligente de consumo',
-  '标准Wi-Fi/Zigbee智能插座与照明设备接入流程，设备状态同步与手动控制':
-    'Fluxo de integracao de tomadas inteligentes e dispositivos de iluminacao padrao Wi-Fi/Zigbee, sincronizacao de status de dispositivo e controle manual',
+  '标准 Wi-Fi / Zigbee 智能插座与照明设备接入流程，设备状态同步与手动控制':
+    'Fluxo de integração de tomadas inteligentes e iluminação Wi-Fi / Zigbee padrão, sincronização de estado e controle manual',
   'XIAO ESP32 + ESPHome传感器节点': 'Nó de sensor XIAO ESP32 + ESPHome',
-  'ESPHome编写温湿度采集配置、固件在线编译与烧录、HA自动发现与实体映射':
-    'Escrita de configuração de aquisição de temperatura/umidade no ESPHome, compilação e flash de firmware online, descoberta automática e mapeamento de entidades no HA',
-  'HA Energy能耗看板初识': 'Introdução ao painel de consumo HA Energy',
+  '用 ESPHome 编写温湿度采集配置、在线编译与烧录固件，完成 HA 自动发现与实体映射':
+    'Criar a configuração de leitura de temperatura/umidade no ESPHome, compilar e gravar o firmware online e validar a autodescoberta e mapeamento no HA',
+  'HA Energy 能耗看板初识': 'Introdução ao painel HA Energy',
   '能源看板配置结构与数据流向，了解能耗监控的基本框架':
     'Estrutura de configuracao do painel de energia e fluxo de dados, compreensao da estrutura basica do monitoramento de consumo',
-  'Modbus RTU协议与RS485接线': 'Protocolo Modbus RTU e fiação RS485',
+  'Modbus RTU 协议与 RS485 接线': 'Protocolo Modbus RTU e fiação RS485',
   'RS485差分总线接线规范、波特率/数据位/校验位/从机地址配置、寄存器类型与数据解析':
     'Normas de fiação de barramento diferencial RS485, configuração de baud rate/bits de dados/bit de paridade/endereço de escravo, tipo de registrador e análise de dados',
   工业传感器与电表接入: 'Integracao de sensores industriais e medidores',
-  'XIAO RS485扩展板读取XY-MD02温湿度变送器，接入DDSU666电表读取电压/电流/功率/累计电量':
-    'A placa de expansão XIAO RS485 lê o transmissor de temperatura/umidade XY-MD02, integra o medidor DDSU666 para ler tensão/corrente/potência/consumo acumulado',
+  '使用 XIAO RS485 扩展板读取 XY-MD02 温湿度变送器，接入 DDSU666 电表读取电压、电流、功率与累计电量':
+    'Usar a placa de expansão RS485 para XIAO com o transmissor XY-MD02 e integrar o medidor DDSU666 para registrar tensão, corrente, potência e consumo acumulado',
   能源监控看板搭建: 'Implantacao de painel de monitoramento de energia',
-  '配置HA Energy模块绑定电表累计电量实体，实现实时功率曲线与分时能耗统计':
-    'Configuracao do modulo HA Energy para vincular entidade de consumo acumulado do medidor, implementando curva de potencia em tempo real e estatistica de consumo por periodo',
+  '在 HA Energy 模块中绑定电表累计电量实体，生成实时功率曲线与分时能耗统计':
+    'Vincular a entidade de consumo acumulado no módulo HA Energy para gerar curvas de potência em tempo real e estatísticas por período',
   场景自动化策略配置: 'Configuracao de estrategia de automacao de cenario',
   '多条件联动规则：温度超限启动风扇、光照低于阈值开灯、非工作时间异常功耗告警':
     'Regras de vinculacao multicondicao: ligar ventilador quando temperatura excede limite, ligar luz quando iluminacao abaixo do limiar, alerta de consumo anormal fora do horario de trabalho',
-  'HA REST API/WebSocket鉴权（Long-Lived Access Token）、MQTT发布订阅（EMQX Broker）、Webhook外部触发':
-    'Autenticação HA REST API/WebSocket (Long-Lived Access Token), publicação/assinatura MQTT (EMQX Broker), gatilho externo Webhook',
-  'Node-RED业务逻辑开发': 'Desenvolvimento de lógica de negócios Node-RED',
-  '安装配置Node-RED Add-on，编排复杂分支逻辑、定时轮询与外部系统数据转发':
-    'Instalacao e configuracao do add-on Node-RED, orquestracao de logica de ramos complexos, polling agendado e encaminhamento de dados para sistemas externos',
+  'HA REST API 与 WebSocket 鉴权（Long-Lived Access Token）、MQTT 发布订阅（EMQX Broker）与 Webhook 外部触发':
+    'Autenticação na REST API e WebSocket do HA (tokens de longa duração), publicação/assinatura MQTT com EMQX Broker e gatilhos externos via Webhook',
+  'Node-RED 业务逻辑开发': 'Desenvolvimento de fluxos operacionais no Node-RED',
+  '安装配置 Node-RED Add-on，编排复杂分支逻辑、定时轮询与外部系统数据转发':
+    'Instalar e configurar o add-on do Node-RED para orquestrar fluxos com condições, polling agendado e repasse de dados para sistemas externos',
   '自动化备份策略配置（本地备份与网络挂载）、灾难恢复流程验证与系统迁移演练':
     'Configuracao de estrategia de backup automatico (backup local e montagem de rede), validacao de fluxo de recuperacao de desastres e treinamento de migracao de sistema',
   方案复盘与交付总结: 'Revisão da solução e resumo de entrega',
@@ -508,12 +508,8 @@ export const ptDict: Record<string, string> = {
     'A seguir estao as entregas da versao completa (aula de entrega); a aula pratica entrega os primeiros 4 itens; a aula experimental entrega a versao simplificada dos itens 1 e 2.',
   '含现场局域网拓扑图、IP 地址分配表、VLAN/隔离策略、网关与路由器配置参数。':
     'Inclui diagrama de topologia da rede local, tabela de alocacao de enderecos IP, estrategia de VLAN/isolamento, parametros de configuracao de gateway e roteador.',
-  '接入设备清单与 Modbus 寄存器映射表':
-    'Lista de dispositivos integrados e tabela de mapeamento de registradores Modbus',
   '含所有接入设备型号、从机地址（Slave ID）、寄存器地址、数据类型与缩放系数。':
     'Inclui todos os modelos de dispositivos integrados, enderecos de escravo (Slave ID), enderecos de registradores, tipos de dados e coeficientes de escala.',
-  '能耗看板与自动化 YAML / Node-RED 流程配置文件':
-    'Arquivo de configuracao de fluxo YAML / Node-RED para painel de consumo e automacao',
   '含 HA Energy 配置、Lovelace 仪表盘卡片配置、自动化规则 YAML 及 Node-RED 流程 JSON（L3）。':
     'Inclui configuracao HA Energy, configuracao de cartoes de painel Lovelace, YAML de regras de automacao e JSON de fluxo Node-RED (L3).',
   '含自动化备份策略配置、灾难恢复步骤、系统迁移流程与日常巡检清单。':
@@ -528,16 +524,16 @@ export const ptDict: Record<string, string> = {
   '以标准化方法打通多品牌、多协议存量设备的统一接入':
     'Dominar métodos padronizados para a integração unificada de equipamentos multiprotocolo e multimarca existentes',
   把存量设备接进来: 'Integre os dispositivos existentes',
-  'M1 并非让学员重复配置智能家居，而是针对楼宇与工业辅助车间中多品牌、多协议设备割裂的现实痛点，建立跨协议本地管控的工程能力。整套方案提供从台架接线、协议转换到看板搭建的完整技术栈，讲师可根据实际教学目标灵活剪裁与扩展。':
-    'O M1 não visa configurar casas inteligentes de forma superficial, mas sim resolver a fragmentação real de equipamentos multimarca e multiprotocolo em edifícios e plantas industriais auxiliares, capacitando para o gerenciamento local integrado. Fornece toda a pilha, da fiação ao painel de controle, permitindo adaptação flexível pelos professores.',
+  'M1 并不是让学员重复配置智能家居，而是针对楼宇与辅助车间中多品牌、多协议设备相互割裂的实际情况，建立跨协议本地管控的工程能力。课程提供从台架接线、协议转换到看板搭建的完整技术链路，讲师可根据实际教学目标灵活剪裁与扩展。':
+    'O M1 não é uma prática repetitiva de automação residencial; capacita para integrar localmente equipamentos multimarcas e multiprotocolos em edifícios e ambientes industriais. Abrange todo o fluxo técnico, da fiação em bancada e conversão de protocolos aos painéis de monitoramento, pronto para ser adaptado pelos instrutores.',
   换场景: 'Trocar de cenário',
   '模块 09 的联动规则支持自由替换。讲师可将实训场景延伸至机房温控、冷链仓储或车间环境监管，引导学员根据实际业务阈值编写联动策略。':
     'As regras de automação da unidade 09 são totalmente personalizáveis. O professor pode direcionar as práticas para controle térmico de data centers, armazéns frigoríficos ou monitoramento fabril, orientando a elaboração de políticas com base em limites operacionais reais.',
   接设备: 'Conectar dispositivos',
   '实训台架支持在模块 06 之后接入合作企业或校内现有的 RS485 与 Modbus 仪表，让学员面对真实设备完成点位映射与调试。':
     'A bancada de testes permite conectar instrumentos RS485 e Modbus reais da instituição ou de empresas parceiras após a unidade 06, permitindo aos alunos mapear registros e depurar comunicações diretamente em equipamentos autênticos.',
-  '讲师在强弱电隔离、总线拓扑布线、常见通信丢包排查等现场交付经验上的补充，是帮助学员跨过理论与工程实践鸿沟的关键。':
-    'As orientações práticas do instrutor sobre isolamento de potência e sinal, topologias de barramento e diagnóstico de perdas de pacotes são o que preenche a lacuna entre a teoria de bancada e entregas de campo confiáveis.',
+  '讲师在强弱电隔离、总线拓扑布线、常见通信丢包排查等现场交付经验上的补充，能帮学员避开很多实际施工中才会踩到的坑。':
+    'A experiência prática compartilhada pelo instrutor em isolamento de potência e sinal, topologias de barramento e diagnóstico de perda de pacotes evita que os alunos tropecem em erros comuns de implantação.',
   '仅做单向状态监视，不执行反向控制。':
     'Apenas monitoramento unidirecional de status, sem executar controle reverso.',
   跨品牌设备状态聚合与统一监控看板:
@@ -560,10 +556,8 @@ export const ptDict: Record<string, string> = {
     'Não garante uma porcentagem específica de economia de energia em cenários específicos (o efeito de economia depende dos dispositivos do local, hábitos de uso e condições climáticas)',
   不包含长周期驻场代运维服务:
     'Não inclui serviço de operação e manutenção de longa duração no local',
-  '控制类场景仅限低压直流执行器（LED灯带、5V/12V继电器模块等），严禁通过本系统控制 AC 220V 及以上强电负载':
-    'Cenarios de controle sao limitados a atuadores DC de baixa tensao (faixa de LED, modulos de rele 5V/12V etc.); e estritamente proibido controlar cargas de alta tensao AC 220V ou superior por meio deste sistema',
-
-  // ── M2 ──
+  '控制类场景仅限低压直流执行器（LED 灯带、5V / 12V 继电器模块等），严禁通过本系统控制 AC 220V 及以上强电负载':
+    'Os cenários de controle são restritos a atuadores DC de baixa tensão (fitas de LED, relés de 5V / 12V); é expressamente proibido acionar cargas de 220V AC ou superiores por meio deste sistema',
   '多模态 AI 交互': 'Interação Multimodal com IA',
   '对着终端说话就能查库存、录出入库、控设备；也可以整套跑在本地，断网可用。':
     'Fale com o terminal para consultar estoque, registrar entradas e saídas e controlar dispositivos. Tudo também pode rodar localmente e continuar funcionando sem internet.',
