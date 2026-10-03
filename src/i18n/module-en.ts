@@ -109,7 +109,7 @@ export const enDict: Record<string, string> = {
   '另需 SenseCraft AI（无代码部署与训练视觉模型，用于模块 5 与视觉体验课，需外网），以及一套 15 章的中文开源教材（免费，结课后可长期自学）。':
     'Additionally requires SenseCraft AI (no-code visual model deployment & training, for Module 5 & Vision Taster, needs internet), 15-chapter Chinese textbook (open-source, free, for long-term self-study after course).',
   环境感知: 'Environmental Sensing',
-  '11 个模块一体式底板：OLED 屏、按键、旋钮、蜂鸣器、LED、光线／温湿度／气压／声音／加速度传感器。免焊接、免面包板。第一个「感知→逻辑→输出」闭环作品。':
+  '11 个模块一体式底板：OLED 屏、按键、旋钮、蜂鸣器、LED、光线／温湿度／气压／声音／加速度传感器。免焊接、免面包板。第一个「感知→逻辑→输出」联动作品。':
     '11-module integrated board: OLED display, buttons, knob, buzzer, LED, light / temperature-humidity / air pressure / sound / accelerometer sensors. No soldering, no breadboard. Your first "Sense → Logic → Output" closed-loop project.',
   'Grove Beginner Kit 一体式底板': 'Grove Beginner Kit Integrated Board',
   交互设计: 'Interaction Design',
@@ -162,7 +162,7 @@ export const enDict: Record<string, string> = {
   '2 天 · 12–14h · 仅 M0-A + 备料池': '2 Days · 12–14h · M0-A + Parts Pool only',
   'Day 1 上午': 'Day 1 Morning',
   '模块 1 + 2': 'Module 1 + 2',
-  '不可能挑战 → Grove 感知闭环 → 3 个小作品':
+  '不可能挑战 → Grove 感知链路打通 → 3 个小作品':
     'Impossible Challenge → Grove Sensing Loop → 3 Mini Projects',
   'Day 1 下午': 'Day 1 Afternoon',
   '模块 6 + 4（BMAD 精简）': 'Module 6 + 4 (BMAD Lite)',
@@ -196,7 +196,7 @@ export const enDict: Record<string, string> = {
   '5 分钟让屏幕显示自己的名字 · AI 编程心智建立':
     '5 Minutes to Display Your Name on Screen · Building the AI Programming Mindset',
   'Grove 进阶': 'Grove Advanced',
-  '感知→逻辑→输出闭环 · AI 辅助编程 5 大法则':
+  '感知→逻辑→输出完整链路 · AI 辅助编程 5 大法则':
     'Sense→Logic→Output Loop · 5 Laws of AI-Assisted Programming',
   'Wio Terminal 带屏交互': 'Wio Terminal Screen Interaction',
   '界面、状态、按键': 'Interface, Status, Buttons',
@@ -208,7 +208,8 @@ export const enDict: Record<string, string> = {
   找一个真问题: 'Find a Real Problem',
   'Final Project 选题锁定 + PRD + 系统草图': 'Final Project Topic Lockdown + PRD + System Sketch',
   '原型 v1': 'Prototype v1',
-  'MVP 拆解：最多 3 个功能，必须闭环': 'MVP Breakdown: Max 3 features, must form a closed loop',
+  'MVP 拆解：最多 3 个功能，全流程必须跑通':
+    'MVP Breakdown: Max 3 features, must form a closed loop',
   关键转折点: 'Key Turning Point',
   '从浏览器到桌面，第一次「拥有」自己的工程':
     'From Browser to Desktop — First Time "Owning" Your Own Project',
@@ -660,14 +661,14 @@ export const enDict: Record<string, string> = {
   'MCP桥接config.yml配置': 'MCP Bridge config.yml Configuration',
   OpenClaw自动化工具注册与联调: 'OpenClaw Automation Tool Registration & Integration Testing',
   'Jetson Orin NX + 离线语音管线': 'Jetson Orin NX + Offline Voice Pipeline',
-  'VAD→ASR→LLM→TTS纯本地闭环 · 零公网依赖':
+  'VAD→ASR→LLM→TTS纯本地全流程 · 零公网依赖':
     'VAD→ASR→LLM→TTS Pure Local Closed Loop · Zero Public-Network Dependency',
   JetPack环境验证: 'JetPack Environment Verification',
   量化模型部署与显存调优: 'Quantized Model Deployment & VRAM Tuning',
   断网联调与延迟优化: 'Offline Integration Testing & Latency Optimization',
   '关键转折点 · 从云端协同到本地离线私有化部署':
     'Key Turning Point · From Cloud Collaboration to Local Offline Private Deployment',
-  'SenseCraft AI云端方案解决「快速验证、到手就能用」；MCP桥接让业务数据第一次在局域网内闭环，核心库存与业务数据不出域；Jetson离线管线则彻底切断公网依赖，在强隐私与工业隔离网环境下实现零外网语音交互。':
+  'SenseCraft AI云端方案解决「快速验证、到手就能用」；MCP桥接让业务数据第一次在局域网内流转，核心库存与业务数据不出域；Jetson离线管线则彻底切断公网依赖，在强隐私与工业隔离网环境下实现零外网语音交互。':
     'The SenseCraft AI cloud solution addresses "rapid verification and out-of-box usability"; MCP bridging closes the business data loop within the LAN for the first time, with core inventory and business data staying in-domain; the Jetson offline pipeline completely cuts public-network dependency, achieving zero-external-network voice interaction in high-privacy and industrial isolated-network environments.',
   'L1/L2依赖互联网连接大模型服务；L3需100 TOPS级别边缘算力（Jetson Orin NX 16GB），RK3588-40（6 TOPS）无法承载本地大模型推理。':
     'L1/L2 relies on internet connection to LLM services; L3 requires 100 TOPS-class edge compute (Jetson Orin NX 16GB), RK3588-40 (6 TOPS) cannot host local LLM inference.',
@@ -709,7 +710,7 @@ export const enDict: Record<string, string> = {
   Jetson运行环境与模型部署调优: 'Jetson Runtime Environment & Model Deployment Tuning',
   '验证JetPack/CUDA/TensorRT/PyTorch运行环境、部署ASR语音识别模型（Whisper/FunASR）、部署4-bit量化本地LLM（Qwen2.5-7B-Instruct）与TTS引擎（ChatTTS/Piper）、Watcher音频流定向至本地服务端口':
     'Verify JetPack/CUDA/TensorRT/PyTorch runtime environment, deploy ASR speech recognition model (Whisper/FunASR), deploy 4-bit quantized local LLM (Qwen2.5-7B-Instruct) and TTS engine (ChatTTS/Piper), route Watcher audio stream to local service port',
-  '物理断开外网连接验证局域网自闭环运行、测试各环节耗时、调优模型上下文长度与采样参数':
+  '物理断开外网连接验证局域网独立运行、测试各环节耗时、调优模型上下文长度与采样参数':
     'Physically disconnect external network to verify LAN self-closed-loop operation, test each stage latency, tune model context length and sampling parameters',
   '各组成果展示与业务场景适配答辩、云端SaaS架构vs本地边缘计算架构成本与选型复盘、业务系统API扩展规范与标准化交付文档归档':
     'Group result presentation and business scenario adaptation defense, cloud SaaS architecture vs local edge computing architecture cost and selection retrospective, business system API extension specifications and standardized delivery document archiving',
@@ -1512,9 +1513,9 @@ export const enDict: Record<string, string> = {
   'Open API鉴权与遥测提取': 'Open API Authentication & Telemetry Extraction',
   'Node-RED本地自动化编排': 'Node-RED Local Automation Orchestration',
   'InfluxDB+Grafana私有化大屏': 'InfluxDB+Grafana Private Dashboard',
-  '关键转折点 · 从云端数据监视到本地边缘闭环控制':
+  '关键转折点 · 从云端数据监视到本地边缘联动控制':
     'Key Turning Point · From Cloud Data Monitoring to Local Edge Closed-Loop Control',
-  'SenseCraft Data云端解决「数据能看见、告警能推送」的监视问题；SenseCAP Open API让系统第一次具备跨平台数据提取能力，Node-RED在reComputer边缘端实现「感知→阈值判断→执行机构联动」的就地闭环，从「环境监测」走向「数据集成与自动化控制」。':
+  'SenseCraft Data云端解决「数据能看见、告警能推送」的监视问题；SenseCAP Open API让系统第一次具备跨平台数据提取能力，Node-RED在reComputer边缘端实现「感知→阈值判断→执行机构联动」的就地控制，从「环境监测」走向「数据集成与自动化控制」。':
     'SenseCraft Data cloud addresses the monitoring problem of "data can be seen, alerts can be pushed"; SenseCAP Open API gives the system cross-platform data extraction capability for the first time; Node-RED implements the local closed loop of "perception → threshold judgment → actuator linkage" on the reComputer edge, moving from "environmental monitoring" to "data integration and automation control."',
   '另需4G物联网SIM卡（承载蜂窝数据回传）、SenseCraft App（移动端设备绑定与告警推送）、InfluxDB时序数据库（L3私有化数据存储）。':
     'Additionally requires 4G IoT SIM card (carrying cellular data backhaul), SenseCraft App (mobile device binding and alert push), InfluxDB time-series database (L3 private data storage).',
@@ -1627,7 +1628,7 @@ export const enDict: Record<string, string> = {
     'Your existing client legacy sensors, environmental probes on school training benches, and partner RS485 devices can be connected after Module 06 to become the object pool for Modbus integration practice. M5 is responsible for explaining the method thoroughly; what sensors to connect behind the door is up to you.',
   '你在行业里攒下的那些：野外布设经验、踩过的坑、能让学员瞬间理解LoRaWAN视距覆盖的那个比喻、客户现场最常问的三个问题——那正是我们没有、也给不了的部分。':
     'What you have accumulated in the industry: field deployment experience, pitfalls encountered, the analogy that makes students instantly understand LoRaWAN line-of-sight coverage, the three questions most commonly asked at client sites — those are precisely the parts we do not have and cannot provide.',
-  '4G与LoRaWAN为两条独立交付路线，硬件不混用；环境数据属低频物联监测，不做毫秒级闭环控制。':
+  '4G与LoRaWAN为两条独立交付路线，硬件不混用；环境数据属低频物联监测，不做毫秒级实时控制。':
     '4G and LoRaWAN are two independent delivery routes, hardware is not mixed; environmental data belongs to low-frequency IoT monitoring, not millisecond-level closed-loop control.',
   '多环境要素采集（土壤温湿度/EC、气象七参数、CO2、叶面温湿度、水质pH等）与广域分散点位监测':
     'Multi-environmental-parameter collection (soil temperature/humidity/EC, weather 7-parameter, CO2, leaf wetness/temperature, water quality pH, etc.) and wide-area dispersed point monitoring',
@@ -1645,7 +1646,7 @@ export const enDict: Record<string, string> = {
     '4G and LoRaWAN hardware are not mixed: the two routes are independent delivery kits; the 4G data logger (114992169) and LoRaWAN gateway (114992982)/S210x nodes belong to different communication protocol stacks and must not be mixed-networked or cross-replaced in the same teaching bench',
   '数据主权与私有化部署边界：SenseCraft Data为云端SaaS平台，环境数据默认存储于Seeed云端；L3通过Open API提取数据至本地InfluxDB实现私有化存储，但原始数据仍先经云端中转，不提供纯离线/断网可用的本地化数据采集服务。私有化部署仅覆盖L3阶段的API拉取数据，不包含云端平台本身的私有化部署':
     'Data sovereignty and private deployment boundaries: SenseCraft Data is a cloud SaaS platform, environmental data is stored on Seeed cloud by default; L3 extracts data to local InfluxDB via Open API for private storage, but raw data still first transits through the cloud; pure offline/network-available local data collection services are not provided. Private deployment only covers L3-stage API-pulled data, not private deployment of the cloud platform itself',
-  '不适用于毫秒级闭环运动控制：环境传感采样周期通常为1~60分钟（视现场功耗与电池策略配置），属于低频物联监测，不做高频伺服振动监测，不适用于毫秒级闭环运动控制或实时伺服系统':
+  '不适用于毫秒级实时运动控制：环境传感采样周期通常为1~60分钟（视现场功耗与电池策略配置），属于低频物联监测，不做高频伺服振动监测，不适用于毫秒级实时伺服系统':
     'Not applicable to millisecond-level closed-loop motion control: environmental sensing sampling period is typically 1–60 minutes (depending on on-site power consumption and battery strategy configuration), belongs to low-frequency IoT monitoring, does not perform high-frequency servo vibration monitoring, not applicable to millisecond-level closed-loop motion control or real-time servo systems',
   '严禁介入消防、电梯控制、高压配电等安全关键生命系统的监测与控制':
     'Strictly prohibited from intervening in the monitoring and control of safety-critical life systems such as fire protection, elevator control, and high-voltage power distribution',
@@ -1709,7 +1710,7 @@ export const enDict: Record<string, string> = {
     'Workstation vision event triggering and micro-scenario integration testing',
   'RGB-D深度相机3D定位与手眼对齐': 'RGB-D depth camera 3D positioning and hand-eye calibration',
   Pinocchio逆运动学求解与异常处理: 'Pinocchio inverse kinematics solving and exception handling',
-  Motorbridge驱动真机空间抓取闭环: 'Motorbridge-driven real-machine spatial grasping closed loop',
+  Motorbridge驱动真机空间抓取流程: 'Motorbridge-driven real-machine spatial grasping closed loop',
   '遥操动作数据集采集（LeRobot标准）': 'Teleoperation action dataset collection (LeRobot standard)',
   'VLA具身大模型与Isaac Sim数字孪生初探':
     'VLA embodied LLM and Isaac Sim digital twin introduction',
@@ -1740,7 +1741,7 @@ export const enDict: Record<string, string> = {
     'Master SenseCraft multi-action flow orchestration and the "Generate → 3D Preview → Human Confirm → Real-Machine Execute" safety-confirmation mechanism',
   '掌握基于工位视觉的事件触发与微场景搭建，连续3次稳定运行':
     'Master workstation-vision-based event triggering and micro-scenario setup, achieving 3 consecutive stable runs',
-  '3D空间抓取闭环与具身智能前瞻':
+  '3D空间抓取全流程与具身智能前瞻':
     '3D Spatial Grasping Closed Loop and Embodied Intelligence Outlook',
   '用深度相机取 3D 坐标，Python 驱动真机抓取':
     'Get 3D coordinates from a depth camera and drive the real arm from Python',
@@ -1779,7 +1780,7 @@ export const enDict: Record<string, string> = {
   '控制中枢，运行机械臂运动学解算、控制服务与大模型推理；出厂预装JetPack 6.2，需确认SenseCraft Robotics服务与Python（Pinocchio / Motorbridge SDK）运行环境就绪；19V/4.7A大功率电源适配器供电。':
     'Control hub, running robotic-arm kinematics solving, control services, and LLM inference; factory-preinstalled JetPack 6.2, verify SenseCraft Robotics service and Python (Pinocchio / Motorbridge SDK) runtime environment are ready; powered by 19V/4.7A high-power adapter.',
   '双目红外3D深度相机，Type-C接口': 'Dual infrared 3D depth camera, Type-C interface',
-  '空间三维视觉引导，直接读取物体在空间中的三维物理坐标（X, Y, Z）实现空间闭环抓取；L3阶段需与机械臂基座坐标系完成手眼标定对齐，确保测出的坐标可被Pinocchio正确换算为关节角度。':
+  '空间三维视觉引导，直接读取物体在空间中的三维物理坐标（X, Y, Z）实现真机空间精准抓取；L3阶段需与机械臂基座坐标系完成手眼标定对齐，确保测出的坐标可被Pinocchio正确换算为关节角度。':
     'Spatial 3D vision guidance, directly reads the 3D physical coordinates (X, Y, Z) of objects in space to achieve spatial closed-loop grasping; at L3, hand-eye calibration alignment with the robotic-arm base coordinate frame is required to ensure measured coordinates can be correctly converted to joint angles by Pinocchio.',
   '奥比中光Gemini 2 3D相机': 'Orbbec Gemini 2 3D Camera',
   工位图像采集端: 'Workstation image capture terminal',
@@ -1797,7 +1798,7 @@ export const enDict: Record<string, string> = {
   开箱连接: 'Out-of-box connection',
   '主从遥操/语音指令': 'Master-slave teleoperation / voice commands',
   多动作流程编排与安全确认: 'Multi-action flow orchestration and safety confirmation',
-  '逆运动学解算 · 真机空间抓取闭环 · 异常处理与安全退回':
+  '逆运动学解算 · 真机空间抓取全流程 · 异常处理与安全退回':
     'Inverse kinematics solving · real-machine spatial grasping closed loop · exception handling and safe retraction',
   深度相机3D定位: 'Depth camera 3D positioning',
   Pinocchio逆运动学求解: 'Pinocchio inverse kinematics solving',
@@ -1848,7 +1849,7 @@ export const enDict: Record<string, string> = {
   '奥比中光Gemini 2 / Python': 'Orbbec Gemini 2 / Python',
   'Python调用Pinocchio工具库、输入目标坐标自动计算6关节角度、超出工作范围/解算失败异常报警与安全退回':
     'Python calling Pinocchio library, automatic calculation of 6 joint angles from target coordinates, out-of-workspace/solve-failure exception alerting and safe retraction',
-  Motorbridge真机驱动与端到端抓取闭环:
+  Motorbridge真机驱动与端到端抓取流程:
     'Motorbridge Real-Machine Driving and End-to-End Grasping Closed Loop',
   'Python调用Motorbridge SDK驱动平滑运动与夹爪控制、整合全流程：深度相机检测→Pinocchio逆解→Motorbridge驱动抓取':
     'Python calling Motorbridge SDK to drive smooth motion and gripper control, integrating the full pipeline: depth camera detection → Pinocchio inverse kinematics → Motorbridge-driven grasping',
@@ -1861,7 +1862,7 @@ export const enDict: Record<string, string> = {
     'VLA model input text + image output action architecture understanding, Isaac Sim loading robotic-arm 3D assets, virtual physics collision and simulation control, "simulate first, then real machine" development approach',
   '各组方案演练与配置评审、异常与失败案例复盘、演示线与工业产线工程差距总结（重复定位精度/连续运行可靠性/工业节拍/安全认证）、源码文档配置归档':
     'Group solution rehearsal and configuration review, exception and failure case retrospective, demo-line vs industrial production-line engineering gap summary (repeatability accuracy/continuous operation reliability/industrial cycle time/safety certification), source code documentation and configuration archiving',
-  '体验课（taster）聚焦 L1 选型认知、安全规范与SenseCraft开箱遥操，不含视觉联动与3D抓取开发；实战课（workshop）覆盖 L1+L2 完整场景剖析、动作编排与工位视觉事件触发；交付课（bootcamp）全覆盖 L1+L2+L3，含确定性3D空间抓取闭环与具身智能前沿探索。':
+  '体验课（taster）聚焦 L1 选型认知、安全规范与SenseCraft开箱遥操，不含视觉联动与3D抓取开发；实战课（workshop）覆盖 L1+L2 完整场景剖析、动作编排与工位视觉事件触发；交付课（bootcamp）全覆盖 L1+L2+L3，含确定性3D空间精准抓取与具身智能前沿探索。':
     'The taster session focuses on L1 selection awareness, safety standards, and SenseCraft out-of-box teleoperation, excluding vision integration and 3D grasping development; the workshop covers full L1+L2 scenario analysis, action orchestration, and workstation vision event triggering; the bootcamp fully covers L1+L2+L3, including deterministic 3D spatial grasping closed loop and cutting-edge embodied intelligence exploration.',
   '1 天 · 6–8h · L1 展示层 · 聚焦选型认知、安全规范与SenseCraft开箱遥操':
     '1 day · 6–8h · L1 presentation layer · focusing on selection awareness, safety standards, and SenseCraft out-of-box teleoperation',
@@ -1879,12 +1880,12 @@ export const enDict: Record<string, string> = {
     'Deployment scenarios and cycle time calculation → 3D spatial intuition → Action orchestration and safety confirmation → Workstation vision event integration',
   '实战课交付 1 套由工位视觉触发的微场景作业系统（连续 3 次稳定运行）。学员基础要求：掌握基础网络配置与系统联动概念。':
     'The workshop delivers one micro-scenario operation system triggered by workstation vision (3 consecutive stable runs). Student prerequisite: basic network configuration and system integration concepts.',
-  '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含确定性3D空间抓取闭环与具身智能前沿探索':
+  '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含确定性3D空间精准抓取与具身智能前沿探索':
     '3–5 days · 24–35h · L1+L2+L3 · full coverage including deterministic 3D spatial grasping closed loop and cutting-edge embodied intelligence exploration',
   'L1+L2 完整内容（选型安全 + 遥操语音 + 场景编排 + 视觉联动）':
     'Full L1+L2 content (selection safety + teleoperation voice + scenario orchestration + vision integration)',
   '模块 10–12': 'Modules 10–12',
-  '深度相机3D定位与手眼对齐 → Pinocchio逆运动学求解 → Motorbridge端到端抓取闭环':
+  '深度相机3D定位与手眼对齐 → Pinocchio逆运动学求解 → Motorbridge端到端抓取全流程':
     'Depth camera 3D positioning and hand-eye calibration → Pinocchio inverse kinematics solving → Motorbridge end-to-end grasping closed loop',
   '模块 13–14': 'Modules 13–14',
   'LeRobot遥操动作数据集采集 → VLA具身大模型与Isaac Sim仿真初探':
@@ -1910,7 +1911,7 @@ export const enDict: Record<string, string> = {
   '含多动作流程编排配置、「生成→3D预览→人工确认→真机执行」安全确认机制设置、工位视觉事件触发联动流程、微场景系统连续3次运行验证记录。':
     'Includes multi-action flow orchestration configuration, "Generate → 3D Preview → Human Confirm → Real-Machine Execute" safety-confirmation mechanism setup, workstation vision event-triggered integration flow, and micro-scenario system 3 consecutive run verification records.',
   '3D空间自动抓取Python工程源码': '3D Spatial Auto-Grasping Python Project Source Code',
-  '含深度相机3D坐标读取模块、Pinocchio逆运动学求解与异常处理、Motorbridge SDK真机驱动与夹爪控制、端到端抓取闭环主程序（L3）。':
+  '含深度相机3D坐标读取模块、Pinocchio逆运动学求解与异常处理、Motorbridge SDK真机驱动与夹爪控制、端到端抓取全流程主程序（L3）。':
     'Includes depth camera 3D coordinate reading module, Pinocchio inverse kinematics solving and exception handling, Motorbridge SDK real-machine driving and gripper control, and end-to-end grasping closed loop main program (L3).',
   '含LeRobot标准格式动作数据集（关节角度+双机位视觉画面）、手眼标定参数记录、方案设计说明与交付验收记录（L3）。':
     'Includes LeRobot standard format action dataset (joint angles + dual-camera vision frames), hand-eye calibration parameter records, solution design description, and delivery acceptance records (L3).',

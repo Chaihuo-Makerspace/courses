@@ -111,7 +111,7 @@ export const ptDict: Record<string, string> = {
   '另需 SenseCraft AI（无代码部署与训练视觉模型，用于模块 5 与视觉体验课，需外网），以及一套 15 章的中文开源教材（免费，结课后可长期自学）。':
     'Requer adicionalmente SenseCraft AI (implantação e treinamento de modelos visuais sem código, para Módulo 5 e Sessão de Visão, requer internet), livro didático de 15 capítulos em chinês (código aberto, gratuito, para autoestudo contínuo após o curso).',
   环境感知: 'Sensoriamento Ambiental',
-  '11 个模块一体式底板：OLED 屏、按键、旋钮、蜂鸣器、LED、光线／温湿度／气压／声音／加速度传感器。免焊接、免面包板。第一个「感知→逻辑→输出」闭环作品。':
+  '11 个模块一体式底板：OLED 屏、按键、旋钮、蜂鸣器、LED、光线／温湿度／气压／声音／加速度传感器。免焊接、免面包板。第一个「感知→逻辑→输出」联动作品。':
     'Placa integrada com 11 módulos: tela OLED, botões, potenciômetro, buzzer, LED, sensores de luz, temperatura/umidade, pressão atmosférica, som e acelerômetro. Sem solda, sem protoboard. O primeiro projeto de ciclo fechado "percepção → lógica → saída".',
   'Grove Beginner Kit 一体式底板': 'Placa integrada Grove Beginner Kit',
   交互设计: 'Design de Interação',
@@ -165,7 +165,7 @@ export const ptDict: Record<string, string> = {
   '2 天 · 12–14h · 仅 M0-A + 备料池': '2 dias · 12–14h · apenas M0-A + pool de componentes',
   'Day 1 上午': 'Dia 1 manhã',
   '模块 1 + 2': 'Módulo 1 + 2',
-  '不可能挑战 → Grove 感知闭环 → 3 个小作品':
+  '不可能挑战 → Grove 感知链路打通 → 3 个小作品':
     'Desafio Impossível → Ciclo de Sensoriamento Grove → 3 Mini Projetos',
   'Day 1 下午': 'Dia 1 tarde',
   '模块 6 + 4（BMAD 精简）': 'Módulo 6 + 4 (BMAD Lite)',
@@ -199,7 +199,7 @@ export const ptDict: Record<string, string> = {
   '5 分钟让屏幕显示自己的名字 · AI 编程心智建立':
     'Exiba seu nome na tela em 5 minutos · formação da mentalidade de programação com IA',
   'Grove 进阶': 'Grove avançado',
-  '感知→逻辑→输出闭环 · AI 辅助编程 5 大法则':
+  '感知→逻辑→输出完整链路 · AI 辅助编程 5 大法则':
     'Ciclo Sensor→Lógica→Saída · 5 Leis da Programação Assistida por IA',
   'Wio Terminal 带屏交互': 'Interação com tela no Wio Terminal',
   '界面、状态、按键': 'Interface, Estado, Botões',
@@ -212,7 +212,7 @@ export const ptDict: Record<string, string> = {
   'Final Project 选题锁定 + PRD + 系统草图':
     'Definição do tema do Final Project + PRD + esboço do sistema',
   '原型 v1': 'Protótipo v1',
-  'MVP 拆解：最多 3 个功能，必须闭环':
+  'MVP 拆解：最多 3 个功能，全流程必须跑通':
     'Decomposição do MVP: no máximo 3 funcionalidades, obrigatoriamente com ciclo fechado',
   关键转折点: 'Ponto de Virada Crítico',
   '从浏览器到桌面，第一次「拥有」自己的工程':
@@ -683,14 +683,14 @@ export const ptDict: Record<string, string> = {
   'MCP桥接config.yml配置': 'Configuração config.yml da ponte MCP',
   OpenClaw自动化工具注册与联调: 'Registro e integração de ferramentas de automação OpenClaw',
   'Jetson Orin NX + 离线语音管线': 'Jetson Orin NX + pipeline de voz offline',
-  'VAD→ASR→LLM→TTS纯本地闭环 · 零公网依赖':
+  'VAD→ASR→LLM→TTS纯本地全流程 · 零公网依赖':
     'Ciclo fechado puramente local VAD→ASR→LLM→TTS · zero dependência de rede pública',
   JetPack环境验证: 'Validação do ambiente JetPack',
   量化模型部署与显存调优: 'Deploy de modelo quantizado e otimizacao de memoria de video',
   断网联调与延迟优化: 'Integracao sem rede e otimizacao de latencia',
   '关键转折点 · 从云端协同到本地离线私有化部署':
     'Ponto de virada critico · da colaboracao em nuvem para o deploy privado local offline',
-  'SenseCraft AI云端方案解决「快速验证、到手就能用」；MCP桥接让业务数据第一次在局域网内闭环，核心库存与业务数据不出域；Jetson离线管线则彻底切断公网依赖，在强隐私与工业隔离网环境下实现零外网语音交互。':
+  'SenseCraft AI云端方案解决「快速验证、到手就能用」；MCP桥接让业务数据第一次在局域网内流转，核心库存与业务数据不出域；Jetson离线管线则彻底切断公网依赖，在强隐私与工业隔离网环境下实现零外网语音交互。':
     'A solução em nuvem SenseCraft AI resolve "validação rápida e pronto para uso"; a ponte MCP permite, pela primeira vez, que dados de negócios fechem ciclo na rede local, com dados centrais de estoque e negócios não saindo do domínio; o pipeline offline Jetson corta completamente a dependência de rede pública, implementando interação de voz sem internet em ambientes de forte privacidade e rede isolada industrial.',
   'L1/L2依赖互联网连接大模型服务；L3需100 TOPS级别边缘算力（Jetson Orin NX 16GB），RK3588-40（6 TOPS）无法承载本地大模型推理。':
     'L1/L2 dependem de conexão com internet para serviços de modelos de linguagem; L3 requer capacidade computacional de borda de nível 100 TOPS (Jetson Orin NX 16GB), o RK3588-40 (6 TOPS) não suporta inferência de modelos de linguagem locais.',
@@ -733,7 +733,7 @@ export const ptDict: Record<string, string> = {
     'Ambiente de execução Jetson e otimização de implantação de modelos',
   '验证JetPack/CUDA/TensorRT/PyTorch运行环境、部署ASR语音识别模型（Whisper/FunASR）、部署4-bit量化本地LLM（Qwen2.5-7B-Instruct）与TTS引擎（ChatTTS/Piper）、Watcher音频流定向至本地服务端口':
     'Validacao do ambiente de execucao JetPack/CUDA/TensorRT/PyTorch, deploy do modelo de reconhecimento de voz ASR (Whisper/FunASR), deploy do LLM local quantizado de 4-bit (Qwen2.5-7B-Instruct) e mecanismo TTS (ChatTTS/Piper), direcionamento do fluxo de audio do Watcher para a porta do servico local',
-  '物理断开外网连接验证局域网自闭环运行、测试各环节耗时、调优模型上下文长度与采样参数':
+  '物理断开外网连接验证局域网独立运行、测试各环节耗时、调优模型上下文长度与采样参数':
     'Validacao de operacao de ciclo fechado autonomo da rede local com desconexao fisica da internet, teste de tempo gasto em cada etapa, otimizacao do comprimento de contexto do modelo e parametros de amostragem',
   '各组成果展示与业务场景适配答辩、云端SaaS架构vs本地边缘计算架构成本与选型复盘、业务系统API扩展规范与标准化交付文档归档':
     'Apresentacao de resultados de cada grupo e defesa de adaptacao de cenario de negocios, revisao de custos e selecao entre arquitetura SaaS em nuvem vs arquitetura de computacao de borda local, normas de extensao de API de sistemas de negocios e arquivamento de documentos de entrega padronizados',
@@ -1566,9 +1566,9 @@ export const ptDict: Record<string, string> = {
   'Open API鉴权与遥测提取': 'Autenticação Open API e extração de telemetria',
   'Node-RED本地自动化编排': 'Orquestração de automação local Node-RED',
   'InfluxDB+Grafana私有化大屏': 'Painel grande privado InfluxDB+Grafana',
-  '关键转折点 · 从云端数据监视到本地边缘闭环控制':
+  '关键转折点 · 从云端数据监视到本地边缘联动控制':
     'Ponto de virada critico · do monitoramento de dados em nuvem para o controle de ciclo fechado de borda local',
-  'SenseCraft Data云端解决「数据能看见、告警能推送」的监视问题；SenseCAP Open API让系统第一次具备跨平台数据提取能力，Node-RED在reComputer边缘端实现「感知→阈值判断→执行机构联动」的就地闭环，从「环境监测」走向「数据集成与自动化控制」。':
+  'SenseCraft Data云端解决「数据能看见、告警能推送」的监视问题；SenseCAP Open API让系统第一次具备跨平台数据提取能力，Node-RED在reComputer边缘端实现「感知→阈值判断→执行机构联动」的就地控制，从「环境监测」走向「数据集成与自动化控制」。':
     'A nuvem SenseCraft Data resolve o problema de monitoramento de "dados visíveis, alertas entregues"; o SenseCAP Open API dá ao sistema, pela primeira vez, capacidade de extração de dados entre plataformas; o Node-RED no host de borda reComputer implementa o ciclo fechado local de "percepção → julgamento de limiar → vinculação com atuadores", evoluindo de "monitoramento ambiental" para "integração de dados e controle de automação".',
   '另需4G物联网SIM卡（承载蜂窝数据回传）、SenseCraft App（移动端设备绑定与告警推送）、InfluxDB时序数据库（L3私有化数据存储）。':
     'Requer adicionalmente chip SIM IoT 4G (para retorno de dados celular), SenseCraft App (vinculacao de dispositivo movel e push de alertas), banco de dados de serie temporal InfluxDB (armazenamento de dados privado L3).',
@@ -1681,7 +1681,7 @@ export const ptDict: Record<string, string> = {
     'Os sensores existentes dos seus clientes, as sondas ambientais na bancada de treinamento da escola, os dispositivos RS485 dos parceiros — podem ser conectados apos o modulo 06, tornando-se o pool de objetos para o exercicio de integracao Modbus. O M5 e responsavel por explicar o metodo a fundo; qual sensor conectar apos a porta, voce decide.',
   '你在行业里攒下的那些：野外布设经验、踩过的坑、能让学员瞬间理解LoRaWAN视距覆盖的那个比喻、客户现场最常问的三个问题——那正是我们没有、也给不了的部分。':
     'Aquilo que voce acumulou no setor: experiencia de implantacao em campo, armadilhas que enfrentou, a metafora que faz os alunos entenderem instantaneamente a cobertura de linha de visada LoRaWAN, as tres perguntas mais frequentes no local do cliente — isso e exatamente o que nao temos e nao podemos oferecer.',
-  '4G与LoRaWAN为两条独立交付路线，硬件不混用；环境数据属低频物联监测，不做毫秒级闭环控制。':
+  '4G与LoRaWAN为两条独立交付路线，硬件不混用；环境数据属低频物联监测，不做毫秒级实时控制。':
     '4G e LoRaWAN são duas rotas de entrega independentes, o hardware não é misturado; dados ambientais pertencem a monitoramento IoT de baixa frequência, não se faz controle de ciclo fechado em nível de milissegundos.',
   '多环境要素采集（土壤温湿度/EC、气象七参数、CO2、叶面温湿度、水质pH等）与广域分散点位监测':
     'Aquisição de multiplos elementos ambientais (temperatura/umidade do solo/EC, sete parametros meteorologicos, CO2, temperatura/umidade foliar, pH da agua etc.) e monitoramento de pontos dispersos em area ampla',
@@ -1699,7 +1699,7 @@ export const ptDict: Record<string, string> = {
     'Hardware 4G e LoRaWAN não se misturam: as duas rotas são kits de entrega independentes, o coletor 4G (114992169) e o gateway LoRaWAN (114992982)/nós S210x pertencem a pilhas de protocolos de comunicação diferentes, não é permitido misturar redes ou substituir hardware cruzadamente na mesma bancada de ensino',
   '数据主权与私有化部署边界：SenseCraft Data为云端SaaS平台，环境数据默认存储于Seeed云端；L3通过Open API提取数据至本地InfluxDB实现私有化存储，但原始数据仍先经云端中转，不提供纯离线/断网可用的本地化数据采集服务。私有化部署仅覆盖L3阶段的API拉取数据，不包含云端平台本身的私有化部署':
     'Limites de soberania de dados e deploy privado: SenseCraft Data e uma plataforma SaaS em nuvem, os dados ambientais sao armazenados por padrao na nuvem Seeed; o L3 extrai dados via Open API para o InfluxDB local para armazenamento privado, mas os dados originais ainda passam primeiro pela nuvem, nao e fornecido servico de aquisicao de dados localizavel puramente offline/sem rede. O deploy privado cobre apenas a extracao de dados por API na fase L3, nao inclui o deploy privado da propria plataforma em nuvem',
-  '不适用于毫秒级闭环运动控制：环境传感采样周期通常为1~60分钟（视现场功耗与电池策略配置），属于低频物联监测，不做高频伺服振动监测，不适用于毫秒级闭环运动控制或实时伺服系统':
+  '不适用于毫秒级实时运动控制：环境传感采样周期通常为1~60分钟（视现场功耗与电池策略配置），属于低频物联监测，不做高频伺服振动监测，不适用于毫秒级实时伺服系统':
     'Nao se aplica a controle de movimento de ciclo fechado em nivel de milissegundos: o periodo de amostragem de sensoriamento ambiental e tipicamente de 1 a 60 minutos (conforme configuracao de consumo e estrategia de bateria do local), pertence ao monitoramento IoT de baixa frequencia, nao se faz monitoramento de vibracao servo de alta frequencia, nao se aplica a controle de movimento de ciclo fechado em milissegundos nem a sistemas servo em tempo real',
   '严禁介入消防、电梯控制、高压配电等安全关键生命系统的监测与控制':
     'É estritamente proibida a intervenção no monitoramento e controle de sistemas de vida de segurança crítica como combate a incêndio, controle de elevadores e distribuição de alta tensão',
@@ -1768,7 +1768,7 @@ export const ptDict: Record<string, string> = {
     'Localização 3D com câmera de profundidade RGB-D e calibração mão-olho',
   Pinocchio逆运动学求解与异常处理:
     'Resolução de cinemática inversa com Pinocchio e tratamento de anomalias',
-  Motorbridge驱动真机空间抓取闭环:
+  Motorbridge驱动真机空间抓取流程:
     'Ciclo fechado de captura espacial no dispositivo real com driver Motorbridge',
   '遥操动作数据集采集（LeRobot标准）':
     'Aquisição de conjunto de dados de ações de teleoperação (padrão LeRobot)',
@@ -1802,7 +1802,7 @@ export const ptDict: Record<string, string> = {
     'Dominar a orquestração de fluxos de múltiplas ações SenseCraft e o mecanismo de confirmação de segurança "gerar → pré-visualização 3D → confirmação humana → execução no dispositivo real"',
   '掌握基于工位视觉的事件触发与微场景搭建，连续3次稳定运行':
     'Dominar o acionamento de eventos baseado em visão da estação e a construção de microcenários, com operação estável por 3 vezes consecutivas',
-  '3D空间抓取闭环与具身智能前瞻':
+  '3D空间抓取全流程与具身智能前瞻':
     'Ciclo fechado de captura em espaço 3D e perspectivas de inteligência embodied',
   '用深度相机取 3D 坐标，Python 驱动真机抓取':
     'Obtenha coordenadas 3D com uma câmera de profundidade e mova o braço real via Python',
@@ -1844,7 +1844,7 @@ export const ptDict: Record<string, string> = {
     'Hub de controle que executa cinemática do braço, serviços de controle e inferência de modelos de linguagem; JetPack 6.2 pré-instalado de fábrica, é necessário confirmar que o serviço SenseCraft Robotics e o ambiente Python (Pinocchio / Motorbridge SDK) estão prontos; alimentação por adaptador de alta potência 19V/4.7A.',
   '双目红外3D深度相机，Type-C接口':
     'Câmera de profundidade 3D infravermelha estéreo, interface Type-C',
-  '空间三维视觉引导，直接读取物体在空间中的三维物理坐标（X, Y, Z）实现空间闭环抓取；L3阶段需与机械臂基座坐标系完成手眼标定对齐，确保测出的坐标可被Pinocchio正确换算为关节角度。':
+  '空间三维视觉引导，直接读取物体在空间中的三维物理坐标（X, Y, Z）实现真机空间精准抓取；L3阶段需与机械臂基座坐标系完成手眼标定对齐，确保测出的坐标可被Pinocchio正确换算为关节角度。':
     'Guiamento visual tridimensional espacial, lê diretamente as coordenadas físicas tridimensionais (X, Y, Z) do objeto para captura com ciclo fechado espacial; na fase L3, requer calibração mão-olho alinhada ao sistema de coordenadas da base do braço, garantindo que as coordenadas medidas sejam convertidas corretamente em ângulos de junta pelo Pinocchio.',
   '奥比中光Gemini 2 3D相机': 'Câmera 3D Orbbec Gemini 2',
   工位图像采集端: 'Terminal de aquisição de imagem da estação de trabalho',
@@ -1862,7 +1862,7 @@ export const ptDict: Record<string, string> = {
   开箱连接: 'Desembalagem e conexão',
   '主从遥操/语音指令': 'Teleoperação mestre-escravo / comando de voz',
   多动作流程编排与安全确认: 'Orquestração de fluxos de múltiplas ações e confirmação de segurança',
-  '逆运动学解算 · 真机空间抓取闭环 · 异常处理与安全退回':
+  '逆运动学解算 · 真机空间抓取全流程 · 异常处理与安全退回':
     'Resolução de cinemática inversa · ciclo fechado de captura espacial no dispositivo real · tratamento de anomalias e retorno de segurança',
   深度相机3D定位: 'Posicionamento 3D por câmera de profundidade',
   Pinocchio逆运动学求解: 'Resolução de cinemática inversa com Pinocchio',
@@ -1914,7 +1914,7 @@ export const ptDict: Record<string, string> = {
   '奥比中光Gemini 2 / Python': 'Orbbec Gemini 2 / Python',
   'Python调用Pinocchio工具库、输入目标坐标自动计算6关节角度、超出工作范围/解算失败异常报警与安全退回':
     'Chamada Python da biblioteca Pinocchio, cálculo automático dos ângulos das 6 juntas a partir das coordenadas-alvo inseridas, alarme de anomalia e retorno de segurança quando fora do alcance de trabalho / falha na resolução',
-  Motorbridge真机驱动与端到端抓取闭环:
+  Motorbridge真机驱动与端到端抓取流程:
     'Driver de dispositivo real Motorbridge e ciclo fechado de captura ponta a ponta',
   'Python调用Motorbridge SDK驱动平滑运动与夹爪控制、整合全流程：深度相机检测→Pinocchio逆解→Motorbridge驱动抓取':
     'Chamada Python do Motorbridge SDK para acionar movimento suave e controle de garra, integração de todo o fluxo: detecção por câmera de profundidade → cinemática inversa Pinocchio → captura acionada por Motorbridge',
@@ -1929,7 +1929,7 @@ export const ptDict: Record<string, string> = {
     'Compreensão da arquitetura do modelo VLA (entrada de texto + imagem, saída de movimentos), carregamento de ativos 3D do braço robótico no Isaac Sim, colisão física virtual e controle por simulação, abordagem de desenvolvimento "primeiro simular, depois executar no dispositivo real"',
   '各组方案演练与配置评审、异常与失败案例复盘、演示线与工业产线工程差距总结（重复定位精度/连续运行可靠性/工业节拍/安全认证）、源码文档配置归档':
     'Demonstração e revisão de configuração das soluções de cada grupo, revisão de casos de anomalia e falha, resumo das lacunas de engenharia entre linha de demonstração e linha de produção industrial (precisão de posicionamento repetido / confiabilidade de operação contínua / ciclo industrial / certificação de segurança), arquivamento de código-fonte, documentação e configurações',
-  '体验课（taster）聚焦 L1 选型认知、安全规范与SenseCraft开箱遥操，不含视觉联动与3D抓取开发；实战课（workshop）覆盖 L1+L2 完整场景剖析、动作编排与工位视觉事件触发；交付课（bootcamp）全覆盖 L1+L2+L3，含确定性3D空间抓取闭环与具身智能前沿探索。':
+  '体验课（taster）聚焦 L1 选型认知、安全规范与SenseCraft开箱遥操，不含视觉联动与3D抓取开发；实战课（workshop）覆盖 L1+L2 完整场景剖析、动作编排与工位视觉事件触发；交付课（bootcamp）全覆盖 L1+L2+L3，含确定性3D空间精准抓取与具身智能前沿探索。':
     'A aula experimental (taster) foca no conhecimento de seleção L1, normas de segurança e teleoperação inicial SenseCraft, não incluindo vinculação visual nem desenvolvimento de captura 3D; a aula prática (workshop) cobre a análise completa de cenários L1+L2, orquestração de movimentos e acionamento de eventos visuais da estação; a aula de entrega (bootcamp) cobre totalmente L1+L2+L3, incluindo ciclo fechado de captura determinística em espaço 3D e exploração de fronteiras em inteligência embodied.',
   '1 天 · 6–8h · L1 展示层 · 聚焦选型认知、安全规范与SenseCraft开箱遥操':
     '1 dia · 6–8h · L1 camada de apresentação · foco em conhecimento de seleção, normas de segurança e teleoperação inicial SenseCraft',
@@ -1947,12 +1947,12 @@ export const ptDict: Record<string, string> = {
     'Cenários de aplicação e cálculo de ciclo → intuição espacial 3D → orquestração de movimentos e confirmação de segurança → vinculação de eventos visuais da estação',
   '实战课交付 1 套由工位视觉触发的微场景作业系统（连续 3 次稳定运行）。学员基础要求：掌握基础网络配置与系统联动概念。':
     'A aula prática entrega 1 sistema de trabalho de microcenário acionado por visão da estação (operação estável por 3 vezes consecutivas). Pré-requisitos do aluno: dominar conceitos básicos de configuração de rede e vinculação de sistemas.',
-  '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含确定性3D空间抓取闭环与具身智能前沿探索':
+  '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含确定性3D空间精准抓取与具身智能前沿探索':
     '3–5 dias · 24–35h · L1+L2+L3 · cobertura total incluindo ciclo fechado de captura determinística em espaço 3D e exploração de fronteiras em inteligência embodied',
   'L1+L2 完整内容（选型安全 + 遥操语音 + 场景编排 + 视觉联动）':
     'Conteúdo completo L1+L2 (segurança de seleção + voz por teleoperação + orquestração de cenários + vinculação visual)',
   '模块 10–12': 'Módulos 10–12',
-  '深度相机3D定位与手眼对齐 → Pinocchio逆运动学求解 → Motorbridge端到端抓取闭环':
+  '深度相机3D定位与手眼对齐 → Pinocchio逆运动学求解 → Motorbridge端到端抓取全流程':
     'Posicionamento 3D por câmera de profundidade e alinhamento mão-olho → resolução de cinemática inversa com Pinocchio → ciclo fechado de captura ponta a ponta com Motorbridge',
   '模块 13–14': 'Módulos 13–14',
   'LeRobot遥操动作数据集采集 → VLA具身大模型与Isaac Sim仿真初探':
@@ -1979,7 +1979,7 @@ export const ptDict: Record<string, string> = {
     'Inclui configuração de orquestração de fluxos de múltiplas ações, configuração do mecanismo de confirmação de segurança "gerar → pré-visualização 3D → confirmação humana → execução no dispositivo real", fluxo de vinculação de acionamento de eventos visuais da estação, registro de validação de operação estável do sistema de microcenários por 3 vezes consecutivas.',
   '3D空间自动抓取Python工程源码':
     'Código-fonte do projeto Python de captura automática em espaço 3D',
-  '含深度相机3D坐标读取模块、Pinocchio逆运动学求解与异常处理、Motorbridge SDK真机驱动与夹爪控制、端到端抓取闭环主程序（L3）。':
+  '含深度相机3D坐标读取模块、Pinocchio逆运动学求解与异常处理、Motorbridge SDK真机驱动与夹爪控制、端到端抓取全流程主程序（L3）。':
     'Inclui módulo de leitura de coordenadas 3D da câmera de profundidade, resolução de cinemática inversa com Pinocchio e tratamento de anomalias, driver de dispositivo real e controle de garra via Motorbridge SDK, programa principal de ciclo fechado de captura ponta a ponta (L3).',
   '含LeRobot标准格式动作数据集（关节角度+双机位视觉画面）、手眼标定参数记录、方案设计说明与交付验收记录（L3）。':
     'Inclui conjunto de dados de movimentos em formato padrão LeRobot (ângulos de junta + imagens visuais de câmeras duplas), registro de parâmetros de calibração mão-olho, descrição do projeto de solução e registro de aceite de entrega (L3).',

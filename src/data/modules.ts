@@ -331,7 +331,7 @@ export const modules: Module[] = [
           code: 'M0-A',
           title: '环境感知',
           hardware: 'Grove Beginner Kit',
-          body: '11 个模块一体式底板：OLED 屏、按键、旋钮、蜂鸣器、LED、光线／温湿度／气压／声音／加速度传感器。免焊接、免面包板。第一个「感知→逻辑→输出」闭环作品。',
+          body: '11 个模块一体式底板：OLED 屏、按键、旋钮、蜂鸣器、LED、光线／温湿度／气压／声音／加速度传感器。免焊接、免面包板。第一个「感知→逻辑→输出」联动作品。',
           image: '/illustrations/m0-kit-a.png',
           imageAlt: 'Grove Beginner Kit 一体式底板',
         },
@@ -435,7 +435,7 @@ export const modules: Module[] = [
             {
               title: 'Day 1 上午',
               meta: '模块 1 + 2',
-              body: '不可能挑战 → Grove 感知闭环 → 3 个小作品',
+              body: '不可能挑战 → Grove 感知链路打通 → 3 个小作品',
             },
             {
               title: 'Day 1 下午',
@@ -496,7 +496,7 @@ export const modules: Module[] = [
         {
           no: '02',
           title: 'Grove 进阶',
-          detail: '感知→逻辑→输出闭环 · AI 辅助编程 5 大法则',
+          detail: '感知→逻辑→输出完整链路 · AI 辅助编程 5 大法则',
           tool: 'Codecraft',
           coverage: {
             weekly: 'full',
@@ -566,7 +566,7 @@ export const modules: Module[] = [
         {
           no: '07',
           title: '原型 v1',
-          detail: 'MVP 拆解：最多 3 个功能，必须闭环',
+          detail: 'MVP 拆解：最多 3 个功能，全流程必须跑通',
           tool: 'Codecraft',
           coverage: {
             weekly: 'full',
@@ -1331,13 +1331,13 @@ export const modules: Module[] = [
         },
         {
           name: 'Jetson Orin NX + 离线语音管线',
-          meta: 'VAD→ASR→LLM→TTS纯本地闭环 · 零公网依赖',
+          meta: 'VAD→ASR→LLM→TTS纯本地全流程 · 零公网依赖',
           steps: ['JetPack环境验证', '量化模型部署与显存调优', '断网联调与延迟优化'],
         },
       ],
       hinge: {
         title: '关键转折点 · 从云端协同到本地离线私有化部署',
-        body: 'SenseCraft AI云端方案解决「快速验证、到手就能用」；MCP桥接让业务数据第一次在局域网内闭环，核心库存与业务数据不出域；Jetson离线管线则彻底切断公网依赖，在强隐私与工业隔离网环境下实现零外网语音交互。',
+        body: 'SenseCraft AI云端方案解决「快速验证、到手就能用」；MCP桥接让业务数据第一次在局域网内流转，核心库存与业务数据不出域；Jetson离线管线则彻底切断公网依赖，在强隐私与工业隔离网环境下实现零外网语音交互。',
       },
       note: 'L1/L2依赖互联网连接大模型服务；L3需100 TOPS级别边缘算力（Jetson Orin NX 16GB），RK3588-40（6 TOPS）无法承载本地大模型推理。',
     },
@@ -1452,7 +1452,7 @@ export const modules: Module[] = [
           no: '14',
           title: '断网联调与延迟优化',
           detail:
-            '物理断开外网连接验证局域网自闭环运行、测试各环节耗时、调优模型上下文长度与采样参数',
+            '物理断开外网连接验证局域网独立运行、测试各环节耗时、调优模型上下文长度与采样参数',
           tool: '—',
           coverage: { taster: 'none', workshop: 'none', bootcamp: 'full' },
         },
@@ -2883,8 +2883,8 @@ export const modules: Module[] = [
         },
       ],
       hinge: {
-        title: '关键转折点 · 从云端数据监视到本地边缘闭环控制',
-        body: 'SenseCraft Data云端解决「数据能看见、告警能推送」的监视问题；SenseCAP Open API让系统第一次具备跨平台数据提取能力，Node-RED在reComputer边缘端实现「感知→阈值判断→执行机构联动」的就地闭环，从「环境监测」走向「数据集成与自动化控制」。',
+        title: '关键转折点 · 从云端数据监视到本地边缘联动控制',
+        body: 'SenseCraft Data云端解决「数据能看见、告警能推送」的监视问题；SenseCAP Open API让系统第一次具备跨平台数据提取能力，Node-RED在reComputer边缘端实现「感知→阈值判断→执行机构联动」的就地控制，从「环境监测」走向「数据集成与自动化控制」。',
       },
       note: '另需4G物联网SIM卡（承载蜂窝数据回传）、SenseCraft App（移动端设备绑定与告警推送）、InfluxDB时序数据库（L3私有化数据存储）。',
     },
@@ -3163,7 +3163,7 @@ export const modules: Module[] = [
 
     complianceBoundary: {
       principles: [
-        '4G与LoRaWAN为两条独立交付路线，硬件不混用；环境数据属低频物联监测，不做毫秒级闭环控制。',
+        '4G与LoRaWAN为两条独立交付路线，硬件不混用；环境数据属低频物联监测，不做毫秒级实时控制。',
       ],
       applicable: [
         '多环境要素采集（土壤温湿度/EC、气象七参数、CO2、叶面温湿度、水质pH等）与广域分散点位监测',
@@ -3176,7 +3176,7 @@ export const modules: Module[] = [
       notApplicable: [
         '4G与LoRaWAN硬件不混用：两条路线为独立交付套件，4G采集器（114992169）与LoRaWAN网关（114992982）/S210x节点分属不同通信协议栈，不得在同一套教学台架中混合组网或交叉替换硬件',
         '数据主权与私有化部署边界：SenseCraft Data为云端SaaS平台，环境数据默认存储于Seeed云端；L3通过Open API提取数据至本地InfluxDB实现私有化存储，但原始数据仍先经云端中转，不提供纯离线/断网可用的本地化数据采集服务。私有化部署仅覆盖L3阶段的API拉取数据，不包含云端平台本身的私有化部署',
-        '不适用于毫秒级闭环运动控制：环境传感采样周期通常为1~60分钟（视现场功耗与电池策略配置），属于低频物联监测，不做高频伺服振动监测，不适用于毫秒级闭环运动控制或实时伺服系统',
+        '不适用于毫秒级实时运动控制：环境传感采样周期通常为1~60分钟（视现场功耗与电池策略配置），属于低频物联监测，不做高频伺服振动监测，不适用于毫秒级实时伺服系统',
         '严禁介入消防、电梯控制、高压配电等安全关键生命系统的监测与控制',
         '不包含大面积土木施工与高空防雷工程实施',
         '不包含对未开放协议的第三方老旧传感器的协议破解服务',
@@ -3242,7 +3242,7 @@ export const modules: Module[] = [
       '工位视觉事件触发与微场景联调',
       'RGB-D深度相机3D定位与手眼对齐',
       'Pinocchio逆运动学求解与异常处理',
-      'Motorbridge驱动真机空间抓取闭环',
+      'Motorbridge驱动真机空间抓取流程',
       '遥操动作数据集采集（LeRobot标准）',
       'VLA具身大模型与Isaac Sim数字孪生初探',
     ],
@@ -3282,7 +3282,7 @@ export const modules: Module[] = [
         comingSoon: false,
       },
       L3: {
-        title: '3D空间抓取闭环与具身智能前瞻',
+        title: '3D空间抓取全流程与具身智能前瞻',
         subtitle: '用深度相机取 3D 坐标，Python 驱动真机抓取',
         durationDays: 5,
         outcomes: [
@@ -3347,7 +3347,7 @@ export const modules: Module[] = [
           name: '奥比中光Gemini 2 3D相机（101090144）',
           note: '双目红外3D深度相机，Type-C接口',
           description:
-            '空间三维视觉引导，直接读取物体在空间中的三维物理坐标（X, Y, Z）实现空间闭环抓取；L3阶段需与机械臂基座坐标系完成手眼标定对齐，确保测出的坐标可被Pinocchio正确换算为关节角度。',
+            '空间三维视觉引导，直接读取物体在空间中的三维物理坐标（X, Y, Z）实现真机空间精准抓取；L3阶段需与机械臂基座坐标系完成手眼标定对齐，确保测出的坐标可被Pinocchio正确换算为关节角度。',
           image: '/illustrations/m6-gemini-2-depth-camera.png',
           imageAlt: '奥比中光Gemini 2 3D相机',
         },
@@ -3381,7 +3381,7 @@ export const modules: Module[] = [
         },
         {
           name: 'Python + Pinocchio + Motorbridge SDK',
-          meta: '逆运动学解算 · 真机空间抓取闭环 · 异常处理与安全退回',
+          meta: '逆运动学解算 · 真机空间抓取全流程 · 异常处理与安全退回',
           steps: ['深度相机3D定位', 'Pinocchio逆运动学求解', 'Motorbridge驱动真机抓取'],
           highlight: true,
         },
@@ -3490,7 +3490,7 @@ export const modules: Module[] = [
         },
         {
           no: '12',
-          title: 'Motorbridge真机驱动与端到端抓取闭环',
+          title: 'Motorbridge真机驱动与端到端抓取流程',
           detail:
             'Python调用Motorbridge SDK驱动平滑运动与夹爪控制、整合全流程：深度相机检测→Pinocchio逆解→Motorbridge驱动抓取',
           tool: 'Python / Motorbridge SDK',
@@ -3522,7 +3522,7 @@ export const modules: Module[] = [
         },
       ],
       callout:
-        '体验课（taster）聚焦 L1 选型认知、安全规范与SenseCraft开箱遥操，不含视觉联动与3D抓取开发；实战课（workshop）覆盖 L1+L2 完整场景剖析、动作编排与工位视觉事件触发；交付课（bootcamp）全覆盖 L1+L2+L3，含确定性3D空间抓取闭环与具身智能前沿探索。',
+        '体验课（taster）聚焦 L1 选型认知、安全规范与SenseCraft开箱遥操，不含视觉联动与3D抓取开发；实战课（workshop）覆盖 L1+L2 完整场景剖析、动作编排与工位视觉事件触发；交付课（bootcamp）全覆盖 L1+L2+L3，含确定性3D空间精准抓取与具身智能前沿探索。',
     },
 
     formats: {
@@ -3595,7 +3595,7 @@ export const modules: Module[] = [
         {
           title: '交付课',
           finalProject: { label: '含结课项目', included: true },
-          summary: '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含确定性3D空间抓取闭环与具身智能前沿探索',
+          summary: '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含确定性3D空间精准抓取与具身智能前沿探索',
           rows: [
             {
               title: 'Day 1–2',
@@ -3605,7 +3605,7 @@ export const modules: Module[] = [
             {
               title: 'Day 3',
               meta: '模块 10–12',
-              body: '深度相机3D定位与手眼对齐 → Pinocchio逆运动学求解 → Motorbridge端到端抓取闭环',
+              body: '深度相机3D定位与手眼对齐 → Pinocchio逆运动学求解 → Motorbridge端到端抓取全流程',
             },
             {
               title: 'Day 4',
@@ -3647,7 +3647,7 @@ export const modules: Module[] = [
       },
       {
         title: '3D空间自动抓取Python工程源码',
-        body: '含深度相机3D坐标读取模块、Pinocchio逆运动学求解与异常处理、Motorbridge SDK真机驱动与夹爪控制、端到端抓取闭环主程序（L3）。',
+        body: '含深度相机3D坐标读取模块、Pinocchio逆运动学求解与异常处理、Motorbridge SDK真机驱动与夹爪控制、端到端抓取全流程主程序（L3）。',
       },
       {
         title: '遥操动作数据集样本与方案设计交付文档',
