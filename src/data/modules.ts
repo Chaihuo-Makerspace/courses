@@ -2170,13 +2170,13 @@ export const modules: Module[] = [
       '基于轻量边缘摄像头与工业级多路 AI 计算主机，构建目标检测、区域入侵告警与自动化联动的边缘视觉方案。',
     oneLinerEmphasis: '目标检测、区域入侵告警与自动化联动',
     realProblem:
-      '传统监控仅能事后录像回溯，无法在风险发生瞬间产生结构化告警；移动侦测受光线变化、雨雪晃动干扰严重，误报率高。视觉 AI 定制开发周期长、需专门算法工程师与专用服务机架，方案商难以权衡单点嵌入式设备与多路集中服务器的性能与成本。',
+      '传统监控大多只能事后调录像回溯，风险发生的当下给不出结构化告警；普通移动侦测又受光线变化、雨雪晃动干扰严重，误报率高。视觉 AI 定制开发周期长，往往需要专门算法工程师与专用服务机架，方案商很难在单点嵌入式设备与多路集中服务器之间权衡性能与成本。',
     illustration: '/illustrations/m4.svg',
     heroImage: '/illustrations/m4-recamera-poe.png',
     difficulty: '高级',
     duration: 'L1 1 天 / L2 2–3 天 / L3 3–5 天',
     prerequisite:
-      'L1 具备基础网络与浏览器操作经验，能连接 Wi-Fi 与访问 Web 界面；L2 理解 IP 网络、Docker 与 MQTT 基础，能编辑 YAML 配置文件；L3 具备 Python 与 Linux 命令行基础，了解目标检测基本原理',
+      'L1 适合具备基础网络与浏览器操作经验、能连接 Wi-Fi 与访问 Web 界面的学员；L2 需理解 IP 网络、Docker 与 MQTT 基础，能编辑 YAML 配置文件；L3 需具备 Python 与 Linux 命令行基础，了解目标检测基本原理',
     scenarios: [
       '物业与园区安防：周界防范、人员越界告警、夜间异常驻留检测',
       '工业制造与安全生产：未佩戴安全帽/反光衣检测、危险区域人员闯入、输送带状态监控',
@@ -2217,7 +2217,7 @@ export const modules: Module[] = [
       '搭建 Frigate 多路 RTSP 汇聚与 NVR 录像管理',
       '配置检测区域（Zones）与置信度阈值调优',
       '集成 Home Assistant 跨系统自动化联动',
-      '训练 YOLO 自定义模型并完成 TensorRT/cvimodel 量化部署',
+      '训练 YOLO 自定义模型并完成 TensorRT / cvimodel 量化部署',
     ],
     audience: [
       '物业园区安防与运维工程师',
@@ -2351,20 +2351,20 @@ export const modules: Module[] = [
           imageAlt: '8+2 口千兆 PoE 工业交换机',
         },
       ],
-      note: '另配CUDY AX3000 Wi-Fi 6千兆路由器、迷你三脚架×3（114993412）、便携式13.3" 1080P现场显示器（含mini HDMI与Type-C线）、六类千兆网线×4（1m）、公牛3位五孔+3×USB供电排插、场景模拟物料包（安全帽/反光背心标贴、测试工件模型）。',
+      note: '另配 CUDY AX3000 Wi-Fi 6 千兆路由器、迷你三脚架 × 3（114993412）、便携式 13.3" 1080P 现场显示器（含 mini HDMI 与 Type-C 线）、六类千兆网线 × 4（1m）、公牛 3 位五孔 + 3×USB 供电排插、场景模拟物料包（安全帽 / 反光背心标贴、测试工件模型）。',
     },
 
     toolchain: {
       stages: [
         {
           name: 'reCamera + Node-RED',
-          meta: '端侧NPU推理 + 零代码编排 · RTSP/MQTT',
+          meta: '端侧 NPU 推理 + 零代码编排 · RTSP / MQTT',
           steps: ['设备上电联网', 'RTSP视频流输出', '预置模型目标检测', 'Node-RED事件联动'],
           highlight: true,
         },
         {
           name: 'Frigate NVR + Home Assistant',
-          meta: '多路RTSP硬件解码 + 区域检测 + MQTT告警',
+          meta: '多路 RTSP 硬件解码 + 区域检测 + MQTT 告警',
           steps: ['多路RTSP接入', 'Zones/Masks配置', '置信度阈值调优', 'HA自动化联动'],
         },
         {
@@ -2380,10 +2380,10 @@ export const modules: Module[] = [
         },
       ],
       hinge: {
-        title: '关键转折点 · 从单点端侧推理到多路集中NVR汇聚',
-        body: 'reCamera解决单点位即插即用的端侧检测与就地联动；Frigate+Jetson让系统第一次具备多路视频流汇聚、统一区域规则与跨系统告警的能力，从「单点感知」走向「多路集中分析」。',
+        title: '关键转折点 · 从单点端侧推理到多路集中 NVR 汇聚',
+        body: 'reCamera 负责单点位即插即用的端侧检测与就地联动；Frigate 与 Jetson 则提供多路视频流汇聚、统一区域规则设定与跨系统告警输出，实现多机位的集中分析。',
       },
-      note: '另需Mosquitto MQTT Broker（承载结构化告警事件，1883端口）、InfluxDB+Grafana（L3检测统计与时序看板）、CVAT/Roboflow（L3数据集标注平台）。',
+      note: '另需 Mosquitto MQTT Broker（承载结构化告警事件，1883 端口）、InfluxDB + Grafana（L3 检测统计与时序看板）、CVAT / Roboflow（L3 数据集标注平台）。',
     },
 
     curriculum: {
@@ -2398,7 +2398,7 @@ export const modules: Module[] = [
         },
         {
           no: '02',
-          title: '视觉AI核心概念与双主线架构',
+          title: '视觉 AI 核心概念与双主线架构',
           detail:
             '帧率FPS、分辨率、置信度阈值、IoU交并比；reCamera轻节点与Jetson强节点技术指标、成本与适用边界对比',
           tool: '—',
@@ -2406,7 +2406,7 @@ export const modules: Module[] = [
         },
         {
           no: '03',
-          title: 'reCamera单点轻节点配置',
+          title: 'reCamera 单点轻节点配置',
           detail:
             '上电联网（2002w Wi-Fi/AP、2002百兆有线、HQ PoE交换机供电）、Web界面访问、RTSP视频流验证（554端口）、预置模型切换',
           tool: 'reCamera Web UI',
@@ -2421,7 +2421,7 @@ export const modules: Module[] = [
         },
         {
           no: '05',
-          title: 'Jetson多路NVR架构演示',
+          title: 'Jetson 多路 NVR 架构演示',
           detail:
             'Frigate多路RTSP接入与GPU硬件解码展示、目标检测与录像管理、检测到入侵→MQTT推送→声光报警联动演示',
           tool: 'Frigate NVR',
@@ -2429,7 +2429,7 @@ export const modules: Module[] = [
         },
         {
           no: '06',
-          title: 'Node-RED视觉事件编排',
+          title: 'Node-RED 视觉事件编排',
           detail:
             'SSCMA模型节点配置、置信度过滤与目标类型过滤、Dashboard实时画面与告警状态仪表盘搭建',
           tool: 'Node-RED / SSCMA',
@@ -2444,7 +2444,7 @@ export const modules: Module[] = [
         },
         {
           no: '08',
-          title: 'Frigate多路摄像头配置',
+          title: 'Frigate 多路摄像头配置',
           detail:
             'frigate.yml配置结构解析、多台reCamera RTSP地址添加、检测帧率配置（5–10FPS）、Zones与Masks定义',
           tool: 'Frigate / YAML',
@@ -2452,7 +2452,7 @@ export const modules: Module[] = [
         },
         {
           no: '09',
-          title: 'Home Assistant深度集成',
+          title: 'Home Assistant 深度集成',
           detail:
             'Frigate HA集成插件安装配置、摄像头实体与传感器状态映射、基于时间段与区域入侵的自动化YAML脚本编写',
           tool: 'Home Assistant / YAML',
@@ -2476,7 +2476,7 @@ export const modules: Module[] = [
         },
         {
           no: '12',
-          title: 'YOLO模型迁移学习',
+          title: 'YOLO 模型迁移学习',
           detail:
             'YOLO目标检测原理与骨干网络解析、PyTorch训练环境与预训练权重配置、Loss收敛曲线与mAP@0.5指标监控',
           tool: 'YOLO / PyTorch',
@@ -2508,7 +2508,7 @@ export const modules: Module[] = [
         },
       ],
       callout:
-        '体验课（taster）聚焦 L1 双线体验与基础配置，Jetson NVR为演示观摩不含实操；实战课（workshop）覆盖 L1+L2 完整Node-RED联动与Frigate多路汇聚；交付课（bootcamp）全覆盖 L1+L2+L3 含自定义模型训练与边缘部署。',
+        '体验课（taster）聚焦 L1 双线体验与基础配置，Jetson NVR 为演示观摩不含实操；实战课（workshop）覆盖 L1+L2 完整 Node-RED 联动与 Frigate 多路汇聚；交付课（bootcamp）全覆盖 L1+L2+L3 含自定义模型训练与边缘部署。',
     },
 
     formats: {
@@ -2539,41 +2539,41 @@ export const modules: Module[] = [
         {
           title: '体验课',
           finalProject: { label: '不含结课项目', included: false },
-          summary: '1 天 · 6–8h · L1 展示层 · 聚焦reCamera单点配置与双主线架构认知',
+          summary: '1 天 · 6–8h · L1 展示层 · 聚焦 reCamera 单点配置与双主线架构认知',
           rows: [
             {
               title: 'Day 1 上午',
               meta: '模块 01 + 02 + 03',
-              body: '环境预检 → 视觉AI核心概念 → reCamera单点轻节点配置',
+              body: '环境预检 → 视觉 AI 核心概念 → reCamera 单点轻节点配置',
             },
             {
               title: 'Day 1 下午',
               meta: '模块 04 + 05(演示) + 15(精简)',
-              body: '基础入侵检测 → Jetson NVR架构演示 → 总结复盘',
+              body: '基础入侵检测 → Jetson NVR 架构演示 → 总结复盘',
             },
           ],
-          footnote: 'Jetson多路NVR为观摩演示，不含实操。',
+          footnote: 'Jetson 多路 NVR 为观摩演示，不含实操。',
         },
         {
           title: '实战课',
           finalProject: { label: '含结课项目', included: true },
           summary:
-            '2–3 天 · 14–20h · L1+L2 · Node-RED告警联动 + Frigate多路汇聚 + HA自动化 + 误报调优',
+            '2–3 天 · 14–20h · L1+L2 · Node-RED 告警联动 + Frigate 多路汇聚 + HA 自动化 + 误报调优',
           rows: [
             {
               title: 'Day 1',
               meta: '模块 01–05',
-              body: '环境预检 → 视觉概念 → reCamera配置 → 基础检测 → Jetson NVR演示',
+              body: '环境预检 → 视觉概念 → reCamera 配置 → 基础检测 → Jetson NVR 演示',
             },
             {
               title: 'Day 2',
               meta: '模块 06–08',
-              body: 'Node-RED视觉事件编排 → 多通道告警联动 → Frigate多路摄像头配置',
+              body: 'Node-RED 视觉事件编排 → 多通道告警联动 → Frigate 多路摄像头配置',
             },
             {
               title: 'Day 3（可选）',
               meta: '模块 09 + 10 + 15',
-              body: 'HA深度集成 → 误报率调优实操 → 方案复盘与交付总结',
+              body: 'HA 深度集成 → 误报率调优实操 → 方案复盘与交付总结',
             },
           ],
           footnote:
@@ -2587,12 +2587,12 @@ export const modules: Module[] = [
             {
               title: 'Day 1–2',
               meta: '模块 01–10',
-              body: 'L1+L2 完整内容（reCamera配置 + Node-RED联动 + Frigate多路汇聚 + HA集成 + 误报调优）',
+              body: 'L1+L2 完整内容（reCamera 配置 + Node-RED 联动 + Frigate 多路汇聚 + HA 集成 + 误报调优）',
             },
             {
               title: 'Day 3',
               meta: '模块 11 + 12',
-              body: '数据集采集与标注 → YOLO模型迁移学习',
+              body: '数据集采集与标注 → YOLO 模型迁移学习',
             },
             {
               title: 'Day 4',
@@ -2654,7 +2654,7 @@ export const modules: Module[] = [
       heading: '让视觉模型走出实验室，去应对真实光照与误报',
       emphasis: '应对真实光照与误报',
       intro:
-        'M4 跳出实验室算法刷点模式，专注边缘摄像头部署、端侧 NPU 推理、多路视频流汇聚与误报调优等交付全流程。课程提供由浅入深的实操台架，讲师可依据实训时长在轻量端侧方案与多路集中分析架构间灵活选型。',
+        'M4 不走纯算法跑分和实验室评测的路线，而是带学员做实地摄像头部署、端侧 NPU 推理、多路视频流汇聚以及工程现场的误报调优。实操台架按模块化设计，讲师可以根据课时在单机轻量方案和多路集中分析架构之间灵活组合。',
       openings: [
         {
           no: '切入点 01',
@@ -2669,7 +2669,7 @@ export const modules: Module[] = [
         {
           no: '切入点 03',
           title: '融入工程经验',
-          body: '引入现场常见的光照剧变、树枝晃动、反光干扰等真实工况，指导学员调试置信度阈值与遮罩区域，掌握工程化避坑手段。',
+          body: '把现场常见的光照突变、树影晃动、反光干扰等真实工况引入实训，带着学员调试置信度阈值和遮罩区域（Masks），掌握排除误报的工程方法。',
         },
       ],
     },

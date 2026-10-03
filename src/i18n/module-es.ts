@@ -1124,14 +1124,14 @@ export const esDict: Record<string, string> = {
   '让摄像头在事件发生时就告警：目标检测、区域入侵、联动声光。不做人脸识别。':
     'Las cámaras avisan en el momento en que ocurre algo: detección de objetos, intrusión en zonas y alarmas luminosas y sonoras vinculadas. Sin reconocimiento facial.',
   '基于轻量边缘摄像头与工业级多路 AI 计算主机，构建目标检测、区域入侵告警与自动化联动的边缘视觉方案。':
-    'Basado en cámaras ligeras de borde y hosts de cómputo de IA multicanal de grado industrial, construye una solución de visión en el borde con detección de objetos, alertas de intrusión en zona y vinculación automatizada.',
+    'Basado en cámaras ligeras de borde y servidores industriales de IA multicanal, construye soluciones de visión en el borde con detección de objetos, alertas de intrusión en zona y vinculación automatizada.',
   '目标检测、区域入侵告警与自动化联动':
-    'Deteccion de objetos, alertas de invasion de zona y vinculacion de automatizacion',
-  '传统监控仅能事后录像回溯，无法在风险发生瞬间产生结构化告警；移动侦测受光线变化、雨雪晃动干扰严重，误报率高。视觉 AI 定制开发周期长、需专门算法工程师与专用服务机架，方案商难以权衡单点嵌入式设备与多路集中服务器的性能与成本。':
-    'La videovigilancia tradicional solo permite revisar grabaciones después del evento, sin poder generar alertas estructuradas en el instante en que ocurre el riesgo; la detección de movimiento se ve gravemente afectada por cambios de iluminación y agitación por lluvia/nieve, con altas tasas de falsas alarmas. El desarrollo personalizado de visión por IA tiene ciclos largos, requiere ingenieros de algoritmos especializados y racks de servidores dedicados, y a los proveedores de soluciones les cuesta equilibrar el rendimiento y costo entre dispositivos embebidos de un solo punto y servidores centralizados multicanal.',
+    'detección de objetos, alertas de intrusión en zona y vinculación automatizada',
+  '传统监控大多只能事后调录像回溯，风险发生的当下给不出结构化告警；普通移动侦测又受光线变化、雨雪晃动干扰严重，误报率高。视觉 AI 定制开发周期长，往往需要专门算法工程师与专用服务机架，方案商很难在单点嵌入式设备与多路集中服务器之间权衡性能与成本。':
+    'La videovigilancia tradicional suele limitarse a la reproducción forense y no genera alertas estructuradas en tiempo real; la detección de movimiento convencional genera falsas alarmas por cambios de luz o lluvia. Desarrollar IA visual a medida implica ciclos largos, ingenieros especializados y racks dedicados, dificultando equilibrar rendimiento y costes entre nodos embebidos y servidores centralizados.',
   高级: 'Avanzado',
-  'L1 具备基础网络与浏览器操作经验，能连接 Wi-Fi 与访问 Web 界面；L2 理解 IP 网络、Docker 与 MQTT 基础，能编辑 YAML 配置文件；L3 具备 Python 与 Linux 命令行基础，了解目标检测基本原理':
-    'L1 tiene experiencia básica en redes y operaciones de navegador, puede conectarse a Wi-Fi y acceder a interfaces Web; L2 entiende redes IP, Docker y conceptos básicos de MQTT, puede editar archivos de configuración YAML; L3 tiene base en Python y línea de comandos Linux, conoce los principios básicos de detección de objetos',
+  'L1 适合具备基础网络与浏览器操作经验、能连接 Wi-Fi 与访问 Web 界面的学员；L2 需理解 IP 网络、Docker 与 MQTT 基础，能编辑 YAML 配置文件；L3 需具备 Python 与 Linux 命令行基础，了解目标检测基本原理':
+    'L1 adecuado para quienes tienen manejo básico de redes y navegadores (conectar Wi-Fi y acceder a interfaces web); L2 requiere entender redes IP, Docker y MQTT, y editar archivos YAML; L3 exige conocimientos de Python, terminal Linux y fundamentos de detección de objetos',
   '物业与园区安防：周界防范、人员越界告警、夜间异常驻留检测':
     'Seguridad de propiedades y campus: protección perimetral, alertas de cruce de límites por personas, detección de permanencia anómala nocturna',
   '工业制造与安全生产：未佩戴安全帽/反光衣检测、危险区域人员闯入、输送带状态监控':
@@ -1165,8 +1165,8 @@ export const esDict: Record<string, string> = {
     'Configurar zonas de detección (Zones) y optimización de umbrales de confianza',
   '集成 Home Assistant 跨系统自动化联动':
     'Integrar vinculación automatizada entre sistemas con Home Assistant',
-  '训练 YOLO 自定义模型并完成 TensorRT/cvimodel 量化部署':
-    'Entrenar modelos personalizados YOLO y completar el despliegue cuantizado TensorRT/cvimodel',
+  '训练 YOLO 自定义模型并完成 TensorRT / cvimodel 量化部署':
+    'Entrenar modelos YOLO a medida y desplegarlos con cuantización en TensorRT / cvimodel',
   物业园区安防与运维工程师: 'Ingenieros de seguridad y operaciones de campus y propiedades',
   工业制造安全生产管理人员: 'Personal de gestión de seguridad en fabricación industrial',
   智慧商业与客流分析从业者: 'Profesionales de comercio inteligente y análisis de tráfico',
@@ -1259,16 +1259,16 @@ export const esDict: Record<string, string> = {
   '8+2 口千兆 PoE 交换机，符合 802.3af/at 标准。为 PoE 相机供电并汇聚局域网流量，适用于多路 reCamera HQ PoE 集中部署与 Frigate NVR 汇聚场景。':
     'Conmutador PoE gigabit de 8+2 puertos, cumple con el estándar 802.3af/at. Alimenta las cámaras PoE y agrega el tráfico de la red local,adecuado para el desplieguecentralizado de múltiples reCamera HQ PoE y los escenarios de agregación Frigate NVR.',
   '8+2 口千兆 PoE 工业交换机': 'Conmutador industrial PoE gigabit de 8+2 puertos',
-  '另配CUDY AX3000 Wi-Fi 6千兆路由器、迷你三脚架×3（114993412）、便携式13.3" 1080P现场显示器（含mini HDMI与Type-C线）、六类千兆网线×4（1m）、公牛3位五孔+3×USB供电排插、场景模拟物料包（安全帽/反光背心标贴、测试工件模型）。':
-    'Adicionalmente se incluyen router gigabit CUDY AX3000 Wi-Fi 6, tripodes mini x3 (114993412), monitor portatil de sitio 13.3" 1080P (con cable mini HDMI y Type-C), cables de red gigabit categoria 6 x4 (1m), regleta de alimentacion Bull de 3 tomas de cinco pines + 3xUSB, paquete de materiales de simulacion de escenario (etiquetas de casco de seguridad/chaleco reflectante, modelos de piezas de prueba).',
-  '端侧NPU推理 + 零代码编排 · RTSP/MQTT':
-    'Inferencia NPU en dispositivo + orquestacion sin codigo · RTSP/MQTT',
+  '另配 CUDY AX3000 Wi-Fi 6 千兆路由器、迷你三脚架 × 3（114993412）、便携式 13.3" 1080P 现场显示器（含 mini HDMI 与 Type-C 线）、六类千兆网线 × 4（1m）、公牛 3 位五孔 + 3×USB 供电排插、场景模拟物料包（安全帽 / 反光背心标贴、测试工件模型）。':
+    'Incluye además router gigabit Wi-Fi 6 CUDY AX3000, minitrípode × 3 (114993412), pantalla portátil de 13,3" 1080P (con cables mini HDMI y Type-C), 4 cables de red Cat6 (1 m), regleta de enchufes y paquete de simulación (adhesivos de casco / chaleco reflectante y modelos de piezas de prueba).',
+  '端侧 NPU 推理 + 零代码编排 · RTSP / MQTT':
+    'Inferencia en NPU de borde + flujos sin código · RTSP / MQTT',
   设备上电联网: 'Encendido y conexion a red de dispositivos',
   RTSP视频流输出: 'Salida de flujo de video RTSP',
   预置模型目标检测: 'Detección de Objetos con Modelo Pre-entrenado',
   'Node-RED事件联动': 'Vinculación de eventos Node-RED',
-  '多路RTSP硬件解码 + 区域检测 + MQTT告警':
-    'Decodificación de hardware RTSP multicanal + detección por zonas + alertas MQTT',
+  '多路 RTSP 硬件解码 + 区域检测 + MQTT 告警':
+    'Decodificación hardware de múltiples RTSP + detección de zona + alertas MQTT',
   多路RTSP接入: 'Acceso RTSP multicanal',
   'Zones/Masks配置': 'Configuración Zones/Masks',
   置信度阈值调优: 'Optimizacion de umbrales de confianza',
@@ -1280,37 +1280,36 @@ export const esDict: Record<string, string> = {
   ONNX导出: 'Exportación ONNX',
   'TensorRT/cvimodel量化': 'Cuantización TensorRT/cvimodel',
   边缘端实跑: 'Ejecucion real en el borde',
-  '关键转折点 · 从单点端侧推理到多路集中NVR汇聚':
-    'Punto de inflexión clave · de la inferencia en dispositivo de un solo punto a la agregación NVR centralizada multicanal',
-  'reCamera解决单点位即插即用的端侧检测与就地联动；Frigate+Jetson让系统第一次具备多路视频流汇聚、统一区域规则与跨系统告警的能力，从「单点感知」走向「多路集中分析」。':
-    'reCamera resuelve la detección en dispositivo y la vinculación local plug-and-play de un solo punto; Frigate+Jetson dota al sistema por primera vez de capacidad de agregación de flujos de video multicanal, reglas de zona unificadas y alertas entre sistemas, pasando de «percepción de un solo punto» a «análisis centralizado multicanal».',
-  '另需Mosquitto MQTT Broker（承载结构化告警事件，1883端口）、InfluxDB+Grafana（L3检测统计与时序看板）、CVAT/Roboflow（L3数据集标注平台）。':
-    'Se requieren adicionalmente Mosquitto MQTT Broker (para eventos de alerta estructurados, puerto 1883), InfluxDB+Grafana (para estadísticas de detección y panel de series temporales L3) y CVAT/Roboflow (plataforma de anotación de conjuntos de datos L3).',
+  '关键转折点 · 从单点端侧推理到多路集中 NVR 汇聚':
+    'Punto de inflexión clave · De inferencia en el borde local a agregación NVR multicanal centralizada',
+  'reCamera 负责单点位即插即用的端侧检测与就地联动；Frigate 与 Jetson 则提供多路视频流汇聚、统一区域规则设定与跨系统告警输出，实现多机位的集中分析。':
+    'reCamera resuelve la detección plug-and-play y la vinculación local en puntos aislados; Frigate y Jetson aportan agregación de múltiples flujos de vídeo, reglas de zona unificadas y alertas entre sistemas para un análisis centralizado.',
+  '另需 Mosquitto MQTT Broker（承载结构化告警事件，1883 端口）、InfluxDB + Grafana（L3 检测统计与时序看板）、CVAT / Roboflow（L3 数据集标注平台）。':
+    'Requiere además Mosquitto MQTT Broker (eventos de alerta estructurados, puerto 1883), InfluxDB + Grafana (estadísticas y panel temporal de L3) y CVAT / Roboflow (plataforma de etiquetado en L3).',
   '硬件台架清点、网络环境配置、reCamera固件预置与Node-RED/SSCMA插件验证、Frigate容器部署与GPU直通配置、教学资料下发':
     'Inventario de banco de hardware, configuracion de entorno de red, preinstalacion de firmware reCamera y verificacion de complementos Node-RED/SSCMA, despliegue de contenedor Frigate y configuracion de paso directo GPU, distribucion de materiales docentes',
-  视觉AI核心概念与双主线架构:
-    'Conceptos centrales de IA visual y arquitectura de doble linea principal',
+  '视觉 AI 核心概念与双主线架构': 'Conceptos clave de IA visual y arquitectura de doble vía',
   '帧率FPS、分辨率、置信度阈值、IoU交并比；reCamera轻节点与Jetson强节点技术指标、成本与适用边界对比':
     'Tasa de frames FPS, resolución, umbrales de confianza, IoU (intersección sobre unión); comparación de indicadores técnicos, costos y límites de aplicabilidad entre nodo ligero reCamera y nodo potente Jetson',
-  reCamera单点轻节点配置: 'Configuración de nodo ligero de un solo punto reCamera',
+  'reCamera 单点轻节点配置': 'Configuración de nodo ligero reCamera en punto único',
   '上电联网（2002w Wi-Fi/AP、2002百兆有线、HQ PoE交换机供电）、Web界面访问、RTSP视频流验证（554端口）、预置模型切换':
     'Encendido y conexión a red (2002w Wi-Fi/AP, 2002 Ethernet de 100 Mbps, HQ alimentado por conmutador PoE), acceso a interfaz Web, verificación de flujo de video RTSP (puerto 554), cambio de modelos preinstalados',
   基础入侵检测与区域绘制: 'Detección básica de intrusiones y dibujo de zonas',
   '绘制基础检测框、观察目标进入触发事件、端侧NPU推理帧率与置信度变化观察':
     'Dibujo de cuadros de deteccion basicos, observacion de eventos activados por entrada de objetos, observacion de cambios en tasa de frames de inferencia NPU y confianza en dispositivo',
-  Jetson多路NVR架构演示: 'Demostración de arquitectura NVR multicanal Jetson',
+  'Jetson 多路 NVR 架构演示': 'Demostración de arquitectura NVR multicanal con Jetson',
   'Frigate多路RTSP接入与GPU硬件解码展示、目标检测与录像管理、检测到入侵→MQTT推送→声光报警联动演示':
     'Demostración de acceso multicanal RTSP de Frigate y decodificación de hardware GPU, detección de objetos y gestión de grabación, demostración de vinculación: detección de invasión→push MQTT→alarma audible y luminosa',
-  'Node-RED视觉事件编排': 'Orquestación de eventos visuales Node-RED',
+  'Node-RED 视觉事件编排': 'Orquestación de eventos visuales con Node-RED',
   'SSCMA模型节点配置、置信度过滤与目标类型过滤、Dashboard实时画面与告警状态仪表盘搭建':
     'Configuración de nodo de modelo SSCMA, filtrado de confianza y filtrado por tipo de objeto, construcción de panel de imagen en tiempo real y tablero de estado de alertas Dashboard',
   多通道告警联动: 'Vinculación de alertas multicanal',
   'MQTT消息发布驱动智能灯泡变色与蜂鸣器鸣响、Webhook节点推送告警至企业微信群机器人':
     'Publicación de mensajes MQTT que impulsa el cambio de color de bombillas inteligentes y el sonido de zumbadores; nodo Webhook que envía alertas al bot de grupo de WeChat Work',
-  Frigate多路摄像头配置: 'Configuración de cámaras multicanal Frigate',
+  'Frigate 多路摄像头配置': 'Configuración multicámara en Frigate',
   'frigate.yml配置结构解析、多台reCamera RTSP地址添加、检测帧率配置（5–10FPS）、Zones与Masks定义':
     'Análisis de estructura de configuración frigate.yml, adición de direcciones RTSP de múltiples reCamera, configuración de tasa de frames de detección (5–10FPS), definición de Zones y Masks',
-  'Home Assistant深度集成': 'Integración profunda Home Assistant',
+  'Home Assistant 深度集成': 'Integración profunda con Home Assistant',
   'Frigate HA集成插件安装配置、摄像头实体与传感器状态映射、基于时间段与区域入侵的自动化YAML脚本编写':
     'Instalación y configuración del plugin de integración Frigate HA, mapeo de entidades de cámara y estados de sensores, escritura de scripts YAML de automatización basados en franjas horarias e invasión de zonas',
   误报率调优实操: 'Practica de optimizacion de tasa de falsas alarmas',
@@ -1319,7 +1318,7 @@ export const esDict: Record<string, string> = {
   数据集采集与标注: 'Recoleccion y anotacion de conjuntos de datos',
   '现场数据采集策略（光照变化/角度多源/正负样本平衡）、CVAT或Roboflow目标检测框标注、数据集划分7:2:1与数据增强':
     'Estrategia de recoleccion de datos en sitio (variaciones de iluminacion/multiples angulos/balance de muestras positivas y negativas), anotacion de cuadros de deteccion de objetos en CVAT o Roboflow, division de conjunto de datos 7:2:1 y aumento de datos',
-  YOLO模型迁移学习: 'Aprendizaje por transferencia de modelo YOLO',
+  'YOLO 模型迁移学习': 'Aprendizaje por transferencia con modelo YOLO',
   'YOLO目标检测原理与骨干网络解析、PyTorch训练环境与预训练权重配置、Loss收敛曲线与mAP@0.5指标监控':
     'Principios de detección de objetos YOLO y análisis de red backbone, entorno de entrenamiento PyTorch y configuración de pesos preentrenados, monitoreo de curva de convergencia de Loss e indicador mAP@0.5',
   边缘端模型转换与部署: 'Conversion y despliegue de modelos en el borde',
@@ -1330,36 +1329,36 @@ export const esDict: Record<string, string> = {
     'Escritura de datos estadisticos de deteccion de objetos en base de datos de series temporales InfluxDB, construccion de panel de tendencias de frecuencia de alertas/popularidad por zona/tasa de cumplimiento en Grafana',
   '各组项目方案演练与误报调优效果答辩、边缘算力开销与网络带宽占用复盘、交付物与配置文件归档':
     'Práctica de solución de proyecto de cada grupo y defensa de efectos de optimización de falsas alarmas, revisión de gasto de cómputo en el borde y uso de ancho de banda de red, archivo de entregables y archivos de configuración',
-  '体验课（taster）聚焦 L1 双线体验与基础配置，Jetson NVR为演示观摩不含实操；实战课（workshop）覆盖 L1+L2 完整Node-RED联动与Frigate多路汇聚；交付课（bootcamp）全覆盖 L1+L2+L3 含自定义模型训练与边缘部署。':
-    'La clase de experiencia (taster) se enfoca en la experiencia de doble línea L1 y configuración básica, Jetson NVR es demostración observada sin práctica; la clase práctica (workshop) cubre la vinculación Node-RED completa L1+L2 y la agregación multicanal Frigate; la clase de entrega (bootcamp) cubre completamente L1+L2+L3 incluyendo entrenamiento de modelos personalizados y despliegue en el borde.',
-  '1 天 · 6–8h · L1 展示层 · 聚焦reCamera单点配置与双主线架构认知':
-    '1 día · 6–8h · L1 capa de demostración · enfocado en configuración de un solo punto reCamera y comprensión de arquitectura de doble línea principal',
-  '环境预检 → 视觉AI核心概念 → reCamera单点轻节点配置':
-    'Verificacion previa del entorno → conceptos centrales de IA visual → configuracion de nodo ligero de un solo punto reCamera',
+  '体验课（taster）聚焦 L1 双线体验与基础配置，Jetson NVR 为演示观摩不含实操；实战课（workshop）覆盖 L1+L2 完整 Node-RED 联动与 Frigate 多路汇聚；交付课（bootcamp）全覆盖 L1+L2+L3 含自定义模型训练与边缘部署。':
+    'El curso de toma de contacto (taster) se centra en la experiencia y configuración básica de L1, con el NVR Jetson como demostración guiada sin práctica; el taller práctico (workshop) cubre L1+L2 con vinculación completa en Node-RED y agregación en Frigate; el curso de entrega (bootcamp) abarca L1+L2+L3 con entrenamiento de modelos propios y despliegue en el borde.',
+  '1 天 · 6–8h · L1 展示层 · 聚焦 reCamera 单点配置与双主线架构认知':
+    '1 Día · 6–8h · L1 Exposición · Centrado en la configuración de nodo reCamera y la arquitectura de doble vía',
+  '环境预检 → 视觉 AI 核心概念 → reCamera 单点轻节点配置':
+    'Comprobación previa → Conceptos clave de IA visual → Configuración de nodo ligero reCamera',
   '模块 04 + 05(演示) + 15(精简)': 'Modulos 04 + 05 (demostracion) + 15 (reducido)',
-  '基础入侵检测 → Jetson NVR架构演示 → 总结复盘':
-    'Detección básica de intrusiones → demostración de arquitectura Jetson NVR → resumen y revisión',
-  'Jetson多路NVR为观摩演示，不含实操。':
-    'Jetson NVR multicanal es demostración observada, sin práctica.',
-  '2–3 天 · 14–20h · L1+L2 · Node-RED告警联动 + Frigate多路汇聚 + HA自动化 + 误报调优':
-    '2–3 días · 14–20h · L1+L2 · vinculación de alertas Node-RED + agregación multicanal Frigate + automatización HA + optimización de falsas alarmas',
-  '环境预检 → 视觉概念 → reCamera配置 → 基础检测 → Jetson NVR演示':
-    'Verificacion previa del entorno → conceptos visuales → configuracion reCamera → deteccion basica → demostracion Jetson NVR',
-  'Node-RED视觉事件编排 → 多通道告警联动 → Frigate多路摄像头配置':
-    'Orquestación de eventos visuales Node-RED → vinculación de alertas multicanal → configuración de cámaras multicanal Frigate',
+  '基础入侵检测 → Jetson NVR 架构演示 → 总结复盘':
+    'Detección básica de intrusión → Demostración de NVR en Jetson → Conclusiones',
+  'Jetson 多路 NVR 为观摩演示，不含实操。':
+    'El NVR multicanal con Jetson es una demostración guiada; no incluye prácticas.',
+  '2–3 天 · 14–20h · L1+L2 · Node-RED 告警联动 + Frigate 多路汇聚 + HA 自动化 + 误报调优':
+    '2–3 Días · 14–20h · L1+L2 · Vinculación de alarmas en Node-RED + Agregación en Frigate + Automatización en HA + Ajuste de falsos positivos',
+  '环境预检 → 视觉概念 → reCamera 配置 → 基础检测 → Jetson NVR 演示':
+    'Comprobación previa → Conceptos visuales → Configuración de reCamera → Detección básica → Demo de NVR Jetson',
+  'Node-RED 视觉事件编排 → 多通道告警联动 → Frigate 多路摄像头配置':
+    'Flujo de eventos en Node-RED → Vinculación multicanal de alertas → Configuración multicámara en Frigate',
   '模块 09 + 10 + 15': 'Modulos 09 + 10 + 15',
-  'HA深度集成 → 误报率调优实操 → 方案复盘与交付总结':
-    'Integración profunda HA → práctica de optimización de tasa de falsas alarmas → revisión de solución y resumen de entrega',
+  'HA 深度集成 → 误报率调优实操 → 方案复盘与交付总结':
+    'Integración profunda en HA → Práctica de reducción de falsas alarmas → Conclusiones y entrega',
   '实战课交付 1 套包含 2 路以上 RTSP 接入、Frigate 检测、HA 联动与误报调优的完整系统。学员基础要求：理解 IP 网络、Docker 与 MQTT 基础，能编辑 YAML 配置文件。':
     'La clase práctica entrega 1 sistema completo que incluye acceso RTSP de 2 o más canales, detección Frigate, vinculación HA y optimización de falsas alarmas. Requisitos básicos de los estudiantes: comprensión de redes IP, Docker y conocimientos básicos de MQTT, capacidad para editar archivos de configuración YAML.',
   '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含自定义模型训练与边缘部署优化':
     '3–5 días · 24–35h · L1+L2+L3 · cobertura completa incluyendo entrenamiento de modelos personalizados y optimización de despliegue en el borde',
   '模块 01–10': 'Modulos 01–10',
-  'L1+L2 完整内容（reCamera配置 + Node-RED联动 + Frigate多路汇聚 + HA集成 + 误报调优）':
-    'Contenido completo L1+L2 (configuración reCamera + vinculación Node-RED + agregación multicanal Frigate + integración HA + optimización de falsas alarmas)',
+  'L1+L2 完整内容（reCamera 配置 + Node-RED 联动 + Frigate 多路汇聚 + HA 集成 + 误报调优）':
+    'Contenido completo de L1+L2 (configuración de reCamera + Node-RED + agregación en Frigate + integración HA + ajuste de falsos positivos)',
   '模块 11 + 12': 'Modulos 11 + 12',
-  '数据集采集与标注 → YOLO模型迁移学习':
-    'Recoleccion y anotacion de conjunto de datos → aprendizaje por transferencia de modelo YOLO',
+  '数据集采集与标注 → YOLO 模型迁移学习':
+    'Recopilación y etiquetado de datos → Aprendizaje por transferencia con YOLO',
   '模块 13 + 14': 'Modulos 13 + 14',
   '边缘端模型转换与部署 → 结构化数据汇聚与看板搭建':
     'Conversion y despliegue de modelos en el borde → agregacion de datos estructurados y construccion de panel',
@@ -1397,15 +1396,15 @@ export const esDict: Record<string, string> = {
     'Llevar los modelos de visión más allá del laboratorio para afrontar la luz real y las falsas alarmas',
   把视觉AI从演示台架搬到客户现场:
     'Lleva la IA visual del banco de demostración al sitio del cliente',
-  'M4 跳出实验室算法刷点模式，专注边缘摄像头部署、端侧 NPU 推理、多路视频流汇聚与误报调优等交付全流程。课程提供由浅入深的实操台架，讲师可依据实训时长在轻量端侧方案与多路集中分析架构间灵活选型。':
-    'M4 supera el simple ajuste de parámetros en laboratorio para centrarse en la entrega real: inferencia en NPU de borde, agregación de vídeo en NVR y mitigación de falsas alarmas ante iluminación variable.',
+  'M4 不走纯算法跑分和实验室评测的路线，而是带学员做实地摄像头部署、端侧 NPU 推理、多路视频流汇聚以及工程现场的误报调优。实操台架按模块化设计，讲师可以根据课时在单机轻量方案和多路集中分析架构之间灵活组合。':
+    'M4 deja a un lado las métricas de laboratorio para centrarse en el despliegue físico de cámaras, inferencia en NPU local, agregación multicanal y ajuste de falsas alarmas en campo. Con bancos modulares, el profesorado puede combinar ágilmente soluciones ligeras autónomas o arquitecturas centralizadas de análisis según las horas de formación.',
   '模块 04 与 08 支持学员自选周界防范区域，例如实训室后门、特定危险工位或设备隔离带，根据物理环境标定报警边界。':
     'Las unidades 04 y 08 permiten a los estudiantes marcar zonas perimetrales personalizadas, como accesos al taller o áreas de seguridad en maquinaria, calibrando los límites según el entorno físico.',
   接相机: 'Conectar cámaras',
   '支持引入实训室或园区现有的标准 RTSP 监控摄像头，完成多路汇聚分析，验证异构视频源接入能力。':
     'Permite integrar cámaras de seguridad RTSP ya instaladas en el centro para análisis concurrente, validando la interoperabilidad con fuentes de vídeo heterogéneas.',
-  '引入现场常见的光照剧变、树枝晃动、反光干扰等真实工况，指导学员调试置信度阈值与遮罩区域，掌握工程化避坑手段。':
-    'La exposición a contraluces intensos, reflejos o movimientos de vegetación guía a los alumnos en el ajuste fino de umbrales y máscaras, asimilando soluciones prácticas contra falsas alarmas.',
+  '把现场常见的光照突变、树影晃动、反光干扰等真实工况引入实训，带着学员调试置信度阈值和遮罩区域（Masks），掌握排除误报的工程方法。':
+    'Introduce condiciones reales como cambios bruscos de iluminación, movimiento de vegetación o reflejos, guiando en el calibrado de umbrales y máscaras (Masks) para dominar la eliminación de falsos positivos.',
   '仅做物体/行为/区域检测与事件告警，严禁人脸身份识别与生物特征追踪。':
     'Solo se realiza detección de objetos/comportamientos/zonas y alertas de eventos; queda estrictamente prohibido el reconocimiento facial de identidad y el rastreo de características biométricas.',
   '通用与特定目标检测（人/车/安全帽/反光衣/工件等物体类别）':
@@ -1430,8 +1429,6 @@ export const esDict: Record<string, string> = {
     'No se garantiza una tasa de reconocimiento del 100% en condiciones climáticas extremadamente adversas (lluvia intensa, niebla densa, contraluz fuerte)',
   'reCamera 单机为单摄像头轻量方案，支持 1 路 1080P 实时推理；多路并发需部署边缘主机（RK3576 / J4012）并合理规划检测分辨率与抽帧率（通常 5–10 FPS）':
     'reCamera individual es una solución ligera de una sola cámara, soporta 1 canal de inferencia en tiempo real 1080P; para concurrencia multicanal se requiere desplegar un host en el borde (RK3576 / J4012) y planificar razonablemente la resolución de detección y tasa de muestreo de frames (generalmente 5–10 FPS)',
-
-  // ── M5 ──
   环境感知与数据采集: 'Detección Ambiental y Recolección de Datos',
   '在温室、河道、库房里装上工业传感器，数据直接进手机。4G 或 LoRaWAN 两种接法，不用布线。':
     'Instale sensores industriales en invernaderos, ríos y almacenes y consulte los datos en el móvil. Conexión por 4G o LoRaWAN, sin cableado.',
