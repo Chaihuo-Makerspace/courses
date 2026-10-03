@@ -6,9 +6,11 @@ import {
   ctaTargets,
   type FaqItem,
   type LinkItem,
+  type OriginItem,
   type OutcomeItem,
   type SiteCta,
 } from '../data/site';
+import { fillStats } from '../data/stats';
 import type { Track } from '../data/tracks';
 import { dataTranslations } from './data-translations';
 import { deepTranslate } from './module-translations';
@@ -80,6 +82,14 @@ export function translateCta(cta: SiteCta, locale: Locale, params?: Record<strin
     primary: ctaLink(cta.primary, locale),
     secondary: cta.secondary ? ctaLink(cta.secondary, locale) : undefined,
   };
+}
+
+export function translateOrigins(items: OriginItem[], locale: Locale): OriginItem[] {
+  return items.map((item) => ({
+    ...item,
+    title: tr(locale, `origin.${item.id}.title`, item.title),
+    description: fillStats(tr(locale, `origin.${item.id}.desc`, item.description)),
+  }));
 }
 
 export function translatePerson(locale: Locale): typeof aboutPerson {

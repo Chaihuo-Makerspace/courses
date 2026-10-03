@@ -61,7 +61,8 @@ const zh: TranslationDict = {
   'about.title': '关于学院',
   'about.hero.title': '柴火创客学院',
   'about.hero.description':
-    '我们培养人掌握新技术整合能力，让团队自己能把解决方案部署落地。学院隶属于柴火创客空间，课程面向院校、集成商和企业。',
+    '我们培养人掌握新技术整合能力，让团队自己能把解决方案部署落地。课程面向院校、集成商和企业。',
+  'about.origins.title': '这些课是怎么来的',
 
   // Contact
   'contact.title': '合作咨询',
@@ -164,7 +165,8 @@ const en: TranslationDict = {
   'about.title': 'About the Academy',
   'about.hero.title': 'Chaihuo Maker Academy',
   'about.hero.description':
-    'We train people to integrate new technology, so their own teams can deploy solutions themselves. The Academy is part of Chaihuo Makerspace; its courses are offered to schools, integrators and enterprises.',
+    'We train people to integrate new technology, so their own teams can deploy solutions themselves. The courses are offered to schools, integrators and enterprises.',
+  'about.origins.title': 'Where these courses come from',
 
   'contact.title': 'Partnership',
   'contact.hero.title': 'Three kinds of organisation, four ways to work together',
@@ -263,7 +265,8 @@ const ja: TranslationDict = {
   'about.title': '学院について',
   'about.hero.title': '柴火創客学院',
   'about.hero.description':
-    '私たちは新しい技術を統合する力を持つ人材を育て、チームが自らソリューションを導入・展開できるようにします。学院は柴火創客空間に属し、講座は学校、インテグレーター、企業向けに提供しています。',
+    '私たちは新しい技術を統合する力を持つ人材を育て、チームが自らソリューションを導入・展開できるようにします。講座は学校、インテグレーター、企業向けに提供しています。',
+  'about.origins.title': 'これらの講座の成り立ち',
 
   'contact.title': 'パートナーシップ',
   'contact.hero.title': '3種類の機関、4つの協業形態',
@@ -364,7 +367,8 @@ const es: TranslationDict = {
   'about.title': 'Acerca de la Academia',
   'about.hero.title': 'Academia Chaihuo Maker',
   'about.hero.description':
-    'Formamos a personas para que sepan integrar nuevas tecnologías, de modo que su propio equipo pueda desplegar soluciones. La Academia forma parte de Chaihuo Makerspace; sus cursos están dirigidos a centros educativos, integradores y empresas.',
+    'Formamos a personas para que sepan integrar nuevas tecnologías, de modo que su propio equipo pueda desplegar soluciones. Los cursos están dirigidos a centros educativos, integradores y empresas.',
+  'about.origins.title': 'De dónde salen estos cursos',
 
   'contact.title': 'Colaboración',
   'contact.hero.title': 'Tres tipos de organización, cuatro formas de colaborar',
@@ -465,7 +469,8 @@ const ptBR: TranslationDict = {
   'about.title': 'Sobre a Academia',
   'about.hero.title': 'Academia Chaihuo Maker',
   'about.hero.description':
-    'Formamos pessoas para integrar novas tecnologias, para que a própria equipe consiga implantar soluções. A Academia faz parte do Chaihuo Makerspace; seus cursos são oferecidos a escolas, integradores e empresas.',
+    'Formamos pessoas para integrar novas tecnologias, para que a própria equipe consiga implantar soluções. Os cursos são oferecidos a escolas, integradores e empresas.',
+  'about.origins.title': 'De onde vêm estes cursos',
 
   'contact.title': 'Parceria',
   'contact.hero.title': 'Três tipos de organização, quatro formas de parceria',

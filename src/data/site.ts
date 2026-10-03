@@ -31,6 +31,13 @@ export interface OutcomeItem {
   description: string;
 }
 
+export interface OriginItem {
+  /** 翻译 key 前缀 `origin.<id>.*`。 */
+  id: 'projects' | 'kit' | 'teachers';
+  title: string;
+  description: string;
+}
+
 export interface FaqItem {
   /** 翻译 key `faq.<key>.q` / `faq.<key>.a`。 */
   key: 'q1' | 'q2' | 'q3' | 'q4' | 'q5' | 'q6';
@@ -97,12 +104,39 @@ export const moduleFinalCta: SiteCta = {
 // ── /about ────────────────────────────────────────────────────────
 
 /**
- * 具名负责人。出处：owner 2026-10-02 确认冯磊为学院总协调负责人，可具名。
- * 引言原为 M0「写给老师」一节的署名引言，全站只在 /about 出现这一次。
+ * 这些课的底子，写成访客开课时会碰到的事，不写机构关系和供应商名字。出处：
+ * - 课程从柴火创客空间十多年的项目和社区经验整理而来：owner 2026-10-02 确认。
+ * - 套件、教材、实验手册成套：各模块设备清单与交付物清单。
+ * - 先锋官人数与国家数：`stats.ts`，描述里的占位符由 `fillStats` 填入。
+ */
+export const aboutOrigins: OriginItem[] = [
+  {
+    id: 'projects',
+    title: '先有项目，后有课',
+    description:
+      '柴火创客空间十多年里做过的项目、办过的工作坊，挑出能教的，一节一节拆开，就是现在这七门课。',
+  },
+  {
+    id: 'kit',
+    title: '设备和教材是一套',
+    description:
+      '每门课的套件、教材和实验手册是照着同一批设备写的，手册上的每一步都能在手里的设备上照着做，开课前不用另外凑硬件。',
+  },
+  {
+    id: 'teachers',
+    title: '各地有人在开这些课',
+    description: '目前已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课。',
+  },
+];
+
+/**
+ * 具名导师。出处：owner 2026-10-02 确认冯磊可具名，2026-10-03 定职务写法为
+ * 「柴火创客学院导师」。引言原为 M0「写给老师」一节的署名引言，全站只在 /about
+ * 出现这一次。
  */
 export const aboutPerson = {
   name: '冯磊',
-  role: '柴火创客学院总协调负责人',
+  role: '柴火创客学院导师',
   quote:
     '一门课最好的归宿，不是被完整地执行一遍，而是被一位老师改到面目全非，然后变成只有他能上的那门课。',
 };

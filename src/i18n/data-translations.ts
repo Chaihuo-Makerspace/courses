@@ -274,8 +274,17 @@ const en: Record<string, string> = {
   'cta.module.title': 'Put {code} on your timetable',
   'cta.module.desc':
     'Budgets are based on participant count and hardware requirements. Email us your expected group size and target depth to receive a detailed syllabus and kit plan within 3 business days.',
+  'origin.projects.title': 'Projects first, courses second',
+  'origin.projects.desc':
+    'Over more than a decade, Chaihuo Makerspace built projects and ran workshops. We picked the ones that can be taught and broke them into lessons: those are the seven courses today.',
+  'origin.kit.title': 'The kit and the teaching materials are one set',
+  'origin.kit.desc':
+    'The kit, textbook and lab manual for each course are written against the same hardware, so every step in the manual can be followed on the device in front of you. There is nothing extra to source before a class starts.',
+  'origin.teachers.title': 'They are being taught in many places',
+  'origin.teachers.desc':
+    '{pioneers} Pioneers in China and abroad are currently teaching in {countries} countries.',
   'person.name': 'Feng Lei',
-  'person.role': 'General Coordinator, Chaihuo Maker Academy',
+  'person.role': 'Mentor, Chaihuo Maker Academy',
   'person.quote':
     'The best fate of a course is not being executed perfectly once, but being transformed beyond recognition by a teacher, becoming a course that only they can teach.',
   'partnership.suitable': 'Suited to',
@@ -476,8 +485,17 @@ const ja: Record<string, string> = {
   'cta.module.title': '{code}を時間割に組み込む',
   'cta.module.desc':
     'お見積りはクラス形態と規模に応じます。受講人数と希望する深さをメールでお知らせいただければ、3営業日以内にご提案をお送りします。',
+  'origin.projects.title': 'まずプロジェクトがあり、そこから講座が生まれた',
+  'origin.projects.desc':
+    '柴火創客空間が10年以上かけて手がけてきたプロジェクトやワークショップから、教えられるものを選び、1コマずつに分けたものが現在の7講座です。',
+  'origin.kit.title': '機材と教材はひとそろい',
+  'origin.kit.desc':
+    '各講座のキット、教材、実験手順書は同じ機材に合わせて書かれており、手順書のどの手順も手元の機材でそのまま試せます。開講前に機材を別途そろえる必要はありません。',
+  'origin.teachers.title': '各地で開講が続いています',
+  'origin.teachers.desc':
+    '現在、国内外で{pioneers}名のパイオニアが{countries}カ国で開講を続けています。',
   'person.name': '馮磊',
-  'person.role': '柴火創客学院 総括コーディネーター',
+  'person.role': '柴火創客学院 メンター',
   'person.quote':
     '一つの講座の最良の行き先は、完璧に実施されることではなく、ある教師によって見分けがつかないほどに作り変えられ、その人にしか教えられない講座になることです。',
   'partnership.suitable': '対象',
@@ -690,8 +708,17 @@ const es: Record<string, string> = {
   'cta.module.title': 'Incorpore {code} a su programación',
   'cta.module.desc':
     'El presupuesto depende del formato y del tamaño de la clase. Indíquenos por correo el número de participantes y el nivel deseado y enviaremos una propuesta en 3 días hábiles.',
+  'origin.projects.title': 'Primero los proyectos, después los cursos',
+  'origin.projects.desc':
+    'Durante más de una década, Chaihuo Makerspace ha hecho proyectos y talleres. Elegimos los que se pueden enseñar y los dividimos en sesiones: son los siete cursos de hoy.',
+  'origin.kit.title': 'El equipo y el material didáctico forman un solo conjunto',
+  'origin.kit.desc':
+    'El kit, el manual y la guía de prácticas de cada curso están escritos para el mismo equipo, así que cada paso de la guía se puede seguir con el dispositivo que se tiene delante. No hay que conseguir hardware aparte antes de empezar.',
+  'origin.teachers.title': 'Se imparten en muchos lugares',
+  'origin.teachers.desc':
+    'Actualmente, {pioneers} Pioneros dentro y fuera de China imparten cursos en {countries} países.',
   'person.name': 'Feng Lei',
-  'person.role': 'Coordinador general, Academia Chaihuo Maker',
+  'person.role': 'Mentor, Academia Chaihuo Maker',
   'person.quote':
     'El mejor destino de un curso no es ser ejecutado perfectamente una vez, sino ser transformado más allá del reconocimiento por un profesor, convirtiéndose en un curso que solo él puede impartir.',
   'partnership.suitable': 'Indicado para',
@@ -900,8 +927,17 @@ const ptBR: Record<string, string> = {
   'cta.module.title': 'Inclua o {code} na sua grade',
   'cta.module.desc':
     'O orçamento depende do formato e do tamanho da turma. Informe por e-mail o número de participantes e o nível desejado e enviaremos uma proposta em até 3 dias úteis.',
+  'origin.projects.title': 'Primeiro os projetos, depois os cursos',
+  'origin.projects.desc':
+    'Ao longo de mais de uma década, o Chaihuo Makerspace fez projetos e oficinas. Escolhemos os que podem ser ensinados e os dividimos em aulas: são os sete cursos de hoje.',
+  'origin.kit.title': 'O equipamento e o material didático formam um só conjunto',
+  'origin.kit.desc':
+    'O kit, a apostila e o guia de práticas de cada curso foram escritos para o mesmo equipamento, então cada passo do guia pode ser seguido no dispositivo que está à sua frente. Não é preciso procurar hardware à parte antes de começar.',
+  'origin.teachers.title': 'São ministrados em muitos lugares',
+  'origin.teachers.desc':
+    'Atualmente, {pioneers} Pioneiros na China e no exterior dão aulas em {countries} países.',
   'person.name': 'Feng Lei',
-  'person.role': 'Coordenador-geral, Academia Chaihuo Maker',
+  'person.role': 'Mentor, Academia Chaihuo Maker',
   'person.quote':
     'O melhor destino de um curso não é ser executado perfeitamente uma vez, mas ser transformado por um professor até ficar irreconhecível, tornando-se um curso que só ele pode ministrar.',
   'partnership.suitable': 'Indicado para',

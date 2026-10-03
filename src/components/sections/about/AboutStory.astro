@@ -1,19 +1,39 @@
 ---
-// /about 的正文只有一样东西：具名负责人和他对这门课的看法。
+import SectionHeader from '../../SectionHeader.astro';
+import type { OriginItem } from '../../../data/site';
+import { t } from '../../../i18n/translations';
+import type { Locale } from '../../../i18n';
+
+// /about 的正文：这些课怎么来的（一句话一行，左边是说法，右边是解释），再加一位具名导师。
 interface Props {
+  origins: OriginItem[];
   person: { name: string; role: string; quote: string };
+  locale: Locale;
 }
 
-const { person } = Astro.props as Props;
+const { origins, person, locale } = Astro.props as Props;
 ---
 
 <section class="section bg-background">
   <div class="container-page" data-reveal>
-    <figure class="max-w-3xl border-l-2 border-primary pl-6 md:pl-8">
-      <blockquote class="text-xl font-semibold leading-relaxed text-foreground md:text-2xl md:leading-relaxed">
+    <SectionHeader title={t(locale, 'about.origins.title')} />
+
+    <dl class="border-t border-neutral-3">
+      {
+        origins.map((item) => (
+          <div class="grid gap-x-12 gap-y-2 border-b border-neutral-3 py-6 md:items-baseline md:grid-cols-[minmax(0,18rem)_minmax(0,1fr)] md:py-7">
+            <dt class="text-lg font-bold leading-snug text-foreground">{item.title}</dt>
+            <dd class="max-w-2xl text-base leading-relaxed text-neutral-8">{item.description}</dd>
+          </div>
+        ))
+      }
+    </dl>
+
+    <figure class="mt-12 max-w-3xl border-l-2 border-primary pl-6 md:mt-16">
+      <blockquote class="text-lg font-semibold leading-relaxed text-foreground">
         {person.quote}
       </blockquote>
-      <figcaption class="mt-6 text-sm leading-relaxed">
+      <figcaption class="mt-5 text-sm leading-relaxed">
         <span class="block font-bold text-foreground">{person.name}</span>
         <span class="block text-neutral-7">{person.role}</span>
       </figcaption>
