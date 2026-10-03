@@ -68,7 +68,7 @@ const count = String(curriculum?.items.length ?? 0);
         </ul>
 
         {formats.warnings && formats.warnings.length > 0 && (
-          <div class="mt-5 flex gap-3 rounded-lg border border-brand-red/30 bg-brand-red-light p-4">
+          <div class="mt-5 flex gap-3 rounded-lg border border-neutral-3 border-l-[3px] border-l-brand-red bg-neutral-1 p-4">
             <Icon name="lucide:triangle-alert" class="mt-0.5 h-5 w-5 shrink-0 text-brand-red" />
             <div class="space-y-2">
               {formats.warnings.map((w) => (

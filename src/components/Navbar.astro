@@ -40,10 +40,10 @@ function localizeHref(href: string): string {
 >
   <nav class="container-page">
     <div class="flex items-center justify-between h-16">
-      <div class="flex-shrink-0">
+      <div class="min-w-0 flex-1 lg:flex-none">
         <a
           href={localizeHref("/")}
-          class="group inline-flex items-center gap-2.5 focus-ring rounded-md"
+          class="group inline-flex max-w-full items-center gap-2.5 focus-ring rounded-md"
           aria-label={t(locale, 'nav.homeAria')}
         >
           <img
@@ -51,7 +51,7 @@ function localizeHref(href: string): string {
             alt=""
             width="440"
             height="550"
-            class="h-9 md:h-10 w-auto"
+            class="h-9 md:h-10 w-auto shrink-0"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'"
           />
           <span
@@ -62,18 +62,18 @@ function localizeHref(href: string): string {
           </span>
 
           <span
-            class="h-6 w-px bg-neutral-3"
+            class="h-6 w-px shrink-0 bg-neutral-3"
             aria-hidden="true"
           ></span>
           <span
-            class="text-base font-semibold text-brand-black leading-none"
+            class="min-w-0 break-words text-base font-semibold text-brand-black leading-tight"
           >
             {t(locale, 'site.name')}
           </span>
         </a>
       </div>
 
-      <div class="hidden md:flex md:items-center md:gap-1">
+      <div class="hidden lg:flex lg:items-center lg:gap-1">
         {
           navItems.map((item) => (
             <a
@@ -137,12 +137,12 @@ function localizeHref(href: string): string {
         </div>
 
         <div class="ml-2">
-          <LanguageSwitcher />
+          <LanguageSwitcher id="desktop-language-switcher" />
         </div>
       </div>
 
-      <div class="md:hidden flex items-center gap-2">
-        <LanguageSwitcher />
+      <div class="lg:hidden flex shrink-0 items-center gap-2">
+        <LanguageSwitcher id="mobile-language-switcher" />
         <button
           type="button"
           class="hs-collapse-toggle focus-ring inline-flex justify-center items-center w-10 h-10 rounded-lg border border-neutral-3 bg-background text-neutral-7 hover:bg-neutral-1"
@@ -167,7 +167,7 @@ function localizeHref(href: string): string {
 
     <div
       id="hs-navbar-collapse"
-      class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow md:hidden"
+      class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow lg:hidden"
       aria-labelledby="hs-navbar-chaihuo"
     >
       <div class="flex flex-col gap-1 py-4">

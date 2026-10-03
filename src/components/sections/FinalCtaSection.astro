@@ -8,7 +8,7 @@ interface CtaLink {
 }
 
 // 全站唯一的页尾 CTA（原 FinalCtaSection 与 ChipCtaSection 合并）。
-// tone="dark" 是该页的深色面；页面中段已有深色面时用 tone="light"。
+// K1 的页尾行动区统一用浅青底，红色按钮始终放在浅色面上。
 interface Props {
   cta: {
     title: string;
@@ -17,28 +17,16 @@ interface Props {
     secondary?: CtaLink;
     note?: string;
   };
-  tone?: 'dark' | 'light';
 }
 
-const { cta, tone = 'dark' } = Astro.props as Props;
-const isDark = tone === 'dark';
+const { cta } = Astro.props as Props;
 ---
 
-<section
-  class:list={[
-    'section',
-    isDark ? 'bg-brand-graphite text-white' : 'bg-neutral-1 border-t border-neutral-3',
-  ]}
->
+<section class="closing-cta section bg-neutral-1 border-t border-neutral-3">
   <div class="container-page" data-reveal>
     <div class="max-w-2xl">
       <h2 class="heading-section">{cta.title}</h2>
-      <p
-        class:list={[
-          'mt-4 text-base leading-relaxed',
-          isDark ? 'text-white/75' : 'text-neutral-8',
-        ]}
-      >
+      <p class="mt-4 text-base leading-relaxed text-neutral-8">
         {cta.description}
       </p>
 
@@ -59,7 +47,7 @@ const isDark = tone === 'dark';
           cta.secondary && (
             <a
               href={cta.secondary.href}
-              class:list={['btn focus-ring', isDark ? 'btn-ghost' : 'btn-secondary']}
+              class="btn btn-secondary focus-ring"
             >
               {cta.secondary.label}
             </a>
@@ -69,7 +57,7 @@ const isDark = tone === 'dark';
 
       {
         cta.note && (
-          <p class:list={['mt-5 text-sm', isDark ? 'text-white/55' : 'text-neutral-6']}>
+          <p class="mt-5 text-sm text-neutral-6">
             {cta.note}
           </p>
         )

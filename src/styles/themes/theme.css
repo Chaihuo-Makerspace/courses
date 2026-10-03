@@ -5,43 +5,46 @@
 
 @theme {
   /* ============================================
-   * Brand identity colors — 火焰红→黄渐变是主视觉资产
+   * K1 青绿：青色承载结构，红色承载行动，黄色标记学习深度。
    * ============================================ */
-  --color-brand-red: #d84144;
-  --color-brand-red-hover: #c13538;
+  --color-flame-red: #d84144;            /* logo 原色，只用于品牌短线 */
+  --color-brand-red: #c7353a;            /* 白字对比度 5.25:1 */
+  --color-brand-red-hover: #ad2c31;
   --color-brand-red-light: #fdeaea;       /* destructive bg only */
 
-  --color-brand-yellow: #f3d230;          /* logo / L1 badge / M0 corner */
-  --color-brand-yellow-light: #fef9e7;    /* soft yellow surface */
-  --color-brand-yellow-mid: #fde68a;      /* mid yellow — L2 row surface */
-  --color-brand-yellow-dark: #b8960a;
+  --color-brand-yellow: #f3d230;          /* logo / L2 badge / 模块代号 */
+  --color-brand-yellow-light: #fffae6;    /* L1 列底 */
+  --color-brand-yellow-mid: #fdefab;      /* L2 列底 */
+  --color-level-l3: #f9df63;              /* L3 列底，独立于警示色 */
+  --color-brand-yellow-dark: #66520b;     /* 黄底上的文字 */
+  --color-module-dark: #015259;          /* M1–M6 模块牌 */
 
-  /* 火焰渐变 — hero 背景 / 分隔 / hover glow 的图形主体，见 docs/DESIGN.md §1 */
-  --gradient-flame: linear-gradient(135deg, var(--color-brand-red) 0%, var(--color-brand-yellow) 100%);
+  /* 品牌短线：72px 火焰红 + 24px 火焰黄，不铺面、不用于按钮 hover。 */
+  --gradient-flame: linear-gradient(90deg, var(--color-flame-red) 0 75%, var(--color-brand-yellow) 75% 100%);
 
-  /* 暖炭灰替代冷黑（v4.0）— logo 里没有黑色，全站去黑色主导 */
-  --color-brand-black: #2b2420;
-  --color-brand-graphite: #3a231d;        /* 反转面 — 暖 ember-dark，替代冷石墨 #262626 */
+  /* 青色文字轴与深色面，来自审查方案 K1。 */
+  --color-brand-black: #001d20;
+  --color-brand-graphite: #004046;
 
   --color-brand-white: #ffffff;           /* 白墨：反转面文字、产品图衬底 */
 
   /* ============================================
-   * Neutral scale 10 段 — 暖灰阶（v4.0，替代冷调 Arco Gray）
+   * Neutral scale 10 段 — 青色结构阶
    * 用法见 docs/DESIGN.md §1.3
    * ============================================ */
-  --color-neutral-1:  #f8f6f1;            /* section alt bg */
-  --color-neutral-2:  #f1eee7;            /* eyebrow bg / 次卡 */
-  --color-neutral-3:  #e5e0d5;            /* divider / hairline border */
-  --color-neutral-4:  #d0c8b8;            /* icon disabled */
-  --color-neutral-5:  #b0a695;            /* placeholder / tertiary text */
-  --color-neutral-6:  #8f8574;            /* caption */
-  --color-neutral-7:  #746a5c;            /* secondary text */
-  --color-neutral-8:  #5a5145;            /* body text alt */
-  --color-neutral-9:  #3f382f;            /* important text */
-  --color-neutral-10: #2b2420;            /* heading */
+  --color-neutral-1:  #e8f7f9;            /* section alt bg */
+  --color-neutral-2:  #dbf0f2;            /* 次卡 */
+  --color-neutral-3:  #cae4e7;            /* divider / hairline border */
+  --color-neutral-4:  #adcfd2;            /* icon disabled */
+  --color-neutral-5:  #84adb2;            /* disabled only */
+  --color-neutral-6:  #3a6c72;            /* caption */
+  --color-neutral-7:  #2e6167;            /* secondary text */
+  --color-neutral-8:  #16454a;            /* body text alt */
+  --color-neutral-9:  #042f33;            /* important text */
+  --color-neutral-10: #001d20;            /* heading */
 
-  /* 微暖白画布：页面与卡片共用，替代纯白 —— 见 docs/DESIGN.md §1.4 */
-  --color-background: #fbfaf6;
+  /* 白色画布，让青色结构与火焰色层级清楚可见。 */
+  --color-background: #ffffff;
 
   /* ============================================
    * Radius scale（v3.0：default lg = 8px；禁默认 16px+）
@@ -185,13 +188,49 @@
     background-color: rgba(255, 255, 255, 0.1);
   }
 
-  /* 火焰细线：每页至多一处分隔带（hero 底边） */
+  /* hero 底边的青色发丝线，品牌短线沿内容左边线对齐。 */
   .flame-rule {
+    height: 1px;
+    background-color: var(--color-neutral-3);
+    position: relative;
+  }
+  .flame-rule::after,
+  .closing-cta::before {
+    content: "";
+    position: absolute;
+    left: max(1rem, calc((100% - 72rem) / 2 + 2rem));
+    top: -2px;
+    width: 96px;
     height: 3px;
     background-image: var(--gradient-flame);
   }
-  /* 火焰铺面：只用于首页 hero 的背景层，矩阵压在它上面 */
+  @media (min-width: 40rem) {
+    .flame-rule::after,
+    .closing-cta::before {
+      left: max(1.5rem, calc((100% - 72rem) / 2 + 2rem));
+    }
+  }
+  @media (min-width: 64rem) {
+    .flame-rule::after,
+    .closing-cta::before {
+      left: max(2rem, calc((100% - 72rem) / 2 + 2rem));
+    }
+  }
+  /* 首页矩阵的青色衬底。 */
   .flame-band {
+    background-color: var(--color-brand-graphite);
+  }
+  .matrix-card,
+  .closing-cta {
+    position: relative;
+  }
+  .matrix-card::before {
+    content: "";
+    position: absolute;
+    left: 1.25rem;
+    top: -2px;
+    width: 96px;
+    height: 3px;
     background-image: var(--gradient-flame);
   }
 }
@@ -227,7 +266,7 @@
     color: #fff;
   }
   .module-tile--dark {
-    background-color: var(--color-brand-black);
+    background-color: var(--color-module-dark);
     color: var(--color-brand-yellow);
   }
   .module-tile--sm {
@@ -254,8 +293,9 @@
     font-weight: 600;
   }
   .level-badge--l1 {
-    background-color: var(--color-brand-yellow-light);
-    color: var(--color-brand-yellow-dark);
+    background-color: var(--color-background);
+    color: var(--color-brand-black);
+    box-shadow: inset 0 0 0 1px var(--color-neutral-4);
   }
   .level-badge--l2 {
     background-color: var(--color-brand-yellow);
@@ -329,28 +369,12 @@
     color: var(--color-brand-black);
   }
 
-  /* 主按钮火焰 hover：叠一层火焰渐变 + 暖色 glow。见 docs/DESIGN.md §6 */
-  @keyframes flame-shift {
-    from {
-      background-position: 0% 50%;
-    }
-    to {
-      background-position: 100% 50%;
-    }
-  }
+  /* 主按钮 hover 保持实色红，白字对比度不随动画变化。 */
   .btn:active {
     transform: scale(0.98);
   }
   .btn-primary:hover {
-    background-image: var(--gradient-flame);
-    background-size: 200% 200%;
-    box-shadow: 0 4px 16px rgba(216, 65, 68, 0.32);
-    animation: flame-shift 1.6s ease-in-out infinite alternate;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .btn-primary:hover {
-      animation: none;
-    }
+    background-color: var(--color-brand-red-hover);
   }
 
   /* Scroll-reveal 进场（机制见 src/scripts/reveal.ts；规则见 docs/DESIGN.md §6）。

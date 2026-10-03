@@ -7,7 +7,7 @@ import { dt } from '../../../i18n/data-translations';
 import { t } from '../../../i18n/translations';
 import type { Locale } from '../../../i18n';
 
-// 首页 hero：矩阵是主角（相当于产品截图），压在火焰铺面上。
+// 首页 hero：矩阵是主角（相当于产品截图），青色衬底对应 K1 方案。
 // 文本元素只有标题、描述、CTA 组。见 docs/DESIGN.md §4.3。
 interface Props {
   modules: Module[];
@@ -43,7 +43,7 @@ const secondary = ctaLink('contact', locale);
   <div class="relative mt-8 md:mt-9">
     <div class="flame-band absolute inset-x-0 bottom-0 top-20" aria-hidden="true"></div>
     <div class="container-page relative pb-8 md:pb-10" data-reveal style="--reveal-delay: 120ms">
-      <div class="rounded-lg border border-neutral-3 bg-background p-4 shadow-md-soft md:p-5">
+      <div class="matrix-card rounded-lg border border-transparent bg-background p-4 shadow-md-soft md:p-5">
         <CourseMatrix modules={modules} locale={locale} variant="compact" />
         <p class="mt-2.5 text-xs text-neutral-6">{dt(locale, 'home.matrix.note')}</p>
       </div>

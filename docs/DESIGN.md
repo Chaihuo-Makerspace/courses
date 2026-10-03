@@ -32,61 +32,66 @@ v4.0 的规则大多是对的，但它只约束装饰、不约束决策，声明
 
 ---
 
-## 1. 颜色
+## 1. 颜色 — K1 青绿
 
-### 1.1 火焰渐变
+本分支采用色彩审查的 K1 青绿方案。青色承载结构，红色承载行动，黄色标记学习
+深度；白色画布让三者清楚分工。青色色阶替代原有暖棕色阶。
 
-`--gradient-flame: linear-gradient(135deg, brand-red, brand-yellow)`
+### 1.1 品牌短线
 
-**只有三处用法**，都能在静态截图里看见：
+`--gradient-flame` 是 **72px 火焰红 + 24px 火焰黄** 的硬切短线，不再铺大面或
+用于按钮 hover。两端是 `--color-flame-red` 与 `--color-brand-yellow`。
 
 | 用法 | 类 | 在哪 |
 |---|---|---|
-| 铺面 | `.flame-band` | 仅首页 hero：矩阵卡片压在它上面 |
-| 细线 | `.flame-rule`（3px） | 内页 hero 底边；**每页至多一处**分隔 |
-| hover | `.btn-primary:hover` | 主按钮 |
+| 青色衬底 | `.flame-band` | 首页矩阵后方，深青绿实色 |
+| 发丝线与短线 | `.flame-rule` | 内页 hero 底边，1px 青色细线上叠 96×3px 品牌短线 |
+| 品牌短线 | `.matrix-card` / `.closing-cta` | 首页矩阵顶边、浅青页尾 CTA 顶边 |
+| hover | `.btn-primary:hover` | 实色深红，无渐变、循环动画或 glow |
 
-不铺其他大面，不做整段纯红。
-
-### 1.2 品牌色
+### 1.2 品牌与结构色
 
 | 用途 | Token | Hex |
 |---|---|---|
-| 主按钮、强调文字、L3 徽章 | `--color-brand-red` | `#d84144` |
-| 主按钮 hover 底色 | `--color-brand-red-hover` | `#c13538` |
-| L3 列底、警示底 | `--color-brand-red-light` | `#fdeaea` |
-| L2 徽章、记号笔底、深色面上的序号 | `--color-brand-yellow` | `#f3d230` |
-| L1 列底、柔黄面 | `--color-brand-yellow-light` | `#fef9e7` |
-| L2 列底 | `--color-brand-yellow-mid` | `#fde68a` |
-| 黄底上的文字 | `--color-brand-yellow-dark` | `#b8960a` |
-| 标题与正文主色（暖炭灰） | `--color-brand-black` | `#2b2420` |
-| 深色面、页脚（ember-dark） | `--color-brand-graphite` | `#3a231d` |
+| logo 原色、品牌短线 | `--color-flame-red` | `#d84144` |
+| 主按钮、强调文字、L3 徽章 | `--color-brand-red` | `#c7353a` |
+| 主按钮 hover | `--color-brand-red-hover` | `#ad2c31` |
+| 警示底，课程层级不用此色 | `--color-brand-red-light` | `#fdeaea` |
+| L2 徽章、记号笔底、模块代号 | `--color-brand-yellow` | `#f3d230` |
+| L1 列底 | `--color-brand-yellow-light` | `#fffae6` |
+| L2 列底 | `--color-brand-yellow-mid` | `#fdefab` |
+| L3 列底 | `--color-level-l3` | `#f9df63` |
+| 黄底文字 | `--color-brand-yellow-dark` | `#66520b` |
+| M1–M6 模块牌底色 | `--color-module-dark` | `#015259` |
+| 标题墨色 | `--color-brand-black` | `#001d20` |
+| 首页衬底、页脚、详情页交付面 | `--color-brand-graphite` | `#004046` |
 | 白墨 | `--color-brand-white` | `#ffffff` |
 
-logo 里没有黑色，所以没有冷黑。调色时别往「暖米白 + 黄铜 + 咖啡棕」那套
-消费品配色靠——本站的暖色语言是火焰红黄。
+**L1 → L2 → L3 是淡黄 → 中黄 → 亮黄**，矩阵与详情页共用。L1 徽章为白底青色
+细边，L2 黄底墨字，L3 红底白字。M0 红底白字，M1–M6 青底黄字。
 
-**L1 → L2 → L3 是一条由浅到热的色阶**（淡黄 → 中黄 → 淡红），矩阵列底、
-详情页三档深度、首页 hero 矩阵都用同一条。深度越深，底色越热。
+### 1.3 青色结构阶
 
-### 1.3 暖灰阶
-
-`--color-neutral-1`→`-10`：`#f8f6f1 · #f1eee7 · #e5e0d5 · #d0c8b8 · #b0a695 ·
-#8f8574 · #746a5c · #5a5145 · #3f382f · #2b2420`
+`--color-neutral-1`→`-10`：`#e8f7f9 · #dbf0f2 · #cae4e7 · #adcfd2 · #84adb2 ·
+#3a6c72 · #2e6167 · #16454a · #042f33 · #001d20`
 
 `-3` hairline · `-6` 标签 · `-7` 次要文字 · `-8` 正文 · `-1` 交替段底。
+`-5` 只用于禁用信息，不承载需要阅读的文字。
 
-### 1.4 画布
+### 1.4 画布与对比度
 
-页面与卡片底统一用 `--color-background` = `#fbfaf6`（微暖白）。不用 `bg-white`
-作面色。**唯一例外**：产品图自带白底，衬底用 `bg-brand-white` 才不露边
-（见 `CourseEquipment.astro`）。
+页面与卡片统一用 `--color-background` = `#ffffff`。产品图衬底仍用
+`bg-brand-white`。浅青行动区为 `#e8f7f9`，红按钮始终放在白或浅青面上。
+
+白底上的标题 / 正文 / 次级文字 / 标签对比度依次为 17.55 / 10.58 / 6.95 / 5.89；
+按钮白字 5.25；浅青底红字 4.78；深青底白字 11.53、白 55% 为 4.60；
+青色模块牌黄字 5.98。文字组合符合普通文字 4.5:1 的基线。
 
 ### 1.5 深色面
 
-**每页至多一处**（页脚不算）。首页、/courses、/about、/pioneer、/base 是页尾
-CTA；课程详情页是「学完拿走什么」，页尾 CTA 改用浅色（`tone="light"`）；
-/contact 没有。
+深青色用于首页矩阵衬底、全站页脚、课程详情的「学完拿走什么」。
+**页尾 CTA 全部为浅青底**，不再要求每页必须放深色面；红色按钮不放在深青面上。
+
 
 ---
 
@@ -97,6 +102,8 @@ CTA；课程详情页是「学完拿走什么」，页尾 CTA 改用浅色（`to
 - **纵向节奏只有两档**：`.section`（标准段）与 `.section-tight`（紧凑带）。
   hero 有自己的内边距。不再出现 `py-14 / py-16 / py-20 / py-24` 混用。
 - **首屏**：900px 高的视口里要能看到第二个 section 的起点（zh）。
+- **响应式**：导航在 1024px 起展开；更窄的屏幕用折叠菜单。矩阵与基地对照表
+  的横向滚动限在各自容器内，不能撑宽页面。
 - **不用卡片装正文**。清单用 hairline 分隔的台账式行（`border-t` /
   `border-b`），需要分栏时用 `gap-x-10` 的多列。只有带图的设备卡用
   `.card-hairline`。
@@ -134,7 +141,7 @@ CTA；课程详情页是「学完拿走什么」，页尾 CTA 改用浅色（`to
 
 ### 4.1 Hero
 
-- **首页**（`HomeHero`）：标题、描述、CTA 组，下面是压在火焰铺面上的紧凑矩阵。
+- **首页**（`HomeHero`）：标题、描述、CTA 组，下面是带深青色衬底的紧凑矩阵。
 - **内页**（`HeroBanner`）：标题、描述、CTA 组，**文本元素 ≤3**。没有 eyebrow，
   没有副题。
 - **/courses** 没有独立 hero：页面标题直接接完整矩阵。
@@ -148,7 +155,7 @@ hero 里的每个元素都要回答访客的问题。重复品牌名、重复导
 
 | 类 | 用法 |
 |---|---|
-| `.btn .btn-primary` | 主行动，红底白字，hover 火焰渐变 |
+| `.btn .btn-primary` | 主行动，红底白字，hover 实色深红 |
 | `.btn .btn-secondary` | 浅色面上的次行动 |
 | `.btn .btn-ghost` | 深色面上的次行动 |
 
@@ -162,7 +169,7 @@ hero 里的每个元素都要回答访客的问题。重复品牌名、重复导
 | 类 / 组件 | 用途 |
 |---|---|
 | `SectionHeader` | section H2 + 可选引导句。没有 eyebrow 参数 |
-| `.module-tile` | 模块代号。M0 红（`--red`），M1–M6 暗（`--dark`），全站同一语义 |
+| `.module-tile` | 模块代号。M0 红（`--red`），M1–M6 青底黄字（`--dark`），全站同一语义 |
 | `.level-badge` / `LevelBadge` | L1 / L2 / L3 |
 | `.label` | 小标签 |
 | `.highlight` | 关键词的黄色记号笔底 |
@@ -198,8 +205,8 @@ hero 里的每个元素都要回答访客的问题。重复品牌名、重复导
 
 - scroll-reveal（淡入 + 微上移）：`data-reveal` + IntersectionObserver，见
   `src/scripts/reveal.ts`。列表项可加 `--reveal-delay` 做 stagger。
-- 主按钮 hover 的火焰渐变位移。
-- 两者在 `prefers-reduced-motion: reduce` 下关闭，且内容不依赖动效才可见。
+- 主按钮 hover 仅切换实色深红。
+- scroll-reveal 在 `prefers-reduced-motion: reduce` 下关闭，内容不依赖动效才可见。
 - 不引入 GSAP / Motion 等依赖。
 
 ---

@@ -20,7 +20,7 @@ const cards = module.capabilityCards;
 const cellBg: Record<LevelId, string> = {
   L1: 'bg-brand-yellow-light',
   L2: 'bg-brand-yellow-mid',
-  L3: 'bg-brand-red-light',
+  L3: 'bg-level-l3',
 };
 const levelName = (lvl: LevelId) => deepTranslate(levelMeta[lvl].label, locale).split(' · ')[1];
 const days = (n: number) => `${n} ${dt(locale, n === 1 ? 'course.day' : 'course.days')}`;

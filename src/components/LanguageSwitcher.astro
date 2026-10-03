@@ -3,6 +3,10 @@ import { locales, localeLabels, localeFlags, defaultLocale, getLocaleFromUrl, lo
 import { t } from '../i18n/translations';
 import type { Locale } from '../i18n';
 
+interface Props {
+  id: string;
+}
+const { id } = Astro.props as Props;
 const currentLocale = (Astro.locals?.locale as Locale | undefined) ?? getLocaleFromUrl(Astro.url) ?? defaultLocale;
 const currentPath = Astro.url.pathname;
 
@@ -21,9 +25,10 @@ const basePath = getBasePath(currentPath, currentLocale);
   <button
     type="button"
     class="lang-switcher-btn"
-    id="lang-switcher-btn"
+    id={`${id}-btn`}
     aria-expanded="false"
     aria-haspopup="true"
+    aria-controls={`${id}-menu`}
   >
     <span class="lang-current-flag">{localeFlags[currentLocale]}</span>
     <span class="lang-current-label">{localeLabels[currentLocale]}</span>
@@ -32,7 +37,7 @@ const basePath = getBasePath(currentPath, currentLocale);
     </svg>
   </button>
 
-  <div class="lang-dropdown" role="menu" aria-labelledby="lang-switcher-btn" hidden>
+  <div id={`${id}-menu`} class="lang-dropdown" role="menu" aria-labelledby={`${id}-btn`} hidden>
     {
       locales.map((locale) => {
         const href = localizePath(locale, basePath);
@@ -64,31 +69,33 @@ const basePath = getBasePath(currentPath, currentLocale);
 
 <script>
   function initLangSwitcher() {
-    const btn = document.getElementById('lang-switcher-btn');
-    const dropdown = document.querySelector('.lang-dropdown') as HTMLElement;
-    if (!btn || !dropdown || btn.dataset.switcherReady) return;
-    btn.dataset.switcherReady = '1';
+    document.querySelectorAll<HTMLElement>('.lang-switcher').forEach((switcher) => {
+      const btn = switcher.querySelector<HTMLButtonElement>('.lang-switcher-btn');
+      const dropdown = switcher.querySelector<HTMLElement>('.lang-dropdown');
+      if (!btn || !dropdown || btn.dataset.switcherReady) return;
+      btn.dataset.switcherReady = '1';
 
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
-      dropdown.hidden = expanded;
-    });
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        dropdown.hidden = expanded;
+      });
 
-    document.addEventListener('click', (e) => {
-      if (!btn.contains(e.target as Node) && !dropdown.contains(e.target as Node)) {
-        btn.setAttribute('aria-expanded', 'false');
-        dropdown.hidden = true;
-      }
-    });
-
-    document.querySelectorAll('.lang-option').forEach((el) => {
-      el.addEventListener('click', () => {
-        const lang = el.getAttribute('data-lang');
-        if (lang) {
-          document.cookie = `chaihuo-lang=${lang}; Path=/; Max-Age=31536000; SameSite=Lax`;
+      document.addEventListener('click', (e) => {
+        if (!btn.contains(e.target as Node) && !dropdown.contains(e.target as Node)) {
+          btn.setAttribute('aria-expanded', 'false');
+          dropdown.hidden = true;
         }
+      });
+
+      switcher.querySelectorAll('.lang-option').forEach((el) => {
+        el.addEventListener('click', () => {
+          const lang = el.getAttribute('data-lang');
+          if (lang) {
+            document.cookie = `chaihuo-lang=${lang}; Path=/; Max-Age=31536000; SameSite=Lax`;
+          }
+        });
       });
     });
   }

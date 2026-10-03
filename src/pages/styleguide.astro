@@ -10,28 +10,32 @@ import LevelBadge from '../components/LevelBadge.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 
 const brandColors: [string, string, string][] = [
-  ['brand-red', '#d84144', '主按钮、强调文字、L3 徽章'],
-  ['brand-red-hover', '#c13538', '主按钮 hover 底色'],
-  ['brand-red-light', '#fdeaea', 'L3 列底、警示底'],
+  ['flame-red', '#d84144', 'logo 原色，品牌短线'],
+  ['module-dark', '#015259', 'M1–M6 模块牌底色'],
+  ['level-l3', '#f9df63', 'L3 列底'],
+  ['brand-red', '#c7353a', '主按钮、强调文字、L3 徽章'],
+  ['brand-red-hover', '#ad2c31', '主按钮 hover 底色'],
+  ['brand-red-light', '#fdeaea', '警示底，课程层级不用此色'],
   ['brand-yellow', '#f3d230', 'L2 徽章、记号笔底、深色面上的序号'],
-  ['brand-yellow-light', '#fef9e7', 'L1 列底、柔黄面'],
-  ['brand-yellow-mid', '#fde68a', 'L2 列底'],
-  ['brand-yellow-dark', '#b8960a', '黄底上的文字'],
-  ['brand-black', '#2b2420', '标题与正文主色（暖炭灰）'],
-  ['brand-graphite', '#3a231d', '深色面、页脚（ember-dark）'],
-  ['background', '#fbfaf6', '页面与卡片的微暖白画布'],
+  ['brand-yellow-light', '#fffae6', 'L1 列底、柔黄面'],
+  ['brand-yellow-mid', '#fdefab', 'L2 列底'],
+  ['brand-yellow-dark', '#66520b', '黄底上的文字'],
+  ['brand-black', '#001d20', '标题与正文主色（青色墨色）'],
+  ['brand-graphite', '#004046', '深色面、页脚（深青绿）'],
+  ['brand-white', '#ffffff', '深色面白墨、产品图衬底'],
+  ['background', '#ffffff', '页面与卡片的白色画布'],
 ];
 const neutrals: [string, string][] = [
-  ['neutral-1', '#f8f6f1'],
-  ['neutral-2', '#f1eee7'],
-  ['neutral-3', '#e5e0d5'],
-  ['neutral-4', '#d0c8b8'],
-  ['neutral-5', '#b0a695'],
-  ['neutral-6', '#8f8574'],
-  ['neutral-7', '#746a5c'],
-  ['neutral-8', '#5a5145'],
-  ['neutral-9', '#3f382f'],
-  ['neutral-10', '#2b2420'],
+  ['neutral-1', '#e8f7f9'],
+  ['neutral-2', '#dbf0f2'],
+  ['neutral-3', '#cae4e7'],
+  ['neutral-4', '#adcfd2'],
+  ['neutral-5', '#84adb2'],
+  ['neutral-6', '#3a6c72'],
+  ['neutral-7', '#2e6167'],
+  ['neutral-8', '#16454a'],
+  ['neutral-9', '#042f33'],
+  ['neutral-10', '#001d20'],
 ];
 const usage: [string, string][] = [
   ['.container-page', '所有 section 的内容容器，全站一条左边线'],
@@ -39,8 +43,9 @@ const usage: [string, string][] = [
   ['.heading-section', '每个 section 的 H2（经 SectionHeader）'],
   ['.label', '小标签：硬件清单表头、场景标题等；中文不用 mono / uppercase'],
   ['.btn + .btn-primary / -secondary / -ghost', '全站按钮；-ghost 只在深色面上'],
-  ['.flame-rule', '内页 hero 底边的火焰细线，每页至多一处'],
-  ['.flame-band', '只用于首页 hero，矩阵卡片压在它上面'],
+  ['.flame-rule', '内页 hero 底边发丝线 + 红黄品牌短线'],
+  ['.flame-band', '首页 hero 的深青绿衬底'],
+  ['.matrix-card / .closing-cta', '首页矩阵与浅青页尾 CTA 的品牌短线'],
   ['.module-tile', '模块代号：矩阵、方向列表、详情页 hero'],
   ['.level-badge', 'L1 / L2 / L3：矩阵列头、详情页三档深度'],
   ['.card-hairline', '详情页折叠区里的带图设备卡'],
@@ -66,10 +71,11 @@ const usage: [string, string][] = [
 
   <section class="section">
     <div class="container-page">
-      <SectionHeader title="颜色" subtitle="取自 logo：红→黄火焰、暖炭灰，没有黑色。" />
-      <div class="flame-band h-16 rounded-lg" aria-label="--gradient-flame"></div>
+      <SectionHeader title="颜色" subtitle="K1 青绿：青色承载结构，红色承载行动，黄色标记学习深度。" />
+      <div class="h-[3px] w-24" style="background-image:var(--gradient-flame)" aria-label="红黄品牌短线"></div>
+      <div class="flame-band mt-4 h-16 rounded-lg" aria-label="青色矩阵衬底"></div>
       <p class="mt-2 text-xs text-neutral-6">
-        --gradient-flame：首页 hero 铺面、内页 hero 底边细线、主按钮 hover。不铺其他大面。
+        品牌短线：72px 火焰红 + 24px 火焰黄。首页衬底用深青绿；主按钮 hover 保持实色红。
       </p>
       <ul class="mt-8 grid gap-x-10 border-t border-neutral-3 sm:grid-cols-2">
         {
@@ -100,7 +106,7 @@ const usage: [string, string][] = [
         }
       </div>
       <p class="mt-2 text-xs text-neutral-6">
-        暖灰阶：n-3 hairline，n-6 标签，n-7 次要文字，n-8 正文，n-1 交替段底。
+        青色结构阶：n-3 hairline，n-6 标签，n-7 次要文字，n-8 正文，n-1 交替段底。
       </p>
     </div>
   </section>
@@ -155,9 +161,9 @@ const usage: [string, string][] = [
           <div class="mt-4 grid max-w-sm grid-cols-3 gap-1 text-center font-mono text-xs font-semibold text-brand-black/70">
             <span class="rounded-sm bg-brand-yellow-light py-2">1d</span>
             <span class="rounded-sm bg-brand-yellow-mid py-2">3d</span>
-            <span class="rounded-sm bg-brand-red-light py-2">5d</span>
+            <span class="rounded-sm bg-level-l3 py-2">5d</span>
           </div>
-          <p class="mt-2 text-xs text-neutral-6">矩阵列底：深度越深、底色越热。</p>
+          <p class="mt-2 text-xs text-neutral-6">矩阵列底：L1 淡黄 → L2 中黄 → L3 亮黄。</p>
         </div>
       </div>
 

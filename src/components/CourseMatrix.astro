@@ -22,15 +22,15 @@ const level = (lvl: LevelId) => {
   return { name, description: deepTranslate(levelMeta[lvl].description, locale) };
 };
 
-// 深度越深、底色越热：L1 淡黄 → L2 中黄 → L3 淡红
+// 深度越深、黄色越浓：L1 淡黄 → L2 中黄 → L3 亮黄。
 const cellBg: Record<LevelId, string> = {
   L1: 'bg-brand-yellow-light',
   L2: 'bg-brand-yellow-mid',
-  L3: 'bg-brand-red-light',
+  L3: 'bg-level-l3',
 };
 ---
 
-<div class:list={[isFull && 'overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0']}>
+<div class:list={['overflow-x-auto', isFull && '-mx-4 px-4 md:mx-0 md:px-0']}>
   <table
     class:list={[
       'w-full border-separate text-left',
