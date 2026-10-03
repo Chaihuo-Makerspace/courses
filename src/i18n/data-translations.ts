@@ -259,7 +259,7 @@ const en: Record<string, string> = {
     'The learning path guide only helps narrow down options. For actual implementation, you also need to review module content, classroom experiments, hardware lists, delivery materials, and delivery formats.',
   'cta.courses.title': 'Once the module and depth are chosen, we can talk about running it.',
   'cta.courses.desc':
-    'Tell us the module, the depth (L1 / L2 / L3) and the class size. Pricing depends on class format and size; we send a proposal within 3 working days of your email.',
+    'Course fees are determined by cohort size, depth, and hardware kits. Email us your organisation type, target module, and timeline to receive an itemized proposal within 3 business days.',
   'cta.about.title': 'Want to bring Chaihuo courses to your school or team?',
   'cta.about.desc':
     'Email us about who the learners are and what you want them to achieve. We reply with a partnership proposal within 3 working days.',
@@ -285,7 +285,7 @@ const en: Record<string, string> = {
   'course.day': 'day',
   'cta.module.title': 'Put {code} on your timetable',
   'cta.module.desc':
-    'Pricing depends on class format and size. Email us the number of learners and the depth you want, and we will send a proposal within 3 working days.',
+    'Budgets are based on participant count and hardware requirements. Email us your expected group size and target depth to receive a detailed syllabus and kit plan within 3 business days.',
   'history.founded.when': '2011',
   'history.founded.title': 'Chaihuo Makerspace opens in Shenzhen',
   'history.founded.desc':
