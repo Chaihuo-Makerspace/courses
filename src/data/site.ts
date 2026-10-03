@@ -31,15 +31,6 @@ export interface OutcomeItem {
   description: string;
 }
 
-export interface HistoryItem {
-  /** 翻译 key 前缀 `history.<id>.*`。 */
-  id: 'founded' | 'seeed' | 'academy';
-  when: string;
-  title: string;
-  description: string;
-  link?: string;
-}
-
 export interface FaqItem {
   /** 翻译 key `faq.<key>.q` / `faq.<key>.a`。 */
   key: 'q1' | 'q2' | 'q3' | 'q4' | 'q5' | 'q6';
@@ -104,40 +95,6 @@ export const moduleFinalCta: SiteCta = {
 };
 
 // ── /about ────────────────────────────────────────────────────────
-
-/**
- * 学院的来历，按先后读：空间 → 硬件 → 课程。出处：
- * - 2011 年深圳成立、中国最早的创客空间之一、由 Seeed 创办：公开事实，owner
- *   2026-10-02 确认「创客空间的历史就是学院的历史」。
- * - 课上用 Seeed 在售的量产硬件：各模块设备清单。
- * - 课程从空间十多年的项目和社区经验整理而来：owner 2026-10-02 确认的学院介绍。
- * 校区地址只在页脚出现。
- */
-export const aboutHistory: HistoryItem[] = [
-  {
-    id: 'founded',
-    when: '空间',
-    title: '2011 年，柴火创客空间在深圳成立',
-    description:
-      '中国最早的创客空间之一，由 Seeed 创办。学院隶属于柴火创客空间，空间的历史就是学院的历史。',
-    link: 'https://www.chaihuo.org',
-  },
-  {
-    id: 'seeed',
-    when: '硬件',
-    title: '课上用的是 Seeed 在售的量产硬件',
-    description:
-      '开发板、传感器、边缘计算设备。学员结课后，可以把同一批硬件直接用在自己的工程项目里。',
-    link: 'https://www.seeedstudio.com',
-  },
-  {
-    id: 'academy',
-    when: '课程',
-    title: '十多年的项目和社区经验，整理成七门课',
-    description:
-      'M0 零基础入门，M1–M6 各对应一类现场问题：楼宇能耗、语音与视觉交互、离网通信、视觉告警、环境监测、机械臂抓取。每门课分三档深度。',
-  },
-];
 
 /**
  * 具名负责人。出处：owner 2026-10-02 确认冯磊为学院总协调负责人，可具名。

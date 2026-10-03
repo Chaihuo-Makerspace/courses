@@ -61,7 +61,7 @@ const zh: TranslationDict = {
   'about.title': '关于学院',
   'about.hero.title': '柴火创客学院',
   'about.hero.description':
-    '我们培养人掌握新技术整合能力，让团队自己能把解决方案部署落地。课程面向院校、集成商和企业。',
+    '我们培养人掌握新技术整合能力，让团队自己能把解决方案部署落地。学院隶属于柴火创客空间，课程面向院校、集成商和企业。',
 
   // Contact
   'contact.title': '合作咨询',
@@ -106,7 +106,6 @@ const zh: TranslationDict = {
   'course.syllabusDetails': '展开 {n} 个教学模块的完整大纲与各形态日程',
   'course.sampleLesson': '其中一节',
   'course.fieldTitle': '上课现场',
-  'about.history.title': '从一间创客空间到七门课',
   'contact.mailCta': '发邮件联系',
 };
 
@@ -165,7 +164,7 @@ const en: TranslationDict = {
   'about.title': 'About the Academy',
   'about.hero.title': 'Chaihuo Maker Academy',
   'about.hero.description':
-    'We train people to integrate new technology, so their own teams can deploy solutions themselves. The courses are offered to schools, integrators and enterprises.',
+    'We train people to integrate new technology, so their own teams can deploy solutions themselves. The Academy is part of Chaihuo Makerspace; its courses are offered to schools, integrators and enterprises.',
 
   'contact.title': 'Partnership',
   'contact.hero.title': 'Three kinds of organisation, four ways to work together',
@@ -208,7 +207,6 @@ const en: TranslationDict = {
   'course.syllabusDetails': 'Show the full syllabus of {n} units and the schedule for each format',
   'course.sampleLesson': 'One of the lessons',
   'course.fieldTitle': 'In the classroom',
-  'about.history.title': 'From a makerspace to seven courses',
   'contact.mailCta': 'Email us',
 };
 
@@ -265,7 +263,7 @@ const ja: TranslationDict = {
   'about.title': '学院について',
   'about.hero.title': '柴火創客学院',
   'about.hero.description':
-    '私たちは新しい技術を統合する力を持つ人材を育て、チームが自らソリューションを導入・展開できるようにします。講座は学校、インテグレーター、企業向けに提供しています。',
+    '私たちは新しい技術を統合する力を持つ人材を育て、チームが自らソリューションを導入・展開できるようにします。学院は柴火創客空間に属し、講座は学校、インテグレーター、企業向けに提供しています。',
 
   'contact.title': 'パートナーシップ',
   'contact.hero.title': '3種類の機関、4つの協業形態',
@@ -308,7 +306,6 @@ const ja: TranslationDict = {
   'course.syllabusDetails': '全{n}ユニットのシラバスと形態別の日程を表示',
   'course.sampleLesson': '授業の一例',
   'course.fieldTitle': '授業の現場',
-  'about.history.title': '一つのメイカースペースから7つの講座へ',
   'contact.mailCta': 'メールで相談する',
 };
 
@@ -367,7 +364,7 @@ const es: TranslationDict = {
   'about.title': 'Acerca de la Academia',
   'about.hero.title': 'Academia Chaihuo Maker',
   'about.hero.description':
-    'Formamos a personas para que sepan integrar nuevas tecnologías, de modo que su propio equipo pueda desplegar soluciones. Los cursos están dirigidos a centros educativos, integradores y empresas.',
+    'Formamos a personas para que sepan integrar nuevas tecnologías, de modo que su propio equipo pueda desplegar soluciones. La Academia forma parte de Chaihuo Makerspace; sus cursos están dirigidos a centros educativos, integradores y empresas.',
 
   'contact.title': 'Colaboración',
   'contact.hero.title': 'Tres tipos de organización, cuatro formas de colaborar',
@@ -411,7 +408,6 @@ const es: TranslationDict = {
     'Ver el temario completo de {n} unidades y el calendario de cada formato',
   'course.sampleLesson': 'Una de las clases',
   'course.fieldTitle': 'En el aula',
-  'about.history.title': 'De un makerspace a siete cursos',
   'contact.mailCta': 'Escríbanos',
 };
 
@@ -469,7 +465,7 @@ const ptBR: TranslationDict = {
   'about.title': 'Sobre a Academia',
   'about.hero.title': 'Academia Chaihuo Maker',
   'about.hero.description':
-    'Formamos pessoas para integrar novas tecnologias, para que a própria equipe consiga implantar soluções. Os cursos são oferecidos a escolas, integradores e empresas.',
+    'Formamos pessoas para integrar novas tecnologias, para que a própria equipe consiga implantar soluções. A Academia faz parte do Chaihuo Makerspace; seus cursos são oferecidos a escolas, integradores e empresas.',
 
   'contact.title': 'Parceria',
   'contact.hero.title': 'Três tipos de organização, quatro formas de parceria',
@@ -513,7 +509,6 @@ const ptBR: TranslationDict = {
     'Ver o programa completo de {n} unidades e o cronograma de cada formato',
   'course.sampleLesson': 'Uma das aulas',
   'course.fieldTitle': 'Em sala de aula',
-  'about.history.title': 'De um makerspace a sete cursos',
   'contact.mailCta': 'Envie um e-mail',
 };
 

@@ -5,7 +5,6 @@ import {
   type CtaIntent,
   ctaTargets,
   type FaqItem,
-  type HistoryItem,
   type LinkItem,
   type OutcomeItem,
   type SiteCta,
@@ -81,15 +80,6 @@ export function translateCta(cta: SiteCta, locale: Locale, params?: Record<strin
     primary: ctaLink(cta.primary, locale),
     secondary: cta.secondary ? ctaLink(cta.secondary, locale) : undefined,
   };
-}
-
-export function translateHistory(items: HistoryItem[], locale: Locale): HistoryItem[] {
-  return items.map((item) => ({
-    ...item,
-    when: tr(locale, `history.${item.id}.when`, item.when),
-    title: tr(locale, `history.${item.id}.title`, item.title),
-    description: tr(locale, `history.${item.id}.desc`, item.description),
-  }));
 }
 
 export function translatePerson(locale: Locale): typeof aboutPerson {

@@ -274,18 +274,6 @@ const en: Record<string, string> = {
   'cta.module.title': 'Put {code} on your timetable',
   'cta.module.desc':
     'Budgets are based on participant count and hardware requirements. Email us your expected group size and target depth to receive a detailed syllabus and kit plan within 3 business days.',
-  'history.founded.when': 'Makerspace',
-  'history.founded.title': '2011: Chaihuo Makerspace opens in Shenzhen',
-  'history.founded.desc':
-    "One of the earliest makerspaces in China, founded by Seeed. The Academy is part of Chaihuo Makerspace, so the makerspace's history is the Academy's history.",
-  'history.seeed.when': 'Hardware',
-  'history.seeed.title': 'Classes run on the production hardware Seeed sells',
-  'history.seeed.desc':
-    'Development boards, sensors and edge computing devices. Learners can take the same hardware straight into their own engineering projects after the course.',
-  'history.academy.when': 'Courses',
-  'history.academy.title': 'A decade of projects and community work, organised into seven courses',
-  'history.academy.desc':
-    'M0 is the entry course for beginners. M1–M6 each address one kind of on-site problem: building energy use, voice and vision interaction, off-grid communication, vision alerts, environmental monitoring and robotic grasping. Each course comes at three depths.',
   'person.name': 'Feng Lei',
   'person.role': 'General Coordinator, Chaihuo Maker Academy',
   'person.quote':
@@ -488,18 +476,6 @@ const ja: Record<string, string> = {
   'cta.module.title': '{code}を時間割に組み込む',
   'cta.module.desc':
     'お見積りはクラス形態と規模に応じます。受講人数と希望する深さをメールでお知らせいただければ、3営業日以内にご提案をお送りします。',
-  'history.founded.when': '空間',
-  'history.founded.title': '2011年、柴火創客空間が深圳で設立',
-  'history.founded.desc':
-    '中国で最も早い時期のメイカースペースの一つで、Seeedが設立しました。学院は柴火創客空間に属しており、空間の歴史がそのまま学院の歴史です。',
-  'history.seeed.when': '機器',
-  'history.seeed.title': '授業で使うのはSeeedが販売している量産ハードウェア',
-  'history.seeed.desc':
-    '開発ボード、センサー、エッジコンピューティング機器。受講後は同じハードウェアをそのまま自分たちのプロジェクトで使えます。',
-  'history.academy.when': '講座',
-  'history.academy.title': '10年以上のプロジェクトとコミュニティの経験を、7つの講座に整理',
-  'history.academy.desc':
-    'M0は未経験者向けの入門講座です。M1〜M6はそれぞれ現場の課題に対応します：ビルのエネルギー使用、音声・視覚インタラクション、オフグリッド通信、映像によるアラート、環境モニタリング、ロボットアームによる把持。各講座は3段階の深さで提供します。',
   'person.name': '馮磊',
   'person.role': '柴火創客学院 総括コーディネーター',
   'person.quote':
@@ -714,18 +690,6 @@ const es: Record<string, string> = {
   'cta.module.title': 'Incorpore {code} a su programación',
   'cta.module.desc':
     'El presupuesto depende del formato y del tamaño de la clase. Indíquenos por correo el número de participantes y el nivel deseado y enviaremos una propuesta en 3 días hábiles.',
-  'history.founded.when': 'Makerspace',
-  'history.founded.title': '2011: Chaihuo Makerspace abre en Shenzhen',
-  'history.founded.desc':
-    'Uno de los primeros makerspaces de China, fundado por Seeed. La Academia forma parte de Chaihuo Makerspace, de modo que la historia del makerspace es la de la Academia.',
-  'history.seeed.when': 'Hardware',
-  'history.seeed.title': 'En clase se usa el hardware de producción que vende Seeed',
-  'history.seeed.desc':
-    'Placas de desarrollo, sensores y equipos de computación perimetral. Al terminar el curso, el mismo hardware se puede usar directamente en proyectos propios.',
-  'history.academy.when': 'Cursos',
-  'history.academy.title': 'Más de una década de proyectos y trabajo comunitario, ordenada en siete cursos',
-  'history.academy.desc':
-    'M0 es el curso de entrada para principiantes. M1–M6 abordan cada uno un tipo de problema sobre el terreno: consumo energético en edificios, interacción por voz y visión, comunicación sin red, alertas por visión, monitorización ambiental y agarre robótico. Cada curso se ofrece en tres niveles.',
   'person.name': 'Feng Lei',
   'person.role': 'Coordinador general, Academia Chaihuo Maker',
   'person.quote':
@@ -936,18 +900,6 @@ const ptBR: Record<string, string> = {
   'cta.module.title': 'Inclua o {code} na sua grade',
   'cta.module.desc':
     'O orçamento depende do formato e do tamanho da turma. Informe por e-mail o número de participantes e o nível desejado e enviaremos uma proposta em até 3 dias úteis.',
-  'history.founded.when': 'Makerspace',
-  'history.founded.title': '2011: o Chaihuo Makerspace é fundado em Shenzhen',
-  'history.founded.desc':
-    'Um dos primeiros makerspaces da China, fundado pela Seeed. A Academia faz parte do Chaihuo Makerspace, portanto a história do makerspace é a da Academia.',
-  'history.seeed.when': 'Hardware',
-  'history.seeed.title': 'Em aula, usa-se o hardware de produção que a Seeed vende',
-  'history.seeed.desc':
-    'Placas de desenvolvimento, sensores e equipamentos de computação de borda. Depois do curso, o mesmo hardware pode ser usado diretamente nos projetos da própria equipe.',
-  'history.academy.when': 'Cursos',
-  'history.academy.title': 'Mais de uma década de projetos e trabalho comunitário, organizada em sete cursos',
-  'history.academy.desc':
-    'O M0 é o curso de entrada para iniciantes. M1–M6 tratam cada um de um tipo de problema em campo: consumo de energia em edifícios, interação por voz e visão, comunicação fora da rede, alertas por visão, monitoramento ambiental e preensão robótica. Cada curso é oferecido em três níveis.',
   'person.name': 'Feng Lei',
   'person.role': 'Coordenador-geral, Academia Chaihuo Maker',
   'person.quote':
