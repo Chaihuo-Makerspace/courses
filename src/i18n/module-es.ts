@@ -378,8 +378,8 @@ export const esDict: Record<string, string> = {
     'Kit de desarrollo Ethernet XIAO W5500 (gateway proxy Bluetooth PoE)',
   '免布线蓝牙网关，接收BLE设备广播并接入平台':
     'Gateway Bluetooth sin cableado, recibe transmisiones de dispositivos BLE y se conecta a la plataforma',
-  '基于 PoE 供电的有线网络蓝牙网关，采集米家蓝牙温湿度计等 BLE 广播设备数据，通过有线网络回传给 Home Assistant，解决蓝牙信号覆盖受限的问题。':
-    'Pasarela Bluetooth con alimentación PoE y conexión cableada que captura datos de balizas BLE y los reenvía a Home Assistant por red cableada, superando el alcance limitado del Bluetooth.',
+  '基于 PoE 供电的有线网络蓝牙代理网关，采集米家蓝牙温湿度计等 BLE 广播设备数据，通过有线网络回传给 Home Assistant，解决蓝牙信号覆盖受限的问题。':
+    'Pasarela Bluetooth Proxy con alimentación PoE y conexión cableada que captura datos de balizas BLE y los reenvía a Home Assistant por red cableada, superando el alcance limitado del Bluetooth.',
   'XIAO W5500 以太网开发套件': 'Kit de desarrollo Ethernet XIAO W5500',
   'SenseCAP Indicator 4英寸 RGB 触控屏': 'Pantalla tactil RGB SenseCAP Indicator de 4 pulgadas',
   '桌面触控中枢，展示环境参数与设备快捷控制':
@@ -570,8 +570,8 @@ export const esDict: Record<string, string> = {
   '基于物理 AI 终端，融合边缘视觉、语音与业务系统 API，实现多模态空间交互。':
     'Basado en terminales de IA físicos, integra visión en el borde, voz y APIs de sistemas de negocio para lograr interacción espacial multimodal.',
   多模态空间交互: 'interacción espacial multimodal',
-  '仓储管理、展厅导览与智能前台这些场景里，现场人员要查业务数据，往往得先放下手里的活，掏出手机或回到电脑前手动敲键盘。传统终端没有视觉感知，人走近了不会主动响应，也识别不了异常动作。很多智能终端生态封闭，接不进现有的 WMS、ERP 系统；而在工业与政企现场，音频和业务数据往往严禁上传公网。':
-    'En almacenes, salas de exposición y recepciones inteligentes, el personal debe interrumpir sus tareas para buscar datos a mano en móviles o teclados. Los terminales tradicionales carecen de contexto visual: no detectan cuando alguien se acerca ni identifican acciones anómalas. Muchos terminales inteligentes forman ecosistemas cerrados difíciles de integrar con sistemas WMS y ERP existentes, y las normativas industriales prohíben subir audio y datos operativos a la nube pública.',
+  '仓储管理、展厅导览、智能前台等场景中，现场人员要查业务数据，需停下手头操作，在手机或电脑键盘上手动检索，效率受限。传统交互终端缺乏视觉上下文，无法主动感知人员靠近或异常动作。智能终端多为封闭生态，难以与存量 WMS、ERP、CRM 系统对接；部分工业与政企场景禁止音频与业务数据上传公网。':
+    'En almacenes, salas de exposición y recepciones inteligentes, consultar datos exige pausar el trabajo manual para buscar en móviles o teclados, limitando la eficiencia. Los terminales tradicionales carecen de contexto visual y no detectan la aproximación de personas ni acciones anómalas. Muchos terminales inteligentes forman ecosistemas cerrados difíciles de integrar con sistemas WMS, ERP y CRM existentes; ciertos entornos industriales y gubernamentales prohíben subir audio y datos operativos a la nube pública.',
   进阶: 'Avanzado',
   'L1 适合零基础或首次接触边缘 AI 交互设备；L2 需具备 Docker 基础与 REST API 调用经验；L3 需具备 Linux、PyTorch / Jetson 基础与 Shell 操作能力':
     'L1 apto para principiantes o personas sin contacto previo con dispositivos de IA en el borde; L2 requiere nociones de Docker y consumo de REST API; L3 exige conocimientos de Linux, PyTorch / Jetson y manejo de shell',
@@ -643,8 +643,8 @@ export const esDict: Record<string, string> = {
     'Ejecute todo el flujo de voz en local: funciona sin conexión y los datos no salen de la intranet',
   '掌握 VAD → ASR → LLM → TTS 完整本地端到端语音管线架构':
     'Dominar la arquitectura completa de canalización de voz local de extremo a extremo (VAD → ASR → LLM → TTS)',
-  '掌握在 Jetson 边缘计算硬件上量化与部署大模型的方法':
-    'Dominar la cuantización y despliegue de modelos LLM en hardware de borde Jetson',
+  '掌握在 Jetson 边缘计算硬件上量化与部署优化大模型的方法':
+    'Dominar la cuantización, despliegue y optimización de modelos LLM en hardware de borde Jetson',
   '具备在强隐私与工业隔离网环境下交付 AI 交互方案的能力':
     'Capacidad para desplegar soluciones de interacción con IA en entornos industriales aislados y con altos requisitos de privacidad',
   'L3 离线算力': 'Potencia offline L3',
@@ -803,8 +803,8 @@ export const esDict: Record<string, string> = {
   打通物理端侧交互与企业存量业务逻辑:
     'Conectar la interacción física en el extremo con la lógica empresarial existente',
   把业务系统接进语音交互: 'Integrar sistemas de negocio en la interacción por voz',
-  'M2 的重点是把视觉感知、语音交互与企业现有的业务系统（如 WMS、ERP）真正接通。课程不讲纯云端调用的通用玩具案例，而是带着学员做物理终端接入、MCP 工具调用和纯内网离线部署，为讲师提供开箱即用的软硬件实操环境。':
-    'M2 se centra en vincular la percepción visual y la interacción por voz con sistemas de gestión reales (como WMS o ERP). Lejos de limitarse a demostraciones genéricas en la nube, aborda la conexión de terminales físicos, la integración con MCP y el despliegue puramente local y desconectado, facilitando a los docentes un entorno listo para usar.',
+  'M2 聚焦于把视觉感知、语音交互与企业存量业务系统（如 WMS、ERP）深层串联。课程带着学员完成物理终端接入、MCP 工具调用以及纯局域网离线部署，为讲师提供全套开箱即可验证的软硬件环境。':
+    'M2 se centra en vincular profundamente la percepción visual, la interacción por voz y los sistemas de gestión existentes (como WMS y ERP). El curso guía a través de la integración de terminales físicos, llamadas a herramientas MCP y despliegues sin conexión en red local, facilitando un entorno listo para verificar.',
   '模块 04 的语音查询内容支持自由定制。讲师可将仓储盘点替换为展厅导览、设备状态巡检或会议室调度，引导学员根据实际业务语义设计多轮对话策略。':
     'El contenido de consulta por voz de la unidad 04 es totalmente personalizable. El docente puede sustituir el inventario por visitas guiadas, rondas de mantenimiento o reserva de salas, enseñando a diseñar diálogos adaptados a operaciones reales.',
   接系统: 'Conectar sistemas',
@@ -844,8 +844,8 @@ export const esDict: Record<string, string> = {
   '基于 LoRa Mesh 自组网协议，构建无公网依赖、多跳中继的离网应急通信与传感数据回传网络。':
     'Basado en el protocolo LoRa Mesh, construye una red de emergencia off-grid y retorno de datos de sensores sin dependencia de red pública y con repetidores multisalto.',
   '无公网依赖、多跳中继': 'sin dependencia de red pública y con repetidores multisalto',
-  '野外勘探、隧道施工与应急搜救现场往往没有蜂窝网络覆盖，普通对讲机受视距遮挡严重，也传不了位置坐标和环境数据。传统单点中继台依赖市电与制高点，单点一坏整网就瘫痪；卫星电话价格高昂且在山体或地下容易失联，临时拉专网又费时费钱。':
-    'En prospecciones de campo, obras en túneles o rescates de emergencia, las redes móviles suelen ser inexistentes; los walkie-talkies tradicionales sufren por falta de línea de visión y no transmiten coordenadas ni lecturas de sensores. Los repetidores fijos dependen de red eléctrica y mástiles elevados: si uno falla, toda la red cae. El teléfono satelital es caro y tiene zonas de sombra, y desplegar enlaces dedicados requiere plazos y presupuestos desorbitados.',
+  '野外勘探、隧道施工、应急搜救等场景缺乏蜂窝基站覆盖，传统对讲机视距受限，无法回传坐标与传感数据。单点中继台依赖市电与高位节点，一旦受损整网中断；卫星电话终端昂贵且存在遮挡盲区，临时专网架设周期长、成本高。':
+    'En prospecciones de campo, obras en túneles o rescates de emergencia, las redes móviles suelen ser inexistentes; los walkie-talkies tradicionales sufren por falta de línea de visión y no transmiten coordenadas ni lecturas de sensores. Los repetidores fijos dependen de red eléctrica y mástiles elevados: si uno falla, toda la red cae. El teléfono satelital es caro y tiene zonas de sombra, y desplegar enlaces dedicados requiere plazos y presupuestos elevados.',
   'L1 适合会使用智能手机与蓝牙配对、了解基础物联网概念的学员；L2 需具备 Node-RED 或 MQTT 基础，能配置网络与 Broker；L3 需熟悉 C/C++ 与 PlatformIO，能阅读并修改开源固件源码':
     'L1 adecuado para quienes manejan emparejamiento Bluetooth en móviles y conceptos básicos de IoT; L2 requiere base de Node-RED o MQTT y configuración de brokers; L3 exige dominio de C/C++ y PlatformIO para adaptar el firmware libre',
   '野外勘探与户外赛事：队员位置实时追踪、分组文字通信、SOS 告警广播':
@@ -983,8 +983,8 @@ export const esDict: Record<string, string> = {
   编译烧录与实机验证: 'Compilacion, flasheo y verificacion en dispositivo real',
   '关键转折点 · 从离网自治到公网融合与端侧定制':
     'Punto de inflexión clave · de la autonomía off-grid a la fusión con red pública y personalización en dispositivo',
-  'Meshtastic 基础配置打通了「无网环境下设备互联、消息送达」；Node-RED 则将 Mesh 现场遥测数据接入局域网或公网大屏，实现远程集中监控与告警；PlatformIO 固件定制让学员掌握底层代码修改能力，可以按需接入专用传感器、定制现场终端。':
-    'La configuración base de Meshtastic garantiza la mensajería directa sin cobertura; Node-RED centraliza la telemetría en paneles de control con alertas operativas; la personalización del firmware en PlatformIO capacita para integrar sensores específicos en nodos de campo.',
+  'Meshtastic 配置解决「设备能组网、消息能送达」的离网通信；Node-RED 负责将 Mesh 数据接入公网与监控大屏，完成态势呈现；PlatformIO 固件定制则让终端具备自定义传感能力，支持按需开发专属设备。':
+    'La configuración de Meshtastic resuelve la comunicación fuera de red garantizando que los equipos se conecten y los mensajes lleguen; Node-RED integra los datos Mesh en redes públicas y pantallas de control; la personalización del firmware en PlatformIO dota a los terminales de capacidad de detección a medida.',
   '另需 EMQX / Mosquitto MQTT Broker（承载 Mesh 报文桥接）、Meshtastic Map（离线地图态势看板）。':
     'Requiere además un broker MQTT (EMQX / Mosquitto para reenviar tramas Mesh) y Meshtastic Map para mapas offline.',
   '硬件台架清点、频段一致性校验（433 / 868 / 915 MHz）、固件预检升级、现场测线规划与小组信道 / PSK 分配':
@@ -1006,8 +1006,8 @@ export const esDict: Record<string, string> = {
     'Ensamblaje de gateway XIAO ESP32S3 + Wio-SX1262, conexión Wi-Fi y configuración de acceso a MQTT Broker, reenvío de datos ascendente y difusión de comandos descendente',
   'Mesh 遥测数据解析与 Node-RED 联动':
     'Análisis de datos de telemetría Mesh y vinculación con Node-RED',
-  '解析 Meshtastic MQTT 遥测报文（默认 Protobuf，JSON 输出需另行配置），配置节点电量与心跳状态监视流，实现 Webhook 与即时通信告警联动':
-    'Análisis de telemetría MQTT en Meshtastic (Protobuf por defecto, JSON opcional), flujo de monitorización de batería y latidos, y alertas vía Webhook / mensajería',
+  '解析 Meshtastic MQTT 遥测报文（默认 Protobuf，JSON 输出需另行配置），配置节点电量与心跳状态监视流，实现 SOS 告警联动（Webhook / 邮件 / 即时通信）':
+    'Análisis de telemetría MQTT en Meshtastic (Protobuf por defecto, JSON opcional), flujo de monitorización de batería y latidos, y alertas de SOS (Webhook / correo electrónico / mensajería)',
   网络拓扑与地图可视化大屏: 'Topologia de red y panel grande de visualizacion de mapa',
   '部署 Meshtastic Map 或自建地图服务，实时呈现节点分布、信号强度（RSSI / SNR）与中继链路跳数':
     'Despliegue de Meshtastic Map o cartografía propia, visualizando en tiempo real posiciones, calidad de señal (RSSI / SNR) y saltos de retransmisión',
@@ -1060,8 +1060,8 @@ export const esDict: Record<string, string> = {
     'El curso de iniciación dura un día, no requiere programar y llega hasta «los dispositivos forman red y los mensajes llegan». Es adecuado para ferias, jornadas de puertas abiertas y primeros contactos con un cliente.',
   '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并复盘）；若需更多 Node-RED 调优与看板定制时间则用满 3 天。':
     'El Day 3 de la clase práctica es un día flexible opcional: si los estudiantes tienen buena base puede comprimirse a 2 días (la tarde del Day 2 combina la revisión); si se necesita más tiempo para la optimización de Node-RED y la personalización de paneles se usan los 3 días completos.',
-  '所有 LoRa 设备必须使用同一频段（433 / 868 / 915 MHz），混用频段会导致物理层无法解调组网。本课程仅面向海外无线频段（EU868 / US915 等），严禁用于国内频段应用。':
-    'Todos los dispositivos LoRa deben operar en la misma banda (433 / 868 / 915 MHz); mezclar bandas impide la demodulación física. Este temario está destinado a bandas internacionales (EU868 / US915) y está estrictamente prohibido su uso en frecuencias de China continental.',
+  '所有 LoRa 设备必须使用同一频段（433 / 868 / 915 MHz），混用频段将导致物理层无法解调组网。本课程仅面向海外无线频段（EU868 / US915 等），不得用于国内频段应用。':
+    'Todos los dispositivos LoRa deben operar en la misma banda (433 / 868 / 915 MHz); mezclar bandas impedirá la demodulación en la capa física. Este temario está destinado a bandas internacionales (EU868 / US915) y no debe utilizarse en frecuencias de China continental.',
   'Solar Node 部署时需注意天线垂直极化方向与架设高度，通信距离受地形起伏与建筑物遮挡影响显著；消息时延随跳数增加而累加（典型 1–3 秒 / 跳）。':
     'Al instalar Solar Nodes debe asegurarse la polarización vertical de la antena y suficiente elevación; el alcance depende fuertemente de la orografía y obstáculos; la latencia aumenta con cada salto (1–3 s / salto típico).',
   '体验课不包含 MQTT 桥接与固件定制内容，请勿向客户承诺体验课学员能独立完成 LoRa-MQTT 网关搭建——那是实战课的交付标准。':
@@ -1086,14 +1086,14 @@ export const esDict: Record<string, string> = {
     'Incluye especificaciones de instalación de antenas, requisitos de cumplimiento de bandas, lista de inspección diaria y proceso de depuración de fallos.',
   在没有公网信号的地方搭起自组网: 'Desplegar una red en malla propia donde no hay señal pública',
   无公网环境下把人和数据连起来: 'Conectar personas y datos en entornos sin red publica',
-  'M3 针对的是没有蜂窝网络覆盖、基站完全瘫痪时的应急通信需求。课程基于开源 LoRa Mesh 协议与轻量节点，带学员从零规划拓扑、打通离线位置回传，再架设网关把现场态势推到监控大屏。全部讲义和工程源码均支持讲师按需裁剪。':
-    'M3 resuelve las necesidades de comunicación de emergencia cuando no hay señal celular o las estaciones base están caídas. Mediante el protocolo abierto LoRa Mesh y nodos ligeros, el alumnado planifica topologías, transmite coordenadas sin conexión y levanta pasarelas para enviar la telemetría a pantallas de mando.',
+  'M3 针对无公网、无基站覆盖环境下的信息互通需求。课程基于开源 LoRa Mesh 协议与轻量节点，带学员完整经历通信拓扑规划、离线轨迹回传与自建网关上云的全过程。全部讲义与工程源码支持讲师按需二次裁剪。':
+    'M3 responde a las necesidades de intercambio de información en entornos sin cobertura pública ni estaciones base. Mediante el protocolo abierto LoRa Mesh y nodos ligeros, el curso abarca desde la planificación topológica y el retorno de trayectorias sin conexión hasta la integración en la nube con pasarelas propias.',
   '模块 05 支持在校园开阔地、地下车库或野外做拉距与穿墙测试，让学员直观观察遮挡、天线极化与跳数累加对丢包率的影响。':
     'La unidad 05 permite realizar pruebas de alcance y penetración en espacios abiertos, aparcamientos subterráneos o entornos agrestes, comprobando de primera mano el impacto de obstáculos y saltos en la pérdida de paquetes.',
   '在模块 09 之后，可接入校内或行业专属的环境监测探头，演练无蜂窝网络下的低功耗多跳数据回传。':
     'Tras la unidad 09, es posible integrar sondas ambientales o agrícolas para practicar la telemetría multisalto de ultra bajo consumo en zonas sin cobertura de telefonía.',
-  '把无线电管理法规、空口占空比（Duty Cycle）限制和信道防拥堵设计讲透，让学员做出的方案符合现场规范，不被法规清退。':
-    'Explica a fondo las normativas de telecomunicaciones, los límites de tiempo de emisión (Duty Cycle) y el control de saturación de canal para que los despliegues cumplan estrictamente la ley.',
+  '结合当地无线电管理频段要求、空口占空比限制及多节点信道拥堵规划，传授符合现场标准的通信网络设计规范。':
+    'Combinando los requisitos de bandas de radio locales, los límites de tiempo de emisión (Duty Cycle) y la planificación contra la congestión, se transmiten normas de diseño que cumplen los estándares de campo.',
   '仅面向海外无线频段（EU868/US915 等），不得用于国内频段应用。':
     'Solo orientado a bandas inalámbricas internacionales (EU868/US915, etc.), no se permite su uso en aplicaciones de bandas domésticas de China.',
   无公网环境下的短文本即时通讯与群组广播:

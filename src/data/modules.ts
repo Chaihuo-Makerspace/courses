@@ -844,7 +844,7 @@ export const modules: Module[] = [
           name: 'XIAO W5500 以太网开发套件（PoE 蓝牙代理网关）',
           note: '免布线蓝牙网关，接收BLE设备广播并接入平台',
           description:
-            '基于 PoE 供电的有线网络蓝牙网关，采集米家蓝牙温湿度计等 BLE 广播设备数据，通过有线网络回传给 Home Assistant，解决蓝牙信号覆盖受限的问题。',
+            '基于 PoE 供电的有线网络蓝牙代理网关，采集米家蓝牙温湿度计等 BLE 广播设备数据，通过有线网络回传给 Home Assistant，解决蓝牙信号覆盖受限的问题。',
           image: '/illustrations/m1-xiao-ethernet-adapter.png',
           imageAlt: 'XIAO W5500 以太网开发套件',
         },
@@ -1179,7 +1179,7 @@ export const modules: Module[] = [
     oneLiner: '基于物理 AI 终端，融合边缘视觉、语音与业务系统 API，实现多模态空间交互。',
     oneLinerEmphasis: '多模态空间交互',
     realProblem:
-      '仓储管理、展厅导览与智能前台这些场景里，现场人员要查业务数据，往往得先放下手里的活，掏出手机或回到电脑前手动敲键盘。传统终端没有视觉感知，人走近了不会主动响应，也识别不了异常动作。很多智能终端生态封闭，接不进现有的 WMS、ERP 系统；而在工业与政企现场，音频和业务数据往往严禁上传公网。',
+      '仓储管理、展厅导览、智能前台等场景中，现场人员要查业务数据，需停下手头操作，在手机或电脑键盘上手动检索，效率受限。传统交互终端缺乏视觉上下文，无法主动感知人员靠近或异常动作。智能终端多为封闭生态，难以与存量 WMS、ERP、CRM 系统对接；部分工业与政企场景禁止音频与业务数据上传公网。',
     illustration: '/illustrations/m2.svg',
     heroImage: '/illustrations/m2-sensecap-watcher.png',
     difficulty: '进阶',
@@ -1267,7 +1267,7 @@ export const modules: Module[] = [
         durationDays: 5,
         outcomes: [
           '掌握 VAD → ASR → LLM → TTS 完整本地端到端语音管线架构',
-          '掌握在 Jetson 边缘计算硬件上量化与部署大模型的方法',
+          '掌握在 Jetson 边缘计算硬件上量化与部署优化大模型的方法',
           '具备在强隐私与工业隔离网环境下交付 AI 交互方案的能力',
         ],
         comingSoon: false,
@@ -1628,7 +1628,7 @@ export const modules: Module[] = [
       heading: '打通物理端侧交互与企业存量业务逻辑',
       emphasis: '物理端侧交互与企业存量业务逻辑',
       intro:
-        'M2 的重点是把视觉感知、语音交互与企业现有的业务系统（如 WMS、ERP）真正接通。课程不讲纯云端调用的通用玩具案例，而是带着学员做物理终端接入、MCP 工具调用和纯内网离线部署，为讲师提供开箱即用的软硬件实操环境。',
+        'M2 聚焦于把视觉感知、语音交互与企业存量业务系统（如 WMS、ERP）深层串联。课程带着学员完成物理终端接入、MCP 工具调用以及纯局域网离线部署，为讲师提供全套开箱即可验证的软硬件环境。',
       openings: [
         {
           no: '切入点 01',
@@ -1681,7 +1681,7 @@ export const modules: Module[] = [
       '基于 LoRa Mesh 自组网协议，构建无公网依赖、多跳中继的离网应急通信与传感数据回传网络。',
     oneLinerEmphasis: '无公网依赖、多跳中继',
     realProblem:
-      '野外勘探、隧道施工与应急搜救现场往往没有蜂窝网络覆盖，普通对讲机受视距遮挡严重，也传不了位置坐标和环境数据。传统单点中继台依赖市电与制高点，单点一坏整网就瘫痪；卫星电话价格高昂且在山体或地下容易失联，临时拉专网又费时费钱。',
+      '野外勘探、隧道施工、应急搜救等场景缺乏蜂窝基站覆盖，传统对讲机视距受限，无法回传坐标与传感数据。单点中继台依赖市电与高位节点，一旦受损整网中断；卫星电话终端昂贵且存在遮挡盲区，临时专网架设周期长、成本高。',
     illustration: '/illustrations/m3.svg',
     heroImage: '/illustrations/m3-mission-pack.png',
     difficulty: '进阶',
@@ -1865,7 +1865,7 @@ export const modules: Module[] = [
       ],
       hinge: {
         title: '关键转折点 · 从离网自治到公网融合与端侧定制',
-        body: 'Meshtastic 基础配置打通了「无网环境下设备互联、消息送达」；Node-RED 则将 Mesh 现场遥测数据接入局域网或公网大屏，实现远程集中监控与告警；PlatformIO 固件定制让学员掌握底层代码修改能力，可以按需接入专用传感器、定制现场终端。',
+        body: 'Meshtastic 配置解决「设备能组网、消息能送达」的离网通信；Node-RED 负责将 Mesh 数据接入公网与监控大屏，完成态势呈现；PlatformIO 固件定制则让终端具备自定义传感能力，支持按需开发专属设备。',
       },
       note: '另需 EMQX / Mosquitto MQTT Broker（承载 Mesh 报文桥接）、Meshtastic Map（离线地图态势看板）。',
     },
@@ -1922,7 +1922,7 @@ export const modules: Module[] = [
           no: '07',
           title: 'Mesh 遥测数据解析与 Node-RED 联动',
           detail:
-            '解析 Meshtastic MQTT 遥测报文（默认 Protobuf，JSON 输出需另行配置），配置节点电量与心跳状态监视流，实现 Webhook 与即时通信告警联动',
+            '解析 Meshtastic MQTT 遥测报文（默认 Protobuf，JSON 输出需另行配置），配置节点电量与心跳状态监视流，实现 SOS 告警联动（Webhook / 邮件 / 即时通信）',
           tool: 'Node-RED',
           coverage: { taster: 'none', workshop: 'full', bootcamp: 'full' },
         },
@@ -2081,7 +2081,7 @@ export const modules: Module[] = [
         '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并复盘）；若需更多 Node-RED 调优与看板定制时间则用满 3 天。',
       ],
       warnings: [
-        '所有 LoRa 设备必须使用同一频段（433 / 868 / 915 MHz），混用频段会导致物理层无法解调组网。本课程仅面向海外无线频段（EU868 / US915 等），严禁用于国内频段应用。',
+        '所有 LoRa 设备必须使用同一频段（433 / 868 / 915 MHz），混用频段将导致物理层无法解调组网。本课程仅面向海外无线频段（EU868 / US915 等），不得用于国内频段应用。',
         'Solar Node 部署时需注意天线垂直极化方向与架设高度，通信距离受地形起伏与建筑物遮挡影响显著；消息时延随跳数增加而累加（典型 1–3 秒 / 跳）。',
         '体验课不包含 MQTT 桥接与固件定制内容，请勿向客户承诺体验课学员能独立完成 LoRa-MQTT 网关搭建——那是实战课的交付标准。',
       ],
@@ -2120,7 +2120,7 @@ export const modules: Module[] = [
       heading: '在没有公网信号的地方搭起自组网',
       emphasis: '搭起自组网',
       intro:
-        'M3 针对的是没有蜂窝网络覆盖、基站完全瘫痪时的应急通信需求。课程基于开源 LoRa Mesh 协议与轻量节点，带学员从零规划拓扑、打通离线位置回传，再架设网关把现场态势推到监控大屏。全部讲义和工程源码均支持讲师按需裁剪。',
+        'M3 针对无公网、无基站覆盖环境下的信息互通需求。课程基于开源 LoRa Mesh 协议与轻量节点，带学员完整经历通信拓扑规划、离线轨迹回传与自建网关上云的全过程。全部讲义与工程源码支持讲师按需二次裁剪。',
       openings: [
         {
           no: '切入点 01',
@@ -2135,7 +2135,7 @@ export const modules: Module[] = [
         {
           no: '切入点 03',
           title: '融入工程经验',
-          body: '把无线电管理法规、空口占空比（Duty Cycle）限制和信道防拥堵设计讲透，让学员做出的方案符合现场规范，不被法规清退。',
+          body: '结合当地无线电管理频段要求、空口占空比限制及多节点信道拥堵规划，传授符合现场标准的通信网络设计规范。',
         },
       ],
     },

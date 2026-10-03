@@ -362,8 +362,8 @@ export const enDict: Record<string, string> = {
     'XIAO W5500 Ethernet Development Kit (PoE Bluetooth Proxy Gateway)',
   '免布线蓝牙网关，接收BLE设备广播并接入平台':
     'Wiring-free Bluetooth gateway, receives BLE device broadcasts and connects to the platform',
-  '基于 PoE 供电的有线网络蓝牙网关，采集米家蓝牙温湿度计等 BLE 广播设备数据，通过有线网络回传给 Home Assistant，解决蓝牙信号覆盖受限的问题。':
-    'PoE-powered Ethernet Bluetooth gateway capturing BLE broadcast data (e.g., Mijia sensors) and relaying it to Home Assistant over wired network, solving Bluetooth range limitations.',
+  '基于 PoE 供电的有线网络蓝牙代理网关，采集米家蓝牙温湿度计等 BLE 广播设备数据，通过有线网络回传给 Home Assistant，解决蓝牙信号覆盖受限的问题。':
+    'PoE-powered Ethernet Bluetooth Proxy gateway capturing BLE broadcast data (e.g., Mijia sensors) and relaying it to Home Assistant over wired network, solving Bluetooth range limitations.',
   'XIAO W5500 以太网开发套件': 'XIAO W5500 Ethernet Development Kit',
   'SenseCAP Indicator 4英寸 RGB 触控屏': 'SenseCAP Indicator 4-Inch RGB Touchscreen',
   '桌面触控中枢，展示环境参数与设备快捷控制':
@@ -549,8 +549,8 @@ export const enDict: Record<string, string> = {
   '基于物理 AI 终端，融合边缘视觉、语音与业务系统 API，实现多模态空间交互。':
     'Based on physical AI terminals, integrating edge vision, voice, and business-system APIs to enable multimodal spatial interaction.',
   多模态空间交互: 'multimodal spatial interaction',
-  '仓储管理、展厅导览与智能前台这些场景里，现场人员要查业务数据，往往得先放下手里的活，掏出手机或回到电脑前手动敲键盘。传统终端没有视觉感知，人走近了不会主动响应，也识别不了异常动作。很多智能终端生态封闭，接不进现有的 WMS、ERP 系统；而在工业与政企现场，音频和业务数据往往严禁上传公网。':
-    'In warehouse management, showroom tours, and smart reception desks, staff must halt their work to manually look up data on phones or keyboards. Conventional terminals lack visual context, failing to respond to approaching people or detect anomalies. Many smart devices exist in closed ecosystems that cannot integrate with existing WMS or ERP systems, while industrial and enterprise security policies strictly prohibit uploading audio and business records to public clouds.',
+  '仓储管理、展厅导览、智能前台等场景中，现场人员要查业务数据，需停下手头操作，在手机或电脑键盘上手动检索，效率受限。传统交互终端缺乏视觉上下文，无法主动感知人员靠近或异常动作。智能终端多为封闭生态，难以与存量 WMS、ERP、CRM 系统对接；部分工业与政企场景禁止音频与业务数据上传公网。':
+    'In warehouse management, showroom tours, and smart reception desks, retrieving business data requires pausing manual work to search on phones or keyboards, limiting efficiency. Conventional terminals lack visual context and cannot proactively detect approaching visitors or abnormal actions. Many smart terminals belong to closed ecosystems, making integration with existing WMS, ERP, and CRM systems difficult; certain industrial and government scenarios prohibit uploading audio and business data to public clouds.',
   进阶: 'Advanced',
   'L1 适合零基础或首次接触边缘 AI 交互设备；L2 需具备 Docker 基础与 REST API 调用经验；L3 需具备 Linux、PyTorch / Jetson 基础与 Shell 操作能力':
     'L1 suits beginners or those new to edge AI devices; L2 requires basic Docker and REST API experience; L3 requires Linux, PyTorch / Jetson fundamentals, and Shell skills',
@@ -615,8 +615,8 @@ export const enDict: Record<string, string> = {
     'Run the whole voice pipeline locally: works offline, data never leaves the intranet',
   '掌握 VAD → ASR → LLM → TTS 完整本地端到端语音管线架构':
     'Master end-to-end local voice AI pipeline architecture (VAD → ASR → LLM → TTS)',
-  '掌握在 Jetson 边缘计算硬件上量化与部署大模型的方法':
-    'Master quantizing and deploying large language models on Jetson edge computing hardware',
+  '掌握在 Jetson 边缘计算硬件上量化与部署优化大模型的方法':
+    'Master quantizing, deploying, and optimizing large language models on Jetson edge computing hardware',
   '具备在强隐私与工业隔离网环境下交付 AI 交互方案的能力':
     'Capability to deliver AI interaction solutions in privacy-sensitive and air-gapped industrial environments',
   'L3 离线算力': 'L3 Offline Compute',
@@ -772,8 +772,8 @@ export const enDict: Record<string, string> = {
   打通物理端侧交互与企业存量业务逻辑:
     'Bridge physical on-device interaction with enterprise business logic',
   把业务系统接进语音交互: 'Integrate Business Systems into Voice Interaction',
-  'M2 的重点是把视觉感知、语音交互与企业现有的业务系统（如 WMS、ERP）真正接通。课程不讲纯云端调用的通用玩具案例，而是带着学员做物理终端接入、MCP 工具调用和纯内网离线部署，为讲师提供开箱即用的软硬件实操环境。':
-    'M2 focuses on connecting visual sensing and voice interaction directly to existing business systems (such as WMS and ERP). Instead of generic cloud-only demos, it tackles physical device onboarding, MCP tool integration, and fully air-gapped local deployments, providing instructors with ready-to-run lab hardware.',
+  'M2 聚焦于把视觉感知、语音交互与企业存量业务系统（如 WMS、ERP）深层串联。课程带着学员完成物理终端接入、MCP 工具调用以及纯局域网离线部署，为讲师提供全套开箱即可验证的软硬件环境。':
+    'M2 focuses on deeply connecting visual perception, voice interaction, and legacy business systems (such as WMS and ERP). The curriculum guides learners through physical device integration, MCP tool invocation, and fully offline LAN deployments, providing instructors with a ready-to-verify hardware and software environment.',
   '模块 04 的语音查询内容支持自由定制。讲师可将仓储盘点替换为展厅导览、设备状态巡检或会议室调度，引导学员根据实际业务语义设计多轮对话策略。':
     'The voice query logic in Unit 04 is fully customizable. Instructors can replace inventory queries with exhibition guiding, equipment status patrols, or meeting room scheduling, guiding students to design multi-turn dialogue tailored to real operations.',
   接系统: 'Connect Systems',
@@ -810,8 +810,8 @@ export const enDict: Record<string, string> = {
   '基于 LoRa Mesh 自组网协议，构建无公网依赖、多跳中继的离网应急通信与传感数据回传网络。':
     'Based on the LoRa Mesh protocol, build an off-grid emergency communication and sensor backhaul network with no public network dependency and multi-hop relaying.',
   '无公网依赖、多跳中继': 'no public network dependency and multi-hop relaying',
-  '野外勘探、隧道施工与应急搜救现场往往没有蜂窝网络覆盖，普通对讲机受视距遮挡严重，也传不了位置坐标和环境数据。传统单点中继台依赖市电与制高点，单点一坏整网就瘫痪；卫星电话价格高昂且在山体或地下容易失联，临时拉专网又费时费钱。':
-    'In exploration, tunneling, and emergency rescue, cellular signals are often absent. Conventional walkie-talkies suffer line-of-sight blockage and cannot send back coordinates or sensor data. Fixed repeaters require mains power and tall masts—single-point damage brings down the network. Satellite terminals are costly and blind spots persist, while rolling out ad-hoc infrastructure takes days and budgets.',
+  '野外勘探、隧道施工、应急搜救等场景缺乏蜂窝基站覆盖，传统对讲机视距受限，无法回传坐标与传感数据。单点中继台依赖市电与高位节点，一旦受损整网中断；卫星电话终端昂贵且存在遮挡盲区，临时专网架设周期长、成本高。':
+    'In exploration, tunneling, and emergency rescue, cellular signals are often absent; conventional walkie-talkies suffer line-of-sight blockage and cannot transmit coordinates or sensor data. Fixed repeaters require mains power and tall masts—damage to a single node brings down the entire network. Satellite terminals are costly and subject to blind spots, while rolling out ad-hoc networks requires long setup times and high costs.',
   'L1 适合会使用智能手机与蓝牙配对、了解基础物联网概念的学员；L2 需具备 Node-RED 或 MQTT 基础，能配置网络与 Broker；L3 需熟悉 C/C++ 与 PlatformIO，能阅读并修改开源固件源码':
     'L1 suits learners comfortable with smartphone Bluetooth pairing and basic IoT concepts; L2 requires Node-RED or MQTT foundations and broker setup skills; L3 requires C/C++ and PlatformIO proficiency to inspect and modify open-source firmware',
   '野外勘探与户外赛事：队员位置实时追踪、分组文字通信、SOS 告警广播':
@@ -940,8 +940,8 @@ export const enDict: Record<string, string> = {
   编译烧录与实机验证: 'Compilation, Flashing & On-Device Verification',
   '关键转折点 · 从离网自治到公网融合与端侧定制':
     'Key Turning Point · From Off-Grid Autonomy to Public-Network Fusion & On-Device Customization',
-  'Meshtastic 基础配置打通了「无网环境下设备互联、消息送达」；Node-RED 则将 Mesh 现场遥测数据接入局域网或公网大屏，实现远程集中监控与告警；PlatformIO 固件定制让学员掌握底层代码修改能力，可以按需接入专用传感器、定制现场终端。':
-    'Meshtastic base configurations establish peer-to-peer messaging in off-grid environments; Node-RED forwards live telemetry to local dashboards for monitoring and alerting; PlatformIO firmware customization empowers engineers to integrate custom sensors into rugged field nodes.',
+  'Meshtastic 配置解决「设备能组网、消息能送达」的离网通信；Node-RED 负责将 Mesh 数据接入公网与监控大屏，完成态势呈现；PlatformIO 固件定制则让终端具备自定义传感能力，支持按需开发专属设备。':
+    'Meshtastic configuration resolves off-grid communication ensuring devices interconnect and messages deliver; Node-RED connects Mesh data to public networks and dashboards for situational awareness; PlatformIO firmware customization adds custom sensing capabilities, supporting on-demand device development.',
   '另需 EMQX / Mosquitto MQTT Broker（承载 Mesh 报文桥接）、Meshtastic Map（离线地图态势看板）。':
     'Additionally requires EMQX / Mosquitto MQTT Broker (for Mesh packet bridging) and Meshtastic Map (offline GIS situational dashboard).',
   '硬件台架清点、频段一致性校验（433 / 868 / 915 MHz）、固件预检升级、现场测线规划与小组信道 / PSK 分配':
@@ -962,8 +962,8 @@ export const enDict: Record<string, string> = {
   'XIAO ESP32S3 + Wio-SX1262 网关组装，Wi-Fi 连接与 MQTT Broker 接入配置，数据上行转发与下行命令广播':
     'XIAO ESP32S3 + Wio-SX1262 gateway assembly, Wi-Fi connection and MQTT Broker access configuration, data upstream forwarding and downstream command broadcast',
   'Mesh 遥测数据解析与 Node-RED 联动': 'Mesh Telemetry Data Parsing & Node-RED Linkage',
-  '解析 Meshtastic MQTT 遥测报文（默认 Protobuf，JSON 输出需另行配置），配置节点电量与心跳状态监视流，实现 Webhook 与即时通信告警联动':
-    'Parse Meshtastic MQTT telemetry packets (Protobuf by default, JSON requires extra config), build node battery/heartbeat monitors, and trigger Webhook / instant message alerts',
+  '解析 Meshtastic MQTT 遥测报文（默认 Protobuf，JSON 输出需另行配置），配置节点电量与心跳状态监视流，实现 SOS 告警联动（Webhook / 邮件 / 即时通信）':
+    'Parse Meshtastic MQTT telemetry packets (Protobuf by default, JSON requires extra config), build node battery/heartbeat monitors, and trigger SOS alerts (Webhook / Email / Instant Messaging)',
   网络拓扑与地图可视化大屏: 'Network Topology & Map Visualization Dashboard',
   '部署 Meshtastic Map 或自建地图服务，实时呈现节点分布、信号强度（RSSI / SNR）与中继链路跳数':
     'Deploy Meshtastic Map or self-hosted map server, visualizing node positions, signal quality (RSSI / SNR), and relay hop counts in real time',
@@ -1016,8 +1016,8 @@ export const enDict: Record<string, string> = {
     'The taster course takes one day, needs no coding, and stops at "devices form a network and messages get through". It suits trade shows, open days and first meetings with a client.',
   '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并复盘）；若需更多 Node-RED 调优与看板定制时间则用满 3 天。':
     'Workshop Day 3 is an optional flexible day: if students have a strong foundation, it can be compressed to 2 days (Day 2 afternoon merged with review); if more Node-RED tuning and dashboard customization time is needed, use the full 3 days.',
-  '所有 LoRa 设备必须使用同一频段（433 / 868 / 915 MHz），混用频段会导致物理层无法解调组网。本课程仅面向海外无线频段（EU868 / US915 等），严禁用于国内频段应用。':
-    'All LoRa devices must use identical RF bands (433 / 868 / 915 MHz); mismatched bands will fail physical-layer demodulation. This curriculum targets global ISM bands (EU868 / US915, etc.) and is strictly prohibited on mainland China radio frequencies.',
+  '所有 LoRa 设备必须使用同一频段（433 / 868 / 915 MHz），混用频段将导致物理层无法解调组网。本课程仅面向海外无线频段（EU868 / US915 等），不得用于国内频段应用。':
+    'All LoRa devices must use identical RF bands (433 / 868 / 915 MHz); mismatched bands will fail physical-layer demodulation. This curriculum targets global ISM bands (EU868 / US915, etc.) and must not be used on mainland China radio frequencies.',
   'Solar Node 部署时需注意天线垂直极化方向与架设高度，通信距离受地形起伏与建筑物遮挡影响显著；消息时延随跳数增加而累加（典型 1–3 秒 / 跳）。':
     'When deploying Solar Nodes, ensure vertical antenna polarization and elevation; range is heavily affected by terrain and structural obstructions; packet latency increases with hop count (typically 1–3 s / hop).',
   '体验课不包含 MQTT 桥接与固件定制内容，请勿向客户承诺体验课学员能独立完成 LoRa-MQTT 网关搭建——那是实战课的交付标准。':
@@ -1041,14 +1041,14 @@ export const enDict: Record<string, string> = {
   在没有公网信号的地方搭起自组网:
     'Build an autonomous mesh network where there is no cellular signal',
   无公网环境下把人和数据连起来: 'Connect People and Data in Public-Network-Free Environments',
-  'M3 针对的是没有蜂窝网络覆盖、基站完全瘫痪时的应急通信需求。课程基于开源 LoRa Mesh 协议与轻量节点，带学员从零规划拓扑、打通离线位置回传，再架设网关把现场态势推到监控大屏。全部讲义和工程源码均支持讲师按需裁剪。':
-    'M3 tackles emergency communications where cellular towers are absent or knocked out. Using the open-source LoRa Mesh protocol and lightweight nodes, learners plan network topologies, transmit offline coordinates, and bridge field telemetry into live dashboards. All materials and codebases are fully customizable.',
+  'M3 针对无公网、无基站覆盖环境下的信息互通需求。课程基于开源 LoRa Mesh 协议与轻量节点，带学员完整经历通信拓扑规划、离线轨迹回传与自建网关上云的全过程。全部讲义与工程源码支持讲师按需二次裁剪。':
+    'M3 addresses information exchange needs in environments without public cellular or base station coverage. Based on open-source LoRa Mesh protocols and lightweight nodes, learners walk through communication topology planning, offline track backhaul, and self-hosted gateway cloud integration. All lecture notes and codebases are fully customizable.',
   '模块 05 支持在校园开阔地、地下车库或野外做拉距与穿墙测试，让学员直观观察遮挡、天线极化与跳数累加对丢包率的影响。':
     'Unit 05 supports range and obstacle testing across open campus grounds, underground parking lots, or rugged terrain, letting students evaluate how obstructions, antenna polarization, and multi-hop routing affect packet delivery.',
   '在模块 09 之后，可接入校内或行业专属的环境监测探头，演练无蜂窝网络下的低功耗多跳数据回传。':
     'Following Unit 09, environmental or agricultural sensor probes can be wired to nodes, practicing ultra-low-power multi-hop telemetry where cellular connectivity is completely absent.',
-  '把无线电管理法规、空口占空比（Duty Cycle）限制和信道防拥堵设计讲透，让学员做出的方案符合现场规范，不被法规清退。':
-    'Detail spectrum compliance rules, duty cycle limits, and channel congestion controls so learners build field deployments that adhere to radio regulations without being shut down.',
+  '结合当地无线电管理频段要求、空口占空比限制及多节点信道拥堵规划，传授符合现场标准的通信网络设计规范。':
+    'Combining local radio spectrum requirements, duty cycle limits, and multi-node channel congestion planning, impart communication network design standards that meet on-site requirements.',
   '仅面向海外无线频段（EU868/US915 等），不得用于国内频段应用。':
     'Only for overseas wireless frequency bands (EU868/US915, etc.), must not be used for domestic frequency band applications.',
   无公网环境下的短文本即时通讯与群组广播:
