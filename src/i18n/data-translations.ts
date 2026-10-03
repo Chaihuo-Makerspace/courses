@@ -276,20 +276,20 @@ const en: Record<string, string> = {
     'Budgets are based on participant count and hardware requirements. Email us your expected group size and target depth to receive a detailed syllabus and kit plan within 3 business days.',
   'fact.founded.unit': '',
   'fact.founded.desc':
-    'Chaihuo Makerspace opens in Shenzhen, one of the earliest makerspaces in China.',
+    'Chaihuo Makerspace was founded in Shenzhen, one of the earliest makerspaces in China.',
   'fact.courses.unit': 'courses',
   'fact.courses.desc':
-    'M0 is the entry course for beginners; M1–M6 each address one kind of on-site problem. Every course comes at three depths, with its kit, textbook and lab manual.',
+    'M0 is the beginner entry point; M1–M6 each tackle a practical field problem. Every course offers three depth levels, complete with hardware kit, textbook, and lab manual.',
   'fact.pioneers.unit': 'Pioneers',
   'fact.pioneers.desc':
-    "Chaihuo's local teaching partners, running classes in {countries} countries. The first {bases} partner bases have signed.",
+    "Chaihuo's local teaching partners, running classes in {countries} countries, with the first {bases} partner bases officially signed.",
   'fact.campuses.unit': 'campuses',
   'fact.campuses.desc':
     'Shenzhen: Vanke Cloud City Design Community, Nanshan District. Chengdu: No. 92 Shima Road, Qingyang District.',
   'person.name': 'Feng Lei',
   'person.role': 'Mentor, Chaihuo Maker Academy',
   'person.quote':
-    'The best fate of a course is not being executed perfectly once, but being transformed beyond recognition by a teacher, becoming a course that only they can teach.',
+    "The best outcome for a course isn't to be followed to the letter, but for a teacher to remake it beyond recognition until it becomes a course only they can teach.",
   'partnership.suitable': 'Suited to',
   'faq.q5.q': 'Can we bring in just one module or one depth level?',
   'faq.q5.a':
@@ -489,20 +489,19 @@ const ja: Record<string, string> = {
   'cta.module.desc':
     'お見積りはクラス形態と規模に応じます。受講人数と希望する深さをメールでお知らせいただければ、3営業日以内にご提案をお送りします。',
   'fact.founded.unit': '年',
-  'fact.founded.desc': '柴火創客空間が深圳で設立。中国で最も早い時期のメイカースペースの一つです。',
+  'fact.founded.desc': '深圳で柴火創客空間を設立。中国最初期のメイカースペースの一つ。',
   'fact.courses.unit': '講座',
   'fact.courses.desc':
-    'M0は未経験者向けの入門講座、M1〜M6はそれぞれ現場の課題に対応します。各講座は3段階の深さがあり、キット、教材、実験手順書がそろっています。',
+    'M0は未経験者向けの入門、M1〜M6は現場の課題にそれぞれ対応。全講座に3段階の深さがあり、キット、教材、実験マニュアルが揃っています。',
   'fact.pioneers.unit': '名のパイオニア',
   'fact.pioneers.desc':
-    '各地で活動する柴火の教育パートナーで、{countries}カ国で開講を続けています。第1期{bases}拠点が契約済みです。',
+    '各地で活動する柴火の教育パートナー。{countries}カ国で開講を継続しており、第1期として{bases}拠点が参画しています。',
   'fact.campuses.unit': 'キャンパス',
-  'fact.campuses.desc':
-    '深圳は南山区の万科雲城設計コミュニティ、成都は青羊区獅馬路92号にあります。',
+  'fact.campuses.desc': '深圳：南山区 万科雲城デザインコミュニティ、成都：青羊区 獅馬路92号。',
   'person.name': '馮磊',
   'person.role': '柴火創客学院 メンター',
   'person.quote':
-    '一つの講座の最良の行き先は、完璧に実施されることではなく、ある教師によって見分けがつかないほどに作り変えられ、その人にしか教えられない講座になることです。',
+    '講座にとって最高のあり方は、教本通り忠実になぞられることではなく、一人の講師の手で原型をとどめないほど作り変えられ、その人にしか教えられない講座になることです。',
   'partnership.suitable': '対象',
   'faq.q5.q': '1つのモジュールだけ、または1つのレベルだけ導入できますか？',
   'faq.q5.a':
@@ -715,20 +714,20 @@ const es: Record<string, string> = {
     'El presupuesto depende del formato y del tamaño de la clase. Indíquenos por correo el número de participantes y el nivel deseado y enviaremos una propuesta en 3 días hábiles.',
   'fact.founded.unit': '',
   'fact.founded.desc':
-    'Chaihuo Makerspace abre en Shenzhen, uno de los primeros makerspaces de China.',
+    'Fundación de Chaihuo Makerspace en Shenzhen, uno de los primeros makerspaces de China.',
   'fact.courses.unit': 'cursos',
   'fact.courses.desc':
-    'M0 es el curso de entrada para principiantes; M1–M6 abordan cada uno un tipo de problema sobre el terreno. Cada curso se ofrece en tres niveles, con su kit, manual y guía de prácticas.',
+    'M0 para iniciarse desde cero; M1–M6 abordan problemas prácticos de campo. Cada curso ofrece tres niveles de profundidad, con kit, manual y guía de prácticas incluidos.',
   'fact.pioneers.unit': 'Pioneros',
   'fact.pioneers.desc':
-    'Socios docentes locales de Chaihuo, que imparten cursos en {countries} países. Las primeras {bases} bases ya han firmado.',
+    'Socios docentes de Chaihuo en distintas regiones, que imparten cursos en {countries} países; las primeras {bases} bases asociadas ya están formalizadas.',
   'fact.campuses.unit': 'sedes',
   'fact.campuses.desc':
     'Shenzhen: Vanke Cloud City Design Community, distrito de Nanshan. Chengdu: n.º 92 de Shima Road, distrito de Qingyang.',
   'person.name': 'Feng Lei',
   'person.role': 'Mentor, Academia Chaihuo Maker',
   'person.quote':
-    'El mejor destino de un curso no es ser ejecutado perfectamente una vez, sino ser transformado más allá del reconocimiento por un profesor, convirtiéndose en un curso que solo él puede impartir.',
+    'El mejor destino para un curso no es seguirse al pie de la letra de principio a fin, sino que un profesor lo transforme hasta volverlo irreconocible, en un curso que solo él pueda impartir.',
   'partnership.suitable': 'Indicado para',
   'faq.q5.q': '¿Se puede incorporar solo un módulo o solo un nivel?',
   'faq.q5.a':
@@ -937,20 +936,20 @@ const ptBR: Record<string, string> = {
     'O orçamento depende do formato e do tamanho da turma. Informe por e-mail o número de participantes e o nível desejado e enviaremos uma proposta em até 3 dias úteis.',
   'fact.founded.unit': '',
   'fact.founded.desc':
-    'O Chaihuo Makerspace é fundado em Shenzhen, um dos primeiros makerspaces da China.',
+    'Fundação do Chaihuo Makerspace em Shenzhen, um dos primeiros makerspaces da China.',
   'fact.courses.unit': 'cursos',
   'fact.courses.desc':
-    'O M0 é o curso de entrada para iniciantes; M1–M6 tratam cada um de um tipo de problema em campo. Cada curso é oferecido em três níveis, com kit, apostila e guia de práticas.',
+    'M0 para iniciantes do zero; M1–M6 tratam de problemas práticos de campo. Cada curso oferece três níveis de profundidade, com kit, apostila e guia de práticas incluídos.',
   'fact.pioneers.unit': 'Pioneiros',
   'fact.pioneers.desc':
-    'Parceiros locais de ensino da Chaihuo, que dão aulas em {countries} países. As primeiras {bases} bases já assinaram.',
+    'Parceiros de ensino da Chaihuo em diversas regiões, com cursos ativos em {countries} países e as primeiras {bases} bases parceiras já formalizadas.',
   'fact.campuses.unit': 'unidades',
   'fact.campuses.desc':
     'Shenzhen: Vanke Cloud City Design Community, distrito de Nanshan. Chengdu: nº 92 da Shima Road, distrito de Qingyang.',
   'person.name': 'Feng Lei',
   'person.role': 'Mentor, Academia Chaihuo Maker',
   'person.quote':
-    'O melhor destino de um curso não é ser executado perfeitamente uma vez, mas ser transformado por um professor até ficar irreconhecível, tornando-se um curso que só ele pode ministrar.',
+    'O melhor destino para um curso não é ser seguido à risca do início ao fim, mas ser transformado por um professor até ficar irreconhecível — tornando-se um curso que só ele consegue ministrar.',
   'partnership.suitable': 'Indicado para',
   'faq.q5.q': 'É possível adotar apenas um módulo ou apenas um nível?',
   'faq.q5.a':

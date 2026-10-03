@@ -164,7 +164,7 @@ const en: TranslationDict = {
   'about.title': 'About the Academy',
   'about.hero.title': 'Chaihuo Maker Academy',
   'about.hero.description':
-    'We train people to integrate new technology, so their own teams can deploy solutions themselves. The courses are offered to schools, integrators and enterprises.',
+    'We train people to integrate new technologies so teams can deploy solutions on their own. Courses for schools, integrators, and enterprises.',
 
   'contact.title': 'Partnership',
   'contact.hero.title': 'Three kinds of organisation, four ways to work together',
@@ -263,7 +263,7 @@ const ja: TranslationDict = {
   'about.title': '学院について',
   'about.hero.title': '柴火創客学院',
   'about.hero.description':
-    '私たちは新しい技術を統合する力を持つ人材を育て、チームが自らソリューションを導入・展開できるようにします。講座は学校、インテグレーター、企業向けに提供しています。',
+    '新技術を統合する力を育て、チーム自身がソリューションを現場に導入・運用できるようにします。学校、インテグレーター、企業向けの講座です。',
 
   'contact.title': 'パートナーシップ',
   'contact.hero.title': '3種類の機関、4つの協業形態',
@@ -364,7 +364,7 @@ const es: TranslationDict = {
   'about.title': 'Acerca de la Academia',
   'about.hero.title': 'Academia Chaihuo Maker',
   'about.hero.description':
-    'Formamos a personas para que sepan integrar nuevas tecnologías, de modo que su propio equipo pueda desplegar soluciones. Los cursos están dirigidos a centros educativos, integradores y empresas.',
+    'Formamos en integración de nuevas tecnologías para que cada equipo pueda desplegar sus propias soluciones. Cursos para centros educativos, integradores y empresas.',
 
   'contact.title': 'Colaboración',
   'contact.hero.title': 'Tres tipos de organización, cuatro formas de colaborar',
@@ -465,7 +465,7 @@ const ptBR: TranslationDict = {
   'about.title': 'Sobre a Academia',
   'about.hero.title': 'Academia Chaihuo Maker',
   'about.hero.description':
-    'Formamos pessoas para integrar novas tecnologias, para que a própria equipe consiga implantar soluções. Os cursos são oferecidos a escolas, integradores e empresas.',
+    'Capacitamos profissionais na integração de novas tecnologias para que a própria equipe implante suas soluções. Cursos para escolas, integradores e empresas.',
 
   'contact.title': 'Parceria',
   'contact.hero.title': 'Três tipos de organização, quatro formas de parceria',
