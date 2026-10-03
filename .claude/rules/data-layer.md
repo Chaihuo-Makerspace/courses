@@ -13,6 +13,8 @@ fetch. Architecture / data flow: see `ARCHITECTURE.md`.
 | `src/data/partnerships.ts` | 3 scenarios + 4 sales-form kits (3 × 4 IA) |
 | `src/data/site.ts` | Closing CTAs, home outcomes, /about history + named person, contact FAQ and email |
 | `src/data/ecosystem.ts` | Pioneer / Base programme pages and the home channel-partner band |
+| `src/data/projects.ts` | Open-source projects listed per module on course detail pages |
+| `src/data/themes.ts` | Color themes (single source for `--c-*` tokens; see `docs/DESIGN.md` §3) |
 | `src/data/icons.ts` | Lucide icon registry (single source for `astro-icon`) |
 | `src/data/index.ts` | Barrel re-export |
 
@@ -50,10 +52,8 @@ import { scenarios, partnershipForms } from '../data/partnerships';
 - **Bidirectional cross-references** — scenario `applicableForms` ↔ form
   `suitableScenarios` are mirrored. Keep them consistent when editing
   either side.
-- **Don't reintroduce removed collections** — `courses` /
-  `classic-courses` / `testimonials` content collections were retired with
-  the matrix refactor. No Astro content collection remains; the placeholder
-  `partners` collection was deleted (no real partner logos exist yet).
+- **No Astro content collections** — course, track and partnership content
+  is TypeScript data in this directory.
 - **No inline forms** — partnership intake is a `mailto:` link on `/contact`.
   Don't add `<form>` elements or contact-form components.
 

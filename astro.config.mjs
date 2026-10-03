@@ -21,6 +21,11 @@ export default defineConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
+    // 启动时就预打包 preline：否则 dev 首次打开页面时 Vite 才发现它并重新优化依赖，
+    // Layout 的模块脚本拿到 504，scroll-reveal 不执行，整页停在 opacity: 0。
+    optimizeDeps: {
+      include: ['preline/preline'],
+    },
     build: {
       sourcemap: false
     }

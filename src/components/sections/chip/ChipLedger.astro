@@ -16,17 +16,17 @@ const cols = { 1: '', 2: 'sm:grid-cols-2', 3: 'md:grid-cols-3', 4: 'sm:grid-cols
 ---
 
 <div>
-  {title && <h3 class="mb-3 text-base font-bold text-brand-black">{title}</h3>}
+  {title && <h3 class="mb-3 text-base font-bold text-foreground">{title}</h3>}
   <ul class:list={['grid gap-x-10 border-t border-neutral-3', cols]}>
     {
       items.map((item, i) => (
         <li class="border-b border-neutral-3 py-3.5">
           {numbered && (
-            <span class="font-mono text-sm font-semibold text-brand-red">
+            <span class="font-mono text-sm font-semibold text-primary-ink">
               {String(i + 1).padStart(2, '0')}
             </span>
           )}
-          <p class:list={['text-sm font-bold text-brand-black', numbered && 'mt-1']}>{item.title}</p>
+          <p class:list={['text-sm font-bold text-foreground', numbered && 'mt-1']}>{item.title}</p>
           {item.description && (
             <p class="mt-1 text-sm leading-relaxed text-neutral-8">{item.description}</p>
           )}

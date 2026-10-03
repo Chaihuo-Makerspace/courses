@@ -25,10 +25,10 @@ const parts =
 
 {
   notes && (
-    <section class="section bg-background">
+    <section id="teachers" class="section scroll-mt-28 bg-background">
       <div class="container-page" data-reveal>
         <header class="max-w-3xl">
-          <h2 class="heading-section text-brand-black">
+          <h2 class="heading-section text-foreground">
             {parts ? (
               <>
                 {parts.before}<em class="highlight">{parts.mark}</em>{parts.after}
@@ -43,8 +43,8 @@ const parts =
         <ul class="mt-8 grid gap-x-10 md:grid-cols-3">
           {notes.openings.map((o) => (
             <li class="border-t border-neutral-3 py-5">
-              <p class="text-sm font-semibold text-brand-red">{o.no}</p>
-              <h3 class="mt-1 text-lg font-bold text-brand-black">{o.title}</h3>
+              <p class="text-sm font-semibold text-primary-ink">{o.no}</p>
+              <h3 class="mt-1 text-lg font-bold text-foreground">{o.title}</h3>
               <p class="mt-2 text-sm leading-relaxed text-neutral-8">{o.body}</p>
             </li>
           ))}

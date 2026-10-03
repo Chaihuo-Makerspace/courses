@@ -1,5 +1,5 @@
 ---
-import { locales, localeLabels, localeFlags, defaultLocale, getLocaleFromUrl, localizePath } from '../i18n';
+import { locales, localeLabels, defaultLocale, getLocaleFromUrl, localizePath } from '../i18n';
 import { t } from '../i18n/translations';
 import type { Locale } from '../i18n';
 
@@ -30,7 +30,9 @@ const basePath = getBasePath(currentPath, currentLocale);
     aria-haspopup="true"
     aria-controls={`${id}-menu`}
   >
-    <span class="lang-current-flag">{localeFlags[currentLocale]}</span>
+    <svg class="lang-globe" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>
+    </svg>
     <span class="lang-current-label">{localeLabels[currentLocale]}</span>
     <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="m6 9 6 6 6-6"/>
@@ -53,7 +55,6 @@ const basePath = getBasePath(currentPath, currentLocale);
             aria-current={isActive ? 'true' : undefined}
             data-lang={locale}
           >
-            <span class="lang-flag">{localeFlags[locale]}</span>
             <span class="lang-label">{localeLabels[locale]}</span>
             {isActive && (
               <svg class="lang-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -112,29 +113,33 @@ const basePath = getBasePath(currentPath, currentLocale);
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 6px 10px;
-    border: 1px solid var(--color-neutral-3, #e5e5e0);
-    border-radius: 8px;
-    background: var(--color-background, #fbfaf6);
-    color: var(--color-brand-black, #1a1a1a);
+    padding: 6px 2px;
+    border-radius: 6px;
+    color: var(--c-neutral-8);
     font-size: 13px;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.15s ease;
+    transition: color 0.15s ease;
   }
 
-  .lang-switcher-btn:hover {
-    border-color: var(--color-neutral-5, #c5c5c0);
-    background: var(--color-neutral-1, #f5f5f0);
+  .lang-switcher-btn:hover,
+  .lang-switcher-btn[aria-expanded="true"] {
+    color: var(--c-foreground);
   }
 
-  .lang-current-flag {
-    font-size: 16px;
-    line-height: 1;
+  .lang-globe {
+    opacity: 0.7;
   }
 
   .lang-current-label {
     line-height: 1;
+  }
+
+  /* 窄桌面宽度下只留地球图标，把横向空间让给导航项 */
+  @media (min-width: 48rem) and (max-width: 63.99rem) {
+    .lang-current-label {
+      display: none;
+    }
   }
 
   .lang-chevron {
@@ -148,13 +153,13 @@ const basePath = getBasePath(currentPath, currentLocale);
 
   .lang-dropdown {
     position: absolute;
-    top: calc(100% + 4px);
+    top: calc(100% + 12px);
     right: 0;
-    min-width: 200px;
-    background: var(--color-background, #fbfaf6);
-    border: 1px solid var(--color-neutral-3, #e5e5e0);
-    border-radius: 10px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    min-width: 180px;
+    background: var(--c-background);
+    border: 1px solid var(--c-neutral-3);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md-soft);
     padding: 4px;
     z-index: 100;
   }
@@ -167,23 +172,18 @@ const basePath = getBasePath(currentPath, currentLocale);
     border-radius: 6px;
     font-size: 13px;
     font-weight: 500;
-    color: var(--color-brand-black, #1a1a1a);
+    color: var(--c-foreground);
     text-decoration: none;
     transition: background 0.1s ease;
     cursor: pointer;
   }
 
   .lang-option:hover {
-    background: var(--color-neutral-1, #f5f5f0);
+    background: var(--c-neutral-1);
   }
 
   .lang-option-active {
-    background: var(--color-brand-yellow-light, #FFF8E1);
-  }
-
-  .lang-flag {
-    font-size: 16px;
-    line-height: 1;
+    background: var(--c-accent-soft);
   }
 
   .lang-label {
@@ -192,7 +192,7 @@ const basePath = getBasePath(currentPath, currentLocale);
   }
 
   .lang-check {
-    color: var(--color-brand-yellow-dark, #B8860B);
+    color: var(--c-accent-ink);
     flex-shrink: 0;
   }
 </style>

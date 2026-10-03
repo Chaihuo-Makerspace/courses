@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
 import { t, localeHtmlLang, localeOgLocale, defaultLocale } from "../i18n";
 import type { Locale } from "../i18n";
+import { buildThemeCss, defaultThemeId, themeIds, themes } from "../data/themes";
 
 interface Props {
   title: string;
@@ -26,10 +27,11 @@ const fullTitle = `${title} | ${siteName}`;
 
 const canonicalUrl = new URL(currentPath, Astro.site ?? Astro.url).toString();
 const ogImageUrl = new URL(ogImage, Astro.site ?? Astro.url).toString();
+const themeCss = buildThemeCss();
 ---
 
 <!doctype html>
-<html lang={localeHtmlLang[locale]}>
+<html lang={localeHtmlLang[locale]} data-theme={defaultThemeId}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -55,7 +57,9 @@ const ogImageUrl = new URL(ogImage, Astro.site ?? Astro.url).toString();
     <meta name="twitter:image" content={ogImageUrl} />
     <meta name="twitter:image:alt" content="Chaihuo Makers" />
 
-    <meta name="theme-color" content="#fbfaf6" />
+    <meta name="theme-color" content={themes[defaultThemeId].colors.background} />
+
+    <style is:inline set:html={themeCss}></style>
 
     <link
       rel="preload"
@@ -74,6 +78,23 @@ const ogImageUrl = new URL(ogImage, Astro.site ?? Astro.url).toString();
 
     <script is:inline>
       document.documentElement.classList.add("js-reveal");
+      // 兜底：模块脚本没跑起来（加载失败 / dev 依赖重优化）时，2 秒后直接显示内容
+      setTimeout(() => {
+        if (!window.__revealReady) document.documentElement.classList.remove("js-reveal");
+      }, 2000);
+    </script>
+
+    <!-- 主题预览：?theme=<id> 临时切换并记在 sessionStorage；?theme=default 还原 -->
+    <script is:inline define:vars={{ themeIds, defaultThemeId }}>
+      const applyTheme = () => {
+        const requested = new URLSearchParams(location.search).get("theme");
+        if (requested === "default") sessionStorage.removeItem("theme");
+        else if (themeIds.includes(requested)) sessionStorage.setItem("theme", requested);
+        const stored = sessionStorage.getItem("theme");
+        document.documentElement.dataset.theme = themeIds.includes(stored) ? stored : defaultThemeId;
+      };
+      applyTheme();
+      document.addEventListener("astro:after-swap", applyTheme);
     </script>
 
     <ClientRouter />
@@ -81,7 +102,7 @@ const ogImageUrl = new URL(ogImage, Astro.site ?? Astro.url).toString();
 
     <slot name="head" />
   </head>
-  <body class="min-h-screen flex flex-col bg-background text-brand-black antialiased">
+  <body class="min-h-screen flex flex-col bg-background text-foreground antialiased">
     <a href="#main-content" class="skip-link focus-ring">{t(locale, 'site.skipLink')}</a>
     <Navbar currentPath={currentPath} locale={locale} />
 

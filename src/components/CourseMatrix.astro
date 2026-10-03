@@ -1,21 +1,36 @@
 ---
+import { Icon } from 'astro-icon/components';
 import LevelBadge from './LevelBadge.astro';
 import { levels, levelMeta, type LevelId, type Module } from '../data/modules';
+import { getProjectsForModule } from '../data/projects';
+import type { Track } from '../data/tracks';
 import { dt } from '../i18n/data-translations';
+import { t } from '../i18n/translations';
 import type { Locale } from '../i18n';
 import { localizePath } from '../i18n';
 import { deepTranslate } from '../i18n/module-translations';
 
 // 全站唯一的 M × L 矩阵，也是 L1 / L2 / L3 的唯一图例（列头）。
-// full：/courses 的完整矩阵（每格带副题与产出）；compact：首页 hero（每格只有标题与天数）。
+// full：/courses 的完整矩阵（每格带一句话内容）；compact：首页 hero（每格只有标题与天数）。
+// 每一格、每个模块名都是进入该课程详情页的入口；产出等细节只在详情页讲。
+// 传入 tracks 时按方向分组（/courses），方向行带锚点 #track-<id>。
+// full 多一列：学完能复现的项目（事实层面的课程收获），点进去到详情页的项目一段。
 interface Props {
   locale: Locale;
   modules: Module[];
   variant?: 'full' | 'compact';
+  tracks?: Track[];
 }
 
-const { locale, modules, variant = 'full' } = Astro.props as Props;
+const { locale, modules, variant = 'full', tracks } = Astro.props as Props;
 const isFull = variant === 'full';
+
+const groups: { track?: Track; modules: Module[] }[] = tracks
+  ? tracks.map((track) => ({
+      track,
+      modules: track.moduleIds.flatMap((id) => modules.find((m) => m.id === id) ?? []),
+    }))
+  : [{ modules }];
 
 const level = (lvl: LevelId) => {
   const [, name] = deepTranslate(levelMeta[lvl].label, locale).split(' · ');
@@ -24,36 +39,33 @@ const level = (lvl: LevelId) => {
 
 // 深度越深、黄色越浓：L1 淡黄 → L2 中黄 → L3 亮黄。
 const cellBg: Record<LevelId, string> = {
-  L1: 'bg-brand-yellow-light',
-  L2: 'bg-brand-yellow-mid',
-  L3: 'bg-level-l3',
+  L1: 'bg-level-1',
+  L2: 'bg-level-2',
+  L3: 'bg-level-3',
 };
 ---
 
-<div class:list={['overflow-x-auto', isFull && '-mx-4 px-4 md:mx-0 md:px-0']}>
+<div class="overflow-x-auto">
   <table
-    class:list={[
-      'w-full border-separate text-left',
-      isFull ? 'min-w-[720px] border-spacing-1' : 'border-spacing-x-1 border-spacing-y-1',
-    ]}
+    class:list={['w-full border-separate border-spacing-0.5 text-left', isFull && 'min-w-[980px]']}
   >
     <caption class="sr-only">{dt(locale, 'courseMatrix.srCaption')}</caption>
     <thead>
       <tr>
-        <th scope="col" class:list={[isFull ? 'w-[190px]' : 'w-auto']}>
+        <th scope="col" class:list={[isFull ? 'w-[230px]' : 'w-auto']}>
           <span class="sr-only">{dt(locale, 'courseMatrix.srHeader')}</span>
         </th>
         {
           levels.map((lvl) => (
             <th
               scope="col"
-              class:list={['align-bottom font-normal', isFull ? 'p-3 pb-2' : 'px-2 pb-1.5 md:px-3']}
+              class:list={['align-bottom font-normal', isFull ? 'px-3 pb-3' : 'px-2 pb-2 md:px-3']}
             >
               <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
                 <LevelBadge level={lvl} label={lvl} />
                 <span
                   class:list={[
-                    'text-sm font-semibold text-brand-black',
+                    'text-sm font-semibold text-foreground',
                     !isFull && 'hidden md:inline',
                   ]}
                 >
@@ -68,76 +80,129 @@ const cellBg: Record<LevelId, string> = {
             </th>
           ))
         }
+        {
+          isFull && (
+            <th scope="col" class="w-[190px] px-3 pb-3 align-bottom">
+              <span class="text-sm font-semibold text-foreground">
+                {t(locale, 'course.projectsTitle')}
+              </span>
+            </th>
+          )
+        }
       </tr>
     </thead>
     <tbody>
       {
-        modules.map((m) => (
-          <tr>
-            <th scope="row" class:list={['font-normal align-top', isFull ? 'p-0' : 'pr-2']}>
-              <a
-                href={localizePath(locale, `/courses/${m.slug}`)}
+        groups.map((group) => (
+          <Fragment>
+            {group.track && (
+              <tr id={`track-${group.track.id}`} class="scroll-mt-24">
+                <th colspan={levels.length + 2} scope="colgroup" class="px-0 pt-8 pb-3 font-normal">
+                  <span class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <span class="text-lg font-bold text-foreground">{group.track.name}</span>
+                    <span class="text-sm font-semibold text-primary-ink">{group.track.goal}</span>
+                  </span>
+                </th>
+              </tr>
+            )}
+            {group.modules.map((m) => {
+          const href = localizePath(locale, `/courses/${m.slug}`);
+          return (
+            <tr>
+              <th
+                scope="row"
                 class:list={[
-                  'focus-ring group flex rounded-md',
-                  isFull ? 'h-full flex-col gap-2 p-3 hover:bg-neutral-1' : 'items-center gap-3 py-0.5',
+                  'border-t border-neutral-3 p-0 font-normal',
+                  isFull ? 'align-top' : 'align-middle',
                 ]}
               >
-                <span
+                <a
+                  href={href}
                   class:list={[
-                    'module-tile module-tile--sm shrink-0',
-                    m.id === 'm0' ? 'module-tile--red' : 'module-tile--dark',
+                    'focus-ring group flex gap-3 rounded-sm',
+                    isFull ? 'items-start py-3 pr-3' : 'items-center py-2 pr-2.5',
                   ]}
                 >
-                  {m.code}
-                </span>
-                <span class="min-w-0">
-                  <span class="block text-sm font-semibold leading-tight text-brand-black transition-colors group-hover:text-brand-red">
-                    {m.title}
+                  <span
+                    class:list={[
+                      'module-tile module-tile--sm shrink-0',
+                      m.id === 'm0' ? 'module-tile--red' : 'module-tile--dark',
+                    ]}
+                  >
+                    {m.code}
                   </span>
-                  {m.overseasOnly && (
-                    <span class="mt-1 inline-block rounded-sm border border-brand-red/40 px-1.5 py-0.5 text-[11px] font-semibold leading-none text-brand-red">
-                      {dt(locale, 'course.overseasOnly')}
+                  <span class="min-w-0 flex-1">
+                    <span class="block text-sm font-semibold leading-tight text-foreground transition-colors group-hover:text-primary-ink">
+                      {m.title}
                     </span>
-                  )}
-                  {isFull && m.id === 'm0' && (
-                    <span class="mt-1 block text-xs text-neutral-6">
-                      {dt(locale, 'courseMatrix.platformLayers')}
-                    </span>
-                  )}
-                </span>
-              </a>
-            </th>
-            {levels.map((lvl) => {
-              const cell = m.cells[lvl];
-              return (
-                <td class:list={['rounded-sm align-top', cellBg[lvl], isFull ? 'p-3' : 'px-2 py-1.5 md:px-3']}>
-                  <div class="flex items-start justify-between gap-2">
-                    <span
-                      class:list={[
-                        'font-semibold leading-tight text-brand-black',
-                        isFull ? 'text-sm' : 'hidden text-[13px] md:block',
-                      ]}
+                    {m.overseasOnly && (
+                      <span class="mt-1 inline-block rounded-sm border border-primary/40 px-1.5 py-0.5 text-[11px] font-semibold leading-none text-primary-ink">
+                        {dt(locale, 'course.overseasOnly')}
+                      </span>
+                    )}
+                    {isFull && (
+                      <span class="mt-1.5 block text-xs leading-snug text-neutral-7">{m.subtitle}</span>
+                    )}
+                  </span>
+                  <Icon
+                    name="lucide:arrow-right"
+                    class="mt-0.5 h-4 w-4 shrink-0 text-neutral-5 transition-transform group-hover:translate-x-0.5 group-hover:text-primary-ink"
+                  />
+                </a>
+              </th>
+              {levels.map((lvl) => {
+                const cell = m.cells[lvl];
+                return (
+                  <td
+                    class:list={[
+                      'relative transition-shadow hover:ring-2 hover:ring-inset hover:ring-foreground/60 has-[a:focus-visible]:ring-2 has-[a:focus-visible]:ring-inset has-[a:focus-visible]:ring-ring',
+                      cellBg[lvl],
+                      isFull ? 'p-3 align-top' : 'px-2 py-2.5 align-middle md:px-3',
+                    ]}
+                  >
+                    <a
+                      href={`${href}#levels`}
+                      aria-label={`${m.code} ${lvl} · ${cell.title} · ${cell.durationDays}d`}
+                      class="flex items-start justify-between gap-2 outline-none after:absolute after:inset-0"
                     >
-                      {cell.title}
-                    </span>
-                    <span class="shrink-0 font-mono text-xs font-semibold text-brand-black/70">
-                      {cell.durationDays}d
-                    </span>
-                  </div>
-                  {isFull && (
-                    <>
-                      <p class="mt-1.5 text-xs leading-snug text-brand-black/70">{cell.subtitle}</p>
-                      <ul class="mt-2 space-y-0.5 text-xs leading-snug text-brand-black/85">
-                        {cell.outcomes.slice(0, 2).map((o) => (
-                          <li>· {o}</li>
-                        ))}
-                      </ul>
-                    </>
-                  )}
+                      <span
+                        class:list={[
+                          'font-semibold leading-tight text-foreground',
+                          isFull ? 'text-sm' : 'hidden text-[13px] md:block',
+                        ]}
+                      >
+                        {cell.title}
+                      </span>
+                      <span class="shrink-0 font-mono text-xs font-semibold text-foreground/70">
+                        {cell.durationDays}d
+                      </span>
+                    </a>
+                    {isFull && (
+                      <p class="mt-1.5 text-xs leading-snug text-foreground/70">{cell.subtitle}</p>
+                    )}
+                  </td>
+                );
+              })}
+              {isFull && (
+                <td class="border-t border-neutral-3 px-3 py-3 align-top">
+                  <ul class="space-y-1.5">
+                    {getProjectsForModule(m.id).map((project) => (
+                      <li>
+                        <a
+                          href={`${href}#projects`}
+                          class="focus-ring text-sm leading-snug text-neutral-8 underline decoration-neutral-4 underline-offset-4 transition-colors hover:text-primary-ink hover:decoration-primary-ink"
+                        >
+                          {project.name[locale]}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </td>
-              );
+              )}
+            </tr>
+          );
             })}
-          </tr>
+          </Fragment>
         ))
       }
     </tbody>

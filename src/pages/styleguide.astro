@@ -2,41 +2,48 @@
 /**
  * /styleguide — 设计系统货架。
  * 这里只陈列线上页面真正在用的 token 与组件类，并标明用在哪。
- * 权威说明见 docs/DESIGN.md；色卡数组是 theme.css 的手工镜像，改 token 时同步。
+ * 权威说明见 docs/DESIGN.md；色卡直接读 src/data/themes.ts。
  * noindex，不进站点导航。
  */
 import Layout from '../layouts/Layout.astro';
 import LevelBadge from '../components/LevelBadge.astro';
 import SectionHeader from '../components/SectionHeader.astro';
+import { defaultThemeId, type ThemeToken, themeIds, themes, themeTokens } from '../data/themes';
 
-const brandColors: [string, string, string][] = [
-  ['flame-red', '#d84144', 'logo 原色，品牌短线'],
-  ['module-dark', '#015259', 'M1–M6 模块牌底色'],
-  ['level-l3', '#f9df63', 'L3 列底'],
-  ['brand-red', '#c7353a', '主按钮、强调文字、L3 徽章'],
-  ['brand-red-hover', '#ad2c31', '主按钮 hover 底色'],
-  ['brand-red-light', '#fdeaea', '警示底，课程层级不用此色'],
-  ['brand-yellow', '#f3d230', 'L2 徽章、记号笔底、深色面上的序号'],
-  ['brand-yellow-light', '#fffae6', 'L1 列底、柔黄面'],
-  ['brand-yellow-mid', '#fdefab', 'L2 列底'],
-  ['brand-yellow-dark', '#66520b', '黄底上的文字'],
-  ['brand-black', '#001d20', '标题与正文主色（青色墨色）'],
-  ['brand-graphite', '#004046', '深色面、页脚（深青绿）'],
-  ['brand-white', '#ffffff', '深色面白墨、产品图衬底'],
-  ['background', '#ffffff', '页面与卡片的白色画布'],
-];
-const neutrals: [string, string][] = [
-  ['neutral-1', '#e8f7f9'],
-  ['neutral-2', '#dbf0f2'],
-  ['neutral-3', '#cae4e7'],
-  ['neutral-4', '#adcfd2'],
-  ['neutral-5', '#84adb2'],
-  ['neutral-6', '#3a6c72'],
-  ['neutral-7', '#2e6167'],
-  ['neutral-8', '#16454a'],
-  ['neutral-9', '#042f33'],
-  ['neutral-10', '#001d20'],
-];
+const tokenUse: Record<ThemeToken, string> = {
+  background: '页面与卡片画布',
+  foreground: '标题与正文主色',
+  inverse: '深色面、页脚',
+  'inverse-foreground': '深色面上的文字',
+  primary: '主按钮、M0 模块牌、导航下划线',
+  'primary-foreground': '主色填充上的文字',
+  'primary-hover': '主按钮 hover 底色',
+  'primary-ink': '亮面上的主色文字与图标',
+  accent: 'L2 徽章、记号笔底、深色面上的强调文字',
+  'accent-foreground': '强调填充上的文字',
+  'accent-ink': '浅强调底上的文字',
+  'accent-soft': '浅强调面',
+  strong: 'L3 徽章',
+  'strong-foreground': 'L3 徽章文字',
+  module: 'M1–M6 模块牌底色',
+  'module-foreground': 'M1–M6 模块牌文字',
+  'level-1': 'L1 列底',
+  'level-2': 'L2 列底',
+  'level-3': 'L3 列底',
+  ring: '焦点环',
+  'neutral-1': '交替段底',
+  'neutral-2': '次卡',
+  'neutral-3': 'hairline',
+  'neutral-4': '禁用图标',
+  'neutral-5': '禁用信息',
+  'neutral-6': '标签',
+  'neutral-7': '次要文字',
+  'neutral-8': '正文',
+  'neutral-9': '重要文字',
+  'neutral-10': '标题',
+};
+const semanticTokens = themeTokens.filter((token) => !token.startsWith('neutral-'));
+const neutralTokens = themeTokens.filter((token) => token.startsWith('neutral-'));
 const usage: [string, string][] = [
   ['.container-page', '所有 section 的内容容器，全站一条左边线'],
   ['.section / .section-tight', 'section 纵向节奏的两档；首页点火人招募带用 tight，其余用标准'],
@@ -44,8 +51,7 @@ const usage: [string, string][] = [
   ['.label', '小标签：硬件清单表头、场景标题等；中文不用 mono / uppercase'],
   ['.btn + .btn-primary / -secondary / -ghost', '全站按钮；-ghost 只在深色面上'],
   ['.flame-rule', '内页 hero 底边发丝线 + 红黄品牌短线'],
-  ['.flame-band', '首页 hero 的深青绿衬底'],
-  ['.matrix-card / .closing-cta', '首页矩阵与浅青页尾 CTA 的品牌短线'],
+  ['.closing-cta', '页尾 CTA 的品牌短线'],
   ['.module-tile', '模块代号：矩阵、方向列表、详情页 hero'],
   ['.level-badge', 'L1 / L2 / L3：矩阵列头、详情页三档深度'],
   ['.card-hairline', '详情页折叠区里的带图设备卡'],
@@ -58,7 +64,7 @@ const usage: [string, string][] = [
 
   <section class="bg-background">
     <div class="container-page pt-12 pb-10 md:pt-16 md:pb-12">
-      <h1 class="font-display text-[clamp(2.25rem,4vw+1rem,3.5rem)] leading-[1.15] tracking-tight text-brand-black">
+      <h1 class="font-display text-[clamp(2.25rem,4vw+1rem,3.5rem)] leading-[1.15] tracking-tight text-foreground">
         Styleguide
       </h1>
       <p class="mt-5 max-w-3xl text-base md:text-lg leading-relaxed text-neutral-8">
@@ -71,25 +77,44 @@ const usage: [string, string][] = [
 
   <section class="section">
     <div class="container-page">
-      <SectionHeader title="颜色" subtitle="K1 青绿：青色承载结构，红色承载行动，黄色标记学习深度。" />
-      <div class="h-[3px] w-24" style="background-image:var(--gradient-flame)" aria-label="红黄品牌短线"></div>
-      <div class="flame-band mt-4 h-16 rounded-lg" aria-label="青色矩阵衬底"></div>
+      <SectionHeader
+        title="颜色"
+        subtitle="色值唯一来源是 src/data/themes.ts。组件只写角色名（bg-primary / text-foreground …），不写色相名。"
+      />
+      <p class="label">主题（点击预览；任意页面加 ?theme=&lt;id&gt; 同效，?theme=default 还原）</p>
+      <div class="mt-3 flex flex-wrap gap-3">
+        {
+          themeIds.map((id) => (
+            <a href={`?theme=${id}`} data-astro-reload class="focus-ring card-hairline block px-4 py-3">
+              <span class="block text-sm font-semibold text-foreground">
+                {themes[id].label}
+                {id === defaultThemeId && <span class="ml-2 font-mono text-xs font-normal text-neutral-6">default</span>}
+              </span>
+              <span class="mt-1 block text-xs text-neutral-7">{themes[id].description}</span>
+            </a>
+          ))
+        }
+      </div>
+      <div class="mt-8 h-[3px] w-24" style="background-image:var(--gradient-flame)" aria-label="红黄品牌短线"></div>
       <p class="mt-2 text-xs text-neutral-6">
-        品牌短线：72px 火焰红 + 24px 火焰黄。首页衬底用深青绿；主按钮 hover 保持实色红。
+        品牌短线：72px 火焰红 + 24px 火焰黄，logo 原色，不随主题变。
       </p>
       <ul class="mt-8 grid gap-x-10 border-t border-neutral-3 sm:grid-cols-2">
         {
-          brandColors.map(([name, hex, use]) => (
+          semanticTokens.map((token) => (
             <li class="flex items-center gap-4 border-b border-neutral-3 py-3">
               <span
                 class="h-10 w-10 shrink-0 rounded-sm border border-neutral-3"
-                style={`background-color:${hex}`}
+                style={`background-color:var(--c-${token})`}
               />
               <span>
-                <span class="block font-mono text-sm font-semibold text-brand-black">
-                  {name} <span class="font-normal text-neutral-6">{hex}</span>
+                <span class="block font-mono text-sm font-semibold text-foreground">
+                  {token}{' '}
+                  <span class="font-normal text-neutral-6">
+                    {themeIds.map((id) => `${id} ${themes[id].colors[token]}`).join(' · ')}
+                  </span>
                 </span>
-                <span class="block text-xs text-neutral-7">{use}</span>
+                <span class="block text-xs text-neutral-7">{tokenUse[token]}</span>
               </span>
             </li>
           ))
@@ -97,16 +122,16 @@ const usage: [string, string][] = [
       </ul>
       <div class="mt-8 grid grid-cols-5 gap-1 sm:grid-cols-10">
         {
-          neutrals.map(([name, hex]) => (
-            <div>
-              <div class="h-10 rounded-sm border border-neutral-3" style={`background-color:${hex}`} />
-              <p class="mt-1 font-mono text-[11px] text-neutral-7">{name.replace('neutral-', 'n-')}</p>
+          neutralTokens.map((token) => (
+            <div title={tokenUse[token]}>
+              <div class="h-10 rounded-sm border border-neutral-3" style={`background-color:var(--c-${token})`} />
+              <p class="mt-1 font-mono text-[11px] text-neutral-7">{token.replace('neutral-', 'n-')}</p>
             </div>
           ))
         }
       </div>
       <p class="mt-2 text-xs text-neutral-6">
-        青色结构阶：n-3 hairline，n-6 标签，n-7 次要文字，n-8 正文，n-1 交替段底。
+        结构灰阶：n-3 hairline，n-6 标签，n-7 次要文字，n-8 正文，n-1 交替段底。
       </p>
     </div>
   </section>
@@ -115,17 +140,17 @@ const usage: [string, string][] = [
     <div class="container-page">
       <SectionHeader title="字体与层级" subtitle="这一行就是 section H2（.heading-section，得意黑）。" />
       <div class="space-y-5">
-        <p class="font-display text-[clamp(2.25rem,4vw+1rem,3.5rem)] leading-[1.15] text-brand-black">
+        <p class="font-display text-[clamp(2.25rem,4vw+1rem,3.5rem)] leading-[1.15] text-foreground">
           Hero H1：得意黑 display
         </p>
-        <h3 class="text-xl font-bold text-brand-black">H3：思源黑 Bold，卡片与子区块标题</h3>
+        <h3 class="text-xl font-bold text-foreground">H3：思源黑 Bold，卡片与子区块标题</h3>
         <p class="max-w-3xl text-base leading-relaxed text-neutral-8">
           正文 16px，行高 1.75。H2 与正文约 2 倍对比。日语页面的标题整行用正文字体（得意黑没有日文汉字字形）。
         </p>
         <p class="label">.label 小标签：字重与字色区分，不套 mono / uppercase</p>
         <p class="font-mono text-sm text-neutral-7">mono 只给拉丁代号：M2 · L1 · 3d · SKU 114110314</p>
         <p class="text-base text-neutral-8">
-          一句话里的<em class="highlight font-semibold text-brand-black">关键词强调</em>用 .highlight。
+          一句话里的<em class="highlight font-semibold text-foreground">关键词强调</em>用 .highlight。
         </p>
       </div>
     </div>
@@ -141,7 +166,7 @@ const usage: [string, string][] = [
             <button class="btn btn-primary focus-ring" type="button">主按钮</button>
             <button class="btn btn-secondary focus-ring" type="button">次按钮</button>
           </div>
-          <div class="mt-3 inline-flex rounded-lg bg-brand-graphite p-4">
+          <div class="mt-3 inline-flex rounded-lg bg-inverse p-4">
             <button class="btn btn-ghost focus-ring" type="button">深色面次按钮</button>
           </div>
         </div>
@@ -158,12 +183,12 @@ const usage: [string, string][] = [
             <LevelBadge level="L2" />
             <LevelBadge level="L3" />
           </div>
-          <div class="mt-4 grid max-w-sm grid-cols-3 gap-1 text-center font-mono text-xs font-semibold text-brand-black/70">
-            <span class="rounded-sm bg-brand-yellow-light py-2">1d</span>
-            <span class="rounded-sm bg-brand-yellow-mid py-2">3d</span>
-            <span class="rounded-sm bg-level-l3 py-2">5d</span>
+          <div class="mt-4 grid max-w-sm grid-cols-3 gap-1 text-center font-mono text-xs font-semibold text-foreground/70">
+            <span class="rounded-sm bg-level-1 py-2">1d</span>
+            <span class="rounded-sm bg-level-2 py-2">3d</span>
+            <span class="rounded-sm bg-level-3 py-2">5d</span>
           </div>
-          <p class="mt-2 text-xs text-neutral-6">矩阵列底：L1 淡黄 → L2 中黄 → L3 亮黄。</p>
+          <p class="mt-2 text-xs text-neutral-6">矩阵列底：level-1 → level-2 → level-3。</p>
         </div>
       </div>
 
@@ -172,7 +197,7 @@ const usage: [string, string][] = [
         {
           usage.map(([name, where]) => (
             <li class="grid gap-x-6 gap-y-1 border-b border-neutral-3 py-3 sm:grid-cols-[22rem_1fr]">
-              <code class="font-mono text-sm text-brand-black">{name}</code>
+              <code class="font-mono text-sm text-foreground">{name}</code>
               <span class="text-sm text-neutral-8">{where}</span>
             </li>
           ))

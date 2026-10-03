@@ -59,7 +59,7 @@ const footerLinks = {
 };
 ---
 
-<footer class="bg-brand-graphite text-white">
+<footer class="bg-inverse text-white">
   <div class="container-page">
     <div
       class="py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-10 gap-x-8 border-t border-white/10"
@@ -92,7 +92,7 @@ const footerLinks = {
           {t(locale, 'footer.tagline')}
         </p>
         <p
-          class="mt-6 text-3xl leading-none text-brand-yellow"
+          class="mt-6 text-3xl leading-none text-accent"
           style="font-family: var(--font-display);"
         >
           {t(locale, 'footer.since')}
@@ -100,7 +100,7 @@ const footerLinks = {
       </div>
 
       <div class="lg:col-span-5">
-        <h4 class="text-base font-bold text-brand-yellow mb-4">{t(locale, 'footer.contact')}</h4>
+        <h4 class="text-base font-bold text-accent mb-4">{t(locale, 'footer.contact')}</h4>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {
             locations.map((loc) => (
@@ -108,11 +108,11 @@ const footerLinks = {
                 <div class="flex items-center gap-2 mb-2">
                   <Icon
                     name="lucide:map-pin"
-                    class="w-4 h-4 text-brand-yellow shrink-0"
+                    class="w-4 h-4 text-accent shrink-0"
                   />
                   <span class="font-medium text-white">{loc.city} <span class="text-white/50 text-xs font-normal">({loc.cityEn})</span></span>
                   {loc.tag && (
-                    <span class="text-[10px] font-bold bg-brand-yellow text-brand-black px-1.5 py-0.5 rounded-sm">
+                    <span class="text-[10px] font-bold bg-accent text-accent-foreground px-1.5 py-0.5 rounded-sm">
                       {loc.tag}
                     </span>
                   )}
@@ -121,7 +121,7 @@ const footerLinks = {
                 <p class="text-xs text-white/40 mb-1 pl-6">{loc.addressEn}</p>
                 <a
                   href={`mailto:${loc.email}`}
-                  class="focus-ring block text-sm text-white/70 pl-6 font-mono hover:text-brand-yellow transition-colors"
+                  class="focus-ring block text-sm text-white/70 pl-6 font-mono hover:text-accent transition-colors"
                 >
                   {loc.email}
                 </a>
@@ -133,7 +133,7 @@ const footerLinks = {
 
       <div class="md:col-span-2 lg:col-span-4 grid grid-cols-3 gap-6">
         <div>
-          <h4 class="text-base font-bold text-brand-yellow mb-4">
+          <h4 class="text-base font-bold text-accent mb-4">
             {footerLinks.about.title}
           </h4>
           <ul class="space-y-2">
@@ -144,7 +144,7 @@ const footerLinks = {
                     href={link.href}
                     target={link.href.startsWith("http") ? "_blank" : undefined}
                     rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    class="text-sm text-white/70 hover:text-brand-yellow transition-colors"
+                    class="text-sm text-white/70 hover:text-accent transition-colors"
                   >
                     {link.label}
                   </a>
@@ -155,7 +155,7 @@ const footerLinks = {
         </div>
 
         <div>
-          <h4 class="text-base font-bold text-brand-yellow mb-4">
+          <h4 class="text-base font-bold text-accent mb-4">
             {footerLinks.ecosystem.title}
           </h4>
           <ul class="space-y-2">
@@ -166,7 +166,7 @@ const footerLinks = {
                     href={link.href}
                     target={link.href.startsWith("http") ? "_blank" : undefined}
                     rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    class="text-sm text-white/70 hover:text-brand-yellow transition-colors"
+                    class="text-sm text-white/70 hover:text-accent transition-colors"
                   >
                     {link.label}
                   </a>
@@ -177,7 +177,7 @@ const footerLinks = {
         </div>
 
         <div>
-          <h4 class="text-base font-bold text-brand-yellow mb-4">
+          <h4 class="text-base font-bold text-accent mb-4">
             {footerLinks.social.title}
           </h4>
           <ul class="space-y-2">
@@ -186,7 +186,7 @@ const footerLinks = {
                 <li>
                   <a
                     href={link.href}
-                    class="text-sm text-white/70 hover:text-brand-yellow transition-colors"
+                    class="text-sm text-white/70 hover:text-accent transition-colors"
                   >
                     {link.label}
                   </a>

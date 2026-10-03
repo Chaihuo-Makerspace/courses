@@ -40,7 +40,7 @@ const zh: TranslationDict = {
     '先锋官是柴火在各地的教学合作者：掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。',
   'page.base.title': '基地计划',
   'page.base.description':
-    '面向拥有固定教学场地与日常运营能力的机构。首批 10 家基地已签约交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与委托派单，基地在本地常态开课。',
+    '面向拥有固定教学场地与日常运营能力的机构，常年开放新基地申请。柴火提供教学套件、成套讲义与委托派单，基地在本地常态开课。',
 
   // Home Hero
   'home.hero.title': '七门智能硬件课，\n套件、教案、讲师一次配齐',
@@ -50,7 +50,7 @@ const zh: TranslationDict = {
   // Courses
   'courses.title': '学习体系',
   'courses.description':
-    '七个模块（M0–M6），每个模块分 L1 / L2 / L3 三档深度。每行是一个模块，每列是一档深度；格子里写的是这一档的课名、天数和学完的产出。',
+    '七个模块（M0–M6），每个模块分 L1 / L2 / L3 三档深度。每行是一个模块，每列是一档深度；格子内部是这一档的课名、天数和一句话内容，点任意一格看这门课的详情。',
 
   // Course detail
   'course.complianceBoundary': '能力边界与合规约束',
@@ -61,7 +61,7 @@ const zh: TranslationDict = {
   'about.title': '关于学院',
   'about.hero.title': '柴火创客学院',
   'about.hero.description':
-    '我们培养人掌握新技术整合能力，不提供解决方案。课程从柴火创客空间十多年的项目和社区经验里整理出来，面向院校、集成商和企业。学院隶属于柴火创客空间，空间由 Seeed 创办——课上用的硬件就是这个体系自己在售的产品，按 SKU 就能买到。',
+    '我们培养人掌握新技术整合能力，让团队自己能把解决方案部署落地。课程从柴火创客空间十多年的项目和社区经验里整理出来，面向院校、集成商和企业。学院隶属于柴火创客空间，空间由 Seeed 创办，课上用的都是其在售的量产硬件。',
 
   // Contact
   'contact.title': '合作咨询',
@@ -84,8 +84,19 @@ const zh: TranslationDict = {
   'cta.contact': '合作咨询',
   'cta.courses': '查看学习体系',
   'cta.about': '关于学院',
-  'course.viewSyllabus': '看大纲与排课',
   'course.direction': '所属方向',
+  'course.nav.aria': '本页目录',
+  'course.nav.levels': '三档深度',
+  'course.nav.outcomes': '学完能做什么',
+  'course.nav.equipment': '设备',
+  'course.nav.syllabus': '大纲与排课',
+  'course.nav.deliverables': '交付物',
+  'course.nav.teachers': '写给老师',
+  'course.nav.boundary': '能力边界',
+  'course.nav.projects': '项目',
+  'course.projectsTitle': '学完能复现的开源项目',
+  'course.projectsSubtitle':
+    '这些项目用的硬件和方法与课上是同一套；上课积累的经验也会回写到这些项目里。',
   'course.prerequisite': '学员基础',
   'course.equipmentTitle': '设备与工具链',
   'course.hardwareDetails': '展开 {n} 件设备的图文清单',
@@ -143,7 +154,7 @@ const en: TranslationDict = {
 
   'courses.title': 'Learning System',
   'courses.description':
-    "Seven modules (M0–M6), each offered at three depths: L1, L2 and L3. Each row is a module and each column a depth; a cell gives that level's course title, length in days and what learners produce.",
+    "Seven modules (M0–M6), each offered at three depths: L1, L2 and L3. Each row is a module and each column a depth; a cell gives that level's course title, length in days and a one-line summary. Select any cell to open the course.",
 
   'course.complianceBoundary': 'Scope Boundaries & Compliance',
   'course.compliance.applicable': 'In Scope',
@@ -152,7 +163,7 @@ const en: TranslationDict = {
   'about.title': 'About the Academy',
   'about.hero.title': 'Chaihuo Maker Academy',
   'about.hero.description':
-    'We train people to integrate new technology; we do not sell solutions. The courses are distilled from more than a decade of projects and community work at Chaihuo Makerspace and are offered to schools, integrators and enterprises. The Academy is part of Chaihuo Makerspace, which was founded by Seeed — the hardware used in class is that ecosystem\u2019s own product line, orderable by SKU.',
+    'We train people to integrate new technology, so their own teams can deploy solutions themselves. The courses are distilled from more than a decade of projects and community work at Chaihuo Makerspace and are offered to schools, integrators and enterprises. The Academy is part of Chaihuo Makerspace, founded by Seeed, and teaches with its commercial production hardware.',
 
   'contact.title': 'Partnership',
   'contact.hero.title': 'Three kinds of organisation, four ways to work together',
@@ -172,8 +183,19 @@ const en: TranslationDict = {
   'cta.contact': 'Partnership Inquiry',
   'cta.courses': 'View Courses',
   'cta.about': 'About the Academy',
-  'course.viewSyllabus': 'View syllabus & formats',
   'course.direction': 'Direction',
+  'course.nav.aria': 'On this page',
+  'course.nav.levels': 'Levels',
+  'course.nav.outcomes': 'Outcomes',
+  'course.nav.equipment': 'Hardware',
+  'course.nav.syllabus': 'Syllabus',
+  'course.nav.deliverables': 'Deliverables',
+  'course.nav.teachers': 'For teachers',
+  'course.nav.boundary': 'Boundaries',
+  'course.nav.projects': 'Projects',
+  'course.projectsTitle': 'Open-source projects you can reproduce',
+  'course.projectsSubtitle':
+    'These projects use the same hardware and methods as the course, and what we learn in class is fed back into them.',
   'course.prerequisite': 'Prerequisites',
   'course.equipmentTitle': 'Hardware and toolchain',
   'course.hardwareDetails': 'Show the illustrated list of {n} devices',
@@ -230,7 +252,7 @@ const ja: TranslationDict = {
 
   'courses.title': '学習体系',
   'courses.description':
-    '7つのモジュール（M0〜M6）を、それぞれL1・L2・L3の3段階の深さで提供します。行がモジュール、列が深さで、各セルにはそのレベルの講座名、日数、修了時の成果物を記載しています。',
+    '7つのモジュール（M0〜M6）を、それぞれL1・L2・L3の3段階の深さで提供します。行がモジュール、列が深さで、各セルにはそのレベルの講座名、日数、ひとことの内容を記載しています。セルを選ぶと講座の詳細を確認できます。',
 
   'course.complianceBoundary': '能力範囲とコンプライアンス',
   'course.compliance.applicable': '適用範囲',
@@ -239,7 +261,7 @@ const ja: TranslationDict = {
   'about.title': '学院について',
   'about.hero.title': '柴火創客学院',
   'about.hero.description':
-    '私たちは新しい技術を統合する力を持つ人材を育てます。ソリューションを提供する事業ではありません。講座は柴火創客空間が10年以上積み重ねてきたプロジェクトとコミュニティの経験を整理して作り、学校、インテグレーター、企業向けに提供しています。学院は柴火創客空間に属し、空間はSeeedによって設立されました。授業で使うハードウェアはその製品体系の現行製品で、SKUで購入できます。',
+    '私たちは新しい技術を統合する力を持つ人材を育て、チームが自らソリューションを導入・展開できるようにします。講座は柴火創客空間が10年以上積み重ねてきたプロジェクトとコミュニティの経験を整理して作り、学校、インテグレーター、企業向けに提供しています。学院はSeeedによって設立された柴火創客空間に属し、その現行量産ハードウェアを用いて授業を行います。',
 
   'contact.title': 'パートナーシップ',
   'contact.hero.title': '3種類の機関、4つの協業形態',
@@ -259,8 +281,19 @@ const ja: TranslationDict = {
   'cta.contact': '協業のご相談',
   'cta.courses': '学習体系を見る',
   'cta.about': '学院について',
-  'course.viewSyllabus': 'シラバスと開講形態を見る',
   'course.direction': '方向',
+  'course.nav.aria': 'このページの内容',
+  'course.nav.levels': '3段階',
+  'course.nav.outcomes': '到達点',
+  'course.nav.equipment': '機器',
+  'course.nav.syllabus': 'シラバス',
+  'course.nav.deliverables': '成果物',
+  'course.nav.teachers': '教員の方へ',
+  'course.nav.boundary': '適用範囲',
+  'course.nav.projects': 'プロジェクト',
+  'course.projectsTitle': '修了後に再現できるオープンソースプロジェクト',
+  'course.projectsSubtitle':
+    'これらのプロジェクトは講座と同じハードウェアと手法を使っており、授業で得た知見もプロジェクトへ反映しています。',
   'course.prerequisite': '受講の前提',
   'course.equipmentTitle': '機器とツールチェーン',
   'course.hardwareDetails': '機器{n}点の写真付きリストを表示',
@@ -319,7 +352,7 @@ const es: TranslationDict = {
 
   'courses.title': 'Sistema de Aprendizaje',
   'courses.description':
-    'Siete módulos (M0–M6), cada uno en tres niveles de profundidad: L1, L2 y L3. Cada fila es un módulo y cada columna un nivel; la celda indica el título del curso, su duración en días y lo que produce el alumnado.',
+    'Siete módulos (M0–M6), cada uno en tres niveles de profundidad: L1, L2 y L3. Cada fila es un módulo y cada columna un nivel; la celda indica el título del curso, su duración en días y un resumen de una línea. Seleccione cualquier celda para abrir el curso.',
 
   'course.complianceBoundary': 'Límites de Alcance y Cumplimiento',
   'course.compliance.applicable': 'Alcance',
@@ -328,7 +361,7 @@ const es: TranslationDict = {
   'about.title': 'Acerca de la Academia',
   'about.hero.title': 'Academia Chaihuo Maker',
   'about.hero.description':
-    'Formamos a personas para que sepan integrar nuevas tecnologías; no vendemos soluciones. Los cursos recogen más de una década de proyectos y trabajo comunitario en Chaihuo Makerspace y están dirigidos a centros educativos, integradores y empresas. La Academia forma parte de Chaihuo Makerspace, fundado por Seeed: el hardware que se usa en clase pertenece a la propia línea de productos de ese ecosistema y se puede pedir por SKU.',
+    'Formamos a personas para que sepan integrar nuevas tecnologías, de modo que su propio equipo pueda desplegar soluciones. Los cursos recogen más de una década de proyectos y trabajo comunitario en Chaihuo Makerspace y están dirigidos a centros educativos, integradores y empresas. La Academia forma parte de Chaihuo Makerspace, fundado por Seeed, y enseña con su hardware estándar de producción.',
 
   'contact.title': 'Colaboración',
   'contact.hero.title': 'Tres tipos de organización, cuatro formas de colaborar',
@@ -348,8 +381,19 @@ const es: TranslationDict = {
   'cta.contact': 'Consultar colaboración',
   'cta.courses': 'Ver sistema curricular',
   'cta.about': 'Sobre la academia',
-  'course.viewSyllabus': 'Ver temario y formatos',
   'course.direction': 'Orientación',
+  'course.nav.aria': 'En esta página',
+  'course.nav.levels': 'Niveles',
+  'course.nav.outcomes': 'Resultados',
+  'course.nav.equipment': 'Hardware',
+  'course.nav.syllabus': 'Temario',
+  'course.nav.deliverables': 'Entregables',
+  'course.nav.teachers': 'Para docentes',
+  'course.nav.boundary': 'Límites',
+  'course.nav.projects': 'Proyectos',
+  'course.projectsTitle': 'Proyectos de código abierto que podrá reproducir',
+  'course.projectsSubtitle':
+    'Estos proyectos usan el mismo hardware y los mismos métodos que el curso, y lo aprendido en clase se incorpora de vuelta a ellos.',
   'course.prerequisite': 'Requisitos previos',
   'course.equipmentTitle': 'Hardware y cadena de herramientas',
   'course.hardwareDetails': 'Ver la lista ilustrada de {n} dispositivos',
@@ -408,7 +452,7 @@ const ptBR: TranslationDict = {
 
   'courses.title': 'Sistema de Aprendizagem',
   'courses.description':
-    'Sete módulos (M0–M6), cada um em três níveis de profundidade: L1, L2 e L3. Cada linha é um módulo e cada coluna um nível; a célula traz o título do curso, a duração em dias e o que os alunos produzem.',
+    'Sete módulos (M0–M6), cada um em três níveis de profundidade: L1, L2 e L3. Cada linha é um módulo e cada coluna um nível; a célula traz o título do curso, a duração em dias e um resumo de uma linha. Selecione qualquer célula para abrir o curso.',
 
   'course.complianceBoundary': 'Limites de Escopo e Conformidade',
   'course.compliance.applicable': 'No Escopo',
@@ -417,7 +461,7 @@ const ptBR: TranslationDict = {
   'about.title': 'Sobre a Academia',
   'about.hero.title': 'Academia Chaihuo Maker',
   'about.hero.description':
-    'Formamos pessoas para integrar novas tecnologias; não vendemos soluções. Os cursos reúnem mais de uma década de projetos e trabalho comunitário no Chaihuo Makerspace e são oferecidos a escolas, integradores e empresas. A Academia faz parte do Chaihuo Makerspace, fundado pela Seeed — o hardware usado em aula é da própria linha de produtos desse ecossistema e pode ser pedido por SKU.',
+    'Formamos pessoas para integrar novas tecnologias, para que a própria equipe consiga implantar soluções. Os cursos reúnem mais de uma década de projetos e trabalho comunitário no Chaihuo Makerspace e são oferecidos a escolas, integradores e empresas. A Academia integra o Chaihuo Makerspace, fundado pela Seeed, e utiliza seu hardware comercial de produção no ensino.',
 
   'contact.title': 'Parceria',
   'contact.hero.title': 'Três tipos de organização, quatro formas de parceria',
@@ -437,8 +481,19 @@ const ptBR: TranslationDict = {
   'cta.contact': 'Consultar parceria',
   'cta.courses': 'Ver grade curricular',
   'cta.about': 'Sobre a Academia',
-  'course.viewSyllabus': 'Ver programa e formatos',
   'course.direction': 'Direção',
+  'course.nav.aria': 'Nesta página',
+  'course.nav.levels': 'Níveis',
+  'course.nav.outcomes': 'Resultados',
+  'course.nav.equipment': 'Hardware',
+  'course.nav.syllabus': 'Programa',
+  'course.nav.deliverables': 'Entregáveis',
+  'course.nav.teachers': 'Para professores',
+  'course.nav.boundary': 'Limites',
+  'course.nav.projects': 'Projetos',
+  'course.projectsTitle': 'Projetos de código aberto que você poderá reproduzir',
+  'course.projectsSubtitle':
+    'Estes projetos usam o mesmo hardware e os mesmos métodos do curso, e o que aprendemos em aula volta para eles.',
   'course.prerequisite': 'Pré-requisitos',
   'course.equipmentTitle': 'Hardware e cadeia de ferramentas',
   'course.hardwareDetails': 'Ver a lista ilustrada de {n} dispositivos',

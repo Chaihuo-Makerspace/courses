@@ -1,3 +1,4 @@
+import { fillStats } from '../data/stats';
 import { type Locale, localizePath } from './types';
 
 /**
@@ -52,20 +53,19 @@ const zhToEn: Record<string, string> = {
   'PPT + md 格式，可以自行修改和二次创作': 'PPT + md format; you may modify and rework it',
   '基地：柴火认证的本地授课点': 'Bases: Chaihuo-certified local teaching sites',
   教学合作网络与基地: 'Teaching Network & Bases',
-  '已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家）与首批 10 家签约交付基地。常年开放申请，支持个人讲师开课与机构空间挂牌。':
-    'Over 79 Pioneers (57 across 19 provinces in China, 22 across 15 countries overseas) and the first 10 signed partner bases. Applications are open year-round for independent instructors and educational spaces.',
+  '已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课，首批 {bases} 家基地已签约。常年开放申请，支持个人讲师开课与机构空间挂牌。':
+    '{pioneers} Pioneers are teaching in {countries} countries, and the first {bases} partner bases have signed. Applications are open year-round for independent instructors and educational spaces.',
   个人讲师申请: 'Instructor Application',
   实体空间合作: 'Physical Space Partnership',
   '先锋官：柴火教学点火人': 'Pioneers: Sparking Maker Education',
-  '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有 79 位先锋官（国内 57 位、海外 22 位）在 15 个国家持续开课。':
-    "Pioneers are Chaihuo's local teaching partners: mastering the curriculum to run classes, workshops, and educational projects locally. Chaihuo provides kits, lesson plans, and certification. Applications are open year-round, with 79 Pioneers (57 in China, 22 overseas) active across 15 countries.",
+  '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课。':
+    "Pioneers are Chaihuo's local teaching partners: mastering the curriculum to run classes, workshops, and educational projects locally. Chaihuo provides kits, lesson plans, and certification. Applications are open year-round; {pioneers} Pioneers are currently teaching in {countries} countries.",
   申请成为先锋官: 'Apply as a Pioneer',
-  了解基地合作: 'Explore Base Partnerships',
   准入条件与合作机制: 'Eligibility & Collaboration Mechanism',
   '先锋官是柴火认证的本地讲师与合作者：掌握课程体系，在当地开课交付，并对接学校与机构培训需求。':
     'Pioneers are certified local instructors and partners: delivering the curriculum locally while connecting with schools and institutional training needs.',
   '申请条件（满足其一即可）': 'Eligibility (Meet Either Condition)',
-  '有硬件或编程背景，希望使用柴火课程与套件开展教学服务':
+  '有硬件或编程背景，希望用柴火课程与套件在本地开课':
     'Technical background in hardware or coding, wanting to teach using Chaihuo kits and courses',
   '拥有学校、机构或社区资源，希望引入创客课程并组织本地交付':
     'Access to educational, institutional, or community networks, looking to introduce maker courses locally',
@@ -118,8 +118,8 @@ const zhToEn: Record<string, string> = {
   '先锋官计划常年开放申请，不设名额上限。提交申请后，教研团队会在 3 个工作日内通过邮件与你联系沟通。':
     'The Pioneer Program accepts applications year-round with no quota caps. Our curriculum team will follow up via email within 3 business days.',
   '目前先锋官网络的实际规模有多大？': 'What is the current scale of the Pioneer network?',
-  '截至目前，全球已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家），并有首批 10 家签约基地配备教具开课。':
-    'To date, there are 79 Pioneers worldwide (57 across 19 provinces in China, 22 across 15 countries overseas), with 10 signed bases equipped and operating.',
+  '目前全球已有 {pioneers} 位先锋官，在 {countries} 个国家持续开课；首批 {bases} 家签约基地已配备教具开课。':
+    'There are currently {pioneers} Pioneers teaching in {countries} countries, and the first {bases} signed bases are equipped and running classes.',
   '加入需要支付加盟费用吗？': 'Is there a franchise fee to join?',
   '不需要加盟费。M0 基础教具在认证通过后配发赠送；M1–M6 高阶模块教具实行押金租赁制，项目结课退还设备后押金全额退回。':
     'No franchise fees. 5 sets of M0 kits are provided complimentary upon certification. Advanced M1–M6 kits are leased on a deposit basis, fully refunded upon return.',
@@ -135,8 +135,8 @@ const zhToEn: Record<string, string> = {
   提交申请: 'Submit Application',
   邮件咨询: 'Email Inquiry',
   '基地：柴火认证的本地授课中心': 'Bases: Certified Local Learning Hubs',
-  '面向拥有固定教学场地与日常运营能力的机构。首批 10 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。':
-    'For institutions with permanent teaching spaces and ongoing operational capability. 10 bases have signed and received kits; new base applications are open year-round. Chaihuo provides kits, lesson packages, and workshop dispatches; bases run ongoing classes and host Pioneers with dedicated maker benches.',
+  '面向拥有固定教学场地与日常运营能力的机构。首批 {bases} 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。':
+    'For institutions with permanent teaching spaces and ongoing operational capability. {bases} bases have signed and received kits; new base applications are open year-round. Chaihuo provides kits, lesson packages, and workshop dispatches; bases run ongoing classes and host Pioneers with dedicated maker benches.',
   申请设立基地: 'Apply for a Base',
   准入条件与权益: 'Eligibility & Benefits',
   '基地是柴火官方认证的实体教学中心，具备承接实训与常态化开课的场地条件。':
@@ -146,7 +146,7 @@ const zhToEn: Record<string, string> = {
     'Dedicated workshop space accommodating 15–30 learners working hands-on',
   '配备专职教学或运营对接人，有明确的开班排课规划':
     'Dedicated education or operations coordinator with a concrete scheduling plan',
-  两项均为基本要求: 'Both requirements are mandatory',
+  两项都是基本要求: 'Both requirements are mandatory',
   优先合作条件: 'Preferred Qualifications',
   '具备创客、STEAM 或电子信息类社团与开课经验':
     'Prior experience hosting maker, STEAM, or electronics clubs and programs',
@@ -192,7 +192,7 @@ const zhToEn: Record<string, string> = {
     'Shared workshop hardware, uniting multiple Pioneers to deliver classes',
   '先锋官既可以是基地的专职讲师，也可以作为外部特邀合作导师':
     'Pioneers can serve as full-time in-house instructors or external guest mentors.',
-  '一位先锋官可与同城多家基地签约合作，跨工坊开展教学':
+  '一位先锋官可与同城多家基地签约合作，在不同工坊授课':
     'A single Pioneer can partner with multiple local bases, delivering across different workshops.',
   基地配发的教具与云端账号供工坊内所有认证先锋官共同使用:
     'Kits and platform seats assigned to a base are shared among all certified Pioneers in that workshop.',
@@ -219,7 +219,6 @@ const zhToEn: Record<string, string> = {
   申请设立柴火教学基地: 'Apply to Establish a Chaihuo Learning Base',
   '常年开放机构合作。拥有线下教学场地并计划引入 AIoT 实训体系的团队，提交申请后教研顾问将在 3 个工作日内与你沟通方案。':
     'Institutional partnerships are open year-round. If you have physical facilities and want to bring in the AIoT curriculum, submit an application and our advisors will respond within 3 business days.',
-  了解先锋官: 'Explore Pioneers',
   先锋官: 'Pioneer',
   先锋官计划: 'Pioneer Program',
   固定场地: 'Dedicated Space',
@@ -229,7 +228,7 @@ const zhToEn: Record<string, string> = {
   总部支持: 'HQ Support',
   技术型: 'Technical Profile',
   持续运营: 'Continuous Operation',
-  '曾与柴火基地车或 Seeed 硬件开展过工作坊合作':
+  '曾与柴火基地车或 Seeed 硬件合作举办过工作坊':
     'Prior workshop collaboration with Chaihuo Maker Truck or Seeed hardware',
   查看分布图: 'View Global Map',
   '科技馆、青少年活动中心、高校 Fab Lab 等公共空间':
@@ -284,20 +283,19 @@ const zhToJa: Record<string, string> = {
   'PPT + md 格式，可以自行修改和二次创作': 'PPT＋md形式。自由に改変・再構成できます',
   '基地：柴火认证的本地授课点': '拠点：柴火が認定する地域の授業拠点',
   教学合作网络与基地: '教育連携ネットワークと拠点',
-  '已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家）与首批 10 家签约交付基地。常年开放申请，支持个人讲师开课与机构空间挂牌。':
-    '79名のパイオニア（国内57名・19省、海外22名・15カ国）と第1期10拠点が稼働中。個人講師の開講や教育拠点の設立申請を通年で受け付けています。',
+  '已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课，首批 {bases} 家基地已签约。常年开放申请，支持个人讲师开课与机构空间挂牌。':
+    '{pioneers}名のパイオニアが{countries}カ国で開講を続け、第1期{bases}拠点が契約済みです。個人講師の開講や教育拠点の設立申請を通年で受け付けています。',
   个人讲师申请: '個人講師の応募',
   实体空间合作: '実体拠点の連携',
   '先锋官：柴火教学点火人': 'パイオニア：柴火の教育イグナイター',
-  '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有 79 位先锋官（国内 57 位、海外 22 位）在 15 个国家持续开课。':
-    'パイオニアは各地で活動する教育パートナーです。カリキュラムを習得し、地元で授業やワークショップを展開します。柴火がキット、指導案、認定を提供し、通年で募集しています。現在79名（国内57名、海外22名）が15カ国で活動中です。',
+  '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课。':
+    'パイオニアは各地で活動する教育パートナーです。カリキュラムを習得し、地元で授業やワークショップを展開します。柴火がキット、指導案、認定を提供し、通年で募集しています。現在{pioneers}名が{countries}カ国で開講を続けています。',
   申请成为先锋官: 'パイオニアに応募する',
-  了解基地合作: '拠点連携について知る',
   准入条件与合作机制: '参加条件と連携の仕組み',
   '先锋官是柴火认证的本地讲师与合作者：掌握课程体系，在当地开课交付，并对接学校与机构培训需求。':
     'パイオニアは公認の地域講師・パートナーです。体系を習得して授業を提供し、教育機関のニーズに応えます。',
   '申请条件（满足其一即可）': '応募要件（いずれか1つに該当）',
-  '有硬件或编程背景，希望使用柴火课程与套件开展教学服务':
+  '有硬件或编程背景，希望用柴火课程与套件在本地开课':
     'ハードウェアやプログラミングの知見を持ち、柴火の教材で教育サービスを展開したい方',
   '拥有学校、机构或社区资源，希望引入创客课程并组织本地交付':
     '学校や地域のネットワークを持ち、メイカー教育プログラムを導入・運営したい方',
@@ -349,8 +347,8 @@ const zhToJa: Record<string, string> = {
   '先锋官计划常年开放申请，不设名额上限。提交申请后，教研团队会在 3 个工作日内通过邮件与你联系沟通。':
     'パイオニア計画は通年で募集しており、定員制限はありません。申請後3営業日以内に担当チームからメールでご連絡します。',
   '目前先锋官网络的实际规模有多大？': '現在、パイオニアネットワークの規模はどのくらいですか？',
-  '截至目前，全球已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家），并有首批 10 家签约基地配备教具开课。':
-    '現在、世界中で79名（国内57名・19省、海外22名・15カ国）のパイオニアと、機材を配備済みの第1期10拠点が活動しています。',
+  '目前全球已有 {pioneers} 位先锋官，在 {countries} 个国家持续开课；首批 {bases} 家签约基地已配备教具开课。':
+    '現在、{pioneers}名のパイオニアが{countries}カ国で開講しており、機材を配備済みの第1期{bases}拠点が活動しています。',
   '加入需要支付加盟费用吗？': '加盟金や初期費用はかかりますか？',
   '不需要加盟费。M0 基础教具在认证通过后配发赠送；M1–M6 高阶模块教具实行押金租赁制，项目结课退还设备后押金全额退回。':
     '加盟金は一切不要です。M0教材は認定完了後に無償提供されます。M1–M6の上位教材はデポジット制レンタルで、返却時に全額返金されます。',
@@ -366,8 +364,8 @@ const zhToJa: Record<string, string> = {
   提交申请: '申請を送信',
   邮件咨询: 'メールで問い合わせ',
   '基地：柴火认证的本地授课中心': '拠点：柴火認定の地域教育拠点',
-  '面向拥有固定教学场地与日常运营能力的机构。首批 10 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。':
-    '常設スペースと継続的な運営体制を持つ教育施設向け。すでに10拠点が締結し教材を導入済みで、新規拠点の申請を通年で受け付けています。柴火がキット、指導案、案件委託を提供し、拠点は日常授業の実施とパイオニアへの実習スペース提供を担います。',
+  '面向拥有固定教学场地与日常运营能力的机构。首批 {bases} 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。':
+    '常設スペースと継続的な運営体制を持つ教育施設向け。すでに{bases}拠点が締結し教材を導入済みで、新規拠点の申請を通年で受け付けています。柴火がキット、指導案、案件委託を提供し、拠点は日常授業の実施とパイオニアへの実習スペース提供を担います。',
   申请设立基地: '拠点の設立を申請',
   准入条件与权益: '認定条件と特典',
   '基地是柴火官方认证的实体教学中心，具备承接实训与常态化开课的场地条件。':
@@ -377,7 +375,7 @@ const zhToJa: Record<string, string> = {
     '15〜30名が同時に手を動かせるメイカースペースまたは実習室',
   '配备专职教学或运营对接人，有明确的开班排课规划':
     '専任の教育または運営担当者を配置し、明確な開講スケジュールを持つこと',
-  两项均为基本要求: '2項目とも満たす必要があります',
+  两项都是基本要求: '2項目とも満たす必要があります',
   优先合作条件: '優遇条件',
   '具备创客、STEAM 或电子信息类社团与开课经验':
     'メイカー、STEAM、電子工作関連のクラブや講座の実績があること',
@@ -423,7 +421,7 @@ const zhToJa: Record<string, string> = {
     '工房内の設備を共有し、複数のパイオニアが集まって授業を実施可能',
   '先锋官既可以是基地的专职讲师，也可以作为外部特邀合作导师':
     'パイオニアは拠点の専任講師でも、外部の客員メンターでも構いません。',
-  '一位先锋官可与同城多家基地签约合作，跨工坊开展教学':
+  '一位先锋官可与同城多家基地签约合作，在不同工坊授课':
     '1名のパイオニアが同一市内の複数拠点と提携し、教室を巡回して教えることも可能です。',
   基地配发的教具与云端账号供工坊内所有认证先锋官共同使用:
     '拠点に支給された機材とアカウントは、工房内の全公認パイオニアで共同利用できます。',
@@ -450,7 +448,6 @@ const zhToJa: Record<string, string> = {
   申请设立柴火教学基地: '柴火教育拠点の設立を申請',
   '常年开放机构合作。拥有线下教学场地并计划引入 AIoT 实训体系的团队，提交申请后教研顾问将在 3 个工作日内与你沟通方案。':
     '教育機関・施設との連携を通年で受付中。実習スペースを持ち AIoT カリキュラムの導入をお考えの場合、申請後3営業日以内にご提案をご案内します。',
-  了解先锋官: 'パイオニアについて知る',
   先锋官: 'パイオニア',
   先锋官计划: 'パイオニア計画',
   固定场地: '常設スペース',
@@ -460,7 +457,7 @@ const zhToJa: Record<string, string> = {
   总部支持: '本部サポート',
   技术型: '技術型',
   持续运营: '継続的な運営',
-  '曾与柴火基地车或 Seeed 硬件开展过工作坊合作':
+  '曾与柴火基地车或 Seeed 硬件合作举办过工作坊':
     '柴火ベーストラックやSeeed機材を活用したワークショップの共催実績',
   查看分布图: '分布マップを見る',
   '科技馆、青少年活动中心、高校 Fab Lab 等公共空间':
@@ -509,20 +506,19 @@ const zhToEs: Record<string, string> = {
   'PPT + md 格式，可以自行修改和二次创作': 'Formato PPT + md; puede modificarlo y reelaborarlo',
   '基地：柴火认证的本地授课点': 'Bases: puntos de enseñanza locales certificados por Chaihuo',
   教学合作网络与基地: 'Red de Enseñanza y Bases',
-  '已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家）与首批 10 家签约交付基地。常年开放申请，支持个人讲师开课与机构空间挂牌。':
-    'Más de 79 Pioneros (57 en 19 provincias de China, 22 en 15 países) y 10 bases equipadas. Solicitudes abiertas todo el año para instructores independientes y espacios educativos.',
+  '已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课，首批 {bases} 家基地已签约。常年开放申请，支持个人讲师开课与机构空间挂牌。':
+    '{pioneers} Pioneros imparten cursos en {countries} países y las primeras {bases} bases ya han firmado. Solicitudes abiertas todo el año para instructores independientes y espacios educativos.',
   个人讲师申请: 'Solicitud de instructor',
   实体空间合作: 'Colaboración de espacio físico',
   '先锋官：柴火教学点火人': 'Pioneros: Impulsores de la Educación Maker',
-  '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有 79 位先锋官（国内 57 位、海外 22 位）在 15 个国家持续开课。':
-    'Los Pioneros son socios docentes locales de Chaihuo: dominan los cursos para impartir clases y talleres en su comunidad. Chaihuo aporta kits, temarios y certificación con convocatoria continua. Actualmente hay 79 Pioneros (57 en China, 22 en el extranjero) activos en 15 países.',
+  '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课。':
+    'Los Pioneros son socios docentes locales de Chaihuo: dominan los cursos para impartir clases y talleres en su comunidad. Chaihuo aporta kits, temarios y certificación con convocatoria continua. Actualmente {pioneers} Pioneros imparten cursos en {countries} países.',
   申请成为先锋官: 'Solicitar ser Pionero',
-  了解基地合作: 'Conocer el Programa de Bases',
   准入条件与合作机制: 'Criterios de Admisión y Modelo de Trabajo',
   '先锋官是柴火认证的本地讲师与合作者：掌握课程体系，在当地开课交付，并对接学校与机构培训需求。':
     'Los Pioneros son formadores certificados que imparten los cursos localmente y canalizan la demanda formativa de escuelas e instituciones.',
   '申请条件（满足其一即可）': 'Requisitos de Admisión (Cumplir al menos uno)',
-  '有硬件或编程背景，希望使用柴火课程与套件开展教学服务':
+  '有硬件或编程背景，希望用柴火课程与套件在本地开课':
     'Con experiencia en hardware o programación, con interés en enseñar con los kits de Chaihuo',
   '拥有学校、机构或社区资源，希望引入创客课程并组织本地交付':
     'Con acceso a centros educativos o comunidades, buscando implementar cursos maker en su entorno',
@@ -575,8 +571,8 @@ const zhToEs: Record<string, string> = {
   '先锋官计划常年开放申请，不设名额上限。提交申请后，教研团队会在 3 个工作日内通过邮件与你联系沟通。':
     'El programa está abierto todo el año sin límite de plazas. El equipo pedagógico se pondrá en contacto por correo en un plazo de 3 días laborables.',
   '目前先锋官网络的实际规模有多大？': '¿Cuál es el alcance actual de la red de Pioneros?',
-  '截至目前，全球已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家），并有首批 10 家签约基地配备教具开课。':
-    'Hasta la fecha, hay 79 Pioneros en el mundo (57 en 19 provincias chinas, 22 en 15 países) y 10 bases firmadas y equipadas.',
+  '目前全球已有 {pioneers} 位先锋官，在 {countries} 个国家持续开课；首批 {bases} 家签约基地已配备教具开课。':
+    'Actualmente hay {pioneers} Pioneros impartiendo cursos en {countries} países, y las primeras {bases} bases firmadas ya están equipadas y en marcha.',
   '加入需要支付加盟费用吗？': '¿Se cobra alguna cuota de franquicia o adhesión?',
   '不需要加盟费。M0 基础教具在认证通过后配发赠送；M1–M6 高阶模块教具实行押金租赁制，项目结课退还设备后押金全额退回。':
     'No hay cuota de franquicia. Los kits M0 se entregan de forma gratuita tras certificarse; los módulos M1–M6 usan depósito reembolsable íntegro al devolver el equipo.',
@@ -593,8 +589,8 @@ const zhToEs: Record<string, string> = {
   提交申请: 'Enviar Solicitud',
   邮件咨询: 'Consulta por Correo',
   '基地：柴火认证的本地授课中心': 'Bases: Centros Locales de Formación Certificados',
-  '面向拥有固定教学场地与日常运营能力的机构。首批 10 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。':
-    'Dirigido a centros con espacio permanente y gestión activa. 10 bases ya han firmado y recibido material; nuevas solicitudes abiertas todo el año. Chaihuo provee kits, temarios y proyectos; las bases imparten cursos y albergan a los Pioneros en sus talleres.',
+  '面向拥有固定教学场地与日常运营能力的机构。首批 {bases} 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。':
+    'Dirigido a centros con espacio permanente y gestión activa. {bases} bases ya han firmado y recibido material; nuevas solicitudes abiertas todo el año. Chaihuo provee kits, temarios y proyectos; las bases imparten cursos y albergan a los Pioneros en sus talleres.',
   申请设立基地: 'Solicitar una Base',
   准入条件与权益: 'Requisitos y Beneficios',
   '基地是柴火官方认证的实体教学中心，具备承接实训与常态化开课的场地条件。':
@@ -604,7 +600,7 @@ const zhToEs: Record<string, string> = {
     'Espacio de taller con capacidad para 15–30 alumnos trabajando de forma práctica',
   '配备专职教学或运营对接人，有明确的开班排课规划':
     'Responsable docente u operativo designado con un calendario formativo definido',
-  两项均为基本要求: 'Ambos requisitos son indispensables',
+  两项都是基本要求: 'Ambos requisitos son indispensables',
   优先合作条件: 'Condiciones Preferentes',
   '具备创客、STEAM 或电子信息类社团与开课经验':
     'Experiencia previa en clubes o talleres maker, STEAM o de electrónica',
@@ -652,7 +648,7 @@ const zhToEs: Record<string, string> = {
     'Equipos compartidos en el taller, reuniendo a varios Pioneros para dar clase',
   '先锋官既可以是基地的专职讲师，也可以作为外部特邀合作导师':
     'El Pionero puede ser formador contratado de la base o mentor externo colaborador.',
-  '一位先锋官可与同城多家基地签约合作，跨工坊开展教学':
+  '一位先锋官可与同城多家基地签约合作，在不同工坊授课':
     'Un mismo Pionero puede colaborar con varios centros de la ciudad e impartir talleres en diferentes sedes.',
   基地配发的教具与云端账号供工坊内所有认证先锋官共同使用:
     'Los kits y accesos asignados a la base son de uso común para todos los Pioneros acreditados.',
@@ -680,7 +676,6 @@ const zhToEs: Record<string, string> = {
   申请设立柴火教学基地: 'Solicitar la Apertura de una Base Chaihuo',
   '常年开放机构合作。拥有线下教学场地并计划引入 AIoT 实训体系的团队，提交申请后教研顾问将在 3 个工作日内与你沟通方案。':
     'Colaboración abierta todo el año con centros. Si cuentas con aulas prácticas y deseas incorporar la formación en AIoT, envía tu solicitud y te contactaremos en 3 días laborables.',
-  了解先锋官: 'Conocer a los Pioneros',
   先锋官: 'Pionero',
   先锋官计划: 'Programa de Pioneros',
   固定场地: 'Espacio Físico Dedicado',
@@ -690,7 +685,7 @@ const zhToEs: Record<string, string> = {
   总部支持: 'Apoyo de la Central',
   技术型: 'Perfil Técnico',
   持续运营: 'Gestión Continua',
-  '曾与柴火基地车或 Seeed 硬件开展过工作坊合作':
+  '曾与柴火基地车或 Seeed 硬件合作举办过工作坊':
     'Colaboración previa en talleres con Chaihuo Maker Truck o hardware de Seeed',
   查看分布图: 'Ver Mapa Global',
   '科技馆、青少年活动中心、高校 Fab Lab 等公共空间':
@@ -737,20 +732,19 @@ const zhToPt: Record<string, string> = {
   'PPT + md 格式，可以自行修改和二次创作': 'Formato PPT + md; você pode modificar e reelaborar',
   '基地：柴火认证的本地授课点': 'Bases: pontos de ensino locais certificados pela Chaihuo',
   教学合作网络与基地: 'Rede de Ensino e Bases',
-  '已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家）与首批 10 家签约交付基地。常年开放申请，支持个人讲师开课与机构空间挂牌。':
-    'Mais de 79 Pioneiros (57 em 19 províncias na China, 22 em 15 países) e 10 bases já equipadas. Inscrições abertas o ano todo para instrutores e espaços educacionais.',
+  '已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课，首批 {bases} 家基地已签约。常年开放申请，支持个人讲师开课与机构空间挂牌。':
+    '{pioneers} Pioneiros dão aulas em {countries} países e as primeiras {bases} bases já assinaram. Inscrições abertas o ano todo para instrutores e espaços educacionais.',
   个人讲师申请: 'Inscrição para instrutores',
   实体空间合作: 'Parceria para espaços físicos',
   '先锋官：柴火教学点火人': 'Pioneiros: Multiplicadores da Educação Maker',
-  '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有 79 位先锋官（国内 57 位、海外 22 位）在 15 个国家持续开课。':
-    'Os Pioneiros são parceiros locais de ensino da Chaihuo: dominam o currículo para ministrar aulas e oficinas em suas regiões. A Chaihuo fornece kits, planos de aula e certificação contínua. Atualmente, 79 Pioneiros (57 na China, 22 no exterior) atuam em 15 países.',
+  '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课。':
+    'Os Pioneiros são parceiros locais de ensino da Chaihuo: dominam o currículo para ministrar aulas e oficinas em suas regiões. A Chaihuo fornece kits, planos de aula e certificação contínua. Atualmente, {pioneers} Pioneiros dão aulas em {countries} países.',
   申请成为先锋官: 'Inscreva-se como Pioneiro',
-  了解基地合作: 'Conhecer o Programa de Bases',
   准入条件与合作机制: 'Critérios de Admissão e Modelo de Parceria',
   '先锋官是柴火认证的本地讲师与合作者：掌握课程体系，在当地开课交付，并对接学校与机构培训需求。':
     'Os Pioneiros são instrutores certificados que ministram o currículo localmente e atendem à demanda de instituições de ensino.',
   '申请条件（满足其一即可）': 'Requisitos de Admissão (Cumprir pelo menos um)',
-  '有硬件或编程背景，希望使用柴火课程与套件开展教学服务':
+  '有硬件或编程背景，希望用柴火课程与套件在本地开课':
     'Com experiência em hardware ou programação, com interesse em ensinar usando os kits da Chaihuo',
   '拥有学校、机构或社区资源，希望引入创客课程并组织本地交付':
     'Com acesso a redes educacionais ou comunitárias, buscando implementar cursos maker localmente',
@@ -803,8 +797,8 @@ const zhToPt: Record<string, string> = {
   '先锋官计划常年开放申请，不设名额上限。提交申请后，教研团队会在 3 个工作日内通过邮件与你联系沟通。':
     'O programa tem inscrições abertas o ano todo, sem limite de vagas. A equipe pedagógica responderá por e-mail em até 3 dias úteis.',
   '目前先锋官网络的实际规模有多大？': 'Qual é a abrangência atual da rede de Pioneiros?',
-  '截至目前，全球已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家），并有首批 10 家签约基地配备教具开课。':
-    'Até o momento, há 79 Pioneiros no mundo (57 em 19 províncias na China, 22 em 15 países) e 10 bases já firmadas e equipadas.',
+  '目前全球已有 {pioneers} 位先锋官，在 {countries} 个国家持续开课；首批 {bases} 家签约基地已配备教具开课。':
+    'Atualmente há {pioneers} Pioneiros dando aulas em {countries} países, e as primeiras {bases} bases firmadas já estão equipadas e em funcionamento.',
   '加入需要支付加盟费用吗？': 'É cobrada alguma taxa de franquia ou adesão?',
   '不需要加盟费。M0 基础教具在认证通过后配发赠送；M1–M6 高阶模块教具实行押金租赁制，项目结课退还设备后押金全额退回。':
     'Não há taxa de franquia. Os kits M0 são fornecidos gratuitamente após a certificação; os módulos M1–M6 operam com depósito totalmente reembolsável na devolução.',
@@ -821,8 +815,8 @@ const zhToPt: Record<string, string> = {
   提交申请: 'Enviar Inscrição',
   邮件咨询: 'Contato por E-mail',
   '基地：柴火认证的本地授课中心': 'Bases: Centros Locais de Ensino Certificados',
-  '面向拥有固定教学场地与日常运营能力的机构。首批 10 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。':
-    'Para instituições com espaço fixo e operação ativa. 10 bases já assinaram e receberam materiais; novas inscrições abertas o ano todo. A Chaihuo fornece kits, apostilas e projetos; as bases realizam aulas regulares e acolhem Pioneiros em suas oficinas.',
+  '面向拥有固定教学场地与日常运营能力的机构。首批 {bases} 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。':
+    'Para instituições com espaço fixo e operação ativa. {bases} bases já assinaram e receberam materiais; novas inscrições abertas o ano todo. A Chaihuo fornece kits, apostilas e projetos; as bases realizam aulas regulares e acolhem Pioneiros em suas oficinas.',
   申请设立基地: 'Solicitar uma Base',
   准入条件与权益: 'Requisitos e Benefícios',
   '基地是柴火官方认证的实体教学中心，具备承接实训与常态化开课的场地条件。':
@@ -832,7 +826,7 @@ const zhToPt: Record<string, string> = {
     'Espaço de oficina com capacidade para 15–30 alunos realizando práticas simultâneas',
   '配备专职教学或运营对接人，有明确的开班排课规划':
     'Responsável pedagógico ou operacional com plano de aulas e turmas definido',
-  两项均为基本要求: 'Ambos os requisitos são obrigatórios',
+  两项都是基本要求: 'Ambos os requisitos são obrigatórios',
   优先合作条件: 'Condições Preferenciais',
   '具备创客、STEAM 或电子信息类社团与开课经验':
     'Experiência prévia em oficinas maker, STEAM ou eletrônica aplicada',
@@ -880,7 +874,7 @@ const zhToPt: Record<string, string> = {
     'Equipamentos compartilhados na oficina, reunindo múltiplos Pioneiros para lecionar',
   '先锋官既可以是基地的专职讲师，也可以作为外部特邀合作导师':
     'O Pioneiro pode ser instrutor contratado da base ou mentor parceiro convidado.',
-  '一位先锋官可与同城多家基地签约合作，跨工坊开展教学':
+  '一位先锋官可与同城多家基地签约合作，在不同工坊授课':
     'Um mesmo Pioneiro pode atuar em várias bases da cidade, ministrando aulas em diferentes locais.',
   基地配发的教具与云端账号供工坊内所有认证先锋官共同使用:
     'Os kits e acessos atribuídos à base são compartilhados por todos os Pioneiros certificados do local.',
@@ -908,7 +902,6 @@ const zhToPt: Record<string, string> = {
   申请设立柴火教学基地: 'Solicitar a Abertura de uma Base Chaihuo',
   '常年开放机构合作。拥有线下教学场地并计划引入 AIoT 实训体系的团队，提交申请后教研顾问将在 3 个工作日内与你沟通方案。':
     'Parcerias institucionais abertas o ano todo. Se você possui espaço físico e deseja implementar a formação em AIoT, inscreva-se e entraremos em contato em até 3 dias úteis.',
-  了解先锋官: 'Conhecer os Pioneiros',
   先锋官: 'Pioneiro',
   先锋官计划: 'Programa de Pioneiros',
   固定场地: 'Espaço Físico Dedicado',
@@ -918,7 +911,7 @@ const zhToPt: Record<string, string> = {
   总部支持: 'Suporte da Matriz',
   技术型: 'Perfil Técnico',
   持续运营: 'Operação Contínua',
-  '曾与柴火基地车或 Seeed 硬件开展过工作坊合作':
+  '曾与柴火基地车或 Seeed 硬件合作举办过工作坊':
     'Colaboração prévia em oficinas com o Chaihuo Maker Truck ou hardware da Seeed',
   查看分布图: 'Ver Mapa Global',
   '科技馆、青少年活动中心、高校 Fab Lab 等公共空间':
@@ -936,16 +929,15 @@ const chipDeepTranslations: Record<string, Record<string, string>> = {
 };
 
 function chipTranslate(text: string, locale: Locale): string {
-  if (locale === 'zh-CN') return text;
-  return chipDeepTranslations[locale]?.[text] ?? text;
+  if (locale === 'zh-CN') return fillStats(text);
+  return fillStats(chipDeepTranslations[locale]?.[text] ?? text);
 }
 
 /**
  * 深拷贝翻译：把 `src/data/ecosystem.ts` 的整棵数据对象按 locale 翻译。
- * zh-CN 直接返回原引用；其他语言逐字符串查字典（含回退）。
+ * 逐字符串查字典（zh-CN 用原文，其他语言含回退），并填入 `src/data/stats.ts` 的规模数字。
  */
 export function translateEcosystem<T>(value: T, locale: Locale): T {
-  if (locale === 'zh-CN') return value;
   if (typeof value === 'string') return chipTranslate(value, locale) as unknown as T;
   if (Array.isArray(value))
     return value.map((item) => translateEcosystem(item, locale)) as unknown as T;

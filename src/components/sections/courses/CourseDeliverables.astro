@@ -3,7 +3,7 @@ import type { Module } from '../../../data/modules';
 import { dt } from '../../../i18n/data-translations';
 import type { Locale } from '../../../i18n';
 
-// 学完拿走什么 —— 课程详情页唯一的深色面。
+// 学完拿走什么。
 interface Props {
   module: Module;
   locale: Locale;
@@ -14,27 +14,27 @@ const items =
   module.deliverableCards ?? module.deliverables.map((title) => ({ title, body: '' }));
 ---
 
-<section class="section bg-brand-graphite text-white">
+<section id="deliverables" class="section scroll-mt-28 bg-background">
   <div class="container-page" data-reveal>
     <div class="max-w-3xl">
-      <h2 class="heading-section">{dt(locale, 'course.deliverablesTitle')}</h2>
+      <h2 class="heading-section text-foreground">{dt(locale, 'course.deliverablesTitle')}</h2>
       {
         module.deliverablesIntro && (
-          <p class="mt-3 text-base leading-relaxed text-white/70">{module.deliverablesIntro}</p>
+          <p class="mt-3 text-base leading-relaxed text-neutral-7">{module.deliverablesIntro}</p>
         )
       }
     </div>
 
-    <ol class="mt-8 grid gap-x-10 border-t border-white/15 md:grid-cols-2">
+    <ol class="mt-8 grid gap-x-10 border-t border-neutral-3 md:grid-cols-2">
       {
         items.map((d, i) => (
-          <li class="grid grid-cols-[2.25rem_1fr] gap-x-2 border-b border-white/15 py-4">
-            <span class="pt-0.5 font-mono text-sm font-semibold text-brand-yellow">
+          <li class="grid grid-cols-[2.25rem_1fr] gap-x-2 border-b border-neutral-3 py-4">
+            <span class="pt-0.5 font-mono text-sm font-semibold text-primary-ink">
               {String(i + 1).padStart(2, '0')}
             </span>
             <div>
-              <p class="text-sm font-bold leading-snug text-white">{d.title}</p>
-              {d.body && <p class="mt-1 text-sm leading-relaxed text-white/70">{d.body}</p>}
+              <p class="text-sm font-bold leading-snug text-foreground">{d.title}</p>
+              {d.body && <p class="mt-1 text-sm leading-relaxed text-neutral-8">{d.body}</p>}
             </div>
           </li>
         ))

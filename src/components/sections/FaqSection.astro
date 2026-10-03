@@ -1,8 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
-import SectionHeader from '../SectionHeader.astro';
 
-// 全站唯一的 FAQ 区块（原 ContactFaqSection 与 ChipFaqSection 合并）。
+// 全站唯一的 FAQ 区块。左栏是居中的标题，右栏是问题列表（顺序即数据里的顺序，重要的排前）。
 interface Props {
   title: string;
   faqs: { question: string; answer: string }[];
@@ -12,15 +11,17 @@ const { title, faqs } = Astro.props as Props;
 ---
 
 <section class="section bg-background border-t border-neutral-3">
-  <div class="container-page" data-reveal>
-    <SectionHeader title={title} />
-    <div class="max-w-3xl border-t border-neutral-3">
+  <div class="container-page grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14" data-reveal>
+    <div class="flex lg:items-center lg:justify-center">
+      <h2 class="heading-section text-foreground">{title}</h2>
+    </div>
+    <div class="border-t border-neutral-3">
       {
         faqs.map((faq, index) => (
           <div class="hs-accordion border-b border-neutral-3" id={`faq-${index}`}>
             <button
               id={`faq-trigger-${index}`}
-              class="hs-accordion-toggle hs-accordion-active:text-brand-red focus-ring py-4 inline-flex items-center justify-between gap-x-3 w-full font-semibold text-left text-brand-black transition-colors hover:text-brand-red cursor-pointer"
+              class="hs-accordion-toggle hs-accordion-active:text-primary-ink focus-ring py-4 inline-flex items-center justify-between gap-x-3 w-full font-semibold text-left text-foreground transition-colors hover:text-primary-ink cursor-pointer"
               aria-expanded="false"
               aria-controls={`faq-content-${index}`}
             >

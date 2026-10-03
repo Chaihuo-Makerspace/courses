@@ -30,6 +30,9 @@ function isActive(href: string): boolean {
   return currentPath.startsWith(localizePath(locale, href)) || currentPath.startsWith(href);
 }
 
+// 中文以外的语种导航项更长：768–1023px 只留 logo，把宽度让给导航项
+const longBrand = locale !== 'zh-CN';
+
 function localizeHref(href: string): string {
   return localizePath(locale, href);
 }
@@ -37,13 +40,15 @@ function localizeHref(href: string): string {
 
 <header
   class="sticky top-0 z-50 w-full bg-background border-b border-neutral-3"
+  transition:name="site-header"
+  transition:animate="none"
 >
   <nav class="container-page">
-    <div class="flex items-center justify-between h-16">
-      <div class="min-w-0 flex-1 lg:flex-none">
+    <div class="flex items-center justify-between h-14">
+      <div class="min-w-0 flex-1 md:flex-none">
         <a
           href={localizeHref("/")}
-          class="group inline-flex max-w-full items-center gap-2.5 focus-ring rounded-md"
+          class="group inline-flex max-w-full items-center gap-2 focus-ring rounded-md"
           aria-label={t(locale, 'nav.homeAria')}
         >
           <img
@@ -51,34 +56,33 @@ function localizeHref(href: string): string {
             alt=""
             width="440"
             height="550"
-            class="h-9 md:h-10 w-auto shrink-0"
+            class="h-7 w-auto shrink-0"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'"
           />
           <span
             class="brand-fallback hidden items-center"
             aria-hidden="true"
           >
-            <span class="text-base font-bold text-brand-black">{t(locale, 'nav.brand')}</span>
+            <span class="text-base font-bold text-foreground">{t(locale, 'nav.brand')}</span>
           </span>
 
           <span
-            class="h-6 w-px shrink-0 bg-neutral-3"
-            aria-hidden="true"
-          ></span>
-          <span
-            class="min-w-0 break-words text-base font-semibold text-brand-black leading-tight"
+            class:list={[
+              'font-display min-w-0 truncate text-lg leading-none text-foreground',
+              longBrand && 'md:hidden lg:inline',
+            ]}
           >
             {t(locale, 'site.name')}
           </span>
         </a>
       </div>
 
-      <div class="hidden lg:flex lg:items-center lg:gap-1">
+      <div class="hidden md:flex md:items-center">
         {
           navItems.map((item) => (
             <a
               href={localizeHref(item.href)}
-              class="nav-link focus-ring px-3.5 py-5 text-sm font-medium"
+              class="nav-link focus-ring inline-flex h-14 items-center whitespace-nowrap px-2 text-sm font-medium lg:px-2.5"
               aria-current={isActive(item.href) ? "page" : undefined}
             >
               {item.label}
@@ -90,7 +94,7 @@ function localizeHref(href: string): string {
           <button
             type="button"
             id="ecosystem-menu-btn"
-            class="nav-link focus-ring inline-flex items-center gap-1 px-3.5 py-5 text-sm font-medium cursor-pointer"
+            class="nav-link focus-ring inline-flex h-14 items-center gap-1 whitespace-nowrap px-2 text-sm font-medium cursor-pointer lg:px-2.5"
             aria-expanded="false"
             aria-haspopup="true"
             aria-controls="ecosystem-menu-dropdown"
@@ -136,12 +140,12 @@ function localizeHref(href: string): string {
           </div>
         </div>
 
-        <div class="ml-2">
+        <div class="ml-1.5 border-l border-neutral-3 pl-2.5 lg:ml-2.5 lg:pl-3">
           <LanguageSwitcher id="desktop-language-switcher" />
         </div>
       </div>
 
-      <div class="lg:hidden flex shrink-0 items-center gap-2">
+      <div class="md:hidden flex shrink-0 items-center gap-2">
         <LanguageSwitcher id="mobile-language-switcher" />
         <button
           type="button"
@@ -167,7 +171,7 @@ function localizeHref(href: string): string {
 
     <div
       id="hs-navbar-collapse"
-      class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow lg:hidden"
+      class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow md:hidden"
       aria-labelledby="hs-navbar-chaihuo"
     >
       <div class="flex flex-col gap-1 py-4">
@@ -178,8 +182,8 @@ function localizeHref(href: string): string {
               class:list={[
                 "focus-ring px-4 py-3 rounded-lg text-base font-medium transition-colors duration-200",
                 isActive(item.href)
-                  ? "bg-brand-yellow-light text-brand-yellow-dark"
-                  : "text-neutral-7 hover:bg-neutral-1 hover:text-brand-black",
+                  ? "bg-accent-soft text-accent-ink"
+                  : "text-neutral-7 hover:bg-neutral-1 hover:text-foreground",
               ]}
               aria-current={isActive(item.href) ? "page" : undefined}
             >
@@ -197,7 +201,7 @@ function localizeHref(href: string): string {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              class="focus-ring px-4 py-3 rounded-lg text-base font-medium text-neutral-7 hover:bg-neutral-1 hover:text-brand-black transition-colors duration-200"
+              class="focus-ring px-4 py-3 rounded-lg text-base font-medium text-neutral-7 hover:bg-neutral-1 hover:text-foreground transition-colors duration-200"
             >
               {item.label}
               <Icon name="lucide:arrow-up-right" class="w-3.5 h-3.5 ml-1.5 inline-block opacity-50" />
@@ -248,11 +252,11 @@ function localizeHref(href: string): string {
 <style>
   .ecosystem-menu-dropdown {
     position: absolute;
-    top: calc(100% + 0.25rem);
+    top: 100%;
     right: 0;
     min-width: 12.5rem;
-    background: var(--color-background);
-    border: 1px solid var(--color-neutral-3);
+    background: var(--c-background);
+    border: 1px solid var(--c-neutral-3);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md-soft);
     padding: 0.25rem;
@@ -268,16 +272,16 @@ function localizeHref(href: string): string {
     border-radius: var(--radius-md);
     font-size: 0.8125rem;
     font-weight: 500;
-    color: var(--color-brand-black);
+    color: var(--c-foreground);
     text-decoration: none;
     transition: background-color 0.1s ease;
   }
 
   .ecosystem-menu-item:hover {
-    background-color: var(--color-neutral-1);
+    background-color: var(--c-neutral-1);
   }
 
-  .ecosystem-menu-btn[aria-expanded="true"] .ecosystem-chevron {
+  #ecosystem-menu-btn[aria-expanded="true"] .ecosystem-chevron {
     transform: rotate(180deg);
   }
 

@@ -5,7 +5,8 @@ import CourseDeliverables from '../../components/sections/courses/CourseDelivera
 import CourseDetailHero from '../../components/sections/courses/CourseDetailHero.astro';
 import CourseEquipment from '../../components/sections/courses/CourseEquipment.astro';
 import CourseLevels from '../../components/sections/courses/CourseLevels.astro';
-import CourseProblem from '../../components/sections/courses/CourseProblem.astro';
+import CourseProjects from '../../components/sections/courses/CourseProjects.astro';
+import CourseSectionNav from '../../components/sections/courses/CourseSectionNav.astro';
 import CourseSyllabus from '../../components/sections/courses/CourseSyllabus.astro';
 import CourseTeacherNotes from '../../components/sections/courses/CourseTeacherNotes.astro';
 import FinalCtaSection from '../../components/sections/FinalCtaSection.astro';
@@ -81,11 +82,12 @@ const courseJsonLdSafe = JSON.stringify(courseJsonLd).replace(/</g, '\\u003c');
     set:html={courseJsonLdSafe}
   />
   <CourseDetailHero module={module} tracks={relatedTracks} locale={locale} />
-  <CourseProblem module={module} locale={locale} />
+  <CourseSectionNav module={module} locale={locale} />
   <CourseLevels module={module} locale={locale} />
   <CourseEquipment module={module} locale={locale} />
   <CourseSyllabus module={module} locale={locale} />
   <CourseDeliverables module={module} locale={locale} />
+  <CourseProjects module={module} locale={locale} />
   <CourseTeacherNotes module={module} locale={locale} />
   <CourseComplianceBoundary module={module} locale={locale} />
   <FinalCtaSection cta={cta} />

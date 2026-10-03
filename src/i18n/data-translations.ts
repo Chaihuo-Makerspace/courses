@@ -6,7 +6,7 @@ import type { Locale } from './types';
 const zh: Record<string, string> = {
   'home.outcomes.title': '引入一门课，到手这四样',
   'home.outcomes.subtitle':
-    '柴火创客空间 2011 年在深圳成立，是中国最早的创客空间之一，由 Seeed 创办。课上用的硬件就是这个产品体系自己在售的同款，按 SKU 就能买到。',
+    '包含课件讲义、实训套件、工程源码与师资培训，教会机构自己的团队独立开课交付。',
 
   'section.faqTitle': '常见问题',
   'section.scenariosTitle': '你是哪一类机构',
@@ -16,7 +16,6 @@ const zh: Record<string, string> = {
 
   'course.backToMatrix': '返回学习矩阵',
   'course.keyCapabilities': '学完能做的事',
-  'course.whatProblem': '这门课解决什么问题',
   'course.typicalScenarios': '典型应用场景',
   'course.days': '天',
   'course.audienceTitle': '适合这些人学',
@@ -57,16 +56,10 @@ const zh: Record<string, string> = {
 
   'course.ladderTitle': '三档深度，各学到哪一步',
 
-  'course.tracksTitle': '七个模块，分三个方向',
-  'course.tracksSubtitle':
-    '方向按目标分组，不是固定的学习顺序。M0 是零基础入口，其余六门可以单独开课。',
-
   'courseMatrix.swipeHint': '← 左右滑动查看完整矩阵 →',
   'courseMatrix.srCaption':
     '学习矩阵：横轴为 L1–L3 三个层级，纵轴为 M0–M6 七个模块；每格列出该模块在该层级的模块标题、时长与产出。',
   'courseMatrix.srHeader': '模块 / 层级',
-
-  'courseMatrix.platformLayers': 'A/B/C 硬件平台分层',
 
   'partnership.features': '包含什么',
   'partnership.deliverables': '交付内容',
@@ -76,7 +69,7 @@ const zh: Record<string, string> = {
   'scenario.applicable': '适用合作形态',
 
   'home.matrix.note':
-    '格内数字是该档的课时天数（d = 天）。点模块名，看这门课的设备、大纲和验收标准。',
+    '格内数字是该档的课时天数（d = 天）。点任意一格，看这门课的设备、大纲和验收标准。',
   'course.overseasOnly': '仅海外交付',
   'course.day': '天',
   'partnership.suitable': '适合',
@@ -99,7 +92,7 @@ const en: Record<string, string> = {
 
   'home.outcomes.title': 'What you receive when you bring in one course',
   'home.outcomes.subtitle':
-    'Chaihuo Makerspace was founded in Shenzhen in 2011 by Seeed, one of the earliest makerspaces in China. The hardware used in class is that product ecosystem\u2019s own catalogue and can be ordered by SKU.',
+    'A complete set of teaching assets including courseware, training kits, source code, and instructor training, enabling your team to teach and deliver independently.',
 
   'outcome.hardware.label': 'Real Hardware',
   'outcome.hardware.desc': 'Each module has a reusable hardware procurement list.',
@@ -116,7 +109,7 @@ const en: Record<string, string> = {
     'Initial alignment within 3 business days; Standard Kits ship quickly; Full-Delivery and Train-the-Trainer take 2-4 weeks.',
   'faq.q2.q': 'Must hardware kits be purchased from the original manufacturer?',
   'faq.q2.a':
-    'Bare Hardware and Standard Kits use factory-original hardware, so course experiments stay consistent with the materials. That original hardware is the product line sold by the ecosystem Chaihuo Makerspace belongs to — the makerspace was founded by Seeed — and can be ordered by SKU. Partners can also adapt courses to their own hardware platforms, but lab manuals and course materials follow the original hardware.',
+    'Bare Hardware and Standard Kits use factory-original hardware, so course experiments stay consistent with the materials. That original hardware consists of standard production products sold by the ecosystem Chaihuo Makerspace belongs to — founded by Seeed. Partners can also adapt courses to their own hardware platforms, but lab manuals and course materials follow the original hardware.',
   'faq.q3.q': 'What does the Train-the-Trainer Kit include?',
   'faq.q3.a':
     'Hardware kit, complete course resources, and Train-the-Trainer instruction over 2-3 days.',
@@ -193,7 +186,6 @@ const en: Record<string, string> = {
 
   'course.backToMatrix': 'Back to Learning Matrix',
   'course.keyCapabilities': 'What learners can do afterwards',
-  'course.whatProblem': 'The problem this course addresses',
   'course.typicalScenarios': 'Typical Scenarios',
   'course.days': 'days',
   'course.audienceTitle': 'Who This Course Is For',
@@ -233,15 +225,11 @@ const en: Record<string, string> = {
     'SenseCraft Robotics delivers out-of-the-box teleoperation demos, Python + Pinocchio + Motorbridge enables real-machine spatial grasping, and LeRobot with Isaac Sim covers embodied intelligence and simulation validation.',
   'course.kitsSubtitle': 'Sub-kits divided by hardware platform, not L1/L2/L3 mastery depth.',
   'course.ladderTitle': 'Three depths and where each one gets you',
-  'course.tracksTitle': 'Seven modules in three directions',
-  'course.tracksSubtitle':
-    'Directions group modules by goal, not by a fixed order. M0 is the entry point for beginners; the other six can each be run on their own.',
 
   'courseMatrix.swipeHint': '← Swipe to view full matrix →',
   'courseMatrix.srCaption':
     'Learning matrix: horizontal = L1-L3 levels, vertical = M0-M6 modules; each cell shows the module title, duration, and outcomes for that module at that level.',
   'courseMatrix.srHeader': 'Module / Level',
-  'courseMatrix.platformLayers': 'A/B/C Hardware Platform Layers',
 
   'partnership.features': 'What it includes',
   'partnership.deliverables': 'Deliverables',
@@ -268,7 +256,7 @@ const en: Record<string, string> = {
   'cta.viewPaths': 'View Learning Paths',
   'cta.aboutOrg': 'Learn About the Academy',
   'home.matrix.note':
-    'The number in each cell is the course length in days for that level. Select a module to see its hardware, syllabus and acceptance criteria.',
+    'The number in each cell is the course length in days for that level. Select any cell to see that course’s hardware, syllabus and acceptance criteria.',
   'course.overseasOnly': 'Outside mainland China only',
   'outcome.lab.label': 'Labs that run in the classroom',
   'outcome.lab.desc':
@@ -293,7 +281,7 @@ const en: Record<string, string> = {
   'history.seeed.when': 'Hardware',
   'history.seeed.title': 'Classes use the same hardware the ecosystem sells',
   'history.seeed.desc':
-    'Development boards, sensors and edge-computing devices can all be ordered by SKU. None of it is a teaching prop.',
+    'All development boards, sensors, and edge computing devices are commercial production hardware that can be used directly in real engineering projects.',
   'history.academy.when': 'Courses',
   'history.academy.title': 'Seven modules, each at three depths',
   'history.academy.desc':
@@ -330,7 +318,7 @@ const ja: Record<string, string> = {
     'M1は複数ブランドの機器を一つのローカルプラットフォームに接続し、M3は公衆網のない場所でネットワークを構築し、M5は屋外センサーのデータを回収します。ビル、防災、農業、環境分野の案件を手がけるインテグレーションチームに向いています。',
   'home.outcomes.title': '1講座を導入すると手元に届く4つのもの',
   'home.outcomes.subtitle':
-    '柴火創客空間はSeeedによって2011年に深圳で設立された、中国で最も早い時期のメイカースペースの一つです。授業で使うハードウェアはその製品体系の現行製品で、SKUで購入できます。',
+    '教材講義、実習キット、ソースコード、講師研修を包括し、チームが自立して講座を開講・提供できるようにします。',
   'outcome.hardware.label': '本物のハードウェア',
   'outcome.hardware.desc':
     '各モジュールには再利用可能なハードウェア調達リストがあり、標準キット、自社開発ボード、アクセサリを含みます。',
@@ -348,7 +336,7 @@ const ja: Record<string, string> = {
     '初回の調整は通常3営業日以内にミーティングを設定します。標準教学キットは迅速に発送・開講可能です。フルデリバリーと講師トレーニングは、要件確認から開講まで通常2〜4週間です。',
   'faq.q2.q': 'コースのハードウェアキットは必ず純正ハードウェアを購入する必要がありますか？',
   'faq.q2.a':
-    'Bare Hardware KitとStandard Teaching Kitは純正ハードウェアを使用し、コース実験と教材の一貫性を保証します。その純正ハードウェアは柴火創客空間の所属する製品体系の現行製品（空間はSeeedによって設立）で、SKUで購入できます。パートナーは自社のハードウェアプラットフォームで適合させることも可能ですが、実験マニュアルとコース教材は純正ハードウェアを基準としています。',
+    'Bare Hardware KitとStandard Teaching Kitは純正標準ハードウェアを使用し、コース実験と教材の一贯性を保証します。そのハードウェアは柴火創客空間が属するSeeed製品体系の量産現行製品です。パートナーは自社のハードウェアプラットフォームで適合させることも可能ですが、実験マニュアルとコース教材は純正ハードウェアを基準としています。',
   'faq.q3.q': 'Train-the-Trainer Kitには具体的に何が含まれていますか？',
   'faq.q3.a':
     '対応モジュールのハードウェアキット、完全なコースリソースパック、およびTrain-the-Trainer講師研修が含まれます。講師研修は通常、柴火の講師が現場で2〜3日間実施し、機関独自の講師を育成します。',
@@ -420,7 +408,6 @@ const ja: Record<string, string> = {
 
   'course.backToMatrix': '学習マトリックスに戻る',
   'course.keyCapabilities': '修了後にできること',
-  'course.whatProblem': 'この講座が解決する課題',
   'course.typicalScenarios': '典型的な応用シーン',
   'course.days': '日間',
   'course.audienceTitle': 'こんな方におすすめ',
@@ -460,14 +447,10 @@ const ja: Record<string, string> = {
   'course.kitsSubtitle':
     '完全版は1人1セットの3点キット、短縮形態は該当する1点のみ配布。サブキットはハードウェアプラットフォーム別に区分され、L1/L2/L3の習熟深度を表すものではありません。',
   'course.ladderTitle': '3段階の深さと、それぞれの到達点',
-  'course.tracksTitle': '7つのモジュール、3つの方向',
-  'course.tracksSubtitle':
-    '方向は目的別のグループ分けで、決まった受講順ではありません。M0は未経験者向けの入口で、残りの6講座はそれぞれ単独で開講できます。',
   'courseMatrix.swipeHint': '← 左右にスワイプしてマトリックス全体を表示 →',
   'courseMatrix.srCaption':
     '学習マトリックス：横軸はL1〜L3の3レベル、縦軸はM0〜M6の7モジュール。各マスには該当モジュール・レベルのモジュールタイトル、時間数、成果物を表示。',
   'courseMatrix.srHeader': 'モジュール / レベル',
-  'courseMatrix.platformLayers': 'A/B/C ハードウェアプラットフォーム階層',
   'partnership.features': '含まれるもの',
   'partnership.deliverables': '納品内容',
   'partnership.scanForm': 'この形態についてお問い合わせ',
@@ -491,7 +474,7 @@ const ja: Record<string, string> = {
   'cta.viewPaths': 'パスガイドを見る',
   'cta.aboutOrg': '学院の背景を知る',
   'home.matrix.note':
-    '各セルの数字はそのレベルの日数（d = 日）です。モジュール名を選ぶと、使用機器・シラバス・検収基準を確認できます。',
+    '各セルの数字はそのレベルの日数（d = 日）です。セルを選ぶと、その講座の使用機器・シラバス・検収基準を確認できます。',
   'course.overseasOnly': '中国本土以外のみ提供',
   'outcome.lab.label': '教室でその場で動かせる実験',
   'outcome.lab.desc':
@@ -516,7 +499,7 @@ const ja: Record<string, string> = {
   'history.seeed.when': '機器',
   'history.seeed.title': '授業で使うのはその製品体系の現行製品と同じハードウェア',
   'history.seeed.desc':
-    '開発ボード、センサー、エッジコンピューティング機器はすべてSKUで購入できます。教育専用の模型ではありません。',
+    '開発ボード、センサー、エッジコンピューティング機器はいずれも量産現行品であり、実際のプロジェクトに直接導入可能で、教育専用の模型ではありません。',
   'history.academy.when': '講座',
   'history.academy.title': '7つのモジュール、それぞれ3段階の深さ',
   'history.academy.desc':
@@ -554,7 +537,7 @@ const es: Record<string, string> = {
     'M1 conecta dispositivos de distintas marcas a una plataforma local; M3 monta una red donde no hay conexión pública; M5 trae de vuelta los datos de sensores en campo. Indicado para equipos de integración en proyectos de edificios, emergencias, agricultura y medio ambiente.',
   'home.outcomes.title': 'Lo que recibe al incorporar un curso',
   'home.outcomes.subtitle':
-    'Chaihuo Makerspace fue fundado en Shenzhen en 2011 por Seeed y es uno de los primeros makerspaces de China. El hardware que se usa en clase pertenece a la propia línea de productos de ese ecosistema y se puede pedir por SKU.',
+    'Un conjunto completo de activos que incluye temarios, kits de hardware, código fuente y formación docente, para que su equipo imparta los cursos con total autonomía.',
   'outcome.hardware.label': 'Hardware real',
   'outcome.hardware.desc':
     'Cada módulo incluye una lista de compra de hardware reutilizable, con kits originales, placas propias y accesorios.',
@@ -572,7 +555,7 @@ const es: Record<string, string> = {
     'La primera reunión de alineación suele programarse en un plazo de 3 días hábiles; el kit de enseñanza estándar puede enviarse rápidamente para comenzar las clases; la entrega integral y la capacitación de instructores, desde la confirmación de requisitos hasta el inicio del curso, generalmente toma de 2 a 4 semanas.',
   'faq.q2.q': '¿Es obligatorio adquirir los kits con hardware original?',
   'faq.q2.a':
-    'El kit de hardware básico y el kit de enseñanza estándar utilizan hardware original, garantizando que los experimentos del curso coincidan con los materiales didácticos. Ese hardware original es la línea de productos que vende el ecosistema al que pertenece Chaihuo Makerspace —fundado por Seeed— y se puede pedir por SKU. Los socios también pueden adaptar los cursos a sus propias plataformas de hardware, pero los manuales de laboratorio y los materiales del curso se basan en el hardware original.',
+    'El kit de hardware básico y el kit de enseñanza estándar utilizan hardware original estándar, garantizando que los experimentos del curso coincidan con los materiales didácticos. Ese hardware pertenece a la línea de productos de producción en catálogo del ecosistema de Seeed. Los socios también pueden adaptar los cursos a sus propias plataformas de hardware, pero los manuales de laboratorio y los materiales del curso se basan en el hardware original.',
   'faq.q3.q': '¿Qué incluye exactamente el kit de capacitación de instructores?',
   'faq.q3.a':
     'Incluye el kit de hardware del módulo correspondiente, el paquete completo de recursos del curso y la capacitación Train-the-Trainer. La capacitación suele ser impartida presencialmente por instructores de Chaihuo durante 2 a 3 días, formando a los instructores propios de la institución.',
@@ -649,7 +632,6 @@ const es: Record<string, string> = {
 
   'course.backToMatrix': 'Volver a la matriz de aprendizaje',
   'course.keyCapabilities': 'Lo que sabrán hacer al terminar',
-  'course.whatProblem': 'El problema que aborda este curso',
   'course.typicalScenarios': 'Escenarios típicos de aplicación',
   'course.days': 'días',
   'course.audienceTitle': 'A quién va dirigido',
@@ -694,14 +676,10 @@ const es: Record<string, string> = {
   'course.kitsSubtitle':
     'En la versión completa, cada persona recibe un juego de tres kits; en las modalidades cortas, solo se entrega el kit correspondiente. Los sub-kits se dividen por plataforma de hardware, no representan la profundidad de dominio L1/L2/L3.',
   'course.ladderTitle': 'Tres niveles y hasta dónde llega cada uno',
-  'course.tracksTitle': 'Siete módulos en tres orientaciones',
-  'course.tracksSubtitle':
-    'Las orientaciones agrupan los módulos por objetivo, no por un orden fijo. M0 es la entrada para principiantes; los otros seis se pueden impartir por separado.',
   'courseMatrix.swipeHint': '← Deslice para ver la matriz completa →',
   'courseMatrix.srCaption':
     'Matriz de aprendizaje: eje horizontal con los tres niveles L1–L3, eje vertical con los siete módulos M0–M6; cada celda muestra el título del módulo, la duración y los entregables para ese módulo en ese nivel.',
   'courseMatrix.srHeader': 'Módulo / Nivel',
-  'courseMatrix.platformLayers': 'Estratificación por plataforma de hardware A/B/C',
   'partnership.features': 'Qué incluye',
   'partnership.deliverables': 'Contenido de la entrega',
   'partnership.scanForm': 'Consultar esta modalidad',
@@ -726,7 +704,7 @@ const es: Record<string, string> = {
   'cta.viewPaths': 'Ver rutas de aprendizaje',
   'cta.aboutOrg': 'Conocer la academia',
   'home.matrix.note':
-    'El número de cada celda indica los días de curso de ese nivel. Seleccione un módulo para ver su hardware, temario y criterios de aceptación.',
+    'El número de cada celda indica los días de curso de ese nivel. Seleccione cualquier celda para ver el hardware, el temario y los criterios de aceptación del curso.',
   'course.overseasOnly': 'Solo fuera de China continental',
   'outcome.lab.label': 'Prácticas que funcionan en el aula',
   'outcome.lab.desc':
@@ -751,7 +729,7 @@ const es: Record<string, string> = {
   'history.seeed.when': 'Hardware',
   'history.seeed.title': 'En clase se usa el mismo hardware que vende el ecosistema',
   'history.seeed.desc':
-    'Placas de desarrollo, sensores y equipos de computación en el borde se pueden pedir por SKU. Nada es material de utilería.',
+    'Las placas de desarrollo, sensores y equipos de computación perimetral son productos estándar de producción listos para proyectos reales, no material didáctico simplificado.',
   'history.academy.when': 'Cursos',
   'history.academy.title': 'Siete módulos, cada uno en tres niveles',
   'history.academy.desc':
@@ -789,7 +767,7 @@ const ptBR: Record<string, string> = {
     'O M1 conecta dispositivos de marcas diferentes a uma plataforma local; o M3 monta uma rede onde não há conexão pública; o M5 traz de volta os dados de sensores em campo. Indicado para equipes de integração em projetos de edifícios, emergências, agricultura e meio ambiente.',
   'home.outcomes.title': 'O que você recebe ao adotar um curso',
   'home.outcomes.subtitle':
-    'O Chaihuo Makerspace foi fundado em Shenzhen em 2011 pela Seeed e é um dos primeiros makerspaces da China. O hardware usado em aula faz parte da própria linha de produtos desse ecossistema e pode ser pedido por SKU.',
+    'Um conjunto completo de recursos com material didático, kits de prática, código-fonte e capacitação docente, capacitando sua equipe a lecionar de forma independente.',
   'outcome.hardware.label': 'Hardware real',
   'outcome.hardware.desc':
     'Cada módulo possui uma lista reutilizável de aquisição de hardware, incluindo kits originais, placas proprietárias e acessórios.',
@@ -807,7 +785,7 @@ const ptBR: Record<string, string> = {
     'O alinhamento inicial geralmente é agendado em até 3 dias úteis. O Kit de Ensino Padrão pode ser enviado rapidamente para início das aulas. A entrega completa e o treinamento de instrutores levam geralmente de 2 a 4 semanas, desde a confirmação dos requisitos até o início das aulas.',
   'faq.q2.q': 'Os kits de hardware do curso precisam ser adquiridos com hardware original?',
   'faq.q2.a':
-    'O Bare Hardware Kit e o Standard Teaching Kit utilizam hardware original, garantindo consistência entre os experimentos do curso e os materiais didáticos. Esse hardware original é a linha de produtos do ecossistema ao qual o Chaihuo Makerspace pertence — fundado pela Seeed — e pode ser pedido por SKU. Parceiros também podem adaptar em suas próprias plataformas de hardware, mas os manuais de experimentos e materiais do curso tomam como referência o hardware original.',
+    'O Bare Hardware Kit e o Standard Teaching Kit utilizam hardware original padrão, garantindo consistência entre os experimentos do curso e os materiais didáticos. Esse hardware é a linha de produtos de produção do catálogo do ecossistema Seeed. Parceiros também podem adaptar em suas próprias plataformas de hardware, mas os manuais de experimentos e materiais do curso tomam como referência o hardware original.',
   'faq.q3.q': 'O que o Train-the-Trainer Kit inclui especificamente?',
   'faq.q3.a':
     'Inclui o kit de hardware do módulo correspondente, o pacote completo de recursos do curso e o treinamento Train-the-Trainer. O treinamento geralmente é ministrado presencialmente por instrutores Chaihuo, com duração de 2 a 3 dias, para formar instrutores próprios da instituição.',
@@ -883,7 +861,6 @@ const ptBR: Record<string, string> = {
 
   'course.backToMatrix': 'Voltar à matriz de aprendizado',
   'course.keyCapabilities': 'O que saberão fazer ao concluir',
-  'course.whatProblem': 'O problema que este curso resolve',
   'course.typicalScenarios': 'Cenários típicos de aplicação',
   'course.days': 'dias',
   'course.audienceTitle': 'Para quem é este curso',
@@ -925,14 +902,10 @@ const ptBR: Record<string, string> = {
   'course.kitsSubtitle':
     'Na versão completa, cada aluno recebe o conjunto de três peças; nos formatos reduzidos, apenas o kit correspondente. Os subkits são divididos por plataforma de hardware, não representando profundidade de domínio L1/L2/L3.',
   'course.ladderTitle': 'Três níveis e até onde cada um leva',
-  'course.tracksTitle': 'Sete módulos em três direções',
-  'course.tracksSubtitle':
-    'As direções agrupam os módulos por objetivo, não por uma ordem fixa. O M0 é a entrada para iniciantes; os outros seis podem ser oferecidos separadamente.',
   'courseMatrix.swipeHint': '← Deslize para os lados para ver a matriz completa →',
   'courseMatrix.srCaption':
     'Matriz de aprendizado: eixo horizontal com três níveis L1–L3, eixo vertical com sete módulos M0–M6; cada célula exibe o título do módulo, carga horária e entregáveis daquele módulo naquele nível.',
   'courseMatrix.srHeader': 'Módulo / Nível',
-  'courseMatrix.platformLayers': 'Camadas de plataforma de hardware A/B/C',
   'partnership.features': 'O que inclui',
   'partnership.deliverables': 'Conteúdo da entrega',
   'partnership.scanForm': 'Consultar este formato',
@@ -957,7 +930,7 @@ const ptBR: Record<string, string> = {
   'cta.viewPaths': 'Ver trilhas de aprendizado',
   'cta.aboutOrg': 'Conhecer a Academia',
   'home.matrix.note':
-    'O número em cada célula indica os dias de curso daquele nível. Selecione um módulo para ver hardware, programa e critérios de aceitação.',
+    'O número em cada célula indica os dias de curso daquele nível. Selecione qualquer célula para ver hardware, programa e critérios de aceitação do curso.',
   'course.overseasOnly': 'Somente fora da China continental',
   'outcome.lab.label': 'Práticas que funcionam em sala',
   'outcome.lab.desc':
@@ -982,7 +955,7 @@ const ptBR: Record<string, string> = {
   'history.seeed.when': 'Hardware',
   'history.seeed.title': 'Em aula, usa-se o mesmo hardware que o ecossistema vende',
   'history.seeed.desc':
-    'Placas de desenvolvimento, sensores e equipamentos de computação de borda podem ser pedidos por SKU. Nada é material cenográfico.',
+    'Placas de desenvolvimento, sensores e equipamentos de computação de borda são produtos padrão de produção prontos para uso em engenharia real, não modelos didáticos simplificados.',
   'history.academy.when': 'Cursos',
   'history.academy.title': 'Sete módulos, cada um em três níveis',
   'history.academy.desc':

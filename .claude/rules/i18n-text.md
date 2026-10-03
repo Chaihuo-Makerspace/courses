@@ -51,6 +51,7 @@ Treat these as copy defects in zh text, the same way the brand name was:
   marketing sense (control loops and grasp loops are fine)
 - Template devices: 「零…门槛」 used as a refrain, one quote or footnote
   reused across modules
+- Slogans built on a negation: 「不是 X，而是 Y」「不提供 X」. Say what we do.
 
 Say the plain thing instead: what the learner does, on which hardware, in
 how long. The full voice spec is in `docs/DESIGN.md` §5; `pnpm deslop`
@@ -58,7 +59,8 @@ reports the mechanical subset.
 
 ## Core narrative
 
-> 我们培养人掌握新技术整合能力，不是提供解决方案。
+> 我们培养人掌握新技术整合能力，让团队自己能把解决方案部署落地。
 
-Keep this framing across hero, about, partnership, and llms.txt copy.
-Avoid "我们提供 XXX 方案" phrasing — that contradicts the brand position.
+授人以渔. Copy says what we teach and what the learner's own team can build
+and deploy afterwards. Do not write it as a negation ("不提供解决方案"), and
+do not write Chaihuo as the party that delivers the solution for the client.

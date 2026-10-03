@@ -1,62 +1,47 @@
-# AI Collaboration Rules
+# AGENTS.md
 
-Repository entry point for coding agents (Claude Code, Codex, Gemini CLI).
-Read this first; descend into `ARCHITECTURE.md` and `.claude/rules/*.md` as
-work demands.
+Entry point for coding agents. Read this, then `ARCHITECTURE.md` and the rule
+files at the bottom as the work demands.
 
-## Scope
+## What this is
 
-- Project is 柴火创客学院 (Chaihuo Maker Academy) — a Chinese-language
-  marketing / 招生 / 招商 site. **Not** a docs platform, **not** a CMS-backed
-  blog.
-- Source-of-truth files in this repo: `ARCHITECTURE.md` (repo map),
-  `.claude/rules/*.md` (topical rules). Everything under `docs/` is local
-  working material and is intentionally gitignored.
+The enrolment and partnership site of 柴火创客学院 (Chaihuo Maker Academy):
+Astro, server-rendered, five locales (zh-CN is the source; en, ja, es, pt-BR).
+All content is TypeScript data in `src/data/*.ts`. There is no CMS and no
+remote content.
 
-## Do
+Positioning, for every piece of copy:
 
-- Read `ARCHITECTURE.md` before any change that crosses the data layer
-  (`src/data/*.ts`) and the page layer (`src/pages/`).
-- Edit marketing copy by changing `src/data/*.ts` only — `/llms.txt` and
-  Course JSON-LD auto-sync on next `pnpm build`. See
-  `.claude/rules/llm-surfaces.md`. zh-CN is read from the data files; never
-  re-enter zh copy in an i18n dictionary.
-- Add or change interface strings in all five locales in the same commit.
-- Look at the rendered pages in a browser, in zh and en, before calling a
-  visual or copy change done. Escaped-quote leaks, a heading borrowed from
-  another module and characters missing from the display-font subset all
-  pass check, lint and build.
-- Follow `docs/DESIGN.md` (authoritative design system, v5.0) for the page
-  contracts, the per-page dial, where the flame gradient may appear, the
-  two-tier section rhythm, typography and button usage.
-  `.claude/rules/styling.md` only points to it.
-- Register new lucide icons in `src/data/icons.ts` before referencing them.
-  See `.claude/rules/astro.md`.
+> 我们培养人掌握新技术整合能力，让团队自己能把解决方案部署落地。
+
+## Content
+
+- Change copy in `src/data/*.ts`. zh-CN is read straight from the data files;
+  do not repeat zh copy in an i18n dictionary. `/llms.txt` and the Course
+  JSON-LD regenerate from the data.
+- Add or change interface strings in all five locales in the same change.
+- Publish no prices, no unsourced numbers, no placeholder trust signals.
+- Branch on a stable `id`, never on display text (`label.includes('…')`).
+- Render each piece of information once. The matrix, the closing CTA and the
+  FAQ each have one component.
+- Partnership intake is a `mailto:` link on `/contact`. No web forms.
+
+## Visual
+
+- Read `docs/DESIGN.md` before visual work. It is short: what the site is,
+  the design paradigms to judge by, color roles, typography facts, copy voice
+  and the hard constraints. Exact values live in code and `/styleguide`.
+- Write colors as role tokens (`bg-primary`, `text-foreground`,
+  `text-primary-ink`, `bg-inverse` …), never hue names or raw hex. Color
+  values live only in `src/data/themes.ts`.
+- Register a lucide icon in `src/data/icons.ts` before using it.
 - Use template literals when Chinese full-width quotes appear in `.astro`
-  frontmatter or inline JS. See `.claude/rules/i18n-text.md`.
+  frontmatter or inline JS.
 
-## Avoid
+## Repository
 
-- Do not introduce a CMS, docs platform (Mintlify / Fern), or fetch course
-  content from anywhere other than `src/data/*.ts`.
-- Do not reintroduce removed Astro content collections (`courses`,
-  `classic-courses`, `testimonials`) — they were retired with the M-matrix
-  refactor.
-- Do not hand-write `llms-full.txt` or add fake `hasCourseInstance`
-  schedule/price data to the Course JSON-LD.
-- Do not add brutalist visual touches (2px black borders, offset hard
-  shadows, decorative geometry, wide red fills). The repo has drifted toward
-  them once and was reverted.
-- Do not commit AI process artifacts (`docs/` except `docs/DESIGN.md`,
-  `.claude/` except `.claude/rules/`, `.superpowers/`). They are gitignored
-  intentionally. `docs/DESIGN.md` is the one committed design-system doc.
-- Do not put inline web forms anywhere — partnership intake is a `mailto:`
-  link to business@chaihuo.org on `/contact`.
-- Do not publish prices, unsourced numbers or placeholder trust signals.
-- Do not branch on display copy (`label.includes('…')`). Give the data item
-  a stable `id` and branch on that.
-- Do not render the same information twice. The matrix, the three
-  directions, the closing CTA and the FAQ each have exactly one component.
+- Do not commit AI working files: `docs/` except `docs/DESIGN.md`, `.claude/`
+  except `.claude/rules/`, and `.superpowers/` are gitignored on purpose.
 
 ## Commands
 
@@ -64,41 +49,32 @@ work demands.
 pnpm install
 pnpm dev       # :3001
 pnpm check     # astro check — TypeScript / Astro validation
-pnpm lint      # biome check src — TS/JS/JSON lint + format check
+pnpm lint      # biome check src
 pnpm format    # biome format --write src
 pnpm build     # server output + prerendered /llms.txt (course pages are SSR)
-```
-
-```bash
-pnpm deslop    # report-only scan for zh clichés, bg-white, naked hex
+pnpm deslop    # report-only scan for zh clichés and raw colors
 python3 scripts/subset-display-font.py <SmileySans-Oblique.ttf>
                # regenerate the display-font subset after heading copy changes
 ```
 
-Design system: `docs/DESIGN.md` is authoritative; `/styleguide` shows the
-tokens and component classes live pages actually use (run `pnpm dev`, open
-`/styleguide`).
+## Before calling work done
 
-## Tests
-
-- No test runner exists. `pnpm check` (TypeScript) and `pnpm lint` (Biome)
-  must pass before considering work done.
-- After content edits, also run `pnpm build` and verify
-  `dist/client/llms.txt` reflects the change.
-- Course detail pages are **SSR** — there is no `dist/client/courses/*`
-  artifact. Verify Course JSON-LD by starting the built server and checking
+- `pnpm check`, `pnpm lint` and `pnpm build` pass. There is no test runner.
+- Look at the rendered pages in a browser, in zh and en. Escaped-quote leaks,
+  a heading borrowed from another module and characters missing from the
+  display-font subset all pass check, lint and build.
+- After content edits, confirm `dist/client/llms.txt` reflects the change.
+- Course detail pages are server-rendered, so there is no
+  `dist/client/courses/*`. To verify the Course JSON-LD, start the built
+  server and check that
   `curl -s localhost:<port>/courses/m0 | grep -c 'application/ld+json'`
-  returns ≥ 1.
+  returns at least 1.
 
-## Related Rules
+## More
 
-- `ARCHITECTURE.md` — repo map, data flow, prerender split
-- `.claude/rules/astro.md` — Astro conventions: props, prerender, head slot,
-  Preline, icons, path aliases
+- `ARCHITECTURE.md` — repo map, data flow, what is prerendered
+- `docs/DESIGN.md` — design paradigms, color roles, typography, copy voice
+- `.claude/rules/astro.md` — Astro conventions, Preline, icons, path aliases
 - `.claude/rules/data-layer.md` — editing `src/data/*.ts`
-- `.claude/rules/llm-surfaces.md` — `/llms.txt` + Course JSON-LD operational
-  rules
-- `docs/DESIGN.md` — **authoritative design system**: page contracts, color
-  tokens, layout rhythm, typography, components, copy voice, banned patterns
-- `.claude/rules/styling.md` — thin pointer to `docs/DESIGN.md`
-- `.claude/rules/i18n-text.md` — Chinese quote handling and punctuation
+- `.claude/rules/llm-surfaces.md` — `/llms.txt` and Course JSON-LD
+- `.claude/rules/i18n-text.md` — quotes, punctuation, brand name, banned registers

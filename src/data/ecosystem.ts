@@ -155,7 +155,7 @@ export const homeChannel: {
 } = {
   title: '教学合作网络与基地',
   description:
-    '已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家）与首批 10 家签约交付基地。常年开放申请，支持个人讲师开课与机构空间挂牌。',
+    '已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课，首批 {bases} 家基地已签约。常年开放申请，支持个人讲师开课与机构空间挂牌。',
   links: [
     { label: '先锋官计划', note: '个人讲师申请', href: '/pioneer' },
     { label: '基地计划', note: '实体空间合作', href: '/base' },
@@ -171,11 +171,8 @@ export const pioneer: PioneerProgram = {
   hero: {
     title: '先锋官：柴火教学点火人',
     description:
-      '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有 79 位先锋官（国内 57 位、海外 22 位）在 15 个国家持续开课。',
-    ctas: [
-      { label: '申请成为先锋官', href: ecosystemApplyUrl, variant: 'primary' },
-      { label: '了解基地合作', href: '/base', variant: 'secondary' },
-    ],
+      '先锋官是柴火在各地的教学合作者。掌握柴火课程后，在本地组织授课、交付工作坊或拓展合作。柴火提供套件、逐课时讲义和认证支持，常年开放申请。目前已有海内外 {pioneers} 位先锋官，在 {countries} 个国家持续开课。',
+    ctas: [{ label: '申请成为先锋官', href: ecosystemApplyUrl, variant: 'primary' }],
   },
   what: {
     title: '准入条件与合作机制',
@@ -185,7 +182,7 @@ export const pioneer: PioneerProgram = {
     core: [
       {
         title: '技术型',
-        description: '有硬件或编程背景，希望使用柴火课程与套件开展教学服务',
+        description: '有硬件或编程背景，希望用柴火课程与套件在本地开课',
       },
       {
         title: '链接型',
@@ -276,7 +273,7 @@ export const pioneer: PioneerProgram = {
     {
       question: '目前先锋官网络的实际规模有多大？',
       answer:
-        '截至目前，全球已有 79 位先锋官（国内 57 位分布于 19 个省份，海外 22 位分布于 15 个国家），并有首批 10 家签约基地配备教具开课。',
+        '目前全球已有 {pioneers} 位先锋官，在 {countries} 个国家持续开课；首批 {bases} 家签约基地已配备教具开课。',
     },
     {
       question: '加入需要支付加盟费用吗？',
@@ -311,11 +308,8 @@ export const base: BaseProgram = {
   hero: {
     title: '基地：柴火认证的本地授课中心',
     description:
-      '面向拥有固定教学场地与日常运营能力的机构。首批 10 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。',
-    ctas: [
-      { label: '申请设立基地', href: ecosystemApplyUrl, variant: 'primary' },
-      { label: '了解先锋官', href: '/pioneer', variant: 'secondary' },
-    ],
+      '面向拥有固定教学场地与日常运营能力的机构。首批 {bases} 家基地已签约并交付教具，目前常年开放新基地申请。柴火提供教学套件、成套讲义与总部派单支持；基地在本地常态开课，并为先锋官提供工坊实训台架。',
+    ctas: [{ label: '申请设立基地', href: ecosystemApplyUrl, variant: 'primary' }],
   },
   what: {
     title: '准入条件与权益',
@@ -325,12 +319,12 @@ export const base: BaseProgram = {
       { title: '固定场地', description: '具备可容纳 15–30 人同时动手的实训或创客工坊' },
       { title: '持续运营', description: '配备专职教学或运营对接人，有明确的开班排课规划' },
     ],
-    coreNote: '两项均为基本要求',
+    coreNote: '两项都是基本要求',
     plusTitle: '优先合作条件',
     plus: [
       '科技馆、青少年活动中心、高校 Fab Lab 等公共空间',
       '具备创客、STEAM 或电子信息类社团与开课经验',
-      '曾与柴火基地车或 Seeed 硬件开展过工作坊合作',
+      '曾与柴火基地车或 Seeed 硬件合作举办过工作坊',
     ],
   },
   comparison: {
@@ -400,7 +394,7 @@ export const base: BaseProgram = {
     },
     bullets: [
       '先锋官既可以是基地的专职讲师，也可以作为外部特邀合作导师',
-      '一位先锋官可与同城多家基地签约合作，跨工坊开展教学',
+      '一位先锋官可与同城多家基地签约合作，在不同工坊授课',
       '基地配发的教具与云端账号供工坊内所有认证先锋官共同使用',
     ],
   },

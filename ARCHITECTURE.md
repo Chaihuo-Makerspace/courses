@@ -25,7 +25,7 @@ recruit, not consumers.
   `<slot name="head" />` for per-page extras (JSON-LD, extra meta).
 - `src/data/*.ts` — typed data layer; **single source of truth for all
   marketing content**.
-- `src/styles/` — Tailwind v4 + brand tokens (`themes/theme.css`).
+- `src/styles/` — Tailwind v4; `themes/theme.css` maps `--c-*` theme tokens to utilities. Color values live in `src/data/themes.ts`.
 
 ## Course Matrix (Two-Dimensional)
 

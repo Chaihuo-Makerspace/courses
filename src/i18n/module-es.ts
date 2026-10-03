@@ -96,8 +96,8 @@ export const esDict: Record<string, string> = {
   记录与讲述: 'Documentar y Presentar',
   '写创客日志、录 30 秒演示视频、用 2 分钟把「痛点 → 方案 → 演示 → 价值」讲给陌生人听。':
     'Escribir diario maker, grabar video de demostración de 30 segundos, presentar "punto de dolor → solución → demostración → valor" a un desconocido en 2 minutos.',
-  'BMAD 不只是做硬件的方法。写作业、做小组课题、策划一场活动，都能套用同一个流程。这是学生能带走的「元方法」——也是这门课里唯一一件，十年后大概率还在用的东西。':
-    'BMAD no es solo un método para hacer hardware. Hacer tareas, proyectos en grupo o planificar un evento — todo puede seguir el mismo flujo. Es el «meta-método» que los estudiantes se llevan consigo — y probablemente lo único de este curso que seguirán usando dentro de diez años.',
+  'BMAD 是一套通用的工程思考习惯。无论是做课题、写方案还是组织活动，都能套用这套流程。掌握了拆解与协同的逻辑，即便未来使用的工具变了，解决问题的思维方法依然适用。':
+    'BMAD es un hábito de pensamiento de ingeniería de propósito general. Tanto si se realizan proyectos de investigación como si se redactan propuestas u organizan actividades, se puede aplicar este mismo flujo de trabajo. Una vez asimilada la lógica de desglose y colaboración, la metodología para resolver problemas sigue siendo válida aunque las herramientas evolucionen.',
   '浏览器 · 零安装 · 5 分钟见效': 'Navegador · Sin Instalación · Resultados en 5 Minutos',
   完全新手: 'Principiante Completo',
   能跑通: 'Puede Hacerlo Funcionar',
@@ -106,8 +106,8 @@ export const esDict: Record<string, string> = {
   能造工程: 'Puede Construir Proyectos de Ingeniería',
   能带走继续做: 'Llévatelo a Casa y Continúa',
   '关键转折点 · 模块 8': 'Punto de Inflexión Clave · Módulo 8',
-  'Codecraft 的作品在服务器上，关掉浏览器就带不走；aily-blockly 让学生第一次从"租户"变成项目的"主人"。':
-    'Los proyectos de Codecraft están en el servidor y se pierden al cerrar el navegador; aily-blockly permite que el estudiante pase de «inquilino» a «dueño» de su proyecto por primera vez.',
+  'Codecraft 的作品保存在云端，离线即不可用；aily-blockly 则让学生首次在本地拥有完整工程资产，能够随时离线修改、长期迭代。':
+    'Los proyectos de Codecraft se guardan en la nube y no están disponibles sin conexión; aily-blockly permite a los estudiantes conservar todos los activos del proyecto en su equipo local por primera vez, posibilitando modificaciones offline e iteraciones a largo plazo.',
   '另需 SenseCraft AI（无代码部署与训练视觉模型，用于模块 5 与视觉体验课，需外网），以及一套 15 章的中文开源教材（免费，结课后可长期自学）。':
     'Además requiere SenseCraft AI (despliegue y entrenamiento de modelos visuales sin código, para Módulo 5 y Sesión de Iniciación a la Visión, necesita internet), libro de texto de 15 capítulos en chino (código abierto, gratuito, para autoaprendizaje a largo plazo después del curso).',
   环境感知: 'Detección Ambiental',
@@ -176,15 +176,15 @@ export const esDict: Record<string, string> = {
   'Day 2 下午': 'Día 2 tarde',
   '模块 9 + 10': 'Módulo 9 + 10',
   '迭代 → 文档 → 30 秒视频 → 路演': 'Iterar → Documentar → Video 30s → Demo',
-  '单一硬件平台是刻意的：把全部时间押在创意、原型、文档上。助教配比建议 1:5–6。':
-    'Plataforma de hardware única es intencional: invertir todo el tiempo en creatividad, prototipado y documentación. Proporción recomendada de asistentes: 1:5–6.',
+  '集训期间专注单一硬件平台，集中精力于创意实现、原型制作与文档交付。建议助教配比 1:5–6。':
+    'Durante el entrenamiento intensivo se utiliza una única plataforma de hardware para concentrar el tiempo en la materialización de ideas, prototipado y documentación. Proporción recomendada de asistentes: 1:5–6.',
   体验课: 'Sesión de Iniciación',
   不含结课项目: 'Sin proyecto final',
   '半天 2h · 零安装 · 单一硬件': 'Medio Día 2h · Sin Instalación · Hardware Único',
-  '卖「AI 能帮我做事」——2 小时做出智能番茄钟，走一遍 BMAD。方法可迁移。':
-    'Vender "la IA puede hacer cosas por mí" — construir un Temporizador Pomodoro Inteligente en 2 horas, recorriendo BMAD. Metodología transferible.',
-  '卖「AI 能装进指甲盖」——一行代码不写，训出自己的模型。门槛最低。':
-    'Vender "la IA cabe en una uña" — entrena tu propio modelo sin escribir una sola línea de código. Barrera más baja.',
+  '体验「用 AI 辅助创作」：2 小时内独立完成智能番茄钟原型，完整走通 BMAD 流程。':
+    'Experiencia de creación asistida por IA: completa de forma autónoma un prototipo funcional de temporizador pomodoro inteligente en 2 horas, recorriendo el flujo BMAD completo.',
+  '体验「边缘端侧 AI」：无需编写代码，直观完成属于自己的视觉识别模型训练与部署。':
+    'Experiencia de IA en el borde: entrena y despliega tu propio modelo de reconocimiento visual de forma intuitiva y sin escribir código.',
   '两门可合并成一个整天（4h）体验日：上午编程、下午视觉，覆盖生成式 AI + 端侧 AI 两条主线。':
     'Dos sesiones pueden combinarse en un día completo (4h) de experiencia: programación por la mañana, visión por la tarde, cubriendo tanto IA generativa como IA en el borde.',
   '编程体验课是柴火基地车全国巡游的标配工作坊。零安装、单一硬件、2 小时做完一个作品、断网只是慢不会废场——这四条正是「车到人到、当天开课」最需要的性质。柴火基地车上的分工：快闪一站 → 编程体验课；驻校两天 → 马拉松版；有网络且做 AI 主题 → 视觉体验课。':
@@ -193,8 +193,8 @@ export const esDict: Record<string, string> = {
     'Antes de elegir Horario Extraescolar (16×1h): 16 × 1h = 16 horas, 4 horas menos que las 20h del Horario Semanal; cada sesión tiene ~10min de gastos fijos (encender, distribuir dispositivos, conectar, guardar), más sesiones = más pérdida — tiempo práctico real ~13h vs 18h. Las compensaciones son reales: iteración de PF comprimida de dos rondas a una, día de demostración de 1 hora es ajustado, se recomienda luchar por sesiones de período doble.',
   '16 次建议每周 2 次，不要每周 1 次。每周 1 次战线拉到 16 周（约一整学期），学生对自己的 Final Project 会「掉线」。每周 2 次 ≈ 8 周，节奏与周课排接近。':
     'Para 16 sesiones se recomienda 2 veces por semana, no 1 vez por semana. Con 1 sesión semanal se extiende a 16 semanas (casi un semestre entero) y los estudiantes «se desconectan» de su Final Project. Con 2 sesiones por semana ≈ 8 semanas, un ritmo similar al curso semanal.',
-  '视觉体验课的唯一硬约束是网络。SenseCraft AI 在云端训练，必须能访问外网且撑住全班并发上传——编程体验课断网只是慢，视觉体验课断网就是整场报废。落地前柴火会到场实测完整链路，并备好热点与预制模型兜底。':
-    'La única restricción dura para la Sesión de Iniciación a la Visión es internet. SenseCraft AI entrena en la nube, requiriendo acceso a red externa y soportando cargas concurrentes de toda la clase — la sesión de programación sin conexión solo es lenta, la sesión de visión sin conexión es un fracaso total. Antes del despliegue, Chaihuo probará la cadena completa en el sitio y preparará hotspots y modelos pre-entrenados como respaldo.',
+  '视觉体验课对网络有明确要求。SenseCraft AI 依赖云端训练，现场网络须支持全班并发上传。编程体验课断网仍可本地运行，视觉体验课断网则会导致实训中断。落地前柴火会实测网络链路，并准备应急热点与预置模型兜底。':
+    'La clase de prueba de visión exige requisitos de red definidos. SenseCraft AI depende del entrenamiento en la nube y necesita acceso a internet capaz de soportar la subida simultánea de todo el grupo. Si bien las clases de programación pueden funcionar offline localmente, la pérdida de red en visión paraliza el taller. Antes del inicio, Chaihuo verificará la conectividad y preparará puntos de acceso de respaldo y modelos preentrenados.',
   不可能挑战: 'Desafío Imposible',
   '5 分钟让屏幕显示自己的名字 · AI 编程心智建立':
     '5 minutos para mostrar tu nombre en pantalla · Establecer la mentalidad de programación con IA',
@@ -223,8 +223,8 @@ export const esDict: Record<string, string> = {
   发布会: 'Día de Demostración',
   '打磨 → 录视频 → 路演 → 结营': 'Pulir → Grabar Video → Demo → Clausura',
   自选: 'Auto-Seleccionado',
-  '●＋ 是怎么回事：完整版的模块 5 只有一节课，视觉体验课用整整 2 小时只做视觉——因此多出「自己采数据、自己训模型、故意把它训错」这一段，而这恰恰是最有价值的部分。':
-    'Qué significa ●＋: la versión completa del módulo 5 tiene solo una clase, pero la clase de experiencia visual dedica 2 horas enteras solo a visión — por eso incluye «recopilar tus propios datos, entrenar tu propio modelo y entrenarlo mal a propósito», que es justo la parte más valiosa.',
+  '关于体验课的深入环节：完整版课程中的模块 5 为基础导引，而独立视觉体验课提供完整 2 小时专项实训，学员能完整经历数据采集、模型训练与边界测试全流程。':
+    'Sobre la extensión en las clases de prueba: En el curso completo, el módulo 5 es una introducción básica, mientras que la clase de prueba de visión dedica 2 horas exclusivas a cubrir la captura de datos, el entrenamiento del modelo y las pruebas de límites.',
   '以下为完整版交付；马拉松版交付作品、文档、视频与源码；两门体验课分别交付番茄钟项目与自训 AI 模型。':
     'Lo siguiente es la entrega de la Versión Completa; la Edición Maratón entrega proyecto, documentación, video y código fuente; las dos Sesiones de Iniciación entregan proyecto Pomodoro y modelo de IA auto-entrenado respectivamente.',
   'Final Project 作品': 'Trabajo del Final Project',
@@ -255,15 +255,15 @@ export const esDict: Record<string, string> = {
   我们认不出来的样子: 'Irreconocible para Nosotros',
   '这份课程不是一个封闭的产品，是一个底座。柴火是一家创客空间，开源是我们的底色——M0 交付的从来不只是「一次上课」，而是一整套可以被拆开、改写、重新组装的东西：10 模块骨架、教师教案与 PPT、学生手册、Codecraft 云端项目、开源教材、40 合一备料池。':
     'Este curso no es un producto cerrado, es una base. Chaihuo es un espacio maker, el código abierto es nuestra naturaleza — M0 entrega no solo "una sesión de clase", sino un conjunto completo que puede ser desmontado, reescrito, reensamblado: esqueleto de 10 módulos, planes de lección y PPTs para profesores, manual del estudiante, proyectos en la nube de Codecraft, libro de texto de código abierto , conjunto de piezas 40 en 1.',
-  '口子 01': 'Apertura 01',
+  '切入点 01': 'Punto de extensión 01',
   换主题: 'Cambiar Tema',
   '模块 6「找一个真问题」的问题域是开放的：你的学科、贵校的科技节、这座城市正在发生的一件真事。问题越靠近学生的生活，效果越好——而这件事你比我们懂。':
     'El dominio del problema de Módulo 6 "Encuentra un Problema Real" es abierto: tu asignatura, el festival tecnológico de tu escuela, algo real que está sucediendo en esta ciudad. Cuanto más cerca esté el problema de la vida de los estudiantes, mejor — y tú lo sabes mejor que nosotros.',
-  '口子 02': 'Apertura 02',
+  '切入点 02': 'Punto de extensión 02',
   接资源: 'Conectar Recursos',
   '你已有的社团项目、竞赛课题、校本课程，可以接在模块 7 之后，成为 Final Project 的方向池。M0 负责把技术门槛拆掉，门后面是什么，由你来定。':
     'Tus proyectos de club existentes, temas de competición, currículo escolar pueden conectarse después del Módulo 7, convirtiéndose en el conjunto de direcciones del Proyecto Final. M0 se encarga de eliminar la barrera técnica — lo que hay detrás de la puerta depende de ti.',
-  '口子 03': 'Apertura 03',
+  '切入点 03': 'Punto de extensión 03',
   加你的东西: 'Añade lo Tuyo',
   '你教了很多年书攒下的那些：讲法、比喻、能让学生眼睛亮起来的那一下——那正是我们没有、也给不了的部分。':
     'Lo que has acumulado durante años de enseñanza: métodos, metáforas, ese momento que hace brillar los ojos de los estudiantes — eso es exactamente lo que no tenemos y no podemos ofrecer.',
@@ -327,7 +327,7 @@ export const esDict: Record<string, string> = {
     'Comprender la arquitectura básica y los conceptos centrales de Home Assistant (entidades, servicios, estados, automatizaciones)',
   '掌握ESPHome固件配置与XIAO ESP32-C6传感器接入流程':
     'Dominar la configuración de firmware ESPHome y el proceso de acceso de sensores XIAO ESP32-C6',
-  能在Lovelace仪表盘中配置卡片并进行状态监控:
+  能在Lovelace仪表盘中配置卡片并监控设备状态:
     'Capacidad para configurar tarjetas en el panel Lovelace y realizar monitoreo de estados',
   工业总线对接与场景联动: 'Integración de buses industriales y vinculación de escenarios',
   '接入 Modbus 电表与变送器，做出能耗看板和跨设备联动':
@@ -391,8 +391,8 @@ export const esDict: Record<string, string> = {
     'Percepcion de micro-movimientos humanos y monitoreo de caidas, vinculacion con automatizacion de alarmas',
   '60GHz毫米波雷达模块（MR60FDA2），可检测人体存在、微动与跌倒姿态，隐私友好（不采集图像），通过ESPHome接入HA后触发人员在位联动与异常告警。':
     'Modulo de radar milimetrico de 60GHz (MR60FDA2), puede detectar presencia humana, micro-movimientos y posturas de caida, amigable con la privacidad (no captura imagenes), tras conectarse a HA mediante ESPHome activa la vinculacion de presencia de personas y alertas por anomalias.',
-  '另配DDSU666单相导轨式智能电表、XY-MD02工业温湿度变送器（必配，无独立插图）、屏幕、整体电源设计、路由器等通用配件。':
-    'Adicionalmente se incluyen contador inteligente monofasico para riel DIN DDSU666, transmisor industrial de temperatura y humedad XY-MD02 (obligatorio, sin ilustracion independiente), pantalla, diseno de alimentacion general, router y otros accesorios generales.',
+  '另配 DDSU666 单相导轨式智能电表、XY-MD02 工业温湿度变送器、屏幕、整体电源箱与工业路由器等实训配件。':
+    'También incluye medidor inteligente monofásico para carril DIN DDSU666, transmisor industrial de temperatura y humedad XY-MD02, pantalla, caja de alimentación integrada y router industrial.',
   '固件配置 + 统一平台 · YAML 驱动':
     'Configuración de firmware + plataforma unificada · impulsado por YAML',
   设备固件烧录: 'Flasheo de firmware de dispositivos',
@@ -530,19 +530,19 @@ export const esDict: Record<string, string> = {
   '跨系统 API/MQTT 对接验证记录': 'Registro de verificacion de integracion API/MQTT entre sistemas',
   '含 REST API 调用示例、MQTT 主题规划、Webhook 配置与联调测试结果（L3）。':
     'Incluye ejemplos de llamadas REST API, planificación de temas MQTT, configuración Webhook y resultados de pruebas de integración (L3).',
-  '这门课的价值不在硬件，在「把存量设备接进来」的方法':
-    'El valor de este curso no esta en el hardware, sino en el metodo de «conectar los dispositivos existentes»',
+  '以标准化方法打通多品牌、多协议存量设备的统一接入':
+    'Dominar métodos estandarizados para la integración unificada de equipos multiprotocolo y multimarca existentes',
   把存量设备接进来: 'Conectar los dispositivos existentes',
-  'M1 不是一门教学生「玩智能家居」的课，而是一门教团队如何用开源平台和轻量硬件，把现场已经存在的、互相割裂的设备统一接进来的方法课。柴火交付的从来不只是「一次上课」，而是一整套可以被拆开、改写、重新组装的东西：13模块课程骨架、教师教案与PPT、ESPHome示例配置、YAML模板、Modbus寄存器映射工具、设备清单与台架规范。':
-    'M1 no es una clase que enseña a los estudiantes a «jugar con domótica», sino una clase de método que enseña a los equipos cómo usar plataformas de código abierto y hardware ligero para conectar de forma unificada los dispositivos ya existentes y fragmentados en el sitio. Lo que Chaihuo entrega nunca es solo «una clase», sino un conjunto completo que puede desarmarse, reescribirse y reensamblarse: estructura de curso de 13 módulos, planes de clase y PPT para docentes, configuraciones de ejemplo ESPHome, plantillas YAML, herramienta de mapeo de registros Modbus, listas de dispositivos y especificaciones de banco.',
+  'M1 并非让学员重复配置智能家居，而是针对楼宇与工业辅助车间中多品牌、多协议设备割裂的现实痛点，建立跨协议本地管控的工程能力。整套方案提供从台架接线、协议转换到看板搭建的完整技术栈，讲师可根据实际教学目标灵活剪裁与扩展。':
+    'M1 no enseña a configurar casas inteligentes de forma superficial, sino que aborda la fragmentación real de equipos multimarca y multiprotocolo en edificios y naves auxiliares, desarrollando capacidades de gestión local cruzada. Ofrece la pila completa desde el cableado hasta el cuadro de mando, permitiendo a los docentes adaptarla con total flexibilidad.',
   换场景: 'Cambiar de escenario',
-  '模块 09「场景自动化策略配置」的联动规则是开放的：你的行业、你的客户现场、这座城市正在发生的一个真问题。温度超限可以是机房，可以是冷库，可以是养殖大棚——问题越靠近真实现场，效果越好，而这件事你比我们懂。':
-    'Las reglas de vinculacion del modulo 09 «configuracion de estrategias de automatizacion por escenarios» son abiertas: tu industria, el sitio de tu cliente, un problema real que esta ocurriendo en esta ciudad. El exceso de temperatura puede ser sala de servidores, puede ser camara frigorifica, puede ser invernadero — cuanto mas cerca este el problema de la realidad del sitio, mejor sera el efecto, y de esto tu sabes mas que nosotros.',
+  '模块 09 的联动规则支持自由替换。讲师可将实训场景延伸至机房温控、冷链仓储或车间环境监管，引导学员根据实际业务阈值编写联动策略。':
+    'Las reglas de automatización de la unidad 09 son totalmente personalizables. El docente puede adaptar las prácticas a climatización de centros de datos, cámaras frigoríficas o monitorización de plantas, guiando la redacción de políticas de control según umbrales reales.',
   接设备: 'Conectar equipos',
-  '你已有的客户存量设备、学校实训台架上的传感器、合作方的专有协议设备，可以接在模块 06 之后，成为 Modbus 接入练习的对象池。M1 负责把方法讲透，门后面接什么设备，由你来定。':
-    'Los dispositivos existentes de tus clientes, los sensores en los bancos de formación de escuelas y los dispositivos de protocolo propietario de socios pueden conectarse después del módulo 06 para convertirse en el grupo de objetos para las prácticas de conexión Modbus. M1 se encarga de explicar el método a fondo; qué dispositivo se conecta detrás de la puerta, tú lo decides.',
-  '你在行业里攒下的那些：接线经验、踩过的坑、能让学员瞬间理解 Modbus 的那个比喻、客户现场最常问的三个问题——那正是我们没有、也给不了的部分。':
-    'Todo lo que has acumulado en la industria: experiencia en cableado, los problemas que has superado, esa metáfora que hace que los estudiantes entiendan instantáneamente Modbus, las tres preguntas más frecuentes en los sitios de los clientes — esa es precisamente la parte que nosotros no tenemos y no podemos dar.',
+  '实训台架支持在模块 06 之后接入合作企业或校内现有的 RS485 与 Modbus 仪表，让学员面对真实设备完成点位映射与调试。':
+    'El banco de trabajo permite conectar medidores RS485 y Modbus reales de la institución o de empresas colaboradoras tras la unidad 06, permitiendo a los alumnos practicar el mapeo de registros y la depuración con equipos auténticos.',
+  '讲师在强弱电隔离、总线拓扑布线、常见通信丢包排查等现场交付经验上的补充，是帮助学员跨过理论与工程实践鸿沟的关键。':
+    'Las lecciones prácticas del instructor sobre separación de potencia y señal, topologías de bus y resolución de pérdidas de paquetes son las que conectan la teoría con la fiabilidad requerida en despliegues reales.',
   '仅做单向状态监视，不执行反向控制。':
     'Solo se realiza monitoreo de estado unidireccional, no se ejecuta control inverso.',
   跨品牌设备状态聚合与统一监控看板:
@@ -647,7 +647,7 @@ export const esDict: Record<string, string> = {
     'Ejecute todo el flujo de voz en local: funciona sin conexión y los datos no salen de la intranet',
   '掌握VAD→ASR→LLM→TTS完整本地端到端语音管线架构':
     'Dominar la arquitectura completa del pipeline de voz local extremo a extremo VAD→ASR→LLM→TTS',
-  掌握在Jetson边缘计算硬件上进行大模型量化与部署优化的方法:
+  掌握在Jetson边缘计算硬件上量化与部署优化大模型的方法:
     'Dominar los métodos de cuantización y optimización de despliegue de grandes modelos en hardware de computación en el borde Jetson',
   具备在强隐私与工业隔离网环境下交付AI交互方案的能力:
     'Capacidad para entregar soluciones de interacción de IA en entornos de alta privacidad y redes industriales aisladas',
@@ -665,20 +665,20 @@ export const esDict: Record<string, string> = {
     'Este curso emplea como material didáctico central los «terminales de IA visibles + potencia de cómputo local de inferencia».',
   '端侧多模态交互终端，语音采集与视觉识别入口':
     'Terminal de interacción multimodal en el borde, entrada de captura de voz y reconocimiento visual',
-  '集成音视频采集与屏幕显示，支持目标检测、人员靠近感知与自然语言语音交互，通过Wi-Fi接入SenseCraft AI平台。SKU 100051523，每组配置2台。':
-    'Integra captura audio/video y visualizacion en pantalla, soporta deteccion de objetos, percepcion de aproximacion de personas e interaccion por voz en lenguaje natural, se conecta a la plataforma SenseCraft AI mediante Wi-Fi. SKU 100051523, 2 unidades por grupo.',
+  '集成音视频采集与屏幕显示，支持目标检测、人员靠近感知与自然语言语音交互，通过 Wi-Fi 接入 SenseCraft AI 平台，每组标准配置 2 台。':
+    'Integra captura de audio/video y pantalla, admitiendo detección de objetos, presencia humana e interacción por voz en lenguaje natural mediante Wi-Fi con SenseCraft AI; 2 unidades por grupo.',
   运行业务系统与MCP桥接服务的边缘主机:
     'Host en el borde que ejecuta sistemas de negocio y servicios de puente MCP',
-  '16GB内存，6 TOPS算力，运行Docker容器化WMS仓储系统与MCP Bridge桥接服务，实现局域网内业务数据与大模型工具调用的对接。SKU 100086238，自带12V电源适配器。':
-    '16GB de memoria, 6 TOPS de potencia de computo, ejecuta sistema de gestion de almacenes WMS contenerizado en Docker y servicio de puente MCP Bridge, logrando la integracion entre datos de negocio en red local y llamadas a herramientas de grandes modelos. SKU 100086238, con adaptador de alimentacion 12V integrado.',
+  '配备 16GB 内存与 6 TOPS 算力，运行 Docker 容器化 WMS 仓储系统与 MCP Bridge 桥接服务，实现局域网业务数据与大模型工具调用的对接，配独立电源适配器。':
+    'Equipado con 16 GB de RAM y 6 TOPS de cálculo, ejecuta el sistema WMS en contenedores Docker y servicios MCP Bridge para conectar datos de negocio locales con llamadas a herramientas de LLM; incluye adaptador de corriente dedicado.',
   '工位人机界面，仓管业务数据录入与状态监视':
     'Interfaz hombre-maquina de estacion de trabajo, entrada de datos de negocio de almacenamiento y monitoreo de estado',
-  '8寸工业智能触控终端，含摄像头与双麦，SKU 100058144。作为工位人机交互界面，用于仓管业务数据录入与状态监视，可直连主机展示WMS管理控制台与交互日志。':
-    'Terminal tactil inteligente industrial de 8 pulgadas, con camara y doble microfono, SKU 100058144. Como interfaz hombre-maquina de estacion de trabajo, se utiliza para entrada de datos de negocio de almacenamiento y monitoreo de estado, puede conectarse directamente al host para mostrar la consola de administracion WMS y registros de interaccion.',
+  '8 英寸工业智能触控终端，集成摄像头与双麦克风。作为工位人机交互界面，用于仓管数据录入与状态监视，可直连主机展示 WMS 管理控制台与交互日志。':
+    'Terminal táctil industrial inteligente de 8 pulgadas con cámara y micrófono dual. Actúa como HMI de puesto de trabajo para entrada de datos de almacén y monitorización, conectándose directamente al host para mostrar la consola y los registros.',
   'L3进阶边缘算力主机，部署纯本地离线语音管线':
     'Host de cómputo en el borde avanzado de L3, despliega pipeline de voz offline puramente local',
-  '100 TOPS级别算力，预置JetPack/CUDA/TensorRT/PyTorch环境，部署Silero VAD+Whisper ASR+Qwen LLM+ChatTTS纯本地离线语音AI管线，断网依然可用。SKU 114110314，配19V/4.7A电源适配器。':
-    'Potencia de computo de nivel 100 TOPS, con entorno JetPack/CUDA/TensorRT/PyTorch preinstalado, despliega pipeline de IA de voz puramente local y offline Silero VAD+Whisper ASR+Qwen LLM+ChatTTS, utilizable incluso sin red. SKU 114110314, con adaptador de alimentacion 19V/4.7A.',
+  '具备 100 TOPS 级端侧算力，预置完整 JetPack、CUDA 与 TensorRT 环境，部署纯本地离线语音 AI 管线，断网环境下依然稳定可用。':
+    'Proporciona 100 TOPS de potencia perimetral con entornos JetPack, CUDA y TensorRT preconfigurados, desplegando un pipeline de IA de voz completamente local y funcional sin conexión a internet.',
   '另配便携式现场显示器（13.3" 1080P）、CUDY AX3000 Wi-Fi 6路由器、供电排插、六类千兆网线、智能仓管WMS实操模拟物料包（条码标贴/货位标签/实体样本盒）、Watcher桌面支架等通用配件。':
     'Adicionalmente se incluyen monitor portatil de sitio (13.3" 1080P), router CUDY AX3000 Wi-Fi 6, regleta de alimentacion, cables de red gigabit categoria 6, paquete de materiales de simulacion practica de WMS de gestion inteligente de almacenes (etiquetas de codigo de barras/etiquetas de ubicacion/cajas de muestra fisicas), soporte de escritorio Watcher y otros accesorios generales.',
   '云端大模型 + 端侧多模态终端 · 零代码配置':
@@ -804,18 +804,18 @@ export const esDict: Record<string, string> = {
     'Incluye pasos de despliegue del entorno OpenClaw, configuración para registrar scripts de automatización como herramientas invocables por MCP, ejemplos de configuración para activación de consultas de automatización y tareas programadas mediante comandos de voz.',
   '含VAD→ASR→LLM→TTS各模块部署步骤、Jetson显存分配与量化模型优化参数、断网联调测试记录与端到端延迟测试报告。':
     'Incluye pasos de despliegue de cada módulo VAD→ASR→LLM→TTS, parámetros de asignación de memoria de video Jetson y optimización de modelos cuantizados, registro de pruebas de integración sin red y informe de pruebas de latencia de extremo a extremo.',
-  '这门课的价值不在大模型，在「把业务系统接进语音交互」的方法':
-    'El valor de este curso no esta en los grandes modelos, sino en el metodo de «integrar sistemas de negocio en la interaccion por voz»',
+  打通物理端侧交互与企业存量业务逻辑:
+    'Conectar la interacción física en el extremo con la lógica empresarial existente',
   把业务系统接进语音交互: 'Integrar sistemas de negocio en la interacción por voz',
-  'M2 不是一门教学生「跟AI聊天」的课，而是一门教团队如何用物理AI终端和标准协议，把现场已经存在的WMS/ERP/CRM系统接进自然语言交互的方法课。柴火交付的从来不只是「一次上课」，而是一整套可以被拆开、改写、重新组装的东西：15模块课程骨架、教师教案与PPT、Watcher配置模板、MCP桥接config.yml示例、Docker Compose部署文件、离线语音管线部署手册。':
-    'M2 no es una clase que enseña a los estudiantes a «chatear con IA», sino una clase de método que enseña a los equipos cómo usar terminales de IA físicos y protocolos estándar para integrar los sistemas WMS/ERP/CRM ya existentes en la interacción por lenguaje natural. Lo que Chaihuo entrega nunca es solo «una clase», sino un conjunto completo que puede desarmarse, reescribirse y reensamblarse: estructura de curso de 15 módulos, planes de clase y PPT para docentes, plantillas de configuración Watcher, ejemplos de config.yml de puente MCP, archivos de despliegue Docker Compose, manual de despliegue de pipeline de voz offline.',
-  '模块 04「场景化语音问答」的查询内容是开放的：你的行业、你的客户现场、这座城市正在发生的一个真问题。查库存可以是仓管，可以是展厅展品，可以是会议室日程——问题越靠近真实现场，效果越好，而这件事你比我们懂。':
-    'El contenido de consulta del modulo 04 «preguntas y respuestas por voz contextualizadas» es abierto: tu industria, el sitio de tu cliente, un problema real que esta ocurriendo en esta ciudad. Consultar inventario puede ser gestion de almacen, puede ser exhibiciones de sala de exposiciones, puede ser agenda de salas de reunion — cuanto mas cerca este el problema de la realidad del sitio, mejor sera el efecto, y de esto tu sabes mas que nosotros.',
+  'M2 聚焦于如何将视觉感知、语音交互与存量业务系统（如 WMS、ERP）深层串联。课程避开纯云端调用的套路，直击物理终端接入、MCP 工具调用以及纯局域网离线部署等核心工程难点，为讲师提供全套开箱即可验证的软硬件环境。':
+    'M2 se enfoca en integrar profundamente visión y voz con sistemas de gestión empresarial existentes (como WMS o ERP). Va más allá de simples llamadas a APIs en la nube, abordando la conexión de terminales físicos, herramientas MCP y despliegue offline en redes locales.',
+  '模块 04 的语音查询内容支持自由定制。讲师可将仓储盘点替换为展厅导览、设备状态巡检或会议室调度，引导学员根据实际业务语义设计多轮对话策略。':
+    'El contenido de consulta por voz de la unidad 04 es totalmente personalizable. El docente puede sustituir el inventario por visitas guiadas, rondas de mantenimiento o reserva de salas, enseñando a diseñar diálogos adaptados a operaciones reales.',
   接系统: 'Conectar sistemas',
-  '你已有的客户业务系统、学校实训平台上的管理软件、合作方的REST API服务，可以接在模块 08 之后，成为 MCP 桥接练习的对象池。M2 负责把方法讲透，门后面接什么系统，由你来定。':
-    'Los sistemas de negocio de tus clientes existentes, el software de gestión en las plataformas de formación de escuelas y los servicios REST API de socios pueden conectarse después del módulo 08 para convertirse en el grupo de objetos para las prácticas de puente MCP. M2 se encarga de explicar el método a fondo; qué sistema se conecta detrás de la puerta, tú lo decides.',
-  '你在行业里攒下的那些：Agent提示词调优经验、踩过的MCP鉴权坑、能让学员瞬间理解语音管线延迟的那个比喻、客户现场最常问的三个隐私问题——那正是我们没有、也给不了的部分。':
-    'Todo lo que has acumulado en la industria: experiencia en optimización de prompts de Agent, los problemas de autenticación MCP que has superado, esa metáfora que hace que los estudiantes entiendan instantáneamente la latencia del pipeline de voz, las tres preguntas de privacidad más frecuentes en los sitios de los clientes — esa es precisamente la parte que nosotros no tenemos y no podemos dar.',
+  '在模块 08 之后，讲师可将示例库存系统替换为实验库房系统或企业现有业务 API，实操通过自然语音查询与更新真实业务数据。':
+    'Tras la unidad 08, el instructor puede sustituir el inventario de ejemplo por el sistema del laboratorio o APIs empresariales reales, practicando la consulta y actualización de datos mediante voz natural.',
+  '结合现场环境底噪、远场拾音限制以及大模型工具调用幻觉控制等实际工程考量，帮助学员建立系统级稳定性思维。':
+    'La consideración del ruido ambiente, las limitaciones de captación de audio y el control de alucinaciones en las llamadas a herramientas ayuda a desarrollar un criterio riguroso de ingeniería de sistemas.',
   'L1/L2业务数据经本地MCP桥接在局域网内流转，核心数据不出域；L3纯本地离线运行，零公网依赖。':
     'Los datos de negocio L1/L2 circulan dentro de la red local mediante el puente MCP local, los datos centrales no salen del dominio; L3 se ejecuta puramente local y offline, con cero dependencia de red pública.',
   现场目标感知与结构化业务语音问答:
@@ -1090,17 +1090,16 @@ export const esDict: Record<string, string> = {
     'Guía de despliegue y operación de redes de comunicación de emergencia',
   '含天线架设规范、频段合规要求、日常巡检清单与故障排查流程。':
     'Incluye especificaciones de instalación de antenas, requisitos de cumplimiento de bandas, lista de inspección diaria y proceso de depuración de fallos.',
-  '这门课的价值不在硬件，在「无公网环境下把人和数据连起来」的方法':
-    'El valor de este curso no esta en el hardware, sino en el metodo de «conectar personas y datos en entornos sin red publica»',
+  在没有公网信号的地方搭起自组网: 'Desplegar una red en malla propia donde no hay señal pública',
   无公网环境下把人和数据连起来: 'Conectar personas y datos en entornos sin red publica',
-  'M3 不是一门教学生「玩对讲机」的课，而是一门教团队如何用开源 Mesh 协议和轻量硬件，在没有基站、没有互联网的现场把通信和数据回传建起来的方法课。柴火交付的从来不只是「一次上课」，而是一整套可以被拆开、改写、重新组装的东西：13 模块课程骨架、教师教案与 PPT、Meshtastic 配置模板、Node-RED 示例流程、PlatformIO 编译工程、设备清单与台架规范。':
-    'M3 no es una clase que enseña a los estudiantes a «jugar con radios», sino una clase de método que enseña a los equipos cómo usar protocolos Mesh de código abierto y hardware ligero para construir comunicación y retorno de datos en sitios sin estaciones base ni internet. Lo que Chaihuo entrega nunca es solo «una clase», sino un conjunto completo que puede desarmarse, reescribirse y reensamblarse: estructura de curso de 13 módulos, planes de clase y PPT para docentes, plantillas de configuración Meshtastic, flujos de ejemplo Node-RED, proyecto de compilación PlatformIO, listas de dispositivos y especificaciones de banco.',
-  '模块 05「离线通信与定位回传实测」的测试场景是开放的：你的行业、你的客户现场、这座城市正在发生的一个真问题。野外勘探可以是矿山，可以是林场，可以是海上作业——问题越靠近真实现场，效果越好，而这件事你比我们懂。':
-    'El escenario de prueba del modulo 05 «medicion real de comunicacion offline y retorno de posicionamiento» es abierto: tu industria, el sitio de tu cliente, un problema real que esta ocurriendo en esta ciudad. La exploracion en exteriores puede ser mineria, puede ser bosques, puede ser operaciones maritimas — cuanto mas cerca este el problema de la realidad del sitio, mejor sera el efecto, y de esto tu sabes mas que nosotros.',
-  '你已有的客户现场传感器、学校实训台架上的环境监测设备、合作方的专有协议终端，可以接在模块 09 之后，成为离网传感集成练习的对象池。M3 负责把方法讲透，门后面接什么传感器，由你来定。':
-    'Los sensores en sitio de tus clientes, los equipos de monitoreo ambiental en los bancos de formación de escuelas y los terminales de protocolo propietario de socios pueden conectarse después del módulo 09 para convertirse en el grupo de objetos para las prácticas de integración de sensores off-grid. M3 se encarga de explicar el método a fondo; qué sensor se conecta detrás de la puerta, tú lo decides.',
-  '你在行业里攒下的那些：野外部署经验、踩过的坑、能让学员瞬间理解 LoRa 跳数的那个比喻、客户现场最常问的三个问题——那正是我们没有、也给不了的部分。':
-    'Todo lo que has acumulado en la industria: experiencia en despliegue en exteriores, los problemas que has superado, esa metáfora que hace que los estudiantes entiendan instantáneamente los saltos LoRa, las tres preguntas más frecuentes en los sitios de los clientes — esa es precisamente la parte que nosotros no tenemos y no podemos dar.',
+  'M3 专门解决无公网、无基站覆盖环境下的信息互通问题。通过开源 LoRa Mesh 协议与轻量端节点，学员完整经历通信拓扑规划、离线轨迹回传与自建网关上云的全过程。全部讲义与工程源码支持讲师按需二次裁剪。':
+    'M3 resuelve la comunicación cuando no existe cobertura celular ni infraestructura pública. Mediante protocolos abiertos LoRa Mesh y nodos ligeros, los alumnos dominan la planificación de topologías, telemetría offline y pasarelas de conexión a la nube.',
+  '模块 05 支持在校园开阔地、地下车库或野外做拉距与穿墙测试，让学员直观观察遮挡、天线极化与跳数累加对丢包率的影响。':
+    'La unidad 05 permite realizar pruebas de alcance y penetración en espacios abiertos, aparcamientos subterráneos o entornos agrestes, comprobando de primera mano el impacto de obstáculos y saltos en la pérdida de paquetes.',
+  '在模块 09 之后，可接入校内或行业专属的环境监测探头，演练无蜂窝网络下的低功耗多跳数据回传。':
+    'Tras la unidad 09, es posible integrar sondas ambientales o agrícolas para practicar la telemetría multisalto de ultra bajo consumo en zonas sin cobertura de telefonía.',
+  '结合当地无线电管理频段要求、空口占空比限制及多节点信道拥堵规划，传授真正符合现场标准的通信网络设计规范。':
+    'La incorporación de normativas de frecuencias locales, límites de ciclo de trabajo y mitigación de congestión de canal enseña a diseñar redes de acuerdo con estándares regulatorios reales.',
   '仅面向海外无线频段（EU868/US915 等），不得用于国内频段应用。':
     'Solo orientado a bandas inalámbricas internacionales (EU868/US915, etc.), no se permite su uso en aplicaciones de bandas domésticas de China.',
   无公网环境下的短文本即时通讯与群组广播:
@@ -1402,19 +1401,19 @@ export const esDict: Record<string, string> = {
     'Datos de series temporales InfluxDB y configuración de panel Grafana (L3)',
   '含检测统计数据表结构、Grafana 告警频次/区域热度/合规率趋势看板配置 JSON。':
     'Incluye estructura de tabla de datos de estadísticas de detección, configuración JSON de panel de tendencias de frecuencia de alertas/popularidad por zona/tasa de cumplimiento en Grafana.',
-  '这门课的价值不在算法精度，在「把视觉AI从演示台架搬到客户现场」的工程方法':
-    'El valor de este curso no esta en la precision del algoritmo, sino en el metodo de ingenieria de «llevar la IA visual del banco de demostracion al sitio del cliente»',
+  '让视觉模型走出实验室，去应对真实光照与误报':
+    'Llevar los modelos de visión más allá del laboratorio para afrontar la luz real y las falsas alarmas',
   把视觉AI从演示台架搬到客户现场:
     'Lleva la IA visual del banco de demostración al sitio del cliente',
-  'M4 不是一门教学生「调参刷精度」的算法课，而是一门教团队如何用开源相机和边缘计算硬件，把目标检测从实验室演示变成可交付、可维护、可合规的现场方案的工程课。柴火交付的从来不只是「一次上课」，而是一整套可以被拆开、改写、重新组装的东西：15模块课程骨架、教师教案与PPT、reCamera Node-RED示例流程、frigate.yml配置模板、Zones区域绘制方法、误报调优记录表、设备清单与台架规范。':
-    'M4 no es una clase de algoritmos que enseña a los estudiantes a «ajustar parámetros para subir precisión», sino una clase de ingeniería que enseña a los equipos cómo usar cámaras de código abierto y hardware de cómputo en el borde para convertir la detección de objetos de una demostración de laboratorio en una solución de sitio entregable, mantenible y cumpliente. Lo que Chaihuo entrega nunca es solo «una clase», sino un conjunto completo que puede desarmarse, reescribirse y reensamblarse: estructura de curso de 15 módulos, planes de clase y PPT para docentes, flujos de ejemplo reCamera Node-RED, plantilla de configuración frigate.yml, método de dibujo de zonas Zones, tabla de registro de optimización de falsas alarmas, listas de dispositivos y especificaciones de banco.',
-  '模块 04「基础入侵检测与区域绘制」的检测区域是开放的：你的行业、你的客户现场、这座城市正在发生的一个真问题。周界防范可以是园区围墙，可以是仓库后门，可以是养殖大棚入口——问题越靠近真实现场，效果越好，而这件事你比我们懂。':
-    'La zona de deteccion del modulo 04 «deteccion basica de intrusiones y dibujo de zonas» es abierta: tu industria, el sitio de tu cliente, un problema real que esta ocurriendo en esta ciudad. La vigilancia perimetral puede ser el cerco del recinto, puede ser la puerta trasera del almacen, puede ser la entrada del invernadero — cuanto mas cerca este el problema de la realidad del sitio, mejor sera el efecto, y de esto tu sabes mas que nosotros.',
+  'M4 跳出实验室算法刷点模式，专注边缘摄像头部署、端侧 NPU 推理、多路视频流汇聚与误报调优等交付全流程。课程提供由浅入深的实操台架，讲师可依据实训时长在轻量端侧方案与多路集中分析架构间灵活选型。':
+    'M4 supera el simple ajuste de parámetros en laboratorio para centrarse en la entrega real: inferencia en NPU de borde, agregación de vídeo en NVR y mitigación de falsas alarmas ante iluminación variable.',
+  '模块 04 与 08 支持学员自选周界防范区域，例如实训室后门、特定危险工位或设备隔离带，根据物理环境标定报警边界。':
+    'Las unidades 04 y 08 permiten a los estudiantes marcar zonas perimetrales personalizadas, como accesos al taller o áreas de seguridad en maquinaria, calibrando los límites según el entorno físico.',
   接相机: 'Conectar cámaras',
-  '你已有的客户存量网络摄像头、学校实训台架上的RTSP设备、合作方的专有协议相机，可以接在模块 08 之后，成为 Frigate 多路接入练习的对象池。M4 负责把方法讲透，门后面接什么相机，由你来定。':
-    'Las cámaras de red existentes de tus clientes, los dispositivos RTSP en los bancos de formación de escuelas y las cámaras de protocolo propietario de socios pueden conectarse después del módulo 08 para convertirse en el grupo de objetos para las prácticas de acceso multicanal Frigate. M4 se encarga de explicar el método a fondo; qué cámara se conecta detrás de la puerta, tú lo decides.',
-  '你在行业里攒下的那些：现场踩过的坑、能让学员瞬间理解置信度阈值的那个比喻、客户现场最常问的三个问题、误报调优的独门经验——那正是我们没有、也给不了的部分。':
-    'Todo lo que has acumulado en la industria: los problemas superados en sitio, esa metáfora que hace que los estudiantes entiendan instantáneamente los umbrales de confianza, las tres preguntas más frecuentes en los sitios de los clientes, la experiencia exclusiva en optimización de falsas alarmas — esa es precisamente la parte que nosotros no tenemos y no podemos dar.',
+  '支持引入实训室或园区现有的标准 RTSP 监控摄像头，完成多路汇聚分析，验证异构视频源接入能力。':
+    'Permite integrar cámaras de seguridad RTSP ya instaladas en el centro para análisis concurrente, validando la interoperabilidad con fuentes de vídeo heterogéneas.',
+  '引入现场常见的光照剧变、树枝晃动、反光干扰等真实工况，指导学员调试置信度阈值与遮罩区域，掌握工程化避坑手段。':
+    'La exposición a contraluces intensos, reflejos o movimientos de vegetación guía a los alumnos en el ajuste fino de umbrales y máscaras, asimilando soluciones prácticas contra falsas alarmas.',
   '仅做物体/行为/区域检测与事件告警，严禁人脸身份识别与生物特征追踪。':
     'Solo se realiza detección de objetos/comportamientos/zonas y alertas de eventos; queda estrictamente prohibido el reconocimiento facial de identidad y el rastreo de características biométricas.',
   '通用与特定目标检测（人/车/安全帽/反光衣/工件等物体类别）':
@@ -1565,7 +1564,7 @@ export const esDict: Record<string, string> = {
   叶面温湿度传感器: 'Sensor de Temperatura y Humedad de Hoja',
   '本地自动化主机，运行Node-RED与API对接':
     'Host de automatización local, ejecuta Node-RED e integración de API',
-  '带隔离RS485与双网口的边缘智能控制器；通过官方安装脚本部署Node-RED，访问http://[设备IP]:1880进行本地自动化编排，实现阈值判断与执行机构联动；12V/2A独立供电。':
+  '带隔离RS485与双网口的边缘智能控制器；通过官方安装脚本部署Node-RED，访问http://[设备IP]:1880完成本地自动化编排，实现阈值判断与执行机构联动；12V/2A独立供电。':
     'Controlador inteligente en el borde con RS485 aislado y doble puerto Ethernet; despliega Node-RED mediante el script de instalación oficial, accede a http://[IP del dispositivo]:1880 para la orquestación de automatización local, logrando la evaluación de umbrales y la vinculación de actuadores; alimentación independiente de 12V/2A.',
   '另配SenseCAP Outdoor Gateway（114992982）、SenseCAP S2100 Data Logger（114992872）、SenseCAP S2105土壤传感器（114992871）、SenseCAP S2103 CO2/温湿度传感器（114992869）等LoRaWAN路线硬件（待补图），以及4G物联网SIM卡、屏幕、整体电源设计、路由器等通用配件。':
     'Adicionalmente se incluyen hardware de ruta LoRaWAN como SenseCAP Outdoor Gateway (114992982), SenseCAP S2100 Data Logger (114992872), sensor de suelo SenseCAP S2105 (114992871), sensor de CO2/temperatura/humedad SenseCAP S2103 (114992869) (imagenes pendientes), asi como tarjeta SIM IoT 4G, pantalla, diseno de alimentacion general, router y otros accesorios generales.',
@@ -1689,18 +1688,18 @@ export const esDict: Record<string, string> = {
     'Incluye configuración de autenticación SenseCAP Open API (Access ID/Access Key, HTTP Basic Auth), ejemplos de solicitudes HTTP para extracción de datos de telemetría, archivo JSON de flujo de control de vinculación por umbrales Node-RED y lógica de envío de comandos de control RS485.',
   '含InfluxDB时序数据库写入配置、Grafana数据源连接设置、多区域环境对比大屏仪表盘模板（JSON）与私有化部署说明。':
     'Incluye configuración de escritura en base de datos de series temporales InfluxDB, configuración de conexión de fuente de datos Grafana, plantilla de panel grande de comparación ambiental multizona (JSON) e instrucciones de despliegue privatizado.',
-  '这门课的价值不在传感器硬件，在「把广域分散的环境数据接进来」的方法':
-    'El valor de este curso no esta en el hardware de sensores, sino en el metodo de «conectar los datos ambientales dispersos de area amplia»',
+  把分散在田间和管网的传感器稳稳接进看板:
+    'Integrar con fiabilidad los sensores dispersos en campos y redes en el panel de control',
   把广域分散的环境数据接进来: 'Conectar los datos ambientales dispersos de área amplia',
-  'M5 不是一门教学生「看几个传感器读数」的课，而是一门教团队如何用工业级传感器和双通信链路，把野外、农田、河道、市政管网上那些分散的、难以布线的环境数据统一接进来的方法课。柴火交付的从来不只是「一次上课」，而是一整套可以被拆开、改写、重新组装的东西：13模块课程骨架、教师教案与PPT、Modbus寄存器映射工具、传感器接线图模板、告警策略配置清单、API调用示例代码。':
-    'M5 no es una clase que enseña a los estudiantes a «mirar algunas lecturas de sensores», sino una clase de método que enseña a los equipos cómo usar sensores de grado industrial y enlaces de doble comunicación para conectar de forma unificada los datos ambientales dispersos y difíciles de cablear en campos, tierras de cultivo, ríos y redes de alcantarillado municipal. Lo que Chaihuo entrega nunca es solo «una clase», sino un conjunto completo que puede desarmarse, reescribirse y reensamblarse: estructura de curso de 13 módulos, planes de clase y PPT para docentes, herramienta de mapeo de registros Modbus, plantilla de diagramas de cableado de sensores, lista de configuración de estrategias de alertas, código de ejemplo de llamadas API.',
-  '模块 09「多级业务告警规则配置」的阈值是开放的：你的行业、你的客户现场、这座城市正在发生的一个真问题。土壤温度低于5°C可以是霜冻预警，可以是冷库，可以是养殖大棚——问题越靠近真实现场，效果越好，而这件事你比我们懂。':
-    'Los umbrales del modulo 09 «configuracion de reglas de alertas de negocio multinivel» son abiertos: tu industria, el sitio de tu cliente, un problema real que esta ocurriendo en esta ciudad. La temperatura del suelo por debajo de 5°C puede ser alerta de helada, puede ser camara frigorifica, puede ser invernadero — cuanto mas cerca este el problema de la realidad del sitio, mejor sera el efecto, y de esto tu sabes mas que nosotros.',
+  'M5 针对农业、水务与市政管网等无公网布线条件的严苛场景，系统讲解工业变送器接线、4G / LoRaWAN 双路线选型及云端私有化数据看板的搭建。配套全套寄存器映射表与标准化接线图，方便讲师按实际环境组织授课。':
+    'M5 aborda escenarios exigentes como agricultura, gestión del agua y redes urbanas sin cableado, enseñando la conexión de transmisores industriales, selección entre 4G y LoRaWAN y cuadros de mando personalizados con Grafana.',
+  '模块 09 的多级告警规则完全开放。讲师可结合大棚霜冻预警、仓库温湿度恒定或水质监测等课题，设定符合真实环境标准的阈值。':
+    'Las reglas de alerta de la unidad 09 son flexibles. El docente puede enfocar los ejercicios en prevención de heladas agrícolas, control de almacenes o calidad del agua en piscifactorías.',
   接传感器: 'Conectar sensores',
-  '你已有的客户存量传感器、学校实训台架上的环境探头、合作方的RS485设备，可以接在模块 06 之后，成为Modbus接入练习的对象池。M5 负责把方法讲透，门后面接什么传感器，由你来定。':
-    'Los sensores existentes de tus clientes, las sondas ambientales en los bancos de formación de escuelas y los dispositivos RS485 de socios pueden conectarse después del módulo 06 para convertirse en el grupo de objetos para las prácticas de conexión Modbus. M5 se encarga de explicar el método a fondo; qué sensor se conecta detrás de la puerta, tú lo decides.',
-  '你在行业里攒下的那些：野外布设经验、踩过的坑、能让学员瞬间理解LoRaWAN视距覆盖的那个比喻、客户现场最常问的三个问题——那正是我们没有、也给不了的部分。':
-    'Todo lo que has acumulado en la industria: experiencia en despliegue en exteriores, los problemas que has superado, esa metáfora que hace que los estudiantes entiendan instantáneamente la cobertura con línea de vista LoRaWAN, las tres preguntas más frecuentes en los sitios de los clientes — esa es precisamente la parte que nosotros no tenemos y no podemos dar.',
+  '在模块 06 之后，学员可尝试接入自有工业 RS485 传感器，演练通过寄存器手册完成新设备点位适配与数据解析。':
+    'Tras la unidad 06, los alumnos pueden conectar sensores RS485 industriales propios, practicando el mapeo de direcciones y el análisis de datos a partir de manuales de registros.',
+  '讲师在野外防雷防水、供电功耗平衡、长期通信心跳保障等现场交付细节上的传授，是形成实用工程能力的核心。':
+    'El criterio del instructor sobre protección contra rayos, balance energético en exteriores y estabilidad de enlace en condiciones climáticas adversas es vital para crear instalaciones duraderas.',
   '4G与LoRaWAN为两条独立交付路线，硬件不混用；环境数据属低频物联监测，不做毫秒级实时控制。':
     '4G y LoRaWAN son dos rutas de entrega independientes, el hardware no se mezcla; los datos ambientales pertenecen a monitoreo IoT de baja frecuencia, no se realiza control de ciclo cerrado de nivel de milisegundos.',
   '多环境要素采集（土壤温湿度/EC、气象七参数、CO2、叶面温湿度、水质pH等）与广域分散点位监测':
@@ -1715,8 +1714,8 @@ export const esDict: Record<string, string> = {
     'Control de vinculación de umbrales local Node-RED en el borde reComputer R1025 (envío de comandos a actuadores de baja tensión como relés/válvulas de riego mediante RS485)',
   InfluxDB时序数据库存储与Grafana私有化数据监控大屏部署:
     'Almacenamiento en base de datos de series temporales InfluxDB y despliegue de panel grande de monitoreo de datos privatizado Grafana',
-  '4G与LoRaWAN硬件不混用：两条路线为独立交付套件，4G采集器（114992169）与LoRaWAN网关（114992982）/S210x节点分属不同通信协议栈，不得在同一套教学台架中混合组网或交叉替换硬件':
-    'El hardware 4G y LoRaWAN no se mezcla: las dos rutas son kits de entrega independientes, el recolector 4G (114992169) y el gateway LoRaWAN (114992982)/nodos S210x pertenecen a pilas de protocolos de comunicación diferentes, no se permite mezclar redes ni sustituir hardware cruzadamente en el mismo banco de enseñanza',
+  '4G 与 LoRaWAN 硬件不混用：两条路线为独立交付套件，4G 采集器与 LoRaWAN 网关 / S210x 节点分属不同通信协议栈，不得在同一套教学台架中混合组网或交叉替换硬件。':
+    'No mezclar hardware 4G y LoRaWAN: las dos vías son kits independientes; el colector 4G y la pasarela LoRaWAN / nodos S210x usan pilas de protocolos distintas y no deben combinarse en la misma red.',
   '数据主权与私有化部署边界：SenseCraft Data为云端SaaS平台，环境数据默认存储于Seeed云端；L3通过Open API提取数据至本地InfluxDB实现私有化存储，但原始数据仍先经云端中转，不提供纯离线/断网可用的本地化数据采集服务。私有化部署仅覆盖L3阶段的API拉取数据，不包含云端平台本身的私有化部署':
     'Soberania de datos y limites de despliegue privatizado: SenseCraft Data es una plataforma SaaS en nube, los datos ambientales se almacenan por defecto en la nube de Seeed; L3 extrae datos mediante Open API a InfluxDB local para lograr almacenamiento privatizado, pero los datos originales aun pasan primero por la nube, no se ofrece un servicio de recoleccion de datos local puramente offline/utilizable sin red. El despliegue privatizado solo cubre la extraccion de datos por API en la etapa L3, no incluye el despliegue privatizado de la propia plataforma en nube',
   '不适用于毫秒级实时运动控制：环境传感采样周期通常为1~60分钟（视现场功耗与电池策略配置），属于低频物联监测，不做高频伺服振动监测，不适用于毫秒级实时伺服系统':
@@ -1854,13 +1853,13 @@ export const esDict: Record<string, string> = {
     'Este curso emplea como material didáctico central el «brazo robótico de escritorio de seis ejes + percepción multimodal + cómputo en el borde», cubriendo toda la cadena desde la teleoperación hasta la captura 3D.',
   '6+1自由度开源从动机械臂成品，含电动夹爪与总线舵机':
     'Brazo robótico esclavo de código abierto terminado de 6+1 grados de libertad, incluye garra eléctrica y servos de bus',
-  '受控从臂，响应指令执行动作与抓取；48V/600W工业级开关电源（SKU 100054289）独立稳压供电，需使用6寸G字夹（SKU 100014192）物理紧固于实验台防止动作倾倒。':
-    'Brazo esclavo controlado, responde a comandos para ejecutar movimientos y capturas; fuente de alimentación conmutada industrial de 48V/600W (SKU 100054289) con regulación independiente; requiere fijación física a la mesa de experimentos mediante abrazadera en G de 6 pulgadas (SKU 100014192) para evitar volcamientos durante el movimiento.',
+  '受控从臂，响应指令执行动作与抓取；配 48V/600W 工业级开关电源独立稳压供电，需使用 6 寸 G 字夹物理紧固于实验台防止动作倾倒。':
+    'Brazo seguidor que ejecuta movimientos y agarres; alimentado por fuente industrial estabilizada de 48 V / 600 W, requiriendo fijación al banco con mordaza de 6 pulgadas para evitar vuelcos.',
   'reBot DevArm B601-RS机械臂': 'Brazo robótico reBot DevArm B601-RS',
   '6自由度模块化主控示教臂，兼容LeRobot':
     'Brazo de enseñanza maestro modular de 6 grados de libertad, compatible con LeRobot',
-  '主控示教端，手动引导操作并驱动从臂实时镜像动作，实现1:1主从位姿镜像映射；12V/2A多国插脚电源适配器（SKU 100033211）独立供电，套件自带XT30公头线。':
-    'Extremo de enseñanza maestro, guía manual de operaciones y conduce el brazo esclavo para espejar movimientos en tiempo real, logrando el mapeo espejo de poses maestro-esclavo 1:1; adaptador de alimentación de 12V/2A con enchufes internacionales (SKU 100033211) con alimentación independiente, el kit incluye cable con conector macho XT30.',
+  '主控示教端，手动引导操作并驱动从臂实时镜像动作，实现 1:1 主从位姿镜像映射；配备 12V/2A 多国插脚电源适配器独立供电，套件自带 XT30 公头线。':
+    'Brazo maestro de teleoperación para guiado manual y reflejo 1:1 de postura en tiempo real hacia el seguidor; alimentado de forma independiente con adaptador de 12 V / 2 A y cable XT30.',
   'Star Arm 102主控示教臂': 'Brazo de enseñanza maestro Star Arm 102',
   'Jetson Orin NX 16GB边缘算力主机': 'Host de cómputo en el borde Jetson Orin NX 16 GB',
   '控制中枢，运行机械臂运动学解算、控制服务与大模型推理；出厂预装JetPack 6.2，需确认SenseCraft Robotics服务与Python（Pinocchio / Motorbridge SDK）运行环境就绪；19V/4.7A大功率电源适配器供电。':
@@ -2012,19 +2011,19 @@ export const esDict: Record<string, string> = {
   '含目标场景形态匹配分析、速度/精度/负载/安全/成本选型权衡、工序节拍与产能估算、适用与不适用边界判定。':
     'Incluye análisis de coincidencia de forma del escenario objetivo, compensaciones de selección de velocidad/precisión/carga útil/seguridad/costo, cálculo de ciclo de proceso y estimación de capacidad, determinación de límites aplicables y no aplicables.',
   硬件台架清单与部署运维指南: 'Lista de banco de hardware y guía de despliegue y operación',
-  '含19项设备清单与SKU对照表、台架接线拓扑图、SenseCraft/Pinocchio/Motorbridge环境配置步骤、日常巡检与转场收纳规范。':
-    'Incluye lista de 19 equipos y tabla de correspondencia de SKU, diagrama topológico de cableado del banco, pasos de configuración de entorno SenseCraft/Pinocchio/Motorbridge, normas de inspección diaria y almacenamiento para traslado.',
-  '这门课的价值不在机械臂本身，在「把物理执行接进数字系统」的方法':
-    'El valor de este curso no está en el brazo robótico en sí, sino en el método de «conectar la ejecución física al sistema digital»',
+  '含 19 项设备采购清单与物料明细、台架接线拓扑图、SenseCraft/Pinocchio/Motorbridge 环境配置步骤、日常巡检与转场收纳规范。':
+    'Incluye lista de compra y desglose de materiales de 19 componentes, topología de cableado del banco, guía de instalación de entornos SenseCraft/Pinocchio/Motorbridge y protocolos de inspección y almacenaje.',
+  '把视觉引导与运动学算法，落实到机械臂的每次抓取':
+    'Trasladar el guiado visual y la cinemática a cada agarre real del brazo robótico',
   把物理执行接进数字系统: 'Conectar la ejecución física al sistema digital',
-  'M6 不是一门教学生「调机械臂参数」的课，而是一门教团队如何用开源工具链和轻量硬件，把视觉感知、自然语言指令与物理执行机构打通的方法课。柴火交付的从来不只是「一次上课」，而是一整套可以被拆开、改写、重新组装的东西：15模块课程骨架、教师教案与PPT、SenseCraft动作配置模板、Python抓取工程源码、Pinocchio/Motorbridge调用示例、LeRobot数据集采集规范、设备清单与台架安全规范。':
-    'M6 no es un curso que enseñe a los estudiantes a «ajustar parámetros del brazo robótico», sino un curso metodológico que enseña a los equipos cómo utilizar cadenas de herramientas de código abierto y hardware ligero para integrar la percepción visual, los comandos en lenguaje natural y los actuadores físicos. Chaihuo nunca entrega solo «una clase», sino un conjunto completo que puede desmontarse, reescribirse y reensamblarse: estructura del curso de 15 módulos, planes de clase y PPT para docentes, plantillas de configuración de acciones SenseCraft, código fuente del proyecto de captura Python, ejemplos de llamadas Pinocchio/Motorbridge, normas de recolección de conjuntos de datos LeRobot, lista de equipos y normas de seguridad del banco.',
-  '模块 09「工位视觉事件触发与联动」的微场景是开放的：你的行业、你的客户现场、这座城市正在发生的一个真问题。分拣可以是农产品，可以是电子元件，可以是快递面单——问题越靠近真实现场，效果越好，而这件事你比我们懂。':
-    'El microescenario del Módulo 09 «activación y vinculación de eventos visuales de estación de trabajo» es abierto: tu industria, el sitio de tu cliente, un problema real que está ocurriendo en esta ciudad. La clasificación puede ser de productos agrícolas, de componentes electrónicos, de etiquetas de envío exprés — cuanto más cercano esté el problema a la realidad del sitio, mejor será el resultado, y de eso tú sabes más que nosotros.',
-  '你已有的客户存量设备、学校实训台架上的传感器、合作方的视觉检测系统，可以接在模块 09 之后，成为事件触发练习的对象池。M6 负责把方法讲透，门后面接什么触发源，由你来定。':
-    'Los equipos existentes de tus clientes, los sensores en los bancos de formación de las escuelas, los sistemas de inspección visual de los socios, pueden conectarse después del Módulo 09 para convertirse en el conjunto de objetos para la práctica de activación de eventos. M6 se encarga de explicar el método a fondo; qué fuente de activación se conecta detrás de la puerta, tú lo decides.',
-  '你在行业里攒下的那些：机械臂选型踩过的坑、能让学员瞬间理解逆运动学的那个比喻、客户现场最常问的三个安全问题——那正是我们没有、也给不了的部分。':
-    'Todo lo que has acumulado en la industria: los tropiezos en la selección de brazos robóticos, esa metáfora que hace que los estudiantes comprendan la cinemática inversa al instante, las tres preguntas de seguridad más frecuentes en los sitios de los clientes — esa es precisamente la parte que nosotros no tenemos y no podemos dar.',
+  'M6 摒弃单纯脱机示教的局限，专注实现视觉引导、运动学算法与机械臂执行机构之间的联动。课程覆盖从零代码遥操验证、Python 逆运动学编程到具身智能数据集采集，为讲师提供完备的安全规范与工程源码。':
+    'M6 supera el simple aprendizaje por repetición desconectada, integrando guiado visual, algoritmos cinemáticos y actuación robótica. Abarca teleoperación sin código, cinemática inversa en Python y captura de datos para IA encarnada.',
+  '模块 09 支持自定义抓取工况。可将分拣对象替换为电子器件、农产品模型或异形零件，引导学员针对不同材质与姿态设计抓取策略。':
+    'La unidad 09 permite personalizar las tareas de manipulación. Es posible sustituir los objetos por componentes electrónicos, piezas agrícolas o piezas irregulares, adaptando la estrategia de agarre según forma y material.',
+  '台架可灵活联动上游光电传感器或 M4 中的目标检测事件，让机械臂根据外部传感器信号自主启动抓取流程。':
+    'La celda robótica puede conectarse con sensores fotoeléctricos o eventos de visión del módulo M4, activando ciclos de agarre de forma autónoma según señales externas.',
+  '讲师在急停回路部署、零点标定偏差修正及电机负载保护等安全操作规范上的严谨教学，是学员上机操作不可或缺的保障。':
+    'La enseñanza rigurosa sobre circuitos de parada de emergencia, calibración de puntos cero y protección de sobrecarga del motor es imprescindible para operar brazos mecánicos con seguridad.',
   '低速监督控制 + 独立硬件急停，不做安全关键系统替代。':
     'Control supervisado de baja velocidad + parada de emergencia de hardware independiente, no sustituye sistemas críticos de seguridad.',
   '轻量分拣演示、展位互动、教学实训与低速监督控制场景':

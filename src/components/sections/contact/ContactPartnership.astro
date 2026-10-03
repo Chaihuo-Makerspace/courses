@@ -30,8 +30,8 @@ const mailto = (f: PartnershipForm) =>
       {
         scenarios.map((s) => (
           <li id={`scenario-${s.id}`} class="scroll-mt-24 border-t border-neutral-3 py-5">
-            <h3 class="text-lg font-bold text-brand-black">{s.title}</h3>
-            <p class="mt-0.5 text-sm font-semibold text-brand-red">{s.subtitle}</p>
+            <h3 class="text-lg font-bold text-foreground">{s.title}</h3>
+            <p class="mt-0.5 text-sm font-semibold text-primary-ink">{s.subtitle}</p>
 
             <p class="label mt-5">{dt(locale, 'scenario.features')}</p>
             <ul class="mt-1.5 space-y-1 text-sm leading-relaxed text-neutral-8">
@@ -52,7 +52,7 @@ const mailto = (f: PartnershipForm) =>
               {s.applicableForms.map((code) => (
                 <a
                   href={`#form-${code}`}
-                  class="focus-ring inline-flex h-7 w-7 items-center justify-center rounded-sm border border-neutral-4 font-mono text-xs font-bold text-brand-black hover:border-brand-red hover:text-brand-red transition-colors"
+                  class="focus-ring inline-flex h-7 w-7 items-center justify-center rounded-sm border border-neutral-4 font-mono text-xs font-bold text-foreground hover:border-primary hover:text-primary-ink transition-colors"
                 >
                   {code}
                 </a>
@@ -77,11 +77,11 @@ const mailto = (f: PartnershipForm) =>
               class="scroll-mt-24 grid gap-x-8 gap-y-4 border-b border-neutral-3 py-6 lg:grid-cols-[13rem_1fr_1fr_11rem]"
             >
               <div class="flex items-start gap-3">
-                <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-brand-black font-mono text-sm font-bold text-brand-yellow">
+                <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-foreground font-mono text-sm font-bold text-accent">
                   {f.code}
                 </span>
                 <div>
-                  <h3 class="text-base font-bold leading-tight text-brand-black">{f.title}</h3>
+                  <h3 class="text-base font-bold leading-tight text-foreground">{f.title}</h3>
                   {f.subtitle !== f.title && (
                     <p class="mt-0.5 text-xs text-neutral-6">{f.subtitle}</p>
                   )}
@@ -113,7 +113,7 @@ const mailto = (f: PartnershipForm) =>
                 </p>
                 <a
                   href={mailto(f)}
-                  class="focus-ring mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-black hover:text-brand-red transition-colors"
+                  class="focus-ring mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground hover:text-primary-ink transition-colors"
                 >
                   <Icon name="lucide:mail" class="h-4 w-4" />
                   {dt(locale, 'partnership.scanForm')}

@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { levelMeta, levels, modules } from '../data/modules';
 import { partnershipForms, scenarios } from '../data/partnerships';
+import { capabilityModule, courseProjects } from '../data/projects';
 import { contactEmail } from '../data/site';
 import { tracks } from '../data/tracks';
 
@@ -15,8 +16,8 @@ export const GET: APIRoute = (context) => {
   lines.push('# 柴火创客学院');
   lines.push('');
   lines.push(
-    '> 柴火创客学院隶属于柴火创客空间（2011 年在深圳成立，中国最早的创客空间之一）；柴火创客空间由 Seeed 创办，课程用的硬件就是这个体系自己在售的产品（按 SKU 可购）。' +
-      '我们培养人掌握新技术整合能力，不提供解决方案：提供的是课程、硬件套件和讲师培训，教会机构自己的团队做交付。',
+    '> 柴火创客学院隶属于柴火创客空间（2011 年在深圳成立，中国最早的创客空间之一）；柴火创客空间由 Seeed 创办，课上用的都是其在售的量产硬件。' +
+      '我们培养人掌握新技术整合能力，让团队自己能把解决方案部署落地：提供的是课程、硬件套件和讲师培训，教会机构自己的团队做交付。',
   );
   lines.push('');
   lines.push(
@@ -35,7 +36,6 @@ export const GET: APIRoute = (context) => {
   lines.push('');
 
   lines.push('## 课程模块（M0–M6）');
-
   lines.push('');
   for (const m of modules) {
     lines.push(
@@ -61,6 +61,16 @@ export const GET: APIRoute = (context) => {
   }
   lines.push('');
 
+  lines.push('## 学完能复现的开源项目');
+  lines.push('');
+  for (const p of courseProjects) {
+    const moduleId = capabilityModule[p.capability];
+    lines.push(
+      `- [${moduleId.toUpperCase()} · ${p.name['zh-CN']}](${base}/courses/${moduleId}#projects): ${p.summary['zh-CN']}`,
+    );
+  }
+  lines.push('');
+
   lines.push('## 合作对象（适合谁）');
   lines.push('');
   for (const s of scenarios) {
@@ -81,16 +91,15 @@ export const GET: APIRoute = (context) => {
   lines.push('');
   lines.push(`- [学院首页](${base}/): 课程矩阵总览与入口`);
   lines.push(`- [学习体系](${base}/courses): M0–M6 × L1/L2/L3 完整矩阵与三个方向`);
-
   lines.push(`- [关于学院](${base}/about): 学院来历与负责人`);
   lines.push(
     `- [合作咨询](${base}/contact): 三类合作对象与四种合作形态，邮件 ${contactEmail} 联系`,
   );
   lines.push(
-    `- [先锋官计划](${base}/pioneer): 招募教学点火人：面向个人创客与讲师，掌握课程后在本地开展授课交付与合作拓展；注册跳转 map.seeed.cc`,
+    `- [先锋官计划](${base}/pioneer): 招募教学点火人：面向个人创客与讲师，掌握课程后在本地组织授课与合作拓展；注册跳转 map.seeed.cc`,
   );
   lines.push(
-    `- [基地计划](${base}/base): 面向有固定教学场地的机构，挂牌认证本地授课中心并常态开课；注册跳转 map.seeed.cc`,
+    `- [基地计划](${base}/base): 面向有固定教学基地的机构，挂牌认证本地授课中心并常态开课；注册跳转 map.seeed.cc`,
   );
   lines.push(`- [创客生态分布图](https://map.seeed.cc): 全球柴火生态节点地图与注册入口`);
   lines.push('');

@@ -1,7 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import FinalCtaSection from '../../components/sections/FinalCtaSection.astro';
-import CourseDirections from '../../components/sections/courses/CourseDirections.astro';
 import CoursesOverview from '../../components/sections/courses/CoursesOverview.astro';
 import { modules } from '../../data/modules';
 import { coursesFinalCta } from '../../data/site';
@@ -15,10 +14,9 @@ const translatedModules = translateModules(modules, locale);
 ---
 
 <Layout title={t(locale, 'courses.title')}>
-  <CoursesOverview modules={translatedModules} locale={locale} />
-  <CourseDirections
-    tracks={translateTracks(tracks, locale)}
+  <CoursesOverview
     modules={translatedModules}
+    tracks={translateTracks(tracks, locale)}
     locale={locale}
   />
   <FinalCtaSection cta={translateCta(coursesFinalCta, locale)} />

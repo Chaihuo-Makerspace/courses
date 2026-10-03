@@ -20,7 +20,7 @@ Cast `Astro.props as Props` when TypeScript flags the interface as unused.
 <a
   class:list={[
     'base text-sm',
-    isActive ? 'text-brand-red' : 'text-gray-600',
+    isActive ? 'text-primary-ink' : 'text-neutral-7',
   ]}
 >
 ```

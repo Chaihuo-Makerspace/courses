@@ -9,7 +9,6 @@ import { t, defaultLocale } from '../i18n';
 import { dt } from '../i18n/data-translations';
 import type { Locale } from '../i18n';
 import {
-  ctaLink,
   translateFaqs,
   translatePartnershipForms,
   translateScenarios,
@@ -30,7 +29,6 @@ const locale = (Astro.locals.locale ?? defaultLocale) as Locale;
         variant: 'primary',
         icon: 'lucide:mail',
       },
-      { ...ctaLink('courses', locale), variant: 'secondary' },
     ]}
   />
 

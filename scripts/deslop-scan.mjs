@@ -38,14 +38,14 @@ const RULES = [
     id: 'bg-white-solid',
     label: 'solid bg-white surface',
     pattern: /bg-white(?![\w/-])/g,
-    why: 'DESIGN.md §1.5 bans pure-white surfaces; use bg-background, or bg-white/xx only as translucent ink.',
+    why: 'The canvas color comes from the theme; use bg-background, or bg-white/xx only as translucent ink.',
   },
   {
     id: 'naked-hex',
     label: 'naked hex color',
     pattern: /#[0-9a-fA-F]{3,8}\b/g,
-    why: 'DESIGN.md §1: prefer token utilities over literal hex; colors belong in theme.css.',
-    exclude: ['src/styles/themes/theme.css', 'src/pages/styleguide.astro'],
+    why: 'Write colors as role tokens; hex values belong only in src/data/themes.ts.',
+    exclude: ['src/data/themes.ts', 'src/styles/themes/theme.css', 'src/pages/styleguide.astro'],
   },
 ];
 

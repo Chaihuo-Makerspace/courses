@@ -10,6 +10,7 @@
  * ClientRouter 兼容：在 `astro:page-load` 内调用，每次导航重新观察新内容。
  */
 export function initReveal(): void {
+  (window as Window & { __revealReady?: boolean }).__revealReady = true;
   const els = document.querySelectorAll<HTMLElement>('[data-reveal]:not(.is-revealed)');
   if (!els.length) return;
 

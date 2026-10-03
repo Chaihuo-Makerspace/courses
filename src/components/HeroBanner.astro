@@ -10,7 +10,7 @@ interface CTA {
   icon?: IconName;
 }
 
-// 内页 hero：文本元素 ≤3（标题、描述、CTA 组）。首页用 HomeHero。见 docs/DESIGN.md §4.3。
+// 内页 hero：文本元素 ≤3（标题、描述、CTA 组）。首页用 HomeHero。
 interface Props {
   id?: string;
   title: string;
@@ -27,7 +27,7 @@ const hasTitleSlot = Astro.slots.has('title');
   <div class="container-page pt-12 pb-10 md:pt-16 md:pb-12">
     <div class="max-w-3xl" data-reveal>
       <h1
-        class="font-display text-[clamp(2.25rem,4vw+1rem,3.5rem)] leading-[1.15] tracking-tight text-brand-black"
+        class="font-display text-[clamp(2.25rem,4vw+1rem,3.5rem)] leading-[1.15] tracking-tight text-foreground"
       >
         {hasTitleSlot ? <slot name="title" /> : title}
       </h1>

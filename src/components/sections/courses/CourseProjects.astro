@@ -1,0 +1,37 @@
+---
+import SectionHeader from '../../SectionHeader.astro';
+import type { Module } from '../../../data/modules';
+import { getProjectsForModule } from '../../../data/projects';
+import { t } from '../../../i18n/translations';
+import type { Locale } from '../../../i18n';
+
+// 学完能复现的开源项目。没有对应项目的模块不渲染这一段。
+interface Props {
+  module: Module;
+  locale: Locale;
+}
+
+const { module, locale } = Astro.props as Props;
+const projects = getProjectsForModule(module.id);
+---
+
+{
+  projects.length > 0 && (
+    <section id="projects" class="section scroll-mt-28 border-y border-neutral-3 bg-neutral-1">
+      <div class="container-page" data-reveal>
+        <SectionHeader
+          title={t(locale, 'course.projectsTitle')}
+          subtitle={t(locale, 'course.projectsSubtitle')}
+        />
+        <ul class="grid gap-x-10 border-t border-neutral-3 md:grid-cols-2">
+          {projects.map((project) => (
+            <li class="border-b border-neutral-3 py-4">
+              <h3 class="text-base font-bold text-foreground">{project.name[locale]}</h3>
+              <p class="mt-1 text-sm leading-relaxed text-neutral-8">{project.summary[locale]}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )
+}

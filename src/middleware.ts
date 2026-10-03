@@ -85,7 +85,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
       return new Response(null, {
         status: 302,
         headers: {
-          Location: target,
+          Location: `${target}${url.search}`,
           'Set-Cookie': `${LANG_COOKIE}=${acceptLang}; Path=/; Max-Age=31536000; SameSite=Lax`,
         },
       });

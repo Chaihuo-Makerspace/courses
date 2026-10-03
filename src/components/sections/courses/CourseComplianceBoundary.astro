@@ -16,18 +16,18 @@ const boundary = module.complianceBoundary;
 
 {
   boundary && (
-    <section class="section bg-neutral-1 border-y border-neutral-3">
+    <section id="boundary" class="section scroll-mt-28 bg-neutral-1 border-y border-neutral-3">
       <div class="container-page" data-reveal>
         <header class="max-w-3xl mb-8">
-          <h2 class="heading-section text-brand-black">{t(locale, 'course.complianceBoundary')}</h2>
+          <h2 class="heading-section text-foreground">{t(locale, 'course.complianceBoundary')}</h2>
           {boundary.principles?.map((p) => (
-            <p class="mt-4 text-lg font-semibold leading-relaxed text-brand-black">{p}</p>
+            <p class="mt-4 text-lg font-semibold leading-relaxed text-foreground">{p}</p>
           ))}
         </header>
 
         <div class="grid gap-x-14 gap-y-8 md:grid-cols-2">
           <div>
-            <h3 class="text-base font-bold text-brand-black">
+            <h3 class="text-base font-bold text-foreground">
               {t(locale, 'course.compliance.applicable')}
             </h3>
             <ul class="mt-3 border-t border-neutral-3">
@@ -41,13 +41,13 @@ const boundary = module.complianceBoundary;
           </div>
 
           <div>
-            <h3 class="text-base font-bold text-brand-red">
+            <h3 class="text-base font-bold text-primary-ink">
               {t(locale, 'course.compliance.notApplicable')}
             </h3>
             <ul class="mt-3 border-t border-neutral-3">
               {boundary.notApplicable.map((item) => (
                 <li class="flex gap-3 border-b border-neutral-3 py-2.5 text-sm leading-relaxed text-neutral-8">
-                  <Icon name="lucide:x" class="mt-1 h-4 w-4 shrink-0 text-brand-red" aria-hidden="true" />
+                  <Icon name="lucide:x" class="mt-1 h-4 w-4 shrink-0 text-primary-ink" aria-hidden="true" />
                   <span>{item}</span>
                 </li>
               ))}

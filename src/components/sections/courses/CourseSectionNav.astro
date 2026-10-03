@@ -1,0 +1,72 @@
+---
+import type { Module } from '../../../data/modules';
+import { getProjectsForModule } from '../../../data/projects';
+import { t } from '../../../i18n/translations';
+import type { Locale } from '../../../i18n';
+
+// 课程详情页的吸顶页内导航。只列这门课真的有的区块（区块随数据出现）。
+interface Props {
+  module: Module;
+  locale: Locale;
+}
+
+const { module, locale } = Astro.props as Props;
+
+const items = [
+  { id: 'levels', label: t(locale, module.capabilityCards ? 'course.nav.outcomes' : 'course.nav.levels'), show: true },
+  { id: 'equipment', label: t(locale, 'course.nav.equipment'), show: true },
+  { id: 'syllabus', label: t(locale, 'course.nav.syllabus'), show: Boolean(module.curriculum && module.formats) },
+  { id: 'deliverables', label: t(locale, 'course.nav.deliverables'), show: true },
+  { id: 'projects', label: t(locale, 'course.nav.projects'), show: getProjectsForModule(module.id).length > 0 },
+  { id: 'teachers', label: t(locale, 'course.nav.teachers'), show: Boolean(module.teacherNotes) },
+  { id: 'boundary', label: t(locale, 'course.nav.boundary'), show: Boolean(module.complianceBoundary) },
+].filter((item) => item.show);
+---
+
+<nav
+  class="course-section-nav sticky top-[57px] z-40 border-b border-neutral-3 bg-background/95 backdrop-blur"
+  aria-label={t(locale, 'course.nav.aria')}
+>
+  <div class="container-page flex items-center gap-1 overflow-x-auto">
+    <span class="mr-2 shrink-0 font-mono text-sm font-bold text-foreground">{module.code}</span>
+    {
+      items.map((item) => (
+        <a
+          href={`#${item.id}`}
+          data-section={item.id}
+          class="focus-ring shrink-0 whitespace-nowrap border-b-2 border-transparent px-2.5 py-3 text-sm font-medium text-neutral-7 transition-colors hover:text-foreground aria-[current=true]:border-primary aria-[current=true]:text-foreground"
+        >
+          {item.label}
+        </a>
+      ))
+    }
+  </div>
+</nav>
+
+<script>
+  // 滚动时标出当前区块
+  function initCourseSectionNav() {
+    const nav = document.querySelector<HTMLElement>('.course-section-nav');
+    if (!nav || !('IntersectionObserver' in window)) return;
+    const links = [...nav.querySelectorAll<HTMLAnchorElement>('a[data-section]')];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          for (const link of links) {
+            const current = link.dataset.section === entry.target.id;
+            if (current) link.setAttribute('aria-current', 'true');
+            else link.removeAttribute('aria-current');
+          }
+        }
+      },
+      { rootMargin: '-25% 0px -65% 0px' },
+    );
+    for (const link of links) {
+      const section = document.getElementById(link.dataset.section ?? '');
+      if (section) observer.observe(section);
+    }
+  }
+
+  document.addEventListener('astro:page-load', initCourseSectionNav);
+</script>

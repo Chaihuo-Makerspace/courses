@@ -47,7 +47,7 @@ export interface FaqItem {
   answer: string;
 }
 
-// ── 首页 ────────────────────────────────────────────────────────────
+// ── 首页 ──────────────────────────────────────────────────────────
 
 /** 引入一门课时机构实际拿到的四样东西；每条都能在模块页或 /contact 找到明细。 */
 export const homeOutcomes: OutcomeItem[] = [
@@ -82,7 +82,7 @@ export const homeFinalCta: SiteCta = {
   secondary: 'courses',
 };
 
-// ── /courses ────────────────────────────────────────────────────────
+// ── /courses ──────────────────────────────────────────────────────
 
 export const coursesFinalCta: SiteCta = {
   id: 'courses',
@@ -103,13 +103,13 @@ export const moduleFinalCta: SiteCta = {
   secondary: 'courses',
 };
 
-// ── /about ──────────────────────────────────────────────────────────
+// ── /about ────────────────────────────────────────────────────────
 
 /**
  * 学院的来历。出处：
  * - 2011 年深圳成立、中国最早的创客空间之一：公开事实，owner 2026-10-02 确认
  *   「创客空间的历史就是学院的历史」。
- * - 硬件来自 Seeed 创办的产品体系：各模块设备清单的 SKU。
+ * - 硬件来自 Seeed 创办的产品体系：量产在售产品。
  * - 深圳、成都两处校区：页脚地址（owner 确认为实际联系通道）。
  */
 export const aboutHistory: HistoryItem[] = [
@@ -124,7 +124,8 @@ export const aboutHistory: HistoryItem[] = [
     id: 'seeed',
     when: '硬件',
     title: '课上用的是体系内在售的同款硬件',
-    description: '开发板、传感器、边缘计算设备按 SKU 就能买到，不是专供教学的道具。',
+    description:
+      '开发板、传感器与边缘计算设备都是在售的量产硬件，学员结课后可以直接用在实际工程项目里。',
     link: 'https://www.seeedstudio.com',
   },
   {
@@ -161,7 +162,7 @@ export const aboutFinalCta: SiteCta = {
   secondary: 'courses',
 };
 
-// ── /contact ────────────────────────────────────────────────────────
+// ── /contact ──────────────────────────────────────────────────────
 
 /** 合作邮箱。全站唯一的合作收口（owner 决定：mailto，不做站内表单）。 */
 export const contactEmail = 'business@chaihuo.org';
@@ -183,13 +184,13 @@ export const contactFaqs: FaqItem[] = [
     key: 'q2',
     question: '课程硬件套件必须从原厂采购吗？',
     answer:
-      '裸硬件套件与标准教学套件使用原厂硬件，保证课程实验与教材一致。原厂硬件就是柴火创客空间所属产品体系内在售的产品（空间由 Seeed 创办），按 SKU 可购。合作伙伴也可以在自己的硬件平台上做适配，但实验手册和课程素材以原厂硬件为准。',
+      '裸硬件套件与标准教学套件使用原厂标准硬件，保证课程实验与教材一致。这些硬件来自柴火所属的 Seeed 产品体系，都是量产在售的标准模块。合作伙伴也可以在自己的硬件平台上做适配，但实验手册和课程素材以原厂硬件为准。',
   },
   {
     key: 'q3',
     question: '师资培训套件具体包含什么内容？',
     answer:
-      '包含对应模块的硬件套件、完整课程资源包以及 Train-the-Trainer 师训。师训通常由柴火讲师现场授课，时间 2–3 天，培养机构自有讲师。',
+      '包含对应模块的硬件套件、完整课程资源包以及 Train-the-Trainer 师训。师训通常由柴火讲师到场授课，时间 2–3 天，培养机构自有讲师。',
   },
   {
     key: 'q4',

@@ -62,7 +62,7 @@ const relationRows = [data.relation.cards.pioneer, data.relation.cards.base].map
         </div>
 
         <div class="min-w-0">
-          <h3 class="text-base font-bold text-brand-black">{data.comparison.title}</h3>
+          <h3 class="text-base font-bold text-foreground">{data.comparison.title}</h3>
           <div class="mt-3 overflow-x-auto border-t border-neutral-3">
             <table class="w-full min-w-[32rem] text-left text-sm">
               <caption class="sr-only">{data.comparison.title}</caption>
@@ -70,7 +70,7 @@ const relationRows = [data.relation.cards.pioneer, data.relation.cards.base].map
                 <tr class="border-b border-neutral-3">
                   <th scope="col" class="label py-2.5 pr-4">{data.comparison.header.first}</th>
                   <th scope="col" class="label px-4 py-2.5">{data.comparison.header.pioneer}</th>
-                  <th scope="col" class="px-4 py-2.5 text-xs font-bold text-brand-red">
+                  <th scope="col" class="px-4 py-2.5 text-xs font-bold text-primary-ink">
                     {data.comparison.header.base}
                   </th>
                 </tr>
@@ -79,11 +79,11 @@ const relationRows = [data.relation.cards.pioneer, data.relation.cards.base].map
                 {
                   data.comparison.rows.map((row) => (
                     <tr class="border-b border-neutral-3 align-top">
-                      <th scope="row" class="py-2.5 pr-4 font-bold text-brand-black">
+                      <th scope="row" class="py-2.5 pr-4 font-bold text-foreground">
                         {row.label}
                       </th>
                       <td class="px-4 py-2.5 text-neutral-8">{row.pioneer}</td>
-                      <td class="bg-brand-yellow-light px-4 py-2.5 font-medium text-brand-black">
+                      <td class="bg-accent-soft px-4 py-2.5 font-medium text-foreground">
                         {row.base}
                       </td>
                     </tr>

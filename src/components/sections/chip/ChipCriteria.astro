@@ -11,13 +11,13 @@ interface Props {
 const { title, items, note } = Astro.props as Props;
 ---
 
-<div class="rounded-lg border border-neutral-3 bg-brand-yellow-light p-5 sm:p-6">
-  <h3 class="text-base font-bold text-brand-black">{title}</h3>
+<div class="rounded-lg border border-neutral-3 bg-accent-soft p-5 sm:p-6">
+  <h3 class="text-base font-bold text-foreground">{title}</h3>
   <ul class="mt-4 grid gap-px overflow-hidden rounded-md border border-neutral-3 bg-neutral-3 sm:grid-cols-2">
     {
       items.map((item) => (
         <li class="bg-background p-4">
-          <p class="text-sm font-bold text-brand-black">{item.title}</p>
+          <p class="text-sm font-bold text-foreground">{item.title}</p>
           {item.description && (
             <p class="mt-1 text-sm leading-relaxed text-neutral-8">{item.description}</p>
           )}
@@ -27,7 +27,7 @@ const { title, items, note } = Astro.props as Props;
   </ul>
   {
     note && (
-      <p class="mt-4 border-t border-neutral-3 pt-3.5 text-sm font-bold text-brand-black">{note}</p>
+      <p class="mt-4 border-t border-neutral-3 pt-3.5 text-sm font-bold text-foreground">{note}</p>
     )
   }
 </div>
