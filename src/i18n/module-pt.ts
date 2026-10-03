@@ -14,11 +14,11 @@ export const ptDict: Record<string, string> = {
   零基础智能硬件入门: 'Introdução ao Hardware Inteligente Sem Base',
   '零基础入门课。三套硬件由浅入深：Grove 做感知，Wio Terminal 做交互，XIAO 做图像识别。':
     'Curso de entrada para quem começa do zero. Três plataformas de hardware em profundidade crescente: Grove para sensoriamento, Wio Terminal para interação e XIAO para reconhecimento de imagens.',
-  '用中文告诉 AI 你想做什么，AI 写代码、编译、烧录。零编程基础，也能做出属于自己的智能硬件作品。':
-    'Diga à IA em chinês o que você quer fazer, a IA escreve código, compila, grava. Zero base em programação, ainda assim crie seu próprio projeto de hardware inteligente.',
+  '用中文告诉 AI 你想做什么，AI 写代码、编译、烧录。零编程基础，也能做出自己的智能硬件作品。':
+    'Diga à IA o que você quer construir com suas próprias palavras: a IA escreve o código, compila e grava. Mesmo sem experiência em programação, você cria seus próprios projetos de hardware inteligente.',
   零编程基础: 'Zero Base em Programação',
-  '学生不会写代码、合格师资极少、从创意到原型总是断层——硬件启蒙卡在"先学会编程"这道伪门槛上。M0 把门槛拆掉，让想象力重新成为真正的难题。':
-    'Alunos não sabem programar, há poucos professores qualificados e sempre há uma lacuna entre a ideia e o protótipo — a iniciação em hardware esbarra na falsa barreira do "aprenda a programar primeiro". O M0 derruba essa barreira, devolvendo à imaginação o posto de verdadeiro desafio.',
+  '学生不会写代码、合格师资少、从创意到原型容易断层——硬件启蒙常常卡在「先学会编程」这道门槛上。M0 拿掉这道门槛，让学生直接把精力放在创意与作品本身。':
+    'Alunos geralmente não sabem programar, instrutores qualificados são raros e a transição da ideia ao protótipo costuma travar: a iniciação ao hardware esbarra na barreira do «aprender a programar primeiro». O M0 elimina essa barreira para que o estudante foque diretamente nas próprias ideias e na criação do projeto.',
   入门: 'Iniciante',
   '半天起 · 完整版 16–20 小时': 'A Partir de Meio Período · Versão Completa 16–20 Horas',
   无: 'Nenhum',
@@ -40,7 +40,7 @@ export const ptDict: Record<string, string> = {
   零基础学生: 'Alunos Sem Base',
   高校通识课教师: 'Professores de Educação Geral Universitária',
   创客训练营学员: 'Alunos do Bootcamp Maker',
-  企业创新体验人员: 'Equipe de Experiência de Inovação Empresarial',
+  企业创新体验学员: 'Participantes de inovação corporativa',
   第一个可运行的智能硬件原型: 'Primeiro Protótipo Funcional de Hardware Inteligente',
   '一个有结构的完整项目（如智能番茄钟）':
     'Um Projeto Completo e Estruturado (ex.: Temporizador Pomodoro Inteligente)',
@@ -96,8 +96,8 @@ export const ptDict: Record<string, string> = {
   记录与讲述: 'Documentar & Apresentar',
   '写创客日志、录 30 秒演示视频、用 2 分钟把「痛点 → 方案 → 演示 → 价值」讲给陌生人听。':
     'Escreva diário maker, grave vídeo de demonstração de 30 segundos, apresente "dor → solução → demonstração → valor" para um estranho em 2 minutos.',
-  'BMAD 是一套通用的工程思考习惯。无论是做课题、写方案还是组织活动，都能套用这套流程。掌握了拆解与协同的逻辑，即便未来使用的工具变了，解决问题的思维方法依然适用。':
-    'BMAD é um hábito de pensamento de engenharia de aplicação geral. Seja ao desenvolver pesquisas, elaborar propostas ou organizar eventos, o mesmo fluxo de trabalho é aplicável. Dominada a lógica de decomposição e colaboração, a metodologia de resolução de problemas continua válida mesmo com a evolução das ferramentas.',
+  'BMAD 是一套通用的工程思考习惯。无论是做课题、写方案还是组织活动，都能用这套流程。掌握了拆解与协同的逻辑，即便以后更换工具，这套方法依然管用。':
+    'O BMAD é um hábito de pensamento de engenharia de aplicação geral. Seja ao desenvolver pesquisas, elaborar propostas ou organizar eventos, o mesmo fluxo de trabalho pode ser aproveitado. Dominada a lógica de decomposição e colaboração, a metodologia continua útil mesmo se as ferramentas mudarem no futuro.',
   '浏览器 · 零安装 · 5 分钟见效': 'Navegador · Zero Instalação · Resultados em 5 Minutos',
   完全新手: 'Iniciante Total',
   能跑通: 'Pode Fazê-lo Funcionar',
@@ -106,8 +106,8 @@ export const ptDict: Record<string, string> = {
   能造工程: 'Pode Construir Projetos de Engenharia',
   能带走继续做: 'Leve Para Casa e Continue',
   '关键转折点 · 模块 8': 'Ponto de Virada Crítico · Módulo 8',
-  'Codecraft 的作品保存在云端，离线即不可用；aily-blockly 则让学生首次在本地拥有完整工程资产，能够随时离线修改、长期迭代。':
-    'Os projetos do Codecraft ficam salvos na nuvem e indisponíveis offline; o aily-blockly permite que os alunos mantenham todos os ativos do projeto no computador local pela primeira vez, viabilizando edições offline e iterações contínuas.',
+  'Codecraft 的作品保存在云端，离线时无法打开；aily-blockly 则让学生第一次在本地保存完整的工程文件，可以随时离线修改、长期迭代。':
+    'Os projetos do Codecraft ficam salvos na nuvem e não podem ser abertos offline; o aily-blockly permite que os alunos mantenham os arquivos completos do projeto no computador local pela primeira vez, facilitando modificações offline e iterações contínuas.',
   '另需 SenseCraft AI（无代码部署与训练视觉模型，用于模块 5 与视觉体验课，需外网），以及一套 15 章的中文开源教材（免费，结课后可长期自学）。':
     'Requer adicionalmente SenseCraft AI (implantação e treinamento de modelos visuais sem código, para Módulo 5 e Sessão de Visão, requer internet), livro didático de 15 capítulos em chinês (código aberto, gratuito, para autoestudo contínuo após o curso).',
   环境感知: 'Sensoriamento Ambiental',
@@ -223,8 +223,8 @@ export const ptDict: Record<string, string> = {
   发布会: 'Dia de Demonstração',
   '打磨 → 录视频 → 路演 → 结营': 'Polir → Gravar Vídeo → Demonstração → Encerramento',
   自选: 'Auto-Selecionado',
-  '关于体验课的深入环节：完整版课程中的模块 5 为基础导引，而独立视觉体验课提供完整 2 小时专项实训，学员能完整经历数据采集、模型训练与边界测试全流程。':
-    'Sobre a extensão nas aulas experimentais: No curso completo, o módulo 5 é uma introdução básica, enquanto a aula experimental de visão dedica 2 horas exclusivas à coleta de dados, ao treinamento do modelo e a testes de limites.',
+  '关于体验课的深入环节：完整版课程中的模块 5 为基础导引，而独立视觉体验课提供 2 小时专项实训，学员能走完数据采集、模型训练与边界测试的整个流程。':
+    'Sobre o aprofundamento nas aulas experimentais: no curso completo, o Módulo 5 é uma introdução básica, enquanto a oficina exclusiva de visão oferece 2 horas de prática intensiva para percorrer a coleta de dados, o treinamento do modelo e os testes de limites.',
   '以下为完整版交付；马拉松版交付作品、文档、视频与源码；两门体验课分别交付番茄钟项目与自训 AI 模型。':
     'A seguir, a entrega da Versão Completa; a Edição Maratona entrega projeto, documentação, vídeo e código fonte; as duas Sessões Experimentais entregam projeto Pomodoro e modelo de IA auto-treinado respectivamente.',
   'Final Project 作品': 'Trabalho Final Project',
@@ -251,10 +251,11 @@ export const ptDict: Record<string, string> = {
   结课证书: 'Certificado de Conclusão do Curso',
   '柴火创客学院 M0 结业认证（体验课为参与证明）。':
     'Certificado de Conclusão M0 da Academia Chaihuo Maker (Certificado de Participação para Sessões Experimentais).',
-  我们希望你把它改成我们认不出来的样子: 'Esperamos Que Você o Transforme Além do Reconhecimento',
-  我们认不出来的样子: 'Irreconhecível para Nós',
+  我们希望你把它改成我们认不出来的样子:
+    'Esperamos que você o transforme até ficar irreconhecível para nós',
+  我们认不出来的样子: 'irreconhecível para nós',
   '这份课程不是一个封闭的产品，是一个底座。柴火是一家创客空间，开源是我们的底色——M0 交付的从来不只是「一次上课」，而是一整套可以被拆开、改写、重新组装的东西：10 模块骨架、教师教案与 PPT、学生手册、Codecraft 云端项目、开源教材、40 合一备料池。':
-    'Este curso não é um produto fechado, é uma fundação. A Chaihuo é um espaço maker, código aberto é nossa essência — o M0 nunca entrega apenas "uma aula", mas um conjunto completo que pode ser desmontado, reescrito, remontado: esqueleto de 10 módulos, planos de aula e PPTs para professores, manual do aluno, projetos na nuvem Codecraft, livro didático aberto , pool de peças 40-em-1.',
+    'Este curso não é um produto fechado, é uma fundação. A Chaihuo é um espaço maker, código aberto é nossa essência — o M0 nunca entrega apenas "uma aula", mas um conjunto completo que pode ser desmontado, reescrito, remontado: esqueleto de 10 módulos, planos de aula e PPTs para professores, manual do aluno, projetos na nuvem Codecraft, livro didático aberto, pool de peças 40-em-1.',
   '切入点 01': 'Ponto de extensão 01',
   换主题: 'Trocar Tema',
   '模块 6「找一个真问题」的问题域是开放的：你的学科、贵校的科技节、这座城市正在发生的一件真事。问题越靠近学生的生活，效果越好——而这件事你比我们懂。':
@@ -264,7 +265,7 @@ export const ptDict: Record<string, string> = {
   '你已有的社团项目、竞赛课题、校本课程，可以接在模块 7 之后，成为 Final Project 的方向池。M0 负责把技术门槛拆掉，门后面是什么，由你来定。':
     'Seus projetos de clube existentes, tópicos de competição, currículo escolar podem se conectar após o Módulo 7, tornando-se o pool de direções do Projeto Final. O M0 remove a barreira técnica — o que está além da porta é você quem decide.',
   '切入点 03': 'Ponto de extensão 03',
-  加你的东西: 'Adicione o Seu',
+  融入工程经验: 'Integrar Experiência Docente',
   '你教了很多年书攒下的那些：讲法、比喻、能让学生眼睛亮起来的那一下——那正是我们没有、也给不了的部分。':
     'O que você acumulou ao longo de anos ensinando: métodos, metáforas, aquele momento que faz os olhos dos alunos brilharem — isso é exatamente o que não temos e não podemos oferecer.',
 

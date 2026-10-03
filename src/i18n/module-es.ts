@@ -14,11 +14,11 @@ export const esDict: Record<string, string> = {
   零基础智能硬件入门: 'Introducción al Hardware Inteligente',
   '零基础入门课。三套硬件由浅入深：Grove 做感知，Wio Terminal 做交互，XIAO 做图像识别。':
     'Curso de iniciación para quienes parten de cero. Tres plataformas de hardware de menor a mayor profundidad: Grove para la percepción, Wio Terminal para la interacción y XIAO para el reconocimiento de imágenes.',
-  '用中文告诉 AI 你想做什么，AI 写代码、编译、烧录。零编程基础，也能做出属于自己的智能硬件作品。':
-    'Dile a la IA lo que quieres hacer en chino, la IA escribe código, compila, graba. Sin base de programación, aun así crea tu propio proyecto de hardware inteligente.',
+  '用中文告诉 AI 你想做什么，AI 写代码、编译、烧录。零编程基础，也能做出自己的智能硬件作品。':
+    'Explica a la IA lo que quieres crear con tus propias palabras: la IA escribe el código, lo compila y lo graba. Sin necesidad de saber programar, podrás crear tus propios proyectos de hardware inteligente.',
   零编程基础: 'Sin Base de Programación',
-  '学生不会写代码、合格师资极少、从创意到原型总是断层——硬件启蒙卡在"先学会编程"这道伪门槛上。M0 把门槛拆掉，让想象力重新成为真正的难题。':
-    'Los estudiantes no saben programar, hay pocos docentes cualificados, y siempre hay una brecha entre la idea y el prototipo — la iniciación al hardware se bloquea con la falsa barrera de «aprender a programar primero». M0 elimina esa barrera para que la imaginación vuelva a ser el verdadero desafío.',
+  '学生不会写代码、合格师资少、从创意到原型容易断层——硬件启蒙常常卡在「先学会编程」这道门槛上。M0 拿掉这道门槛，让学生直接把精力放在创意与作品本身。':
+    'El alumnado no suele programar, los docentes cualificados son escasos y la transición de la idea al prototipo suele romperse: la iniciación al hardware se encalla en la barrera de «aprender a programar primero». M0 retira esa barrera para que el alumnado se concentre directamente en sus ideas y en dar vida a sus proyectos.',
   入门: 'Principiante',
   '半天起 · 完整版 16–20 小时': 'Desde Medio Día · Versión Completa 16–20 Horas',
   无: 'Ninguno',
@@ -40,7 +40,7 @@ export const esDict: Record<string, string> = {
   零基础学生: 'Estudiantes Sin Base',
   高校通识课教师: 'Profesores de Educación General Universitaria',
   创客训练营学员: 'Estudiantes del Bootcamp Maker',
-  企业创新体验人员: 'Personal de Experiencia de Innovación Empresarial',
+  企业创新体验学员: 'Participantes de innovación corporativa',
   第一个可运行的智能硬件原型: 'Primer Prototipo Funcional de Hardware Inteligente',
   '一个有结构的完整项目（如智能番茄钟）':
     'Un Proyecto Completo Estructurado (ej. Temporizador Pomodoro Inteligente)',
@@ -96,8 +96,8 @@ export const esDict: Record<string, string> = {
   记录与讲述: 'Documentar y Presentar',
   '写创客日志、录 30 秒演示视频、用 2 分钟把「痛点 → 方案 → 演示 → 价值」讲给陌生人听。':
     'Escribir diario maker, grabar video de demostración de 30 segundos, presentar "punto de dolor → solución → demostración → valor" a un desconocido en 2 minutos.',
-  'BMAD 是一套通用的工程思考习惯。无论是做课题、写方案还是组织活动，都能套用这套流程。掌握了拆解与协同的逻辑，即便未来使用的工具变了，解决问题的思维方法依然适用。':
-    'BMAD es un hábito de pensamiento de ingeniería de propósito general. Tanto si se realizan proyectos de investigación como si se redactan propuestas u organizan actividades, se puede aplicar este mismo flujo de trabajo. Una vez asimilada la lógica de desglose y colaboración, la metodología para resolver problemas sigue siendo válida aunque las herramientas evolucionen.',
+  'BMAD 是一套通用的工程思考习惯。无论是做课题、写方案还是组织活动，都能用这套流程。掌握了拆解与协同的逻辑，即便以后更换工具，这套方法依然管用。':
+    'BMAD es un hábito de pensamiento de ingeniería de aplicación general. Tanto si se realizan proyectos de investigación como si se redactan propuestas u organizan actividades, se puede utilizar este mismo flujo de trabajo. Una vez asimilada la lógica de desglose y colaboración, la metodología sigue siendo útil aunque cambien las herramientas.',
   '浏览器 · 零安装 · 5 分钟见效': 'Navegador · Sin Instalación · Resultados en 5 Minutos',
   完全新手: 'Principiante Completo',
   能跑通: 'Puede Hacerlo Funcionar',
@@ -106,8 +106,8 @@ export const esDict: Record<string, string> = {
   能造工程: 'Puede Construir Proyectos de Ingeniería',
   能带走继续做: 'Llévatelo a Casa y Continúa',
   '关键转折点 · 模块 8': 'Punto de Inflexión Clave · Módulo 8',
-  'Codecraft 的作品保存在云端，离线即不可用；aily-blockly 则让学生首次在本地拥有完整工程资产，能够随时离线修改、长期迭代。':
-    'Los proyectos de Codecraft se guardan en la nube y no están disponibles sin conexión; aily-blockly permite a los estudiantes conservar todos los activos del proyecto en su equipo local por primera vez, posibilitando modificaciones offline e iteraciones a largo plazo.',
+  'Codecraft 的作品保存在云端，离线时无法打开；aily-blockly 则让学生第一次在本地保存完整的工程文件，可以随时离线修改、长期迭代。':
+    'Los proyectos de Codecraft se guardan en la nube y no pueden abrirse sin conexión; aily-blockly permite al alumnado conservar los archivos completos del proyecto en local por primera vez, facilitando modificaciones offline e iteraciones a largo plazo.',
   '另需 SenseCraft AI（无代码部署与训练视觉模型，用于模块 5 与视觉体验课，需外网），以及一套 15 章的中文开源教材（免费，结课后可长期自学）。':
     'Además requiere SenseCraft AI (despliegue y entrenamiento de modelos visuales sin código, para Módulo 5 y Sesión de Iniciación a la Visión, necesita internet), libro de texto de 15 capítulos en chino (código abierto, gratuito, para autoaprendizaje a largo plazo después del curso).',
   环境感知: 'Detección Ambiental',
@@ -223,8 +223,8 @@ export const esDict: Record<string, string> = {
   发布会: 'Día de Demostración',
   '打磨 → 录视频 → 路演 → 结营': 'Pulir → Grabar Video → Demo → Clausura',
   自选: 'Auto-Seleccionado',
-  '关于体验课的深入环节：完整版课程中的模块 5 为基础导引，而独立视觉体验课提供完整 2 小时专项实训，学员能完整经历数据采集、模型训练与边界测试全流程。':
-    'Sobre la extensión en las clases de prueba: En el curso completo, el módulo 5 es una introducción básica, mientras que la clase de prueba de visión dedica 2 horas exclusivas a cubrir la captura de datos, el entrenamiento del modelo y las pruebas de límites.',
+  '关于体验课的深入环节：完整版课程中的模块 5 为基础导引，而独立视觉体验课提供 2 小时专项实训，学员能走完数据采集、模型训练与边界测试的整个流程。':
+    'Sobre la extensión en las clases de prueba: en el curso completo, el Módulo 5 es una introducción básica, mientras que la clase monográfica de visión ofrece 2 horas de práctica intensiva para recorrer la captura de datos, el entrenamiento del modelo y las pruebas de límites.',
   '以下为完整版交付；马拉松版交付作品、文档、视频与源码；两门体验课分别交付番茄钟项目与自训 AI 模型。':
     'Lo siguiente es la entrega de la Versión Completa; la Edición Maratón entrega proyecto, documentación, video y código fuente; las dos Sesiones de Iniciación entregan proyecto Pomodoro y modelo de IA auto-entrenado respectivamente.',
   'Final Project 作品': 'Trabajo del Final Project',
@@ -251,10 +251,11 @@ export const esDict: Record<string, string> = {
   结课证书: 'Certificado de Finalización del Curso',
   '柴火创客学院 M0 结业认证（体验课为参与证明）。':
     'Certificado de Finalización M0 de Academia Chaihuo Maker (Certificado de Participación para Sesiones de Iniciación).',
-  我们希望你把它改成我们认不出来的样子: 'Esperamos Que Lo Transformes Más Allá del Reconocimiento',
-  我们认不出来的样子: 'Irreconocible para Nosotros',
+  我们希望你把它改成我们认不出来的样子:
+    'Esperamos que lo transformes hasta que nos resulte irreconocible',
+  我们认不出来的样子: 'nos resulte irreconocible',
   '这份课程不是一个封闭的产品，是一个底座。柴火是一家创客空间，开源是我们的底色——M0 交付的从来不只是「一次上课」，而是一整套可以被拆开、改写、重新组装的东西：10 模块骨架、教师教案与 PPT、学生手册、Codecraft 云端项目、开源教材、40 合一备料池。':
-    'Este curso no es un producto cerrado, es una base. Chaihuo es un espacio maker, el código abierto es nuestra naturaleza — M0 entrega no solo "una sesión de clase", sino un conjunto completo que puede ser desmontado, reescrito, reensamblado: esqueleto de 10 módulos, planes de lección y PPTs para profesores, manual del estudiante, proyectos en la nube de Codecraft, libro de texto de código abierto , conjunto de piezas 40 en 1.',
+    'Este curso no es un producto cerrado, es una base. Chaihuo es un espacio maker, el código abierto es nuestra naturaleza — M0 entrega no solo "una sesión de clase", sino un conjunto completo que puede ser desmontado, reescrito, reensamblado: esqueleto de 10 módulos, planes de lección y PPTs para profesores, manual del estudiante, proyectos en la nube de Codecraft, libro de texto de código abierto, conjunto de piezas 40 en 1.',
   '切入点 01': 'Punto de extensión 01',
   换主题: 'Cambiar Tema',
   '模块 6「找一个真问题」的问题域是开放的：你的学科、贵校的科技节、这座城市正在发生的一件真事。问题越靠近学生的生活，效果越好——而这件事你比我们懂。':
@@ -264,7 +265,7 @@ export const esDict: Record<string, string> = {
   '你已有的社团项目、竞赛课题、校本课程，可以接在模块 7 之后，成为 Final Project 的方向池。M0 负责把技术门槛拆掉，门后面是什么，由你来定。':
     'Tus proyectos de club existentes, temas de competición, currículo escolar pueden conectarse después del Módulo 7, convirtiéndose en el conjunto de direcciones del Proyecto Final. M0 se encarga de eliminar la barrera técnica — lo que hay detrás de la puerta depende de ti.',
   '切入点 03': 'Punto de extensión 03',
-  加你的东西: 'Añade lo Tuyo',
+  融入工程经验: 'Aportar Experiencia Docente',
   '你教了很多年书攒下的那些：讲法、比喻、能让学生眼睛亮起来的那一下——那正是我们没有、也给不了的部分。':
     'Lo que has acumulado durante años de enseñanza: métodos, metáforas, ese momento que hace brillar los ojos de los estudiantes — eso es exactamente lo que no tenemos y no podemos ofrecer.',
 

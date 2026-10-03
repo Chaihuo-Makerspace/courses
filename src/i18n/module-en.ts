@@ -14,11 +14,11 @@ export const enDict: Record<string, string> = {
   零基础智能硬件入门: 'Smart Hardware Fundamentals',
   '零基础入门课。三套硬件由浅入深：Grove 做感知，Wio Terminal 做交互，XIAO 做图像识别。':
     'Entry course for complete beginners. Three hardware platforms in increasing depth: Grove for sensing, Wio Terminal for interaction, XIAO for image recognition.',
-  '用中文告诉 AI 你想做什么，AI 写代码、编译、烧录。零编程基础，也能做出属于自己的智能硬件作品。':
-    'Tell AI what you want to do in Chinese, AI writes code, compiles, flashes. Zero coding foundation, yet create your own smart hardware project.',
+  '用中文告诉 AI 你想做什么，AI 写代码、编译、烧录。零编程基础，也能做出自己的智能硬件作品。':
+    'Describe what you want to build in plain words — AI handles the code, compilation, and flashing. No prior coding experience needed to create your own smart hardware.',
   零编程基础: 'Zero Coding Foundation',
-  '学生不会写代码、合格师资极少、从创意到原型总是断层——硬件启蒙卡在"先学会编程"这道伪门槛上。M0 把门槛拆掉，让想象力重新成为真正的难题。':
-    'Students can\'t code, qualified teachers are scarce, and there\'s always a gap between ideas and prototypes — hardware education gets stuck behind the false barrier of "learn to code first." M0 removes that barrier, letting imagination become the real challenge again.',
+  '学生不会写代码、合格师资少、从创意到原型容易断层——硬件启蒙常常卡在「先学会编程」这道门槛上。M0 拿掉这道门槛，让学生直接把精力放在创意与作品本身。':
+    'Students often don\'t code, qualified instructors are rare, and prototypes often stall between idea and reality — hardware learning gets stuck behind the barrier of "learn to code first." M0 removes that barrier, letting students focus directly on their own ideas and projects.',
   入门: 'Beginner',
   '半天起 · 完整版 16–20 小时': 'Half Day Minimum · Full Version 16–20 Hours',
   无: 'None',
@@ -40,7 +40,7 @@ export const enDict: Record<string, string> = {
   零基础学生: 'Zero-Baseline Students',
   高校通识课教师: 'University General Education Teachers',
   创客训练营学员: 'Maker Bootcamp Students',
-  企业创新体验人员: 'Enterprise Innovation Experience Staff',
+  企业创新体验学员: 'Corporate Innovation Participants',
   第一个可运行的智能硬件原型: 'First Runnable Smart Hardware Prototype',
   '一个有结构的完整项目（如智能番茄钟）':
     'A Structured Complete Project (e.g., Smart Pomodoro Timer)',
@@ -94,8 +94,8 @@ export const enDict: Record<string, string> = {
   记录与讲述: 'Document & Present',
   '写创客日志、录 30 秒演示视频、用 2 分钟把「痛点 → 方案 → 演示 → 价值」讲给陌生人听。':
     'Write maker journal, record 30-second demo video, present "pain point → solution → demo → value" to a stranger in 2 minutes.',
-  'BMAD 是一套通用的工程思考习惯。无论是做课题、写方案还是组织活动，都能套用这套流程。掌握了拆解与协同的逻辑，即便未来使用的工具变了，解决问题的思维方法依然适用。':
-    'BMAD is a general engineering habit of mind. Whether doing projects, writing proposals or organising events, the same framework applies. Once you grasp the logic of breakdown and collaboration, the problem-solving methodology remains valuable even as specific tools evolve.',
+  'BMAD 是一套通用的工程思考习惯。无论是做课题、写方案还是组织活动，都能用这套流程。掌握了拆解与协同的逻辑，即便以后更换工具，这套方法依然管用。':
+    'BMAD is a general engineering habit of mind. Whether doing research, writing proposals, or organizing events, the same framework applies. Once you grasp the logic of breakdown and collaboration, the problem-solving methodology remains practical even as tools change.',
   '浏览器 · 零安装 · 5 分钟见效': 'Browser · Zero Install · Results in 5 Minutes',
   完全新手: 'Complete Beginner',
   能跑通: 'Can Make It Run',
@@ -104,8 +104,8 @@ export const enDict: Record<string, string> = {
   能造工程: 'Can Build Engineering Projects',
   能带走继续做: 'Take It Home & Continue',
   '关键转折点 · 模块 8': 'Key Turning Point · Module 8',
-  'Codecraft 的作品保存在云端，离线即不可用；aily-blockly 则让学生首次在本地拥有完整工程资产，能够随时离线修改、长期迭代。':
-    'Codecraft projects are saved in the cloud and unavailable offline; aily-blockly gives students their complete project assets locally for the first time, allowing offline modifications and long-term iteration.',
+  'Codecraft 的作品保存在云端，离线时无法打开；aily-blockly 则让学生第一次在本地保存完整的工程文件，可以随时离线修改、长期迭代。':
+    'Codecraft projects are saved in the cloud and unavailable offline; aily-blockly gives students complete project files locally for the first time, allowing offline modifications and long-term iteration.',
   '另需 SenseCraft AI（无代码部署与训练视觉模型，用于模块 5 与视觉体验课，需外网），以及一套 15 章的中文开源教材（免费，结课后可长期自学）。':
     'Additionally requires SenseCraft AI (no-code visual model deployment & training, for Module 5 & Vision Taster, needs internet), 15-chapter Chinese textbook (open-source, free, for long-term self-study after course).',
   环境感知: 'Environmental Sensing',
@@ -219,8 +219,8 @@ export const enDict: Record<string, string> = {
   发布会: 'Demo Day',
   '打磨 → 录视频 → 路演 → 结营': 'Polish → Record Video → Demo → Closing',
   自选: 'Self-Selected',
-  '关于体验课的深入环节：完整版课程中的模块 5 为基础导引，而独立视觉体验课提供完整 2 小时专项实训，学员能完整经历数据采集、模型训练与边界测试全流程。':
-    'About extended taster coverage: Module 5 in the full course is an orientation unit, whereas the dedicated vision taster provides a complete 2-hour intensive session covering dataset collection, model training and boundary testing.',
+  '关于体验课的深入环节：完整版课程中的模块 5 为基础导引，而独立视觉体验课提供 2 小时专项实训，学员能走完数据采集、模型训练与边界测试的整个流程。':
+    'On extended taster coverage: Module 5 in the full course serves as an orientation, whereas the dedicated vision taster provides a 2-hour intensive session covering data collection, model training, and boundary testing from start to finish.',
   '以下为完整版交付；马拉松版交付作品、文档、视频与源码；两门体验课分别交付番茄钟项目与自训 AI 模型。':
     'The following is Full Version delivery; Marathon Edition delivers project, documentation, video, and source code; two Taster Sessions deliver Pomodoro project and self-trained AI model respectively.',
   'Final Project 作品': 'Final Project Work',
@@ -247,8 +247,8 @@ export const enDict: Record<string, string> = {
   结课证书: 'Course Completion Certificate',
   '柴火创客学院 M0 结业认证（体验课为参与证明）。':
     'Chaihuo Maker Academy M0 Completion Certificate (Participation Certificate for Taster Sessions).',
-  我们希望你把它改成我们认不出来的样子: 'We Hope You Transform It Beyond Recognition',
-  我们认不出来的样子: 'Unrecognizable to Us',
+  我们希望你把它改成我们认不出来的样子: 'We hope you reshape it until it is unrecognizable to us',
+  我们认不出来的样子: 'unrecognizable to us',
   '这份课程不是一个封闭的产品，是一个底座。柴火是一家创客空间，开源是我们的底色——M0 交付的从来不只是「一次上课」，而是一整套可以被拆开、改写、重新组装的东西：10 模块骨架、教师教案与 PPT、学生手册、Codecraft 云端项目、开源教材、40 合一备料池。':
     'This course is not a closed product, it\'s a foundation. Chaihuo is a makerspace, open-source is our nature — M0 delivers not just "one class session", but a complete set that can be taken apart, rewritten, reassembled: 10-module skeleton, teacher lesson plans & PPTs, student handbook, Codecraft cloud projects, open-source textbook, 40-in-1 parts pool.',
   '切入点 01': 'Extension 01',
@@ -260,7 +260,7 @@ export const enDict: Record<string, string> = {
   '你已有的社团项目、竞赛课题、校本课程，可以接在模块 7 之后，成为 Final Project 的方向池。M0 负责把技术门槛拆掉，门后面是什么，由你来定。':
     "Your existing club projects, competition topics, school-based curriculum can connect after Module 7, becoming the Final Project direction pool. M0 removes the technical barrier — what's behind the door is up to you.",
   '切入点 03': 'Extension 03',
-  加你的东西: 'Add Your Own',
+  融入工程经验: 'Integrate Teaching Experience',
   '你教了很多年书攒下的那些：讲法、比喻、能让学生眼睛亮起来的那一下——那正是我们没有、也给不了的部分。':
     "What you've accumulated over years of teaching: methods, metaphors, that moment that makes students' eyes light up — that's exactly what we don't have and can't provide.",
 
