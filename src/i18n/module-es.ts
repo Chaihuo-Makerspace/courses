@@ -266,6 +266,8 @@ export const esDict: Record<string, string> = {
     'Tus proyectos de club existentes, temas de competición, currículo escolar pueden conectarse después del Módulo 7, convirtiéndose en el conjunto de direcciones del Proyecto Final. M0 se encarga de eliminar la barrera técnica — lo que hay detrás de la puerta depende de ti.',
   '切入点 03': 'Punto de extensión 03',
   融入工程经验: 'Aportar Experiencia Docente',
+  结合现场工况: 'Adaptar a las condiciones del sitio',
+  接入自有仪表: 'Conectar instrumentos propios',
   '你教了很多年书攒下的那些：讲法、比喻、能让学生眼睛亮起来的那一下——那正是我们没有、也给不了的部分。':
     'Lo que has acumulado durante años de enseñanza: métodos, metáforas, ese momento que hace brillar los ojos de los estudiantes — eso es exactamente lo que no tenemos y no podemos ofrecer.',
 

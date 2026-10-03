@@ -261,6 +261,8 @@ export const enDict: Record<string, string> = {
     "Your existing club projects, competition topics, school-based curriculum can connect after Module 7, becoming the Final Project direction pool. M0 removes the technical barrier — what's behind the door is up to you.",
   '切入点 03': 'Extension 03',
   融入工程经验: 'Integrate Teaching Experience',
+  结合现场工况: 'Adapt to your site conditions',
+  接入自有仪表: 'Connect your own instruments',
   '你教了很多年书攒下的那些：讲法、比喻、能让学生眼睛亮起来的那一下——那正是我们没有、也给不了的部分。':
     "What you've accumulated over years of teaching: methods, metaphors, that moment that makes students' eyes light up — that's exactly what we don't have and can't provide.",
 

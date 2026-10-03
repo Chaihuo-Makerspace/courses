@@ -266,6 +266,8 @@ export const ptDict: Record<string, string> = {
     'Seus projetos de clube existentes, tópicos de competição, currículo escolar podem se conectar após o Módulo 7, tornando-se o pool de direções do Projeto Final. O M0 remove a barreira técnica — o que está além da porta é você quem decide.',
   '切入点 03': 'Ponto de extensão 03',
   融入工程经验: 'Integrar Experiência Docente',
+  结合现场工况: 'Adaptar às condições do local',
+  接入自有仪表: 'Conectar instrumentos próprios',
   '你教了很多年书攒下的那些：讲法、比喻、能让学生眼睛亮起来的那一下——那正是我们没有、也给不了的部分。':
     'O que você acumulou ao longo de anos ensinando: métodos, metáforas, aquele momento que faz os olhos dos alunos brilharem — isso é exatamente o que não temos e não podemos oferecer.',
 
