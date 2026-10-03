@@ -104,6 +104,7 @@ const zh: TranslationDict = {
   'course.syllabusTitle': '大纲与排课',
   'course.syllabusSubtitle': '共 {n} 个教学模块。先看有哪几种排课形态，完整大纲在下面展开。',
   'course.syllabusDetails': '展开 {n} 个教学模块的完整大纲与各形态日程',
+  'course.sampleLesson': '其中一节',
   'about.history.title': '从一间创客空间到七门课',
   'contact.mailCta': '发邮件联系',
 };
@@ -204,6 +205,7 @@ const en: TranslationDict = {
   'course.syllabusSubtitle':
     '{n} teaching units in total. The delivery formats come first; the full syllabus expands below.',
   'course.syllabusDetails': 'Show the full syllabus of {n} units and the schedule for each format',
+  'course.sampleLesson': 'One of the lessons',
   'about.history.title': 'From a makerspace to seven courses',
   'contact.mailCta': 'Email us',
 };
@@ -302,6 +304,7 @@ const ja: TranslationDict = {
   'course.syllabusSubtitle':
     '教育ユニットは全{n}個。まず開講形態を示し、シラバス全体は下で展開できます。',
   'course.syllabusDetails': '全{n}ユニットのシラバスと形態別の日程を表示',
+  'course.sampleLesson': '授業の一例',
   'about.history.title': '一つのメイカースペースから7つの講座へ',
   'contact.mailCta': 'メールで相談する',
 };
@@ -403,6 +406,7 @@ const es: TranslationDict = {
     '{n} unidades didácticas en total. Primero, los formatos de impartición; el temario completo se despliega abajo.',
   'course.syllabusDetails':
     'Ver el temario completo de {n} unidades y el calendario de cada formato',
+  'course.sampleLesson': 'Una de las clases',
   'about.history.title': 'De un makerspace a siete cursos',
   'contact.mailCta': 'Escríbanos',
 };
@@ -503,6 +507,7 @@ const ptBR: TranslationDict = {
     '{n} unidades de ensino no total. Primeiro, os formatos de oferta; o programa completo se expande abaixo.',
   'course.syllabusDetails':
     'Ver o programa completo de {n} unidades e o cronograma de cada formato',
+  'course.sampleLesson': 'Uma das aulas',
   'about.history.title': 'De um makerspace a sete cursos',
   'contact.mailCta': 'Envie um e-mail',
 };

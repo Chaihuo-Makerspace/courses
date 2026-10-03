@@ -6,7 +6,7 @@ import { dt } from '../../../i18n/data-translations';
 import { t } from '../../../i18n/translations';
 import type { Locale } from '../../../i18n';
 
-// 大纲与排课：排课形态常显；逐模块大纲全表与各形态的日程默认折叠（渐进分层）。
+// 大纲与排课：排课形态与一节样课常显；逐模块大纲全表与各形态的日程默认折叠。
 interface Props {
   module: Module;
   locale: Locale;
@@ -30,6 +30,8 @@ const coverageClass: Record<Coverage, string> = {
   plus: 'text-primary-ink font-bold',
 };
 
+// 露出一节样课：优先取标了 hinge 的关键一节，否则取第一节。
+const sample = curriculum?.items.find((item) => item.hinge) ?? curriculum?.items[0];
 const callout = curriculum?.callout;
 const count = String(curriculum?.items.length ?? 0);
 ---
@@ -75,6 +77,17 @@ const count = String(curriculum?.items.length ?? 0);
                 <p class="text-sm leading-relaxed text-neutral-9">{w}</p>
               ))}
             </div>
+          </div>
+        )}
+
+        {sample && (
+          <div class="mt-6 max-w-3xl border-l-2 border-primary pl-4">
+            <p class="label">
+              {t(locale, 'course.sampleLesson')} · <span class="font-mono">{sample.no}</span>
+            </p>
+            <p class="mt-1 text-base font-bold text-foreground">{sample.title}</p>
+            <p class="mt-1 text-sm leading-relaxed text-neutral-8">{sample.detail}</p>
+            <p class="mt-1.5 font-mono text-xs text-neutral-7">{sample.tool}</p>
           </div>
         )}
 
