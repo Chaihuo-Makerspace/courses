@@ -1681,13 +1681,13 @@ export const modules: Module[] = [
       '基于 LoRa Mesh 自组网协议，构建无公网依赖、多跳中继的离网应急通信与传感数据回传网络。',
     oneLinerEmphasis: '无公网依赖、多跳中继',
     realProblem:
-      '野外勘探、隧道施工、应急搜救等场景缺乏蜂窝基站覆盖，传统对讲机视距受限且无法回传坐标与传感数据。单点中继台依赖市电与高位节点，一旦受损整网中断；卫星电话终端昂贵且存在遮挡盲区，临时专网架设周期长、成本高。',
+      '野外勘探、隧道施工与应急搜救现场往往没有蜂窝网络覆盖，普通对讲机受视距遮挡严重，也传不了位置坐标和环境数据。传统单点中继台依赖市电与制高点，单点一坏整网就瘫痪；卫星电话价格高昂且在山体或地下容易失联，临时拉专网又费时费钱。',
     illustration: '/illustrations/m3.svg',
     heroImage: '/illustrations/m3-mission-pack.png',
     difficulty: '进阶',
     duration: 'L1 1 天 / L2 2–3 天 / L3 3–5 天',
     prerequisite:
-      'L1 会使用智能手机与蓝牙配对，了解基础物联网概念；L2 具备 Node-RED 或 MQTT 基础，能配置网络与 Broker；L3 熟悉 C/C++ 与 PlatformIO，能阅读并修改开源固件源码',
+      'L1 适合会使用智能手机与蓝牙配对、了解基础物联网概念的学员；L2 需具备 Node-RED 或 MQTT 基础，能配置网络与 Broker；L3 需熟悉 C/C++ 与 PlatformIO，能阅读并修改开源固件源码',
     scenarios: [
       '野外勘探与户外赛事：队员位置实时追踪、分组文字通信、SOS 告警广播',
       '应急搜救与抢险救灾：受灾失联区域多跳中继搭建、前线搜救态势标绘',
@@ -1752,7 +1752,7 @@ export const modules: Module[] = [
         subtitle: '把 Mesh 数据桥接到 MQTT，在看板上看节点位置与电量',
         durationDays: 3,
         outcomes: [
-          '掌握 LoRa Mesh 与局域网/公网的 MQTT 桥接方法',
+          '掌握 LoRa Mesh 与局域网或公网的 MQTT 桥接方法',
           '掌握基于 Node-RED 的 Mesh 遥测数据解析与自动化流编排',
           '具备搭建全网通信态势监控看板的能力',
           '完成 1 套 LoRa-MQTT 网关上线，看板实时显示节点坐标与电量状态',
@@ -1848,7 +1848,7 @@ export const modules: Module[] = [
       stages: [
         {
           name: 'Meshtastic App + 固件配置',
-          meta: '信道加密 + 节点角色 · 蓝牙/App 驱动',
+          meta: '信道加密 + 节点角色 · 蓝牙 / App 驱动',
           steps: ['终端蓝牙配对', '信道与 PSK 配置', '多节点组网与离线通信'],
           highlight: true,
         },
@@ -1865,9 +1865,9 @@ export const modules: Module[] = [
       ],
       hinge: {
         title: '关键转折点 · 从离网自治到公网融合与端侧定制',
-        body: 'Meshtastic 配置解决「设备能组网、消息能送达」的离网通信问题；Node-RED 让 Mesh 数据第一次接入公网与监控大屏，从「通信工具」走向「态势感知系统」；PlatformIO 固件定制则进一步让终端具备自定义传感能力，从「使用设备」走向「开发设备」。',
+        body: 'Meshtastic 基础配置打通了「无网环境下设备互联、消息送达」；Node-RED 则将 Mesh 现场遥测数据接入局域网或公网大屏，实现远程集中监控与告警；PlatformIO 固件定制让学员掌握底层代码修改能力，可以按需接入专用传感器、定制现场终端。',
       },
-      note: '另需 EMQX/Mosquitto MQTT Broker（承载 Mesh 报文桥接）、Meshtastic Map（离线地图态势看板）。',
+      note: '另需 EMQX / Mosquitto MQTT Broker（承载 Mesh 报文桥接）、Meshtastic Map（离线地图态势看板）。',
     },
 
     curriculum: {
@@ -1876,7 +1876,7 @@ export const modules: Module[] = [
           no: '01',
           title: '课前准备与环境预检',
           detail:
-            '硬件台架清点、频段一致性校验（433/868/915 MHz）、固件预检升级、现场测线规划与小组信道/PSK 分配',
+            '硬件台架清点、频段一致性校验（433 / 868 / 915 MHz）、固件预检升级、现场测线规划与小组信道 / PSK 分配',
           tool: '—',
           coverage: { taster: 'full', workshop: 'full', bootcamp: 'full' },
         },
@@ -1884,7 +1884,7 @@ export const modules: Module[] = [
           no: '02',
           title: 'LoRa 物理层与 Mesh 协议原理',
           detail:
-            '频率/带宽/扩频因子/编码率参数解析，洪泛路由（Managed Flooding）、多跳计数与防环路机制',
+            '频率、带宽、扩频因子与编码率参数解析，洪泛路由（Managed Flooding）、多跳计数与防环路机制',
           tool: 'Meshtastic',
           coverage: { taster: 'full', workshop: 'full', bootcamp: 'full' },
         },
@@ -1922,7 +1922,7 @@ export const modules: Module[] = [
           no: '07',
           title: 'Mesh 遥测数据解析与 Node-RED 联动',
           detail:
-            '解析 Meshtastic MQTT 遥测报文（默认 Protobuf，JSON 输出需另行配置），节点状态监视流（电量/心跳），SOS 告警联动（Webhook/邮件/即时通信）',
+            '解析 Meshtastic MQTT 遥测报文（默认 Protobuf，JSON 输出需另行配置），配置节点电量与心跳状态监视流，实现 Webhook 与即时通信告警联动',
           tool: 'Node-RED',
           coverage: { taster: 'none', workshop: 'full', bootcamp: 'full' },
         },
@@ -1930,14 +1930,15 @@ export const modules: Module[] = [
           no: '08',
           title: '网络拓扑与地图可视化大屏',
           detail:
-            '部署 Meshtastic Map 或自建地图服务，实时呈现节点分布、信号强度（RSSI/SNR）与中继链路跳数',
+            '部署 Meshtastic Map 或自建地图服务，实时呈现节点分布、信号强度（RSSI / SNR）与中继链路跳数',
           tool: 'Meshtastic Map',
           coverage: { taster: 'none', workshop: 'part', bootcamp: 'full' },
         },
         {
           no: '09',
           title: '外接环境传感器硬件调试',
-          detail: 'Grove 接口连接 BME280 温湿度/气压传感器，I2C 总线地址扫描与传感器供电管理',
+          detail:
+            '通过 Grove 接口连接 BME280 温湿度与气压传感器，完成 I2C 总线地址扫描与传感器供电管理',
           tool: 'Grove BME280',
           coverage: { taster: 'none', workshop: 'none', bootcamp: 'full' },
         },
@@ -1961,7 +1962,7 @@ export const modules: Module[] = [
           no: '12',
           title: '编译烧录与实机验证',
           detail:
-            '编译生成自定义固件并通过 USB/串口烧录至 Wio Tracker L1 Pro，验证传感器数据在 Mesh 网络内的多跳广播与解析',
+            '编译生成自定义固件并通过 USB / 串口烧录至 Wio Tracker L1 Pro，验证传感器数据在 Mesh 网络内的多跳广播与解析',
           tool: 'PlatformIO',
           coverage: { taster: 'none', workshop: 'none', bootcamp: 'full' },
         },
@@ -1969,7 +1970,7 @@ export const modules: Module[] = [
           no: '13',
           title: '方案复盘与交付总结',
           detail:
-            '复杂遮挡环境下信号衰减/中继跳数/丢包率数据复盘，应急通信网络部署拓扑与频段合规规范归档，硬件采购清单与备件建议',
+            '复杂遮挡环境下信号衰减、中继跳数与丢包率数据复盘，应急通信网络部署拓扑与频段合规规范归档，硬件采购清单与备件建议',
           tool: '—',
           coverage: { taster: 'part', workshop: 'full', bootcamp: 'full' },
         },
@@ -2011,7 +2012,7 @@ export const modules: Module[] = [
             {
               title: 'Day 1 上午',
               meta: '模块 01 + 02 + 03',
-              body: '环境预检 → LoRa/Mesh 原理 → 终端与中继初始化',
+              body: '环境预检 → LoRa / Mesh 原理 → 终端与中继初始化',
             },
             {
               title: 'Day 1 下午',
@@ -2080,8 +2081,8 @@ export const modules: Module[] = [
         '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并复盘）；若需更多 Node-RED 调优与看板定制时间则用满 3 天。',
       ],
       warnings: [
-        '所有 LoRa 设备必须使用同一频段（433/868/915 MHz），混用频段将导致物理层无法解调组网。本课程仅面向海外无线频段（EU868/US915 等），不得用于国内频段应用。',
-        'Solar Node 部署时需注意天线垂直极化方向与架设高度，通信距离受地形起伏与建筑物遮挡显著影响；消息时延随跳数增加而累加（典型 1–3 秒/跳）。',
+        '所有 LoRa 设备必须使用同一频段（433 / 868 / 915 MHz），混用频段会导致物理层无法解调组网。本课程仅面向海外无线频段（EU868 / US915 等），严禁用于国内频段应用。',
+        'Solar Node 部署时需注意天线垂直极化方向与架设高度，通信距离受地形起伏与建筑物遮挡影响显著；消息时延随跳数增加而累加（典型 1–3 秒 / 跳）。',
         '体验课不包含 MQTT 桥接与固件定制内容，请勿向客户承诺体验课学员能独立完成 LoRa-MQTT 网关搭建——那是实战课的交付标准。',
       ],
     },
@@ -2119,7 +2120,7 @@ export const modules: Module[] = [
       heading: '在没有公网信号的地方搭起自组网',
       emphasis: '搭起自组网',
       intro:
-        'M3 专门解决无公网、无基站覆盖环境下的信息互通问题。通过开源 LoRa Mesh 协议与轻量端节点，学员完整经历通信拓扑规划、离线轨迹回传与自建网关上云的全过程。全部讲义与工程源码支持讲师按需二次裁剪。',
+        'M3 针对的是没有蜂窝网络覆盖、基站完全瘫痪时的应急通信需求。课程基于开源 LoRa Mesh 协议与轻量节点，带学员从零规划拓扑、打通离线位置回传，再架设网关把现场态势推到监控大屏。全部讲义和工程源码均支持讲师按需裁剪。',
       openings: [
         {
           no: '切入点 01',
@@ -2134,7 +2135,7 @@ export const modules: Module[] = [
         {
           no: '切入点 03',
           title: '融入工程经验',
-          body: '结合当地无线电管理频段要求、空口占空比限制及多节点信道拥堵规划，传授真正符合现场标准的通信网络设计规范。',
+          body: '把无线电管理法规、空口占空比（Duty Cycle）限制和信道防拥堵设计讲透，让学员做出的方案符合现场规范，不被法规清退。',
         },
       ],
     },
@@ -2150,11 +2151,11 @@ export const modules: Module[] = [
         '基于 Meshtastic 开源固件的端侧定制开发（L3）',
       ],
       notApplicable: [
-        '严禁用于国内无线频段应用，当前套件频段为 433/868/915 MHz（Meshtastic 社区频段），仅面向海外市场交付',
-        '受 LoRa 物理带宽限制（几百 bps ~ 数 kbps），不支持语音通话、实时视频与大文件传输',
-        '不作为蜂窝 4G/5G 宽带通信的完全替代方案',
+        '严禁用于国内无线频段应用，当前套件频段为 433 / 868 / 915 MHz（Meshtastic 社区频段），仅面向海外市场交付',
+        '受 LoRa 物理带宽限制（几百 bps ～ 数 kbps），不支持语音通话、实时视频与大文件传输',
+        '不作为蜂窝 4G / 5G 宽带通信的完全替代方案',
         '不承诺极端复杂电磁干扰环境下的 100% 报文投递率',
-        '消息传输时延随中继跳数增加而累加（通常 1–3 秒/跳），不适用于低时延实时控制场景',
+        '消息传输时延随中继跳数增加而累加（通常 1–3 秒 / 跳），不适用于低时延实时控制场景',
         '网络容量受空口占空比与跳数影响，节点数过多时需合理规划信道参数与上报频率',
       ],
     },

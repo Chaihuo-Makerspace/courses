@@ -808,12 +808,12 @@ export const enDict: Record<string, string> = {
   '在没有公网的地方，用 LoRa Mesh 发消息、报位置、回传传感数据。套件仅面向海外频段。':
     'Where there is no public network, use LoRa Mesh to send messages, report positions and return sensor data. The kit covers overseas frequency bands only.',
   '基于 LoRa Mesh 自组网协议，构建无公网依赖、多跳中继的离网应急通信与传感数据回传网络。':
-    'Based on the LoRa Mesh self-organizing protocol, build an off-grid emergency communication and sensor-data backhaul network with no public-network dependency and multi-hop relaying.',
-  '无公网依赖、多跳中继': 'No Public-Network Dependency, Multi-Hop Relaying',
-  '野外勘探、隧道施工、应急搜救等场景缺乏蜂窝基站覆盖，传统对讲机视距受限且无法回传坐标与传感数据。单点中继台依赖市电与高位节点，一旦受损整网中断；卫星电话终端昂贵且存在遮挡盲区，临时专网架设周期长、成本高。':
-    'Scenarios such as field exploration, tunnel construction, and emergency search-and-rescue lack cellular base station coverage. Traditional walkie-talkies are limited by line-of-sight and cannot backhaul coordinates or sensor data. Single-point relay stations depend on mains power and high-elevation nodes; if damaged, the entire network goes down. Satellite phone terminals are expensive and suffer from obstruction blind spots, while ad-hoc private networks take long and cost much to deploy.',
-  'L1 会使用智能手机与蓝牙配对，了解基础物联网概念；L2 具备 Node-RED 或 MQTT 基础，能配置网络与 Broker；L3 熟悉 C/C++ 与 PlatformIO，能阅读并修改开源固件源码':
-    'L1: able to use a smartphone and Bluetooth pairing, familiar with basic IoT concepts. L2: Node-RED or MQTT fundamentals, able to configure networks and Brokers. L3: proficient in C/C++ and PlatformIO, able to read and modify open-source firmware source code.',
+    'Based on the LoRa Mesh protocol, build an off-grid emergency communication and sensor backhaul network with no public network dependency and multi-hop relaying.',
+  '无公网依赖、多跳中继': 'no public network dependency and multi-hop relaying',
+  '野外勘探、隧道施工与应急搜救现场往往没有蜂窝网络覆盖，普通对讲机受视距遮挡严重，也传不了位置坐标和环境数据。传统单点中继台依赖市电与制高点，单点一坏整网就瘫痪；卫星电话价格高昂且在山体或地下容易失联，临时拉专网又费时费钱。':
+    'In exploration, tunneling, and emergency rescue, cellular signals are often absent. Conventional walkie-talkies suffer line-of-sight blockage and cannot send back coordinates or sensor data. Fixed repeaters require mains power and tall masts—single-point damage brings down the network. Satellite terminals are costly and blind spots persist, while rolling out ad-hoc infrastructure takes days and budgets.',
+  'L1 适合会使用智能手机与蓝牙配对、了解基础物联网概念的学员；L2 需具备 Node-RED 或 MQTT 基础，能配置网络与 Broker；L3 需熟悉 C/C++ 与 PlatformIO，能阅读并修改开源固件源码':
+    'L1 suits learners comfortable with smartphone Bluetooth pairing and basic IoT concepts; L2 requires Node-RED or MQTT foundations and broker setup skills; L3 requires C/C++ and PlatformIO proficiency to inspect and modify open-source firmware',
   '野外勘探与户外赛事：队员位置实时追踪、分组文字通信、SOS 告警广播':
     'Field exploration and outdoor events: real-time team member tracking, group text communication, SOS alert broadcast',
   '应急搜救与抢险救灾：受灾失联区域多跳中继搭建、前线搜救态势标绘':
@@ -866,8 +866,8 @@ export const enDict: Record<string, string> = {
   '状态监控与 MQTT 桥接': 'Status Monitoring and MQTT Bridging',
   '把 Mesh 数据桥接到 MQTT，在看板上看节点位置与电量':
     'Bridge mesh data to MQTT and watch node position and battery level on a dashboard',
-  '掌握 LoRa Mesh 与局域网/公网的 MQTT 桥接方法':
-    'Master MQTT bridging methods between LoRa Mesh and LAN/public network',
+  '掌握 LoRa Mesh 与局域网或公网的 MQTT 桥接方法':
+    'Master bridging LoRa Mesh to local intranets or public networks via MQTT',
   '掌握基于 Node-RED 的 Mesh 遥测数据解析与自动化流编排':
     'Master Node-RED-based Mesh telemetry data parsing and automation flow orchestration',
   具备搭建全网通信态势监控看板的能力:
@@ -924,7 +924,8 @@ export const enDict: Record<string, string> = {
   '另配 Grove 4P 连接线（20cm，连接 BME280 至 Wio Tracker L1 Pro）、屏幕、整体电源设计、路由器等通用配件。':
     'Additionally configured with Grove 4P cable (20cm, connecting BME280 to Wio Tracker L1 Pro), screen, integrated power design, router, and other common accessories.',
   'Meshtastic App + 固件配置': 'Meshtastic App + Firmware Configuration',
-  '信道加密 + 节点角色 · 蓝牙/App 驱动': 'Channel Encryption + Node Roles · Bluetooth/App-Driven',
+  '信道加密 + 节点角色 · 蓝牙 / App 驱动':
+    'Channel encryption & node roles · Bluetooth / App driven',
   终端蓝牙配对: 'Terminal Bluetooth Pairing',
   '信道与 PSK 配置': 'Channel & PSK Configuration',
   多节点组网与离线通信: 'Multi-Node Networking & Offline Communication',
@@ -939,15 +940,15 @@ export const enDict: Record<string, string> = {
   编译烧录与实机验证: 'Compilation, Flashing & On-Device Verification',
   '关键转折点 · 从离网自治到公网融合与端侧定制':
     'Key Turning Point · From Off-Grid Autonomy to Public-Network Fusion & On-Device Customization',
-  'Meshtastic 配置解决「设备能组网、消息能送达」的离网通信问题；Node-RED 让 Mesh 数据第一次接入公网与监控大屏，从「通信工具」走向「态势感知系统」；PlatformIO 固件定制则进一步让终端具备自定义传感能力，从「使用设备」走向「开发设备」。':
-    'Meshtastic configuration solves the off-grid communication problem of "devices can network, messages can be delivered"; Node-RED brings Mesh data to the public network and monitoring dashboards for the first time, moving from "communication tool" to "situational awareness system"; PlatformIO firmware customization further gives terminals custom sensing capability, moving from "using devices" to "developing devices."',
-  '另需 EMQX/Mosquitto MQTT Broker（承载 Mesh 报文桥接）、Meshtastic Map（离线地图态势看板）。':
-    'Additionally requires EMQX/Mosquitto MQTT Broker (carrying Mesh message bridging) and Meshtastic Map (offline map situational dashboard).',
-  '硬件台架清点、频段一致性校验（433/868/915 MHz）、固件预检升级、现场测线规划与小组信道/PSK 分配':
-    'Hardware bench inventory, frequency consistency verification (433/868/915 MHz), firmware pre-check and upgrade, field test line planning and group channel/PSK allocation',
+  'Meshtastic 基础配置打通了「无网环境下设备互联、消息送达」；Node-RED 则将 Mesh 现场遥测数据接入局域网或公网大屏，实现远程集中监控与告警；PlatformIO 固件定制让学员掌握底层代码修改能力，可以按需接入专用传感器、定制现场终端。':
+    'Meshtastic base configurations establish peer-to-peer messaging in off-grid environments; Node-RED forwards live telemetry to local dashboards for monitoring and alerting; PlatformIO firmware customization empowers engineers to integrate custom sensors into rugged field nodes.',
+  '另需 EMQX / Mosquitto MQTT Broker（承载 Mesh 报文桥接）、Meshtastic Map（离线地图态势看板）。':
+    'Additionally requires EMQX / Mosquitto MQTT Broker (for Mesh packet bridging) and Meshtastic Map (offline GIS situational dashboard).',
+  '硬件台架清点、频段一致性校验（433 / 868 / 915 MHz）、固件预检升级、现场测线规划与小组信道 / PSK 分配':
+    'Hardware bench check, frequency verification (433 / 868 / 915 MHz), firmware update, survey line planning, and group channel / PSK allocation',
   'LoRa 物理层与 Mesh 协议原理': 'LoRa Physical Layer & Mesh Protocol Principles',
-  '频率/带宽/扩频因子/编码率参数解析，洪泛路由（Managed Flooding）、多跳计数与防环路机制':
-    'Frequency/bandwidth/spreading factor/coding rate parameter analysis, flooding routing (Managed Flooding), multi-hop counting and loop-prevention mechanisms',
+  '频率、带宽、扩频因子与编码率参数解析，洪泛路由（Managed Flooding）、多跳计数与防环路机制':
+    'Parameter analysis: frequency, bandwidth, spreading factor, and coding rate; Managed Flooding, hop counters, and loop prevention',
   终端与中继节点初始化: 'Terminal & Relay Node Initialization',
   'T1000-E 卡片终端蓝牙配对与 App 基础设置，Solar Node P1-Pro 部署规范与天线极化方向':
     'T1000-E card terminal Bluetooth pairing and App basic setup, Solar Node P1-Pro deployment specifications and antenna polarization direction',
@@ -961,14 +962,14 @@ export const enDict: Record<string, string> = {
   'XIAO ESP32S3 + Wio-SX1262 网关组装，Wi-Fi 连接与 MQTT Broker 接入配置，数据上行转发与下行命令广播':
     'XIAO ESP32S3 + Wio-SX1262 gateway assembly, Wi-Fi connection and MQTT Broker access configuration, data upstream forwarding and downstream command broadcast',
   'Mesh 遥测数据解析与 Node-RED 联动': 'Mesh Telemetry Data Parsing & Node-RED Linkage',
-  '解析 Meshtastic MQTT 遥测报文（默认 Protobuf，JSON 输出需另行配置），节点状态监视流（电量/心跳），SOS 告警联动（Webhook/邮件/即时通信）':
-    'Parse Meshtastic MQTT telemetry messages (default Protobuf, JSON output requires separate configuration), node status monitoring flow (battery/heartbeat), SOS alert linkage (Webhook/email/instant messaging)',
+  '解析 Meshtastic MQTT 遥测报文（默认 Protobuf，JSON 输出需另行配置），配置节点电量与心跳状态监视流，实现 Webhook 与即时通信告警联动':
+    'Parse Meshtastic MQTT telemetry packets (Protobuf by default, JSON requires extra config), build node battery/heartbeat monitors, and trigger Webhook / instant message alerts',
   网络拓扑与地图可视化大屏: 'Network Topology & Map Visualization Dashboard',
-  '部署 Meshtastic Map 或自建地图服务，实时呈现节点分布、信号强度（RSSI/SNR）与中继链路跳数':
-    'Deploy Meshtastic Map or self-hosted map service, real-time display of node distribution, signal strength (RSSI/SNR) and relay link hop count',
+  '部署 Meshtastic Map 或自建地图服务，实时呈现节点分布、信号强度（RSSI / SNR）与中继链路跳数':
+    'Deploy Meshtastic Map or self-hosted map server, visualizing node positions, signal quality (RSSI / SNR), and relay hop counts in real time',
   外接环境传感器硬件调试: 'External Environmental Sensor Hardware Debugging',
-  'Grove 接口连接 BME280 温湿度/气压传感器，I2C 总线地址扫描与传感器供电管理':
-    'Connect BME280 temperature/humidity/barometric pressure sensor via Grove interface, I2C bus address scanning and sensor power management',
+  '通过 Grove 接口连接 BME280 温湿度与气压传感器，完成 I2C 总线地址扫描与传感器供电管理':
+    'Connect BME280 temperature, humidity, and barometric pressure sensor via Grove interface; scan I2C bus addresses and manage sensor power',
   'PlatformIO 开发环境与源码工程': 'PlatformIO Development Environment & Source Code Project',
   '搭建 VS Code + PlatformIO 编译环境，克隆 meshtastic/firmware 官方源码，配置 platformio.ini 目标板型 seeed_wio_tracker_L1':
     'Set up VS Code + PlatformIO build environment, clone meshtastic/firmware official source code, configure platformio.ini target board type seeed_wio_tracker_L1',
@@ -976,16 +977,16 @@ export const enDict: Record<string, string> = {
   '修改屏幕 UI 交互逻辑（首页增加实时环境数据与未读消息计数），配置 Telemetry 遥测数据打包与周期发送策略':
     'Modify screen UI interaction logic (add real-time environmental data and unread message count to home page), configure Telemetry data packaging and periodic sending strategy',
   'C/C++ / Meshtastic 源码': 'C/C++ / Meshtastic Source Code',
-  '编译生成自定义固件并通过 USB/串口烧录至 Wio Tracker L1 Pro，验证传感器数据在 Mesh 网络内的多跳广播与解析':
-    'Compile custom firmware and flash to Wio Tracker L1 Pro via USB/serial, verify sensor data multi-hop broadcast and parsing within the Mesh network',
-  '复杂遮挡环境下信号衰减/中继跳数/丢包率数据复盘，应急通信网络部署拓扑与频段合规规范归档，硬件采购清单与备件建议':
-    'Data retrospective on signal attenuation/relay hop count/packet loss rate in complex obstruction environments, emergency communication network deployment topology and frequency compliance specification archiving, hardware procurement list and spare parts recommendations',
+  '编译生成自定义固件并通过 USB / 串口烧录至 Wio Tracker L1 Pro，验证传感器数据在 Mesh 网络内的多跳广播与解析':
+    'Compile custom firmware, flash to Wio Tracker L1 Pro via USB / serial, and verify multi-hop sensor broadcasts and parsing across the Mesh network',
+  '复杂遮挡环境下信号衰减、中继跳数与丢包率数据复盘，应急通信网络部署拓扑与频段合规规范归档，硬件采购清单与备件建议':
+    'Review signal attenuation, hop counts, and packet loss in occluded terrains; archive network topologies and RF compliance records; consolidate BOM and spare-part recommendations',
   '体验课（taster）聚焦 L1 基础组网与离线通信，不含 MQTT 桥接与固件定制；实战课（workshop）覆盖 L1+L2 完整网关搭建与态势监控；交付课（bootcamp）全覆盖 L1+L2+L3。':
     'The taster session focuses on L1 basic networking and offline communication, excluding MQTT bridging and firmware customization; the workshop covers full L1+L2 gateway setup and situational monitoring; the bootcamp fully covers L1+L2+L3.',
   '1 天 · 6–8h · L1 展示层 · 聚焦 Meshtastic 组网与离线通信':
     '1 day · 6–8h · L1 presentation layer · focusing on Meshtastic networking and offline communication',
-  '环境预检 → LoRa/Mesh 原理 → 终端与中继初始化':
-    'Environment Pre-Check → LoRa/Mesh Principles → Terminal & Relay Initialization',
+  '环境预检 → LoRa / Mesh 原理 → 终端与中继初始化':
+    'Environment pre-check → LoRa / Mesh fundamentals → Terminal & repeater setup',
   '信道加密 → 离线通信与定位实测 → 总结复盘':
     'Channel Encryption → Offline Communication & Location Field Test → Summary Review',
   '不含 MQTT 桥接与固件定制。': 'Does not include MQTT bridging or firmware customization.',
@@ -1015,10 +1016,10 @@ export const enDict: Record<string, string> = {
     'The taster course takes one day, needs no coding, and stops at "devices form a network and messages get through". It suits trade shows, open days and first meetings with a client.',
   '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并复盘）；若需更多 Node-RED 调优与看板定制时间则用满 3 天。':
     'Workshop Day 3 is an optional flexible day: if students have a strong foundation, it can be compressed to 2 days (Day 2 afternoon merged with review); if more Node-RED tuning and dashboard customization time is needed, use the full 3 days.',
-  '所有 LoRa 设备必须使用同一频段（433/868/915 MHz），混用频段将导致物理层无法解调组网。本课程仅面向海外无线频段（EU868/US915 等），不得用于国内频段应用。':
-    'All LoRa devices must use the same frequency band (433/868/915 MHz); mixing frequency bands will cause the physical layer to fail demodulation and networking. This course is only for overseas wireless frequency bands (EU868/US915, etc.) and must not be used for domestic frequency band applications.',
-  'Solar Node 部署时需注意天线垂直极化方向与架设高度，通信距离受地形起伏与建筑物遮挡显著影响；消息时延随跳数增加而累加（典型 1–3 秒/跳）。':
-    'When deploying Solar Node, attention must be paid to antenna vertical polarization direction and mounting height; communication distance is significantly affected by terrain undulation and building obstruction; message latency accumulates with hop count (typically 1–3 seconds/hop).',
+  '所有 LoRa 设备必须使用同一频段（433 / 868 / 915 MHz），混用频段会导致物理层无法解调组网。本课程仅面向海外无线频段（EU868 / US915 等），严禁用于国内频段应用。':
+    'All LoRa devices must use identical RF bands (433 / 868 / 915 MHz); mismatched bands will fail physical-layer demodulation. This curriculum targets global ISM bands (EU868 / US915, etc.) and is strictly prohibited on mainland China radio frequencies.',
+  'Solar Node 部署时需注意天线垂直极化方向与架设高度，通信距离受地形起伏与建筑物遮挡影响显著；消息时延随跳数增加而累加（典型 1–3 秒 / 跳）。':
+    'When deploying Solar Nodes, ensure vertical antenna polarization and elevation; range is heavily affected by terrain and structural obstructions; packet latency increases with hop count (typically 1–3 s / hop).',
   '体验课不包含 MQTT 桥接与固件定制内容，请勿向客户承诺体验课学员能独立完成 LoRa-MQTT 网关搭建——那是实战课的交付标准。':
     'The taster session does not include MQTT bridging or firmware customization content. Do not promise clients that taster session students can independently complete LoRa-MQTT gateway setup — that is the workshop delivery standard.',
   '含现场节点布设拓扑、频段规划、信道分配表与中继跳数预算。':
@@ -1040,14 +1041,14 @@ export const enDict: Record<string, string> = {
   在没有公网信号的地方搭起自组网:
     'Build an autonomous mesh network where there is no cellular signal',
   无公网环境下把人和数据连起来: 'Connect People and Data in Public-Network-Free Environments',
-  'M3 专门解决无公网、无基站覆盖环境下的信息互通问题。通过开源 LoRa Mesh 协议与轻量端节点，学员完整经历通信拓扑规划、离线轨迹回传与自建网关上云的全过程。全部讲义与工程源码支持讲师按需二次裁剪。':
-    'M3 addresses critical communication when public cellular infrastructure is completely unavailable. Using open-source LoRa Mesh protocols and agile nodes, learners master topology planning, offline telemetry, and custom edge gateway bridging.',
+  'M3 针对的是没有蜂窝网络覆盖、基站完全瘫痪时的应急通信需求。课程基于开源 LoRa Mesh 协议与轻量节点，带学员从零规划拓扑、打通离线位置回传，再架设网关把现场态势推到监控大屏。全部讲义和工程源码均支持讲师按需裁剪。':
+    'M3 tackles emergency communications where cellular towers are absent or knocked out. Using the open-source LoRa Mesh protocol and lightweight nodes, learners plan network topologies, transmit offline coordinates, and bridge field telemetry into live dashboards. All materials and codebases are fully customizable.',
   '模块 05 支持在校园开阔地、地下车库或野外做拉距与穿墙测试，让学员直观观察遮挡、天线极化与跳数累加对丢包率的影响。':
     'Unit 05 supports range and obstacle testing across open campus grounds, underground parking lots, or rugged terrain, letting students evaluate how obstructions, antenna polarization, and multi-hop routing affect packet delivery.',
   '在模块 09 之后，可接入校内或行业专属的环境监测探头，演练无蜂窝网络下的低功耗多跳数据回传。':
     'Following Unit 09, environmental or agricultural sensor probes can be wired to nodes, practicing ultra-low-power multi-hop telemetry where cellular connectivity is completely absent.',
-  '结合当地无线电管理频段要求、空口占空比限制及多节点信道拥堵规划，传授真正符合现场标准的通信网络设计规范。':
-    'Incorporating regional frequency allocations, duty-cycle regulations, and channel congestion mitigation teaches the disciplined network planning needed for compliant field deployments.',
+  '把无线电管理法规、空口占空比（Duty Cycle）限制和信道防拥堵设计讲透，让学员做出的方案符合现场规范，不被法规清退。':
+    'Detail spectrum compliance rules, duty cycle limits, and channel congestion controls so learners build field deployments that adhere to radio regulations without being shut down.',
   '仅面向海外无线频段（EU868/US915 等），不得用于国内频段应用。':
     'Only for overseas wireless frequency bands (EU868/US915, etc.), must not be used for domestic frequency band applications.',
   无公网环境下的短文本即时通讯与群组广播:
@@ -1061,20 +1062,18 @@ export const enDict: Record<string, string> = {
     'LoRa Mesh & Public-Network MQTT Bridging & Data Visualization (L2)',
   '基于 Meshtastic 开源固件的端侧定制开发（L3）':
     'On-Device Custom Development Based on Meshtastic Open-Source Firmware (L3)',
-  '严禁用于国内无线频段应用，当前套件频段为 433/868/915 MHz（Meshtastic 社区频段），仅面向海外市场交付':
-    'Strictly prohibited for domestic wireless frequency band applications; the current kit frequency bands are 433/868/915 MHz (Meshtastic community bands), delivered only for overseas markets',
-  '受 LoRa 物理带宽限制（几百 bps ~ 数 kbps），不支持语音通话、实时视频与大文件传输':
-    'Limited by LoRa physical bandwidth (hundreds of bps to several kbps), does not support voice calls, real-time video, or large file transfer',
-  '不作为蜂窝 4G/5G 宽带通信的完全替代方案':
-    'Not a complete replacement for cellular 4G/5G broadband communication',
+  '严禁用于国内无线频段应用，当前套件频段为 433 / 868 / 915 MHz（Meshtastic 社区频段），仅面向海外市场交付':
+    'Strictly prohibited on mainland China frequencies; kit operates at 433 / 868 / 915 MHz (Meshtastic community bands) and is designated for international markets only',
+  '受 LoRa 物理带宽限制（几百 bps ～ 数 kbps），不支持语音通话、实时视频与大文件传输':
+    'Limited by LoRa physical bandwidth (hundreds of bps to a few kbps); does not support voice calls, live video, or large file transfers',
+  '不作为蜂窝 4G / 5G 宽带通信的完全替代方案':
+    'Not a complete replacement for high-bandwidth cellular 4G / 5G communications',
   '不承诺极端复杂电磁干扰环境下的 100% 报文投递率':
     'Does not promise 100% message delivery rate in extremely complex electromagnetic interference environments',
-  '消息传输时延随中继跳数增加而累加（通常 1–3 秒/跳），不适用于低时延实时控制场景':
-    'Message transmission latency accumulates with relay hop count (typically 1–3 seconds/hop), not applicable to low-latency real-time control scenarios',
+  '消息传输时延随中继跳数增加而累加（通常 1–3 秒 / 跳），不适用于低时延实时控制场景':
+    'Transmission latency accumulates with each relay hop (typically 1–3 s / hop); unsuitable for low-latency real-time control scenarios',
   '网络容量受空口占空比与跳数影响，节点数过多时需合理规划信道参数与上报频率':
     'Network capacity is affected by air interface duty cycle and hop count; when there are too many nodes, channel parameters and reporting frequency must be properly planned',
-
-  // ── M4 ──
   '边缘视觉 AI': 'Edge Vision AI',
   '让摄像头在事件发生时就告警：目标检测、区域入侵、联动声光。不做人脸识别。':
     'Have cameras raise an alert the moment something happens: object detection, zone intrusion, linked sound-and-light alarms. No face recognition.',
