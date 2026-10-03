@@ -1176,16 +1176,16 @@ export const modules: Module[] = [
     code: 'M2',
     title: '多模态 AI 交互',
     subtitle: '对着终端说话就能查库存、录出入库、控设备；也可以整套跑在本地，断网可用。',
-    oneLiner: '基于物理AI终端，融合边缘视觉、语音与业务系统API，实现多模态空间交互。',
+    oneLiner: '基于物理 AI 终端，融合边缘视觉、语音与业务系统 API，实现多模态空间交互。',
     oneLinerEmphasis: '多模态空间交互',
     realProblem:
-      '仓储管理、展厅导览、智能前台等场景中，现场人员需停下手工操作，通过键盘或手机手动检索业务数据，效率低下。传统交互终端缺乏视觉上下文，无法主动感知人员靠近或异常动作。智能终端多为封闭生态，难以与存量WMS/ERP/CRM系统对接；部分工业与政企场景禁止音频与业务数据上传公网。',
+      '仓储管理、展厅导览与智能前台这些场景里，现场人员要查业务数据，往往得先放下手里的活，掏出手机或回到电脑前手动敲键盘。传统终端没有视觉感知，人走近了不会主动响应，也识别不了异常动作。很多智能终端生态封闭，接不进现有的 WMS、ERP 系统；而在工业与政企现场，音频和业务数据往往严禁上传公网。',
     illustration: '/illustrations/m2.svg',
     heroImage: '/illustrations/m2-sensecap-watcher.png',
     difficulty: '进阶',
     duration: 'L1 1 天 / L2 2–3 天 / L3 3–5 天',
     prerequisite:
-      'L1零基础或首次接触边缘AI交互设备；L2需具备Docker基础与REST API调用经验；L3需具备Linux、PyTorch/Jetson基础与shell操作能力',
+      'L1 适合零基础或首次接触边缘 AI 交互设备；L2 需具备 Docker 基础与 REST API 调用经验；L3 需具备 Linux、PyTorch / Jetson 基础与 Shell 操作能力',
     scenarios: [
       '智慧仓储与车间管理：免手动查库存、语音录入出入库、异常物料视觉提醒',
       '展厅与公共导览：主动人员识别、多语种语音讲解、展位联动控制',
@@ -1215,15 +1215,15 @@ export const modules: Module[] = [
     coreHardware: [
       'SenseCAP Watcher（小智英文版）',
       'reComputer RK3588-40 边缘智能控制器',
-      'reTerminal D1001 8寸智能触控屏',
+      'reTerminal D1001 8 英寸智能触控屏',
       'reComputer J4012（Jetson Orin NX 16GB）',
     ],
     capabilities: [
       '端侧视觉目标检测与事件触发',
-      '自然语言语音查询与Agent角色配置',
-      '基于MCP协议的业务系统工具调用',
-      '本地WMS系统Docker部署与API集成',
-      '纯本地离线语音AI管线部署（VAD→ASR→LLM→TTS）',
+      '自然语言语音查询与 Agent 角色配置',
+      '基于 MCP 协议的业务系统工具调用',
+      '本地 WMS 系统 Docker 部署与 API 集成',
+      '纯本地离线语音 AI 管线部署（VAD → ASR → LLM → TTS）',
     ],
     audience: [
       '方案顾问与商务销售',
@@ -1232,11 +1232,11 @@ export const modules: Module[] = [
       '职业院校与应用型本科师生',
     ],
     deliverables: [
-      'Watcher硬件配置与视觉模型参数说明书',
-      '多模态Agent角色提示词与记忆策略配置文件',
-      '本地业务系统与MCP桥接服务部署指南',
-      'OpenClaw自动化工具配置脚本',
-      '本地离线语音AI管线部署与调优手册（L3）',
+      'Watcher 硬件配置与视觉模型参数说明书',
+      '多模态 Agent 角色提示词与记忆策略配置文件',
+      '本地业务系统与 MCP 桥接服务部署指南',
+      'OpenClaw 自动化工具配置脚本',
+      '本地离线语音 AI 管线部署与调优手册（L3）',
     ],
     cells: {
       L1: {
@@ -1244,9 +1244,9 @@ export const modules: Module[] = [
         subtitle: '用语音向 Watcher 查询数据、控制设备',
         durationDays: 1,
         outcomes: [
-          '理解边缘视觉与大模型Agent结合的技术架构',
-          '掌握MCP协议在端侧AI与业务系统对接中的核心作用',
-          '掌握云端协同与本地部署在不同业务场景下的选型逻辑',
+          '理解边缘视觉与大模型 Agent 结合的技术架构',
+          '掌握 MCP 协议在端侧 AI 与业务系统对接中的核心作用',
+          '掌握云端协同与本地部署在不同业务场景下的选型依据',
         ],
         comingSoon: false,
       },
@@ -1255,9 +1255,9 @@ export const modules: Module[] = [
         subtitle: '通过 MCP 把语音接到仓储等业务系统',
         durationDays: 3,
         outcomes: [
-          '独立配置Watcher视觉与语音Agent参数',
-          '掌握基于Docker的本地业务系统与MCP桥接服务部署',
-          '掌握基于MCP协议扩展新业务API的方法',
+          '独立配置 Watcher 视觉与语音 Agent 参数',
+          '掌握基于 Docker 的本地业务系统与 MCP 桥接服务部署',
+          '掌握基于 MCP 协议扩展新业务 API 的方法',
         ],
         comingSoon: false,
       },
@@ -1266,9 +1266,9 @@ export const modules: Module[] = [
         subtitle: '语音管线全部跑在本地，断网可用，数据不出内网',
         durationDays: 5,
         outcomes: [
-          '掌握VAD→ASR→LLM→TTS完整本地端到端语音管线架构',
-          '掌握在Jetson边缘计算硬件上量化与部署优化大模型的方法',
-          '具备在强隐私与工业隔离网环境下交付AI交互方案的能力',
+          '掌握 VAD → ASR → LLM → TTS 完整本地端到端语音管线架构',
+          '掌握在 Jetson 边缘计算硬件上量化与部署大模型的方法',
+          '具备在强隐私与工业隔离网环境下交付 AI 交互方案的能力',
         ],
         comingSoon: false,
       },
@@ -1280,21 +1280,21 @@ export const modules: Module[] = [
       { label: '最短形态', value: '1 天（体验课 · L1）' },
       { label: '排课形态', value: '3 层：体验 / 实战 / 交付' },
       { label: '核心协议', value: 'MCP / REST API / Wi-Fi' },
-      { label: 'L3离线算力', value: '100 TOPS（Jetson Orin NX 16GB）' },
+      { label: 'L3 离线算力', value: '100 TOPS（Jetson Orin NX 16GB）' },
     ],
 
     hardwareList: [
       {
         key: 'WATCHER',
-        name: 'SenseCAP Watcher 小智英文版',
+        name: 'SenseCAP Watcher（小智英文版）',
         note: '端侧多模态交互终端 · 语音采集与视觉识别入口',
       },
-      { key: 'GW', name: 'reComputer RK3588-40', note: '边缘智能控制器 · 业务系统与MCP桥接主机' },
-      { key: 'HMI', name: 'reTerminal D1001', note: '8寸工业智能触控屏 · 工位人机界面' },
+      { key: 'GW', name: 'reComputer RK3588-40', note: '边缘智能控制器 · 业务系统与 MCP 桥接主机' },
+      { key: 'HMI', name: 'reTerminal D1001', note: '8 英寸工业智能触控屏 · 工位人机界面' },
       {
         key: 'GPU',
         name: 'reComputer J4012 (Jetson Orin NX 16GB)',
-        note: 'L3进阶算力主机 · 纯本地离线语音管线',
+        note: 'L3 进阶算力主机 · 纯本地离线语音管线',
       },
     ],
 
@@ -1307,27 +1307,27 @@ export const modules: Module[] = [
           description:
             '集成音视频采集与屏幕显示，支持目标检测、人员靠近感知与自然语言语音交互，通过 Wi-Fi 接入 SenseCraft AI 平台，每组标准配置 2 台。',
           image: '/illustrations/m2-sensecap-watcher.png',
-          imageAlt: 'SenseCAP Watcher 小智英文版',
+          imageAlt: 'SenseCAP Watcher（小智英文版）',
         },
         {
           name: 'reComputer RK3588-40 边缘智能控制器',
-          note: '运行业务系统与MCP桥接服务的边缘主机',
+          note: '运行业务系统与 MCP 桥接服务的边缘主机',
           description:
             '配备 16GB 内存与 6 TOPS 算力，运行 Docker 容器化 WMS 仓储系统与 MCP Bridge 桥接服务，实现局域网业务数据与大模型工具调用的对接，配独立电源适配器。',
           image: '/illustrations/m2-recomputer-rk3588.png',
           imageAlt: 'reComputer RK3588-40 边缘智能控制器',
         },
         {
-          name: 'reTerminal D1001 8寸智能触控屏',
+          name: 'reTerminal D1001 8 英寸智能触控屏',
           note: '工位人机界面，仓管业务数据录入与状态监视',
           description:
             '8 英寸工业智能触控终端，集成摄像头与双麦克风。作为工位人机交互界面，用于仓管数据录入与状态监视，可直连主机展示 WMS 管理控制台与交互日志。',
           image: '/illustrations/m2-reterminal-d1001.png',
-          imageAlt: 'reTerminal D1001 8寸智能触控屏',
+          imageAlt: 'reTerminal D1001 8 英寸智能触控屏',
         },
         {
           name: 'reComputer J4012（Jetson Orin NX 16GB）',
-          note: 'L3进阶边缘算力主机，部署纯本地离线语音管线',
+          note: 'L3 进阶边缘算力主机，部署纯本地离线语音管线',
           description:
             '具备 100 TOPS 级端侧算力，预置完整 JetPack、CUDA 与 TensorRT 环境，部署纯本地离线语音 AI 管线，断网环境下依然稳定可用。',
           image: '/illustrations/m2-recomputer-j4012.png',
@@ -1347,20 +1347,20 @@ export const modules: Module[] = [
         },
         {
           name: 'MCP Bridge + Docker + OpenClaw',
-          meta: '标准协议桥接 · 局域网业务数据不出域',
+          meta: '标准协议桥接 · 局域网业务数据不出内网',
           steps: ['本地WMS Docker部署', 'MCP桥接config.yml配置', 'OpenClaw自动化工具注册与联调'],
         },
         {
           name: 'Jetson Orin NX + 离线语音管线',
-          meta: 'VAD→ASR→LLM→TTS纯本地全流程 · 零公网依赖',
+          meta: 'VAD → ASR → LLM → TTS 纯本地全流程 · 零公网依赖',
           steps: ['JetPack环境验证', '量化模型部署与显存调优', '断网联调与延迟优化'],
         },
       ],
       hinge: {
         title: '关键转折点 · 从云端协同到本地离线私有化部署',
-        body: 'SenseCraft AI云端方案解决「快速验证、到手就能用」；MCP桥接让业务数据第一次在局域网内流转，核心库存与业务数据不出域；Jetson离线管线则彻底切断公网依赖，在强隐私与工业隔离网环境下实现零外网语音交互。',
+        body: 'SenseCraft AI 云端方案适合前期快速打通原型；MCP 桥接让库存与业务数据留在局域网内流转，不向外网泄露；Jetson 离线管线则彻底切断公网依赖，在严苛的隔离网和高保密环境下实现纯本地语音交互。',
       },
-      note: 'L1/L2依赖互联网连接大模型服务；L3需100 TOPS级别边缘算力（Jetson Orin NX 16GB），RK3588-40（6 TOPS）无法承载本地大模型推理。',
+      note: 'L1/L2 依赖互联网连接大模型服务；L3 需 100 TOPS 级别边缘算力（Jetson Orin NX 16GB），RK3588-40（6 TOPS）无法承载本地大模型推理。',
     },
 
     curriculum: {
@@ -1369,7 +1369,7 @@ export const modules: Module[] = [
           no: '01',
           title: '课前准备与环境预检',
           detail:
-            '硬件台架清点、网络连通性测试、Watcher固件预检与平台账号初始化、RK3588-40 Docker环境与WMS镜像预置、J4012 JetPack环境预载、教学物料准备',
+            '硬件台架清点、网络连通性测试、Watcher 固件预检与平台账号初始化、RK3588-40 Docker 环境与 WMS 镜像预置、J4012 JetPack 环境预载与教学物料准备',
           tool: '—',
           coverage: { taster: 'full', workshop: 'full', bootcamp: 'full' },
         },
@@ -1377,7 +1377,7 @@ export const modules: Module[] = [
           no: '02',
           title: '多模态交互架构与核心概念',
           detail:
-            '边缘视觉、语音Agent、MCP协议与云边协同架构解析；云端协同与本地离线两种部署形态的技术差异与选型依据',
+            '边缘视觉、语音 Agent、MCP 协议与云边协同架构解析；云端协同与本地离线两种部署形态的技术差异与选型依据',
           tool: 'SenseCraft AI',
           coverage: { taster: 'full', workshop: 'full', bootcamp: 'full' },
         },
@@ -1385,7 +1385,7 @@ export const modules: Module[] = [
           no: '03',
           title: '端侧轻量视觉推理体验',
           detail:
-            'Watcher目标检测模型体验（物料识别、人员靠近、特定动作感知）、SenseCraft AI零代码视觉模型适配、UART与网络数据输出格式解析',
+            'Watcher 目标检测模型体验（物料识别、人员靠近、特定动作感知）、SenseCraft AI 零代码视觉模型适配、UART 与网络数据输出格式解析',
           tool: 'SenseCAP Watcher',
           coverage: { taster: 'full', workshop: 'full', bootcamp: 'full' },
         },
@@ -1393,55 +1393,55 @@ export const modules: Module[] = [
           no: '04',
           title: '场景化语音问答与Agent机制',
           detail:
-            '仓储/零售场景自然语言实时查询演示、语音输入→推理→语音合成播报全链路体验、Agent提示词与角色设定、对话记忆机制对比（无记忆/短期/长期）',
+            '仓储与零售场景自然语言实时查询演示、语音输入 → 推理 → 语音合成播报全链路体验、Agent 提示词与角色设定、对话记忆机制对比（无记忆 / 短期 / 长期）',
           tool: 'SenseCraft AI Agent',
           coverage: { taster: 'full', workshop: 'full', bootcamp: 'full' },
         },
         {
           no: '05',
-          title: 'MCP工具调用与业务集成演示',
+          title: 'MCP 工具调用与业务集成演示',
           detail:
-            '基于MCP协议的外部工具调用演示（实时查询仓储数据库）、智慧仓管全链路演示（语音查库存/入库/出库）、OpenClaw桌面自动化联动演示',
+            '基于 MCP 协议的外部工具调用演示（实时查询仓储数据库）、智慧仓管全链路演示（语音查库存 / 入库 / 出库）、OpenClaw 桌面自动化联动演示',
           tool: 'MCP / OpenClaw',
           coverage: { taster: 'full', workshop: 'full', bootcamp: 'full' },
         },
         {
           no: '06',
-          title: 'Watcher视觉AI与端侧网络配置',
+          title: 'Watcher 视觉 AI 与端侧网络配置',
           detail:
-            'Watcher联网配置与SenseCraft平台绑定、视觉模型选择与置信度/触发阈值参数调优、事件上报规则配置（目标出现、区域检测）',
+            'Watcher 联网配置与 SenseCraft 平台绑定、视觉模型选择与置信度 / 触发阈值参数调优、事件上报规则配置（目标出现、区域检测）',
           tool: 'SenseCraft AI / Watcher',
           coverage: { taster: 'none', workshop: 'full', bootcamp: 'full' },
         },
         {
           no: '07',
-          title: '语音Agent与角色提示词配置',
+          title: '语音 Agent 与角色提示词配置',
           detail:
-            '定义Agent角色（仓管助手/展厅讲解员）、配置System Prompt与交互风格、记忆模式切换与效果验证',
+            '定义 Agent 角色（仓管助手 / 展厅讲解员）、配置 System Prompt 与交互风格、记忆模式切换与效果验证',
           tool: 'SenseCraft AI Agent',
           coverage: { taster: 'none', workshop: 'full', bootcamp: 'full' },
         },
         {
           no: '08',
-          title: '本地业务管理系统Docker部署',
+          title: '本地业务管理系统 Docker 部署',
           detail:
-            '使用Docker与Git在RK3588-40上部署示例WMS（suharvest/warehouse_system）、访问管理控制台完成管理员初始化与API Key生成、导入演示物料与库位数据',
+            '使用 Docker 与 Git 在 RK3588-40 上部署示例 WMS（suharvest/warehouse_system）、访问管理控制台完成管理员初始化与 API Key 生成、导入演示物料与库位数据',
           tool: 'Docker / WMS',
           coverage: { taster: 'none', workshop: 'full', bootcamp: 'full' },
         },
         {
           no: '09',
-          title: 'MCP桥接服务配置与联调',
+          title: 'MCP 桥接服务配置与联调',
           detail:
-            '获取Watcher MCP接入端点与鉴权信息、编辑config.yml配置本地业务系统API地址与API Key、启动MCP Bridge服务并验证端点握手状态',
+            '获取 Watcher MCP 接入端点与鉴权信息、编辑 config.yml 配置本地业务系统 API 地址与 API Key、启动 MCP Bridge 服务并验证端点握手状态',
           tool: 'MCP Bridge',
           coverage: { taster: 'none', workshop: 'full', bootcamp: 'full' },
         },
         {
           no: '10',
-          title: 'OpenClaw自动化任务联动',
+          title: 'OpenClaw 自动化任务联动',
           detail:
-            '部署OpenClaw自动化工具环境、将自动化脚本注册为MCP可调用工具、配置语音指令触发自动化查询与定时任务',
+            '部署 OpenClaw 自动化工具环境、将自动化脚本注册为 MCP 可调用工具、配置语音指令触发自动化查询与定时任务',
           tool: 'OpenClaw',
           coverage: { taster: 'none', workshop: 'full', bootcamp: 'full' },
         },
@@ -1449,7 +1449,7 @@ export const modules: Module[] = [
           no: '11',
           title: '全链路整合联调与故障排查',
           detail:
-            '执行典型业务指令联调（库存查询、入库提交、物流追踪）、常见网络超时/API鉴权失效/端口冲突排查',
+            '执行典型业务指令联调（库存查询、入库提交、物流追踪）、常见网络超时 / API 鉴权失效 / 端口冲突排查',
           tool: '—',
           coverage: { taster: 'none', workshop: 'full', bootcamp: 'full' },
         },
@@ -1457,15 +1457,15 @@ export const modules: Module[] = [
           no: '12',
           title: '本地离线语音管线架构解析',
           detail:
-            'VAD/ASR/LLM/TTS各模块职责与数据流转时延分析、离线方案与云端方案指标对比（端到端延迟、并发限制、显存占用与隐私合规）',
+            'VAD / ASR / LLM / TTS 各模块职责与数据流转时延分析、离线方案与云端方案指标对比（端到端延迟、并发限制、显存占用与隐私合规）',
           tool: '—',
           coverage: { taster: 'none', workshop: 'none', bootcamp: 'full' },
         },
         {
           no: '13',
-          title: 'Jetson运行环境与模型部署调优',
+          title: 'Jetson 运行环境与模型部署调优',
           detail:
-            '验证JetPack/CUDA/TensorRT/PyTorch运行环境、部署ASR语音识别模型（Whisper/FunASR）、部署4-bit量化本地LLM（Qwen2.5-7B-Instruct）与TTS引擎（ChatTTS/Piper）、Watcher音频流定向至本地服务端口',
+            '验证 JetPack / CUDA / TensorRT / PyTorch 运行环境、部署 ASR 语音识别模型（Whisper / FunASR）、部署 4-bit 量化本地 LLM（Qwen2.5-7B-Instruct）与 TTS 引擎（ChatTTS / Piper）、将 Watcher 音频流定向至本地服务端口',
           tool: 'Jetson Orin NX',
           coverage: { taster: 'none', workshop: 'none', bootcamp: 'full' },
         },
@@ -1481,13 +1481,13 @@ export const modules: Module[] = [
           no: '15',
           title: '方案复盘与交付总结',
           detail:
-            '各组成果展示与业务场景适配答辩、云端SaaS架构vs本地边缘计算架构成本与选型复盘、业务系统API扩展规范与标准化交付文档归档',
+            '各组成果展示与业务场景适配答辩、云端 SaaS 架构与本地边缘计算架构成本选型复盘、业务系统 API 扩展规范与标准化交付文档归档',
           tool: '—',
           coverage: { taster: 'part', workshop: 'full', bootcamp: 'full' },
         },
       ],
       callout:
-        '体验课（taster）聚焦 L1 端侧体验与MCP工具调用演示，不含本地业务系统部署与离线管线；实战课（workshop）覆盖 L1+L2 完整Watcher配置、WMS部署与MCP桥接；交付课（bootcamp）全覆盖 L1+L2+L3，含Jetson离线语音管线部署。',
+        '体验课（taster）聚焦 L1 端侧体验与 MCP 工具调用演示，不含本地业务系统部署与离线管线；实战课（workshop）覆盖 L1+L2 完整 Watcher 配置、WMS 部署与 MCP 桥接；交付课（bootcamp）全覆盖 L1+L2+L3，含 Jetson 离线语音管线部署。',
     },
 
     formats: {
@@ -1518,7 +1518,7 @@ export const modules: Module[] = [
         {
           title: '体验课',
           finalProject: { label: '不含结课项目', included: false },
-          summary: '1 天 · 6–8h · L1 展示层 · 聚焦端侧体验与MCP工具调用演示',
+          summary: '1 天 · 6–8h · L1 展示层 · 聚焦端侧体验与 MCP 工具调用演示',
           rows: [
             {
               title: 'Day 1 上午',
@@ -1528,7 +1528,7 @@ export const modules: Module[] = [
             {
               title: 'Day 1 下午',
               meta: '模块 04 + 05 + 15(精简)',
-              body: '语音问答与Agent机制 → MCP工具调用与业务集成演示 → 总结复盘',
+              body: '语音问答与 Agent 机制 → MCP 工具调用与业务集成演示 → 总结复盘',
             },
           ],
           footnote: '不含本地业务系统部署与离线语音管线。',
@@ -1536,7 +1536,7 @@ export const modules: Module[] = [
         {
           title: '实战课',
           finalProject: { label: '含结课项目', included: true },
-          summary: '2–3 天 · 14–20h · L1+L2 · Watcher配置 + 本地WMS部署 + MCP桥接 + 自动化联动',
+          summary: '2–3 天 · 14–20h · L1+L2 · Watcher 配置 + 本地 WMS 部署 + MCP 桥接 + 自动化联动',
           rows: [
             {
               title: 'Day 1',
@@ -1546,7 +1546,7 @@ export const modules: Module[] = [
             {
               title: 'Day 2',
               meta: '模块 06–09',
-              body: 'Watcher视觉配置 → Agent角色提示词 → WMS Docker部署 → MCP桥接联调',
+              body: 'Watcher 视觉配置 → Agent 角色提示词 → WMS Docker 部署 → MCP 桥接联调',
             },
             {
               title: 'Day 3（可选）',
@@ -1555,12 +1555,12 @@ export const modules: Module[] = [
             },
           ],
           footnote:
-            '实战课交付 1 套包含视觉感知、语音Agent、本地WMS与自动化工具的完整多模态系统联调。学员基础要求：具备Docker基础与REST API调用经验。',
+            '实战课交付 1 套包含视觉感知、语音 Agent、本地 WMS 与自动化工具的完整多模态系统联调。学员基础要求：具备 Docker 基础与 REST API 调用经验。',
         },
         {
           title: '交付课',
           finalProject: { label: '含结课项目', included: true },
-          summary: '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含Jetson离线语音管线部署与断网验证',
+          summary: '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含 Jetson 离线语音管线部署与断网验证',
           rows: [
             {
               title: 'Day 1–2',
@@ -1584,7 +1584,7 @@ export const modules: Module[] = [
             },
           ],
           footnote:
-            '交付课目标是具备在强隐私与工业隔离网环境下交付AI交互方案的能力。学员基础要求：具备Linux、PyTorch/Jetson基础与shell操作能力，熟悉 L1–L2 能力。',
+            '交付课目标是具备在强隐私与工业隔离网环境下交付 AI 交互方案的能力。学员基础要求：具备 Linux、PyTorch / Jetson 基础与 Shell 操作能力，熟悉 L1–L2 能力。',
         },
       ],
       callouts: [
@@ -1603,23 +1603,23 @@ export const modules: Module[] = [
       '以下为完整版（交付课）交付；实战课交付前 4 项；体验课交付第 1、2 项的精简版。',
     deliverableCards: [
       {
-        title: 'Watcher硬件配置与视觉模型参数说明书',
+        title: 'Watcher 硬件配置与视觉模型参数说明书',
         body: '含Watcher设备配网记录、视觉模型选择与置信度/触发阈值参数、事件上报规则配置清单。',
       },
       {
-        title: '多模态Agent角色提示词与记忆策略配置文件',
+        title: '多模态 Agent 角色提示词与记忆策略配置文件',
         body: '含Agent角色System Prompt、交互风格设定、对话记忆模式（无记忆/短期/长期）配置与效果验证记录。',
       },
       {
-        title: '本地业务系统与MCP桥接服务部署指南',
+        title: '本地业务系统与 MCP 桥接服务部署指南',
         body: '含Docker Compose部署文件、WMS管理控制台初始化步骤、MCP Bridge config.yml配置模板与API Key管理规范。',
       },
       {
-        title: 'OpenClaw自动化工具配置脚本',
+        title: 'OpenClaw 自动化工具配置脚本',
         body: '含OpenClaw环境部署步骤、自动化脚本注册为MCP可调用工具的配置、语音指令触发自动化查询与定时任务的配置示例。',
       },
       {
-        title: '本地离线语音AI管线部署与调优手册（L3）',
+        title: '本地离线语音 AI 管线部署与调优手册（L3）',
         body: '含VAD→ASR→LLM→TTS各模块部署步骤、Jetson显存分配与量化模型优化参数、断网联调测试记录与端到端延迟测试报告。',
       },
     ],
@@ -1628,7 +1628,7 @@ export const modules: Module[] = [
       heading: '打通物理端侧交互与企业存量业务逻辑',
       emphasis: '物理端侧交互与企业存量业务逻辑',
       intro:
-        'M2 聚焦于如何将视觉感知、语音交互与存量业务系统（如 WMS、ERP）深层串联。课程避开纯云端调用的套路，直击物理终端接入、MCP 工具调用以及纯局域网离线部署等核心工程难点，为讲师提供全套开箱即可验证的软硬件环境。',
+        'M2 的重点是把视觉感知、语音交互与企业现有的业务系统（如 WMS、ERP）真正接通。课程不讲纯云端调用的通用玩具案例，而是带着学员做物理终端接入、MCP 工具调用和纯内网离线部署，为讲师提供开箱即用的软硬件实操环境。',
       openings: [
         {
           no: '切入点 01',
@@ -1643,7 +1643,7 @@ export const modules: Module[] = [
         {
           no: '切入点 03',
           title: '融入工程经验',
-          body: '结合现场环境底噪、远场拾音限制以及大模型工具调用幻觉控制等实际工程考量，帮助学员建立系统级稳定性思维。',
+          body: '把现场底噪、远场拾音限制以及大模型工具调用时的幻觉防护等工程细节讲透，让学员明白真实环境和实验室 demo 的差别。',
         },
       ],
     },
@@ -1661,11 +1661,11 @@ export const modules: Module[] = [
       ],
       notApplicable: [
         '不替代高并发、长链路的专用人工客服系统',
-        '不承诺对模糊主观多轮逻辑的100%准确推理',
-        '不包含对客户未开放API的封闭旧系统的反向破解开发',
+        '不承诺对模糊主观多轮逻辑的 100% 准确推理',
+        '不包含对客户未开放 API 的封闭旧系统的反向破解开发',
         '不适用于高噪声工业现场的远场盲收（需配置定向收音）',
-        'L1/L2方案依赖互联网连接大模型服务，无外网环境须切换至L3离线方案',
-        'L3离线方案需100 TOPS级别边缘算力（Jetson Orin NX 16GB及以上），RK3588-40（6 TOPS）无法承载本地大模型推理',
+        'L1/L2 方案依赖互联网连接大模型服务，无外网环境须切换至 L3 离线方案',
+        'L3 离线方案需 100 TOPS 级别边缘算力（Jetson Orin NX 16GB 及以上），RK3588-40（6 TOPS）无法承载本地大模型推理',
         '语音识别准确率受现场环境底噪、方言口音及专业行业词库影响，不承诺特定场景下的识别准确率指标',
       ],
     },

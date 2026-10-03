@@ -567,14 +567,14 @@ export const esDict: Record<string, string> = {
   '多模态 AI 交互': 'Interacción de IA Multimodal',
   '对着终端说话就能查库存、录出入库、控设备；也可以整套跑在本地，断网可用。':
     'Hable con el terminal para consultar existencias, registrar entradas y salidas y controlar dispositivos. Todo puede ejecutarse en local y seguir funcionando sin conexión.',
-  '基于物理AI终端，融合边缘视觉、语音与业务系统API，实现多模态空间交互。':
-    'Basado en terminales de IA físicos, integra visión en el borde, voz y APIs de sistemas de negocio para lograr la interacción espacial multimodal.',
-  多模态空间交互: 'Interacción espacial multimodal',
-  '仓储管理、展厅导览、智能前台等场景中，现场人员需停下手工操作，通过键盘或手机手动检索业务数据，效率低下。传统交互终端缺乏视觉上下文，无法主动感知人员靠近或异常动作。智能终端多为封闭生态，难以与存量WMS/ERP/CRM系统对接；部分工业与政企场景禁止音频与业务数据上传公网。':
-    'En escenarios como gestión de almacenes, guías de salas de exposición y recepciones inteligentes, el personal en sitio debe detener las operaciones manuales para buscar datos de negocio mediante teclado o teléfono, con baja eficiencia. Los terminales de interacción tradicionales carecen de contexto visual y no pueden percibir proactivamente la aproximación de personas o movimientos anómalos. Los terminales inteligentes suelen ser ecosistemas cerrados, difíciles de integrar con sistemas existentes WMS/ERP/CRM; algunos escenarios industriales y gubernamentales prohíben la subida de audio y datos de negocio a la red pública.',
+  '基于物理 AI 终端，融合边缘视觉、语音与业务系统 API，实现多模态空间交互。':
+    'Basado en terminales de IA físicos, integra visión en el borde, voz y APIs de sistemas de negocio para lograr interacción espacial multimodal.',
+  多模态空间交互: 'interacción espacial multimodal',
+  '仓储管理、展厅导览与智能前台这些场景里，现场人员要查业务数据，往往得先放下手里的活，掏出手机或回到电脑前手动敲键盘。传统终端没有视觉感知，人走近了不会主动响应，也识别不了异常动作。很多智能终端生态封闭，接不进现有的 WMS、ERP 系统；而在工业与政企现场，音频和业务数据往往严禁上传公网。':
+    'En almacenes, salas de exposición y recepciones inteligentes, el personal debe interrumpir sus tareas para buscar datos a mano en móviles o teclados. Los terminales tradicionales carecen de contexto visual: no detectan cuando alguien se acerca ni identifican acciones anómalas. Muchos terminales inteligentes forman ecosistemas cerrados difíciles de integrar con sistemas WMS y ERP existentes, y las normativas industriales prohíben subir audio y datos operativos a la nube pública.',
   进阶: 'Avanzado',
-  'L1零基础或首次接触边缘AI交互设备；L2需具备Docker基础与REST API调用经验；L3需具备Linux、PyTorch/Jetson基础与shell操作能力':
-    'L1 sin base o primer contacto con dispositivos de interacción de IA en el borde; L2 requiere base de Docker y experiencia en llamadas REST API; L3 requiere base de Linux, PyTorch/Jetson y capacidad de operaciones shell',
+  'L1 适合零基础或首次接触边缘 AI 交互设备；L2 需具备 Docker 基础与 REST API 调用经验；L3 需具备 Linux、PyTorch / Jetson 基础与 Shell 操作能力':
+    'L1 apto para principiantes o personas sin contacto previo con dispositivos de IA en el borde; L2 requiere nociones de Docker y consumo de REST API; L3 exige conocimientos de Linux, PyTorch / Jetson y manejo de shell',
   '智慧仓储与车间管理：免手动查库存、语音录入出入库、异常物料视觉提醒':
     'Almacenes inteligentes y gestión de talleres: consulta de inventario sin operaciones manuales, registro de entrada/salida por voz, alertas visuales de materiales anómalos',
   '展厅与公共导览：主动人员识别、多语种语音讲解、展位联动控制':
@@ -597,81 +597,81 @@ export const esDict: Record<string, string> = {
   'LLM（Qwen2.5-7B-Instruct 4-bit量化）': 'LLM (Qwen2.5-7B-Instruct cuantizado 4-bit)',
   'SenseCAP Watcher（小智英文版）': 'SenseCAP Watcher (versión en inglés XiaoZhi)',
   'reComputer RK3588-40 边缘智能控制器': 'Controlador inteligente en el borde reComputer RK3588-40',
-  'reTerminal D1001 8寸智能触控屏': 'Pantalla tactil inteligente reTerminal D1001 de 8 pulgadas',
+  'reTerminal D1001 8 英寸智能触控屏': 'reTerminal D1001 Pantalla táctil inteligente de 8 pulgadas',
   'reComputer J4012（Jetson Orin NX 16GB）': 'reComputer J4012 (Jetson Orin NX 16 GB)',
   端侧视觉目标检测与事件触发: 'Detección de objetos visuales en el borde y activación de eventos',
-  自然语言语音查询与Agent角色配置:
-    'Consulta de voz en lenguaje natural y configuración de roles de Agente',
-  基于MCP协议的业务系统工具调用:
-    'Llamadas a herramientas de sistemas de negocio basadas en el protocolo MCP',
-  本地WMS系统Docker部署与API集成: 'Despliegue Docker del sistema WMS local e integración de API',
-  '纯本地离线语音AI管线部署（VAD→ASR→LLM→TTS）':
-    'Despliegue de pipeline de IA de voz offline puramente local (VAD→ASR→LLM→TTS)',
+  '自然语言语音查询与 Agent 角色配置':
+    'Consultas por voz en lenguaje natural y configuración de roles de Agent',
+  '基于 MCP 协议的业务系统工具调用':
+    'Llamada a herramientas de sistemas de negocio basada en el protocolo MCP',
+  '本地 WMS 系统 Docker 部署与 API 集成':
+    'Despliegue en Docker del sistema WMS local e integración de API',
+  '纯本地离线语音 AI 管线部署（VAD → ASR → LLM → TTS）':
+    'Despliegue de canalización de IA de voz local y desconectada (VAD → ASR → LLM → TTS)',
   企业信息化与智能化工程师: 'Ingenieros de informatización e inteligencia empresarial',
-  Watcher硬件配置与视觉模型参数说明书:
-    'Manual de configuración de hardware Watcher y parámetros de modelos visuales',
-  多模态Agent角色提示词与记忆策略配置文件:
-    'Archivos de configuración de prompts de roles de Agente multimodal y estrategias de memoria',
-  本地业务系统与MCP桥接服务部署指南:
-    'Guia de despliegue de sistema de negocio local y servicio de puente MCP',
-  OpenClaw自动化工具配置脚本:
-    'Script de configuración de la herramienta de automatización OpenClaw',
-  '本地离线语音AI管线部署与调优手册（L3）':
-    'Manual de despliegue y optimización del pipeline de IA de voz offline local (L3)',
+  'Watcher 硬件配置与视觉模型参数说明书':
+    'Manual de configuración de hardware y parámetros de visión para Watcher',
+  '多模态 Agent 角色提示词与记忆策略配置文件':
+    'Archivos de configuración de prompts y estrategias de memoria para Agent multimodal',
+  '本地业务系统与 MCP 桥接服务部署指南':
+    'Guía de despliegue para el sistema de negocio local y el servicio de puente MCP',
+  'OpenClaw 自动化工具配置脚本':
+    'Scripts de configuración de herramientas de automatización OpenClaw',
+  '本地离线语音 AI 管线部署与调优手册（L3）':
+    'Manual de despliegue y optimización de la canalización de IA de voz local (L3)',
   多模态交互能力体验: 'Experiencia de capacidades de interacción multimodal',
   '用语音向 Watcher 查询数据、控制设备':
     'Consulte datos y controle dispositivos hablando con el Watcher',
-  理解边缘视觉与大模型Agent结合的技术架构:
-    'Comprender la arquitectura técnica de la combinación de visión en el borde y Agentes de grandes modelos',
-  掌握MCP协议在端侧AI与业务系统对接中的核心作用:
-    'Dominar el papel central del protocolo MCP en la integración entre IA en el borde y sistemas de negocio',
-  掌握云端协同与本地部署在不同业务场景下的选型逻辑:
-    'Dominar la lógica de selección entre colaboración en la nube y despliegue local en diferentes escenarios de negocio',
+  '理解边缘视觉与大模型 Agent 结合的技术架构':
+    'Comprender la arquitectura técnica que combina visión en el borde y agentes basados en LLM',
+  '掌握 MCP 协议在端侧 AI 与业务系统对接中的核心作用':
+    'Dominar el papel clave del protocolo MCP en la integración entre IA en el terminal y sistemas de negocio',
+  掌握云端协同与本地部署在不同业务场景下的选型依据:
+    'Dominar los criterios de selección entre arquitectura nube-borde y despliegue local según el caso de uso',
   业务系统集成与联动配置: 'Integración de sistemas de negocio y configuración de vinculación',
   '通过 MCP 把语音接到仓储等业务系统':
     'Conecte la voz con el almacén y otros sistemas de negocio mediante MCP',
-  独立配置Watcher视觉与语音Agent参数:
-    'Configurar de forma independiente los parámetros de Agente visual y de voz de Watcher',
-  掌握基于Docker的本地业务系统与MCP桥接服务部署:
-    'Dominar el despliegue de sistemas de negocio locales y servicios de puente MCP basados en Docker',
-  掌握基于MCP协议扩展新业务API的方法:
-    'Dominar el método para extender nuevas APIs de negocio basadas en el protocolo MCP',
+  '独立配置 Watcher 视觉与语音 Agent 参数':
+    'Configurar de manera autónoma los parámetros de visión y voz del Agent en Watcher',
+  '掌握基于 Docker 的本地业务系统与 MCP 桥接服务部署':
+    'Dominar el despliegue con Docker de sistemas de negocio locales y servicios de puente MCP',
+  '掌握基于 MCP 协议扩展新业务 API 的方法':
+    'Dominar la ampliación de nuevas APIs de negocio mediante el protocolo MCP',
   端到端本地离线语音AI管线部署:
     'Despliegue de pipeline de IA de voz offline local extremo a extremo',
   '语音管线全部跑在本地，断网可用，数据不出内网':
     'Ejecute todo el flujo de voz en local: funciona sin conexión y los datos no salen de la intranet',
-  '掌握VAD→ASR→LLM→TTS完整本地端到端语音管线架构':
-    'Dominar la arquitectura completa del pipeline de voz local extremo a extremo VAD→ASR→LLM→TTS',
-  掌握在Jetson边缘计算硬件上量化与部署优化大模型的方法:
-    'Dominar los métodos de cuantización y optimización de despliegue de grandes modelos en hardware de computación en el borde Jetson',
-  具备在强隐私与工业隔离网环境下交付AI交互方案的能力:
-    'Capacidad para entregar soluciones de interacción de IA en entornos de alta privacidad y redes industriales aisladas',
-  L3离线算力: 'Potencia de cómputo offline L3',
-  'SenseCAP Watcher 小智英文版': 'SenseCAP Watcher, versión en inglés XiaoZhi',
+  '掌握 VAD → ASR → LLM → TTS 完整本地端到端语音管线架构':
+    'Dominar la arquitectura completa de canalización de voz local de extremo a extremo (VAD → ASR → LLM → TTS)',
+  '掌握在 Jetson 边缘计算硬件上量化与部署大模型的方法':
+    'Dominar la cuantización y despliegue de modelos LLM en hardware de borde Jetson',
+  '具备在强隐私与工业隔离网环境下交付 AI 交互方案的能力':
+    'Capacidad para desplegar soluciones de interacción con IA en entornos industriales aislados y con altos requisitos de privacidad',
+  'L3 离线算力': 'Potencia offline L3',
   '端侧多模态交互终端 · 语音采集与视觉识别入口':
     'Terminal de interaccion multimodal en dispositivo · entrada de captura de voz y reconocimiento visual',
-  '边缘智能控制器 · 业务系统与MCP桥接主机':
-    'Controlador inteligente en el borde · host de sistema de negocio y puente MCP',
-  '8寸工业智能触控屏 · 工位人机界面':
-    'Pantalla táctil inteligente industrial de 8 pulgadas · interfaz hombre-máquina de estación de trabajo',
-  'L3进阶算力主机 · 纯本地离线语音管线':
-    'Host de cómputo avanzado L3 · pipeline de voz puramente local y offline',
+  '边缘智能控制器 · 业务系统与 MCP 桥接主机':
+    'Controlador inteligente de borde · Host de sistemas de negocio y puente MCP',
+  '8 英寸工业智能触控屏 · 工位人机界面':
+    'Pantalla táctil industrial inteligente de 8 pulgadas · HMI de estación de trabajo',
+  'L3 进阶算力主机 · 纯本地离线语音管线':
+    'Host de computación avanzada L3 · Canalización de voz local desconectada',
   '本课程以「看得见的 AI 终端 + 本地推理算力」为核心教具。':
     'Este curso emplea como material didáctico central los «terminales de IA visibles + potencia de cómputo local de inferencia».',
   '端侧多模态交互终端，语音采集与视觉识别入口':
     'Terminal de interacción multimodal en el borde, entrada de captura de voz y reconocimiento visual',
   '集成音视频采集与屏幕显示，支持目标检测、人员靠近感知与自然语言语音交互，通过 Wi-Fi 接入 SenseCraft AI 平台，每组标准配置 2 台。':
     'Integra captura de audio/video y pantalla, admitiendo detección de objetos, presencia humana e interacción por voz en lenguaje natural mediante Wi-Fi con SenseCraft AI; 2 unidades por grupo.',
-  运行业务系统与MCP桥接服务的边缘主机:
-    'Host en el borde que ejecuta sistemas de negocio y servicios de puente MCP',
+  '运行业务系统与 MCP 桥接服务的边缘主机':
+    'Host de borde que ejecuta sistemas de negocio y el servicio de puente MCP',
   '配备 16GB 内存与 6 TOPS 算力，运行 Docker 容器化 WMS 仓储系统与 MCP Bridge 桥接服务，实现局域网业务数据与大模型工具调用的对接，配独立电源适配器。':
     'Equipado con 16 GB de RAM y 6 TOPS de cálculo, ejecuta el sistema WMS en contenedores Docker y servicios MCP Bridge para conectar datos de negocio locales con llamadas a herramientas de LLM; incluye adaptador de corriente dedicado.',
   '工位人机界面，仓管业务数据录入与状态监视':
     'Interfaz hombre-maquina de estacion de trabajo, entrada de datos de negocio de almacenamiento y monitoreo de estado',
   '8 英寸工业智能触控终端，集成摄像头与双麦克风。作为工位人机交互界面，用于仓管数据录入与状态监视，可直连主机展示 WMS 管理控制台与交互日志。':
     'Terminal táctil industrial inteligente de 8 pulgadas con cámara y micrófono dual. Actúa como HMI de puesto de trabajo para entrada de datos de almacén y monitorización, conectándose directamente al host para mostrar la consola y los registros.',
-  'L3进阶边缘算力主机，部署纯本地离线语音管线':
-    'Host de cómputo en el borde avanzado de L3, despliega pipeline de voz offline puramente local',
+  'L3 进阶边缘算力主机，部署纯本地离线语音管线':
+    'Host de computación de borde avanzada L3 para desplegar la canalización de voz offline',
   '具备 100 TOPS 级端侧算力，预置完整 JetPack、CUDA 与 TensorRT 环境，部署纯本地离线语音 AI 管线，断网环境下依然稳定可用。':
     'Proporciona 100 TOPS de potencia perimetral con entornos JetPack, CUDA y TensorRT preconfigurados, desplegando un pipeline de IA de voz completamente local y funcional sin conexión a internet.',
   '另配便携式现场显示器（13.3" 1080P）、CUDY AX3000 Wi-Fi 6路由器、供电排插、六类千兆网线、智能仓管WMS实操模拟物料包（条码标贴/货位标签/实体样本盒）、Watcher桌面支架等通用配件。':
@@ -681,90 +681,91 @@ export const esDict: Record<string, string> = {
   Watcher配网绑定: 'Configuración de red y vinculación Watcher',
   视觉模型与Agent角色配置: 'Configuracion de modelo visual y rol de Agent',
   语音查询与MCP工具调用体验: 'Experiencia de consulta por voz y llamadas a herramientas MCP',
-  '标准协议桥接 · 局域网业务数据不出域':
-    'Puente de protocolos estandar · datos de negocio de red local no salen del dominio',
+  '标准协议桥接 · 局域网业务数据不出内网':
+    'Puente con protocolos estándar · Los datos operativos nunca salen de la red interna',
   '本地WMS Docker部署': 'Despliegue Docker de WMS local',
   'MCP桥接config.yml配置': 'Configuración config.yml del puente MCP',
   OpenClaw自动化工具注册与联调: 'Registro e integración de herramientas de automatización OpenClaw',
   'Jetson Orin NX + 离线语音管线': 'Jetson Orin NX + pipeline de voz offline',
-  'VAD→ASR→LLM→TTS纯本地全流程 · 零公网依赖':
-    'Ciclo cerrado puramente local VAD→ASR→LLM→TTS · cero dependencia de red pública',
+  'VAD → ASR → LLM → TTS 纯本地全流程 · 零公网依赖':
+    'Flujo completo puramente local VAD → ASR → LLM → TTS · Cero dependencia de internet',
   JetPack环境验证: 'Verificación de entorno JetPack',
   量化模型部署与显存调优: 'Despliegue de modelo cuantizado y optimizacion de memoria de video',
   断网联调与延迟优化: 'Integracion sin red y optimizacion de latencia',
   '关键转折点 · 从云端协同到本地离线私有化部署':
     'Punto de inflexión clave · de la colaboración en nube al despliegue privatizado local y offline',
-  'SenseCraft AI云端方案解决「快速验证、到手就能用」；MCP桥接让业务数据第一次在局域网内流转，核心库存与业务数据不出域；Jetson离线管线则彻底切断公网依赖，在强隐私与工业隔离网环境下实现零外网语音交互。':
-    'La solución en nube SenseCraft AI resuelve la «verificación rápida y lista para usar»; el puente MCP permite que los datos de negocio cierren ciclo dentro de la red local por primera vez, los datos centrales de inventario y negocio no salen del dominio; el pipeline offline Jetson corta completamente la dependencia de red pública, logrando interacción de voz sin internet en entornos de alta privacidad y redes aisladas industriales.',
-  'L1/L2依赖互联网连接大模型服务；L3需100 TOPS级别边缘算力（Jetson Orin NX 16GB），RK3588-40（6 TOPS）无法承载本地大模型推理。':
-    'L1/L2 dependen de conexión a internet para servicios de grandes modelos; L3 requiere potencia de cómputo en el borde de nivel 100 TOPS (Jetson Orin NX 16GB), el RK3588-40 (6 TOPS) no puede soportar inferencia de grandes modelos locales.',
-  '硬件台架清点、网络连通性测试、Watcher固件预检与平台账号初始化、RK3588-40 Docker环境与WMS镜像预置、J4012 JetPack环境预载、教学物料准备':
-    'Inventario de banco de hardware, prueba de conectividad de red, verificacion previa de firmware Watcher e inicializacion de cuenta de plataforma, entorno Docker RK3588-40 e imagen WMS preinstalada, entorno JetPack J4012 precargado, preparacion de materiales docentes',
+  'SenseCraft AI 云端方案适合前期快速打通原型；MCP 桥接让库存与业务数据留在局域网内流转，不向外网泄露；Jetson 离线管线则彻底切断公网依赖，在严苛的隔离网和高保密环境下实现纯本地语音交互。':
+    'La solución en la nube SenseCraft AI permite validar prototipos con rapidez; el puente MCP mantiene el inventario y los registros en la red local; la canalización offline con Jetson elimina dependencias externas para operar en redes aisladas y de alta privacidad.',
+  'L1/L2 依赖互联网连接大模型服务；L3 需 100 TOPS 级别边缘算力（Jetson Orin NX 16GB），RK3588-40（6 TOPS）无法承载本地大模型推理。':
+    'L1/L2 requieren conexión a internet para los servicios LLM; L3 necesita 100 TOPS de potencia en el borde (Jetson Orin NX 16GB); el procesador RK3588-40 (6 TOPS) no admite inferencia de LLM en local.',
+  '硬件台架清点、网络连通性测试、Watcher 固件预检与平台账号初始化、RK3588-40 Docker 环境与 WMS 镜像预置、J4012 JetPack 环境预载与教学物料准备':
+    'Inventario del banco de trabajo, verificación de red, revisión del firmware de Watcher, imágenes Docker y WMS en RK3588-40, preparación de JetPack en J4012 y materiales didácticos',
   多模态交互架构与核心概念: 'Arquitectura de interacción multimodal y conceptos centrales',
-  '边缘视觉、语音Agent、MCP协议与云边协同架构解析；云端协同与本地离线两种部署形态的技术差异与选型依据':
-    'Analisis de arquitectura de vision en el borde, Agent de voz, protocolo MCP y colaboracion nube-borde; diferencias tecnicas y base de seleccion entre dos formas de despliegue: colaboracion en nube y local offline',
+  '边缘视觉、语音 Agent、MCP 协议与云边协同架构解析；云端协同与本地离线两种部署形态的技术差异与选型依据':
+    'Análisis de visión en el borde, agentes de voz, protocolo MCP y arquitectura nube-borde; diferencias técnicas y criterios de selección entre despliegue en la nube y offline',
   端侧轻量视觉推理体验: 'Experiencia de inferencia visual ligera en dispositivo',
-  'Watcher目标检测模型体验（物料识别、人员靠近、特定动作感知）、SenseCraft AI零代码视觉模型适配、UART与网络数据输出格式解析':
-    'Experiencia con modelo de detección de objetos Watcher (reconocimiento de materiales, aproximación de personas, percepción de acciones específicas), adaptación de modelo visual sin código SenseCraft AI, análisis de formatos de salida de datos UART y de red',
+  'Watcher 目标检测模型体验（物料识别、人员靠近、特定动作感知）、SenseCraft AI 零代码视觉模型适配、UART 与网络数据输出格式解析':
+    'Prácticas con modelos de detección en Watcher (reconocimiento de piezas, detección de proximidad y gestos), adaptación sin código con SenseCraft AI y formatos de datos por UART/red',
   场景化语音问答与Agent机制: 'Preguntas y respuestas por voz contextualizadas y mecanismo de Agent',
-  '仓储/零售场景自然语言实时查询演示、语音输入→推理→语音合成播报全链路体验、Agent提示词与角色设定、对话记忆机制对比（无记忆/短期/长期）':
-    'Demostración de consulta en tiempo real por lenguaje natural en escenarios de almacenamiento/venta minorista, experiencia de cadena completa de entrada de voz→inferencia→reproducción por síntesis de voz, prompts de Agent y configuración de roles, comparación de mecanismos de memoria de diálogo (sin memoria/corto plazo/largo plazo)',
-  MCP工具调用与业务集成演示: 'Demostración de llamadas a herramientas MCP e integración de negocio',
-  '基于MCP协议的外部工具调用演示（实时查询仓储数据库）、智慧仓管全链路演示（语音查库存/入库/出库）、OpenClaw桌面自动化联动演示':
-    'Demostración de llamadas a herramientas externas basadas en protocolo MCP (consulta en tiempo real a base de datos de almacén), demostración de cadena completa de gestión inteligente de almacenes (consulta de inventario/entrada/salida por voz), demostración de vinculación de automatización de escritorio OpenClaw',
-  Watcher视觉AI与端侧网络配置: 'Configuración de IA visual Watcher y red en dispositivo',
-  'Watcher联网配置与SenseCraft平台绑定、视觉模型选择与置信度/触发阈值参数调优、事件上报规则配置（目标出现、区域检测）':
-    'Configuración de red Watcher y vinculación a plataforma SenseCraft, selección de modelo visual y optimización de parámetros de confianza/umbral de activación, configuración de reglas de reporte de eventos (aparición de objetos, detección de zonas)',
-  语音Agent与角色提示词配置: 'Configuracion de Agent de voz y prompts de rol',
-  '定义Agent角色（仓管助手/展厅讲解员）、配置System Prompt与交互风格、记忆模式切换与效果验证':
-    'Definición de roles de Agent (asistente de almacén/guía de sala de exposiciones), configuración de System Prompt y estilo de interacción, cambio de modos de memoria y verificación de efectos',
-  本地业务管理系统Docker部署: 'Despliegue Docker de sistema de gestion de negocio local',
-  '使用Docker与Git在RK3588-40上部署示例WMS（suharvest/warehouse_system）、访问管理控制台完成管理员初始化与API Key生成、导入演示物料与库位数据':
-    'Despliegue del WMS de ejemplo (suharvest/warehouse_system) en RK3588-40 mediante Docker y Git, acceso a la consola de administración para completar la inicialización de administrador y generación de API Key, importación de materiales de demostración y datos de ubicaciones de almacén',
-  MCP桥接服务配置与联调: 'Configuración e integración del servicio de puente MCP',
-  '获取Watcher MCP接入端点与鉴权信息、编辑config.yml配置本地业务系统API地址与API Key、启动MCP Bridge服务并验证端点握手状态':
-    'Obtencion de punto de acceso y autenticacion MCP de Watcher, edicion de config.yml para configurar direccion API y API Key del sistema de negocio local, inicio del servicio MCP Bridge y verificacion del estado de handshake del punto de acceso',
-  OpenClaw自动化任务联动: 'Vinculación de tareas de automatización OpenClaw',
-  '部署OpenClaw自动化工具环境、将自动化脚本注册为MCP可调用工具、配置语音指令触发自动化查询与定时任务':
-    'Despliegue del entorno de herramientas de automatizacion OpenClaw, registro de scripts de automatizacion como herramientas invocables por MCP, configuracion de activacion de consultas de automatizacion y tareas programadas mediante comandos de voz',
+  '仓储与零售场景自然语言实时查询演示、语音输入 → 推理 → 语音合成播报全链路体验、Agent 提示词与角色设定、对话记忆机制对比（无记忆 / 短期 / 长期）':
+    'Consultas en tiempo real para logística y retail, ciclo de voz completo (entrada → inferencia → reproducción TTS), configuración de prompts/roles y comparativa de memoria (sin memoria / corto / largo plazo)',
+  'MCP 工具调用与业务集成演示':
+    'Demostración de llamadas a herramientas MCP e integración operativa',
+  '基于 MCP 协议的外部工具调用演示（实时查询仓储数据库）、智慧仓管全链路演示（语音查库存 / 入库 / 出库）、OpenClaw 桌面自动化联动演示':
+    'Demostración de llamadas a herramientas externas con MCP (consultas a base de datos de almacén), flujo completo de almacén inteligente y automatización con OpenClaw',
+  'Watcher 视觉 AI 与端侧网络配置': 'IA de visión en Watcher y configuración de red local',
+  'Watcher 联网配置与 SenseCraft 平台绑定、视觉模型选择与置信度 / 触发阈值参数调优、事件上报规则配置（目标出现、区域检测）':
+    'Conexión de red de Watcher y vinculación a SenseCraft, selección de modelos de visión y ajuste de umbrales, y reglas de notificación de eventos (presencia, detección de zonas)',
+  '语音 Agent 与角色提示词配置': 'Configuración de Agent de voz y prompts de rol',
+  '定义 Agent 角色（仓管助手 / 展厅讲解员）、配置 System Prompt 与交互风格、记忆模式切换与效果验证':
+    'Definición de roles del Agent (asistente de almacén / guía de exposición), configuración de System Prompt y estilo conversacional, y validación de modos de memoria',
+  '本地业务管理系统 Docker 部署': 'Despliegue con Docker del sistema de gestión local',
+  '使用 Docker 与 Git 在 RK3588-40 上部署示例 WMS（suharvest/warehouse_system）、访问管理控制台完成管理员初始化与 API Key 生成、导入演示物料与库位数据':
+    'Despliegue del sistema WMS de prueba (suharvest/warehouse_system) con Docker y Git en RK3588-40, configuración del panel de control, generación de claves API e importación de datos',
+  'MCP 桥接服务配置与联调': 'Configuración y pruebas del servicio de puente MCP',
+  '获取 Watcher MCP 接入端点与鉴权信息、编辑 config.yml 配置本地业务系统 API 地址与 API Key、启动 MCP Bridge 服务并验证端点握手状态':
+    'Obtención de endpoints y credenciales MCP para Watcher, configuración de config.yml con URL y claves de la API local, inicio del servicio MCP Bridge y validación de conectividad',
+  'OpenClaw 自动化任务联动': 'Integración de tareas automatizadas con OpenClaw',
+  '部署 OpenClaw 自动化工具环境、将自动化脚本注册为 MCP 可调用工具、配置语音指令触发自动化查询与定时任务':
+    'Despliegue del entorno de automatización OpenClaw, registro de scripts como herramientas MCP y configuración de comandos de voz para consultas programadas y tareas',
   全链路整合联调与故障排查: 'Integración de cadena completa y depuración de fallos',
-  '执行典型业务指令联调（库存查询、入库提交、物流追踪）、常见网络超时/API鉴权失效/端口冲突排查':
-    'Integración de ejecución de comandos de negocio típicos (consulta de inventario, envío de entrada, seguimiento logístico), depuración de problemas comunes de tiempo de espera de red/fallo de autenticación API/conflicto de puertos',
+  '执行典型业务指令联调（库存查询、入库提交、物流追踪）、常见网络超时 / API 鉴权失效 / 端口冲突排查':
+    'Validación de comandos operativos habituales (consulta de stock, registro de entradas, seguimiento) y resolución de problemas de timeout, fallos de autenticación o puertos',
   本地离线语音管线架构解析: 'Analisis de arquitectura de pipeline de voz offline local',
-  'VAD/ASR/LLM/TTS各模块职责与数据流转时延分析、离线方案与云端方案指标对比（端到端延迟、并发限制、显存占用与隐私合规）':
-    'Análisis de responsabilidades de cada módulo VAD/ASR/LLM/TTS y latencia de flujo de datos, comparación de indicadores entre solución offline y solución en nube (latencia de extremo a extremo, límites de concurrencia, uso de memoria de video y cumplimiento de privacidad)',
-  Jetson运行环境与模型部署调优:
-    'Entorno de ejecución Jetson y optimización de despliegue de modelos',
-  '验证JetPack/CUDA/TensorRT/PyTorch运行环境、部署ASR语音识别模型（Whisper/FunASR）、部署4-bit量化本地LLM（Qwen2.5-7B-Instruct）与TTS引擎（ChatTTS/Piper）、Watcher音频流定向至本地服务端口':
-    'Verificacion del entorno de ejecucion JetPack/CUDA/TensorRT/PyTorch, despliegue de modelo de reconocimiento de voz ASR (Whisper/FunASR), despliegue de LLM local cuantizado de 4 bits (Qwen2.5-7B-Instruct) y motor TTS (ChatTTS/Piper), direccionamiento del flujo de audio de Watcher al puerto de servicio local',
+  'VAD / ASR / LLM / TTS 各模块职责与数据流转时延分析、离线方案与云端方案指标对比（端到端延迟、并发限制、显存占用与隐私合规）':
+    'Análisis de responsabilidades y latencias en cada módulo (VAD/ASR/LLM/TTS); comparativa entre arquitectura local y en la nube (latencia, concurrencia, memoria de vídeo y privacidad)',
+  'Jetson 运行环境与模型部署调优':
+    'Entorno de ejecución Jetson y ajuste en el despliegue de modelos',
+  '验证 JetPack / CUDA / TensorRT / PyTorch 运行环境、部署 ASR 语音识别模型（Whisper / FunASR）、部署 4-bit 量化本地 LLM（Qwen2.5-7B-Instruct）与 TTS 引擎（ChatTTS / Piper）、将 Watcher 音频流定向至本地服务端口':
+    'Validación del entorno JetPack/CUDA/TensorRT/PyTorch, despliegue de ASR (Whisper/FunASR), LLM local cuantizado a 4 bits (Qwen2.5-7B-Instruct) y motores TTS (ChatTTS/Piper), y enrutamiento del audio de Watcher',
   '物理断开外网连接验证局域网独立运行、测试各环节耗时、调优模型上下文长度与采样参数':
     'Verificacion de operacion de ciclo cerrado autonomo de red local mediante desconexion fisica de internet, medicion de tiempo de cada etapa, optimizacion de longitud de contexto y parametros de muestreo del modelo',
-  '各组成果展示与业务场景适配答辩、云端SaaS架构vs本地边缘计算架构成本与选型复盘、业务系统API扩展规范与标准化交付文档归档':
-    'Presentación de resultados de cada grupo y defensa de adaptación a escenarios de negocio, revisión de costos y selección entre arquitectura SaaS en nube vs arquitectura de cómputo en el borde local, archivo de especificaciones de extensión API de sistemas de negocio y documentos de entrega estandarizados',
-  '体验课（taster）聚焦 L1 端侧体验与MCP工具调用演示，不含本地业务系统部署与离线管线；实战课（workshop）覆盖 L1+L2 完整Watcher配置、WMS部署与MCP桥接；交付课（bootcamp）全覆盖 L1+L2+L3，含Jetson离线语音管线部署。':
-    'La clase de experiencia (taster) se enfoca en la experiencia en dispositivo y demostración de llamadas a herramientas MCP L1, no incluye despliegue de sistemas de negocio locales ni pipeline offline; la clase práctica (workshop) cubre la configuración completa Watcher, despliegue WMS y puente MCP L1+L2; la clase de entrega (bootcamp) cubre completamente L1+L2+L3, incluyendo despliegue de pipeline de voz offline Jetson.',
-  '1 天 · 6–8h · L1 展示层 · 聚焦端侧体验与MCP工具调用演示':
-    '1 día · 6–8h · L1 capa de demostración · enfocado en experiencia en dispositivo y demostración de llamadas a herramientas MCP',
+  '各组成果展示与业务场景适配答辩、云端 SaaS 架构与本地边缘计算架构成本选型复盘、业务系统 API 扩展规范与标准化交付文档归档':
+    'Presentación de proyectos por equipos, comparativa de costes y arquitectura (SaaS en la nube frente a computación en el borde), estándares de ampliación de APIs y archivo documental',
+  '体验课（taster）聚焦 L1 端侧体验与 MCP 工具调用演示，不含本地业务系统部署与离线管线；实战课（workshop）覆盖 L1+L2 完整 Watcher 配置、WMS 部署与 MCP 桥接；交付课（bootcamp）全覆盖 L1+L2+L3，含 Jetson 离线语音管线部署。':
+    'El curso de toma de contacto (taster) se centra en la experiencia L1 en el dispositivo y demos de MCP, sin despliegue de WMS local ni canalización offline; el curso práctico (workshop) cubre L1+L2 con configuración de Watcher, WMS y puente MCP; el intensivo (bootcamp) abarca L1+L2+L3 completo con la canalización offline en Jetson.',
+  '1 天 · 6–8h · L1 展示层 · 聚焦端侧体验与 MCP 工具调用演示':
+    '1 día · 6–8h · Capa L1 · Centrado en la experiencia en el borde y demostración de herramientas MCP',
   '环境预检 → 多模态架构概念 → 端侧视觉推理体验':
     'Verificacion previa del entorno → conceptos de arquitectura multimodal → experiencia de inferencia visual en dispositivo',
   '模块 04 + 05 + 15(精简)': 'Módulos 04 + 05 + 15 (simplificado)',
-  '语音问答与Agent机制 → MCP工具调用与业务集成演示 → 总结复盘':
-    'Preguntas y respuestas por voz y mecanismo de Agent → demostracion de llamadas a herramientas MCP e integracion de negocio → resumen y revision',
+  '语音问答与 Agent 机制 → MCP 工具调用与业务集成演示 → 总结复盘':
+    'Preguntas y respuestas por voz con Agent → Demostración de herramientas MCP e integración operativa → Resumen y conclusiones',
   '不含本地业务系统部署与离线语音管线。':
     'No incluye despliegue de sistemas de negocio locales ni pipeline de voz offline.',
-  '2–3 天 · 14–20h · L1+L2 · Watcher配置 + 本地WMS部署 + MCP桥接 + 自动化联动':
-    '2–3 días · 14–20h · L1+L2 · configuración Watcher + despliegue WMS local + puente MCP + vinculación de automatización',
+  '2–3 天 · 14–20h · L1+L2 · Watcher 配置 + 本地 WMS 部署 + MCP 桥接 + 自动化联动':
+    '2–3 días · 14–20h · L1+L2 · Configuración de Watcher + despliegue WMS local + puente MCP + automatización',
   '环境预检 → 多模态架构 → 端侧视觉 → 语音Agent → MCP工具调用演示':
     'Verificacion previa del entorno → arquitectura multimodal → vision en dispositivo → Agent de voz → demostracion de llamadas a herramientas MCP',
-  'Watcher视觉配置 → Agent角色提示词 → WMS Docker部署 → MCP桥接联调':
-    'Configuración visual Watcher → prompts de rol de Agent → despliegue WMS Docker → integración de puente MCP',
+  'Watcher 视觉配置 → Agent 角色提示词 → WMS Docker 部署 → MCP 桥接联调':
+    'Configuración de visión en Watcher → Prompts de rol de Agent → Despliegue de WMS en Docker → Pruebas de integración MCP',
   '模块 10 + 11 + 15': 'Modulos 10 + 11 + 15',
   'OpenClaw自动化联动 → 全链路整合联调 → 方案复盘与交付总结':
     'Vinculación de automatización OpenClaw → integración de cadena completa → revisión de solución y resumen de entrega',
-  '实战课交付 1 套包含视觉感知、语音Agent、本地WMS与自动化工具的完整多模态系统联调。学员基础要求：具备Docker基础与REST API调用经验。':
-    'La clase práctica entrega 1 integración completa de sistema multimodal que incluye percepción visual, Agent de voz, WMS local y herramientas de automatización. Requisitos básicos de los estudiantes: conocimientos básicos de Docker y experiencia en llamadas REST API.',
-  '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含Jetson离线语音管线部署与断网验证':
-    '3–5 días · 24–35h · L1+L2+L3 · cobertura completa incluyendo despliegue de pipeline de voz offline Jetson y verificación sin red',
+  '实战课交付 1 套包含视觉感知、语音 Agent、本地 WMS 与自动化工具的完整多模态系统联调。学员基础要求：具备 Docker 基础与 REST API 调用经验。':
+    'El curso práctico entrega 1 entorno funcional de sistema multimodal con percepción visual, Agent de voz, WMS local y automatización. Requisitos: nociones de Docker y consumo de REST API.',
+  '3–5 天 · 24–35h · L1+L2+L3 · 全覆盖含 Jetson 离线语音管线部署与断网验证':
+    '3–5 días · 24–35h · L1+L2+L3 · Cobertura integral con canalización de voz offline en Jetson y pruebas desconectadas',
   '模块 01–11': 'Modulos 01–11',
   'L1+L2 完整内容（端侧体验 + Watcher配置 + WMS部署 + MCP桥接 + 全链路联调）':
     'Contenido completo L1+L2 (experiencia en dispositivo + configuración Watcher + despliegue WMS + puente MCP + integración de cadena completa)',
@@ -775,8 +776,8 @@ export const esDict: Record<string, string> = {
   '模块 14 + 15': 'Modulos 14 + 15',
   '断网联调与延迟优化 → 方案复盘与交付归档':
     'Integracion sin red y optimizacion de latencia → revision de solucion y archivo de entrega',
-  '交付课目标是具备在强隐私与工业隔离网环境下交付AI交互方案的能力。学员基础要求：具备Linux、PyTorch/Jetson基础与shell操作能力，熟悉 L1–L2 能力。':
-    'El objetivo de la clase de entrega es poseer la capacidad de entregar soluciones de interacción de IA en entornos de alta privacidad y redes aisladas industriales. Requisitos básicos de los estudiantes: conocimientos básicos de Linux, PyTorch/Jetson y operaciones shell, familiaridad con las capacidades L1–L2.',
+  '交付课目标是具备在强隐私与工业隔离网环境下交付 AI 交互方案的能力。学员基础要求：具备 Linux、PyTorch / Jetson 基础与 Shell 操作能力，熟悉 L1–L2 能力。':
+    'El objetivo del curso intensivo es capacitar para entregar soluciones de IA en entornos industriales aislados y con altos requisitos de privacidad. Requisitos: conocimientos de Linux, PyTorch / Jetson, manejo de shell y dominio de L1–L2.',
   '体验课 1 天上完，不用部署业务系统，做到「语音能查询、视觉能触发」为止。适合展会、技术开放日和第一次接触的客户。':
     'El curso de iniciación dura un día, no requiere desplegar sistemas de negocio y llega hasta «la voz consulta y la visión dispara acciones». Es adecuado para ferias, jornadas de puertas abiertas y primeros contactos con un cliente.',
   '实战课的 Day 3 为可选弹性日：若学员基础较好可压缩为 2 天（Day 2 下午合并 OpenClaw 与全链路联调）；若需更多 MCP 桥接调优时间则用满 3 天。':
@@ -802,15 +803,15 @@ export const esDict: Record<string, string> = {
   打通物理端侧交互与企业存量业务逻辑:
     'Conectar la interacción física en el extremo con la lógica empresarial existente',
   把业务系统接进语音交互: 'Integrar sistemas de negocio en la interacción por voz',
-  'M2 聚焦于如何将视觉感知、语音交互与存量业务系统（如 WMS、ERP）深层串联。课程避开纯云端调用的套路，直击物理终端接入、MCP 工具调用以及纯局域网离线部署等核心工程难点，为讲师提供全套开箱即可验证的软硬件环境。':
-    'M2 se enfoca en integrar profundamente visión y voz con sistemas de gestión empresarial existentes (como WMS o ERP). Va más allá de simples llamadas a APIs en la nube, abordando la conexión de terminales físicos, herramientas MCP y despliegue offline en redes locales.',
+  'M2 的重点是把视觉感知、语音交互与企业现有的业务系统（如 WMS、ERP）真正接通。课程不讲纯云端调用的通用玩具案例，而是带着学员做物理终端接入、MCP 工具调用和纯内网离线部署，为讲师提供开箱即用的软硬件实操环境。':
+    'M2 se centra en vincular la percepción visual y la interacción por voz con sistemas de gestión reales (como WMS o ERP). Lejos de limitarse a demostraciones genéricas en la nube, aborda la conexión de terminales físicos, la integración con MCP y el despliegue puramente local y desconectado, facilitando a los docentes un entorno listo para usar.',
   '模块 04 的语音查询内容支持自由定制。讲师可将仓储盘点替换为展厅导览、设备状态巡检或会议室调度，引导学员根据实际业务语义设计多轮对话策略。':
     'El contenido de consulta por voz de la unidad 04 es totalmente personalizable. El docente puede sustituir el inventario por visitas guiadas, rondas de mantenimiento o reserva de salas, enseñando a diseñar diálogos adaptados a operaciones reales.',
   接系统: 'Conectar sistemas',
   '在模块 08 之后，讲师可将示例库存系统替换为实验库房系统或企业现有业务 API，实操通过自然语音查询与更新真实业务数据。':
     'Tras la unidad 08, el instructor puede sustituir el inventario de ejemplo por el sistema del laboratorio o APIs empresariales reales, practicando la consulta y actualización de datos mediante voz natural.',
-  '结合现场环境底噪、远场拾音限制以及大模型工具调用幻觉控制等实际工程考量，帮助学员建立系统级稳定性思维。':
-    'La consideración del ruido ambiente, las limitaciones de captación de audio y el control de alucinaciones en las llamadas a herramientas ayuda a desarrollar un criterio riguroso de ingeniería de sistemas.',
+  '把现场底噪、远场拾音限制以及大模型工具调用时的幻觉防护等工程细节讲透，让学员明白真实环境和实验室 demo 的差别。':
+    'Explica las limitaciones del entorno real —ruido de fondo, límites de captación lejana y prevención de alucinaciones al invocar herramientas— para que el alumnado distinga un entorno productivo de un prototipo de laboratorio.',
   'L1/L2业务数据经本地MCP桥接在局域网内流转，核心数据不出域；L3纯本地离线运行，零公网依赖。':
     'Los datos de negocio L1/L2 circulan dentro de la red local mediante el puente MCP local, los datos centrales no salen del dominio; L3 se ejecuta puramente local y offline, con cero dependencia de red pública.',
   现场目标感知与结构化业务语音问答:
@@ -825,20 +826,18 @@ export const esDict: Record<string, string> = {
     'Interacción de voz puramente local y offline en entornos de alta privacidad y redes aisladas industriales (L3)',
   '不替代高并发、长链路的专用人工客服系统':
     'No sustituye los sistemas dedicados de atención al cliente humana de alta concurrencia y enlaces largos',
-  '不承诺对模糊主观多轮逻辑的100%准确推理':
-    'No se garantiza una inferencia 100% precisa para lógicas de múltiples turnos vagas y subjetivas',
-  不包含对客户未开放API的封闭旧系统的反向破解开发:
-    'No incluye desarrollo de ingeniería inversa para sistemas antiguos cerrados cuyas API no han sido abiertas por el cliente',
+  '不承诺对模糊主观多轮逻辑的 100% 准确推理':
+    'No garantiza el 100% de precisión deductiva en lógicas subjetivas, ambiguas o de múltiples turnos',
+  '不包含对客户未开放 API 的封闭旧系统的反向破解开发':
+    'No incluye ingeniería inversa ni desarrollo sobre sistemas heredados cerrados sin API accesible',
   '不适用于高噪声工业现场的远场盲收（需配置定向收音）':
     'No es aplicable a la captación ciega de campo lejano en sitios industriales de alto ruido (se requiere configurar captación direccional)',
-  'L1/L2方案依赖互联网连接大模型服务，无外网环境须切换至L3离线方案':
-    'La solución L1/L2 depende de conexión a internet para servicios de grandes modelos; en entornos sin internet se debe cambiar a la solución offline L3',
-  'L3离线方案需100 TOPS级别边缘算力（Jetson Orin NX 16GB及以上），RK3588-40（6 TOPS）无法承载本地大模型推理':
-    'La solución offline L3 requiere potencia de cómputo en el borde de nivel 100 TOPS (Jetson Orin NX 16GB o superior), el RK3588-40 (6 TOPS) no puede soportar inferencia de grandes modelos locales',
+  'L1/L2 方案依赖互联网连接大模型服务，无外网环境须切换至 L3 离线方案':
+    'Las arquitecturas L1/L2 dependen de conexión a internet para los servicios LLM; sin acceso exterior, debe adoptarse la alternativa desconectada L3',
+  'L3 离线方案需 100 TOPS 级别边缘算力（Jetson Orin NX 16GB 及以上），RK3588-40（6 TOPS）无法承载本地大模型推理':
+    'La solución offline L3 requiere 100 TOPS en el borde (Jetson Orin NX 16GB o superior); RK3588-40 (6 TOPS) no admite inferencia de LLM en local',
   '语音识别准确率受现场环境底噪、方言口音及专业行业词库影响，不承诺特定场景下的识别准确率指标':
     'La precision del reconocimiento de voz se ve afectada por el ruido de fondo del entorno, los acentos dialectales y el vocabulario profesional de la industria; no se garantiza un indicador de precision de reconocimiento en escenarios especificos',
-
-  // ── M3 ──
   自组网与韧性通信: 'Red Autónoma y Comunicación Resiliente',
   '在没有公网的地方，用 LoRa Mesh 发消息、报位置、回传传感数据。套件仅面向海外频段。':
     'Donde no hay red pública, use LoRa Mesh para enviar mensajes, informar de posiciones y recuperar datos de sensores. El kit solo cubre bandas de frecuencia de fuera de China.',
