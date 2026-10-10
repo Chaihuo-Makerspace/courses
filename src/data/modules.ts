@@ -2315,7 +2315,7 @@ export const modules: Module[] = [
           note: '单机位视觉节点，端侧轻量目标检测与 RTSP 推流',
           description:
             '模块化开源 AI 相机，2002w 支持 Wi-Fi/AP 模式，2002 支持百兆有线以太网。内置 NPU 推理与 Node-RED 零代码编排，即插即用，适用于 L1 单点轻量节点体验与 L2 端侧自动化联动。支持 RTSP 视频流输出（554 端口）。',
-          image: '/illustrations/m4-recamera-poe.png',
+          image: '/illustrations/m4-recamera-2002w.png',
           imageAlt: 'reCamera 2002w/2002 开源 AI 相机',
         },
         {
