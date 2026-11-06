@@ -29,22 +29,22 @@ expressions inside `.astro` templates.
 
 | Surface | Use |
 |---|---|
-| Chrome (Navbar / Footer / `<title>`) | 柴火创客学院 |
-| Formal copy (about, hero subtitles, llms.txt heading) | 柴火创客学院 |
+| Chrome (Navbar / Footer / `<title>`) | 柴火创客学园 |
+| Formal copy (about, hero subtitles, llms.txt heading) | 柴火创客学园 |
 | Ecosystem reference | 柴火创客生态（Seeed Studio + 柴火创客空间） |
 | English | Chaihuo Maker Academy |
-| Japanese | 柴火創客学院 |
+| Japanese | 柴火創客学園 |
 
-The brand word is **学院**, not 学园. 学园 is the Japanese word 学園
-(gakuen) written in simplified characters. The Japanese locale keeps the
-proper noun in its original form (柴火創客学院) instead of localising it to
-学園.
+The brand word is **学园**, not 学院. 学院 is reserved for degree-granting
+institutions and may not be used in the brand name without approval; the
+site was switched back to 学园 for compliance reasons. The Japanese locale
+uses the Japanese form 学園; English stays *Academy*.
 
 ## Borrowed-register words (日语腔 / 翻译腔 / 黑话)
 
-Treat these as copy defects in zh text, the same way the brand name was:
+Treat these as copy defects in zh text:
 
-- Japanese-flavoured: 学园、物语、匠心、匠人、职人、臻选、严选、极致
+- Japanese-flavoured: 物语、匠心、匠人、职人、臻选、严选、极致
 - English calques: 魔法时刻 (magic moment)、之旅 (journey)、解锁 (unlock)、
   拥抱 (embrace)、无缝 (seamless)、旗舰入口 (flagship)
 - Consulting jargon: 赋能、打造、一站式、助力、抓手、轻松实现；闭环 in a

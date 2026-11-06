@@ -249,7 +249,7 @@ export const esDict: Record<string, string> = {
   '人手一席，有效期内持续可用——结课后回家打开浏览器就能接着做。':
     'Un puesto por persona, disponible continuamente durante el período de validez — después de terminar el curso, abre el navegador en casa y continúa trabajando.',
   结课证书: 'Certificado de Finalización del Curso',
-  '柴火创客学院 M0 结业认证（体验课为参与证明）。':
+  '柴火创客学园 M0 结业认证（体验课为参与证明）。':
     'Certificado de Finalización M0 de Academia Chaihuo Maker (Certificado de Participación para Sesiones de Iniciación).',
   我们希望你把它改成我们认不出来的样子:
     'Esperamos que lo transformes hasta que nos resulte irreconocible',

@@ -249,7 +249,7 @@ export const ptDict: Record<string, string> = {
   '人手一席，有效期内持续可用——结课后回家打开浏览器就能接着做。':
     'Um lugar por pessoa, continuamente disponível durante o período de validade — após o curso, abra o navegador em casa e continue trabalhando.',
   结课证书: 'Certificado de Conclusão do Curso',
-  '柴火创客学院 M0 结业认证（体验课为参与证明）。':
+  '柴火创客学园 M0 结业认证（体验课为参与证明）。':
     'Certificado de Conclusão M0 da Academia Chaihuo Maker (Certificado de Participação para Sessões Experimentais).',
   我们希望你把它改成我们认不出来的样子:
     'Esperamos que você o transforme até ficar irreconhecível para nós',
