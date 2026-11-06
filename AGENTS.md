@@ -5,7 +5,7 @@ files at the bottom as the work demands.
 
 ## What this is
 
-The enrolment and partnership site of 柴火创客学院 (Chaihuo Maker Academy):
+The enrolment and partnership site of 柴火创客学园 (Chaihuo Maker Academy):
 Astro, server-rendered, five locales (zh-CN is the source; en, ja, es, pt-BR).
 All content is TypeScript data in `src/data/*.ts`. There is no CMS and no
 remote content.

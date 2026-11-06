@@ -468,7 +468,7 @@ const ja: Record<string, string> = {
   'cta.apply': '協業相談を申し込む',
   'cta.viewCourses': '学習体系を見る',
   'cta.viewPaths': 'パスガイドを見る',
-  'cta.aboutOrg': '学院の背景を知る',
+  'cta.aboutOrg': '学園の背景を知る',
   'home.matrix.note':
     '各セルの数字はそのレベルの日数（d = 日）です。セルを選ぶと、その講座の使用機器・シラバス・検収基準を確認できます。',
   'course.overseasOnly': '中国本土以外のみ提供',
@@ -499,7 +499,7 @@ const ja: Record<string, string> = {
   'fact.campuses.unit': 'キャンパス',
   'fact.campuses.desc': '深圳：南山区 万科雲城デザインコミュニティ、成都：青羊区 獅馬路92号。',
   'person.name': '馮磊',
-  'person.role': '柴火創客学院 メンター',
+  'person.role': '柴火創客学園 メンター',
   'person.quote':
     '講座にとって最高のあり方は、教本通り忠実になぞられることではなく、一人の講師の手で原型をとどめないほど作り変えられ、その人にしか教えられない講座になることです。',
   'partnership.suitable': '対象',

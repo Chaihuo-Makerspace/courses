@@ -1,6 +1,6 @@
 # Chaihuo Maker Academy Architecture Map
 
-A small Chinese-language marketing site for 柴火创客学院 (Chaihuo Maker
+A small Chinese-language marketing site for 柴火创客学园 (Chaihuo Maker
 Academy). Built on Astro 6 with a strict TypeScript data layer
 driving every page.
 

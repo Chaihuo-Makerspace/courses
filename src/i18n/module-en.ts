@@ -245,7 +245,7 @@ export const enDict: Record<string, string> = {
   '人手一席，有效期内持续可用——结课后回家打开浏览器就能接着做。':
     'One seat per person, continuously available during validity period — after course completion, open browser at home and continue working.',
   结课证书: 'Course Completion Certificate',
-  '柴火创客学院 M0 结业认证（体验课为参与证明）。':
+  '柴火创客学园 M0 结业认证（体验课为参与证明）。':
     'Chaihuo Maker Academy M0 Completion Certificate (Participation Certificate for Taster Sessions).',
   我们希望你把它改成我们认不出来的样子: 'We hope you reshape it until it is unrecognizable to us',
   我们认不出来的样子: 'unrecognizable to us',

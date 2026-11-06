@@ -4,22 +4,22 @@ type TranslationDict = Record<string, string>;
 
 const zh: TranslationDict = {
   // Site
-  'site.name': '柴火创客学院',
-  'site.description': '柴火创客学院 · 从第一次点亮 LED，到独立交付智能系统',
+  'site.name': '柴火创客学园',
+  'site.description': '柴火创客学园 · 从第一次点亮 LED，到独立交付智能系统',
   'site.skipLink': '跳到主要内容',
 
   // Nav
   'nav.home': '首页',
   'nav.courses': '学习体系',
   'nav.contact': '合作咨询',
-  'nav.about': '关于学院',
+  'nav.about': '关于学园',
   'nav.chaihuo': '柴火创客空间',
   'nav.toggle': '打开或关闭导航菜单',
   'nav.brand': '柴火',
-  'nav.homeAria': '柴火创客学院首页',
+  'nav.homeAria': '柴火创客学园首页',
   // Footer
   'footer.tagline':
-    '柴火创客学院把真实硬件、场景项目和交付经验整理成 M0–M6 学习体系，帮助学习者从动手基础走向可交付系统。',
+    '柴火创客学园把真实硬件、场景项目和交付经验整理成 M0–M6 学习体系，帮助学习者从动手基础走向可交付系统。',
   'nav.pioneerBase': '先锋官 · 基地',
   'nav.ecosystem': '柴火生态',
   'nav.mcv': '柴火基地车',
@@ -58,8 +58,8 @@ const zh: TranslationDict = {
   'course.compliance.notApplicable': '不适用范围',
 
   // About
-  'about.title': '关于学院',
-  'about.hero.title': '柴火创客学院',
+  'about.title': '关于学园',
+  'about.hero.title': '柴火创客学园',
   'about.hero.description':
     '我们培养人掌握新技术整合能力，让团队自己能把解决方案部署落地。课程面向院校、集成商和企业。',
 
@@ -83,7 +83,7 @@ const zh: TranslationDict = {
   'footer.since': 'since 2011',
   'cta.contact': '合作咨询',
   'cta.courses': '查看学习体系',
-  'cta.about': '关于学院',
+  'cta.about': '关于学园',
   'course.direction': '所属方向',
   'course.nav.aria': '本页目录',
   'course.nav.levels': '三档深度',
@@ -211,25 +211,25 @@ const en: TranslationDict = {
 };
 
 const ja: TranslationDict = {
-  'site.name': '柴火創客学院',
-  'site.description': '柴火創客学院 · 初めてのLED点灯から、インテリジェントシステムの独立納品まで',
+  'site.name': '柴火創客学園',
+  'site.description': '柴火創客学園 · 初めてのLED点灯から、インテリジェントシステムの独立納品まで',
   'site.skipLink': 'メインコンテンツへスキップ',
 
   'nav.home': 'ホーム',
   'nav.courses': '学習体系',
   'nav.contact': 'パートナーシップ',
-  'nav.about': '学院概要',
+  'nav.about': '学園概要',
   'nav.chaihuo': '柴火創客空間',
   'nav.toggle': 'ナビゲーションメニューを切り替え',
   'nav.brand': '柴火',
-  'nav.homeAria': '柴火創客学院ホーム',
+  'nav.homeAria': '柴火創客学園ホーム',
   'nav.pioneerBase': 'パイオニア · 拠点',
   'nav.ecosystem': '柴火エコシステム',
   'nav.mcv': '柴火基地車',
   'chip.tabsAria': 'パイオニア計画と拠点計画を切り替え',
 
   'footer.tagline':
-    '柴火創客学院は、実際のハードウェア、現場プロジェクト、納品経験をM0〜M6の学習体系に整理し、学習者が実践的な基礎から納品可能なシステムへと進めるよう支援します。',
+    '柴火創客学園は、実際のハードウェア、現場プロジェクト、納品経験をM0〜M6の学習体系に整理し、学習者が実践的な基礎から納品可能なシステムへと進めるよう支援します。',
   'footer.contact': 'お問い合わせ',
   'footer.nav': 'サイトナビゲーション',
   'footer.social': 'フォローする',
@@ -260,8 +260,8 @@ const ja: TranslationDict = {
   'course.compliance.applicable': '適用範囲',
   'course.compliance.notApplicable': '不適用範囲',
 
-  'about.title': '学院について',
-  'about.hero.title': '柴火創客学院',
+  'about.title': '学園について',
+  'about.hero.title': '柴火創客学園',
   'about.hero.description':
     '新技術を統合する力を育て、チーム自身がソリューションを現場に導入・運用できるようにします。学校、インテグレーター、企業向けの講座です。',
 
@@ -282,7 +282,7 @@ const ja: TranslationDict = {
   'footer.since': 'since 2011',
   'cta.contact': '協業のご相談',
   'cta.courses': '学習体系を見る',
-  'cta.about': '学院について',
+  'cta.about': '学園について',
   'course.direction': '方向',
   'course.nav.aria': 'このページの内容',
   'course.nav.levels': '3段階',

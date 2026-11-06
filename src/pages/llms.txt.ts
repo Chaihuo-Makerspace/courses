@@ -13,10 +13,10 @@ export const GET: APIRoute = (context) => {
   const base = (context.site?.toString() ?? FALLBACK_SITE).replace(/\/$/, '');
   const lines: string[] = [];
 
-  lines.push('# 柴火创客学院');
+  lines.push('# 柴火创客学园');
   lines.push('');
   lines.push(
-    '> 柴火创客学院面向院校、集成商和企业开课。' +
+    '> 柴火创客学园面向院校、集成商和企业开课。' +
       '我们培养人掌握新技术整合能力，让团队自己能把解决方案部署落地：提供的是课程、硬件套件和讲师培训，教会机构自己的团队做交付。',
   );
   lines.push('');
@@ -89,9 +89,9 @@ export const GET: APIRoute = (context) => {
 
   lines.push('## Optional');
   lines.push('');
-  lines.push(`- [学院首页](${base}/): 课程矩阵总览与入口`);
+  lines.push(`- [学园首页](${base}/): 课程矩阵总览与入口`);
   lines.push(`- [学习体系](${base}/courses): M0–M6 × L1/L2/L3 完整矩阵与三个方向`);
-  lines.push(`- [关于学院](${base}/about): 学院来历与负责人`);
+  lines.push(`- [关于学园](${base}/about): 学园来历与负责人`);
   lines.push(
     `- [合作咨询](${base}/contact): 三类合作对象与四种合作形态，邮件 ${contactEmail} 联系`,
   );

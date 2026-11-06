@@ -30,8 +30,15 @@ const RULES = [
   {
     id: 'zh-japanese-flavor',
     label: 'Japanese-flavored words in zh copy',
-    pattern: /学园|物语|匠心|极致|臻选/g,
-    why: 'Register drift in zh copy (学园 rename is tracked separately; others are faux-Japanese garnish).',
+    pattern: /物语|匠心|极致|臻选/g,
+    why: 'Register drift in zh copy (faux-Japanese garnish).',
+    exclude: ['docs/DESIGN.md'],
+  },
+  {
+    id: 'banned-brand-term',
+    label: 'brand term 学院',
+    pattern: /(?<![范範大])学院/g,
+    why: '学园 is the brand; 学院 is reserved for degree-granting institutions and must not appear in copy.',
     exclude: ['docs/DESIGN.md'],
   },
   {
